@@ -1,5 +1,160 @@
 # ArcGIS Pro MCP Server
 
+运行在 ArcGIS Pro 内部的 MCP Add-in：通过本机回环 `http://127.0.0.1:6520/mcp` 向支持 MCP 的客户端提供 **239 个 GIS 工具**（注册表 239 ≡ 契约快照 239 ≡ 装机 239）。
+
+## English summary
+
+**ArcGIS Pro MCP Server** is an ArcGIS Pro add-in that exposes **239 GIS tools** to MCP-speaking
+clients over a **local loopback** endpoint (`http://127.0.0.1:6520/mcp`) — no public network listener.
+It is installed on Windows x64 with ArcGIS Pro 3.5 and can be wired to Codex, Cursor, DeepSeek
+Harness and (as a template only) Claude Desktop. A one-click installer package is produced locally and
+**shipped outside this repository**; the step-by-step install and usage tutorials live under `Docs/`.
+Licensed **AGPL-3.0**; the Esri SDK is referenced at compile time and never redistributed.
+English index of what to read first: [`Docs/README_EN.md`](Docs/README_EN.md).
+
+## 特性清单
+
+- [x] **239 个生产 GIS 工具**，按用途分组并附示例提示词（见使用教程）
+- [x] **多客户端接入**：Codex（P0）、Cursor（P1）、DeepSeek Harness（P1）、Claude Desktop（P2，模板可选）
+- [x] **一键部署安装器**：只读预检 → 单个插件事务 → 零或多个独立客户端事务 → 回环诊断（无 `ApplyAll`）
+- [x] **工具可视化与数据文件夹工作流**（含只读/会话/写入名册三面与错误码契约）
+- [x] **纯本机回环安全边界**：默认仅绑定 `127.0.0.1:6520/mcp`，禁止 `0.0.0.0` 与公网暴露
+- [x] **发布可复核**：每个安装包附同名 `.sha256`，`scripts/verify-one-click-package.ps1` 逐件复验
+
+> 未宣称的能力与 `NOT VERIFIED` 全清单见文末[当前未宣称的能力](#当前未宣称的能力)一节，本仓库不以任何历史放行替代真机验收。
+
+## 安装包获取（★先读这一节）
+
+**一键安装包不在本仓库内。** 仓库只含源码、脚本与文档；`Release/*.zip`、`Release/发送给同事-*/`、`Archive/`
+均已被 `.gitignore` 排除，因此**克隆本仓库不能直接得到可双击的安装包**。获取方式：
+
+1. **由发布者线下提供**当前代际分享包 `ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip`
+   （现役 **r29**：**2,278,077 字节**／SHA256 `099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE`，
+   简写 `099A4F3A…`）；历史代际 r21–r28 已封存，禁止重打包或覆盖。
+2. **拿到后先校验，再解压**（Windows 内置工具，无需额外安装）：
+
+   ```powershell
+   certutil -hashfile .\ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip SHA256
+   ```
+
+   结果须与同名 `.sha256` 侧车文件内记录的摘要逐字符一致；不一致即停止使用并向索取方回报。
+3. **自行从源码产出**（开发者路径，需要 .NET 8 SDK 与编译期 SDK 引用）：见下文[开发者工作流](#开发者工作流)。
+   产物落在本地 `Release/`，**不会**也不应被提交进仓库。
+
+★真实安装、真实客户端连接、clean-machine 验收与公开发布均为 **NOT VERIFIED**：包内自动化与只读复验通过，不等于在用户机器上安装成功过。
+
+## 安装教程（6 步・首屏指路）
+
+**普通用户请看：[`Docs/教程-1-安装教程.md`](Docs/教程-1-安装教程.md)** — 7,201 B／139 行／6 步：
+拿到包 → 校验 SHA-256 → 解压到 D 盘新目录 → 双击 `ONE-CLICK-SETUP.cmd` 按界面确认 → 在 ArcGIS Pro 的 MCP 页启动本机服务 → 客户端接入；含**出错对照表**与**卸载回滚**路径。
+
+## 使用教程（9 章・首屏指路）
+
+**装好之后请看：[`Docs/教程-2-使用教程.md`](Docs/教程-2-使用教程.md)** — 27,856 B／401 行／9 章：
+按用途分组的 **239 工具**清单与**示例提示词**、地图与数据文件夹工作流、只读/写入边界、日志与诊断读法。
+
+## 快速开始
+
+```powershell
+# 1) 校验并解压（保持包内目录结构），双击 ONE-CLICK-SETUP.cmd，按界面选择客户端
+# 2) 启动 ArcGIS Pro → MCP 页 → Start（本机服务监听 127.0.0.1:6520/mcp）
+# 3) 在客户端配置里接入该 endpoint（Codex / Cursor / DeepSeek Harness 各选一，不批量）
+# 4) 需要回滚时：同一目录双击 RECOVERY-MENU.cmd，按界面操作并保留原有备份
+```
+
+安装器**不自动安装依赖**、**不启动或强杀程序**、**不提供 `ApplyAll`**；插件安装与客户端配置是两个明确动作。
+
+## 固定连接契约
+
+| 项目 | 值 |
+|---|---|
+| Server name / namespace | `arcgis-pro-mcp` |
+| Streamable HTTP endpoint | `http://127.0.0.1:6520/mcp` |
+| canonical production tools | `239`（本批现算：注册 239 ≡ 契约快照 239 ≡ 装机 239） |
+| client-scoped helper | `mcp_auth`，不计入生产工具数 |
+| client priority | Codex P0、Cursor P1、DeepSeek Harness P1、Claude Desktop P2 optional |
+
+唯一权威客户端目录是 [`Config/client-catalog.json`](Config/client-catalog.json)（现算含 4 个条目：`codex`、`cursor`、`deepseek-harness`、`claude-desktop`）。叙述性工具数不能替代该目录或实际 `tools/list` 证据。
+
+## 前置条件
+
+- Windows 11 x64；正式支持范围是当前 ArcGIS Pro 3.5 host。
+- ArcGIS Pro 3.5 及其 `arcgispro-py3` 环境；其他 ArcGIS Pro 版本不由本阶段推断支持。
+- 二进制分享包用户需要 .NET 8 runtime 和系统自带 Windows PowerShell 5.1；不需要 Git、Visual Studio 或 .NET SDK。
+- 从源码构建的开发者需要 .NET 8 SDK；PowerShell 7 可选。
+- 在执行任何真实安装、客户端 Apply/Restore 或 runtime 检查前，先确认对应阶段已授权，并保存可回滚的 owned target。
+
+## 开发者工作流
+
+在实际克隆或解压的仓库根目录执行（全部使用仓库相对路径；默认入口是只读 `Plan`，不创建目录、配置、备份、包、安装目标或进程）：
+
+```powershell
+Set-Location '<your-clone-or-extract-root>'
+. .\scripts\dev-env.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Plan
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Validate
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Package -Configuration Debug
+```
+
+`user-workflow.ps1` 只做参数边界、catalog 校验、安全 ledger 和委托；实际打包、事务安装和客户端配置逻辑仍由现有脚本负责。没有 `ApplyAll`，也没有把安装和客户端配置合并成一个动作。Install、Uninstall、Rollback 必须提供显式 owned `LedgerPath`；wrapper 只读取 allowlisted event/status，不转发 child 原始输出或绝对路径。
+
+## 当前状态与基线现值
+
+```text
+Current baseline (recomputed 2026-10-06, D-126 closeout batch; 本批 2026-10-07 现场复算一致):
+  canonical production tools = 239 (registry 239 == contract snapshot 239)
+  one-click release revision = r29  (ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip)
+  installed add-in (239 live) = 1,103,697 bytes / SHA256 59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738
+  unit test baseline = 1,843 = 1,840 passed / 0 failed / 3 not-executed
+Historical acceptance records (kept as history, not current scope):
+Phase 7 = FORMALLY ACCEPTED / PASS / COMPLETE
+1.0.2 planned release scope / whole-project canonical 30-tool scope = FORMALLY ACCEPTED / PASS / COMPLETE
+ONE_CLICK_DEPLOYMENT one-click-1.0.2-r5 = INDEPENDENT GATE PASSED / AUTHORIZED FOR USER REAL-MACHINE TRIAL
+Real one-click installation / clean-machine acceptance = NOT VERIFIED
+Independent Gate scope = r5 implementation + local isolated automation only; real installation/client connection/public release = NOT VERIFIED
+```
+
+本仓库当前 accepted release 为 `1.0.2`，目标为 Windows x64、ArcGIS Pro 3.5。**现值分发代际为 r29**（一键包 `ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip`，2,278,077 字节／SHA256 `099A4F3A…`；其 net8 payload 与现役安装位逐字节同一，装机工具数 **239**）。历史时点记录保留不动：Phase 7 overall、Phase 7.8 Final Handoff 和 canonical **30-tool** scope 已正式接受；r5 一键包曾获 Independent Gate Keeper 有限放行并授权进入用户实机试用——这些都不等同于 clean-machine、真实客户端连接或公开发布 acceptance，r29 同样不改变该边界（`Real installation / clean-machine = NOT VERIFIED`）。Claude Desktop 仍为 optional/template-only，不从历史证据推断额外支持。审批记录见 [ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md](Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md)（**历史时点审批记录**・对象为 **r5 代际**一键包的有限放行・**不等同于现役代际的当前放行**）；**项目完结基线与全部 NOT VERIFIED 在册清单见 [`AGENTS.md` §4](AGENTS.md) 与 [PROJECT_CLOSEOUT_20261006.md](Docs/PROJECT_CLOSEOUT_20261006.md)**。
+
+现役 r29 事实（本批现算）：包 2,278,077 字节／SHA256 `099A4F3A…`；双 payload——net8 `59F376555025052D…`/1,103,697 **≡ 现役 239 装机位**（逐字节同一），net6 `ADBF848C4ABC1BCB…`/1,107,215；`canonicalProductionToolCount` 239；包内 verifier `scripts/verify-one-click-package.ps1` 复验通过。签名事实：`scripts/one-click-setup.ps1` 已施加**自签** Authenticode，`Get-AuthenticodeSignature` 读回 **`UnknownError`（系统不信任该证书链，从未 `Valid`）**。真实安装、真实客户端连接、clean-machine、公开发布仍为 `NOT VERIFIED`。逐件台账见 `Release/distribution-ledger-r29.json` 与 `Release/release-record-r29-d143.json`（★二者在本地发布目录中，**不随仓库分发**）。
+
+以下段落是 **r5 代际的历史记录**（当时的审计与放行范围），保留不改写：
+
+接收者完整解压后双击 `ONE-CLICK-SETUP.cmd`；窗口默认选择 Codex，也可选择 Cursor、DeepSeek Harness 或“仅安装插件”。它先做只读预检，再执行一个插件事务和零个或多个独立客户端事务，最后等待用户在 ArcGIS Pro 中点击 `MCP → Start` 后进行 loopback 诊断。安装器不自动安装依赖、不启动/强制关闭程序、不使用 `ApplyAll`。r1 的 GUI worker 缺陷记录、r2 的两个不同内容 hash、r3 candidate 和 r4 candidate 均已保留；当前 r5 已获 Independent Gate Keeper 有限放行，授权进入用户实机试用。r5 已通过 ZIP/解压根审计、Windows PowerShell 5.1 精确入口、122 项 owned-temp recovery/取消/硬中断断言、显式 UTF-8 encoded bootstrap/父进程解码与 dot-source scope 的顶层中文路径 round-trip 断言、预置模拟 smoke，以及最终解压包实际只读 `Preflight`/`Diagnose` 按钮回调（完整中文路径目标和 UTF-8 中文消息）；失败诊断会在清理 owned temp 前保留完整必要 artifacts；real installation、真实客户端连接、clean-machine、公开发布和真实用户 GUI click-through 仍 `NOT VERIFIED`。详见 [一键部署指南](Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md)（历史时点）、[候选报告](Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md)（历史时点） 和 [独立审批记录](Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md)（历史时点）。
+
+## 文档索引（按「谁该读什么」重组）
+
+★每条后的**在库**＝该文件在 `git ls-files` 克隆面内（本批以大小写敏感方式逐条实测）；**本地**＝只存在于发布者的本地发布目录，不随仓库分发。
+
+**① 普通用户（先装，再用）**
+
+- **在库** [`Docs/教程-1-安装教程.md`](Docs/教程-1-安装教程.md)：6 步安装・出错对照表・卸载回滚。
+- **在库** [`Docs/教程-2-使用教程.md`](Docs/教程-2-使用教程.md)：9 章・239 工具分组与示例提示词。
+- **在库** [`Docs/USER_GUIDE.md`](Docs/USER_GUIDE.md)（历史时点）：前置条件、支持范围、状态/健康、日志、故障恢复和限制。
+- **在库** [`Docs/SHARING_AND_SIMPLE_INSTALL.md`](Docs/SHARING_AND_SIMPLE_INSTALL.md)：分享包入口与分发检查。
+- **在库** [`Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`](Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md)（历史时点）：分享包入口、预检、独立事务、恢复和实机证据边界。
+
+**② 客户端配置**
+
+- **在库** [`Docs/CLIENT_CONFIGURATION_GUIDE.md`](Docs/CLIENT_CONFIGURATION_GUIDE.md)：Codex/Cursor/DeepSeek/Claude 的目录、模板和凭据边界。
+- **在库** [`Config/client-catalog.json`](Config/client-catalog.json)：唯一权威客户端目录（4 条目）。
+
+**③ 开发者与打包**
+
+- **在库** [`Docs/RELEASE_WORKFLOW.md`](Docs/RELEASE_WORKFLOW.md)（历史时点）：Build、Package、安装/卸载/回滚、Plan/Validate 和客户端单目标操作。
+- **在库** [`Docs/RELEASE_NOTES_1.0.2.md`](Docs/RELEASE_NOTES_1.0.2.md)（历史时点）：精确 release identity、支持矩阵、限制和回滚规则。
+- **在库** [`Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md`](Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md)・[`Docs/ONE_CLICK_DEPLOYMENT_EVIDENCE_INDEX.md`](Docs/ONE_CLICK_DEPLOYMENT_EVIDENCE_INDEX.md)（均历史时点）：one-click candidate 的 hash、测试和未验证范围。
+- **在库** [`scripts/verify-one-click-package.ps1`](scripts/verify-one-click-package.ps1)・[`scripts/one-click-setup.ps1`](scripts/one-click-setup.ps1)：包级复验与部署入口实现。
+
+**④ 治理与审计（本项目把协作轨迹一并公开）**
+
+- **在库** [`AGENTS.md`](AGENTS.md)：§3 安全基线／**§4 基线现值**／§5 受保护资产——★现行基线口径以此为准。
+- **在库** [`Docs/PROJECT_CLOSEOUT_20261006.md`](Docs/PROJECT_CLOSEOUT_20261006.md)：五项完结条件对账、六基线现值、十批 CLOSED 链、**全部 NOT VERIFIED 在册清单**与复裁触发四项。
+- **在库** [`Docs/PROJECT_STATE.md`](Docs/PROJECT_STATE.md)・[`Docs/CURRENT_TASK.md`](Docs/CURRENT_TASK.md)（历史时点）：跨会话接管入口。
+- **在库** [`Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md`](Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md)（历史时点审批，对象 r5 代际）。
+- **本地**（不随仓库分发）：`Release/distribution-ledger-r21…r29.json`、`Release/release-record-r24…r29*.json`、`Release/发送给同事-r29/` 教程载体、九代一键包 zip 本体。
+- ★Phase 0–7 的三份历史候选（final acceptance／final handoff／overall acceptance）位于 `Docs/phases/`，该目录已被 `.gitignore` 排除以守住「不公开本机路径与身份」的裁定，因此**本 README 不再提供其链接**；其结论已在 [`AGENTS.md` §4](AGENTS.md) 与 [`Docs/PROJECT_CLOSEOUT_20261006.md`](Docs/PROJECT_CLOSEOUT_20261006.md) 中复述并可复核。
+
 ## 开源发布说明（AGPL-3.0）
 
 - **本仓库包含完整治理历史记录（含 AI 协作轨迹）**：过程文档、评审记录与验收台账随源码一并公开；
@@ -13,115 +168,6 @@
   再分发将违反 Esri EULA）。使用者需自行安装 ArcGIS Pro 及其 SDK。
 - **发布件二进制不在仓库内**：`Release/*.zip`、`Release/发送给同事-*/`、`Archive/` 均被排除，
   一键安装包在本地产出后另行分发，不入库。
-
-这是一个运行在 ArcGIS Pro 内部的 MCP Add-in。它通过本机回环地址向支持 MCP 的客户端提供 GIS 工具。
-
-## 当前状态
-
-```text
-Current baseline (recomputed 2026-10-06, D-126 closeout batch):
-  canonical production tools = 239 (registry 239 == contract snapshot 239)
-  one-click release revision = r29  (ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip)
-  installed add-in (239 live) = 1,103,697 bytes / SHA256 59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738
-  unit test baseline = 1,843 = 1,840 passed / 0 failed / 3 not-executed
-Historical acceptance records (kept as history, not current scope):
-Phase 7 = FORMALLY ACCEPTED / PASS / COMPLETE
-1.0.2 planned release scope / whole-project canonical 30-tool scope = FORMALLY ACCEPTED / PASS / COMPLETE
-ONE_CLICK_DEPLOYMENT one-click-1.0.2-r5 = INDEPENDENT GATE PASSED / AUTHORIZED FOR USER REAL-MACHINE TRIAL
-Real one-click installation / clean-machine acceptance = NOT VERIFIED
-Independent Gate scope = r5 implementation + local isolated automation only; real installation/client connection/public release = NOT VERIFIED
-```
-
-本仓库当前 accepted release 为 `1.0.2`，目标为 Windows x64、ArcGIS Pro 3.5。**现值分发代际为 r29**（一键包 `ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip`，2,278,077 字节／SHA256 `099A4F3A575A65A1A8F9A7F424414465…`；其 net8 payload 与现役安装位逐字节同一，装机工具数 **239**）。历史时点记录保留不动：Phase 7 overall、Phase 7.8 Final Handoff 和 canonical **30-tool** scope 已正式接受；r5 一键包曾获 Independent Gate Keeper 有限放行并授权进入用户实机试用——这些都不等同于 clean-machine、真实客户端连接或公开发布 acceptance，r29 同样不改变该边界（`Real installation / clean-machine = NOT VERIFIED`）。Claude Desktop 仍为 optional/template-only，不从历史证据推断额外支持。审批记录见 [ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md](Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md)（**历史时点审批记录**・对象为 **r5 代际**一键包的有限放行・**不等同于现役代际的当前放行**）；**项目完结基线与全部 NOT VERIFIED 在册清单见 [`AGENTS.md` §4](AGENTS.md) 与 [PROJECT_CLOSEOUT_20261006.md](Docs/PROJECT_CLOSEOUT_20261006.md)**。
-
-## 固定连接契约
-
-| 项目 | 值 |
-|---|---|
-| Server name / namespace | `arcgis-pro-mcp` |
-| Streamable HTTP endpoint | `http://127.0.0.1:6520/mcp` |
-| canonical production tools | `239`（D-126 现算：注册 239 ≡ 契约快照 239 ≡ 装机 239） |
-| client-scoped helper | `mcp_auth`，不计入生产工具数 |
-| client priority | Codex P0、Cursor P1、DeepSeek Harness P1、Claude Desktop P2 optional |
-
-唯一权威客户端目录是 [`Config/client-catalog.json`](Config/client-catalog.json)。叙述性工具数不能替代该目录或实际 `tools/list` 证据。
-
-## 前置条件
-
-- Windows 11 x64；正式支持范围是当前 ArcGIS Pro 3.5 host。
-- ArcGIS Pro 3.5 及其 `arcgispro-py3` 环境；其他 ArcGIS Pro 版本不由本阶段推断支持。
-- 二进制分享包用户需要 .NET 8 runtime 和系统自带 Windows PowerShell 5.1；不需要 Git、Visual Studio 或 .NET SDK。
-- 从源码构建的开发者需要 .NET 8 SDK；PowerShell 7 可选。
-- 在执行任何真实安装、客户端 Apply/Restore 或 runtime 检查前，先确认对应阶段已授权，并保存可回滚的 owned target。
-
-## 最短安全入口
-
-### 给普通用户的分享安装包
-
-发布者可从已校验的二进制产物生成不需要开发环境的分享 ZIP：
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-share-package.ps1 -Configuration Debug
-```
-
-接收者完整解压后，先双击 `INSTALL-PLUGIN.cmd`，再双击 `CONFIGURE-CODEX.cmd`；Cursor、DeepSeek Harness、检查、卸载和回滚统一在 `START-HERE.cmd` 菜单中。详细边界与分发检查见 [分享与简易安装方案](Docs/SHARING_AND_SIMPLE_INSTALL.md)。此入口减少手工参数，但仍保持安装与客户端配置为两个明确动作，不提供 `ApplyAll`。
-
-### 一键部署分享版（当前候选）
-
-发布者可以生成独立的 `ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip`（现役代际；历史代际 r1–r28 已封存，禁止重打包）：
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-one-click-package.ps1 -Configuration Debug -CandidateRevision r29 -Force
-```
-
-**现役 r29 事实（D-143 现算）**：包 2,278,077 字节／SHA256 `099A4F3A…`；双 payload——net8 `59F376555025052D…`/1,103,697 **≡ 现役 239 装机位**（逐字节同一），net6 `ADBF848C4ABC1BCB…`/1,107,215；`canonicalProductionToolCount` 239；包内 verifier `scripts/verify-one-click-package.ps1` 复验通过。签名事实：`scripts/one-click-setup.ps1` 已施加**自签** Authenticode，`Get-AuthenticodeSignature` 读回 **`UnknownError`（系统不信任该证书链，从未 `Valid`）**。真实安装、真实客户端连接、clean-machine、公开发布仍为 `NOT VERIFIED`。逐件台账见 `Release/distribution-ledger-r29.json` 与 `Release/release-record-r29-d143.json`。
-
-以下段落是 **r5 代际的历史记录**（当时的审计与放行范围），保留不改写：
-
-接收者完整解压后双击 `ONE-CLICK-SETUP.cmd`；窗口默认选择 Codex，也可选择 Cursor、DeepSeek Harness 或“仅安装插件”。它先做只读预检，再执行一个插件事务和零个或多个独立客户端事务，最后等待用户在 ArcGIS Pro 中点击 `MCP → Start` 后进行 loopback 诊断。安装器不自动安装依赖、不启动/强制关闭程序、不使用 `ApplyAll`。r1 的 GUI worker 缺陷记录、r2 的两个不同内容 hash、r3 candidate 和 r4 candidate 均已保留；当前 r5 已获 Independent Gate Keeper 有限放行，授权进入用户实机试用。r5 已通过 ZIP/解压根审计、Windows PowerShell 5.1 精确入口、122 项 owned-temp recovery/取消/硬中断断言、显式 UTF-8 encoded bootstrap/父进程解码与 dot-source scope 的顶层中文路径 round-trip 断言、预置模拟 smoke，以及最终解压包实际只读 `Preflight`/`Diagnose` 按钮回调（完整中文路径目标和 UTF-8 中文消息）；失败诊断会在清理 owned temp 前保留完整必要 artifacts；real installation、真实客户端连接、clean-machine、公开发布和真实用户 GUI click-through 仍 `NOT VERIFIED`。详见 [一键部署指南](Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md)（历史时点）、[候选报告](Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md)（历史时点） 和 [独立审批记录](Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md)（历史时点）。
-
-### 开发者工作流
-
-在你实际克隆或解压的仓库根目录执行。先把当前目录切换到该根目录；下面命令都使用仓库相对路径。默认入口是只读 `Plan`，不会创建目录、配置、备份、包、安装目标或进程：
-
-```powershell
-Set-Location '<your-clone-or-extract-root>'
-. .\scripts\dev-env.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Plan
-```
-
-只读检查客户端目录和现有配置：
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Validate
-```
-
-编译和仅生成发布包（始终跳过 Add-in 注册）：
-
-```powershell
-dotnet build .\ArcGIS-Pro-MCP.sln --no-restore --nologo
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\user-workflow.ps1 -Action Package -Configuration Debug
-```
-
-`user-workflow.ps1` 只做参数边界、catalog 校验、安全 ledger 和委托；实际打包、事务安装和客户端配置逻辑仍由现有脚本负责。没有 `ApplyAll`，也没有把安装和客户端配置合并成一个动作。
-
-Install、Uninstall、Rollback 必须提供显式 owned `LedgerPath`。wrapper 只读取其中的 allowlisted event/status，输出 `completed`、`failed`、`notStarted` 和可验证的 recovery action，不转发 child 原始输出或绝对路径。
-
-## 当前用户文档
-
-- [用户指南](Docs/USER_GUIDE.md)（历史时点）：前置条件、支持范围、状态/健康、日志、故障恢复和限制。
-- [发布与安全工作流](Docs/RELEASE_WORKFLOW.md)（历史时点）：Build、Package、安装/卸载/回滚、Plan/Validate 和客户端单目标操作。
-- [客户端配置指南](Docs/CLIENT_CONFIGURATION_GUIDE.md)：Codex/Cursor/DeepSeek/Claude 的目录、模板和凭据边界。
-- [1.0.2 发布说明](Docs/RELEASE_NOTES_1.0.2.md)（历史时点）：精确 release identity、支持矩阵、限制和回滚规则。
-- [一键部署用户指南](Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md)（历史时点）：分享包入口、预检、独立事务、恢复和实机证据边界。
-- [一键部署候选报告](Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md)（历史时点） 与 [证据索引](Docs/ONE_CLICK_DEPLOYMENT_EVIDENCE_INDEX.md)（历史时点）：当前 one-click candidate 的 hash、测试和未验证范围。
-- [Phase 7 项目最终接受候选](Docs/phases/PHASE_07_FINAL_PROJECT_ACCEPTANCE_CANDIDATE.md)（历史时点）：Phase 0–7 状态矩阵、1.0.2 scope boundary 和最终候选证据索引。
-- [Phase 7.8 最终交接候选](Docs/phases/PHASE_07_8_FINAL_HANDOFF_CANDIDATE.md)（历史时点）：最终 evidence index 和当前 acceptance boundary。
-- [Phase 7.7 overall acceptance](Docs/phases/PHASE_07_7_OVERALL_RELEASE_ACCEPTANCE_CANDIDATE.md)（历史时点）：完整 7.7 证据矩阵及正式接受记录。
-- [当前项目状态](Docs/PROJECT_STATE.md)（历史时点） 与 [当前任务](Docs/CURRENT_TASK.md)（历史时点）：跨会话接管入口。
-- **[项目完结报告 · 2026-10-06](Docs/PROJECT_CLOSEOUT_20261006.md)**：五项完结条件对账、六基线现值、D-116…D-125 十批 CLOSED 链、全部 NOT VERIFIED 在册清单与复裁触发四项。**现行基线口径以 [`AGENTS.md` §4](AGENTS.md) 为准。**
-
-历史报告中的 `PASS CANDIDATE`、`BLOCKED_BY_HARNESS`、`NOT VERIFIED` 和旧阶段状态仍是历史证据；当前正式状态以 `AGENTS.md`（§3 安全基线／§4 基线现值／§5 受保护资产）与 [项目完结报告](Docs/PROJECT_CLOSEOUT_20261006.md) 为准，Phase 7 项目最终接受候选作历史时点记录。
 
 ## 安全边界
 
@@ -137,3 +183,5 @@ Install、Uninstall、Rollback 必须提供显式 owned `LedgerPath`。wrapper �
 ## 当前未宣称的能力
 
 clean-machine support 仍为 `NOT VERIFIED`；HTTP client-disconnect cancellation 仍为 `NOT VERIFIED`；7 个 HTTP transport tests 仍为 `BLOCKED_BY_HARNESS`；raw initialize/tools-list envelope 仍受 client surface 限制；`list_maps`/`get_map_info` 为 `PARTIAL`；`get_dataset_info`/`get_raster_info` 为 `LIMITED IMPLEMENTATION`；ArcGISProject.isDirty 在 Pro 3.5 不可用；`select_layer` 没有确定性 OID contract。Codex P0、Cursor P1、DeepSeek Harness P1 的 Phase 7.7 fresh client gates 已正式接受，Claude Desktop 不在 fresh acceptance 范围内。
+
+历史报告中的 `PASS CANDIDATE`、`BLOCKED_BY_HARNESS`、`NOT VERIFIED` 和旧阶段状态仍是历史证据；当前正式状态以 `AGENTS.md`（§3 安全基线／§4 基线现值／§5 受保护资产）与 [项目完结报告](Docs/PROJECT_CLOSEOUT_20261006.md) 为准，Phase 7 项目最终接受候选作历史时点记录。
