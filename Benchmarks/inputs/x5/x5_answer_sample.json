@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x5",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "brief": {
+    "seed": 20260985,
+    "allocation": {
+      "ST-A": 3,
+      "ST-B": 4,
+      "ST-C": 5,
+      "ST-D": 6
+    },
+    "minimumDistance": 5.0,
+    "candidateLattice": "x and y in 0..40 step 2 (441 integer candidates)",
+    "strata": {
+      "ST-A": [
+        0,
+        19,
+        0,
+        19
+      ],
+      "ST-B": [
+        20,
+        40,
+        0,
+        19
+      ],
+      "ST-C": [
+        0,
+        19,
+        20,
+        40
+      ],
+      "ST-D": [
+        20,
+        40,
+        20,
+        40
+      ]
+    },
+    "boundaryRule": "a candidate belongs to the stratum whose closed rectangle contains it",
+    "algorithm": "seeded Fisher-Yates with LCG(state*1103515245+12345 mod 2**31), then a greedy accept per stratum under squared distance >= 25"
+  },
+  "pointsByStratum": {
+    "ST-A": [
+      [
+        0,
+        8
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "ST-B": [
+      [
+        24,
+        4
+      ],
+      [
+        32,
+        0
+      ],
+      [
+        22,
+        10
+      ],
+      [
+        20,
+        16
+      ]
+    ],
+    "ST-C": [
+      [
+        16,
+        40
+      ],
+      [
+        2,
+        38
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        18,
+        34
+      ],
+      [
+        4,
+        24
+      ]
+    ],
+    "ST-D": [
+      [
+        30,
+        22
+      ],
+      [
+        36,
+        36
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        22,
+        34
+      ],
+      [
+        26,
+        30
+      ],
+      [
+        40,
+        40
+      ]
+    ]
+  },
+  "counts": {
+    "ST-A": 3,
+    "ST-B": 4,
+    "ST-C": 5,
+    "ST-D": 6
+  },
+  "totalPoints": 18,
+  "reproducibility": {
+    "sameSeedSameOutput": true,
+    "coordinateDigest": "AA4B9FF0918F18992768E0B065DEA42C95E9367F7FB78DBF09D08D1AA4A2FA30"
+  },
+  "updatedInstance": {
+    "ST-A": [
+      [
+        0,
+        8
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "ST-B": [
+      [
+        24,
+        4
+      ],
+      [
+        32,
+        0
+      ],
+      [
+        22,
+        10
+      ],
+      [
+        20,
+        16
+      ]
+    ],
+    "ST-C": [
+      [
+        16,
+        40
+      ],
+      [
+        2,
+        38
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        18,
+        34
+      ],
+      [
+        4,
+        24
+      ]
+    ],
+    "ST-D": [
+      [
+        30,
+        22
+      ],
+      [
+        36,
+        36
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        22,
+        34
+      ],
+      [
+        26,
+        30
+      ],
+      [
+        40,
+        40
+      ]
+    ],
+    "delta": "one extra point in ST-A and no other stratum changes"
+  }
+}

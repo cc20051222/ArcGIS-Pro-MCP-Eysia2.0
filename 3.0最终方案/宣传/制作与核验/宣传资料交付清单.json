@@ -1,0 +1,58 @@
+{
+  "edition": "3.0 方案预告",
+  "completedUtc": "2026-10-02T15:27:58.640364+00:00",
+  "status": "DOCUMENT_QA_COMPLETE_PASS_CANDIDATE",
+  "productAcceptance": "NOT_RUN",
+  "root": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传",
+  "wordDocuments": 2,
+  "posterDesigns": 2,
+  "printPdfPages": 2,
+  "files": [
+    {
+      "path": "README_宣传资料导航.md",
+      "bytes": 4110,
+      "sha256": "2F12784EBB50602E5385B2908679B11D9F7F67FDAB45656BD16FC33E22E738DB"
+    },
+    {
+      "path": "Word\\ArcGIS_Pro_MCP_3.0_产品宣传册_预告版.docx",
+      "bytes": 975962,
+      "sha256": "E95A17F331E8E961F0EEDFCB441132C26AB75ED57F200A980C54BC7F7C407D0A"
+    },
+    {
+      "path": "Word\\ArcGIS_Pro_MCP_3.0_宣传海报_展示版.docx",
+      "bytes": 969775,
+      "sha256": "3852C126956511EDF9F9BC0235C687C2AE3F7BFEF9C34163D502068EC80A854C"
+    },
+    {
+      "path": "海报\\01_主宣传海报_竖版.png",
+      "bytes": 555159,
+      "sha256": "CF82A9C9C71B11F3B1AA7FC9D71380A9D4A933BF246332D1EF884F8BF54A5E1B"
+    },
+    {
+      "path": "海报\\01_主宣传海报_竖版.svg",
+      "bytes": 36445,
+      "sha256": "6FA27761210D3047470D70DAC79FC5A41747684538647F3ED57EFF7CA9FF51AB"
+    },
+    {
+      "path": "海报\\02_产品亮点海报_横版.png",
+      "bytes": 454630,
+      "sha256": "9E2279C383B25005616D2721AFFE0548F3DBDCC0FEAAE29D08677872B0A60422"
+    },
+    {
+      "path": "海报\\02_产品亮点海报_横版.svg",
+      "bytes": 35959,
+      "sha256": "E2A434A5603E012C2CD1DBCA6E82F47C99A8CCECCB101BA92ACA4493969EC01D"
+    },
+    {
+      "path": "海报\\ArcGIS_Pro_MCP_3.0_宣传海报_打印版.pdf",
+      "bytes": 125044,
+      "sha256": "35A2E2AC7990CBBA6D93329FAD2E0409EFE18E50FBFF6062357EDA796A2CCE18"
+    }
+  ],
+  "notes": [
+    "Public document generation only; no product implementation, installation or external publication.",
+    "All authoring and temporary artifacts were directed to the D-drive project directory.",
+    "Word poster pages contain image displays; editable vector sources are the SVGs."
+  ],
+  "navigationUpdatedForAlbum": "2026-10-02T17:19:42.556584+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "inventory": [
+    {
+      "name": "MD_Active",
+      "mapType": "MAP",
+      "layers": [
+        "L_Lines",
+        "L_Hidden",
+        "L_Group",
+        "L_Sub_A",
+        "L_Sub_B",
+        "L_Points",
+        "L_Lines",
+        "L_Polygons"
+      ],
+      "visible": {
+        "L_Lines": true,
+        "L_Hidden": false,
+        "L_Group": true,
+        "L_Sub_A": true,
+        "L_Sub_B": true,
+        "L_Points": true,
+        "L_Polygons": true
+      }
+    },
+    {
+      "name": "MD_Active",
+      "mapType": "MAP",
+      "layers": [],
+      "visible": {}
+    },
+    {
+      "name": "MD_Empty",
+      "mapType": "MAP",
+      "layers": [],
+      "visible": {}
+    },
+    {
+      "name": "MD_Inactive",
+      "mapType": "MAP",
+      "layers": [],
+      "visible": {}
+    },
+    {
+      "name": "MD_Scene",
+      "mapType": "SCENE",
+      "layers": [],
+      "visible": {}
+    }
+  ],
+  "layouts": [
+    "LY_Discovery"
+  ]
+}

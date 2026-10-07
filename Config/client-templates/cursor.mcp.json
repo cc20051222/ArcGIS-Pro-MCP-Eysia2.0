@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "arcgis-pro-mcp": {
+      "url": "http://127.0.0.1:6520/mcp"
+    }
+  }
+}

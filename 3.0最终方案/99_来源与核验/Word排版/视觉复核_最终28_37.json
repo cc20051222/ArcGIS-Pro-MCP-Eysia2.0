@@ -1,0 +1,1217 @@
+{
+  "kind": "ACTUAL_INDIVIDUAL_PAGE_VISUAL_REVIEW",
+  "reviewer": "root",
+  "date": "2026-10-03",
+  "documentRevision": "FINAL-20261003-INPLACE-03",
+  "docxSha256": "6E71E38DAAAA69DF89893BF366DB4106A5DF8E23AA2ECDE076E4667BDA104259",
+  "pdfSha256": "519F19C91DF13A04268750C1190D75B695A6E0BFD3BBD95EBFB1BED674744D58",
+  "viewedPages": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "pageImages": [
+    {
+      "page": 27,
+      "sha256": "5822C4794DC336A1106170C0D2C0DC99CC9415F8BF076D84B1AD47E29D3CD1E5",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png"
+    },
+    {
+      "page": 28,
+      "sha256": "F64F139090ECDCDDA218704C8A602136664D9AACD5FC016158EA8B888931EB9D",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png"
+    },
+    {
+      "page": 29,
+      "sha256": "0EECB79670789816B95BE0E87FC08CBBCD23413D224B31175A2A10CBC80D4085",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png"
+    },
+    {
+      "page": 30,
+      "sha256": "01BBB1184706BCDB8A4374F08C18B35093686B4D9151DA5CA5C53C9498FA9536",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png"
+    },
+    {
+      "page": 31,
+      "sha256": "864A1735C02343BB010B3B4BA15DB5F8259D3A42E6B1EE1869D35AB3EC18FC35",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png"
+    },
+    {
+      "page": 32,
+      "sha256": "C56EA82CC9ABADE248EFB2DF3F78DEA241CA49C22AED532A0238D68721FADA15",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png"
+    },
+    {
+      "page": 33,
+      "sha256": "17ED461533CE8DB0685A17D7ED08E67BF2EDAE530136982740EEAD8F88EC2423",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png"
+    },
+    {
+      "page": 34,
+      "sha256": "76E633ECAE6C72F642D0A562549E0364DAA798649828B411542EEFD1931845DC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png"
+    },
+    {
+      "page": 35,
+      "sha256": "1BFFF927A43B4245D0762E467A2196EC5303BD20F12F961966A62A91141D6B6B",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png"
+    },
+    {
+      "page": 36,
+      "sha256": "CF61BCC1799D4B3CC48D7066C1A3A770FDAD8E849B8992717F68BA852796A4B8",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png"
+    },
+    {
+      "page": 37,
+      "sha256": "7041020666348CFFD3AF3B550A374AA2D41500B846A279F73BCA61A865872DBC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png"
+    },
+    {
+      "page": 38,
+      "sha256": "206EA8926376C8E32EADA069756F689FA482FD63A8CEDAAB2CD44D50F542427A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png"
+    },
+    {
+      "page": 39,
+      "sha256": "F949AF49FAB358780CA18BA4E44CAA5C5E8D06064041C385668E88F8CD610B1E",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png"
+    },
+    {
+      "page": 40,
+      "sha256": "41A9C190A545EC16E83FA8828F7B895625D943A04BAB25C9E33BCE62497744E3",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png"
+    }
+  ],
+  "blockingDefects": [],
+  "status": "VISUALLY_REVIEWED_NO_BLOCKING_LAYOUT_DEFECTS",
+  "reviewMethod": "Each listed current-render PNG was opened and inspected individually; native Word PDF export and Poppler 144 dpi rasterization.",
+  "productAcceptance": "NOT_RUN",
+  "previousReviewSnapshot": {
+    "kind": "FINAL_NATIVE_WORD_PAGE_VISUAL_REVIEW",
+    "reviewer": "/root/current_sync_check",
+    "date": "2026-10-03",
+    "completedUtc": "2026-10-03T10:32:25.599689+08:00",
+    "status": "FINAL_ASSIGNED_PAGES_VISUALLY_REVIEWED_NO_BLOCKING_DEFECTS_OBSERVED",
+    "finalDocument": {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+      "sha256": "8BD0C9D6921B8F0E2400425888E223DDCBBEBC964F83DA7D59A90B1C3DF44311",
+      "bytes": 187142
+    },
+    "finalNativePDF": {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+      "sha256": "CD80ABD8DBB1F398F133C19131201F1D716323C1D1322C1A8D568248D0AB57F0",
+      "bytes": 1318412,
+      "pageCount": 53,
+      "renderer": "Microsoft Word native PDF export"
+    },
+    "finalFingerprintManifest": {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+      "sha256": "89739FEB27F2593042B1406E45E68C1412903C01B8D71BD9F6B301B80D403F60",
+      "imageScale": 2,
+      "imageDpi": 144
+    },
+    "docxSha256": "8BD0C9D6921B8F0E2400425888E223DDCBBEBC964F83DA7D59A90B1C3DF44311",
+    "pdfSha256": "CD80ABD8DBB1F398F133C19131201F1D716323C1D1322C1A8D568248D0AB57F0",
+    "viewedPages": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "pageImages": [
+      {
+        "page": 27,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+        "sha256": "FEF749FC7000E88A2EBFDE17E9BE9B84C82477CFA46D24D3E56B7C69C6299114",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "恢复与团队交接正文完整；第11/12节标题跟后文；体验表首两行在页内完整，页脚正确。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 28,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+        "sha256": "54D7D77F6EF2638C9D979C4FB95244A7FD96450C86AF4D2575574624EEF16A45",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "体验续表重复表头，8项续行均完整；第13节标题后有充分正文；未见表格溢出或页脚重叠。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 29,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+        "sha256": "7202D9404624CAA101A7814E37681FC3EE147CB347BFB30662E4952B11166DEA",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "质量门接续、第14/15节及休眠/缓存管理段完整，标题有后文；末行与页脚有间隔。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 30,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+        "sha256": "94405881EFE92677B672A85B5760E2538F128DE8A7FB99A58586CE32C2F94067",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "更新/参考学习用户卡新增段全文完整，普通用户零PS补救文字可读；章末显式分页造成留白，次页为第三部分，非异常空白页。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 31,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+        "sha256": "FC073D937BD1BF12162175C5B60D1518CC75B2E48C63805EC2A635CCD0DA7CD4",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "第三部分起页标题完整；架构与统一执行正文完整，服务表标题、表头及SV01/SV02完整；长英文名在单元格正常换行。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 32,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+        "sha256": "8DB24B018719E2CF7983934CC547AD9C4C5B2F321DA178989E5B00A0BC037968",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "SV03至SV12续表重复表头；三列及每行内容完整，长服务名完整换行，表底与页码保持间隔。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 33,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+        "sha256": "0154DAA825F641CB46DD3AC1C552013497842BF069D510D3F13E5D1028982951",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "领域合同表首10行完整，长状态/字段串在单元格内换行；底行不压页脚。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 34,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+        "sha256": "D1D2F4533F0134572F887ECB1248AFDE4836CD1E6C8287ED040E1566610C0E76",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "合同续表重复表头且两行完整，扩展合同和状态正文可读；第4节标题有充分正文。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 35,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+        "sha256": "29ED7FD02D4D2F5A13E7D0BDF33A7E9819CD80B6F2F64B8302E0127D3F5026B5",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "第4节接续正文及第5节/M01/M02完整；标题均有后文；M02末句短行完整，非裁切。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 36,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+        "sha256": "B3E073B97EF1F4F32D49691820331450E0B55388EE2BC6AD148A749C1349083D",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "M03/M04/M05标题及正文完整，段落连续；无缺字、重叠或异常留白，页脚正确。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 37,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+        "sha256": "9F6E6C9175DE21D6CD3CF559C5E719F9AE2106EF0EDEEE015B30E03C28310ED3",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "M06/M07/M08标题与完整正文顺排；术语、GP/PS资源约束及科学单位文字可读，页底不重叠。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 38,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+        "sha256": "0547B3F9D573914BED0E52FA60BA03631A05E144DD90524A3CD8644B010323D2",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "M09/M10/M11正文完整；M12标题后有多行正文再自然接续下一页，无孤标题。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 39,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+        "sha256": "8A65010015517B20755C8D8E7F6134EEF6AC308BC15E6D208A6B5DC4BD9C2FB8",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "M12接续及M13/M14/M15完整；长标识和英文均在正文域正常换行，M15自然接续次页。",
+        "blockingDefectObserved": false
+      },
+      {
+        "page": 40,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+        "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+        "sha256": "A0EEC466638036CDECFA4B3547C334A3DFAF031D5D7F87FF655E1E628E6F59F8",
+        "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed in this turn",
+        "notes": "M15末句与M16/M17/M18标题/正文连续；格式长标识正常换行；底部自然接续，无裁切或页脚重叠。",
+        "blockingDefectObserved": false
+      }
+    ],
+    "pagesActuallyViewed": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "finalPagesCoveredByThisReviewer": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "reusedPreviouslyActuallyViewedPages": [],
+    "reusedExactImageBindings": [],
+    "blockingDefects": [],
+    "visibleNewDefects": [],
+    "nonBlockingObservations": [
+      {
+        "page": 30,
+        "observation": "One final chapter paragraph leaves the lower page blank before the explicit third-part page break. Page31 actually begins the third part; no text loss, empty page, clipping or unexpected break observed.",
+        "basis": "Actual individual page30/page31 viewing plus existing generator line208 explicit DOC.add_page_break for each main part",
+        "blocking": false
+      }
+    ],
+    "checked": [
+      "All fourteen complete current individual page images at original detail",
+      "Text and table-cell clipping or overflow",
+      "Body/table/footer overlap",
+      "Visible Chinese and Latin glyph rendering",
+      "Heading/body continuity and orphan headings",
+      "Repeated continuation table headers",
+      "Actual page-number footers27 through40",
+      "Blank pages and explanation of chapter-ending whitespace",
+      "Current update/reference-learning user paragraph actually present and readable"
+    ],
+    "notCovered": [
+      "Pages1-26 and41-53 outside this reviewer assignment",
+      "No DOCX source edit or whole-document reflow assessment by this reviewer",
+      "No tagged-PDF semantics, screen-reader, physical printing, scientific or runtime product acceptance"
+    ],
+    "DOCXChangedByReviewer": false,
+    "productAcceptance": "NOT_RUN",
+    "conclusion": "Fourteen complete current individual PNG pages27-40 were actually viewed through tools.view_image at original detail. No visible blocking clipping, overflow, overlap, missing glyph, orphan heading or unexplained blank page was observed. Page30 chapter-ending whitespace is explained by the next part explicit page break. Current DOCX/native PDF and every viewed PNG match the53-page fingerprint manifest. Prior review is retained only as a historical snapshot; no other page viewing or product acceptance is claimed.",
+    "previousReviewFileSHA256BeforeUpdate": "E05BF490F42C431A88C0AF6FF0F2F09B5093781375FB2679451F3F294D65D2DB",
+    "previousReviewSnapshot": {
+      "kind": "FINAL_NATIVE_WORD_PAGE_VISUAL_REVIEW",
+      "reviewer": "/root/lifecycle_plan_review",
+      "date": "2026-10-03",
+      "completedUtc": "2026-10-03T07:22:53.798616+08:00",
+      "status": "FINAL_ASSIGNED_PAGES_VISUALLY_REVIEWED_NO_DEFECTS_OBSERVED",
+      "finalDocument": {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+        "sha256": "F7F466377D41BDEB4606A84F144BE50F7B48A5DAEF72D60793303E182C57CCAE",
+        "bytes": 185713
+      },
+      "finalNativePDF": {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+        "sha256": "64A89FDE77FF195C5568810722B651C1C8C75D07B578BA271E3AA47F4A319218",
+        "bytes": 1313123,
+        "pageCount": 51,
+        "renderer": "Microsoft Word native PDF export"
+      },
+      "finalFingerprintManifest": {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+        "sha256": "6077EDD928157097C2D8F28457B313AA3F9690DCE462754C2302989D18A0A8E5",
+        "imageScale": 2,
+        "imageDpi": 144
+      },
+      "viewedPages": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "pageImages": [
+        {
+          "page": 27,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+          "sha256": "696754EC60D99F49AF7CEC31897E55875DF9431093F8739A9A247F82B73DE3B9",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "体验续表重复表头，各行完整；第13节标题后有充分正文；未见表格溢出或页脚重叠。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 28,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+          "sha256": "BBF6575184D00F21AF3BF34B75F3F026278A6B7C72C7FFBC95FB0E39DCD8A95F",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第14/15节和新休眠恢复、离线、缓存管理正文完整同页；标题跟正文，页底收束正常，无裁切/异常空白。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 29,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+          "sha256": "ED43D09D796255FD3E9EE457050F159009FA2ABACB68311087373D7B313F7451",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第三部分起页整齐，服务表标题、表头及SV01/SV02完整；Decision Service按完整词组换行。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 30,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+          "sha256": "7F359805A60B82A994E66A2D27A7B9F315087A2F3550E73DF848CA7844E2FA28",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "SV03至SV12续表重复表头，三列清楚，长服务名完整分行，表底与页码保持间隔。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 31,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+          "sha256": "8AD84005D2EAFAB49FD71CE3FD1F7F18508E12828CAEFD6D385D6F0CB19EF73C",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "领域合同表十行均完整，长字段和状态字符串在单元格内换行；底行不压页脚。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 32,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+          "sha256": "AFEB73B3429F1B3B29080A09A90913B373AE43F8FEDEA8BCEB1E63E9C08D45E5",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "领域合同续表有重复表头，两续行完整；状态说明和第4节有连续正文，段落正常跨页。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 33,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+          "sha256": "F144E9DEB65C2CA27219F459FCEED2ECF5DE1A81852B121D368262DD60652A5E",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第4节恢复文字接续完整，Stop/CancelDecision与ResumeDecision可读；第5节及M01/M02各有正文，无标题孤立。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 34,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+          "sha256": "2E62F33354B4B9371EAD79980A292B6472EDA092528923ADC9EF01CE6DBEC4F4",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M03/M04/M05标题、中文正文及长英文标识清楚；全部在页边内，无重叠或缺字。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 35,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+          "sha256": "2392671513CD510AFBB2F63BED4C171C61F69899F619C4505D4052F747441AE8",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M06/M07/M08正文完整，资源分轴、网络和栅格段落正常换行；页码正确且独立。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 36,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+          "sha256": "6CE87E911DB53714C3C9D5CE2D57057C9F324EECF901CA95495DC218B9ADC2D2",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M09/M10/M11排布正常，M12标题后有三行正文；图框/比例尺等文字完整，不压页脚。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 37,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+          "sha256": "D88453C60EBA417DF5430E5AD8B75351DC77563A86039418E5F4CD984A266D7D",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M12接续与M13/M14/M15均完整；PS与自动设计限制文字可读，M15正常接续次页。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 38,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+          "sha256": "C194595A334931629B261595DE358F63B032C47499D6FA5E9302278113BE528C",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M15末段、M16/M17/M18连续，所有标题有后文；格式长标识正常换行，无裁切和缺字。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 39,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+          "sha256": "B6D2AB71A808CD2EB7AF9F944B152A71A39FD0B96C6B819D87A57BA5AC3CCEF8",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M18尾段与M19/M20连续；第6节标题后有充分正文，底部留白和页码正常。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 40,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+          "sha256": "654E8EABD888F9A401009D00D32C4BB90D0853A58523C9A77F66F73E60CB522E",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "偏好/技能接续正文及第7节资料补缺、断点续传段落完整；无标题孤立、越界或页脚重叠。",
+          "blockingDefectObserved": false
+        }
+      ],
+      "actualNewlyViewedFinalPages": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "actualNewlyViewedFinalPageCount": 14,
+      "actualIndividualFinalImages": [
+        {
+          "page": 27,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+          "sha256": "696754EC60D99F49AF7CEC31897E55875DF9431093F8739A9A247F82B73DE3B9",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "体验续表重复表头，各行完整；第13节标题后有充分正文；未见表格溢出或页脚重叠。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 28,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+          "sha256": "BBF6575184D00F21AF3BF34B75F3F026278A6B7C72C7FFBC95FB0E39DCD8A95F",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第14/15节和新休眠恢复、离线、缓存管理正文完整同页；标题跟正文，页底收束正常，无裁切/异常空白。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 29,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+          "sha256": "ED43D09D796255FD3E9EE457050F159009FA2ABACB68311087373D7B313F7451",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第三部分起页整齐，服务表标题、表头及SV01/SV02完整；Decision Service按完整词组换行。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 30,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+          "sha256": "7F359805A60B82A994E66A2D27A7B9F315087A2F3550E73DF848CA7844E2FA28",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "SV03至SV12续表重复表头，三列清楚，长服务名完整分行，表底与页码保持间隔。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 31,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+          "sha256": "8AD84005D2EAFAB49FD71CE3FD1F7F18508E12828CAEFD6D385D6F0CB19EF73C",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "领域合同表十行均完整，长字段和状态字符串在单元格内换行；底行不压页脚。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 32,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+          "sha256": "AFEB73B3429F1B3B29080A09A90913B373AE43F8FEDEA8BCEB1E63E9C08D45E5",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "领域合同续表有重复表头，两续行完整；状态说明和第4节有连续正文，段落正常跨页。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 33,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+          "sha256": "F144E9DEB65C2CA27219F459FCEED2ECF5DE1A81852B121D368262DD60652A5E",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "第4节恢复文字接续完整，Stop/CancelDecision与ResumeDecision可读；第5节及M01/M02各有正文，无标题孤立。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 34,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+          "sha256": "2E62F33354B4B9371EAD79980A292B6472EDA092528923ADC9EF01CE6DBEC4F4",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M03/M04/M05标题、中文正文及长英文标识清楚；全部在页边内，无重叠或缺字。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 35,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+          "sha256": "2392671513CD510AFBB2F63BED4C171C61F69899F619C4505D4052F747441AE8",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M06/M07/M08正文完整，资源分轴、网络和栅格段落正常换行；页码正确且独立。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 36,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+          "sha256": "6CE87E911DB53714C3C9D5CE2D57057C9F324EECF901CA95495DC218B9ADC2D2",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M09/M10/M11排布正常，M12标题后有三行正文；图框/比例尺等文字完整，不压页脚。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 37,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+          "sha256": "D88453C60EBA417DF5430E5AD8B75351DC77563A86039418E5F4CD984A266D7D",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M12接续与M13/M14/M15均完整；PS与自动设计限制文字可读，M15正常接续次页。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 38,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+          "sha256": "C194595A334931629B261595DE358F63B032C47499D6FA5E9302278113BE528C",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M15末段、M16/M17/M18连续，所有标题有后文；格式长标识正常换行，无裁切和缺字。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 39,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+          "sha256": "B6D2AB71A808CD2EB7AF9F944B152A71A39FD0B96C6B819D87A57BA5AC3CCEF8",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "M18尾段与M19/M20连续；第6节标题后有充分正文，底部留白和页码正常。",
+          "blockingDefectObserved": false
+        },
+        {
+          "page": 40,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+          "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+          "sha256": "654E8EABD888F9A401009D00D32C4BB90D0853A58523C9A77F66F73E60CB522E",
+          "viewMethod": "tools.view_image detail original; complete individual current page image actually viewed",
+          "notes": "偏好/技能接续正文及第7节资料补缺、断点续传段落完整；无标题孤立、越界或页脚重叠。",
+          "blockingDefectObserved": false
+        }
+      ],
+      "pagesActuallyViewed": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "finalPagesCoveredByThisReviewer": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "reusedPreviouslyActuallyViewedPages": [],
+      "reusedExactImageBindings": [],
+      "blockingDefects": [],
+      "visibleNewDefects": [],
+      "checked": [
+        "Each complete current individual page image at original detail",
+        "Text/table-cell clipping and overflow",
+        "Body/table/footer overlaps",
+        "Missing visible Chinese/Latin glyphs",
+        "Heading/body continuity and orphan headings",
+        "Repeated continuation table headers",
+        "Page numbers27 through40",
+        "Unexpected blank pages or unexplained large whitespace",
+        "Current page28 lifecycle user section is actually present"
+      ],
+      "notCovered": [
+        "Pages1-26 and41-51 outside this reviewer assignment",
+        "No DOCX source editing or full-document reflow assessment by this reviewer",
+        "No tagged-PDF semantics, screen-reader or physical printing acceptance",
+        "No actual scientific computation, GP/PS/Office business run or installation/product acceptance"
+      ],
+      "DOCXChangedByReviewer": false,
+      "productAcceptance": "NOT_RUN",
+      "conclusion": "Fourteen complete current individual PNG pages27-40 were actually viewed through tools.view_image at original detail. No visible overflow, overlap, missing glyph, orphan heading or unexplained blank page was observed. Current DOCX/native PDF identity and each viewed PNG match the51-page fingerprint manifest. Prior review is retained only as historical snapshot; no other page viewing or product acceptance is claimed.",
+      "previousReviewFileSHA256BeforeUpdate": "4830FFC75BB8C3094B5076EA06B723259524EFC05FB0E94781308CCB2D7FFAFB",
+      "previousReviewSnapshot": {
+        "kind": "FINAL_NATIVE_WORD_PAGE_VISUAL_REVIEW",
+        "reviewer": "/root/current_scope_sync_audit",
+        "date": "2026-10-03",
+        "completedUtc": "2026-10-03T04:26:22.0374+08:00",
+        "status": "FINAL_ASSIGNED_PAGES_VISUALLY_REVIEWED_NO_DEFECTS_OBSERVED",
+        "finalDocument": {
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+          "sha256": "A7D2B1E6940915E0AC40CB82ECF6863C9403CC67FFFD4AA19AB0F527F83B83DF",
+          "bytes": 182792
+        },
+        "finalNativePDF": {
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+          "sha256": "3020EBB4F1AC651758D5B92D580942BD428859E944BAB177ABCB6E347DC4223B",
+          "bytes": 1293406,
+          "pageCount": 50,
+          "renderer": "Microsoft Word native PDF export"
+        },
+        "finalFingerprintManifest": {
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+          "sha256": "B3138BEF7F8765222B608BB8148C3E70F254FBE76886C941C2FCBA064E8EE736",
+          "imageScale": 2,
+          "imageDpi": 144
+        },
+        "actualNewlyViewedFinalPages": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "actualNewlyViewedFinalPageCount": 12,
+        "actualIndividualFinalImages": [
+          {
+            "page": 26,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-26.png",
+            "sha256": "2FEBB0580DECCFADE9EB18EDC953DC8079C181F9436DD931839E759C8D45740D",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "取消/模型缺口段落正常接续；成果领取/团队接手标题后有完整正文；体验表表头及两条数据行完整，未压页脚。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 27,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png",
+            "sha256": "696754EC60D99F49AF7CEC31897E55875DF9431093F8739A9A247F82B73DE3B9",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "体验表续页重复表头，各行均完整；第13节标题与后续正文同页；所有文字和表格都在页边内，未见缺字。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 28,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+            "sha256": "1472C27B921C4A1279363D020B0823261F0F76191C627E14362D625F43C88A8A",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "用户验收尾段和新增远端/D14状态说明完整；第14节标题后有充分正文；下部留白为第二部分结束，下一页为新部分。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 29,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+            "sha256": "ED43D09D796255FD3E9EE457050F159009FA2ABACB68311087373D7B313F7451",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "第三部分标题与日期/状态说明齐整；第1节架构正文及第2节标题、服务表表头和SV01/SV02同行内容完整；英文服务名可读。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 30,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+            "sha256": "7F359805A60B82A994E66A2D27A7B9F315087A2F3550E73DF848CA7844E2FA28",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "服务续表重复表头，SV03至SV12每行均完整；长服务名按完整词组换行；三列未溢出，页码与表底分离。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 31,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+            "sha256": "8AD84005D2EAFAB49FD71CE3FD1F7F18508E12828CAEFD6D385D6F0CB19EF73C",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "领域合同表DatasetContract至DeliveryRevision完整；长字段、状态词和斜线组合正常换行；未见裁切或重叠。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 32,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+            "sha256": "AFEB73B3429F1B3B29080A09A90913B373AE43F8FEDEA8BCEB1E63E9C08D45E5",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "领域合同续表重复表头，CompatibilityProfile/UpdateImpactPlan完整；状态说明和第4节标题后正文完整；段落合法续到次页。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 33,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+            "sha256": "F144E9DEB65C2CA27219F459FCEED2ECF5DE1A81852B121D368262DD60652A5E",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "持久恢复正文衔接，Stop/Cancel与Resume词组完整；第5节及M01/M02标题后均有正文；长英文标识与中文清楚。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 34,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+            "sha256": "2E62F33354B4B9371EAD79980A292B6472EDA092528923ADC9EF01CE6DBEC4F4",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "M03/M04/M05标题和正文齐整，全部内容在页边内，行距正常，无孤立标题、重叠或异常空白。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 35,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+            "sha256": "2392671513CD510AFBB2F63BED4C171C61F69899F619C4505D4052F747441AE8",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "M06/M07/M08各标题及正文完整；资源分轴、网络与栅格段落正常换行；末段未压页码。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 36,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+            "sha256": "6CE87E911DB53714C3C9D5CE2D57057C9F324EECF901CA95495DC218B9ADC2D2",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "M09/M10/M11正文完整；底部M12标题后有多行正文，不是孤立标题；字体、标点和英文长标识可读。",
+            "blockingDefectObserved": false
+          },
+          {
+            "page": 37,
+            "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+            "sha256": "D88453C60EBA417DF5430E5AD8B75351DC77563A86039418E5F4CD984A266D7D",
+            "viewMethod": "tools.view_image detail original; each complete individual final PNG actually viewed",
+            "notes": "M12接续至M13/M14/M15清楚；PS和设计限制词组完整；末尾M15段落按行续到下一页，未出现裁切、重叠或缺字。",
+            "blockingDefectObserved": false
+          }
+        ],
+        "pagesActuallyViewed": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "finalPagesCoveredByThisReviewer": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "reusedPreviouslyActuallyViewedPages": [],
+        "reusedExactImageBindings": [],
+        "blockingDefects": [],
+        "visibleNewDefects": [],
+        "intentionalWhitespace": {
+          "page": 28,
+          "observation": "Part two ends after the new user status section; part three starts at page 29 with explicit section separation. This is not a blank or lost page."
+        },
+        "checked": [
+          "Visible text and table-cell clipping or overflow",
+          "Overlapping body, tables and footer",
+          "Visible missing Chinese or Latin glyphs",
+          "Headings detached from following content",
+          "Repeated continuation table headers",
+          "Long service and contract name line breaks",
+          "Unexpected blank pages or large unexplained whitespace",
+          "Visible new remote-data and limited-D14 explanation is present on page 28"
+        ],
+        "notCovered": [
+          "Pages 1-25 and 38-50 are outside this reviewer visual assignment",
+          "No font licensing, accessibility tag semantics, screen-reader use or physical printing acceptance",
+          "No current product, GP, Photoshop, installer or competition runtime acceptance"
+        ],
+        "DOCXChangedByReviewer": false,
+        "productAcceptance": "NOT_RUN",
+        "conclusion": "Twelve complete current individual page PNGs 26-37 were actually viewed at original detail. No visible layout defects were observed. Current DOCX, native PDF and each assigned PNG hash were checked against the final 50-page fingerprint manifest. Prior review remains historical and was not reused for these pages.",
+        "previousReviewFileSHA256BeforeUpdate": "6EE76D06BE72D18E63C26DC60DDFFE6A77A80061C136179790652D871676C1AC",
+        "previousReviewSnapshot": {
+          "kind": "FINAL_NATIVE_WORD_PAGE_VISUAL_REVIEW",
+          "reviewer": "/root/final_schedule_and_roles",
+          "date": "2026-10-02",
+          "status": "FINAL_ASSIGNED_PAGES_VISUALLY_REVIEWED_NO_DEFECTS_OBSERVED",
+          "finalDocument": {
+            "sha256": "E886974661665BA28582A58339038B806D92C86788EA9757D15907F9032580F9",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+            "bytes": 180870
+          },
+          "finalNativePDF": {
+            "sha256": "7D786FFA1343D3C3678FECE6169193A4D32D05796D672DBD04BAC2E34B17DAC4",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+            "renderer": "Microsoft Word native PDF export",
+            "bytes": 1277418,
+            "pageCount": 48
+          },
+          "finalFingerprintManifest": {
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+            "sha256": "1ED9DC9E9B47166CBF62DEF8388CD2358B6C6356AFCB532B8A4EFC60F55E4236",
+            "imageScale": 2,
+            "imageDpi": 144
+          },
+          "actualNewlyViewedFinalPages": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "actualNewlyViewedFinalPageCount": 10,
+          "actualIndividualFinalImages": [
+            {
+              "page": 28,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png",
+              "sha256": "25633ABB2D9F9BDF9E754A457E5541B94801B0C9288B66E52D14A73A48297490",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "第三部分标题和正文齐整；服务表首列加宽后SV01/SV02按完整词组分行，无孤立末字母；标题后表头和两项数据同页。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 29,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png",
+              "sha256": "CA711DE0C60947412AB566973CF75808E27308B33974C192AD52E594D9649141",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "服务续表表头重复，SV03至SV12各行完整；SV11 Delivery Service保持完整，SV12 Update And Compatibility Service可读，无裁切。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 30,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png",
+              "sha256": "D3082B40F6CAD5999B7CEA94A6EA42C45BD386BCA1926F81FFCC4920A04A9931",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "领域合同表从DatasetContract到DeliveryRevision完整，列宽和长字段正常换行，表底不压页码。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 31,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png",
+              "sha256": "0373DDD3CD85EDAB2C8DD52511FB4CF1767D4C568D4C18377C4CF76457FB4BD7",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "领域合同续表重复表头；CompatibilityProfile和UpdateImpactPlan完整；第4节标题后有充分正文，没有标题孤立。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 32,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png",
+              "sha256": "27CA41FC00706DA361CD3D7D940BB582E3F491F65A1E8DC654BD5D7941155916",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "持久恢复段接续完整；第5节及M01/M02各标题后均有正文；长代码词与中文清楚，不溢出页边。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 33,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png",
+              "sha256": "D028F622301D85300BFA388EB72DBABC6AABA88D65A983D4D4E080DDB4EF1BAD",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "M03/M04/M05标题及正文完整，字体/字形与行距正常，无重叠或异常大空白。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 34,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png",
+              "sha256": "901C2DC8AAE0FC4287F346437914990EE9FFF8E0FBF71DDFE7DEA7C450D1F6B3",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "M06/M07/M08各标题和正文完整，资源/网络/栅格内容正常换行，页码留白正常。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 35,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png",
+              "sha256": "6FD9DDF0B0DE0448F8B6B64BB5573AEC913D04A05A0D7DD6C77590A38281213B",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "M09/M10/M11标题和正文齐整；底部M12标题后有三行正文，非孤立标题。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 36,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png",
+              "sha256": "E8310ADA471D10462F22FCAE8043EDDF698DEA35DF40B2313D553A3BD058612F",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "M12接续到M13/M14/M15，正文连续、代码和中文可读，底部段落正常跨页，无裁切。",
+              "blockingDefectObserved": false
+            },
+            {
+              "page": 37,
+              "image": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png",
+              "sha256": "21FE4CC592216DF76A0263C9330A147F852CDDE3127C023DE6DD27A18F04EDDA",
+              "viewMethod": "functions.view_image detail original; each individual final page image actually viewed",
+              "notes": "M15尾段至M16/M17/M18正常衔接，各标题后有正文，长格式合同词可读；底部正文未压入页码。",
+              "blockingDefectObserved": false
+            }
+          ],
+          "reusedPreviouslyActuallyViewedPages": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "reusedExactImageBindings": [
+            {
+              "page": 18,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "4E0B515384A0D193EE242B302286CB6D4FE0744491926851E437D3EE5C5CC107",
+              "finalImageSha256": "4E0B515384A0D193EE242B302286CB6D4FE0744491926851E437D3EE5C5CC107",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "续表表头与P09完整，6.2至6.4标题后均有正文，无裁切、重叠或缺字。"
+            },
+            {
+              "page": 19,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "91A4B4DF2DC1A5ECE1010BFEF473B29ADB446631215B67E5979CEDF2589D165F",
+              "finalImageSha256": "91A4B4DF2DC1A5ECE1010BFEF473B29ADB446631215B67E5979CEDF2589D165F",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "第二链标题与正文同页，S01至S07表格单元完整，底部未挤入页码。"
+            },
+            {
+              "page": 20,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "A5665B5D59600B064647315A38607F8801071A7072AB1615C794DC4948D395A3",
+              "finalImageSha256": "A5665B5D59600B064647315A38607F8801071A7072AB1615C794DC4948D395A3",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "S08续表重复表头，转移矩阵和7.2/7.3正文清晰，无孤立标题。"
+            },
+            {
+              "page": 21,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "09A7C59B66B5373C0DD331566974A062869E028B3DDFA8BB31B0872E4016F6A7",
+              "finalImageSha256": "09A7C59B66B5373C0DD331566974A062869E028B3DDFA8BB31B0872E4016F6A7",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "7.4及第三链标题均有后续正文，N01至N04完整，跨页以完整行结束。"
+            },
+            {
+              "page": 22,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "37E94943BE689A80AB18ED732CAE156091C28565AAB6E594BE331196DED17ED9",
+              "finalImageSha256": "37E94943BE689A80AB18ED732CAE156091C28565AAB6E594BE331196DED17ED9",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "N05至N08续表重复表头；QC长状态词换行仍可辨，练习表A至E完整。"
+            },
+            {
+              "page": 23,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "21DBA62A5F8F08F2C5ACB985A4D0160370776C23FD550CB95FDBA2DE24EB2F59",
+              "finalImageSha256": "21DBA62A5F8F08F2C5ACB985A4D0160370776C23FD550CB95FDBA2DE24EB2F59",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "练习表F/G重复表头且内容完整；8.3正文与第9节标题及两条表格行同页。"
+            },
+            {
+              "page": 24,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "6FB61960568073E7E73958FA4EB34FA7F437CB56CDE70811EABB54F70DB7B326",
+              "finalImageSha256": "6FB61960568073E7E73958FA4EB34FA7F437CB56CDE70811EABB54F70DB7B326",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "改稿续表重复表头，全部行完整；取消/断连段落合法按行续到次页，没有标题孤立。"
+            },
+            {
+              "page": 25,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "9CC345548319EC69BAFA1C2E96132819EDFBACAD502F77689E6E05ACBDEA0A73",
+              "finalImageSha256": "9CC345548319EC69BAFA1C2E96132819EDFBACAD502F77689E6E05ACBDEA0A73",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "取消段落正常接续；成果领取正文清晰；第12节标题与表头及两条数据行同页。"
+            },
+            {
+              "page": 26,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "6244D7173CE5CB11637825BB329194F553D24C4E2F8BFB54219CF98002082743",
+              "finalImageSha256": "6244D7173CE5CB11637825BB329194F553D24C4E2F8BFB54219CF98002082743",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "体验表续页重复表头；第13节标题及三行正文同页，底部内容未遮页码。"
+            },
+            {
+              "page": 27,
+              "priorActualViewReport": "视觉复核_18_34.json",
+              "priorActualViewMethod": "functions.view_image detail original; actual individual page image viewed",
+              "priorImageSha256": "ED0E6EEA9C64A644EBB2D3CF9BFF9424359A7ECFE8ADFB61FAC4B92FCDE138D2",
+              "finalImageSha256": "ED0E6EEA9C64A644EBB2D3CF9BFF9424359A7ECFE8ADFB61FAC4B92FCDE138D2",
+              "exactPNGBytesEqual": true,
+              "reusedScope": "The exact already-viewed page image; not a new actual viewing claim",
+              "notes": "第二部分尾段完整且页码正常；下部较大留白接28页新部分标题，是章节分页留白。"
+            }
+          ],
+          "priorViewReport": {
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\视觉复核_18_34.json",
+            "scopeRestriction": "Only pages18-27 reused; old pages28-34 no longer qualify as final-page visual evidence",
+            "sha256": "726C122E7C1A1FD79C8F4A3CCC0A4EB589BFCA40048D00F9D05A033EE8D00EB0"
+          },
+          "finalPagesCoveredByThisReviewer": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "priorMinorServiceNameFinding": {
+            "status": "RESOLVED_BY_ROOT_AND_ACTUALLY_REREAD_IN_FINAL_IMAGES",
+            "changesByReviewer": false,
+            "id": "WR18-34-01",
+            "evidence": "Final page28 SV02 has complete Decision Service words; final page29 SV11 has complete Delivery Service words; no single trailing letter line"
+          },
+          "blockingDefects": [],
+          "visibleNewDefects": [],
+          "intentionalWhitespace": {
+            "page": 27,
+            "observation": "Part2 ending followed by part3 start atpage28; retained as deliberate chapter separation",
+            "status": "EXACT_UNCHANGED_PRIOR_IMAGE"
+          },
+          "checked": [
+            "Visible clipping and cell/text overflow",
+            "Overlapping text/tables/footers",
+            "Visible missing glyphs",
+            "Orphan headings",
+            "Repeated table headers on continuations",
+            "Service-name line breaking and column readability",
+            "Unexpected large whitespace"
+          ],
+          "notCovered": [
+            "Final pages1-17 not viewed by this reviewer",
+            "Final pages38-48 not viewed by this reviewer; root assigned review elsewhere",
+            "No font licensing/embed-table validation or tagged-PDF/screen-reader semantic verification",
+            "No physical printing or rendering in another client/environment",
+            "No product runtime/GP/PS/installation/acceptance",
+            "Reused pages18-27 are verified identical prior images; not claimed newly opened in this final reread"
+          ],
+          "DOCXChangedByReviewer": false,
+          "productAcceptance": "NOT_RUN",
+          "conclusion": "Final native48-page artifact identity confirmed. Ten new individual final images28-37 actually viewed at original resolution; no visible defects observed. Prior actual visual results18-27 reused only after exact prior/current/manifest PNG SHA comparison. No final page38-or-later viewing is claimed by this reviewer."
+        }
+      },
+      "docxSha256": "F7F466377D41BDEB4606A84F144BE50F7B48A5DAEF72D60793303E182C57CCAE",
+      "pdfSha256": "64A89FDE77FF195C5568810722B651C1C8C75D07B578BA271E3AA47F4A319218",
+      "finalRenderIdenticalImageReusedPages": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "previousRenderArtifactBinding": {
+        "docxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+        "pdfSha256": "18E3914FA9EB1D5A0F7F47A4BF3270BCECE39970F5F7E6EF38E0A074F4FE1949",
+        "actualIndividualInspectionThisTurn": true,
+        "basis": "Footer-only edit did not change any reviewed PNG bytes; each SHA independently compared"
+      },
+      "bindingInspector": "root"
+    }
+  }
+}

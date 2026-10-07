@@ -1,0 +1,66 @@
+<Project>
+
+  <!--
+    D-060 · 构建前置校验（防静默降级）
+    规则：构件声明 ArcGISProSdkConsumer=true 时，编译前必须通过三项校验：
+      ① 引用集目录与 6 个必需程序集存在；
+      ② 程序集 AssemblyVersion 落在期望版本前缀内（默认 13.0.）；
+      ③ 6 个程序集的 SHA-256 摘要与 refset.props 记账一致。
+    任一不符 ⇒ 立即失败（Error），并给出缺失清单。深层身份校验（公钥令牌 / 逐文件清单）
+    由 scripts/verify-sdk-refs.ps1 承担（发布/打包链调用）。
+  -->
+  <Import Project="$(ArcGISProSdkRefs)refset.props" Condition="'$(ArcGISProSdkConsumer)' == 'true' And Exists('$(ArcGISProSdkRefs)refset.props')" />
+
+  <Target Name="VerifyArcGISProSdkRefs"
+          BeforeTargets="BeforeCompile"
+          Condition="'$(ArcGISProSdkConsumer)' == 'true'">
+
+    <Error Condition="'$(ArcGISProSdkRefs)' == ''"
+           Code="APMCP1001"
+           Text="ArcGISProSdkRefs 未解析（既无 vendored 引用集，也无本机 Pro bin）。请先生成 sdk-refs/，或显式 -p:ArcGISProSdkRefs=&quot;&lt;Pro bin 路径&gt;&quot;。" />
+
+    <Error Condition="!Exists('$(ArcGISProSdkRefs)')"
+           Code="APMCP1001"
+           Text="ArcGIS Pro SDK 引用集目录不存在：$(ArcGISProSdkRefs)（生成方式见 sdk-refs/SOURCE.md）" />
+
+    <ItemGroup>
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)ArcGIS.Core.dll" />
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)ArcGIS.Desktop.Framework.dll" />
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)Extensions\Core\ArcGIS.Desktop.Core.dll" />
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)Extensions\Mapping\ArcGIS.Desktop.Mapping.dll" />
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)Extensions\Catalog\ArcGIS.Desktop.Catalog.dll" />
+      <_ArcGISSdkRefRequired Include="$(ArcGISProSdkRefs)Extensions\Layout\ArcGIS.Desktop.Layouts.dll" />
+      <_ArcGISSdkRefMissing Include="@(_ArcGISSdkRefRequired)" Condition="!Exists('%(FullPath)')" />
+    </ItemGroup>
+
+    <Error Condition="'@(_ArcGISSdkRefMissing)' != ''"
+           Code="APMCP1002"
+           Text="ArcGIS Pro SDK 引用集缺件（%(_ArcGISSdkRefMissing.Count) 项）：@(_ArcGISSdkRefMissing, ' | ')" />
+
+    <!-- ② 版本断言：AssemblyVersion 必须落在期望前缀内（GetAssemblyIdentity 直接读元数据，不加载程序集） -->
+    <GetAssemblyIdentity AssemblyFiles="@(_ArcGISSdkRefRequired)">
+      <Output TaskParameter="Assemblies" ItemName="_ArcGISSdkRefIdentity" />
+    </GetAssemblyIdentity>
+
+    <Error Condition="'@(_ArcGISSdkRefIdentity)' != '' And !$([System.String]::Copy('%(Version)').StartsWith('$(ArcGISProSdkExpectedVersionPrefix)'))"
+           Code="APMCP1003"
+           Text="SDK 引用集版本越界：%(Identity) = %(Version)（期望前缀 $(ArcGISProSdkExpectedVersionPrefix)）。疑似引用集被替换为其他版本代。" />
+
+    <!-- ③ SHA-256 摘要（记账值随 refset.props；顺序 = refset.props 中记录的规范顺序） -->
+    <GetFileHash Files="@(_ArcGISSdkRefRequired)" Algorithm="SHA256" HashEncoding="hex">
+      <Output TaskParameter="Items" ItemName="_ArcGISSdkRefHash" />
+    </GetFileHash>
+
+    <Error Condition="'$(ArcGISProSdkRefsDigest)' != '' And '@(_ArcGISSdkRefHash->'%(FileHash)')' != '$(ArcGISProSdkRefsDigest)'"
+           Code="APMCP1004"
+           Text="SDK 引用集 SHA-256 摘要不符（记账 $(ArcGISProSdkRefsDigest) ／ 实测 @(_ArcGISSdkRefHash->'%(FileHash)')）。引用集内容与记账不一致，构建中止。" />
+
+    <Error Condition="'$(ArcGISProSdkRefsDigest)' == ''"
+           Code="APMCP1005"
+           Text="引用集缺少记账文件 refset.props（无 SHA-256 摘要基线）⇒ 无法证明引用集完整。请运行 scripts/verify-sdk-refs.ps1 重新生成记账。" />
+
+    <Message Importance="high"
+             Text="[D-060] ArcGIS Pro SDK 引用集校验通过：$(ArcGISProSdkRefs)（版本前缀 $(ArcGISProSdkExpectedVersionPrefix)；包 $(ArcGISProSdkRefsPackageVersion)；摘要 $(ArcGISProSdkRefsDigest))" />
+  </Target>
+
+</Project>

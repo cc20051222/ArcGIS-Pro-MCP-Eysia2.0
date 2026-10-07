@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x2",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "surface": "x2_surface.asc",
+  "observers": [
+    {
+      "id": "O1",
+      "col": 3,
+      "row": 3,
+      "height": 5.0
+    },
+    {
+      "id": "O2",
+      "col": 20,
+      "row": 25,
+      "height": 10.0
+    },
+    {
+      "id": "O3",
+      "col": 20,
+      "row": 6,
+      "height": 50.0
+    }
+  ],
+  "visibilityPredicate": {
+    "targetHeight": 2.0,
+    "sampleStep": 0.25,
+    "rule": "a scored cell is visible iff no intermediate terrain cell (the nearest cell centre to each 0.25 m sample) exceeds the sight line by more than 1e-9",
+    "scope": "every valid cell is scored, the observer's own cell included; a NoData cell is neither a target nor a blocker and is left out of both counts",
+    "noDataTreatment": "NoData intermediate cells do not block and NoData targets are not counted"
+  },
+  "answer": {
+    "O1": {
+      "visibleCells": 569,
+      "visibleIndexChecksum": 208303
+    },
+    "O2": {
+      "visibleCells": 703,
+      "visibleIndexChecksum": 645788
+    },
+    "O3": {
+      "visibleCells": 586,
+      "visibleIndexChecksum": 175122
+    }
+  },
+  "expectation": "the wall block hides a contiguous band behind it; a run that reports the whole grid as visible has not evaluated occlusion at all"
+}

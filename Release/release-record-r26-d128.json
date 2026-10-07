@@ -1,0 +1,236 @@
+{
+  "schema": "d128-release-record-v1",
+  "recordType": "release record (发布记录台账)",
+  "recordSelfExcluded": true,
+  "ticket": "D-128",
+  "executingLine": "L1 实现线（唯一构建线；本批未构建）",
+  "deliveryForm": "PASS CANDIDATE (self-acceptance: none; close-out authority: commander only)",
+  "createdAt": "2026-10-06T17:18:40+0800",
+  "releaseRevision": "r26",
+  "deploymentVersion": "one-click-1.0.2-r26",
+  "releaseSubject": "ArcGIS Pro MCP 1.0.2 one-click r26 ＝ 239 代际分发件 ＋ **包内三件文档随代际归位**（工具数・适用包・签名事实三处失真已闭合）；签名块与 payload 与 r25 逐字节同一",
+  "hashConvention": "RAW-byte SHA-256, upper-case hex (no BOM/CRLF normalisation) — R-G245-P2 lesson",
+  "authorizationChain": [
+    "G-297 用户明文「代为批准」（AGENTS §6 签名与公开发布解除）",
+    "G-312 R-1 用户明文「解锁全面修复」＝r26 发布面换代授权成就",
+    "G-312 R-4 范围扩至九项・R-5 完成门十二项",
+    "G-316 R-3/R-4 尺寸单位与零命中口径裁定",
+    "G-315 D-129 CLOSED ⇒ 本单前置成就"
+  ],
+  "versionChain": [
+    {
+      "revision": "r21",
+      "zipSha256": "C74A790C1E8629AAF1E6EF37504BD5902E44E9D2B2E1505927D0753BC38C85F0",
+      "zipBytes": 1615423
+    },
+    {
+      "revision": "r22",
+      "zipSha256": "2F63B5BAB6BFF8EF20C2A80ECFFF9B4AC08C16DF7113D787563862EACB9ED2CC",
+      "zipBytes": 2112591
+    },
+    {
+      "revision": "r23",
+      "zipSha256": "796D1956B06BBE04DB0ECDA2819E2ACF32C8098843DD781FCB43544CC76308CB",
+      "zipBytes": 2114330
+    },
+    {
+      "revision": "r24",
+      "zipSha256": "539B732878B6DC75E8065235EB299B51A71C6399FDCF4F75FD2477C586D4F8C6",
+      "zipBytes": 2269257
+    },
+    {
+      "revision": "r25",
+      "zipSha256": "7969C220886F4D085C6746AE9EE57FE27C1031698515C59718FDA68CA53FAD29",
+      "zipBytes": 2270984
+    },
+    {
+      "revision": "r26",
+      "zipSha256": "4E7A82C8C769F0E9CA0A2151DB67B0BD9E4294C99A21A7D7555730DAE598EAA5",
+      "zipBytes": 2273422
+    }
+  ],
+  "releaseActionStatus": {
+    "releaseRecordWritten": true,
+    "installExecuted": false,
+    "hostStarted": false,
+    "localVerificationExecuted": "见 f6（包内校验器对 r26 复验）",
+    "signingExecuted": false,
+    "signingNote": "r26 未重新签名；沿用 r25 写入的自签块（入口脚本字节不变）"
+  },
+  "outerPackageStructure": {
+    "entries": 26,
+    "entryNamesIdenticalToR25": true,
+    "manifestListed": 25,
+    "manifestSelfExcluded": true
+  },
+  "payloadByteInvariant": {
+    "net8": [
+      1103697,
+      "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "≡ 现役装机 239"
+    ],
+    "net6": [
+      1107215,
+      "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701",
+      "沿 r25 现件（逐字节等值）"
+    ],
+    "proof": "内层 esriAddInX 与 r25 逐件哈希等值 ＋ net8 ≡ 装机位实测哈希"
+  },
+  "deltaFromR25Measured": {
+    "method": "逐外层成员 RAW-byte SHA-256 对比 r25 封存 zip 解包件（种子＝f1 逐件解包、Z3 全等）",
+    "changedMemberCount": 5,
+    "unchangedMemberCount": 21,
+    "contentMembers": [
+      "README-START-HERE.md",
+      "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+      "NOTICE.md",
+      "scripts/verify-one-click-package.ps1"
+    ],
+    "plus": "bundle-manifest.json（自身重刷，manifest 自件除外规则不变）",
+    "detail": [
+      {
+        "path": "README-START-HERE.md",
+        "r25": {
+          "bytes": 2218,
+          "sha256_16": "FB33C0EBB99E5E2E"
+        },
+        "r26": {
+          "bytes": 3146,
+          "sha256_16": "F22D3776BF604CB8"
+        },
+        "reason": "工具数 149→239・「tools/list=93」→239・「本包未签名」→自签事实段・补代际同步说明"
+      },
+      {
+        "path": "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+        "r25": {
+          "bytes": 10428,
+          "sha256_16": "5C4B2A2E67D14D55"
+        },
+        "r26": {
+          "bytes": 11819,
+          "sha256_16": "A4F94600C13B636D"
+        },
+        "reason": "80 工具→239・适用包 r6→r26・两处「未签名」→自签・删除导入信任根建议・公网 CA 句加冲突与未启动限定"
+      },
+      {
+        "path": "NOTICE.md",
+        "r25": {
+          "bytes": 4178,
+          "sha256_16": "9778DA1BCE071B6A"
+        },
+        "r26": {
+          "bytes": 6457,
+          "sha256_16": "7092CCF33FE88F55"
+        },
+        "reason": "154 工具→239・补签名事实段（与根级 NOTICE 同形・自签／UnknownError／从未 Valid）"
+      },
+      {
+        "path": "scripts/verify-one-click-package.ps1",
+        "r25": {
+          "bytes": 12855,
+          "sha256_16": "18904A897E6D13B4"
+        },
+        "r26": {
+          "bytes": 12882,
+          "sha256_16": "56D85DA21B59C370"
+        },
+        "reason": "`$acceptedDeploymentVersions` 追加 `one-click-1.0.2-r26`（25→26 项・BOM 与行尾逐字节保持）"
+      }
+    ]
+  },
+  "net8PayloadEqualsInstalledArtifact": true,
+  "constantSurface": {
+    "sourceAggregate": [
+      "1750FED84B9282D191BED5B90C5061A850C471C00C191799FA939FB2EF0D7E39",
+      277
+    ],
+    "registrations": [
+      239,
+      239
+    ],
+    "contract": [
+      239,
+      239
+    ],
+    "roster": {
+      "ReadTools": 94,
+      "SessionTools": 33,
+      "WriteTools": 158,
+      "total": 285
+    },
+    "errorCodes": 33,
+    "gpWhitelist": [
+      53,
+      "F355705BF2C4",
+      30634
+    ],
+    "anchors": {
+      "s0": 0,
+      "m2": 0,
+      "m3": 0,
+      "m4": 0,
+      "m5": 0
+    },
+    "fiveAnchorUnion": 56,
+    "fourAnchorUnion": 48,
+    "tests": "1,843 ＝ 1,840P/0F/3NE（D-126 现算；本批未重跑，见 buildGate）"
+  },
+  "preReleaseNormalStateSnapshot": {
+    "installedCarrier": [
+      1103697,
+      "59F376555025052D",
+      "内层 43 条目"
+    ],
+    "releaseFaceBefore": "r25",
+    "releaseFaceAfter": "r26"
+  },
+  "sealedSurfacesVerifiedReadOnly": [
+    "Release/发送给同事-r21..r25 全树",
+    "r21–r25 五 zip",
+    "r25 两台账＋侧车＋包外 manifest",
+    "Archive/distributions",
+    "Docs/Final",
+    "Benchmarks",
+    "装机位 {BAA5628C…}",
+    "backup-pre-* 全链",
+    ".workbuddy/memory",
+    "migration-manifest*.json"
+  ],
+  "relatedLedgersReadOnly": [
+    "Docs/_gatekeeper/DECISIONS_LOG.md",
+    "Docs/_gatekeeper/DISPATCH_LOG.md",
+    "Docs/_gatekeeper/HANDOVER.md"
+  ],
+  "outOfScopeDeclarations": [
+    "不安装／不启宿主（工单硬边界）",
+    "不外发公开托管（O-D123-02 维持）",
+    "不采购 CA 证书（O-D123-01 维持）",
+    "不变更受信证书存储（G-299 R-3）",
+    "未重编译（零产品码改动；payload 逐字节搬运）",
+    "包内 README 的仓库源件 Distribution/README-ONE-CLICK-START.md 未在本单授权面内（登记待裁）"
+  ],
+  "releaseSuiteFiles": [
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip",
+      "sizeBytes": 2273422,
+      "sha256": "4E7A82C8C769F0E9CA0A2151DB67B0BD9E4294C99A21A7D7555730DAE598EAA5"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip.sha256",
+      "sizeBytes": 116,
+      "sha256": "19920BC0970252E554FE0ED6C03246A7561DB0CF3260515AB10DA95B7B03DA2F"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip.manifest.json",
+      "sizeBytes": 8127,
+      "sha256": "ED21B26896EA6EE8BEAA7F865774F57E82C45BD6316821B3592FF94E6B00934A"
+    },
+    {
+      "path": "Release/distribution-ledger-r26.json",
+      "sizeBytes": 31471,
+      "sha256": "95D6076D01856A3794056C41FE31E559EFC6E899DDEAE1F8B723884AF9BDA34A"
+    }
+  ],
+  "ledgerSchemaParity": "files[]／bundleMemberHashes[] 语义与键名对齐 r25 台账（path/sizeBytes/sha256）",
+  "reproducibilityNote": "r26 zip 的条目时间戳＝打包时刻 ⇒ ZIP 不是字节可复现构建（r25 亦然）；因此本台账所钉 zip 哈希为**唯一权威值**，终验器按哈希而非重打包复算"
+}

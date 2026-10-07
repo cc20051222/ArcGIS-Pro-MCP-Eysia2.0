@@ -1,0 +1,255 @@
+{
+  "schema": "f05-m4-benchmark-s0-v1",
+  "status": "PASS_CANDIDATE",
+  "batch": "D-097",
+  "extensionOf": "f05-m3-benchmark-s0-v1 (D-093) over f05-m2-benchmark-s0-v1 (D-089) over f05-m1-benchmark-s0-v1 (D-085)",
+  "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every M4 member file, sorted by relpath))",
+  "logicalItemCount": 9,
+  "memberFileCount": 14,
+  "aggregateSha256": "F71BF6CD8AB9E8FD64907AA5EC7B3F126D101E00C99ECC42E20704E9AE636FA2",
+  "carriedAnchors": [
+    {
+      "face": "M1",
+      "recordFile": "Benchmarks/benchmark-s0.json",
+      "frozenBy": "GATE-G206",
+      "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every A-group member file, sorted by relpath))",
+      "recordedAggregate": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+      "recomputedAggregate": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+      "memberFileCount": 9,
+      "logicalItemCount": 6,
+      "memberMismatchCount": 0,
+      "memberMismatches": []
+    },
+    {
+      "face": "M2",
+      "recordFile": "Benchmarks/benchmark-m2-s0.json",
+      "frozenBy": "GATE-G214",
+      "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every M2 member file, sorted by relpath))",
+      "recordedAggregate": "501A7E15600850E64FA078972F41DF4F22D1E10A2E62EBFC5063358FF13E10A7",
+      "recomputedAggregate": "501A7E15600850E64FA078972F41DF4F22D1E10A2E62EBFC5063358FF13E10A7",
+      "memberFileCount": 13,
+      "logicalItemCount": 8,
+      "memberMismatchCount": 0,
+      "memberMismatches": []
+    },
+    {
+      "face": "M3",
+      "recordFile": "Benchmarks/benchmark-m3-s0.json",
+      "frozenBy": "GATE-G216",
+      "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every M3 member file, sorted by relpath))",
+      "recordedAggregate": "94577E76D1602F61A8A5B292E07EC5B0C93668597A2D002A706F7A1055E44D12",
+      "recomputedAggregate": "94577E76D1602F61A8A5B292E07EC5B0C93668597A2D002A706F7A1055E44D12",
+      "memberFileCount": 12,
+      "logicalItemCount": 8,
+      "memberMismatchCount": 0,
+      "memberMismatches": []
+    }
+  ],
+  "logicalItems": [
+    {
+      "itemId": "m4Overview",
+      "title": "F05 M4 overview, counting closure and freeze policy",
+      "sha256": "44792D1F20599EF660654579413CFFB5C7343F3E7FFB62F09CE8A460E62D449F",
+      "members": [
+        {
+          "path": "Benchmarks/m4-overview-v1.md",
+          "sizeBytes": 9644,
+          "sha256": "8C562ED6E43F64A292C5E244D662ADD79195DF3E877CC726A0730A8DD9A6F5E1"
+        }
+      ]
+    },
+    {
+      "itemId": "m4Scenarios",
+      "title": "M4 twenty-seven breadth scenarios closing the sixty",
+      "sha256": "075A81A80506D35B5D6A3D77D0578CC3E1876E4F98844091A2C0EFE13DB085D2",
+      "members": [
+        {
+          "path": "Benchmarks/m4-scenarios-27.jsonl",
+          "sizeBytes": 121279,
+          "sha256": "D229F7007AE1A80B666936F1822191F1D6934BECB9935A8CC2C936997F610E36"
+        },
+        {
+          "path": "Benchmarks/m4-scenarios-27.md",
+          "sizeBytes": 45404,
+          "sha256": "001F8B435596A459681C10CF73C2865B15039AF7EE25D3217ABE56E38B695DB3"
+        }
+      ]
+    },
+    {
+      "itemId": "m4Templates",
+      "title": "M4 fourteen breadth templates closing the thirty-six",
+      "sha256": "BD9454DF4A5539016F58406135AE7FCE2E4EBEECEECD2DCFE481EA28B1D50C85",
+      "members": [
+        {
+          "path": "Benchmarks/m4-templates-14.jsonl",
+          "sizeBytes": 39142,
+          "sha256": "7F248467AFD76EAF23978F2D3246737571746C1BC20FB62A8E477D44383E29D0"
+        },
+        {
+          "path": "Benchmarks/m4-templates-14.md",
+          "sizeBytes": 14851,
+          "sha256": "E40B3D461DFAC2E19E7778D56AAD141804EB54B0E3FFF94B9B4ADC8A470F0ED5"
+        }
+      ]
+    },
+    {
+      "itemId": "m4ScenarioTemplateMap",
+      "title": "M4 scenario-template-criterion mapping",
+      "sha256": "5E91EAF8311A1552F53FE8E38FF0C1A4FB9176EFD0E2D8098F8C7EFFD59E9B6A",
+      "members": [
+        {
+          "path": "Benchmarks/m4-scenario-template-map-v1.jsonl",
+          "sizeBytes": 30849,
+          "sha256": "7B5D4FA0C6A2458C57C4AB17833C34CD47F5A5C601509CF68B04C766BC8727FD"
+        },
+        {
+          "path": "Benchmarks/m4-scenario-template-map-v1.md",
+          "sizeBytes": 5407,
+          "sha256": "3CA4C4F809D6C58D312EF2426F09B5C61BB63643BB0EEDD9636F6261BB611F9F"
+        }
+      ]
+    },
+    {
+      "itemId": "m4CapabilitySurface",
+      "title": "X1-X8 candidate surface: 48 rows over the frozen candidate schemas",
+      "sha256": "E2162592C648674186BF41AEC388819A26A9E3515551835FA2E700EA3EAE0065",
+      "members": [
+        {
+          "path": "Benchmarks/m4-capability-surface-v1.jsonl",
+          "sizeBytes": 66443,
+          "sha256": "2F42C1C0EDFD4DAC201DC5C91FD8FA41A09932AF5977B0CED21A2043E2584262"
+        }
+      ]
+    },
+    {
+      "itemId": "comparisonRulesV4",
+      "title": "Comparison rules v4 (additive over v3, v2 and v1)",
+      "sha256": "FD223B070C097771591D4AB570D80BA242260C6EE4BF427AA0F13A4BEEAF3361",
+      "members": [
+        {
+          "path": "Benchmarks/comparison-rules-v4.json",
+          "sizeBytes": 48918,
+          "sha256": "984A98707CC15FA08B190D4256049B78ECEC22A554D3B97DD9B8116525F084C4"
+        },
+        {
+          "path": "Benchmarks/comparison-rules-v4.md",
+          "sizeBytes": 38299,
+          "sha256": "85CCEF870C0AFDFF1077B48570D5AF3D6C8A0207439C42DC1F4A0212BE27798F"
+        }
+      ]
+    },
+    {
+      "itemId": "stressM4Subset",
+      "title": "M4 subset of the nominal 40 stress cases",
+      "sha256": "96037DFBCBF5C6F9CEA49424D70862E66AD494E2589E5034169403128D639C63",
+      "members": [
+        {
+          "path": "Benchmarks/stress-40-m4-subset.jsonl",
+          "sizeBytes": 10777,
+          "sha256": "51F832D1119B7D62DEA7C6936123062FEEA589CAEFC17ABD8FE9C98BEE533B5E"
+        }
+      ]
+    },
+    {
+      "itemId": "gDomainPrecalibration",
+      "title": "G-DOMAIN per-domain known-answer completion gate",
+      "sha256": "A9BBE3AF2309681D73D93EFC343997EA26E699D0359B9ACC500E10BEA1FA3DF3",
+      "members": [
+        {
+          "path": "Benchmarks/g-domain-precalibration-v1.json",
+          "sizeBytes": 6939,
+          "sha256": "D9AC5E71DF7998CB771486B07196C5EBB47317D486DAD595B8D77715492E82C3"
+        },
+        {
+          "path": "Benchmarks/g-domain-precalibration-v1.md",
+          "sizeBytes": 2881,
+          "sha256": "D7AD72832E92F3FAEFFB093FF85A89B8534FC8BA4613E5B2E2AA3494509C9865"
+        }
+      ]
+    },
+    {
+      "itemId": "m4CoreHiddenSplit",
+      "title": "M4 core and hidden split and the four-face closure hub",
+      "sha256": "0673310E9DD1FEC2380084B598EA420DCD9B19B92F58E1DA0F5DB9D869C2D496",
+      "members": [
+        {
+          "path": "Benchmarks/m4-core-hidden-split-v1.json",
+          "sizeBytes": 11309,
+          "sha256": "A1707C762F10A3A2643BCBC97952510418847691D1167AAC057AE4EBBC086670"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Benchmarks/m4-overview-v1.md",
+      "sizeBytes": 9644,
+      "sha256": "8C562ED6E43F64A292C5E244D662ADD79195DF3E877CC726A0730A8DD9A6F5E1"
+    },
+    {
+      "path": "Benchmarks/m4-scenarios-27.jsonl",
+      "sizeBytes": 121279,
+      "sha256": "D229F7007AE1A80B666936F1822191F1D6934BECB9935A8CC2C936997F610E36"
+    },
+    {
+      "path": "Benchmarks/m4-scenarios-27.md",
+      "sizeBytes": 45404,
+      "sha256": "001F8B435596A459681C10CF73C2865B15039AF7EE25D3217ABE56E38B695DB3"
+    },
+    {
+      "path": "Benchmarks/m4-templates-14.jsonl",
+      "sizeBytes": 39142,
+      "sha256": "7F248467AFD76EAF23978F2D3246737571746C1BC20FB62A8E477D44383E29D0"
+    },
+    {
+      "path": "Benchmarks/m4-templates-14.md",
+      "sizeBytes": 14851,
+      "sha256": "E40B3D461DFAC2E19E7778D56AAD141804EB54B0E3FFF94B9B4ADC8A470F0ED5"
+    },
+    {
+      "path": "Benchmarks/m4-scenario-template-map-v1.jsonl",
+      "sizeBytes": 30849,
+      "sha256": "7B5D4FA0C6A2458C57C4AB17833C34CD47F5A5C601509CF68B04C766BC8727FD"
+    },
+    {
+      "path": "Benchmarks/m4-scenario-template-map-v1.md",
+      "sizeBytes": 5407,
+      "sha256": "3CA4C4F809D6C58D312EF2426F09B5C61BB63643BB0EEDD9636F6261BB611F9F"
+    },
+    {
+      "path": "Benchmarks/m4-capability-surface-v1.jsonl",
+      "sizeBytes": 66443,
+      "sha256": "2F42C1C0EDFD4DAC201DC5C91FD8FA41A09932AF5977B0CED21A2043E2584262"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v4.json",
+      "sizeBytes": 48918,
+      "sha256": "984A98707CC15FA08B190D4256049B78ECEC22A554D3B97DD9B8116525F084C4"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v4.md",
+      "sizeBytes": 38299,
+      "sha256": "85CCEF870C0AFDFF1077B48570D5AF3D6C8A0207439C42DC1F4A0212BE27798F"
+    },
+    {
+      "path": "Benchmarks/stress-40-m4-subset.jsonl",
+      "sizeBytes": 10777,
+      "sha256": "51F832D1119B7D62DEA7C6936123062FEEA589CAEFC17ABD8FE9C98BEE533B5E"
+    },
+    {
+      "path": "Benchmarks/g-domain-precalibration-v1.json",
+      "sizeBytes": 6939,
+      "sha256": "D9AC5E71DF7998CB771486B07196C5EBB47317D486DAD595B8D77715492E82C3"
+    },
+    {
+      "path": "Benchmarks/g-domain-precalibration-v1.md",
+      "sizeBytes": 2881,
+      "sha256": "D7AD72832E92F3FAEFFB093FF85A89B8534FC8BA4613E5B2E2AA3494509C9865"
+    },
+    {
+      "path": "Benchmarks/m4-core-hidden-split-v1.json",
+      "sizeBytes": 11309,
+      "sha256": "A1707C762F10A3A2643BCBC97952510418847691D1167AAC057AE4EBBC086670"
+    }
+  ]
+}

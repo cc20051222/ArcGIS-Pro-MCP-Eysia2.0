@@ -1,0 +1,367 @@
+{
+  "schemaVersion": "m3-core-hidden-v1",
+  "splitVersion": "1.0.0",
+  "status": "PASS_CANDIDATE",
+  "scope": "M3 extension slice. It closes the base thirty scenarios and adds the fifth hidden candidate per affected base template. The M1 and M2 faces are byte-unchanged and referenced by id.",
+  "corePublicIds": [
+    "CORE-M3-S09",
+    "CORE-M3-S14",
+    "CORE-M3-S17",
+    "CORE-M3-S24",
+    "CORE-M3-S25"
+  ],
+  "scenarioIds": [
+    "S09",
+    "S14",
+    "S17",
+    "S24",
+    "S25"
+  ],
+  "roundsPerCoreTask": 3,
+  "inputProfilesPerTemplate": [
+    "normal",
+    "boundary",
+    "invalid"
+  ],
+  "hiddenIds": [
+    "H-M3-TP04-01",
+    "H-M3-TS07-01",
+    "H-M3-TS01-01",
+    "H-M3-TS04-01",
+    "H-M3-TP10-01"
+  ],
+  "criterionRefs": [
+    "AGR-001",
+    "ALN-001",
+    "DEP-001",
+    "FMT-001",
+    "FRM-001",
+    "GBC-001",
+    "GEN-001",
+    "GEO-001",
+    "HYD-001",
+    "LEG-001",
+    "LNG-001",
+    "LYT-001",
+    "NET-001",
+    "NET-002",
+    "NUM-001",
+    "OSV-001",
+    "OUT-001",
+    "PIC-001",
+    "PKG-001",
+    "PRM-001",
+    "PRT-001",
+    "PSG-001",
+    "RAS-001",
+    "RAS-002",
+    "RAS-003",
+    "RAS-004",
+    "RAS-005",
+    "RAS-006",
+    "RAS-007",
+    "RFL-001",
+    "SCI-001",
+    "SRC-001",
+    "STA-001",
+    "TXT-001"
+  ],
+  "hiddenCriteriaByTemplate": {
+    "TP04": [
+      "GBC-001",
+      "NET-001",
+      "NET-002"
+    ],
+    "TS07": [
+      "HYD-001"
+    ],
+    "TS01": [
+      "RAS-003"
+    ],
+    "TS04": [
+      "RAS-003",
+      "RAS-006"
+    ],
+    "TP10": [
+      "PKG-001",
+      "PSG-001"
+    ]
+  },
+  "carriedFromM1": {
+    "file": "Benchmarks/core-hidden-split-v1.json",
+    "bytesUnchanged": true,
+    "coreCount": 6,
+    "hiddenCount": 12,
+    "stressIds": 12
+  },
+  "carriedFromM2": {
+    "file": "Benchmarks/m2-core-hidden-split-v1.json",
+    "bytesUnchanged": true,
+    "coreCount": 22,
+    "hiddenCount": 32,
+    "stressIds": 16
+  },
+  "successThreshold": {
+    "minimumHiddenCount": 12,
+    "firstVersionCompletionRate": 0.9,
+    "automaticRepairRoundsMax": 2,
+    "seriousScientificErrorsAllowed": 0,
+    "note": "inherited by reference; the local candidate count is a definition count, not adequacy"
+  },
+  "goldManagement": {
+    "publicDefinitionStoresOnly": [
+      "hiddenId",
+      "criterionRefs"
+    ],
+    "goldContentOrPathIncluded": false,
+    "custodian": "separate restricted benchmark custodian",
+    "failureHandling": "no hidden example in tool context; previously seen fixes are regression only"
+  },
+  "scenarioTemplateMap": {
+    "S09": "TP04",
+    "S14": "TS07",
+    "S17": "TS01",
+    "S24": "TS04",
+    "S25": "TP10"
+  },
+  "stressIds": [
+    "ST-M3-01",
+    "ST-M3-02",
+    "ST-M3-03",
+    "ST-M3-04",
+    "ST-M3-05",
+    "ST-M3-06",
+    "ST-M3-07",
+    "ST-M3-08",
+    "ST-M3-09",
+    "ST-M3-10",
+    "ST-M3-11",
+    "ST-M3-12",
+    "ST-M3-13",
+    "ST-M3-14"
+  ],
+  "stressRefsByScenario": {
+    "S09": [
+      "ST-M3-01",
+      "ST-M3-02",
+      "ST-M3-03"
+    ],
+    "S14": [
+      "ST-M3-05",
+      "ST-M3-06",
+      "ST-M3-07",
+      "ST-M3-14"
+    ],
+    "S17": [
+      "ST-M3-08",
+      "ST-M3-10"
+    ],
+    "S24": [
+      "ST-M3-02",
+      "ST-M3-04",
+      "ST-M3-05",
+      "ST-M3-06",
+      "ST-M3-08",
+      "ST-M3-09"
+    ],
+    "S25": [
+      "ST-M3-11",
+      "ST-M3-12",
+      "ST-M3-13",
+      "ST-M3-14"
+    ]
+  },
+  "faceClosure": {
+    "baseScenarios": {
+      "total": 30,
+      "m1": [
+        "S07",
+        "S18",
+        "S19",
+        "S20",
+        "S22",
+        "S23"
+      ],
+      "m2": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S08",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S15",
+        "S16",
+        "S21",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S30"
+      ],
+      "m3": [
+        "S09",
+        "S14",
+        "S17",
+        "S24",
+        "S25"
+      ]
+    },
+    "baseTemplates": {
+      "total": 20,
+      "m1": [
+        "TP01",
+        "TP02",
+        "TP03",
+        "TS01",
+        "TS02",
+        "TS08"
+      ],
+      "m2": [
+        "TP04",
+        "TP05",
+        "TP06",
+        "TP07",
+        "TP08",
+        "TP09",
+        "TP10",
+        "TS03",
+        "TS04",
+        "TS05",
+        "TS06",
+        "TS07",
+        "TS09",
+        "TS10"
+      ],
+      "m3": []
+    },
+    "arithmetic": "6 + 19 + 5 = 30 base scenarios; 6 + 14 + 0 = 20 base templates; 33 of 60 scenarios defined and 27 deferred; 22 of 36 templates defined and 14 deferred"
+  },
+  "deferredRegister": {
+    "onlinePublish": [
+      {
+        "tool": "discover_remote_datasets",
+        "status": "DEFERRED-G190-NOT-CALIBRATED",
+        "basis": "roadmap §9 M3 '三项在线门先裁定'; benchmark §9 independent decision gate; f03b-9 L-17 not implemented (design placeholder); f03b-7 ADR no bypass through the composition channel"
+      },
+      {
+        "tool": "import_remote_dataset",
+        "status": "DEFERRED-G190-NOT-CALIBRATED",
+        "basis": "roadmap §9 M3 '三项在线门先裁定'; benchmark §9 independent decision gate; f03b-9 L-17 not implemented (design placeholder); f03b-7 ADR no bypass through the composition channel"
+      },
+      {
+        "tool": "publish_map_service",
+        "status": "DEFERRED-G190-NOT-CALIBRATED",
+        "basis": "roadmap §9 M3 '三项在线门先裁定'; benchmark §9 independent decision gate; f03b-9 L-17 not implemented (design placeholder); f03b-7 ADR no bypass through the composition channel"
+      }
+    ],
+    "internalServices": [
+      {
+        "tool": "raster_reclassify",
+        "status": "INTERNAL-SERVICE-NOT-A-PUBLIC-NAME",
+        "calibrationPath": "RAS-003 controlled-GP assertion",
+        "basis": "f03a-3 rows 9-10"
+      },
+      {
+        "tool": "extract_raster_values",
+        "status": "INTERNAL-SERVICE-NOT-A-PUBLIC-NAME",
+        "calibrationPath": "RAS-003 controlled-GP assertion",
+        "basis": "f03a-3 rows 9-10"
+      }
+    ],
+    "parameterExtension": [
+      {
+        "tool": "create_layout_map_frame",
+        "status": "PARAMETER-EXTENSION-OF-create_layout",
+        "calibrationPath": "FRM-001",
+        "basis": "f03a-1 §2.11 row 62"
+      }
+    ],
+    "stillDeferredCapabilities": [
+      {
+        "capability": "measurement error propagation (TS10 analytic side)",
+        "owner": "X5 domain batch",
+        "status": "STILL-DEFERRED"
+      },
+      {
+        "capability": "classification and accuracy algorithms behind S46 panels",
+        "owner": "X4/X5 domain batch",
+        "status": "STILL-DEFERRED"
+      },
+      {
+        "capability": "the composition side of S25",
+        "owner": "another line (D-091)",
+        "status": "OUT-OF-L2-SCOPE"
+      }
+    ]
+  },
+  "baselineContext": {
+    "acceptedToolCount": 189,
+    "acceptedSourceAggregate": "675DDF5F (G-215) / 262 files",
+    "previousAcceptedBaselines": [
+      "D4FC24B6 (G-209) / 256 / 170 tools",
+      "02DD4CAE (G-213) / 259 / 179 tools"
+    ],
+    "nineAccepted": [
+      "validate_geometries",
+      "check_topology_rules",
+      "compare_datasets",
+      "compare_schemas",
+      "validate_field_constraints",
+      "inspect_raster_alignment",
+      "list_geographic_transformations",
+      "trace_dataset_dependencies",
+      "get_dataset_lineage"
+    ],
+    "p3p4AcceptedByD092": [
+      "create_domain",
+      "update_domain",
+      "delete_domain",
+      "assign_domain_to_field",
+      "remove_domain_from_field",
+      "configure_subtypes",
+      "create_relationship_class",
+      "calculate_geometry_attributes",
+      "define_projection",
+      "validate_relationship_class"
+    ],
+    "p5DispatchedNotAccepted": [
+      "calculate_service_areas",
+      "generate_tessellation",
+      "hotspot_analysis",
+      "polygon_neighbors",
+      "simplify_features",
+      "smooth_features",
+      "solve_routes",
+      "spatial_autocorrelation"
+    ],
+    "p5DispatchNote": "the P5 eight tools were dispatched to the build line as D-094 (G-215, ACTIVE-D094) while this calibration batch was running; they are not accepted yet, so criteria bound to them state PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED and assert no runtime behaviour",
+    "m3CandidateCount": 32,
+    "m3IndependentContracts": 29,
+    "m3NonContractItems": [
+      "create_layout_map_frame",
+      "extract_raster_values",
+      "raster_reclassify"
+    ],
+    "deferredOnlinePublish": [
+      "discover_remote_datasets",
+      "import_remote_dataset",
+      "publish_map_service"
+    ],
+    "whitelistEntries": 53,
+    "errorCodes": 33,
+    "roster": "94/33/158 = 285",
+    "note": "candidates are bound as not implemented and not dispatched for a batch; no rule asserts runtime behaviour"
+  },
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4, §7",
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3, §10:Z12",
+    "D-093 board ticket scopes 1-4",
+    "GATE-G206 and GATE-G214 rulings (frozen faces; append-only)"
+  ],
+  "ts08CarriedStatus": "GOLD_ARTIFACT_PATH_NOT-AVAILABLE-PENDING-USER (G-205); no non-qualifying raster is used as input or gold in this face either"
+}

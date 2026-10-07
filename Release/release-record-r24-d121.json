@@ -1,0 +1,186 @@
+{
+  "schema": "d121-release-record-v1",
+  "recordType": "release record (发布记录台账)",
+  "recordSelfExcluded": true,
+  "ticket": "D-121",
+  "executingLine": "L1 实现线（唯一构建线）",
+  "deliveryForm": "PASS CANDIDATE (self-acceptance: none; close-out authority: commander only)",
+  "createdAt": "2026-10-05T16:08:18+08:00",
+  "releaseRevision": "r24",
+  "deploymentVersion": "one-click-1.0.2-r24",
+  "releaseSubject": "ArcGIS Pro MCP 1.0.2 one-click r24 (239-generation payload distribution artefact, O-D119-01 closure)",
+  "hashConvention": "RAW-byte SHA-256, upper-case hex (no BOM/CRLF normalisation) — R-G245-P2 lesson",
+  "authorizationChain": [
+    "G-221 R-2 发布预授权（制包到点即派，免请示）",
+    "G-278 D-119 派单（239 装机）",
+    "G-291 用户代裁 (乙)（停等解除）",
+    "G-294 R-2 D-119 CLOSED＋装机 239 入册",
+    "G-294 R-3 派 D-121（O-D119-01 另批＋O-D119-02 并入）"
+  ],
+  "versionChain": [
+    {
+      "revision": "r22",
+      "zipSha256": "2F63B5BAB6BFF8EF20C2A80ECFFF9B4AC08C16DF7113D787563862EACB9ED2CC"
+    },
+    {
+      "revision": "r23",
+      "zipSha256": "796D1956B06BBE04DB0ECDA2819E2ACF32C8098843DD781FCB43544CC76308CB"
+    },
+    {
+      "revision": "r24",
+      "zipSha256": "539B732878B6DC75E8065235EB299B51A71C6399FDCF4F75FD2477C586D4F8C6"
+    }
+  ],
+  "releaseActionStatus": {
+    "releaseRecordWritten": true,
+    "installExecuted": false,
+    "hostStarted": false,
+    "localVerificationExecuted": "见 realCompatibilityPathVerification 节点",
+    "cleanMachineDeployment": "NOT EXECUTED (AGENTS §6 需单独授权)",
+    "digitalSignature": "NOT EXECUTED (AGENTS §6)",
+    "publicDistribution": "NOT EXECUTED (AGENTS §6)",
+    "p05_2_clientConfigWrite": "NOT EXECUTED",
+    "photoshopUxpRealMachine": "NOT APPLICABLE (L4 域)",
+    "gitOperations": "NONE (Rule 9)"
+  },
+  "outerPackageStructure": {
+    "zipArchiveEntries": 26,
+    "manifestFilesListed": 25,
+    "manifestSelfExcluded": true,
+    "sidecarsAgreeWithComputed": true,
+    "pathSetIdenticalToR23": true
+  },
+  "payloadByteInvariant": {
+    "net8": {
+      "bytes": 1103697,
+      "sha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "installedCarrierSha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "installedCarrierBytes": 1103697,
+      "binLayerSha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "declaredInBundleManifest": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+    },
+    "net6": {
+      "bytes": 1107215,
+      "sha256": "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701",
+      "binLayerSha256": "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701",
+      "seedSource": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r21-Windows-x64.zip :: payload/net6/ArcGISProMCP.Compatibility.esriAddInX (759,448 / D3133E0F17C12E98…, read-only extract; 23 Install/Deployment/* entries reused verbatim)",
+      "supersededBinCarrier": {
+        "bytes": 759448,
+        "sha256": "D3133E0F17C12E98829457A997D8F069D7E18E05362759B9217E71D0C22B239A",
+        "note": "stale r21-era net6 carrier overwritten in bin by package-addin.ps1; recoverable byte-exact from sealed r21 package (verified)"
+      }
+    }
+  },
+  "net8PayloadEqualsInstalledArtifact": true,
+  "constantSurface": {
+    "canonicalProductionToolCount": 239,
+    "rosterSplit": {
+      "ReadTools": 94,
+      "SessionTools": 33,
+      "WriteTools": 158
+    },
+    "rosterTotal": 285,
+    "errorCodeConstants": 33,
+    "gpWhitelistCount": 53,
+    "gpWhitelistSha256": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46",
+    "sourceAggregate": "97DE7764A7B1A2F98ED7ED91F541A1881F0EA0D621B3670B2EF6F2AB47876C1D",
+    "sourceFiles": 277,
+    "baselineAdvanced": "r24 分发面新增；源码与装机基线零变更",
+    "whitelistExpansionExecuted": false
+  },
+  "preReleaseNormalStateSnapshot": {
+    "observedAt": "2026-10-05T16:08:18+08:00",
+    "installLocation": {
+      "ArcGISProMCP.Compatibility.esriAddInX": [
+        1103697,
+        "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+      ],
+      "ArcGISProMCP.Compatibility.esriAddInX.pre-5.5.4-185110.bak": [
+        185110,
+        "7CEB2AB715F18CB1AB7ED9546C671DAE58D965954F9835C3A9A11027A89D178B"
+      ]
+    },
+    "installDirMtimeUtc": "2026-10-01T07:32:09Z",
+    "sourceAggregate": "97DE7764A7B1A2F98ED7ED91F541A1881F0EA0D621B3670B2EF6F2AB47876C1D",
+    "registry": 239,
+    "roster": 285,
+    "errorCodeConstants": 33,
+    "gpWhitelist": [
+      53,
+      "F355705BF2C4"
+    ],
+    "fourAnchors": [
+      "s0",
+      "m2",
+      "m3",
+      "m4"
+    ],
+    "anchorRc": {
+      "s0": 0,
+      "m2": 0,
+      "m3": 0,
+      "m4": 0
+    },
+    "runtime": {
+      "proRows": 0,
+      "ports": {
+        "6520": false,
+        "6511": false
+      }
+    }
+  },
+  "sealedSurfacesVerifiedReadOnly": {
+    "r21R22R23MatchDeclared": {
+      "r21": [
+        1615423,
+        "C74A790C1E8629AAF1E6EF37504BD5902E44E9D2B2E1505927D0753BC38C85F0"
+      ],
+      "r22": [
+        2112591,
+        "2F63B5BAB6BFF8EF20C2A80ECFFF9B4AC08C16DF7113D787563862EACB9ED2CC"
+      ],
+      "r23": [
+        2114330,
+        "796D1956B06BBE04DB0ECDA2819E2ACF32C8098843DD781FCB43544CC76308CB"
+      ]
+    },
+    "archiveDistributionsFiles": 139,
+    "installLocationTouched": false,
+    "note": "Release/ 五件皆为新建；无覆盖"
+  },
+  "relatedLedgersReadOnly": [
+    "Release/distribution-ledger-r22.json",
+    "Release/distribution-ledger-r23.json",
+    "Release/release-acceptance-record-r23-d112.json"
+  ],
+  "outOfScopeDeclarations": [
+    "不安装（装机已由 D-119 完成）",
+    "不签名、不公开发布",
+    "r21-r23 原件零触碰",
+    "不动装机位与 AssemblyCache",
+    "不扩白名单/名册/错误码/工具数",
+    "不新建 发送给同事-r24 教程载体（工单未列，待裁）"
+  ],
+  "releaseSuiteFiles": [
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r24-Windows-x64.zip",
+      "sizeBytes": 2269257,
+      "sha256": "539B732878B6DC75E8065235EB299B51A71C6399FDCF4F75FD2477C586D4F8C6"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r24-Windows-x64.zip.manifest.json",
+      "sizeBytes": 8127,
+      "sha256": "4EB7B686870E2492050DB73253288E1F6BEA382BC4940FE6227165BC04C90333"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r24-Windows-x64.zip.sha256",
+      "sizeBytes": 117,
+      "sha256": "3CFC892FCA86B1575BE0B76839B778DD7D2E05847354E7402F0E5D691C3A96C8"
+    },
+    {
+      "path": "Release/distribution-ledger-r24.json",
+      "sizeBytes": 22419,
+      "sha256": "456C22C0F1A9EC4CD869CBAA85EFBEB0841D493CDCCF03E056AFE8DD2FA400E1"
+    }
+  ]
+}

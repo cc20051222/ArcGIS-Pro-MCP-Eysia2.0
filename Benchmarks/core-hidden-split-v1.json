@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "m1-core-hidden-v1",
+  "splitVersion": "1.0.0",
+  "scope": "M1 subset only; does not claim completion of FINAL's full 24-task core or all-domain hidden set.",
+  "corePublicIds": [
+    "CORE-M1-S19",
+    "CORE-M1-S20",
+    "CORE-M1-S07",
+    "CORE-M1-S23",
+    "CORE-M1-S22",
+    "CORE-M1-S18"
+  ],
+  "scenarioIds": [
+    "S19",
+    "S20",
+    "S07",
+    "S23",
+    "S22",
+    "S18"
+  ],
+  "roundsPerCoreTask": 3,
+  "inputProfilesPerTemplate": [
+    "normal",
+    "boundary",
+    "invalid"
+  ],
+  "hiddenIds": [
+    "H-M1-TP01-01",
+    "H-M1-TP01-02",
+    "H-M1-TP02-01",
+    "H-M1-TP02-02",
+    "H-M1-TP03-01",
+    "H-M1-TP03-02",
+    "H-M1-TS01-01",
+    "H-M1-TS01-02",
+    "H-M1-TS02-01",
+    "H-M1-TS02-02",
+    "H-M1-TS08-01",
+    "H-M1-TS08-02"
+  ],
+  "criterionRefs": [
+    "GEO-001",
+    "NUM-001",
+    "SCI-001",
+    "LAY-001",
+    "TXT-001",
+    "OUT-001",
+    "WF-001",
+    "TS08-INPUT-QUAL-001"
+  ],
+  "hiddenCriteriaByTemplate": {
+    "TP01": [
+      "GEO-001",
+      "LAY-001",
+      "TXT-001"
+    ],
+    "TP02": [
+      "NUM-001",
+      "SCI-001",
+      "LAY-001"
+    ],
+    "TP03": [
+      "GEO-001",
+      "NUM-001",
+      "SCI-001"
+    ],
+    "TS01": [
+      "GEO-001",
+      "LAY-001",
+      "WF-001"
+    ],
+    "TS02": [
+      "NUM-001",
+      "SCI-001",
+      "TXT-001"
+    ],
+    "TS08": [
+      "TS08-INPUT-QUAL-001",
+      "GEO-001",
+      "SCI-001"
+    ]
+  },
+  "successThreshold": {
+    "minimumHiddenCount": 12,
+    "firstVersionCompletionRate": 0.9,
+    "minimumCompletedAt12": 11,
+    "automaticRepairRoundsMax": 2,
+    "seriousScientificErrorsAllowed": 0
+  },
+  "goldManagement": {
+    "publicDefinitionStoresOnly": [
+      "hiddenId",
+      "criterionRefs"
+    ],
+    "goldContentOrPathIncluded": false,
+    "custodian": "separate restricted benchmark custodian",
+    "failureHandling": "do not expose hidden examples in tool context; previously seen fixes count as regression only"
+  },
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4",
+    "D-085_f05-m1-benchmark-calibration.md",
+    "GATE-G205-D085-RESUME_RULING.md R-G205-2"
+  ],
+  "scenarioTemplateMap": {
+    "S19": "TP01",
+    "S20": "TP02",
+    "S07": "TP03",
+    "S23": "TS01",
+    "S22": "TS02",
+    "S18": "TS08"
+  },
+  "stressIds": [
+    "ST-M1-01",
+    "ST-M1-02",
+    "ST-M1-03",
+    "ST-M1-04",
+    "ST-M1-05",
+    "ST-M1-06",
+    "ST-M1-07",
+    "ST-M1-08",
+    "ST-M1-09",
+    "ST-M1-10",
+    "ST-M1-11",
+    "ST-M1-12"
+  ],
+  "stressRefsByScenario": {
+    "S19": [
+      "ST-M1-01",
+      "ST-M1-03",
+      "ST-M1-04",
+      "ST-M1-05",
+      "ST-M1-06",
+      "ST-M1-09",
+      "ST-M1-10",
+      "ST-M1-11",
+      "ST-M1-12"
+    ],
+    "S22": [
+      "ST-M1-02",
+      "ST-M1-05",
+      "ST-M1-06",
+      "ST-M1-07",
+      "ST-M1-09",
+      "ST-M1-10",
+      "ST-M1-12"
+    ],
+    "S20": [
+      "ST-M1-01",
+      "ST-M1-02",
+      "ST-M1-06",
+      "ST-M1-07",
+      "ST-M1-09",
+      "ST-M1-10",
+      "ST-M1-12"
+    ],
+    "S23": [
+      "ST-M1-01",
+      "ST-M1-03",
+      "ST-M1-05",
+      "ST-M1-06",
+      "ST-M1-07",
+      "ST-M1-08",
+      "ST-M1-10",
+      "ST-M1-11",
+      "ST-M1-12"
+    ],
+    "S07": [
+      "ST-M1-04",
+      "ST-M1-06",
+      "ST-M1-10",
+      "ST-M1-12"
+    ],
+    "S18": [
+      "ST-M1-06",
+      "ST-M1-07",
+      "ST-M1-10",
+      "ST-M1-12"
+    ]
+  }
+}

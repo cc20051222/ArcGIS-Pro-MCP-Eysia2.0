@@ -1,0 +1,76 @@
+{
+  "file": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+  "bytes": 208704,
+  "sha256": "6E71E38DAAAA69DF89893BF366DB4106A5DF8E23AA2ECDE076E4667BDA104259",
+  "title": "ArcGIS Pro MCP 3.0 项目介绍与完整实现方案",
+  "sourceBodies": [
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\01_项目最终总方案.md",
+      "sha256": "8E96B305BA1F0E20C00D95031E570632EA4849AB8D6498E70593DB40A7536747",
+      "characters": 12480,
+      "selection": "complete body, initial title omitted"
+    },
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\03_用户操作流程与三条业务链.md",
+      "sha256": "1B9B01128244B677C0EACB5B287F06C655C2A8456365F5CEF8328C69AF2B13B6",
+      "characters": 12915,
+      "selection": "complete body, initial title omitted"
+    },
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\02_架构与模块实施蓝图.md",
+      "sha256": "6169DD273250F8CCBB9010C7AA9134A9E2590F918005BBCB10436FE5AE8B0B70",
+      "characters": 16593,
+      "selection": "complete body, initial title omitted"
+    },
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\项目介绍补充章节.md",
+      "sha256": "16426338DA3F6101A32320281B6EC2E16095637A8DD249B29CE1B2E954178029",
+      "selection": "complete body"
+    }
+  ],
+  "paragraphs": 323,
+  "tables": 18,
+  "nativeLayoutVerification": "DOCUMENT_LAYOUT_REVIEW_COMPLETE",
+  "productVerification": "NOT_RUN",
+  "pageSize": "Letter portrait",
+  "bodyFontPoints": 11,
+  "previousRecordSnapshot": {
+    "file": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+    "bytes": 187143,
+    "sha256": "CA2152B96F714C840F1603B824B420C642F1154931BF499BBFF43EA9AE642EE3",
+    "title": "ArcGIS Pro MCP 3.0 项目介绍与完整实现方案",
+    "sourceBodies": [
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\01_项目最终总方案.md",
+        "sha256": "8E96B305BA1F0E20C00D95031E570632EA4849AB8D6498E70593DB40A7536747",
+        "characters": 12480,
+        "selection": "complete body, initial title omitted"
+      },
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\03_用户操作流程与三条业务链.md",
+        "sha256": "D7B22DE8B259E2779FBC05B6F4055B86A218ACE162B80235103762309B7A32B0",
+        "characters": 12977,
+        "selection": "complete body, initial title omitted"
+      },
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\02_架构与模块实施蓝图.md",
+        "sha256": "6169DD273250F8CCBB9010C7AA9134A9E2590F918005BBCB10436FE5AE8B0B70",
+        "characters": 16593,
+        "selection": "complete body, initial title omitted"
+      },
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\项目介绍补充章节.md",
+        "sha256": "16426338DA3F6101A32320281B6EC2E16095637A8DD249B29CE1B2E954178029",
+        "selection": "complete body"
+      }
+    ],
+    "paragraphs": 323,
+    "tables": 18,
+    "nativeLayoutVerification": "PENDING",
+    "productVerification": "NOT_RUN",
+    "pageSize": "Letter portrait",
+    "bodyFontPoints": 11
+  },
+  "pageCount": 50,
+  "visualEvidence": "最终Word排版核验.json"
+}

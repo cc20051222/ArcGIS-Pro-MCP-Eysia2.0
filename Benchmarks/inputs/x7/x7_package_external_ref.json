@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x7",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "package": {
+    "members": [
+      "package.json",
+      "layers/external.geojson"
+    ],
+    "externalPaths": [
+      "D:/somewhere/else/layer.lyrx"
+    ]
+  },
+  "expectedDisposition": "FAIL",
+  "reason": "an offline package that still resolves an outside path is not an offline package",
+  "note": "no such file is shipped inside x7_offline_package.zip on purpose"
+}

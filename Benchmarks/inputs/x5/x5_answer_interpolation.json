@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x5",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "method": "bilinear on the unit lattice",
+  "exactnessProperty": "a bilinear scheme reproduces an affine surface exactly, so the residual must be zero at every query",
+  "queries": [
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "expectedTwice": 5
+    },
+    {
+      "x": 2.5,
+      "y": 7.5,
+      "expectedTwice": 55
+    },
+    {
+      "x": 5.5,
+      "y": 5.5,
+      "expectedTwice": 55
+    },
+    {
+      "x": 9.5,
+      "y": 9.5,
+      "expectedTwice": 95
+    },
+    {
+      "x": 4.5,
+      "y": 1.5,
+      "expectedTwice": 27
+    }
+  ],
+  "folds": {
+    "scheme": "four quadrant blocks of the lattice",
+    "bufferCells": 2,
+    "membershipCounts": {
+      "F1": 30,
+      "F2": 30,
+      "F3": 30,
+      "F4": 31
+    },
+    "leakRule": "no validation point may lie within the buffer of its own training set",
+    "expectedLeaks": 0
+  },
+  "negativeErrorSurface": {
+    "request": "publish a probability error surface for nearest-neighbour",
+    "expected": "no error surface; the method does not support one"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x6",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "removedEdges": [
+    [
+      "N2",
+      "N5"
+    ],
+    [
+      "N8",
+      "N9"
+    ]
+  ],
+  "reachableFromN1": {
+    "before": 5,
+    "after": 5,
+    "isolatedNodes": [
+      "N7",
+      "N8",
+      "N9"
+    ]
+  },
+  "rule": "the same model version serves both runs; a break yields unreachability, never an invented finite cost"
+}

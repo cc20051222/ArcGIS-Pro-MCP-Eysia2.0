@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x5",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "request": "draw 18 stratified points with no seed and no boundary rule",
+  "expectedDisposition": "REFUSE",
+  "reason": "SDU-001 requires the seed and the rules to be echoed; without them the design cannot be reproduced, so no point file may be written"
+}

@@ -1,0 +1,1625 @@
+{
+ "head": {
+  "face": "gp-input-coverage-gap-v3",
+  "batch": "D-117 fixture segment (rectified build r2)",
+  "dispatch": "G-273 R-1（2026-10-04 15:0x，用户裁定「授权合成 fixture」）",
+  "supersedes": "gp-input-coverage-gap-v2.json",
+  "v2RetainedUnchanged": true,
+  "canonicalToken": "合成输入基准",
+  "tokenPresentInEveryFace": true,
+  "fieldShapeNote": "W1 整改延续：本件 perEntryCoverage 每条**确实含有**下列字段，交付文字只声称本件真实存在的字段",
+  "rectificationNote": "承载由「按声明类型」收紧为「按 (件, 参数) 语义钉位」；池字节与 v1/v2 面均未回改（写盘前按索引 #1/#2 复算通过）",
+  "authoredAt": "2026-10-04T20:07:29",
+  "coverage": {
+   "total": 53,
+   "executableInputAvailableTrue": 52,
+   "stillFalse": 1,
+   "stillFalseTools": [
+    "management.Project"
+   ],
+   "semanticPins": 37,
+   "poolArtefacts": 15,
+   "unreferencedPoolItems": [
+    "negative3band"
+   ]
+  },
+  "admissionStatus": "NOT VERIFIED（准入判定属 Phase B 真机窗，本段零执行）"
+ },
+ "perEntryCoverage": [
+  {
+   "rowId": "GP53-01",
+   "dotName": "analysis.Buffer",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-02",
+   "dotName": "analysis.Clip",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-03",
+   "dotName": "analysis.Erase",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-04",
+   "dotName": "analysis.Union",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-05",
+   "dotName": "analysis.Intersect",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-06",
+   "dotName": "analysis.Identity",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-07",
+   "dotName": "analysis.SpatialJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-08",
+   "dotName": "analysis.Near",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-09",
+   "dotName": "analysis.Statistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-10",
+   "dotName": "analysis.Frequency",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "events"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-11",
+   "dotName": "analysis.TabulateArea",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-12",
+   "dotName": "analysis.TabulateIntersection",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-13",
+   "dotName": "management.Dissolve",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-14",
+   "dotName": "management.Merge",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-15",
+   "dotName": "management.Project",
+   "executableInputAvailable": false,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [
+    {
+     "param": "transform_method",
+     "type": "multivalue",
+     "why": "option-list argument whose member set is not enumerated by any accepted evidence — not guessed"
+    }
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-16",
+   "dotName": "management.RepairGeometry",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-17",
+   "dotName": "management.CalculateField",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-18",
+   "dotName": "management.CopyFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-19",
+   "dotName": "management.MultipartToSinglepart",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-20",
+   "dotName": "conversion.ExportFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-21",
+   "dotName": "conversion.TableToTable",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-22",
+   "dotName": "conversion.RasterToPolygon",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-23",
+   "dotName": "conversion.RasterToPoint",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-24",
+   "dotName": "conversion.PolygonToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-25",
+   "dotName": "conversion.PointToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "points"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-26",
+   "dotName": "conversion.PolylineToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "lines"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-27",
+   "dotName": "conversion.FeatureToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-28",
+   "dotName": "conversion.ASCIIToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classesAsc"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": []
+  },
+  {
+   "rowId": "GP53-29",
+   "dotName": "conversion.RasterToASCII",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-30",
+   "dotName": "conversion.FeaturesToJSON",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-31",
+   "dotName": "conversion.JSONToFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "featuresJson"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": []
+  },
+  {
+   "rowId": "GP53-32",
+   "dotName": "sa.Slope",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-33",
+   "dotName": "sa.Aspect",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-34",
+   "dotName": "sa.Hillshade",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "slope"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-35",
+   "dotName": "sa.Contour",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-36",
+   "dotName": "sa.Curvature",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-37",
+   "dotName": "sa.Fill",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-38",
+   "dotName": "sa.FlowDirection",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "flowdir"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-39",
+   "dotName": "sa.FlowAccumulation",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "flowdir"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-40",
+   "dotName": "sa.Watershed",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "flowdir",
+    "points"
+   ],
+   "semanticPinCount": 3,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-41",
+   "dotName": "sa.SnapPourPoint",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "flowacc",
+    "points"
+   ],
+   "semanticPinCount": 3,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-42",
+   "dotName": "sa.ZonalStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "dem"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-43",
+   "dotName": "sa.ZonalStatisticsAsTable",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "dem"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-44",
+   "dotName": "sa.Reclassify",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "remap"
+   ],
+   "semanticPinCount": 2,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-45",
+   "dotName": "sa.ExtractByMask",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-46",
+   "dotName": "sa.ExtractValuesToPoints",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "points"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-47",
+   "dotName": "sa.Resample",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-48",
+   "dotName": "sa.Con",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "dem"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-49",
+   "dotName": "sa.CellStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-50",
+   "dotName": "sa.FocalStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ]
+  },
+  {
+   "rowId": "GP53-51",
+   "dotName": "sa.RasterCalculator",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": []
+  },
+  {
+   "rowId": "GP53-52",
+   "dotName": "management.AddJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "events",
+    "polys_a"
+   ],
+   "semanticPinCount": 1,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  },
+  {
+   "rowId": "GP53-53",
+   "dotName": "management.RemoveJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "carriers pinned per (tool, parameter) over the synthesised pool; declared parameter types alone were not accepted as coverage; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "semanticPinCount": 0,
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ]
+  }
+ ]
+}

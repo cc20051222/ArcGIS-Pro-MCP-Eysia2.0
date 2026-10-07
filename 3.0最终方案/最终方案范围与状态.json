@@ -1,0 +1,942 @@
+{
+  "originalQualityBaseline": {
+    "allOriginalReleaseGatesRequired": true,
+    "gateSource": "02_技术详稿/01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+    "frozenGateSection": "2. 发行完成门",
+    "gpFormula": "max(2100,ceil(1.10*N))",
+    "N": null,
+    "Q_reuse": 0,
+    "semanticBaseline": 285,
+    "psOperations": 20,
+    "templates": 36,
+    "standardImages": 108,
+    "coreScenarios": 60,
+    "pressureRows": 60,
+    "newUsers": 24,
+    "minimumNewUserTasks": 48,
+    "psManualDesign": 0,
+    "severeScientificErrors": 0,
+    "factConsistencyPercent": 100,
+    "wrongTargetWrites": 0,
+    "noThresholdReduction": true,
+    "legacyGateSourceReference": "../3.0项目规划/01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+    "frozenHistoricalGateSource": {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "sha256": "2B4B424FBDABD2C9EF4732361AD7E4DE6AFD20C857B21F9711C8EA11FBE13B15",
+      "gateTableSha256": "4FE9DED3A6F539878729DF05E9FB0CD68F8A0515CDE149F7DDDF72FF3327ACBE",
+      "status": "HISTORICAL_FROZEN_GATE_TABLE_PRESERVED"
+    }
+  },
+  "additionalOriginalScope": {
+    "commonModules": 20,
+    "domains": 8,
+    "productPackages": 12,
+    "inputFamilies": 21,
+    "candidateFormatActionCells": 105,
+    "originalRules": 73,
+    "coreDefinitions": 60,
+    "minimumDefinitionRounds": 3,
+    "anchors": 4,
+    "hiddenCandidates": 77,
+    "minimumUnseenTasks": 12,
+    "minimumUnseenFirstSuccess": 11,
+    "maximumApprovedAutoRepairRounds": 2,
+    "minimumFirstRenderPassImages": 98,
+    "minimumUserIndependentSuccessPercent": 90,
+    "originalInnovationExperiments": 6,
+    "originalChangeContracts": 13,
+    "originalBriefTraceItems": 28,
+    "supportSpecificationRows": 55
+  },
+  "quantity": {
+    "N_GP_actual": null,
+    "N_sem_actual": null,
+    "oldGPFormulaExact": "max(2100,(11*N_GP+9)//10)",
+    "newSemanticChallengeFormulaExact": "max(3000,(3*N_sem+1)//2)",
+    "newSemanticFeasibilityProven": false,
+    "newSemanticScope": "Core GIS/spatial calculation/conversion/governance; excludes PS/Office/UI/install/model/learning management",
+    "unionFormula": "K_GP+K_sem-K_overlap",
+    "overlapDefinition": "Number of the SAME selected per-operation qualification witness units satisfying both gates; one actual provider witness selected per semantic group, not abstract semantic overlap",
+    "reusableEvidenceDemonstration": 0,
+    "weeklyRequiredFormula": "ceil((K_union-Q_union)/4)",
+    "assumptionDomain": "0<=Q_union<=K_union; overlap has proven one-to-one witness mapping",
+    "capacityCasesExamplesOnly": [
+      {
+        "N_GP_example_not_observed": 1900,
+        "N_sem_example_not_observed": 1900,
+        "K_GP": 2100,
+        "K_sem": 3000,
+        "K_overlap_assumed_not_verified": 2100,
+        "K_union": 3000,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 750,
+        "exactWeeklyRate": "750",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 1900,
+        "N_sem_example_not_observed": 1900,
+        "K_GP": 2100,
+        "K_sem": 3000,
+        "K_overlap_assumed_not_verified": 0,
+        "K_union": 5100,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 1275,
+        "exactWeeklyRate": "1275",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 2200,
+        "N_sem_example_not_observed": 2200,
+        "K_GP": 2420,
+        "K_sem": 3300,
+        "K_overlap_assumed_not_verified": 2420,
+        "K_union": 3300,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 825,
+        "exactWeeklyRate": "825",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 2500,
+        "N_sem_example_not_observed": 2500,
+        "K_GP": 2750,
+        "K_sem": 3750,
+        "K_overlap_assumed_not_verified": 2750,
+        "K_union": 3750,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 938,
+        "exactWeeklyRate": "1875/2",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      }
+    ]
+  },
+  "workItems": [
+    {
+      "id": "WI01",
+      "scope": "durable intent/receipt 内部合同，和 ILogger 分离",
+      "dependencies": [],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI02",
+      "scope": "JobStore 可靠保存、写后才记指纹、完整提交组重放",
+      "dependencies": [
+        "WI01"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI03",
+      "scope": "每动作对账及子步骤 receipt 传播，失败项续作闸门",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI04",
+      "scope": "current-fence 校验、迟到效果隔离、并发认领",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI05",
+      "scope": "InputSnapshot/选择全集/一致窗口策略",
+      "dependencies": [],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI06",
+      "scope": "DatasetContract 与字段/单位/时相/实体映射",
+      "dependencies": [
+        "WI05"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI07",
+      "scope": "DataAdequacyReport 与集中关键问题",
+      "dependencies": [
+        "WI06"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI08",
+      "scope": "MethodCard 适用判断、DecisionRecord、可行性",
+      "dependencies": [
+        "WI07"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI09",
+      "scope": "typed DAG、OutputContract、PreparedInvocation",
+      "dependencies": [
+        "WI05",
+        "WI08"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI10",
+      "scope": "根任务预算与资源预约、控制通道、模型路由",
+      "dependencies": [
+        "WI01",
+        "WI04"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI11",
+      "scope": "可信 GP 全集采集、规范 ID、冻结 metadata/diff",
+      "dependencies": [],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI12",
+      "scope": "标量/单位/多值/值表/复合/FieldMap codecs",
+      "dependencies": [
+        "WI11"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI13",
+      "scope": "条件 effects、env、许可与逐操作准入",
+      "dependencies": [
+        "WI10",
+        "WI11",
+        "WI12"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI14",
+      "scope": "旧/compact/granular 统一准备执行及发现投影",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI12",
+        "WI13"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI15",
+      "scope": "逐操作 fixture/oracle/evidence 和升级影响",
+      "dependencies": [
+        "WI14"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI16",
+      "scope": "TypedFactCell、比例/单位/空值、ClaimBinding",
+      "dependencies": [
+        "WI06",
+        "WI08",
+        "WI09"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI17",
+      "scope": "DesignSpec/语义图层/受保护区域与独立检查",
+      "dependencies": [
+        "WI09",
+        "WI16"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI18",
+      "scope": "PS peer、批准验证、DocumentOwnership/file grant",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI19",
+      "scope": "PS 宿主单写、协作取消、固定命令和对账",
+      "dependencies": [
+        "WI18",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI20",
+      "scope": "20 PS 合同逐业务实现、测量/有限修复与保存重开",
+      "dependencies": [
+        "WI17",
+        "WI18",
+        "WI19"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI21",
+      "scope": "Office 三种 Spec/adapter、原生可编辑性、同数值",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI22",
+      "scope": "candidate DeliveryRevision、整体验证/激活、部分领取",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20",
+        "WI21"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI23",
+      "scope": "UpdateImpactPlan、依赖闭包、缓存复用资格",
+      "dependencies": [
+        "WI05",
+        "WI09",
+        "WI22"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI24",
+      "scope": "规划覆盖/方案链、网络条件、去重人口",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI25",
+      "scope": "科研同格网/掩膜/转移/科学解释链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI26",
+      "scope": "资料定位→规则采用→副本建库→QC 覆盖链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI27",
+      "scope": "操作记录、RecordingGap、SkillFit 与跨项目回放",
+      "dependencies": [
+        "WI09",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI28",
+      "scope": "工作台状态/出处/更新影响、可访问/离线流程",
+      "dependencies": [
+        "WI09",
+        "WI22",
+        "WI23"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI29",
+      "scope": "六创新实验的最小实现/对照/采用门",
+      "dependencies": [
+        "WI08",
+        "WI15",
+        "WI20",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI30",
+      "scope": "支持/兼容矩阵、资源包锁、历史载体迁移与交接",
+      "dependencies": [
+        "WI15",
+        "WI22",
+        "WI27"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    }
+  ],
+  "innovations": [
+    {
+      "id": "J01",
+      "name": "可信能力更新",
+      "workItemRefs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI30"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J02",
+      "name": "逐项资格工厂",
+      "workItemRefs": [
+        "WI01",
+        "WI03",
+        "WI15"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J03",
+      "name": "语义能力图谱与去重",
+      "workItemRefs": [
+        "WI08",
+        "WI11",
+        "WI14"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J04",
+      "name": "参考成图StyleDNA",
+      "workItemRefs": [
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J05",
+      "name": "参考数据DatasetDNA",
+      "workItemRefs": [
+        "WI05",
+        "WI06",
+        "WI08",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J06",
+      "name": "用户偏好记忆",
+      "workItemRefs": [
+        "WI17",
+        "WI23",
+        "WI28"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J07",
+      "name": "成功失败经验回放",
+      "workItemRefs": [
+        "WI03",
+        "WI15",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J08",
+      "name": "主动补缺与多方案探索",
+      "workItemRefs": [
+        "WI07",
+        "WI08",
+        "WI09",
+        "WI10",
+        "WI29"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J09",
+      "name": "科学约束自动设计",
+      "workItemRefs": [
+        "WI16",
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J10",
+      "name": "因果增量更新与对账",
+      "workItemRefs": [
+        "WI22",
+        "WI23"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J11",
+      "name": "业务技能编译",
+      "workItemRefs": [
+        "WI09",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J12",
+      "name": "演进工作台与资源调度",
+      "workItemRefs": [
+        "WI10",
+        "WI28",
+        "WI30"
+      ],
+      "lead": "E5",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    }
+  ],
+  "feasibilityPrototypes": [
+    {
+      "id": "PF01",
+      "latestDay": 7,
+      "contributors": [
+        "E2",
+        "E3"
+      ],
+      "workItemRefs": [
+        "WI08",
+        "WI11",
+        "WI13"
+      ],
+      "purpose": "Source/quantity/semantic pool, licensing and six seats",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF02",
+      "latestDay": 14,
+      "contributors": [
+        "E2"
+      ],
+      "workItemRefs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI14",
+        "WI15"
+      ],
+      "purpose": "Original 30-50 stratified real positive/critical negative operation pilot",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF03",
+      "latestDay": 14,
+      "contributors": [
+        "E2",
+        "E5",
+        "C0"
+      ],
+      "workItemRefs": [
+        "WI15",
+        "WI24",
+        "WI25",
+        "WI26"
+      ],
+      "purpose": "Independent per-operation content evidence and mutation-tested batch review",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF04",
+      "latestDay": 14,
+      "contributors": [
+        "E1"
+      ],
+      "workItemRefs": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10"
+      ],
+      "purpose": "Durable commit, lost receipt, old owner, partial effect, cancellation and format recovery",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF05",
+      "latestDay": 14,
+      "contributors": [
+        "E4",
+        "E3",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI16",
+        "WI17",
+        "WI18",
+        "WI19",
+        "WI20",
+        "WI21",
+        "WI22"
+      ],
+      "purpose": "Real reference/constraint/font/PS save-reopen and Office same-fact chain",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF06",
+      "latestDay": 42,
+      "contributors": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI05",
+        "WI06",
+        "WI16",
+        "WI21",
+        "WI24",
+        "WI25",
+        "WI26",
+        "WI28"
+      ],
+      "purpose": "All original format/domain chains and outputs preserved",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF07",
+      "latestDay": 28,
+      "contributors": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "C0"
+      ],
+      "workItemRefs": [
+        "WI10",
+        "WI15",
+        "WI30"
+      ],
+      "purpose": "Two full sustained qualification weeks and ALL remaining resource-constrained branches",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF08",
+      "latestDay": 42,
+      "contributors": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI15",
+        "WI17",
+        "WI23",
+        "WI27",
+        "WI28",
+        "WI29",
+        "WI30"
+      ],
+      "purpose": "Update revocation/canary and reference/preference/experience migration lifecycle",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    }
+  ],
+  "kind": "FINAL_PRODUCT_PLAN_SCOPE",
+  "revision": "FINAL-20261003-INPLACE-03",
+  "technicalSourceRevision": "V11-DATA-METHOD-AND-MEDIA-20261002",
+  "documentStatus": "CONSOLIDATED_DOCUMENTS",
+  "productAcceptance": "NOT_RUN",
+  "fullScope60DayFeasibility": "UNKNOWN_UNTIL_MEASURED",
+  "startDate": null,
+  "targetCalendarDays": 60,
+  "engineeringTargetDays": 56,
+  "contingencyDays": 4,
+  "historicalSource": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新",
+  "documentationChangesOnly": true,
+  "previousDocumentationRevision": "FINAL-20261003-INPLACE-02",
+  "updatedDate": "2026-10-03",
+  "inPlaceRefinements": [
+    {
+      "id": "R12-ACQUISITION",
+      "status": "PLANNED",
+      "contract": "AssetAcquisitionRecord",
+      "ownerWIs": [
+        "WI02",
+        "WI03",
+        "WI05",
+        "WI10",
+        "WI23",
+        "WI28"
+      ],
+      "canonicalDocument": "02_技术详稿/02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "scope": "Same-representation resumable materialization, current grants and original Need recheck; no new tool count"
+    },
+    {
+      "id": "R12-MILESTONES",
+      "status": "PLANNED",
+      "contract": "MilestoneAcceptanceRecord",
+      "scopeLevels": [
+        "CONTRACT",
+        "VERTICAL_SLICE",
+        "FULL_WI"
+      ],
+      "fullWiDagUnchanged": true,
+      "fullWiCloseRequiresFullPredecessors": true,
+      "canonicalDocument": "05_一指挥五执行计划/30WI工作分解与依赖.md"
+    },
+    {
+      "id": "R12-CAPACITY",
+      "status": "PLANNED_INPUT_CONTRACT",
+      "physicalPoolBudgetCountedOnce": true,
+      "remainingPrimaryStrataMustPartitionUnits": true,
+      "unmeasuredDataRemainNull": true,
+      "capacityBoundsAreNotWholeProjectWitness": true,
+      "canonicalDocument": "04_工期与效率优化/资料与计算/工期计算模型.json"
+    },
+    {
+      "id": "R13-TIME",
+      "status": "PLANNED",
+      "contract": "TimeValidityWitness",
+      "ownerWIs": [
+        "WI04",
+        "WI10",
+        "WI13",
+        "WI15",
+        "WI23",
+        "WI28"
+      ],
+      "canonicalDocument": "02_技术详稿/01_主方案（6份）/CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "scope": "Bounded elapsed and absolute time; no expired resurrection, lease release inference or global offline block"
+    },
+    {
+      "id": "R13-RETENTION",
+      "status": "PLANNED",
+      "contract": "RetentionPin / RetentionGraphWitness / ReclaimPlan",
+      "ownerWIs": [
+        "WI02",
+        "WI03",
+        "WI10",
+        "WI22",
+        "WI23",
+        "WI28"
+      ],
+      "canonicalDocument": "02_技术详稿/02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "scope": "Durable reference protection and same-order claims; explicitly authorized owned regenerable D-cache only; protected assets excluded"
+    },
+    {
+      "id": "R14-UPDATE-TRUST",
+      "status": "PLANNED",
+      "contract": "SourceVerificationWitness / SourceUpdateWatermark / BundleClosureWitness",
+      "ownerWIs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI14",
+        "WI15",
+        "WI23",
+        "WI30"
+      ],
+      "canonicalDocument": "02_技术详稿/02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "scope": "Verified source identity and replay watermark, immutable member closure, existing activation/fault recovery; no new active head"
+    },
+    {
+      "id": "R14-CONTENT-FLOW",
+      "status": "PLANNED",
+      "contract": "ContentOriginRecord / CandidateConsumptionDecision / IntentAlignmentWitness",
+      "ownerWIs": [
+        "WI05",
+        "WI06",
+        "WI17",
+        "WI23",
+        "WI27",
+        "WI28",
+        "WI29"
+      ],
+      "canonicalDocument": "02_技术详稿/01_主方案（6份）/INTELLIGENCE_AND_ORCHESTRATION.md",
+      "scope": "Adapter-controlled provenance, declared field flow and current intent binding; original legal automatic learning and zero PS hand design retained"
+    }
+  ]
+}

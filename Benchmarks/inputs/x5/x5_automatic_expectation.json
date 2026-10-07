@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x5",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a TS18 page whose point list equals the published design and a TS16 page whose residual table recomputes",
+    "the same seed reproducing identical coordinates on a re-run",
+    "sensitivity, uncertainty, weights and assumptions reported as four separate books"
+  ],
+  "manualInterventionAllowed": false
+}

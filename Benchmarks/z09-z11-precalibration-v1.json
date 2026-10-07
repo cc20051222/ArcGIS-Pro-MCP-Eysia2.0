@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "m2-z-precalibration-v1",
+  "status": "PASS_CANDIDATE",
+  "scope": "Pre-calibration acceptance criteria for Z09-Z11 (M2 work packages). These are recomputable definitions fixed before any result; they are not evidence that Z09, Z10 or Z11 works.",
+  "workPackages": [
+    {
+      "workPackageId": "Z09",
+      "title": "风格与批量 / style and batch",
+      "owners": "M10/M15 (roadmap §10)",
+      "finalCompletionEvidenceText": "显式保存项目风格，十页分类/整饰一致 (roadmap §10 Z09)",
+      "calibrationStatus": "PRE_CALIBRATION_DEFINITION_ONLY_NOT_VERIFIED",
+      "criteria": [
+        {
+          "criterionId": "Z09-C01",
+          "assertion": "A project style artifact is explicitly saved and identified by hash before any page is produced; a run that styles pages from defaults has no bound style and fails.",
+          "recompute": "Read the saved style artifact path and hash from the case manifest; assert the manifest hash equals the recomputed file hash; assert every page receipt names that style id.",
+          "ruleRefs": [
+            "STY-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z09-C02",
+          "assertion": "Token equality: font ladder, colour and class scheme, margin set, legend layout, units, north-arrow and scale-bar style equal the saved style on every page.",
+          "recompute": "For each page compare the reported token values with the saved style tokens; assert exact equality, no tolerance.",
+          "ruleRefs": [
+            "STY-001",
+            "TXT-001",
+            "SCI-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z09-C03",
+          "assertion": "Ten-page atlas consistency: page count, page order, per-page class set, legend entry order, units and source line identical where the brief requires it.",
+          "recompute": "Assert page count equals the frozen expected count; assert cross-page set equality of the listed fields.",
+          "ruleRefs": [
+            "BAT-001",
+            "NUM-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z09-C04",
+          "assertion": "One data fingerprint governs the whole batch; a fingerprint change re-validates all pages inside one job rather than patching single pages.",
+          "recompute": "Assert one fingerprint value in every page receipt; after a fingerprint change assert a job-level re-validation record covering all pages.",
+          "ruleRefs": [
+            "BAT-001",
+            "DEP-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z09-C05",
+          "assertion": "Batch budget discipline: attempts, cancellations and refusals stay in the applicable denominator and per-page candidate/preview/repair budgets are not exceeded.",
+          "recompute": "Compare per-page counters against the frozen WF-001 budgets and recompute the denominator from the run log.",
+          "ruleRefs": [
+            "WF-001",
+            "PRM-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        }
+      ],
+      "applicableTemplateIds": [
+        "TP04",
+        "TP05",
+        "TP06",
+        "TP08",
+        "TP09",
+        "TP10",
+        "TP17",
+        "TS09"
+      ],
+      "applicableScenarioIds": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S08",
+        "S10",
+        "S15",
+        "S26",
+        "S27"
+      ],
+      "deferredScopeNote": "Ten-page atlas is a defined profile, not a measured run; project-style artifact custody and the style token set still need a real saved style to bind against.",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §10:Z09",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M2",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4, §5",
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §8",
+        "D-089_l2-f05-m2-calibration.md scope 4"
+      ]
+    },
+    {
+      "workPackageId": "Z10",
+      "title": "多用途重排 / multi-purpose reflow",
+      "owners": "M10/M14/M16 (roadmap §10)",
+      "finalCompletionEvidenceText": "横竖/打印/论文/PPT/长图规格可验证 (roadmap §10 Z10)",
+      "calibrationStatus": "PRE_CALIBRATION_DEFINITION_ONLY_NOT_VERIFIED",
+      "criteria": [
+        {
+          "criterionId": "Z10-C01",
+          "assertion": "Every declared media profile is separately verifiable: portrait, landscape, print A4/A3 at 300 DPI, paper, PPT 16:9, long image.",
+          "recompute": "For each profile assert the deliverable exists, opens, and matches its manifest hash, size and type.",
+          "ruleRefs": [
+            "RFL-001",
+            "OUT-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z10-C02",
+          "assertion": "Semantic-slot completeness after reflow: no required slot of the template is dropped in any profile.",
+          "recompute": "Diff the reported slot list per profile against the template slot list; assert set equality.",
+          "ruleRefs": [
+            "RFL-001",
+            "LAY-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z10-C03",
+          "assertion": "Numeric invariance across media: numbers, units and category labels equal across profiles at canonical decimal precision.",
+          "recompute": "Extract the numeric and label sets per profile and assert exact cross-profile equality.",
+          "ruleRefs": [
+            "RFL-001",
+            "NUM-001",
+            "SRC-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z10-C04",
+          "assertion": "Typography floor under reflow: no clipped, truncated or substituted text and no rendered size below the frozen font floor inherited from comparison rules v1.",
+          "recompute": "Assert each profile's reported minimum rendered text size >= the v1 floor and that every required semantic string appears intact.",
+          "ruleRefs": [
+            "RFL-001",
+            "TXT-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z10-C05",
+          "assertion": "Legend and source retention: legend entries, scale bar, north arrow where applicable and the source note survive in every profile, including the long-image one.",
+          "recompute": "Assert presence and value equality of the listed elements per profile against the print profile reference.",
+          "ruleRefs": [
+            "RFL-001",
+            "LAY-001",
+            "SCI-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z10-C06",
+          "assertion": "Geometry may change, facts may not: reflow differences are permitted only in placement and never in class assignment, NoData handling or uncertainty meaning.",
+          "recompute": "Compare class sets, NoData semantics and uncertainty method notes across profiles; assert equality and flag any change as a scientific-protection failure.",
+          "ruleRefs": [
+            "SCI-001",
+            "RFL-001",
+            "GEO-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        }
+      ],
+      "applicableTemplateIds": [
+        "TP07",
+        "TP09",
+        "TP10",
+        "TS04",
+        "TS07",
+        "TS09",
+        "TS10",
+        "TS15"
+      ],
+      "applicableScenarioIds": [
+        "S13",
+        "S15",
+        "S16",
+        "S21",
+        "S26",
+        "S27",
+        "S28",
+        "S46",
+        "S52",
+        "S60"
+      ],
+      "deferredScopeNote": "The six media specifications are named by FINAL; per-specification render evidence is a future execution batch, and the PS-side media export surface depends on the PS half-zone line (D-091) which is outside this line's surface.",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §10:Z10",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M2",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4, §5",
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §8",
+        "D-089_l2-f05-m2-calibration.md scope 4"
+      ]
+    },
+    {
+      "workPackageId": "Z11",
+      "title": "复杂内容保护 / complex content protection",
+      "owners": "M13/M15/M16 (roadmap §10)",
+      "finalCompletionEvidenceText": "密集文字、外部修改、新版生成；细粒度合并仅经验证范围 (roadmap §10 Z11)",
+      "calibrationStatus": "PRE_CALIBRATION_DEFINITION_ONLY_NOT_VERIFIED",
+      "criteria": [
+        {
+          "criterionId": "Z11-C01",
+          "assertion": "Dense text integrity: long mixed-language narrative and annotation blocks retain every required semantic string with no clipping after composition.",
+          "recompute": "Assert the extracted string set equals the frozen expected set per page; assert no truncation flag and the font floor holds.",
+          "ruleRefs": [
+            "PRT-001",
+            "TXT-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z11-C02",
+          "assertion": "External original protection: the recomputed hash of a user original or external master is identical before and after the job.",
+          "recompute": "Hash the original before and after and assert equality; assert the job wrote only to a new revision path.",
+          "ruleRefs": [
+            "PRT-001",
+            "OUT-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z11-C03",
+          "assertion": "New-version generation: output is produced as a new revision, never by overwriting the original artifact.",
+          "recompute": "Assert the output path is a new revision directory and that any overwrite attempt is refused with the pre-existing OUTPUT_EXISTS gate.",
+          "ruleRefs": [
+            "PRT-001",
+            "RPT-001",
+            "OUT-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z11-C04",
+          "assertion": "Fine-grained merge is permitted only inside an explicitly verified scope; an unverified scope generates a new version or refuses and names the scope.",
+          "recompute": "For the verified case assert the merge scope list is non-empty and stated; for the unverified case assert a refusal whose reason names the scope.",
+          "ruleRefs": [
+            "PRT-001",
+            "DEP-001"
+          ],
+          "failureSeverity": "critical",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z11-C05",
+          "assertion": "Design-intent retention under data swap: class scheme, units, legend order, source note and style binding survive while data values update.",
+          "recompute": "Compare design tokens before and after the swap and assert equality; assert data values changed and both facts are disclosed in the receipt.",
+          "ruleRefs": [
+            "STY-001",
+            "BAT-001",
+            "NUM-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        },
+        {
+          "criterionId": "Z11-C06",
+          "assertion": "Dependency-aware refresh: a data change resolves the dependency graph, re-runs only the affected chain, and reports unresolved or broken links instead of hiding them.",
+          "recompute": "Assert the dependency set equals the frozen manifest for the changed root; assert broken links are counted and named in the receipt.",
+          "ruleRefs": [
+            "DEP-001",
+            "LNG-001",
+            "PRT-001"
+          ],
+          "failureSeverity": "major",
+          "thresholdOrigin": "D-089 pre-calibration definition; thresholds are inherited from the frozen comparison rules v1 by reference and are not restated as new values"
+        }
+      ],
+      "applicableTemplateIds": [
+        "TP10",
+        "TS03",
+        "TS05",
+        "TS06",
+        "TS10",
+        "TS15"
+      ],
+      "applicableScenarioIds": [
+        "S05",
+        "S06",
+        "S11",
+        "S12",
+        "S26",
+        "S29",
+        "S30",
+        "S46",
+        "S52",
+        "S60"
+      ],
+      "deferredScopeNote": "Fine-grained merge remains limited to an explicitly verified scope; FINAL does not guarantee arbitrary manual-edit retention in the first version, so no criterion here claims it.",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §10:Z11",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M2",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4, §5",
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §8",
+        "D-089_l2-f05-m2-calibration.md scope 4"
+      ]
+    }
+  ],
+  "baselineContext": {
+    "acceptedBaselineSourceAggregate": "D4FC24B6 (G-209) / 256 files, recomputed by this line at intake 17:1x",
+    "acceptedBaselineToolCount": 170,
+    "nineToolStatus": "PENDING-D088-NOT-ACCEPTED",
+    "workingTreeObservation": "D-088 (L1) is concurrently implementing the nine tools; at build time the working tree contract snapshot listed 179 unique names = accepted 170 + the nine, and the Source aggregate had moved off the G-209 baseline. Nothing in the M2 face relies on that drift: the nine are bound as not accepted, and this line wrote no byte into Source."
+  },
+  "relationshipToM1Face": "Z01-Z08 spine criteria stay in the frozen M1 face (comparison-rules-v1 WF-001 and the M1 scenario rows) and are referenced, not redefined.",
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §10:Z09-Z11, §9:M2",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4-5",
+    "D-089_l2-f05-m2-calibration.md scope 4",
+    "GATE-G206-D085-PASS_VERDICT.md ruling 2"
+  ]
+}

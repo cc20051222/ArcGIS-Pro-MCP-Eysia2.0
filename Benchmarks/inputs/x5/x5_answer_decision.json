@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x5",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "criteria": {
+    "cost": {
+      "direction": "min",
+      "weight": 3
+    },
+    "coverage": {
+      "direction": "max",
+      "weight": 5
+    },
+    "equity": {
+      "direction": "max",
+      "weight": 2
+    }
+  },
+  "alternatives": [
+    {
+      "id": "A",
+      "cost": 40,
+      "coverage": 80,
+      "equity": 60,
+      "meetsConstraint": true
+    },
+    {
+      "id": "B",
+      "cost": 30,
+      "coverage": 70,
+      "equity": 55,
+      "meetsConstraint": true
+    },
+    {
+      "id": "C",
+      "cost": 20,
+      "coverage": 90,
+      "equity": 20,
+      "meetsConstraint": false
+    },
+    {
+      "id": "D",
+      "cost": 50,
+      "coverage": 95,
+      "equity": 70,
+      "meetsConstraint": true
+    }
+  ],
+  "constraint": "equity must be at least 30; failures are excluded from ranking but still listed",
+  "scores": {
+    "A": 700,
+    "B": 670,
+    "C": 730,
+    "D": 765
+  },
+  "ranking": [
+    "D",
+    "A",
+    "B"
+  ],
+  "excludedByConstraint": [
+    "C"
+  ],
+  "labellingRule": "perturbation sweeps are reported as sensitivity, never as probability (SDU-003)",
+  "ensemble": {
+    "scenarios": 5,
+    "probabilisticWeights": false,
+    "requiredLabel": "scenario distribution",
+    "disagreementCells": "cells whose spread across scenarios is at least 3",
+    "spreads": {
+      "S1": 4,
+      "S2": 1,
+      "S3": 6,
+      "S4": 2,
+      "S5": 3
+    }
+  },
+  "assumptionCatalogue": {
+    "tests": [
+      "normality-shapiro-lite",
+      "equal-variance",
+      "spatial-independence",
+      "sample-size-floor"
+    ],
+    "cases": [
+      {
+        "id": "C1",
+        "test": "normality-shapiro-lite",
+        "expected": "pass"
+      },
+      {
+        "id": "C2",
+        "test": "equal-variance",
+        "expected": "fail"
+      },
+      {
+        "id": "C3",
+        "test": "not-in-catalogue",
+        "expected": "unknown"
+      },
+      {
+        "id": "C4",
+        "test": "sample-size-floor",
+        "expected": "pass"
+      },
+      {
+        "id": "C5",
+        "test": "also-not-in-catalogue",
+        "expected": "unknown"
+      },
+      {
+        "id": "C6",
+        "test": "spatial-independence",
+        "expected": "fail"
+      }
+    ],
+    "rule": "an unknown condition is never answered as applicable"
+  }
+}

@@ -1,0 +1,3779 @@
+{
+  "kind": "ARCGIS_PRO_MCP_FULL_SCOPE_INNOVATION_60_DAY_PLAN",
+  "revision": "V11-DATA-METHOD-AND-MEDIA-20261002",
+  "planningSourceDate": "2026-10-02",
+  "status": "PLANNING_CANDIDATE_NOT_DISPATCHED_NOT_PRODUCT_ACCEPTANCE",
+  "productCodeChanges": 0,
+  "buildsInstallsLiveRuns": 0,
+  "fiveExecutorsStarted": false,
+  "startDate": null,
+  "targetCalendarDays": 60,
+  "engineeringTargetDays": 56,
+  "contingencyDays": 4,
+  "eightWeekCompletionProven": false,
+  "unconditionalQualityOrPermanentLeadershipGuarantee": false,
+  "resourceConstraints": {
+    "actualActiveSlotsThisSessionIncludingCommander": 4,
+    "requiredForTrueOnePlusFive": 6,
+    "onlyProductionIntegrator": "E1",
+    "onlyFinalAcceptanceRole": "C0",
+    "executorDelivery": "PASS CANDIDATE",
+    "PSHostGlobalModalWritesSerial": true,
+    "sameGdbAndSdkResourceRulesRemain": true
+  },
+  "originalQualityBaseline": {
+    "allOriginalReleaseGatesRequired": true,
+    "gateSource": "../3.0项目规划/01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+    "frozenGateSection": "2. 发行完成门",
+    "gpFormula": "max(2100,ceil(1.10*N))",
+    "N": null,
+    "Q_reuse": 0,
+    "semanticBaseline": 285,
+    "psOperations": 20,
+    "templates": 36,
+    "standardImages": 108,
+    "coreScenarios": 60,
+    "pressureRows": 60,
+    "newUsers": 24,
+    "minimumNewUserTasks": 48,
+    "psManualDesign": 0,
+    "severeScientificErrors": 0,
+    "factConsistencyPercent": 100,
+    "wrongTargetWrites": 0,
+    "noThresholdReduction": true
+  },
+  "newAdditionalGateSource": "01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+  "originalScopeSourceRoot": "../3.0项目规划",
+  "additionalOriginalScope": {
+    "commonModules": 20,
+    "domains": 8,
+    "productPackages": 12,
+    "inputFamilies": 21,
+    "candidateFormatActionCells": 105,
+    "originalRules": 73,
+    "coreDefinitions": 60,
+    "minimumDefinitionRounds": 3,
+    "anchors": 4,
+    "hiddenCandidates": 77,
+    "minimumUnseenTasks": 12,
+    "minimumUnseenFirstSuccess": 11,
+    "maximumApprovedAutoRepairRounds": 2,
+    "minimumFirstRenderPassImages": 98,
+    "minimumUserIndependentSuccessPercent": 90,
+    "originalInnovationExperiments": 6,
+    "originalChangeContracts": 13,
+    "originalBriefTraceItems": 28,
+    "supportSpecificationRows": 55
+  },
+  "publicCountingLedgers": [
+    "Inventory",
+    "Contract",
+    "Qualification",
+    "Semantic",
+    "Recipe",
+    "Resource"
+  ],
+  "quantity": {
+    "N_GP_actual": null,
+    "N_sem_actual": null,
+    "oldGPFormulaExact": "max(2100,(11*N_GP+9)//10)",
+    "newSemanticChallengeFormulaExact": "max(3000,(3*N_sem+1)//2)",
+    "newSemanticFeasibilityProven": false,
+    "newSemanticScope": "Core GIS/spatial calculation/conversion/governance; excludes PS/Office/UI/install/model/learning management",
+    "unionFormula": "K_GP+K_sem-K_overlap",
+    "overlapDefinition": "Number of the SAME selected per-operation qualification witness units satisfying both gates; one actual provider witness selected per semantic group, not abstract semantic overlap",
+    "reusableEvidenceDemonstration": 0,
+    "weeklyRequiredFormula": "ceil((K_union-Q_union)/4)",
+    "assumptionDomain": "0<=Q_union<=K_union; overlap has proven one-to-one witness mapping",
+    "capacityCasesExamplesOnly": [
+      {
+        "N_GP_example_not_observed": 1900,
+        "N_sem_example_not_observed": 1900,
+        "K_GP": 2100,
+        "K_sem": 3000,
+        "K_overlap_assumed_not_verified": 2100,
+        "K_union": 3000,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 750,
+        "exactWeeklyRate": "750",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 1900,
+        "N_sem_example_not_observed": 1900,
+        "K_GP": 2100,
+        "K_sem": 3000,
+        "K_overlap_assumed_not_verified": 0,
+        "K_union": 5100,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 1275,
+        "exactWeeklyRate": "1275",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 2200,
+        "N_sem_example_not_observed": 2200,
+        "K_GP": 2420,
+        "K_sem": 3300,
+        "K_overlap_assumed_not_verified": 2420,
+        "K_union": 3300,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 825,
+        "exactWeeklyRate": "825",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      },
+      {
+        "N_GP_example_not_observed": 2500,
+        "N_sem_example_not_observed": 2500,
+        "K_GP": 2750,
+        "K_sem": 3750,
+        "K_overlap_assumed_not_verified": 2750,
+        "K_union": 3750,
+        "Q_union": 0,
+        "requiredNetPerFullCalendarWeek": 938,
+        "exactWeeklyRate": "1875/2",
+        "qualificationWindowDaysInclusive": [
+          15,
+          42
+        ]
+      }
+    ]
+  },
+  "GPPathLowerBoundFormula": "2+max((K_union-Q_union)/r,otherRemainingBranchWindow)+1+1+extraWaitNotAlreadyIncluded",
+  "GPPathLowerBoundIsNotProjectForecast": true,
+  "GPPathExamples": [
+    {
+      "qualificationPoolExample": 3000,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 3000,
+      "r_net": 180,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "62/3",
+      "ceilingWeeks": 21,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 3000,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 3000,
+      "r_net": 300,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "14",
+      "ceilingWeeks": 14,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 3000,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 3000,
+      "r_net": 525,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "68/7",
+      "ceilingWeeks": 10,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 3000,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 3000,
+      "r_net": 750,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "8",
+      "ceilingWeeks": 8,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 5100,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 5100,
+      "r_net": 180,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "97/3",
+      "ceilingWeeks": 33,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 5100,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 5100,
+      "r_net": 300,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "21",
+      "ceilingWeeks": 21,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 5100,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 5100,
+      "r_net": 525,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "96/7",
+      "ceilingWeeks": 14,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 5100,
+      "scope": "DUAL_GATE_POOL_EXAMPLE",
+      "dualGateUnionExample": 5100,
+      "r_net": 750,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "54/5",
+      "ceilingWeeks": 11,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 2100,
+      "scope": "OLD_GP_ONLY_REFERENCE",
+      "dualGateUnionExample": null,
+      "r_net": 180,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "47/3",
+      "ceilingWeeks": 16,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 2100,
+      "scope": "OLD_GP_ONLY_REFERENCE",
+      "dualGateUnionExample": null,
+      "r_net": 300,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "11",
+      "ceilingWeeks": 11,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 2100,
+      "scope": "OLD_GP_ONLY_REFERENCE",
+      "dualGateUnionExample": null,
+      "r_net": 525,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "8",
+      "ceilingWeeks": 8,
+      "isWholeProjectForecast": false
+    },
+    {
+      "qualificationPoolExample": 2100,
+      "scope": "OLD_GP_ONLY_REFERENCE",
+      "dualGateUnionExample": null,
+      "r_net": 750,
+      "otherRemainingBranchWindowAssumed": 4,
+      "GP_pathLowerBoundExactWeeks": "8",
+      "ceilingWeeks": 8,
+      "isWholeProjectForecast": false
+    }
+  ],
+  "capacityServiceBudgetsExamplesNotMeasured": {
+    "oldGPReviewHoursPerWeek": 15,
+    "oldGPHostHoursPerWeek": 20,
+    "enlargedReviewExample": 25,
+    "enlargedHostExample": 60,
+    "otherModuleReviewCoordinationAndPSWindowsNotIncluded": true,
+    "formula": "60*serviceHours/meanMinutesPerNetAcceptedOperation",
+    "failedReworkAndReviewIncluded": true
+  },
+  "workItems": [
+    {
+      "id": "WI01",
+      "scope": "durable intent/receipt 内部合同，和 ILogger 分离",
+      "dependencies": [],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI02",
+      "scope": "JobStore 可靠保存、写后才记指纹、完整提交组重放",
+      "dependencies": [
+        "WI01"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI03",
+      "scope": "每动作对账及子步骤 receipt 传播，失败项续作闸门",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI04",
+      "scope": "current-fence 校验、迟到效果隔离、并发认领",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI05",
+      "scope": "InputSnapshot/选择全集/一致窗口策略",
+      "dependencies": [],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI06",
+      "scope": "DatasetContract 与字段/单位/时相/实体映射",
+      "dependencies": [
+        "WI05"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI07",
+      "scope": "DataAdequacyReport 与集中关键问题",
+      "dependencies": [
+        "WI06"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI08",
+      "scope": "MethodCard 适用判断、DecisionRecord、可行性",
+      "dependencies": [
+        "WI07"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI09",
+      "scope": "typed DAG、OutputContract、PreparedInvocation",
+      "dependencies": [
+        "WI05",
+        "WI08"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI10",
+      "scope": "根任务预算与资源预约、控制通道、模型路由",
+      "dependencies": [
+        "WI01",
+        "WI04"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI11",
+      "scope": "可信 GP 全集采集、规范 ID、冻结 metadata/diff",
+      "dependencies": [],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI12",
+      "scope": "标量/单位/多值/值表/复合/FieldMap codecs",
+      "dependencies": [
+        "WI11"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI13",
+      "scope": "条件 effects、env、许可与逐操作准入",
+      "dependencies": [
+        "WI10",
+        "WI11",
+        "WI12"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI14",
+      "scope": "旧/compact/granular 统一准备执行及发现投影",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI12",
+        "WI13"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI15",
+      "scope": "逐操作 fixture/oracle/evidence 和升级影响",
+      "dependencies": [
+        "WI14"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI16",
+      "scope": "TypedFactCell、比例/单位/空值、ClaimBinding",
+      "dependencies": [
+        "WI06",
+        "WI08",
+        "WI09"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI17",
+      "scope": "DesignSpec/语义图层/受保护区域与独立检查",
+      "dependencies": [
+        "WI09",
+        "WI16"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI18",
+      "scope": "PS peer、批准验证、DocumentOwnership/file grant",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI19",
+      "scope": "PS 宿主单写、协作取消、固定命令和对账",
+      "dependencies": [
+        "WI18",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI20",
+      "scope": "20 PS 合同逐业务实现、测量/有限修复与保存重开",
+      "dependencies": [
+        "WI17",
+        "WI18",
+        "WI19"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI21",
+      "scope": "Office 三种 Spec/adapter、原生可编辑性、同数值",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI22",
+      "scope": "candidate DeliveryRevision、整体验证/激活、部分领取",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20",
+        "WI21"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI23",
+      "scope": "UpdateImpactPlan、依赖闭包、缓存复用资格",
+      "dependencies": [
+        "WI05",
+        "WI09",
+        "WI22"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI24",
+      "scope": "规划覆盖/方案链、网络条件、去重人口",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI25",
+      "scope": "科研同格网/掩膜/转移/科学解释链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI26",
+      "scope": "资料定位→规则采用→副本建库→QC 覆盖链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI27",
+      "scope": "操作记录、RecordingGap、SkillFit 与跨项目回放",
+      "dependencies": [
+        "WI09",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI28",
+      "scope": "工作台状态/出处/更新影响、可访问/离线流程",
+      "dependencies": [
+        "WI09",
+        "WI22",
+        "WI23"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI29",
+      "scope": "六创新实验的最小实现/对照/采用门",
+      "dependencies": [
+        "WI08",
+        "WI15",
+        "WI20",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI30",
+      "scope": "支持/兼容矩阵、资源包锁、历史载体迁移与交接",
+      "dependencies": [
+        "WI15",
+        "WI22",
+        "WI27"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    }
+  ],
+  "innovations": [
+    {
+      "id": "J01",
+      "name": "可信能力更新",
+      "workItemRefs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI30"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J02",
+      "name": "逐项资格工厂",
+      "workItemRefs": [
+        "WI01",
+        "WI03",
+        "WI15"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J03",
+      "name": "语义能力图谱与去重",
+      "workItemRefs": [
+        "WI08",
+        "WI11",
+        "WI14"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J04",
+      "name": "参考成图StyleDNA",
+      "workItemRefs": [
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J05",
+      "name": "参考数据DatasetDNA",
+      "workItemRefs": [
+        "WI05",
+        "WI06",
+        "WI08",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J06",
+      "name": "用户偏好记忆",
+      "workItemRefs": [
+        "WI17",
+        "WI23",
+        "WI28"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J07",
+      "name": "成功失败经验回放",
+      "workItemRefs": [
+        "WI03",
+        "WI15",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J08",
+      "name": "主动补缺与多方案探索",
+      "workItemRefs": [
+        "WI07",
+        "WI08",
+        "WI09",
+        "WI10",
+        "WI29"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J09",
+      "name": "科学约束自动设计",
+      "workItemRefs": [
+        "WI16",
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J10",
+      "name": "因果增量更新与对账",
+      "workItemRefs": [
+        "WI22",
+        "WI23"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J11",
+      "name": "业务技能编译",
+      "workItemRefs": [
+        "WI09",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J12",
+      "name": "演进工作台与资源调度",
+      "workItemRefs": [
+        "WI10",
+        "WI28",
+        "WI30"
+      ],
+      "lead": "E5",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    }
+  ],
+  "schemaAliases": {
+    "CapabilityPack": "DC16 CapabilityBundle",
+    "DatasetProfile": "DC20 DatasetDNA",
+    "ReferenceStyleDNA": "DC19 StyleDNA"
+  },
+  "stateAxes": {
+    "environmentAvailability": [
+      "AVAILABLE",
+      "CONDITIONAL",
+      "UNAVAILABLE",
+      "UNKNOWN"
+    ],
+    "availabilityReasonSeparate": true,
+    "qualificationAndEvolutionStatesSeparate": true
+  },
+  "autonomousUpdate": {
+    "trustedSourceOnly": true,
+    "metadataIsNotQualification": true,
+    "firstRealPositivePerOperationRequired": true,
+    "criticalNegativesAndIndependentOracleRequired": true,
+    "unknownTypeOrEffectsQuarantined": true,
+    "candidateShadowCanaryIndependentAcceptanceRequired": true,
+    "oldJobsPinnedButRevocationStopsInvalidExecution": true,
+    "noArbitraryPythonJsOrNew6511Bypass": true,
+    "unknownCodeOrDependencyNotAutoInstalled": true
+  },
+  "learning": {
+    "defaultApproach": "Local structured memory + retrieval + constrained ranking + qualified replay; no mandatory per-user fine-tuning",
+    "referenceImageIsNotSpatialOrNumericTruth": true,
+    "datasetAndStyleSeparated": true,
+    "scientificRulesAndCurrentExplicitRequestOverridePreferences": true,
+    "scopedExplainableCorrectableForgettableExportable": true,
+    "noDefaultCrossTenantOrCloudTraining": true,
+    "hiddenInputsAnswersOwnedByIndependentAcceptanceAfterFreeze": true
+  },
+  "releaseSequence": [
+    "AllOriginalAndAdditionalFunctionalGates",
+    "FinalUnifiedInstallerAndPackageImplementation",
+    "ActualPackageInstallUpgradeRecoveryUninstallFirstMap",
+    "IndependentReleaseGate"
+  ],
+  "deadlineCheckpoints": [
+    {
+      "day": 7,
+      "gate": "Source/semantic feasibility, six seats, legal Host/licenses, independent oracles and final user/test windows"
+    },
+    {
+      "day": 14,
+      "gate": "T0, 30-50 stratified pilot, at least 3 toolboxes and 6 parameter families, real Pro/PS/Office minimal chain and independent checks"
+    },
+    {
+      "day": 28,
+      "gate": "Two FULL weeks each meet initial frozen union net target; current unique valid set and remaining 14 qualification days recomputed; difficult tail plus ALL remaining WI resource-constrained schedulable through D49/D56"
+    },
+    {
+      "day": 49,
+      "gate": "ALL functional gates incl late WI30 implementation and full original/new tests; no package-first substitution"
+    },
+    {
+      "day": 56,
+      "gate": "Actual package release acceptance"
+    }
+  ],
+  "ifDeadlineCapacityFails": "Preserve full scope and quality, report measured remaining critical path and changed completion date; no hidden deferral of original functionality",
+  "upstreamSourceHashes": {
+    "01_主方案（6份）\\README_FINAL.md": "0CDABCC264749C2ADDCD23911DCA06C513422FD4476833180894CDF886CA7803",
+    "01_主方案（6份）\\CAPABILITY_AND_SUPPORT_MATRIX.md": "4972517500FBE3116A7FCD8280AEB236FEC4BB0E7128B508AA355B6E34268E84",
+    "01_主方案（6份）\\INTELLIGENCE_AND_ORCHESTRATION.md": "B410F6D469CF7DAEFFA8826D29924C83EAC252EEE4B67D9FB2351B621A5604BB",
+    "01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md": "99D0D618F3C77A3455220E8B6AEBE7A90BB18B05269B6A3FC87D16797F7DBDB4",
+    "01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md": "448C8792A00C47C0F279A1B149A27F8F2495E60D1A915310213577A799D8ED35",
+    "01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md": "2B4B424FBDABD2C9EF4732361AD7E4DE6AFD20C857B21F9711C8EA11FBE13B15",
+    "02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md": "3ABA84DB5FCBE29D48D8256AAC780B98F1C0580050923AAF40357A9F6C72FF20",
+    "02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md": "4349294E236CB2183F61E8F661B8C79F0D9249408F503335EB73A5CCE3A8EC10",
+    "02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md": "9CD7CC284BE8905E8D3DB075828FF0E67085EC8E185D556F171C2921765FFBC4",
+    "02_模块实现详稿（5份）\\THREE_CHAIN_IMPLEMENTATION.md": "595650F2976919DB6BFFED251900EF4DBEAC90EACA43BFE0FA75DCF43DD2B26A",
+    "02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md": "0B06B914A5CD98ECFD5FC9C6C1D1C11D02D3F1E7E5DE40E11D78B2A4E347C7CA",
+    "03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md": "97BDFF9BA9E76AC38CC7008955E1F2FF38AAD8ACE87E4E12FAF0EF62E172666F",
+    "03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md": "433843726D2290DD62882FAF038B8B96A09DC8AFB28BFF28B3AA84C43337F5A5",
+    "03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md": "A00F3414577D2F16E7DD6536FFDE65B5E741A8DD2DAB7E7B06CA1D8A502AFD2D",
+    "03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md": "75B8A7A2E4343949427C7409048B07BE00D21968FC11C4FEB73E3CF081ACADD4"
+  },
+  "retainedMainContractBlocks": [
+    {
+      "file": "CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "selectedSections": "from 1. through end",
+      "inheritedBlockDigest": "999271445BF6E3B7962A228E3A0B6FD84DB73C5D3965F3BB19782ED97C08CC5F",
+      "originalBehaviorAndThresholdTextRetained": true
+    },
+    {
+      "file": "INTELLIGENCE_AND_ORCHESTRATION.md",
+      "selectedSections": "from 1. through end",
+      "inheritedBlockDigest": "7FC44B31AAA70DCDEFF69BD600C40796CC460D7EB8E5CC2D54A1241762C9BCCB",
+      "originalBehaviorAndThresholdTextRetained": true
+    },
+    {
+      "file": "CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "selectedSections": "from 1. through end",
+      "inheritedBlockDigest": "175F8D3E6D09AE75BE86F7BF8A739A5B6EE4D90D359874117764175CD4BED49F",
+      "originalBehaviorAndThresholdTextRetained": true
+    },
+    {
+      "file": "VERIFICATION_AND_TRACEABILITY.md",
+      "selectedSections": "from 2. through end",
+      "inheritedBlockDigest": "14E192505DB13630A2960F1F2C2091EDE78456C9E39DBD49C08AF47376CB503A",
+      "originalBehaviorAndThresholdTextRetained": true
+    },
+    {
+      "file": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "selectedSections": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "inheritedBlockDigest": "ECE68900A1A43A66E0E0D76FF4C6F4D11A7ACA5D589CF04AD7C825C4A0B04D85",
+      "originalBehaviorAndThresholdTextRetained": true
+    }
+  ],
+  "primaryPublicSources": [
+    {
+      "title": "Esri ListTools",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/listtools.html",
+      "checkedOn": "2026-10-01",
+      "supports": "Directory enumeration; no license/execution proof",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Esri GetParameterInfo",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/getparameterinfo.html",
+      "checkedOn": "2026-10-01",
+      "supports": "Parameters and toolbox alias; no complete effects/oracle proof",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Esri Parameter",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/classes/parameter.html",
+      "checkedOn": "2026-10-01",
+      "supports": "ValueTable/composite/filter/dependencies/dynamic conditions",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Esri QueuedTask.Run",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/sdk/api-reference/topic10996.html",
+      "checkedOn": "2026-10-01",
+      "supports": "SDK framework dispatcher queue; threading restrictions remain",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "GDAL Algorithms API",
+      "url": "https://gdal.org/en/stable/api/python/utilities.html",
+      "checkedOn": "2026-10-01",
+      "supports": "Version-dependent registry/JSON algorithm mechanisms, 3.11 introduction; no local installation proof",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "QGIS Processing Executor",
+      "url": "https://docs.qgis.org/3.44/en/docs/user_manual/processing/standalone.html",
+      "checkedOn": "2026-10-01",
+      "supports": "list/help/run and JSON; actual installed provider and license conditions",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Adobe executeAsModal",
+      "url": "https://developer.adobe.com/photoshop/uxp/2022/ps-reference/media/executeasmodal",
+      "checkedOn": "2026-10-01",
+      "supports": "One plugin modal at a time; timeout option is version-dependent",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "ONNX Runtime Windows",
+      "url": "https://onnxruntime.ai/docs/get-started/with-windows.html",
+      "checkedOn": "2026-10-01",
+      "supports": "Local inference OS/EP/dependency conditions, not model accuracy",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "GDAL licenses",
+      "url": "https://gdal.org/en/stable/license.html",
+      "checkedOn": "2026-10-01",
+      "supports": "Actual binary dependencies require separate qualification",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Snakemake content dependency caching",
+      "url": "https://snakemake.readthedocs.io/en/stable/executing/caching.html",
+      "checkedOn": "2026-10-02",
+      "supports": "Dependency/software/input identity; experimental sharing defaults not adopted",
+      "adoption": "MECHANISM_ONLY",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Snakemake resource rules",
+      "url": "https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html",
+      "checkedOn": "2026-10-02",
+      "supports": "Global/local resource accounting; no system tmpdir fallback",
+      "adoption": "MECHANISM_ONLY",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Temporal activities",
+      "url": "https://docs.temporal.io/activity-definition",
+      "checkedOn": "2026-10-02",
+      "supports": "External activity may execute multiple times; actual effects need idempotency/reconcile",
+      "adoption": "MECHANISM_ONLY",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "DVC stages and locks",
+      "url": "https://dvc.org/doc/user-guide/project-structure/dvcyaml-files",
+      "checkedOn": "2026-10-02",
+      "supports": "Explicit inputs/outputs/params and data version lock",
+      "adoption": "MECHANISM_ONLY",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "Roslyn incremental generator cookbook",
+      "url": "https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.cookbook.md",
+      "checkedOn": "2026-10-02",
+      "supports": "Value-equatable generation pipeline and additional inputs",
+      "adoption": "ENGINEERING_PATTERN_NO_NEW_DEPENDENCY_ASSUMED",
+      "localRuntimeProof": false
+    },
+    {
+      "title": "ArcGIS MCP public implementation",
+      "url": "https://github.com/marcovgonzalezv/arcgis-mcp",
+      "checkedOn": "2026-10-02",
+      "supports": "Generated wrappers/public contracts/resources; README is not local runtime evidence",
+      "adoption": "PUBLIC_SOURCE_COMPARISON_ONLY",
+      "localRuntimeProof": false
+    }
+  ],
+  "previousRevisionBackup": "../3.0项目规划创新历史/V6_20261002_本轮深化前/备份逐件核验.json",
+  "feasibilityProof": {
+    "productFeasibilityProven": false,
+    "capacityProven": false,
+    "sourceInspectionIsNotRuntimeProof": true,
+    "prototypeAndResourceConstrainedScheduleRequired": true,
+    "allUnknownWorkItemCostsPreventDeadlineProven": true,
+    "extraInnovationRequiresCostAndFullScopeGatePreserved": true
+  },
+  "sourceReuseAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+      "sha256": "F7DA446BBB9C64FF1501E6E875CAB0E285BD792560097E41CB99A5B1322A8C45",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME_OR_QUALIFICATION",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "sha256": "ED78B01C806BF8105D6453EF966DC02187D351DDDF727FB2C01DB95AF3E34721",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME_OR_QUALIFICATION",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "sha256": "D0D02E5D343BD4E1298F9F8ABBAF0D8821954B8BD96E7F428039970940711EE0",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME_OR_QUALIFICATION",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "path": "../../Source/ArcGISProMCP.Compatibility/Services/GeoprocessingExecutor.cs",
+      "sha256": "B9FC104C491EC2BE87DA7B7FB6FFF599FF17EA9F973B8EBD3BF2F91A3CA48CA3",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME_OR_QUALIFICATION",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Server/Internal/PsChannelHandler.cs",
+      "sha256": "F503CEC89719CD972AA4D447CC3FD8F8BF813B426F8C821CCEA659B5A37325B3",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME_OR_QUALIFICATION",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "sourceInspectionFinding": "Existing IToolInvoker/LoggerToolInvocationJournal and JobStore fencing/journal are reusable; logger persisted wording does not prove durable commit or full effect reconciliation",
+  "feasibilityPrototypes": [
+    {
+      "id": "PF01",
+      "latestDay": 7,
+      "contributors": [
+        "E2",
+        "E3"
+      ],
+      "workItemRefs": [
+        "WI08",
+        "WI11",
+        "WI13"
+      ],
+      "purpose": "Source/quantity/semantic pool, licensing and six seats",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF02",
+      "latestDay": 14,
+      "contributors": [
+        "E2"
+      ],
+      "workItemRefs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI14",
+        "WI15"
+      ],
+      "purpose": "Original 30-50 stratified real positive/critical negative operation pilot",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF03",
+      "latestDay": 14,
+      "contributors": [
+        "E2",
+        "E5",
+        "C0"
+      ],
+      "workItemRefs": [
+        "WI15",
+        "WI24",
+        "WI25",
+        "WI26"
+      ],
+      "purpose": "Independent per-operation content evidence and mutation-tested batch review",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF04",
+      "latestDay": 14,
+      "contributors": [
+        "E1"
+      ],
+      "workItemRefs": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10"
+      ],
+      "purpose": "Durable commit, lost receipt, old owner, partial effect, cancellation and format recovery",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF05",
+      "latestDay": 14,
+      "contributors": [
+        "E4",
+        "E3",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI16",
+        "WI17",
+        "WI18",
+        "WI19",
+        "WI20",
+        "WI21",
+        "WI22"
+      ],
+      "purpose": "Real reference/constraint/font/PS save-reopen and Office same-fact chain",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF06",
+      "latestDay": 42,
+      "contributors": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI05",
+        "WI06",
+        "WI16",
+        "WI21",
+        "WI24",
+        "WI25",
+        "WI26",
+        "WI28"
+      ],
+      "purpose": "All original format/domain chains and outputs preserved",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF07",
+      "latestDay": 28,
+      "contributors": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "C0"
+      ],
+      "workItemRefs": [
+        "WI10",
+        "WI15",
+        "WI30"
+      ],
+      "purpose": "Two full sustained qualification weeks and ALL remaining resource-constrained branches",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    },
+    {
+      "id": "PF08",
+      "latestDay": 42,
+      "contributors": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "workItemRefs": [
+        "WI15",
+        "WI17",
+        "WI23",
+        "WI27",
+        "WI28",
+        "WI29",
+        "WI30"
+      ],
+      "purpose": "Update revocation/canary and reference/preference/experience migration lifecycle",
+      "implementedOrAccepted": false,
+      "costIsInOriginalWIAndNotFree": true,
+      "failureAction": "Preserve scope/gates, remediate measured gaps and recompute date"
+    }
+  ],
+  "qualificationEvidenceFactory": {
+    "capsuleParentContract": "QualificationRecord",
+    "independentContentCheckCoverage": "100_PERCENT_OF_COUNTED_OPERATIONS",
+    "firstRealPositiveAndAllCriticalNegativesRetained": true,
+    "batchSignatureDoesNotMeanFamilyOrSampleQualification": true,
+    "implementationGeneratedGoldenDoesNotProveScientificOracle": true,
+    "criticalMutationFamilies": 8,
+    "criticalMutationCasesMinimum": 12,
+    "humanSpotRereadIsAdditionalNotReplacement": true,
+    "onlyC0SignsFinalAcceptance": true,
+    "batchOptimizationImplementedOrAccepted": false
+  },
+  "batchReviewCostExampleNotMeasured": {
+    "acceptedBatchSize": 50,
+    "fixedReviewMinutesPerBatch": 20,
+    "perNetItemCheckMinutes": 0.6,
+    "exceptionFailedReworkMinutesPerNetItem": 0.4,
+    "totalReviewMinutesPerNetItemExact": "7/5",
+    "reviewHoursPerWeek": 25,
+    "reviewServiceUpperBoundPerWeek": 1071,
+    "hostHoursPerWeek": 60,
+    "hostMinutesPerNetItem": 3,
+    "hostServiceUpperBoundPerWeek": 1200,
+    "preparationHoursPerWeek": 40,
+    "preparationMinutesPerNetItem": 2,
+    "preparationServiceUpperBoundPerWeek": 1200,
+    "jointSharedResourcesStillNeedScheduling": true,
+    "satisfiesNoOverlap1275Target": false,
+    "isCapacityProof": false
+  },
+  "resourceConstrainedScheduling": {
+    "estimatedCostIntervalsInitially": null,
+    "all30WorkItemsAndInnovationMarginalTasksRequired": true,
+    "unknownCostIsNotZero": true,
+    "resourceCalendarIncludesAllC0Duties": true,
+    "GPReviewBudgetIsNotTotalCommanderBudget": true,
+    "resources": [
+      "AISeats",
+      "Integrator",
+      "IndependentReview",
+      "ProfessionalOracle",
+      "CPU",
+      "RAM",
+      "VRAM",
+      "Disk",
+      "MCT",
+      "ProHost",
+      "PSGlobalModal",
+      "GdbLock",
+      "LicenseToken",
+      "UserWindow"
+    ],
+    "conflictingResourcesMustBeReservedJointly": true,
+    "longestDependencyPathIsOnlyLowerBound": true,
+    "boundedWipAndDifficultStrataRequired": true,
+    "extraWaitNotAlreadyInNetRateOrBranchesOnly": true
+  },
+  "noNewRuntimeFrameworkServiceOrDependencyInstalled": true,
+  "openSourceResearchAdoptions": [
+    {
+      "id": "R1",
+      "decision": "ADOPT_PATTERN_CONDITIONAL_PROVIDER_RUNTIME",
+      "title": "可信参数合同编译器，消除逐项手写wrapper",
+      "sourceRefs": [
+        "S01",
+        "S03",
+        "S06",
+        "S07"
+      ],
+      "reuse": "在唯一Composition注册及IToolInvoker上编译受控Contract IR；不增加第二注册中心，不照搬新的Python主执行器。",
+      "implementationSteps": [
+        "从固定可信provider和固定版本读取 canonical id、别名、参数类型/基数、依赖/互斥、输入输出；原始descriptor保留哈希。",
+        "codec族集中处理Raster/FeatureClass、ValueTable、多值、单位、CRS、字段、表达式和依赖更新；动态类型不明标UNSUPPORTED_CONTRACT，不用LLM猜执行参数。",
+        "从IR生成DTO、JSON schema、表单、目录索引和调用适配；效果合同、输出边界、许可和科学oracle独立补全。",
+        "目录更新生成差异及影响图；未变合同保持原证据，变更域进入shadow/canary逐项重资格，受控推广和回退。",
+        "GDAL/QGIS仅作为可信provider候选；先测合法分发、体积、外部依赖及真实Host成本，不改ArcGIS受管环境。"
+      ],
+      "proofExperiment": {
+        "sample": "30-50操作，至少3工具箱/6 codec族；困难参数和长任务占比冻结。",
+        "baseline": "相同操作、fixture、质量门和独立验收，比较人工逐项wrapper与IR工厂。",
+        "measures": [
+          "工程分钟/操作",
+          "完整合同编译比例",
+          "每操作真实正例与关键负例",
+          "输出/状态/effects错误率",
+          "更新受影响域识别precision/recall"
+        ],
+        "proposedSuccess": "包装人工时间下降≥50%只是试验目标；完整参数合同原门≥95%且每项资格不变。漏报安全/科学影响不得为PASS。",
+        "nonProof": "仅schema生成数、目录发现数、一个家族代表成功不算适配。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，纳入既有WI11-15/30预算，不是追加免成本工期",
+        "licenseBoundary": "只借模式；复制代码/资产前固定具体license/SBOM。GDAL/QGIS完整运行时成本另审。"
+      },
+      "rejectOrFallback": "动态参数、effects、专家oracle未知时隔离候选；允许增加人工合同补全工时，不能用任意代码通道过门。"
+    },
+    {
+      "id": "R2",
+      "decision": "ADOPT_DECLARATIVE_PER_OPERATION_QUALIFICATION_FACTORY",
+      "title": "逐操作QualificationSpec与独立oracle，减少测试搭建成本",
+      "sourceRefs": [
+        "S04",
+        "S06"
+      ],
+      "reuse": "复用现有测试/owned D盘fixture；工厂生成场景，不授予执行端自验PASS。",
+      "implementationSteps": [
+        "每操作生成QualificationSpec：合同域/Host/许可、合法正例、关键负例、输入与expected资产、oracle规则版本、科学容差、effects和清理归属。",
+        "共享fixture构建、参数编码和验证器；仍为每操作执行其真实合法正例及关键负例。",
+        "oracle来源分为解析解/独立参考资料/审定上游测试/专家固定样例；同实现自生成expected仅标REGRESSION_BASELINE。",
+        "几何、属性、栅格、网络/拓扑、CRS、单位和状态变化分别校验；精度容差预先固定，不看结果调宽。",
+        "Golden资产更新须说明科学原因、差异和独立复核；不能失败后自动重录expected。"
+      ],
+      "proofExperiment": {
+        "sample": "沿R1同一困难混合试点，每项正例及关键负例，外加≥12人工植入不同层面的已知缺陷。",
+        "measures": [
+          "测试资产搭建/审查分钟",
+          "科学/effects缺陷检出率",
+          "假PASS",
+          "fixture隔离及重跑一致性"
+        ],
+        "proposedSuccess": "所有植入关键缺陷被正确拒绝，科学错误/越权写假PASS=0，原逐项门完整；搭建时间下降目标≥40%，以实测为准。",
+        "nonProof": "metamorphic属性和checksum只能补充，不能单独证明每算法科学正确；tests pass数量不是资格数量。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，与R1共享试点和fixture工时，避免重复记账",
+        "licenseBoundary": "QGIS模式可借；上游fixtures/expected逐资产许可证与来源核对。"
+      },
+      "rejectOrFallback": "独立oracle不可取得的领域先形成阻断与专家材料需求；不降成API返回成功。"
+    },
+    {
+      "id": "R3",
+      "decision": "ADOPT_PER_ITEM_CERTIFICATES_AND_BATCH_REVIEW",
+      "title": "全项证书与批次签证，加速独立验收而不以抽样替代",
+      "sourceRefs": [
+        "S04",
+        "S06"
+      ],
+      "reuse": "执行端提交PASS CANDIDATE，C0逐项核实；证书接现有日志/manifest，不建立自批通道。",
+      "implementationSteps": [
+        "每操作Evidence Certificate含canonical id、语义组、合同/Host/许可/policy/oracle哈希、输入产物哈希、真实正负例、effects核对和失败重跑链。",
+        "独立验证器自动检查证据完整、哈希一致、资格域、去重交集和关键负例；异常送人工核定。",
+        "每10-15项组成审阅批次，仅复用解析上下文/相同fixture说明；批次签名列举每个证书和判定，不抽样替代。",
+        "报告按真正净新增资格计数；失败、返工、未知结果、复用审查成本全计时。",
+        "抽检仅额外测缺陷率；若证明仅自动完整性检验而独立科学判定不足，不称独立验收完成。"
+      ],
+      "proofExperiment": {
+        "sample": "D15后两个完整7日周，同样任务困难比例；数量目标由真实K_union-Q决定，不固定假设750。",
+        "measures": [
+          "每净资格独立审查分钟",
+          "产物/Host占用分钟",
+          "失败及返工",
+          "排队p50/p95",
+          "证据错误假通过",
+          "每周净资格"
+        ],
+        "proposedSuccess": "完整原门下两周均满足weeklyRequired且其他分支DAG容量通过；750/周在25h审阅示例下≤2min/净项，须包含全部返工。",
+        "nonProof": "审阅一个家族、整批无逐项结论、短时峰值、执行AI自评分均不证明服务率。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "1-2证书/队列原型，C0持续审查时间单独预算",
+        "licenseBoundary": "本地合同自主实现；不复用未经许可的竞品测试资产。"
+      },
+      "rejectOrFallback": "批证书不能降低科学判断成本时承认审查瓶颈，增加合法独立验收容量或延工期。"
+    },
+    {
+      "id": "R4",
+      "decision": "ADOPT_PRIVATE_DEPENDENCY_CACHE_PATTERN_REJECT_FRAMEWORK_DEFAULTS",
+      "title": "三类依赖指纹与私有不可变产物缓存",
+      "sourceRefs": [
+        "S12",
+        "S14",
+        "S15",
+        "S20"
+      ],
+      "reuse": "增量补现有manifest、WorkflowJobStore指纹与artifact index；只共享已审定资产，不运行任意Snakefile/DVC stage。",
+      "implementationSteps": [
+        "分开科学产物键、渲染交付键、资格证据键；科学与样式变化不互相错误失效。",
+        "键纳入原始数据内容、CRS/轴序/单位/转换、合同与算法版本、Host/许可域、显式参数；渲染再纳字体、ICC、模板及PS版本；证据再纳policy/oracle版本。",
+        "D盘private cache写入owned临时目录后校验再原子发布不可变manifest；禁止用户资产可写硬链接/自动删除输出。",
+        "仅对已证明纯且确定的步骤复用；GPU/模型非确定性、云数据更新与隐式依赖必须显式标注不缓存或受限域。",
+        "in-flight合并与资源fence分开；缓存命中仍核实产物完整性，不能替代首次独立资格或当前Host效果核对。"
+      ],
+      "proofExperiment": {
+        "sample": "固定三业务链，在数据、CRS、参数、codec、Host、oracle、字体/ICC、模板各类依赖共≥30次变更，比较增量与完全重算。",
+        "measures": [
+          "漏失效",
+          "错误复用",
+          "科学内容等价",
+          "render完整性",
+          "端到端p50/p95",
+          "私有数据隔离",
+          "缓存损坏恢复"
+        ],
+        "proposedSuccess": "漏失效/科学错误/越权读取=0；反馈p50下降≥30%是待证目标，p95不因缓存锁显著恶化；原门全部保留。",
+        "nonProof": "哈希相同不证明模型结论正确；隐式依赖漏报不可用更宽容差掩盖。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，先补manifest键与1条链，纳入WI更新/数据/交付原型预算",
+        "licenseBoundary": "设计参考MIT/Apache项目；不默认安装框架/新DB/Conda。"
+      },
+      "rejectedDefaults": [
+        "Snakemake全用户可读写experimental共享cache",
+        "Prefect用户目录默认C盘存储",
+        "DVC默认清理用户outputs",
+        "任意shell stage成为产品工具"
+      ],
+      "rejectOrFallback": "不确定或副作用步骤关闭缓存，仍走原正确执行路径；这是缓存策略边界，不删功能。"
+    },
+    {
+      "id": "R5",
+      "decision": "ADOPT_EFFECT_AWARE_RECOVERY_ON_EXISTING_JOURNAL",
+      "title": "复用持久化日志与fence，补未知效果对账恢复",
+      "sourceRefs": [
+        "S10",
+        "S17",
+        "S18",
+        "S20"
+      ],
+      "reuse": "IToolInvoker负责intent/receipt，WorkflowJobStore负责持久任务/lease/replay，既有PS fencing负责写入约束；不引入Temporal server或TinyDB替换。",
+      "implementationSteps": [
+        "区分用户任务、科学步骤、Host活动和产物版本；长期任务状态可轮询，但新增状态API不计核心算法。",
+        "把intent到invoke到artifact/state verification到receipt的ID统一；验证Logger-backed journal真实持久化边界并补到现有store。",
+        "丢回执进入UNKNOWN_EFFECT/RECONCILE：检查owned输出、Host状态、journal与fence后再判完成/可重试/需用户介入。",
+        "仅纯读或已证明幂等的活动允许同ID受限重试；外部写入不能因timeout盲重试。",
+        "lease过期不推定旧worker停止；旧writer活性与跨Host副作用未知时隔离资源，取消须复核剩余进程和实际状态。",
+        "复用本地过程与job分离的接口模型；未来确有OGC互通需求再独立评估pygeoapi服务边界。"
+      ],
+      "proofExperiment": {
+        "sample": "在intent写前/后、Host写前/后、产物发布前/后、receipt丢失、日志截断、锁过期旧writer、PS modal busy等每边界注入崩溃/超时。",
+        "measures": [
+          "假完成",
+          "重复外部写入",
+          "错误对象写入",
+          "不确定状态被误判",
+          "可恢复比例和耗时",
+          "日志flush/回放一致性",
+          "fence迟到写拦截"
+        ],
+        "proposedSuccess": "假完成/重复写入/错误对象写入=0；确定性可恢复项达到原门，未知效果不冒充成功；不扩大原自动修复次数。",
+        "nonProof": "activity已取消、cache事务已提交或任务future失败，均不能直接判定GIS/PSD状态。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3故障原型，与既有job/fence/PS合同复用；完整跨Host验收另计原门",
+        "licenseBoundary": "模式借鉴MIT/Apache；新增服务运行时及依赖未获本研究授权。"
+      },
+      "rejectOrFallback": "持久化或外部效果无法确定时停在可解释未完成状态，保留资产与证据；不用自动回滚猜测用户后续编辑。"
+    },
+    {
+      "id": "R6",
+      "decision": "ADOPT_EVIDENCE_GAP_ROADMAP_REJECT_COUNT_AND_DATE_GUARANTEES",
+      "title": "数量与学习更新按证据缺口推进，形成可持续竞争优势",
+      "sourceRefs": [
+        "S01",
+        "S03",
+        "S06",
+        "S07",
+        "S08",
+        "S09"
+      ],
+      "reuse": "保持两个数量门、原30WI及完整创新范围；用户习惯与参考成图学习只提出偏好/模板候选，执行仍经现有受控合同。",
+      "implementationSteps": [
+        "冻结核心语义字典及provider见证，逐项列独立输入输出用途、算法/方法来源、许可、oracle与安装前提；先求实际可供给集合，不以3000倒推发明名称。",
+        "更新差异变成候选资格队列；science/params/effects/Host变化重资格，文本描述变化不制造新算法，旧证书按精确依赖复用。",
+        "同义provider重复实现记录为冗余/恢复能力，不能重复计核心语义；完全不同分析方法才经独立定义和证明进入语义分子。",
+        "学习用户偏好与参考成图时保留来源、权限、个人空间和可撤销偏好；只迁移颜色/排版/视觉语法，禁止模仿图中地理事实替换真实数据。",
+        "记录经验为版本化Skill/DesignSpec候选，离线回放、留出集与事实保真门、shadow对照、canary后推广；未验证用户喜欢不等于科学正确。",
+        "用冻结完整任务比较效率、正确性、人工介入、恢复与交付，而不宣称‘永久领先’或用模型能力取代工程资格。"
+      ],
+      "proofExperiment": {
+        "sample": "D7形成实际核心候选清单及精确N/交集，D14困难试点，D28两完整周容量；学习另用两类模板、来源合法的参考集和留出集，独立科学内容审查。",
+        "measures": [
+          "重复/伪算法率",
+          "有科学用途及独立oracle的候选比例",
+          "合法Host覆盖",
+          "未知领域阻断",
+          "习惯撤销和跨用户污染",
+          "参考样式迁移事实保真",
+          "完整任务自动化成功率"
+        ],
+        "proposedSuccess": "数量资格按原门全项完成；假计数/事实替换/跨用户污染=0，其他指标不低于原门。只有真实池与净率充分才冻结60日可承诺排程。",
+        "nonProof": "3000目录名、全GP ListTools、上传1000图、自动生成1000Skill或缓存命中数不证明核心算法领先。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "1-2数量/供给冻结；学习原型成本保留在J/SC及既有WI，不归零",
+        "licenseBoundary": "GeoAIChat仅公开产品学习，许可未核实不复用源码；上传参考集需来源/使用权限。"
+      },
+      "rejectOrFallback": "真实供给、领域资料、六席位或服务率不足时如实延长，不阉割功能，不把缺失能力转成无限任意代码入口。"
+    }
+  ],
+  "openSourceResearchSources": [
+    {
+      "id": "S01",
+      "title": "GDAL Python Algorithms API",
+      "url": "https://gdal.org/en/stable/api/python/utilities.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "gdal.Run文档标为3.11新增；各高级元数据方法须按实际版本探测",
+      "supports": [
+        "算法registry及子算法、别名、JSON usage",
+        "参数类型、输入输出、基数、依赖及互斥元数据",
+        "算法Finalize与输出生命周期"
+      ],
+      "doesNotProve": [
+        "目录项互不重复",
+        "完整适配或科学正确",
+        "全部方法在本机可用"
+      ],
+      "licenseRef": "S02"
+    },
+    {
+      "id": "S02",
+      "title": "GDAL license",
+      "url": "https://gdal.org/en/stable/license.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "license": "核心通常MIT；部分BSD等，实际构建的驱动/依赖许可另审",
+      "supports": [
+        "不能只用核心许可证推定整个分发包许可"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "QGIS Processing standalone",
+      "url": "https://docs.qgis.org/3.44/en/docs/user_manual/processing/standalone.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "文档3.44",
+      "supports": [
+        "qgis_process列举、帮助及运行",
+        "结构化参数与JSON交换",
+        "实际provider与插件能力需检测"
+      ],
+      "doesNotProve": [
+        "Provider全部安装",
+        "插件全部可信",
+        "目录即独立核心算法数"
+      ],
+      "licenseRef": "S05"
+    },
+    {
+      "id": "S04",
+      "title": "QGIS Processing tests",
+      "url": "https://docs.qgis.org/3.44/en/docs/developers_guide/processingtesting.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "文档3.44",
+      "supports": [
+        "按algorithm声明YAML参数、输入和expected结果",
+        "几何/字段比较精度及不同输出类型验证",
+        "从历史生成测试脚手架"
+      ],
+      "doesNotProve": [
+        "从被测实现生成的expected具有独立科学正确性",
+        "家族代表测试覆盖所有操作"
+      ],
+      "licenseRef": "S05"
+    },
+    {
+      "id": "S05",
+      "title": "QGIS COPYING",
+      "url": "https://raw.githubusercontent.com/qgis/QGIS/master/COPYING",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "GPL-2.0文本；具体文件GPL版本及附加许可需随固定版本审查",
+      "boundary": "只借设计模式；复制代码或随包分发不能仅因独立进程而自动推定许可义务不存在。fixture还须逐资产核查。"
+    },
+    {
+      "id": "S06",
+      "title": "muend arcgis-mcp-bridge",
+      "url": "https://github.com/muend/arcgis-mcp-bridge",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，未固定commit",
+      "license": "README及GitHub声明Apache-2.0；许可证原文直读失败，复制前补固定文件审查",
+      "supports": [
+        "100声明式目录、10类",
+        "86单元测试使用mock ArcPy",
+        "ToolSpec和统一代理工厂",
+        "协议层不加载ArcPy、worker崩溃隔离"
+      ],
+      "doesNotProve": [
+        "100项全量真实资格",
+        "作者延迟数字可移用到本项目",
+        "测试数等于科学覆盖"
+      ],
+      "rejectedParts": [
+        "任意PYTHON3计算字段逃生通道",
+        "未经测量照搬每任务冷启动ArcPy"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "Knight60 ArcGIS-Pro-MCP",
+      "url": "https://github.com/Knight60/ArcGIS-Pro-MCP",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，未固定commit",
+      "license": "README说明v1.1起AGPL-3.0/商业双许可；旧v1.0及以前MIT不能套用于新代码",
+      "supports": [
+        "112命名MCP工具及109 in-process声明",
+        "通用GP入口约2000范围的作者声明",
+        "批调用及MCT执行模式"
+      ],
+      "doesNotProve": [
+        "约2000是冻结精确N",
+        "全目录逐项运行验收",
+        "9ms作者数字可移用于我们的端到端任务"
+      ],
+      "rejectedParts": [
+        "execute_arcpy_code任意代码回退"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "marcovgonzalezv arcgis-mcp",
+      "url": "https://github.com/marcovgonzalezv/arcgis-mcp",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，README要求Pro3.7",
+      "license": "GitHub显示MIT；本次raw许可证请求失败，复制前固定许可证文件",
+      "supports": [
+        "167 MCP工具、71 Add-In命令、2resources、2prompts声明",
+        "C# Add-In与本地Named Pipe/Python MCP结构",
+        "通用run_gp_tool入口"
+      ],
+      "doesNotProve": [
+        "167互不重复的GP核心算法",
+        "全部Pro版本兼容",
+        "有限公开检查已替代真实全量验收"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "GeoAIChat官方功能与更新",
+      "url": "https://www.geoaichat.cn/features",
+      "additionalUrls": [
+        "https://www.geoaichat.cn/changelog"
+      ],
+      "status": "FETCH_FAILED_20261002_CARRY_FORWARD_ONLY",
+      "lastVerifiedDate": "2026-10-01",
+      "license": "源码仓库/许可证未核实；不能列为可复制的开源代码资产",
+      "localSnapshot": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/07_社区对比与工期提效资料/主流项目对比正文.md",
+      "historicalSnapshotClaims": [
+        "15内建结构化GIS工具、1900+通用GP范围",
+        "0.25.1记录日期2026-09-30",
+        "0.24.0记录日期2026-09-24含Word/Excel/PPT、图层属性与完整性检查"
+      ],
+      "doesNotProve": [
+        "1900+是精确去重N",
+        "15项是15个对外MCP端点",
+        "今日功能、许可或版本已刷新"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "pygeoapi OGC API Processes",
+      "url": "https://docs.pygeoapi.io/en/stable/publishing/ogcapi-processes.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "stable文档观察0.24.0",
+      "supports": [
+        "Process插件与执行manager分离",
+        "异步job轮询需manager支持",
+        "多产物宜用引用载荷"
+      ],
+      "doesNotProve": [
+        "OGC接口提供新增科学算法",
+        "TinyDB保证跨Host恰好一次副作用"
+      ],
+      "rejectedDefaults": [
+        "示例/tmp输出",
+        "示例0.0.0.0服务暴露",
+        "直接用默认TinyDB替代现有JobStore"
+      ],
+      "licenseRef": "S11"
+    },
+    {
+      "id": "S11",
+      "title": "pygeoapi license",
+      "url": "https://raw.githubusercontent.com/geopython/pygeoapi/master/LICENSE.md",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT；实际集成另核查provider与传递依赖"
+    },
+    {
+      "id": "S12",
+      "title": "Snakemake between-workflow caching",
+      "url": "https://snakemake.readthedocs.io/en/stable/executing/caching.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "stable文档观察9.27.0",
+      "supports": [
+        "代码、参数、依赖和软件栈形成Merkle依赖指纹",
+        "缓存前提须显式声明相关参数"
+      ],
+      "doesNotProve": [
+        "所有隐式环境自动被捕获",
+        "科学正确性由哈希保证"
+      ],
+      "rejectedDefaults": [
+        "当前文档仍称experimental",
+        "共享缓存可由系统其他用户读写"
+      ],
+      "licenseRef": "S13"
+    },
+    {
+      "id": "S13",
+      "title": "Snakemake license",
+      "url": "https://snakemake.readthedocs.io/en/stable/project_info/license.html",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT"
+    },
+    {
+      "id": "S14",
+      "title": "DVC run-cache",
+      "url": "https://dvc.org/doc/user-guide/pipelines/run-cache",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "resolvedUrl": "https://doc.dvc.org/user-guide/pipelines/run-cache",
+      "supports": [
+        "stage输入、参数及执行定义决定结果复用",
+        "缓存结果与可追踪依赖关联"
+      ],
+      "doesNotProve": [
+        "CRS/字体/ICC/Host/licence等未声明环境已自动追踪",
+        "缓存可替代首次独立资格"
+      ],
+      "licenseRef": "S16"
+    },
+    {
+      "id": "S15",
+      "title": "DVC dvc.yaml",
+      "url": "https://dvc.org/doc/user-guide/project-structure/dvcyaml-files",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "resolvedUrl": "https://doc.dvc.org/user-guide/project-structure/dvcyaml-files",
+      "supports": [
+        "显式deps/params/outs",
+        "persist默认false，重跑会清理输出"
+      ],
+      "rejectedParts": [
+        "把用户GDB/PSD/aprx作为默认可清理输出",
+        "任意stage cmd成为产品执行入口"
+      ],
+      "licenseRef": "S16"
+    },
+    {
+      "id": "S16",
+      "title": "DVC license",
+      "url": "https://raw.githubusercontent.com/iterative/dvc/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "S17",
+      "title": "Temporal Activity execution",
+      "url": "https://docs.temporal.io/activity-execution",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": [
+        "工作流历史与活动执行/超时区分",
+        "活动心跳与协作取消",
+        "任务完成和外部效果不能简单等同"
+      ],
+      "doesNotProve": [
+        "超时表示外部操作没有发生",
+        "取消表示旧writer已停止"
+      ],
+      "licenseRef": "S19"
+    },
+    {
+      "id": "S18",
+      "title": "Temporal Activity definition",
+      "url": "https://docs.temporal.io/activity-definition",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": [
+        "活动重试及幂等设计要求"
+      ],
+      "doesNotProve": [
+        "无幂等键的GIS/PS写入可安全盲重试"
+      ],
+      "licenseRef": "S19"
+    },
+    {
+      "id": "S19",
+      "title": "Temporal server license",
+      "url": "https://raw.githubusercontent.com/temporalio/temporal/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT；具体SDK、部署和传递依赖需单独审查"
+    },
+    {
+      "id": "S20",
+      "title": "Prefect v3 caching",
+      "url": "https://docs.prefect.io/v3/concepts/caching",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "v3文档",
+      "supports": [
+        "缓存依赖策略、结果持久化和锁分开配置",
+        "TASK_SOURCE不包含嵌套任务代码",
+        "READ_COMMITTED可重复执行，SERIALIZABLE需适当锁"
+      ],
+      "doesNotProve": [
+        "缓存事务让GIS/PSD外部副作用具有原子性",
+        "缓存锁可以替代Host全局资源锁"
+      ],
+      "rejectedDefaults": [
+        "默认用户目录缓存会落C盘",
+        "未显式配置跨进程锁",
+        "Python/server默认引入产品"
+      ],
+      "licenseRef": "S21"
+    },
+    {
+      "id": "S21",
+      "title": "Prefect license",
+      "url": "https://raw.githubusercontent.com/PrefectHQ/prefect/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "Apache-2.0"
+    }
+  ],
+  "openSourceResearchAntiPatternsRejected": [
+    "用算法家族或工具箱抽样代替每操作正例、关键负例和独立资格",
+    "从被测实现生成expected后自动自批科学PASS",
+    "将metadata/alias/wrapper/参数组合/Office/PS/UI/模型管理计入核心算法",
+    "任意Python、SQL、JavaScript或shell作为自动适配万能逃生入口",
+    "照搬Temporal/Snakemake/Prefect/DVC运行时，未证明成本就重写现有IToolInvoker/JobStore",
+    "共享或C盘默认缓存、/tmp或用户工程自动清理输出",
+    "由timeout/lease失效/取消直接推定Host副作用未发生",
+    "把公开竞品声明及作者bench数字写成我们的复测证据",
+    "没有固定语义供给清单、精确N、真实交集和两周净率即承诺3000/60日",
+    "将未完旧范围或创新功能挪到发布后，以名义60日满足用户要求"
+  ],
+  "openSourceResearchReportRef": {
+    "path": "临时\\开源与可行性研究_20261002.json",
+    "sha256": "279D11EB15FBEFBCFEF569A93DDEAC47D998BE5106C0F504A0A7567574F44AD0",
+    "status": "RESEARCH_ONLY_NOT_PRODUCT_ACCEPTANCE"
+  },
+  "competitorPublicEvidenceSnapshot": {
+    "snapshotDate": "2026-10-02",
+    "examples": [
+      {
+        "sourceRef": "S06",
+        "mcpNamedCatalogClaim": 100,
+        "coreEndpointsClaim": 3,
+        "realWholeCatalogAccepted": null,
+        "unitMockTestsClaim": 86,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S07",
+        "mcpNamedToolClaim": 112,
+        "genericGpRangeClaim": "约2000，非精确N",
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S08",
+        "mcpNamedToolClaim": 167,
+        "addinCommandClaim": 71,
+        "resourcesClaim": 2,
+        "promptsClaim": 2,
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S09",
+        "claimDate": "2026-10-01历史快照",
+        "internalStructuredToolClaim": 15,
+        "genericGpRangeClaim": "1900+，非精确N",
+        "mcpNamedToolClaim": null,
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      }
+    ],
+    "rules": [
+      "不得相加MCP端点、内部命令、resources、prompts作为核心数量。",
+      "同一算法的别名、参数排列、输入格式、自动生成wrapper和provider重复实现不能增加跨provider语义分子。",
+      "一个通用GP入口可有很大目录范围；目录范围不证明完整参数合同、合法运行权限、真实产物或独立验收。",
+      "pygeoapi/REST/job状态等新增接口不是新增科学算法。",
+      "可学习批调用、声明式注册、上下文感知、录制、办公输出和恢复；竞争优势最终须比较相同完整任务和冻结环境。"
+    ]
+  },
+  "internalContractAliases": {
+    "ProofCapsule": "QualificationEvidenceRow / Evidence Certificate; same versioned QualificationRecord projection",
+    "EffectObservation": "NOT_APPLIED/APPLIED/PARTIAL/UNKNOWN observation only",
+    "ReconcileDecision": "NoneProven/CompletedVerified/Partial/Unknown decision; APPLIED is not automatically CompletedVerified"
+  },
+  "stableEffectKeyAuthorizationSeparate": {
+    "businessIdentity": [
+      "task",
+      "logicalAction",
+      "input",
+      "method",
+      "typedParameters",
+      "logicalTarget",
+      "effects"
+    ],
+    "executionLockIdentity": [
+      "plan",
+      "payload",
+      "policy",
+      "approval",
+      "budget",
+      "owner",
+      "fence"
+    ],
+    "newApprovalDoesNotPretendOldEffectsAbsent": true
+  },
+  "moduleProofExperimentToPF": {
+    "P01": [
+      "PF02"
+    ],
+    "P02": [
+      "PF03"
+    ],
+    "P03": [
+      "PF03"
+    ],
+    "P04": [
+      "PF04",
+      "PF07"
+    ],
+    "P05": [
+      "PF04"
+    ],
+    "P06": [
+      "PF05",
+      "PF08"
+    ]
+  },
+  "v6ReviewReports": [
+    {
+      "path": "临时\\V6_容量与工期审查_20261002.json",
+      "sha256": "8CC24F09CD570A0C16F2522D7B0F053D28B1C58EB8684EBA9FB59C1F2D6294C3",
+      "status": "PASS CANDIDATE / PLANNING ONLY / NOT A RUNTIME OR DEADLINE PROOF",
+      "evidenceLevel": "PLANNING_REVIEW_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "临时\\V6_取消与恢复审查_20261002.json",
+      "sha256": "8788C2D792E70FAD28B61C3A2570D49C74621E2F269012B9BA4EC7B7167E9E04",
+      "status": "PASS CANDIDATE / PLANNING ONLY",
+      "evidenceLevel": "PLANNING_REVIEW_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "临时\\V6_资料决策与创新审查_20261002.json",
+      "sha256": "9A19126380A1DBC3DD318BA5B0B0E073AEBBEE6DFA6841EE38B78EE9ADCD862F",
+      "status": "PASS CANDIDATE / PLANNING ONLY / NOT IMPLEMENTED",
+      "evidenceLevel": "PLANNING_REVIEW_NOT_RUNTIME_ACCEPTANCE"
+    }
+  ],
+  "v6CrossReviewResolutionRef": {
+    "path": "临时\\V6_交叉复核与修订_20261002.json",
+    "sha256": "56B819D21D17D9108EC2DEBB723D483D3BCA63C99507BB4752B0D7DB10FF7492",
+    "status": "THREE_DOMAIN_TARGETED_RECHECKS_COMPLETE_PLANNING_ONLY"
+  },
+  "v6ImplementationStatus": {
+    "allBehaviorsImplemented": false,
+    "runtimeVerified": false,
+    "marginalEngineeringCostsMeasured": false,
+    "productCodeChanges": 0,
+    "hostBuildInstallLiveRuns": 0,
+    "independentPlanningReviewOnly": true
+  },
+  "incrementalCapabilityBehaviors": [
+    {
+      "id": "V6-F01",
+      "name": "资料充分性编译",
+      "originalInnovations": [
+        "J05",
+        "J08"
+      ],
+      "existingWorkItems": [
+        "WI05",
+        "WI06",
+        "WI07",
+        "WI08",
+        "WI09",
+        "WI16",
+        "WI27"
+      ],
+      "parentContracts": [
+        "DC01",
+        "DC02",
+        "DC04"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    },
+    {
+      "id": "V6-F02",
+      "name": "有界情景比较",
+      "originalInnovations": [
+        "J08",
+        "J10"
+      ],
+      "existingWorkItems": [
+        "WI09",
+        "WI16",
+        "WI23",
+        "WI29"
+      ],
+      "parentContracts": [
+        "DC04",
+        "DC08",
+        "DC24"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    },
+    {
+      "id": "V6-F03",
+      "name": "成果变化解释",
+      "originalInnovations": [
+        "J10",
+        "J12"
+      ],
+      "existingWorkItems": [
+        "WI16",
+        "WI22",
+        "WI23",
+        "WI28"
+      ],
+      "parentContracts": [
+        "DC08",
+        "DC10",
+        "DC12"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    },
+    {
+      "id": "V6-F04",
+      "name": "可证明的停止与恢复",
+      "originalInnovations": [
+        "J10",
+        "J12"
+      ],
+      "existingWorkItems": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI19",
+        "WI22"
+      ],
+      "parentContracts": [
+        "DC05",
+        "DC06",
+        "DC07",
+        "DC10",
+        "DC24"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    },
+    {
+      "id": "V6-F05",
+      "name": "容量与资格自校正",
+      "originalInnovations": [
+        "J01",
+        "J02",
+        "J12"
+      ],
+      "existingWorkItems": [
+        "WI10",
+        "WI15",
+        "WI28",
+        "WI30"
+      ],
+      "parentContracts": [
+        "DC12",
+        "DC15",
+        "DC16"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    },
+    {
+      "id": "V6-F06",
+      "name": "可迁移交付与参考角色验证",
+      "originalInnovations": [
+        "J04",
+        "J05",
+        "J09",
+        "J11"
+      ],
+      "existingWorkItems": [
+        "WI20",
+        "WI22",
+        "WI27",
+        "WI30"
+      ],
+      "parentContracts": [
+        "DC10",
+        "DC11",
+        "DC18",
+        "DC19",
+        "DC20",
+        "DC23"
+      ],
+      "implementedOrAccepted": false,
+      "incrementalEngineeringDaysMeasured": null,
+      "independentOracleAndHostHoursMeasured": null,
+      "changesCoreAlgorithmCount": false,
+      "scopeAndQualityReduced": false
+    }
+  ],
+  "boundedServiceOptimizations": [
+    {
+      "id": "V6-O01",
+      "existingWorkItems": [
+        "WI04",
+        "WI10",
+        "WI12",
+        "WI15",
+        "WI07"
+      ],
+      "costMeasured": null,
+      "speedGainMeasured": null,
+      "qualityGatesReduced": false,
+      "newRuntimeFrameworkRequired": false
+    },
+    {
+      "id": "V6-O02",
+      "existingWorkItems": [
+        "WI15",
+        "WI24",
+        "WI26"
+      ],
+      "costMeasured": null,
+      "speedGainMeasured": null,
+      "qualityGatesReduced": false,
+      "newRuntimeFrameworkRequired": false
+    },
+    {
+      "id": "V6-O03",
+      "existingWorkItems": [
+        "WI01",
+        "WI03",
+        "WI15",
+        "WI30",
+        "WI24"
+      ],
+      "costMeasured": null,
+      "speedGainMeasured": null,
+      "qualityGatesReduced": false,
+      "newRuntimeFrameworkRequired": false
+    },
+    {
+      "id": "V6-O04",
+      "existingWorkItems": [
+        "WI10",
+        "WI15",
+        "WI25",
+        "WI28"
+      ],
+      "costMeasured": null,
+      "speedGainMeasured": null,
+      "qualityGatesReduced": false,
+      "newRuntimeFrameworkRequired": false
+    }
+  ],
+  "residualDeadlineModel": {
+    "frozenBaselineReuse": "Q0 is fixed before D15; not incremented by later acceptances",
+    "remainingDefinition": "TargetUnits_d minus AcceptedValid_d (unique sets, revocations reflected in validity)",
+    "remainingWindowDays": "42-d at end of day d; 14<=d<42",
+    "weeklyRequired": "ceil(7*cardinality(Remaining_d)/(42-d))",
+    "atOrAfterDay42WithRemaining": "QUALIFICATION_DEADLINE_MISSED; weeklyRequired=null",
+    "originalTwoWeekObservationRequirementPreserved": "each of two FULL weeks meets ceil((K_union_initial-Q0)/4), frozen difficulty distribution; ALSO residual/resource schedule check",
+    "examplesOnly": [
+      {
+        "day": 14,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 0,
+        "expectedWeeklyRequired": 750,
+        "measured": false
+      },
+      {
+        "day": 28,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 1500,
+        "expectedWeeklyRequired": 750,
+        "measured": false
+      },
+      {
+        "day": 28,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 1200,
+        "expectedWeeklyRequired": 900,
+        "measured": false
+      },
+      {
+        "day": 28,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 1400,
+        "expectedWeeklyRequired": 800,
+        "measured": false
+      },
+      {
+        "day": 35,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 2000,
+        "expectedWeeklyRequired": 1000,
+        "measured": false
+      },
+      {
+        "day": 42,
+        "targetUnits": 3000,
+        "validAcceptedUnits": 2999,
+        "expectedWeeklyRequired": null,
+        "measured": false
+      }
+    ],
+    "actualRemainingUnits": null,
+    "actualNetWeeklyCapacity": null,
+    "completeProjectForecastProven": false
+  },
+  "inverseCapacitySizing": {
+    "formula": "minimum stage hours/week = required net accepted/week * observed all-in minutes/net accepted / 60",
+    "allExampleCostsUnmeasured": true,
+    "examples": [
+      {
+        "netPerWeek": 750,
+        "reviewHours": 17.5,
+        "hostHours": 37.5,
+        "preparationHours": 25.0
+      },
+      {
+        "netPerWeek": 1275,
+        "reviewHours": 29.75,
+        "hostHours": 63.75,
+        "preparationHours": 42.5
+      }
+    ],
+    "weeklyServiceExampleAssumesNoPriorCarry": true,
+    "fourWeekNoCarryServiceUpperBound": 4284,
+    "minimumOverlapNoCarryExample": 816,
+    "fourWeekPooledReviewServiceUpperBound": 4285,
+    "minimumProvenOverlapForExample2100Plus3000Q0Zero": 815,
+    "pooledBoundDoesNotProveOriginalTwoFullWeekObservationGate": true,
+    "zeroOverlapMaximumMinutesAtOriginalBudgetsExact": {
+      "review": "20/17",
+      "host": "48/17",
+      "preparation": "32/17"
+    },
+    "C0AllOtherDutyHoursMeasured": null,
+    "E1OwnWorkPlusIntegrationCapacityMeasured": null,
+    "sharedResourcesJointlySchedulable": null,
+    "necessaryNotSufficient": true
+  },
+  "v6StopAndPublicationContract": {
+    "attemptIdentityImmutableBeforeDispatch": true,
+    "stableEffectKeyRemainsBusinessIdentity": true,
+    "stopRequestHostStopEffectReconcileDistinct": true,
+    "childReceiptsPropagated": true,
+    "diagnosticBudgetSeparateFromCancelledTokenButInsideRootBudget": true,
+    "oldWriterIsolationRequiredBeforeConflictingWrite": true,
+    "sameDurableOrderForStopAndActivation": true,
+    "journalFailureIsNotAdmissionOrNoEffectProof": true,
+    "stopImmediatelyBlocksNewBusinessDispatchBeforePersistence": true,
+    "stopJournalFailureKeepsLocalDispatchZeroAndRequestedNotDurable": true,
+    "reconcileSuccessDoesNotResumeStoppedTask": true,
+    "explicitNewResumeDecisionAndCurrentApprovalBudgetHostSettledLaneRequired": true,
+    "uncertainControlHistoryOnRestartBlocksBusinessDispatch": true,
+    "runtimeProven": false
+  },
+  "v6FactComparisonContract": {
+    "comparisonIdentity": [
+      "stableEntityMapping",
+      "metricSemantics",
+      "explicitTimeOrScenarioPairRoles"
+    ],
+    "oldNewFactKeyReferencesRetained": true,
+    "versionFactKeyEqualityRequired": false,
+    "semanticDenominatorChange": "MeaningChanged with NotComparable until an independently approved comparison rule exists",
+    "unknownNotZero": true,
+    "failedOrIncompleteScenariosRemainInFrozenDenominator": true,
+    "runtimeProven": false
+  },
+  "v7PlanningReports": [
+    {
+      "path": "临时\\V7_GP更新实现审查_20261002.json",
+      "sha256": "B0EB088ADFE91ADEEB5AD66FC8DA56A9B630FC4F844730190FC23534866D4196",
+      "status": "PASS CANDIDATE / PLANNING REVIEW",
+      "evidence": "INDEPENDENT_PLANNING_REVIEW_NOT_RUNTIME"
+    },
+    {
+      "path": "临时\\V7_学习与自动设计审查_20261002.json",
+      "sha256": "3210FF270E84C550A2E1C03AE39C4C8A8A45C5C89C9364E9F1A9088CEB974F40",
+      "status": "PLANNING_REVIEW_ONLY_NOT_IMPLEMENTED",
+      "evidence": "INDEPENDENT_PLANNING_REVIEW_NOT_RUNTIME"
+    },
+    {
+      "path": "临时\\V7_完整排程实现审查_20261002.json",
+      "sha256": "0456FB82BBE43F294A4A4E32C96DAE2E9ABF64B66E8571B2372A14F2961E2265",
+      "status": "PASS CANDIDATE / PLANNING ONLY / NO REAL DEADLINE PROOF",
+      "evidence": "INDEPENDENT_PLANNING_REVIEW_NOT_RUNTIME"
+    }
+  ],
+  "v7InternalMechanisms": [
+    {
+      "id": "V7-M01",
+      "name": "完整采集与保守diff",
+      "primaryCostWI": "WI11",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI11",
+        "WI13",
+        "WI15"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J03"
+      ],
+      "parentContracts": [
+        "DC13",
+        "DC14"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M02",
+      "name": "有限动态条件探针",
+      "primaryCostWI": "WI12",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI12",
+        "WI13",
+        "WI15"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J02"
+      ],
+      "parentContracts": [
+        "DC14",
+        "DC15"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M03",
+      "name": "持久能力包激活头",
+      "primaryCostWI": "WI30",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI01",
+        "WI03",
+        "WI14",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J12"
+      ],
+      "parentContracts": [
+        "DC06",
+        "DC16",
+        "DC24"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M04",
+      "name": "自动布局可行性证书",
+      "primaryCostWI": "WI17",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI17",
+        "WI19",
+        "WI20"
+      ],
+      "originalInnovations": [
+        "J04",
+        "J09"
+      ],
+      "parentContracts": [
+        "DC09",
+        "DC19"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M05",
+      "name": "学习收益采用",
+      "primaryCostWI": "WI27",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI23",
+        "WI27",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J06",
+        "J07",
+        "J11"
+      ],
+      "parentContracts": [
+        "DC21",
+        "DC22",
+        "DC23"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M06",
+      "name": "遗忘的派生闭包",
+      "primaryCostWI": "WI23",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI03",
+        "WI20",
+        "WI23",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J04",
+        "J05",
+        "J06",
+        "J10"
+      ],
+      "parentContracts": [
+        "DC18",
+        "DC21",
+        "DC23"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V7-M07",
+      "name": "全范围排程证书",
+      "primaryCostWI": "WI10",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI10",
+        "WI24",
+        "WI25",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J12"
+      ],
+      "parentContracts": [
+        "DC12",
+        "DC24"
+      ],
+      "incrementalEngineeringDaysMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    }
+  ],
+  "v7DynamicCoverageContract": {
+    "partialDiscoveryDoesNotConfirmRemoval": true,
+    "sameSchemaBinaryDriftDoesNotProveReuse": true,
+    "finiteProbeDoesNotProveExhaustiveDynamicDomain": true,
+    "allOriginalPerOperationQualificationRequired": true,
+    "unknownCodeNotImported": true,
+    "existingWhitelistAndErrorCodesNotChanged": true,
+    "productionAdapterCodecPolicyBoundaryRequired": true,
+    "runtimeVerified": false
+  },
+  "v7ActivationContract": {
+    "durableActivationCommittedIsAuthoritativeHead": true,
+    "headFileIsRebuildableProjection": true,
+    "expectedHeadRevocationEpochAndFenceRequired": true,
+    "twoFileAtomicTransactionNotClaimed": true,
+    "revocationEpochNeverRollsBack": true,
+    "oldEffectsNotUndoneByHeadRollback": true,
+    "runtimeVerified": false,
+    "contentDigestAuthenticatesSource": false,
+    "signatureRequiresTrustedKeysSourceExpiryAndRevocationChecks": true
+  },
+  "v7LayoutLearningContract": {
+    "requiredElementsComparedByIdentityNotCount": true,
+    "fontExistsAndBoundsDoNotProveGlyphOrNoClipping": true,
+    "creatingPSMeasurementObjectsIsWrite": true,
+    "existingRootCandidateAndPreviewLimitsPreserved": true,
+    "directPreferenceNotStatistics": true,
+    "projectHeldOutPairingForOptimization": true,
+    "failuresAndTimeoutsRemainInDenominator": true,
+    "durableDenyUseBeforeAsyncCleanup": true,
+    "allParentGrantsTracked": true,
+    "deliveredUserAssetsNotDeleted": true,
+    "externalDeletionOrWeightUnlearningNotClaimed": true,
+    "runtimeVerified": false
+  },
+  "completeScopeSchedulingContract": {
+    "requiredWI": [
+      "WI01",
+      "WI02",
+      "WI03",
+      "WI04",
+      "WI05",
+      "WI06",
+      "WI07",
+      "WI08",
+      "WI09",
+      "WI10",
+      "WI11",
+      "WI12",
+      "WI13",
+      "WI14",
+      "WI15",
+      "WI16",
+      "WI17",
+      "WI18",
+      "WI19",
+      "WI20",
+      "WI21",
+      "WI22",
+      "WI23",
+      "WI24",
+      "WI25",
+      "WI26",
+      "WI27",
+      "WI28",
+      "WI29",
+      "WI30"
+    ],
+    "requiredJ": [
+      "J01",
+      "J02",
+      "J03",
+      "J04",
+      "J05",
+      "J06",
+      "J07",
+      "J08",
+      "J09",
+      "J10",
+      "J11",
+      "J12"
+    ],
+    "requiredPF": [
+      "PF01",
+      "PF02",
+      "PF03",
+      "PF04",
+      "PF05",
+      "PF06",
+      "PF07",
+      "PF08"
+    ],
+    "requiredOriginalGateIds": [
+      "G-CLIENT",
+      "G-SUPPORT",
+      "G-GP-DISCOVERY",
+      "G-GP-ADAPTER",
+      "G-GP-EXECUTION",
+      "G-INTELLIGENCE",
+      "G-RELIABILITY",
+      "G-PS-CHANNEL",
+      "G-PS-OPERATIONS",
+      "G-DESIGN",
+      "G-SCENARIO",
+      "G-DOMAIN",
+      "G-PRODUCT",
+      "G-PRESSURE",
+      "G-HIDDEN",
+      "G-USABILITY",
+      "G-FUNCTIONAL",
+      "G-RELEASE"
+    ],
+    "allOriginalAndAdditionalGateCoverageRequired": true,
+    "actualActivityLedger": null,
+    "actualResourceCalendar": null,
+    "actualObservedCosts": null,
+    "actualCompleteScheduleWitness": null,
+    "actualProjectFeasibility": "UNKNOWN",
+    "startDate": null,
+    "timeZeroIsActualStartDateNotFoundationGate": true,
+    "scopeIncludesAllOriginalQualityAndAdditionalOriginalScope": true,
+    "C0AllDutiesAndE1OwnPlusIntegrationRequired": true,
+    "unknownNotZero": true,
+    "sameFailureCostNotDoubleCounted": true,
+    "runningAndUnreconciledHostOccupancyPinned": true,
+    "allResourcesJointlyReserved": true,
+    "boundedSearchFailureNotInfeasibilityProof": true,
+    "witnessUnderEstimatesNotCompletionGuarantee": true,
+    "statuses": [
+      "UNKNOWN",
+      "CONDITIONAL_LOWER_BOUND_MISS",
+      "HARD_DEADLINE_MISS",
+      "FEASIBLE_UNDER_DECLARED_ESTIMATES",
+      "UNKNOWN_NO_WITNESS"
+    ],
+    "actualAllGatesAcceptedCannotBeGeneratedByPlanner": true,
+    "counterexamplesNotMeasured": {
+      "lateWI30": {
+        "prerequisiteEndDay": 43,
+        "remainingDurationDays": 10,
+        "functionalEarliestDay": 53,
+        "packageDurationDays": 7,
+        "releaseEarliestDay": 60
+      },
+      "integratorReview": {
+        "integratorOwnHours": 4,
+        "packages": 5,
+        "integrationHoursEach": 2,
+        "reviewHoursEach": 1,
+        "integratorLastFinishHours": 14,
+        "reviewLastFinishHours": 15
+      }
+    }
+  },
+  "v7SourceAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Models/GpControlModels.cs",
+      "sha256": "240BA1A025BAE33A55389C9A00EC0C1AB44BAD5EEA018E92F217F8BCEAE600DB",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sha256": "5F71AFB514D6D2FB8B6A792F23CC27DBF1EBC97CFFEF7389466D14DC5646C71A",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/ArcGISProMCP.Compatibility/Services/GeoprocessingService.cs",
+      "sha256": "E52DBF741AC035CC584463A8B185EB1468C6ADB6F4C21D78D5756306E6C19BA5",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Server/Mcp/McpProtocolHandler.cs",
+      "sha256": "15553FE21A497951EB4B3C62FF4CD2EE16D34910FC1B7E67F24ADE1458A9557E",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    }
+  ],
+  "v7PrimaryRootResearch": [
+    {
+      "url": "https://theupdateframework.github.io/specification/latest/",
+      "versionObserved": "1.0.36",
+      "checkedOn": "2026-10-02",
+      "supports": "Version/snapshot consistency; not functional qualification or complete TUF compatibility",
+      "adoptionIsDesignInference": true,
+      "runtimeProof": false
+    }
+  ],
+  "v7ImplementationStatus": {
+    "productCodeChanges": 0,
+    "buildInstallHostRuns": 0,
+    "runtimeVerified": false,
+    "full60DayCapacityProven": false,
+    "newDependencyInstalled": false,
+    "internalContractsOnly": true
+  },
+  "v7CrossReviewResolutionRef": {
+    "path": "临时\\V7_正式方案交叉复核_20261002.json",
+    "sha256": "FA316CA8FFE0E7E39CCF8F70D7687D897D7041F322C0B2310BB843A013123D4D",
+    "evidence": "V7_ADDITIONS_PLANNING_REVIEW_ONLY"
+  },
+  "v8InternalMechanisms": [
+    {
+      "id": "V8-M01",
+      "name": "输入读集闭合",
+      "primaryCostWI": "WI23",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI05",
+        "WI09",
+        "WI13",
+        "WI23"
+      ],
+      "originalInnovations": [
+        "J05",
+        "J10"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V8-M02",
+      "name": "内容资格效果分离复用",
+      "primaryCostWI": "WI23",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI03",
+        "WI15",
+        "WI17",
+        "WI22",
+        "WI23",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J10",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V8-M03",
+      "name": "科学视觉贯通",
+      "primaryCostWI": "WI19",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI16",
+        "WI17",
+        "WI18",
+        "WI19",
+        "WI20",
+        "WI22"
+      ],
+      "originalInnovations": [
+        "J04",
+        "J09"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V8-M04",
+      "name": "按用途交付闭包",
+      "primaryCostWI": "WI22",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI21",
+        "WI22",
+        "WI26",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J10",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V8-M05",
+      "name": "同版缺项恢复",
+      "primaryCostWI": "WI23",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI03",
+        "WI22",
+        "WI23",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J07",
+        "J10",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V8-M06",
+      "name": "契约消费者投影",
+      "primaryCostWI": "WI04",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI04",
+        "WI15",
+        "WI28",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    }
+  ],
+  "v8PlanningReports": [
+    {
+      "path": "临时/V8_输入与复用实现研究_20261002.json",
+      "sha256": "FA7C302C7267C6B80FDECCCE302BB9BE56020DC20BC7F8D849F4701F6DE8C672",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V8_科学出图实现研究_20261002.json",
+      "sha256": "2B929ECE0201B5D55051E6366720816C4ED744F5F3F59231E4E8826D8BC0C404",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V8_交付与体验实现研究_20261002.json",
+      "sha256": "C5F7638C35B8855842275D8CB2E19E4BCD630E81F94CFB86EAF674FF114EF586",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V8_契约一致与收益研究_20261002.json",
+      "sha256": "59009EBF1E34DEF8C3056D088612B8428B70BB1F04908133290C8AD28B225A05",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    }
+  ],
+  "v8InputReuseContract": {
+    "traceDoesNotProveDependencyCompleteness": true,
+    "samePrePostDigestDoesNotProveSnapshotConsistency": true,
+    "separateSourcesDoNotProveCoordinatedBusinessTime": true,
+    "currentReadGrantBeforeCandidateContentRead": true,
+    "contentEvidenceCurrentEffectsSeparate": true,
+    "currentRecheckAndMaterializationRequired": true,
+    "unknownEffectsReconcileBeforeRetry": true,
+    "noUnknownPSDMerge": true,
+    "runtimeVerified": false
+  },
+  "v8VisualDeliveryContract": {
+    "assignAndConvertProfileDifferent": true,
+    "reducedResolutionAndWhiteAlphaNotNativeFullCoverageProof": true,
+    "quantitativeColorAndGeographyRequireIndependentOracle": true,
+    "viewEditRecomputeSeparatelyQualified": true,
+    "allOriginalOutputPromisesRetained": true,
+    "oldSourcePathsUnavailableDuringPortabilityCheck": true,
+    "unknownDynamicReferencesNotComplete": true,
+    "noMissingFileBlindRetry": true,
+    "stopResumeBarrierRequiredBeforeRecovery": true,
+    "unknownReceiptOrDispatchReconciled": true,
+    "allRequiredMembersSameRevisionBeforeActivation": true,
+    "runtimeVerified": false
+  },
+  "v8ProjectionContract": {
+    "countDerivedFromSameFrozenList": true,
+    "sameCountNotSameContract": true,
+    "allConsumersRequiredUnknownBlocks": true,
+    "historicalAndProtectedConsumersExcluded": true,
+    "payloadVariantLocked": true,
+    "oneCompositionRegistrationCenterOnly": true,
+    "liveStateSeparatelyObserved": true,
+    "runtimeVerified": false
+  },
+  "v8BenefitExample": {
+    "evidence": "SYNTHETIC_NOT_MEASURED",
+    "unit": "minutes",
+    "baselineStages": [
+      12,
+      25,
+      15,
+      8,
+      10
+    ],
+    "hitStages": [
+      6,
+      4,
+      15,
+      8,
+      10
+    ],
+    "missTotal": 80,
+    "strictBreakEvenP": "10/37",
+    "illustrativeP": "3/5",
+    "upfrontMinutes": 480,
+    "strictPositiveExpectedJobs": 40,
+    "amortizationIsExpectedValueNotSequenceGuarantee": true,
+    "sameFinalQualityCheckMinutes": 10,
+    "actualHitRate": null,
+    "actualNetBenefitMinutes": null
+  },
+  "v7ReviewedSnapshotRef": {
+    "path": "../3.0项目规划创新历史/V7_20261002_本轮深化前",
+    "scope": "Historical V7 additions only; existing V7 review does not cover current V8 additions"
+  },
+  "v8SourceAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/MCPToolRegistry.cs",
+      "sha256": "67D49013CAA9B0B2FF5DF91365C5C4566A88AEE62CFA6E251FFDEF2EE6D7E3AF",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/IMCPTool.cs",
+      "sha256": "C94C731D87D5C0391A5EB76E78D1BE48E534F42A8D35455E1A80FE11AE297DED",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Tests/UnitTests/D113DistributionGateAndConfigDamlSameSourcePolicyTests.cs",
+      "sha256": "93D64E343F2246D44D9EDDA53D61A20EB9EC172F0B100849E11019EAC5CC7DDC",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Config/client-catalog.json",
+      "sha256": "E7718CB0ACED422DA5E83CCCC2EBBBBF17E3CC49A988BAB18E238660D7662136",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../scripts/client-config.ps1",
+      "sha256": "580E770213CCE697B9F4FE0BCA7B6319D2C0D8741ADE1D532FEB5CFAD0FB90DC",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../scripts/user-workflow.ps1",
+      "sha256": "79A25CD3378E5BA88F3C738FAC6C718D5B45DB221C02513B495BFC53665054F0",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Tests/UnitTests/DocumentationPolicyTests.cs",
+      "sha256": "4264E12413FDDCD8F25C339716281DAA1A397EEBA86DE0B7E68E5F19D886BF41",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    }
+  ],
+  "v8ImplementationStatus": {
+    "productCodeChanges": 0,
+    "buildInstallHostRuns": 0,
+    "runtimeVerified": false,
+    "full60DayCapacityProven": false,
+    "newDependencyInstalled": false,
+    "internalContractsOnly": true
+  },
+  "v8CrossReviewResolutionRef": {
+    "path": "临时\\V8_正式方案交叉复核_20261002.json",
+    "sha256": "69D3C275DF38361E750C01BEB535736B22A71554E559F4D11FF5772AC9EB3AA3",
+    "evidence": "V8_ADDITIONS_PLANNING_REVIEW_ONLY"
+  },
+  "v9InternalMechanisms": [
+    {
+      "id": "V9-M01",
+      "name": "完整依赖失效",
+      "primaryCostWI": "WI15",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI01",
+        "WI03",
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI15",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J02"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V9-M02",
+      "name": "当前资格集合",
+      "primaryCostWI": "WI15",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI10",
+        "WI15",
+        "WI24",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J02"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V9-M03",
+      "name": "联合资源准入",
+      "primaryCostWI": "WI10",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI01",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI13",
+        "WI19",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V9-M04",
+      "name": "有限公平排队",
+      "primaryCostWI": "WI10",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI10",
+        "WI13",
+        "WI19"
+      ],
+      "originalInnovations": [
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V9-M05",
+      "name": "合同工作包",
+      "primaryCostWI": "WI04",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI04",
+        "WI10",
+        "WI12",
+        "WI16",
+        "WI19",
+        "WI22",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V9-M06",
+      "name": "有界候选接力",
+      "primaryCostWI": "WI10",
+      "primaryOwner": "E1",
+      "existingWorkItems": [
+        "WI01",
+        "WI04",
+        "WI10",
+        "WI15",
+        "WI30"
+      ],
+      "originalInnovations": [
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    }
+  ],
+  "v9PlanningReports": [
+    {
+      "path": "临时/V9_资格持续更新实现研究_20261002.json",
+      "sha256": "8771505ABA3ACFD5D50E45BF375C987E0030698E8CF7A67C7115BA009A6328D6",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V9_运行资源准入实现研究_20261002.json",
+      "sha256": "46FC16D01B8CDA19BBA3968EEFBEFF8E08D1A555F538CDB67C114A98CC051B17",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V9_五线接力实现研究_20261002.json",
+      "sha256": "BEA2DC94D4ACFC288C6C1129AA404D03705EF56DEA1C012D695792DE73AE5191",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V9_根证据与交接研究_20261002.json",
+      "sha256": "9D42B2D13C97ECD4A39175899CA1B29E0E02725918E57DAEE61DAE3905306F31",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    }
+  ],
+  "v9QualificationContract": {
+    "completeUniverseAndForwardWatermarkRequired": true,
+    "reverseMirrorNotAdapterDependencyCompletenessProof": true,
+    "unknownImpactConservativelyDeniesBoundary": true,
+    "closureBudgetExhaustionNeverNoImpact": true,
+    "sameSchemaBinaryDriftRequiresRealRequalification": true,
+    "oracleOnlyRecheckNeedsCompleteImmutableOriginalCasesAndEffects": true,
+    "requiredDomainSubsetOfAvailableNotMerelyNonempty": true,
+    "historicalGoalValidAndCurrentExecutableSeparate": true,
+    "countsFromSameWatermarkNamedMembers": true,
+    "restorationNotNewUniqueCount": true,
+    "currentDispatchControlRechecked": true,
+    "inFlightRevocationDoesNotUndoEffects": true,
+    "runtimeVerified": false
+  },
+  "v9AdmissionContract": {
+    "allOrNoneJointResourceAndRootBudgetCommit": true,
+    "singleVerifiedAuthorityWriterInitialBoundary": true,
+    "multipleJobFileFlushesNotAtomicCommit": true,
+    "resourceBudgetLedgerNotOSPhysicalIsolation": true,
+    "intentAndHostDispatchBoundariesSeparate": true,
+    "adapterRechecksAfterMCTOrModalWait": true,
+    "authorityHostOccupancyEffectsAndCostAxesSeparate": true,
+    "authorityExpiryDoesNotReleaseUnknownHost": true,
+    "settledHostMayReleaseLaneWhileEffectsRemainQuarantined": true,
+    "retainedFilesRemainStorageAllocations": true,
+    "unknownBillNotCancellationRefund": true,
+    "oversizeDoesNotBlockFeasibleHeadForever": true,
+    "boundedBypassAndAgeDrainBarrier": true,
+    "fairnessNotHardWaitOrDeadlineGuarantee": true,
+    "chunkingNeedsScientificEquivalence": true,
+    "elapsedRunIdentityNotHostTerminationProof": true,
+    "runtimeVerified": false
+  },
+  "v9DevelopmentHandoffContract": {
+    "consumerProviderContractEnvironmentVersionTuple": true,
+    "structuralAndScientificSemanticDiffRequired": true,
+    "contextSummaryNotAuthoritativeFullReadReplacement": true,
+    "noHiddenOracleOrSecretsInExecutorPacket": true,
+    "fixedBaseOrderedCandidatesActualResultIdentity": true,
+    "binarySharedDriftRebuildsAndRequalifiesAffectedClosure": true,
+    "unknownClosureConservativeCompleteBoundary": true,
+    "C0FrozenArtifactNotMutated": true,
+    "workReadyNotProductPermission": true,
+    "singleActiveAndDispatcherAcceptanceRetained": true,
+    "currentFourSlotsNotSixSeats": true,
+    "integrationAndReviewOwnCostsRetained": true,
+    "runtimeVerified": false
+  },
+  "v9QueueDesign": {
+    "evidence": "INITIAL_DESIGN_NOT_MEASURED_OPTIMUM",
+    "activeCandidatesPerExecutor": 1,
+    "frozenReviewCandidatesPerExecutor": 1,
+    "actualQueueCapacity": null,
+    "actualAgeThreshold": null,
+    "actualMaxBypass": null,
+    "actualResourceProfiles": null,
+    "actualBenefitOrWaitBound": null
+  },
+  "v9FlowExample": {
+    "unit": "minutes",
+    "candidatePackets": 5,
+    "arrivalMinute": 0,
+    "integrateMinutesEach": 20,
+    "independentReviewMinutesEach": 10,
+    "E1LastFinish": 100,
+    "C0LastFinish": 110,
+    "interpretation": "Fictional all-ready packets, sequential E1 and pipelined C0, no task-own costs/Host/repair included; not a deadline guarantee"
+  },
+  "v8ReviewedSnapshotRef": {
+    "path": "../3.0项目规划创新历史/V8_20261002_本轮深化前",
+    "scope": "Historical V8 additions only; not review of V9 document bytes"
+  },
+  "v9SourceAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/ActiveRequestRegistry.cs",
+      "sha256": "1006F5518ACC106D01A41140135930BA9EF8065AEC2996AE88F8148A789F973A",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Jobs/JobManifest.cs",
+      "sha256": "188B460661B0576C3BCD9ECF65CB7286C65BFC2467FB6AD389B13E7171CCB5FC",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    }
+  ],
+  "v9ImplementationStatus": {
+    "productCodeChanges": 0,
+    "buildInstallHostRuns": 0,
+    "actualProductDispatches": 0,
+    "runtimeVerified": false,
+    "full60DayCapacityProven": false,
+    "actualCapacity": null,
+    "actualIncrementalCost": null,
+    "newDependencyInstalled": false,
+    "internalContractsOnly": true
+  },
+  "v9CrossReviewResolutionRef": {
+    "path": "临时\\V9_正式方案交叉复核_20261002.json",
+    "sha256": "F86F38A58226BD746333A0EA493B85953CB631640D83933787D19150A7E1CC4C",
+    "evidence": "V9_ADDITIONS_PLANNING_REVIEW_ONLY"
+  },
+  "v10InternalMechanisms": [
+    {
+      "id": "V10-M01",
+      "name": "事实粒度与连接基数",
+      "primaryCostWI": "WI16",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI05",
+        "WI06",
+        "WI08",
+        "WI16",
+        "WI24",
+        "WI25",
+        "WI26"
+      ],
+      "originalInnovations": [
+        "J05",
+        "J11"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V10-M02",
+      "name": "科学支持域检查",
+      "primaryCostWI": "WI15",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI08",
+        "WI13",
+        "WI15",
+        "WI16",
+        "WI25"
+      ],
+      "originalInnovations": [
+        "J02",
+        "J03"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V10-M03",
+      "name": "上下文偏好解析",
+      "primaryCostWI": "WI17",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI17",
+        "WI23",
+        "WI27",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J06",
+        "J09"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V10-M04",
+      "name": "批量参考角色选择",
+      "primaryCostWI": "WI17",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI17",
+        "WI20",
+        "WI23",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J04",
+        "J09"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V10-M05",
+      "name": "参数合同一致性",
+      "primaryCostWI": "WI12",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI09",
+        "WI12",
+        "WI14",
+        "WI15",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J01",
+        "J02",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V10-M06",
+      "name": "保真反例定位",
+      "primaryCostWI": "WI15",
+      "primaryOwner": "E2",
+      "existingWorkItems": [
+        "WI03",
+        "WI15",
+        "WI16",
+        "WI17",
+        "WI24",
+        "WI25",
+        "WI26",
+        "WI27"
+      ],
+      "originalInnovations": [
+        "J02",
+        "J07"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    }
+  ],
+  "v10PlanningReports": [
+    {
+      "path": "临时/V10_数据语义实现研究_20261002.json",
+      "sha256": "A0C89C70A5A53689FFA33ED833A6FFBE8F915D761AB65046433379879C13EFA5",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V10_学习与体验实现研究_20261002.json",
+      "sha256": "A6FC4CF3DCE1013AE62B0ABF45A6B85BAE0F7A07CDE7DEABB82ACC9B6BAB1E27",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V10_质量与提速实现研究_20261002.json",
+      "sha256": "4A4C243D25729CD2E787299D6520394822CBBAC70707A5FFA0C106F200DB3A45",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V10_根合同与可行性研究_20261002.json",
+      "sha256": "512B7D963FCE1218A67831985918ADC2AC2751C374629906B137DF2062EE4E3D",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    }
+  ],
+  "v10ScientificGrainContract": {
+    "entityGrainAndJoinRowGrainSeparate": true,
+    "fullDomainRequiredSamplingNotUniquenessProof": true,
+    "typedCompositeKeysNotDisplayStrings": true,
+    "distinctValuesNotDistinctEntities": true,
+    "nonAdditiveMeasuresAndDenominatorsExplicit": true,
+    "expectedEligibleSupportIndependentOfObservedOutput": true,
+    "NoDataMissingAndZeroSeparate": true,
+    "numericCategoricalAndEffectsOraclesSeparate": true,
+    "toleranceAndGridVersionFrozenBeforeResults": true,
+    "providerAgreementNotIndependentScientificTruth": true,
+    "runtimeVerified": false,
+    "nullKeyAndNormalizationPolicyExplicit": true,
+    "weightedValuesAndWeightsShareEligibleSupport": true,
+    "finiteNonnegativeWeightsAndPositiveDenominatorRequired": true,
+    "ratioOfSumsCompatibleDisjointPartitionRequired": true,
+    "axisOrderActualGridAndPerStatisticFormulaExplicit": true,
+    "numericToleranceFiniteAndTypedNonfinitePolicyExplicit": true
+  },
+  "v10LearningResolutionContract": {
+    "originalJ06E3AndWI28E5OwnershipRetained": true,
+    "WI17OnlyCurrentDesignAdoptionCost": true,
+    "sameTierConflictNotLastWriteWins": true,
+    "supersedesExplicitSameOwnerKeyScopeAcyclic": true,
+    "taskOnlyOverrideNotLongTermProfileWrite": true,
+    "optionalUnknownSkippedRequiredUnknownWaits": true,
+    "legalReadUseBeforeHashOCRIndexOrCloudContext": true,
+    "sameBytesNotSameGrant": true,
+    "exactDerivedAndPotentialNearSeparate": true,
+    "duplicateCopiesNotIndependentEvidenceVotes": true,
+    "roleCoverageNotTransferOrScientificCompletion": true,
+    "fullContractTemplateCannotDropExplicitStyle": true,
+    "knownSourceGroupsHoldoutUnknownLeakageDisclosed": true,
+    "runtimeVerified": false
+  },
+  "v10ParityAndCounterexampleContract": {
+    "dialectVocabularyValidatorOptionsLocked": true,
+    "missingNullDefaultsAndUnknownFieldsSeparate": true,
+    "approvedNormalizationExplicitNotSilentCoercion": true,
+    "currentLegacyErrorCodesAndPriorityPreserved": true,
+    "staticParityNotDynamicHostOrScienceApproval": true,
+    "independentExpectedRuleTableNotGeneratorSelfOracle": true,
+    "allMandatoryOriginalCasesAndFinalGatesRetained": true,
+    "tWayExtraPublicDevelopmentOnly": true,
+    "pairwiseNotHigherOrderProof": true,
+    "oracleCorrectControlsFrozenMutationsAndMissesRetained": true,
+    "parserCrashNotScientificDetection": true,
+    "shrinkSameFailureAndScientificPremisesRequired": true,
+    "unknownEffectsReconcileBeforeShrinkRerun": true,
+    "originalCaseExplicitWitnessNotSeedOnly": true,
+    "localSmallerNotGlobalMinimumOrProvenCause": true,
+    "runtimeVerified": false
+  },
+  "v9ReviewedSnapshotRef": {
+    "path": "../3.0项目规划创新历史/V9_20261002_本轮深化前",
+    "scope": "Historical V9 additions only; not current V10 review"
+  },
+  "v10SourceAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Tools/ToolArgumentValidator.cs",
+      "sha256": "CA84D167B3AA69375343217A955487F3DF34FFB7A4B4D3AFF428F4A0E0E846BD",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/ArcGISProMCP.Compatibility/Services/AttributeService.cs",
+      "sha256": "AD9B1D36946055B8A74F3712064D7FBE323AE688096381B4CEA3B0FDD5160192",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Tools/AggregateStatisticsTools.cs",
+      "sha256": "FFF0FD7CB85D5D456F4257CF949C019DF90EA5C384130DD2780B51DD04949108",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    }
+  ],
+  "v10ImplementationStatus": {
+    "productCodeChanges": 0,
+    "buildInstallHostRuns": 0,
+    "actualProductDispatches": 0,
+    "runtimeVerified": false,
+    "full60DayCapacityProven": false,
+    "actualCapacity": null,
+    "actualIncrementalCost": null,
+    "actualNetBenefit": null,
+    "newDependencyInstalled": false,
+    "newRuntimeServiceRequired": false
+  },
+  "v10CrossReviewResolutionRef": {
+    "path": "临时\\V10_正式方案交叉复核_20261002.json",
+    "sha256": "134AFAECAB4BA0D3011D5C561F8C97181E81693C3D670769212574ABB2BA8F76",
+    "evidence": "V10_ADDITIONS_PLANNING_REVIEW_ONLY"
+  },
+  "v11InternalMechanisms": [
+    {
+      "id": "V11-M01",
+      "name": "任务资料适用性",
+      "primaryCostWI": "WI07",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI05",
+        "WI06",
+        "WI07",
+        "WI08",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J05",
+        "J08"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V11-M02",
+      "name": "有证据的资料补缺",
+      "primaryCostWI": "WI23",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI07",
+        "WI09",
+        "WI22",
+        "WI23",
+        "WI28",
+        "WI29"
+      ],
+      "originalInnovations": [
+        "J08",
+        "J10"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V11-M03",
+      "name": "方法可比与替代分轴",
+      "primaryCostWI": "WI08",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI08",
+        "WI11",
+        "WI14",
+        "WI16",
+        "WI29"
+      ],
+      "originalInnovations": [
+        "J03",
+        "J08"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V11-M04",
+      "name": "有界结论稳健性",
+      "primaryCostWI": "WI16",
+      "primaryOwner": "E3",
+      "existingWorkItems": [
+        "WI08",
+        "WI09",
+        "WI16",
+        "WI17",
+        "WI29"
+      ],
+      "originalInnovations": [
+        "J08",
+        "J09"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V11-M05",
+      "name": "语义展示见证",
+      "primaryCostWI": "WI21",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI16",
+        "WI17",
+        "WI20",
+        "WI21",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J09",
+        "J10"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    },
+    {
+      "id": "V11-M06",
+      "name": "可访问媒介投影",
+      "primaryCostWI": "WI17",
+      "primaryOwner": "E4",
+      "existingWorkItems": [
+        "WI17",
+        "WI20",
+        "WI21",
+        "WI28"
+      ],
+      "originalInnovations": [
+        "J04",
+        "J09",
+        "J12"
+      ],
+      "engineeringHoursMeasured": null,
+      "hostOracleReviewHoursMeasured": null,
+      "implementedOrAccepted": false,
+      "changesCoreAlgorithmCount": false,
+      "reducesScopeOrQuality": false,
+      "newRuntimeServiceRequiredByDefault": false
+    }
+  ],
+  "v11PlanningReports": [
+    {
+      "path": "临时/V11_数据发现与补缺实现研究_20261002.json",
+      "sha256": "7BC5FB596C45A9458C3B04186C9E9CA00B2A10CF2326E92341BFF1FD245DDE04",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V11_方法与敏感性实现研究_20261002.json",
+      "sha256": "58EFEDA3A68E28420D711FCA2E1FCCFBD8B9BEDE3B60FDF26628A06C55FD700F",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V11_多媒介与可访问实现研究_20261002.json",
+      "sha256": "C143B3737E509896E19AB0497E19C6C980AA6051BAD7447ECE24A0C771B8C79E",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    },
+    {
+      "path": "临时/V11_根合同与工期研究_20261002.json",
+      "sha256": "24EBC9D1C976B8DFF2D0640FE264FF9913E1A4B61E2E96CCC4430427A6E6ACC4",
+      "evidence": "PRIMARY_SOURCE_AND_DESIGN_RESEARCH_NOT_RUNTIME"
+    }
+  ],
+  "v11DataMethodMediaContract": {
+    "accessibleRedundantEncodingPreservesScientificFacts": true,
+    "actualTextGlyphVisualAndReadingChecksSeparate": true,
+    "adoptionViaOriginalInvokerAndReadback": true,
+    "affineTwoWeightDomainHardGatesAndScientificCoefficientsExplicit": true,
+    "assetOverrideAndUnknownExtensionExplicit": true,
+    "candidateCriterionAxisAndProvenNotApplicableExplicit": true,
+    "comparabilitySubstitutionScienceSeparate": true,
+    "completeEvaluationPopulationAndTimeUnitsRequired": true,
+    "completeUniqueReadingNodesAndScientificDrawingOrderPreserved": true,
+    "diagnosticStudyDoesNotChangeSameMethodScenarioContract": true,
+    "fixedTransformsAndDirectionsBeforeSensitivity": true,
+    "gapBoundToOriginalNeedAndCurrentRevision": true,
+    "measuredFullIncrementalCostsAndBenefitStillUnknown": true,
+    "newNeedCannotEraseResidualGap": true,
+    "normalizationAnchorsFrozenNoRefitClipOrImplicitFill": true,
+    "originalAllScopeOwnersGatesAndBudgetRetained": true,
+    "partialQueryNotNoAvailableDatasetProof": true,
+    "perMediaVersionAndMemberCapabilitiesRequired": true,
+    "planningCompilationUsesDeterministicOrdering": true,
+    "qualifiedAnalyticDomainNotFiniteSamplingOrProbability": true,
+    "quantityKindTransformOrderAndNearZeroLossDecisionExplicit": true,
+    "queryMatchNotActualSupport": true,
+    "ratioPercentPercentagePointAndCultureExplicit": true,
+    "sameFileRequirementCannotSilentlySplit": true,
+    "tiesFailedUnknownAndAllOriginalCasesRetained": true,
+    "tokensBoundToFactCellAndApprovedTerm": true,
+    "runtimeVerified": false
+  },
+  "v10ReviewedSnapshotRef": {
+    "path": "../3.0项目规划创新历史/V10_20261002_本轮深化前",
+    "scope": "Historical V10 additions only; not current V11 review"
+  },
+  "v11SourceAnchors": [
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Services/StatusPresentation.cs",
+      "sha256": "0C9497E8D02B32599CFFDA949B19BA21D7DAC3EC1A94F0E198648A85E179A240",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/Shared/ArcGISProMCP.Core/Services/StatusPresenter.cs",
+      "sha256": "79399E222A5F498A7C3FF28106D126A0F1D4E59BA4B417A4E93574C1540CBCCB",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    },
+    {
+      "path": "../../Source/ArcGISProMCP.Compatibility/Services/D088QualityService.cs",
+      "sha256": "8F8ABECB7F9FD4122CB5B538199088775228881CCF2C4C09401FD081CEFCD8DA",
+      "evidence": "SOURCE_VERIFIED_NOT_RUNTIME"
+    }
+  ],
+  "v11ImplementationStatus": {
+    "productCodeChanges": 0,
+    "buildInstallHostRuns": 0,
+    "actualProductDispatches": 0,
+    "runtimeVerified": false,
+    "full60DayCapacityProven": false,
+    "actualCapacity": null,
+    "actualIncrementalCost": null,
+    "actualNetBenefit": null,
+    "newDependencyInstalled": false,
+    "newRuntimeServiceRequired": false
+  },
+  "v11CrossReviewResolutionRef": {
+    "path": "临时\\V11_正式方案交叉复核_20261002.json",
+    "sha256": "72A73AE3E29347AA71A375DDA2AA8B67823A52FBB8978C3A19390DC75AE07BD5",
+    "evidence": "V11_ADDITIONS_PLANNING_REVIEW_ONLY"
+  }
+}

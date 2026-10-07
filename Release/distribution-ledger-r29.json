@@ -1,0 +1,190 @@
+{
+ "schema": "arcgis-pro-mcp-one-click-distribution-ledger-v1",
+ "ticket": "D-143",
+ "deploymentVersion": "one-click-1.0.2-r29",
+ "releaseVersion": "1.0.2",
+ "canonicalProductionToolCount": 239,
+ "submittedAtLocal": "2026-10-07T08:37:28",
+ "submissionStatus": "PASS CANDIDATE",
+ "supersedes": {
+  "revision": "one-click-1.0.2-r28",
+  "ticket": "D-134",
+  "reason": "r29 换代（种子路・D-142 三面一致性已验证后搬运发布）・非缺陷返工"
+ },
+ "authorizedBy": {
+  "generationChange": "工单 D-143（G-335 派・§312）明文授权落 `Release/` 三件＋发布记录＋第九载体",
+  "dispatch": "DISPATCH_LOG §312",
+  "writeDomain": "`Release/` 新增（zip／侧车／台账／发布记录／载体八件）＋仓库 `README.md`／`AGENTS.md`／`NOTICE.md` 代际归位"
+ },
+ "seedProvenance": {
+  "seed": "run-20261007-d142/f2-seedr29/out/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip",
+  "seedBytes": 2277900,
+  "seedSha256": "6690575E370068CE1F15BFA368003B097B3550F3645580611754AAA285080E47",
+  "historicalStagingReused": false,
+  "memberStreamsByteFaithful": 26,
+  "regenerated": false,
+  "gateOnSeed": {
+   "script": "run-20261007-d142/f3-triface/triface-gate-d142.py",
+   "sha256": "653D70CFC1138A2E707BBF24A8A899D1D2C8AA56480BC665B12CEA427F3F8B35",
+   "rc": 0,
+   "verdict": "TRIFACE-OK"
+  }
+ },
+ "zip": {
+  "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip",
+  "bytes": 2278077,
+  "sha256": "099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE",
+  "entries": 26,
+  "entryOrderIdenticalToR28": true,
+  "deploymentVersion": "one-click-1.0.2-r29",
+  "memberStreamsRecomposedHere": false
+ },
+ "changedMembersFromR28": [
+  {
+   "path": "bundle-manifest.json",
+   "r28": [
+    8127,
+    "F818484E2EF9AC8C"
+   ],
+   "r29": [
+    8127,
+    "75435A8621A04E99"
+   ]
+  },
+  {
+   "path": "scripts/verify-one-click-package.ps1",
+   "r28": [
+    12936,
+    "2898522E97F174D4"
+   ],
+   "r29": [
+    14053,
+    "A8C26CFA4E4B0790"
+   ]
+  }
+ ],
+ "unchangedMemberCount": 24,
+ "payloadInvariant": {
+  "net8": [
+   1103697,
+   "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+  ],
+  "equalsActiveInstallFace": true,
+  "installFaceBytes": 1103697,
+  "installFaceSha": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+  "net6": [
+   1107215,
+   "ADBF848C4ABC1BCB"
+  ]
+ },
+ "manifestFilesListed": 25,
+ "files": [
+  {
+   "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip",
+   "bytes": 2278077,
+   "sha256": "099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE"
+  },
+  {
+   "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip.sha256",
+   "bytes": 116,
+   "sha256": "C55BE8D71C8332C1DA7F99910407A33F5D8864A90BD01AE2DCC5DE643A1A486C"
+  }
+ ],
+ "manifestSidecarStatus": {
+  "written": false,
+  "reason": "★工单 §312 范围①授权**三件**（zip／`.sha256`／ledger）・未含外层 `.zip.manifest.json` ⇒ 本席不自行变通",
+  "consequence": "构建器 L157 自动参照选取扫描 `Release/*.zip.manifest.json` ⇒ 缺 r29 侧车时・下一换代的自动参照仍落 r28（与 D-141 修复意图相反）",
+  "bytesAvailableInRunRoot": 8127,
+  "sha256InRunRoot": "75435A8621A04E9954FF6D9FBC44C0DB54F34B394123F52149BE8BBD05A20A97",
+  "disposition": "已在 h-receipt-d143.md §3 登记请裁（甲追加授权／乙接受缺口并登记运维约束）"
+ },
+ "carrier": {
+  "path": "Release/发送给同事-r29",
+  "fileCount": 8,
+  "files": [
+   {
+    "path": "Release/发送给同事-r29/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip",
+    "bytes": 2278077,
+    "sha256": "099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE"
+   },
+   {
+    "path": "Release/发送给同事-r29/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip.sha256",
+    "bytes": 117,
+    "sha256": "172F93BBA7187DCDF770C7D42D4FDD097136FE3435C0AE21F3718FC87FB5703E"
+   },
+   {
+    "path": "Release/发送给同事-r29/NOTICE.md",
+    "bytes": 7059,
+    "sha256": "D6EF4DA367E20ACCD91882CBBE45ED2883BE81E5DD54FD9A969C43BC9D224B20"
+   },
+   {
+    "path": "Release/发送给同事-r29/README.md",
+    "bytes": 6346,
+    "sha256": "945A3F942D0DE895D7EDD6D77129A3D74B4D25767A4E81C51C1F905C2B19F9DF"
+   },
+   {
+    "path": "Release/发送给同事-r29/教程-net6-使用教程.md",
+    "bytes": 30631,
+    "sha256": "2F985315828584235413E25FDF5B5ADAF543516B35594D1A4EA9CD39153C2308"
+   },
+   {
+    "path": "Release/发送给同事-r29/教程-net6-安装教程.md",
+    "bytes": 2975,
+    "sha256": "C7A64EFA5EBF960C5A532272C871E8CFB7F57942BCFBA9395C4E69455AD08161"
+   },
+   {
+    "path": "Release/发送给同事-r29/教程-net8-使用教程.md",
+    "bytes": 30655,
+    "sha256": "5AB61955CD5BCD99BBE8297102A6B5F49183B521E98CE87C7B9DDAF2279E9A51"
+   },
+   {
+    "path": "Release/发送给同事-r29/教程-net8-安装教程.md",
+    "bytes": 3017,
+    "sha256": "8323D86DB3C04F5F8B77AF3CF6FAAC505AA45E2059071836E509B8C23D5DE586"
+   }
+  ],
+  "zipEqualsRootZip": true,
+  "sidecarForm": "CRLF 117 B（≡ r28 载体侧车体例）"
+ },
+ "authenticode": {
+  "r29ReSigned": false,
+  "status": "UnknownError",
+  "thumbprint": "4E4ED6CBD52F7D9F73CEFC1462E78BEB380590C0",
+  "note": "r29 **未重新签名**：包内 `one-click-setup.ps1` 字节与签名块自 r28 原样搬运（种子路禁重新装配）"
+ },
+ "reproGuardFace": {
+  "whitelistEntries": 3,
+  "noticeEntryStatus": "★r29 仓库 NOTICE 归位后・包内副本仍为 r28 文本 ⇒ 该件回到**白名单内**分叉（非未解释）",
+  "stillNeededEntries": [
+   "scripts/one-click-setup.ps1（签名块）",
+   "README-START-HERE.md（发布环节头段）",
+   "NOTICE.md（包内文档代际位挂账）"
+  ],
+  "resolvedByD142": [
+   "scripts/verify-one-click-package.ps1（包内 ≡ 仓库 14,053／`A8C26CFA…`＝R-G331-P1 成因消灭）"
+  ],
+  "repoLagRegistered": [
+   "包内 `NOTICE.md`／`Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md` 仍标 r28（G8 明文禁改・R-G312-P1 待派）"
+  ]
+ },
+ "notVerified": [
+  "真机四场景 NOT EXECUTED",
+  "干净机验收 NOT VERIFIED",
+  "真实客户端连接 NOT VERIFIED",
+  "操作系统信任链未建立（G-299 R-3 维持）",
+  "包内 PowerShell 的真实宿主 Preflight 兼容性路径验证＝本单工单未列项・NOT EXECUTED"
+ ],
+ "payloadMemberCountTotal": 86,
+ "payloadInnerEntries": {
+  "net8": 43,
+  "net6": 43,
+  "net8EqualsActiveInstallInner": true
+ },
+ "bundleManifestInside": {
+  "bytes": 8127,
+  "sha256": "DA35E2B626A16CB52F1D1433685D7974F638A4EA1FF2DFF746829E9A1D118D91",
+  "deploymentVersion": "one-click-1.0.2-r29",
+  "filesListed": 25,
+  "selfExcluded": true
+ }
+}

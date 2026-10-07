@@ -1,0 +1,801 @@
+{
+  "kind": "ACTUAL_INDIVIDUAL_PAGE_VISUAL_REVIEW",
+  "reviewer": "root",
+  "date": "2026-10-03",
+  "documentRevision": "FINAL-20261003-INPLACE-03",
+  "docxSha256": "6E71E38DAAAA69DF89893BF366DB4106A5DF8E23AA2ECDE076E4667BDA104259",
+  "pdfSha256": "519F19C91DF13A04268750C1190D75B695A6E0BFD3BBD95EBFB1BED674744D58",
+  "viewedPages": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "pageImages": [
+    {
+      "page": 41,
+      "sha256": "0FAD38165E3D0D34F87C55F6996B745E9F6F34D2E23FA26D4FE1110FC793DBF9",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png"
+    },
+    {
+      "page": 42,
+      "sha256": "B57783600FEA099C28DDAA29F591CB147B137E5D6CA2184133BF02FFE3A0E421",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png"
+    },
+    {
+      "page": 43,
+      "sha256": "D5C3C3C53101CFA1829D300C1E32C59655A4C1803370FB643E8EC660C52F5126",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png"
+    },
+    {
+      "page": 44,
+      "sha256": "40570663F91D8D40813F747C7F8003743CAA4CE7924CE619D80D8980302196D7",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png"
+    },
+    {
+      "page": 45,
+      "sha256": "B9DE3811408F800E0DD60CDF741BEB8D058655B5C4A3ED181D6CD47E562EF67A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png"
+    },
+    {
+      "page": 46,
+      "sha256": "896984F2598CE35069095EA2FF4CBA7B7E934F42B3F7F785163A007B8F4A40B6",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png"
+    },
+    {
+      "page": 47,
+      "sha256": "7DA26FD6284BD0FBE93FEBAAA87511DBBA7F7356F39EF2C5D480CFE03419E5BF",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png"
+    },
+    {
+      "page": 48,
+      "sha256": "CFD2B2A632B3862B878D778CA3F7789E79C5C4F9D456ED170AED0BB556C1C2A0",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png"
+    },
+    {
+      "page": 49,
+      "sha256": "3AD0A30619A947D5D127DBF893BD490D588A9DBBDD5FC337A7C743533D196FEC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png"
+    },
+    {
+      "page": 50,
+      "sha256": "E9FEA00FB2A46CEAF7836B369D2B64B06E6BF7CD4DA9165BAE737C8C1C20CF0C",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png"
+    }
+  ],
+  "blockingDefects": [],
+  "status": "VISUALLY_REVIEWED_NO_BLOCKING_LAYOUT_DEFECTS",
+  "reviewMethod": "Each listed current-render PNG was opened and inspected individually; native Word PDF export and Poppler 144 dpi rasterization.",
+  "productAcceptance": "NOT_RUN",
+  "previousReviewSnapshot": {
+    "kind": "WORD_FINAL_VISUAL_REVIEW",
+    "inspector": "/root/update_adoption_audit",
+    "date": "2026-10-03",
+    "status": "CONTENT_LAYOUT_REVIEW_COMPLETE",
+    "docxPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+    "docxSha256": "8BD0C9D6921B8F0E2400425888E223DDCBBEBC964F83DA7D59A90B1C3DF44311",
+    "pdfPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+    "pdfSha256": "CD80ABD8DBB1F398F133C19131201F1D716323C1D1322C1A8D568248D0AB57F0",
+    "finalPageCount": 53,
+    "sourceFingerprintPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+    "sourceFingerprintSha256": "89739FEB27F2593042B1406E45E68C1412903C01B8D71BD9F6B301B80D403F60",
+    "method": "Individually viewed every assigned page41-53 using tools.view_image with original detail against this 53-page render; hashes read back after inspection. No unchanged-image reuse in this report.",
+    "viewedPages": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "reviewCoveredPages": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "pagesActuallyViewed": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "newlyViewedPages": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "reusedIdenticalImagePages": [],
+    "pageImages": [
+      {
+        "page": 41,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png",
+        "sha256": "1748E15745FF91CB6379D509B438FB8505D0EE342FF3793986BCF9975689C751",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page41: M19/M20 and start of learning/update implementation section have readable full text and attached headings; footer is clear."
+      },
+      {
+        "page": 42,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png",
+        "sha256": "3DDCFB16D869BEE37EC7B3B85AE0BECC2AF556A23357014642AADEFE266C848F",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page42: learning and data-acquisition paragraphs are readable; final paragraph continues normally to page43; no clipping or footer collision."
+      },
+      {
+        "page": 43,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png",
+        "sha256": "56629A461B43F8F3720C84FC2AD916BF636FD9A1337113AA89C86CDE3134FE75",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page43: WI01-WI16 table has complete rows, visible borders and two-line owner header; page number is correct."
+      },
+      {
+        "page": 44,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png",
+        "sha256": "0D33766603828D1C054D3ADA9E08F7CA0BB032E6F732DBD3CCAD7E092FB89BD1",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page44: repeated WI header and full WI17-WI30 rows; governance paragraph fits beneath table without overlap."
+      },
+      {
+        "page": 45,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png",
+        "sha256": "01E27915FDE7656312107914BA9402E628790F8AE5878A4AD6C669F78712F0A9",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page45: implementation order, completion checks and lifecycle headings stay with body text; final retention paragraph continues normally to page46."
+      },
+      {
+        "page": 46,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png",
+        "sha256": "4A5E3F0197A3CF4B726A7CA364F35CF888E0A4F777AD2B6CA9872CEAA18C23A5",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page46: lifecycle continuation and new provenance paragraph are complete; community section heading and first paragraphs remain together."
+      },
+      {
+        "page": 47,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png",
+        "sha256": "44515FE54F891E3CDA60CA1EAB79821FBB0ACD4CA720E93222D3CBB337CDBCAA",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page47: five-project comparison table and source hyperlinks fit the page; quantitative goals retain all text and no cropped cells."
+      },
+      {
+        "page": 48,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png",
+        "sha256": "379C5FDB775AA47E0CF721C74CA91CB659AC842B9384189A13EA03F3F4FA21E7",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page48: user-visible differences and development-boundary heading have body text; equations and caveats remain readable."
+      },
+      {
+        "page": 49,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png",
+        "sha256": "F5449E13C1D37F727F7297378B9B6294CDB9A854423653B1E1F81D81ED666949",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page49: complete D1-D60 milestone table and following capacity/slice explanations; no split rows, cropped text or footer collision."
+      },
+      {
+        "page": 50,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png",
+        "sha256": "D3087DF44A0AA2D7C5C786CC38F0C3F8211EC73D2D6548766E133FCE6BB9057C",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page50: C0/E1-E5 table has complete readable role and boundary cells; governance paragraphs remain visible beneath the table."
+      },
+      {
+        "page": 51,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-51.png",
+        "sha256": "7D22C73166F164EFCACD183686A4E7C6FD326FA667BD9688B4701A06D867EEE2",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page51: efficiency methods and reference links are complete; mixed Chinese/Latin glyphs and all paragraphs are legible."
+      },
+      {
+        "page": 52,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-52.png",
+        "sha256": "4587653D1F1979C9AEBE282E78F944ACCD8EEFFA52A55BEA437F88B3095B0FE1",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page52: one-click-installation and lifecycle safeguards are complete; new source/learning-boundary paragraph ends with a short line above the footer."
+      },
+      {
+        "page": 53,
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-53.png",
+        "sha256": "8E834AFD0A406A99F118DEC88F61055B9F39F77EE99B7FD725B696D2AEA68A9A",
+        "viewedDetail": "original",
+        "reviewMode": "ACTUALLY_VIEWED_THIS_RENDER",
+        "blockingDefectObserved": false,
+        "visualObservation": "Page53: final evidence-boundary heading and three text lines are intact with correct footer; large final-page whitespace is acceptable for this closing section and optional to consolidate."
+      }
+    ],
+    "checks": [
+      "All13 assigned pages individually inspected at original detail.",
+      "No visible clipping, overlapping, missing Chinese/Latin glyphs or detached headings.",
+      "WI table pages43-44 has full rows and a repeated header; comparison, milestone and role tables fit the text width.",
+      "Footers remain readable without body overlap on pages41-53.",
+      "Page53 is a short final evidence-boundary section, not a blank or missing page; consolidation is optional."
+    ],
+    "shortPageObservations": [
+      {
+        "page": 53,
+        "status": "ACCEPTABLE_FINAL_SECTION",
+        "blocking": false,
+        "note": "Closing heading and three body lines with substantial whitespace; optional consolidation only."
+      }
+    ],
+    "blockingLayoutDefects": [],
+    "scopeLimit": "Document visual layout only; no product/GIS/PS runtime, update-security implementation, full-capacity or release acceptance.",
+    "previousReviewSnapshot": {
+      "kind": "WORD_FINAL_VISUAL_REVIEW",
+      "inspector": "/root/time_validity_refinement",
+      "date": "2026-10-03",
+      "status": "CONTENT_LAYOUT_REVIEW_COMPLETE",
+      "docxPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+      "docxSha256": "F7F466377D41BDEB4606A84F144BE50F7B48A5DAEF72D60793303E182C57CCAE",
+      "pdfPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+      "pdfSha256": "64A89FDE77FF195C5568810722B651C1C8C75D07B578BA271E3AA47F4A319218",
+      "finalPageCount": 50,
+      "sourceFingerprintPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+      "sourceFingerprintSha256": "A5EE5A05A072C9EE39F4E2960FD14FDBA489310A96ED59EFD385EA7B7D4A6B33",
+      "method": "New page50 actually viewed individually with tools.view_image at original detail. Pages41-49 reuse this turn original single-page visual observations only after each current PNG SHA was proven identical to the previously viewed image. No claim that pages41-49 were viewed again in the revised PDF.",
+      "viewedPages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "reviewCoveredPages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "pagesActuallyViewed": [
+        50
+      ],
+      "newlyViewedPages": [
+        50
+      ],
+      "reusedIdenticalImagePages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "pageImages": [
+        {
+          "page": 41,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png",
+          "sha256": "EACDFCB7BE6C637D54BEED2369F1FE91596EF0CDDC527F167075DCCD168079FB",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "EACDFCB7BE6C637D54BEED2369F1FE91596EF0CDDC527F167075DCCD168079FB",
+          "visualObservation": "WI01-WI16 table has full rows, visible borders, readable two-line owner header and correct page number."
+        },
+        {
+          "page": 42,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png",
+          "sha256": "F7D1A040E9CE57235930EEBF2CE085DC6AB51C44AFE5A39891501A772E9CE06C",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "F7D1A040E9CE57235930EEBF2CE085DC6AB51C44AFE5A39891501A772E9CE06C",
+          "visualObservation": "Repeated WI header and complete WI17-WI30 rows; governance paragraph fits beneath table without overlap."
+        },
+        {
+          "page": 43,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png",
+          "sha256": "D09171DA6A934308D8A2461BD826915C8594FEE52E7BDD789BF4C86B13DE2A5B",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "D09171DA6A934308D8A2461BD826915C8594FEE52E7BDD789BF4C86B13DE2A5B",
+          "visualObservation": "Implementation order and completion checks fit; lifecycle heading has following paragraphs; paragraph continuation is normal."
+        },
+        {
+          "page": 44,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png",
+          "sha256": "45A385C7BBBC10D3E6ED171B2BE564885321BEE070BDEC4CAF3B65B952BA21D0",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "45A385C7BBBC10D3E6ED171B2BE564885321BEE070BDEC4CAF3B65B952BA21D0",
+          "visualObservation": "Lifecycle continuation readable; comparison headings have following text; first table row and header fit without clipping."
+        },
+        {
+          "page": 45,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png",
+          "sha256": "E93CA43984CEB93D8975FD24759AE21AB06704AFA337A4A35EB837A72995B41B",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "E93CA43984CEB93D8975FD24759AE21AB06704AFA337A4A35EB837A72995B41B",
+          "visualObservation": "Comparison table repeats header and retains all remaining rows; source links and quantity/quality paragraphs are readable."
+        },
+        {
+          "page": 46,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png",
+          "sha256": "AD4663E63BF2DC70BE23B4EC1F72148BEBD1085D76FB4C86D4A4D6B602E710D2",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "AD4663E63BF2DC70BE23B4EC1F72148BEBD1085D76FB4C86D4A4D6B602E710D2",
+          "visualObservation": "User difference and conditional schedule headings stay with body; first milestone row is complete and readable."
+        },
+        {
+          "page": 47,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png",
+          "sha256": "C744D27F033D5726953D8C06C5D1501C334CB70D7D6A002E9018AB1F927CF885",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "C744D27F033D5726953D8C06C5D1501C334CB70D7D6A002E9018AB1F927CF885",
+          "visualObservation": "Milestone table repeats header with complete remaining rows; submilestone and measured-capacity paragraphs fit normally."
+        },
+        {
+          "page": 48,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png",
+          "sha256": "A0CF2C633F4BE93B54FAC8AF5F29D758E966989D8D26E9FD8B570A97A260EFE0",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "A0CF2C633F4BE93B54FAC8AF5F29D758E966989D8D26E9FD8B570A97A260EFE0",
+          "visualObservation": "C0-E5 role table is complete with readable wrapped cells; five-lane governance and resource limits are visible."
+        },
+        {
+          "page": 49,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png",
+          "sha256": "835352A4DE576B0DD41AE4D08D86553307BD260BCDBA6EBF03C63480ED22DB53",
+          "viewedDetail": "original",
+          "reviewMode": "REUSED_IDENTICAL_IMAGE",
+          "priorActualViewDocxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+          "priorActualViewImageSha256": "835352A4DE576B0DD41AE4D08D86553307BD260BCDBA6EBF03C63480ED22DB53",
+          "visualObservation": "Efficiency paragraphs and source links fit within margins; Chinese/English terms and protocol text have no missing glyphs."
+        },
+        {
+          "page": 50,
+          "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png",
+          "sha256": "44F12EE2EA2388A3FBCD984F79F6666A36ADC8A8EA2084C8E3CAB09617310694",
+          "viewedDetail": "original",
+          "reviewMode": "NEW_ACTUAL_SINGLE_PAGE_VIEW",
+          "visualObservation": "New final page50 actually viewed at original detail. Installation, lifecycle safeguards and merged evidence-boundary paragraph are complete and readable; headings stay with text; no clipping, overlap, missing glyphs or short continuation page."
+        }
+      ],
+      "checks": [
+        "New final page50 has no visible clipping, overlap, missing glyphs or detached headings.",
+        "Current page41-page49 image SHA values exactly match this turn previously viewed original page images; observations reused with per-page provenance.",
+        "Previously inspected WI, comparison, milestone and role-table pages are identical in the current rendering.",
+        "The former short page51 was eliminated; the evidence boundary is complete on final page50 with its correct page number."
+      ],
+      "blockingLayoutDefects": [],
+      "nonBlockingObservations": [],
+      "productAcceptance": "NOT_RUN",
+      "scopeLimit": "Current coverage pages41-50 document visual layout only: new actual single-page view50 plus byte-identical prior-image observations41-49. No claim for pages1-40, runtime/scientific/product acceptance, measured 60-day capacity or complete-document accessibility.",
+      "previousReviewSnapshot": {
+        "kind": "WORD_FINAL_VISUAL_REVIEW",
+        "inspector": "/root/time_validity_refinement",
+        "date": "2026-10-03",
+        "status": "CONTENT_LAYOUT_REVIEW_COMPLETE",
+        "docxPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+        "docxSha256": "A122CEE14382E3F3FDF13571D49304BFD2DC918E48801675275C09D002753E78",
+        "pdfPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+        "pdfSha256": "18E3914FA9EB1D5A0F7F47A4BF3270BCECE39970F5F7E6EF38E0A074F4FE1949",
+        "finalPageCount": 51,
+        "sourceFingerprintPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\最终页面指纹.json",
+        "sourceFingerprintSha256": "6077EDD928157097C2D8F28457B313AA3F9690DCE462754C2302989D18A0A8E5",
+        "method": "Actual tools.view_image at original detail for each individual page41-page51; no collage-only inference; each page image hash verified against current native-render fingerprint.",
+        "viewedPages": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "pagesActuallyViewed": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "pageImages": [
+          {
+            "page": 41,
+            "sha256": "EACDFCB7BE6C637D54BEED2369F1FE91596EF0CDDC527F167075DCCD168079FB",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png",
+            "viewedDetail": "original",
+            "visualObservation": "WI01-WI16 table has full rows, visible borders, readable two-line owner header and correct page number."
+          },
+          {
+            "page": 42,
+            "sha256": "F7D1A040E9CE57235930EEBF2CE085DC6AB51C44AFE5A39891501A772E9CE06C",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png",
+            "viewedDetail": "original",
+            "visualObservation": "Repeated WI header and complete WI17-WI30 rows; governance paragraph fits beneath table without overlap."
+          },
+          {
+            "page": 43,
+            "sha256": "D09171DA6A934308D8A2461BD826915C8594FEE52E7BDD789BF4C86B13DE2A5B",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png",
+            "viewedDetail": "original",
+            "visualObservation": "Implementation order and completion checks fit; lifecycle heading has following paragraphs; paragraph continuation is normal."
+          },
+          {
+            "page": 44,
+            "sha256": "45A385C7BBBC10D3E6ED171B2BE564885321BEE070BDEC4CAF3B65B952BA21D0",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png",
+            "viewedDetail": "original",
+            "visualObservation": "Lifecycle continuation readable; comparison headings have following text; first table row and header fit without clipping."
+          },
+          {
+            "page": 45,
+            "sha256": "E93CA43984CEB93D8975FD24759AE21AB06704AFA337A4A35EB837A72995B41B",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png",
+            "viewedDetail": "original",
+            "visualObservation": "Comparison table repeats header and retains all remaining rows; source links and quantity/quality paragraphs are readable."
+          },
+          {
+            "page": 46,
+            "sha256": "AD4663E63BF2DC70BE23B4EC1F72148BEBD1085D76FB4C86D4A4D6B602E710D2",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png",
+            "viewedDetail": "original",
+            "visualObservation": "User difference and conditional schedule headings stay with body; first milestone row is complete and readable."
+          },
+          {
+            "page": 47,
+            "sha256": "C744D27F033D5726953D8C06C5D1501C334CB70D7D6A002E9018AB1F927CF885",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png",
+            "viewedDetail": "original",
+            "visualObservation": "Milestone table repeats header with complete remaining rows; submilestone and measured-capacity paragraphs fit normally."
+          },
+          {
+            "page": 48,
+            "sha256": "A0CF2C633F4BE93B54FAC8AF5F29D758E966989D8D26E9FD8B570A97A260EFE0",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png",
+            "viewedDetail": "original",
+            "visualObservation": "C0-E5 role table is complete with readable wrapped cells; five-lane governance and resource limits are visible."
+          },
+          {
+            "page": 49,
+            "sha256": "835352A4DE576B0DD41AE4D08D86553307BD260BCDBA6EBF03C63480ED22DB53",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png",
+            "viewedDetail": "original",
+            "visualObservation": "Efficiency paragraphs and source links fit within margins; Chinese/English terms and protocol text have no missing glyphs."
+          },
+          {
+            "page": 50,
+            "sha256": "39C171D9009F0FFB535D7A6CBE5746E8C13D909DB562D6640B9E3E158E7469E1",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png",
+            "viewedDetail": "original",
+            "visualObservation": "Installation, time-validity/cache-lifecycle and evidence-boundary headings have following paragraphs; new content is readable."
+          },
+          {
+            "page": 51,
+            "sha256": "F2254121105974471EE25BE123DEC5048C6C7CE1FB4C0416925E632B4EDDA135",
+            "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-51.png",
+            "viewedDetail": "original",
+            "visualObservation": "Two-line final evidence-boundary continuation and page number are complete; short final page is not blank or clipped."
+          }
+        ],
+        "checks": [
+          "No visible overflow, clipping, overlap, missing Chinese/English glyphs or detached headings in pages41-51.",
+          "WI table pages41-42, comparison table pages44-45 and milestone table pages46-47 retain complete rows and repeated headers.",
+          "Role table page48 fits with readable wrapped cells and complete C0-E5 records.",
+          "Time-validity and protected-cache content is readable on pages43-44 and page50.",
+          "Page numbers41-51 are continuous and correctly placed; final page51 is a short complete evidence-boundary continuation."
+        ],
+        "blockingLayoutDefects": [],
+        "nonBlockingObservations": [
+          "Final page51 contains only the concluding two-line evidence-boundary paragraph and its page number."
+        ],
+        "productAcceptance": "NOT_RUN",
+        "scopeLimit": "Pages41-51 document visual layout only. No claim for pages1-40, runtime/scientific/product acceptance, measured 60-day capacity or complete-document accessibility.",
+        "previousReviewSnapshot": {
+          "kind": "WORD_FINAL_VISUAL_REVIEW",
+          "inspector": "/root/current_contract_audit",
+          "date": "2026-10-03",
+          "status": "CONTENT_LAYOUT_REVIEW_COMPLETE",
+          "docxPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+          "docxSha256": "A7D2B1E6940915E0AC40CB82ECF6863C9403CC67FFFD4AA19AB0F527F83B83DF",
+          "pdfPath": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+          "pdfSha256": "3020EBB4F1AC651758D5B92D580942BD428859E944BAB177ABCB6E347DC4223B",
+          "finalPageCount": 50,
+          "method": "Actual original-detail view_image for every page 38-50; hashes checked against current native-render fingerprint",
+          "pagesActuallyViewed": [
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          "pageImages": [
+            {
+              "page": 38,
+              "sha256": "C194595A334931629B261595DE358F63B032C47499D6FA5E9302278113BE528C",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png",
+              "viewedDetail": "original",
+              "visualObservation": "M16/M17/M18 paragraphs readable; headings stay with text; no missing glyphs or clipped mixed Chinese/English."
+            },
+            {
+              "page": 39,
+              "sha256": "B6D2AB71A808CD2EB7AF9F944B152A71A39FD0B96C6B819D87A57BA5AC3CCEF8",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png",
+              "viewedDetail": "original",
+              "visualObservation": "M19/M20 and learning section readable; section heading has following paragraph; regular margins."
+            },
+            {
+              "page": 40,
+              "sha256": "654E8EABD888F9A401009D00D32C4BB90D0853A58523C9A77F66F73E60CB522E",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png",
+              "viewedDetail": "original",
+              "visualObservation": "AssetAcquisitionRecord additions visible; protocol codes and mixed text fit; final paragraph continues normally."
+            },
+            {
+              "page": 41,
+              "sha256": "EACDFCB7BE6C637D54BEED2369F1FE91596EF0CDDC527F167075DCCD168079FB",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png",
+              "viewedDetail": "original",
+              "visualObservation": "WI01-WI16 table has complete rows, compact owner column and readable two-line header."
+            },
+            {
+              "page": 42,
+              "sha256": "F7D1A040E9CE57235930EEBF2CE085DC6AB51C44AFE5A39891501A772E9CE06C",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png",
+              "viewedDetail": "original",
+              "visualObservation": "Repeated WI table header; WI17-WI30 complete; governance paragraph fits below table."
+            },
+            {
+              "page": 43,
+              "sha256": "68ECEFACCF57DB62F4DEA28957A3C7C38E69AC9FC15B2FC75D6F9E43049B2326",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png",
+              "viewedDetail": "original",
+              "visualObservation": "Implementation ordering and completion checks readable; comparison section headings have following text."
+            },
+            {
+              "page": 44,
+              "sha256": "1AA000973E1491D1D9908A602119B8D1917AA1BD963AECFF5F0387F024D385D2",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png",
+              "viewedDetail": "original",
+              "visualObservation": "Five-competitor comparison table fits width; complete rows and readable source links; no overflow."
+            },
+            {
+              "page": 45,
+              "sha256": "7C70D37EACB99AFF08A759D630339F020F3A4DFFAF695752795925654132AFBA",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png",
+              "viewedDetail": "original",
+              "visualObservation": "Quantity/quality and user differences readable with full paragraphs and clear headings."
+            },
+            {
+              "page": 46,
+              "sha256": "8A975CAD7BBF99FAD60765DE23C8BFC0FF0F3BF659EA56366DEFEFF6F989103C",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png",
+              "viewedDetail": "original",
+              "visualObservation": "Conditional 60-day introduction and milestone table readable; rows through D43-D49 complete."
+            },
+            {
+              "page": 47,
+              "sha256": "697878D6482B85307024D27206765F242351D19AFD9A43FFE5AFDAFD98BDFF23",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png",
+              "viewedDetail": "original",
+              "visualObservation": "Repeated milestone header; D50-D60 rows complete; new submilestone/capacity paragraphs readable; C0-E2 table rows complete."
+            },
+            {
+              "page": 48,
+              "sha256": "F012232E807EF68302DC189EE3D2B911B031A43E95FC18814CE834CFEA8D3E9D",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png",
+              "viewedDetail": "original",
+              "visualObservation": "Repeated role-table header; E3-E5 rows complete; constraints and efficiency paragraphs readable."
+            },
+            {
+              "page": 49,
+              "sha256": "BC7FC56039812ED2F746C5A9A09F50C8A2DE7893D7E03FC740239B6052A28476",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png",
+              "viewedDetail": "original",
+              "visualObservation": "Acquisition and efficiency content, installation heading and evidence-boundary section readable; final paragraph continues."
+            },
+            {
+              "page": 50,
+              "sha256": "801D97A0EB1F7065BB4F689960A736122DBC3543F59E61DB3630927CE25B847B",
+              "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png",
+              "viewedDetail": "original",
+              "visualObservation": "Short final evidence-boundary continuation has complete lines and page number; no blank-page or clipping defect."
+            }
+          ],
+          "checks": [
+            "No visible clipping, overlap, missing Chinese/English glyphs or detached headings in reviewed pages.",
+            "WI table on pages41-42 has full rows and repeated header.",
+            "Comparison table page44, milestone table pages46-47 and role table pages47-48 fit the text width and preserve cell contents.",
+            "New acquisition text page40 and current milestone/capacity boundaries pages46-49 are present and readable.",
+            "Final page50 is a short evidence-boundary continuation, not a blank or missing page."
+          ],
+          "blockingLayoutDefects": [],
+          "productAcceptance": "NOT_RUN",
+          "scopeLimit": "Pages38-50 document layout only. No runtime/scientific/product/60-day capacity or complete-document accessibility acceptance.",
+          "previousReviewSnapshot": {
+            "kind": "WORD_FINAL_VISUAL_REVIEW",
+            "inspector": "root",
+            "status": "CONTENT_LAYOUT_REVIEW_COMPLETE",
+            "docxSha256": "E886974661665BA28582A58339038B806D92C86788EA9757D15907F9032580F9",
+            "pdfSha256": "7D786FFA1343D3C3678FECE6169193A4D32D05796D672DBD04BAC2E34B17DAC4",
+            "finalPageCount": 48,
+            "method": "Actual original-detail view_image for every listed final PNG",
+            "pagesActuallyViewed": [
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ],
+            "pageImages": [
+              {
+                "page": 38,
+                "sha256": "7CC93D40EAC11D0EBC05F1DCA9DC9C3B1FBBFA98A2FC0D5C3806B057D3264FB4",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png"
+              },
+              {
+                "page": 39,
+                "sha256": "2A49867AE67B81B2A6E7AE0A762D49E2206CD7182A6EB69D8D132072A0B1AC9A",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png"
+              },
+              {
+                "page": 40,
+                "sha256": "FEDC9A4C043855F54C1216F8B26E2BBDF6A9851AFADFE19CF77EDE03720960C8",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png"
+              },
+              {
+                "page": 41,
+                "sha256": "0527BE4EEFB88687B2DEA47D053785159D098A5D58D134FB8524CA1E0324FAB0",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png"
+              },
+              {
+                "page": 42,
+                "sha256": "919C745B6E0517EC1C8587B8D30C62596A2F35599CA926A33BA3EDC65238D282",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png"
+              },
+              {
+                "page": 43,
+                "sha256": "44D2D1ACF63F4A9E55318CE67CD718B7637D6EFE2B4AF3551A0EC562F53DE041",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png"
+              },
+              {
+                "page": 44,
+                "sha256": "5510F4E8DD0F651D2044207C1BA460228088BE1E44959A2601962CF23D7CFCF2",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png"
+              },
+              {
+                "page": 45,
+                "sha256": "3AA277369045926A2A14050851683DACF71C2D1981F0C18B7F45BB90AF53043E",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png"
+              },
+              {
+                "page": 46,
+                "sha256": "EE9C0CD42C2AD834BB53A062D8463706632C9F2017F53502B44EED601F7DBFAF",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png"
+              },
+              {
+                "page": 47,
+                "sha256": "56924DEE3FA2EB7DA02C14FB8D6AF63C6095D86E27CA0A37A9C16D762A389532",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png"
+              },
+              {
+                "page": 48,
+                "sha256": "CCFEB6F9FA73EE9CF742B084238961B6D8F5B67A35EAD9C472847A7CA717A49F",
+                "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png"
+              }
+            ],
+            "checks": [
+              "No visible clipping, overlapping, missing Chinese/English glyphs or detached headings.",
+              "WI table uses compact owner column; complete rows and repeated headers are visible on final pages39-41.",
+              "Comparison and C0/E1-E5 tables fit the text width and preserve all cell contents.",
+              "Final page48 is the short concluding evidence-boundary section, not a blank or missing page."
+            ],
+            "blockingLayoutDefects": [],
+            "scopeLimit": "Document layout only. No product/GIS/PS runtime or complete-capacity acceptance."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "status": "DOCUMENT_QA_COMPLETE_PASS_CANDIDATE",
+  "scope": "Document QA only; not product capability acceptance",
+  "documents": [
+    {
+      "document": "Word\\ArcGIS_Pro_MCP_3.0_产品宣传册_预告版.docx",
+      "bytes": 975962,
+      "sha256": "E95A17F331E8E961F0EEDFCB441132C26AB75ED57F200A980C54BC7F7C407D0A",
+      "nativePages": 10,
+      "everyPagePreviewAndBoundary": true,
+      "embeddedImagesMatchFinalPosters": true,
+      "headingStyleChecks": [
+        "ArcGIS Pro MCP 3 0 产品宣传册",
+        "让 GIS 成果从分析走向交付",
+        "用业务语言开始",
+        "围绕整套成果设计",
+        "把专业判断留在该做决定的地方",
+        "从提出需求到领取成果",
+        "先理解资料 再选择路径",
+        "一张任务卡贯穿全过程",
+        "交付的不只是一个文件",
+        "不会 PS 也能参与专业成图",
+        "你说用途 系统组织设计",
+        "像改需求一样改图",
+        "好看 也保留科学含义",
+        "学风格 懂资料 记住适用的习惯",
+        "StyleDNA 让参考图成为设计线索",
+        "DatasetDNA 帮助适配新的资料",
+        "偏好有范围 也能撤销",
+        "让新能力进入流程 让新资料更新全套成果",
+        "GP 更新从发现走向可信采用",
+        "一次资料变化 沿成果链传播",
+        "经验可以成为可重用业务技能",
+        "把不同专业任务放进同一成果链",
+        "规划汇报 设施覆盖与方案比较",
+        "科研专题 多期分类与变化表达",
+        "规范建库 资料整理与质量覆盖",
+        "从共同能力延展到更多领域",
+        "更多自动化 也更清楚成果为什么可信",
+        "看得见的体验目标",
+        "工具数量与业务质量一起增长",
+        "领先用同条件结果说明",
+        "从你的业务问题 开始下一套成果",
+        "准备一个有代表性的任务",
+        "插件形态 清晰接入",
+        "先了解方案 再设定你的验收期待",
+        "主宣传海报",
+        "产品亮点海报"
+      ],
+      "visualReview": "COMPLETE_ALL_NATIVE_PAGES_VIEWED"
+    },
+    {
+      "document": "Word\\ArcGIS_Pro_MCP_3.0_宣传海报_展示版.docx",
+      "bytes": 969775,
+      "sha256": "3852C126956511EDF9F9BC0235C687C2AE3F7BFEF9C34163D502068EC80A854C",
+      "nativePages": 2,
+      "everyPagePreviewAndBoundary": true,
+      "embeddedImagesMatchFinalPosters": true,
+      "headingStyleChecks": [
+        "ArcGIS Pro MCP 3 0 宣传海报",
+        "产品亮点海报"
+      ],
+      "visualReview": "COMPLETE_ALL_NATIVE_PAGES_VIEWED"
+    }
+  ],
+  "posterPdf": {
+    "sha256": "35A2E2AC7990CBBA6D93329FAD2E0409EFE18E50FBFF6062357EDA796A2CCE18",
+    "pages": [
+      {
+        "page": 1,
+        "points": [
+          841.8900146484375,
+          1190.7130126953125
+        ],
+        "text": "产品愿景 / PRODUCT PREVIEW 3.0 方案预告\r\nArcGIS Pro MCP 3.0\r\n让 GIS 成果\r\n从分析走向交付\r\n自然语言任务 · 自动专业成图 · 同版图表报告\r\n同一任务 · 同一事实 · 同一成果版本\r\nGIS Office\r\nPhotoshop\r\n概念示意 · 非真实分析结果\r\nGIS → Photoshop → Office\r\n不会 PS，也能参与专业成图\r\n参考风格与资料结构，合法学习、适用迁移\r\n数据更新，相关图表与文字共同更新\r\n可信 GP 自主适配，持续扩展能力\r\n了解最终方案 · 从一个真实业务任务开始\r\n3.0 规划功能与目标体验；发布功能及支持条件以实际验收为准。\r\n概念宣传视觉 · ArcGIS Pro MCP 3.0 产品方案预告"
+      },
+      {
+        "page": 2,
+        "points": [
+          1190.550048828125,
+          669.6843872070312
+        ],
+        "text": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n一条成果链\r\n连接你的 GIS 工作\r\n规划汇报 · 科研专题 · 规范建库\r\n懂任务 围绕业务目的组织资料与方法\r\n会设计 真实 PS 自动排版，支持语言改稿\r\n能更新 保留依据，联动同版图表报告\r\n可检查 成果、来源、编辑性与版本清楚可查\r\nGIS → Photoshop → Office\r\n了解完整最终方案\r\n同一任务 · 同一成果版本\r\nGIS\r\nOffice\r\nPhotoshop\r\n概念示意 · 非真实分析结果\r\n3.0 规划功能与目标体验；发布功能及支持条件以实际验收为准。 概念宣传视觉"
+      }
+    ]
+  },
+  "png": [
+    {
+      "file": "01_主宣传海报_竖版.png",
+      "pixels": [
+        3000,
+        4243
+      ],
+      "dpiMetadata": [
+        256.5654,
+        256.5654
+      ]
+    },
+    {
+      "file": "02_产品亮点海报_横版.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "dpiMetadata": [
+        232.23219999999998,
+        232.23219999999998
+      ]
+    }
+  ],
+  "noDependenciesInstalled": true,
+  "projectOutputRoot": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传",
+  "productAcceptance": "NOT_RUN",
+  "completedUtc": "2026-10-02T15:27:58.640364+00:00",
+  "visualReview": {
+    "reviewer": "Root documentation author",
+    "method": "Viewed actual Microsoft Word PDF renders of all 12 pages, plus both final poster PNGs rasterized from print PDF",
+    "brochurePagesViewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "posterWordPagesViewed": [
+      1,
+      2
+    ],
+    "printPosterPagesViewed": [
+      1,
+      2
+    ],
+    "findings": [
+      "Chinese readable without missing glyphs",
+      "No heading or paragraph overflow; no clipped poster; original aspect ratios retained",
+      "All pages carry preview and planning qualification; no empty extra pages",
+      "Photoshop and Office illustration labels fully readable after drawing-order correction"
+    ],
+    "unresolvedFindings": []
+  },
+  "nativeWordCleanupRemaining": 0,
+  "fallbackRendererNote": "Bundled render_docx.py was attempted; LibreOffice was unavailable. Existing Microsoft Word 16 performed native read-only PDF export; PDFium rendered actual page PNGs. No software installed.",
+  "independentReviewContext": {
+    "path": "制作与核验/最终宣传资料独立审读.json",
+    "reviewKind": "FINAL_ARTIFACT_TEXT_CLAIMS_AND_XML_REVIEW_ONLY",
+    "substantiveFindings": [],
+    "posterArtifactsUnchangedSinceIndependentReview": true,
+    "wordReviewedBaseAndFinal": [
+      {
+        "path": "Word\\ArcGIS_Pro_MCP_3.0_产品宣传册_预告版.docx",
+        "independentBaseSha256": "A62291A300FF959E12EB0866BC32F4C04D47D12896D4B21AA54AAFA4B24EBA36",
+        "finalSha256": "E95A17F331E8E961F0EEDFCB441132C26AB75ED57F200A980C54BC7F7C407D0A",
+        "delta": "Word headings stripped of punctuation and brochure closing slogans removed; no new substantive claim. Final text and native pages re-read by root."
+      },
+      {
+        "path": "Word\\ArcGIS_Pro_MCP_3.0_宣传海报_展示版.docx",
+        "independentBaseSha256": "F86C24DACF7A30D26092B8835F20BD9C17791325D5641EA49255414B4ED5A6D2",
+        "finalSha256": "3852C126956511EDF9F9BC0235C687C2AE3F7BFEF9C34163D502068EC80A854C",
+        "delta": "Word headings stripped of punctuation and brochure closing slogans removed; no new substantive claim. Final text and native pages re-read by root."
+      }
+    ],
+    "rootFinalTextReviewComplete": true
+  },
+  "navigationChecks": {
+    "targets": 8,
+    "missing": []
+  },
+  "previousProjectIntroductionUnchanged": true
+}

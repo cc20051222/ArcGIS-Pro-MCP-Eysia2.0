@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ArcGISProMCP.Core</RootNamespace>
+    <AssemblyName>ArcGISProMCP.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArcGISProMCP.Logging\ArcGISProMCP.Logging.csproj" />
+    <ProjectReference Include="..\ArcGISProMCP.Configuration\ArcGISProMCP.Configuration.csproj" />
+  </ItemGroup>
+</Project>

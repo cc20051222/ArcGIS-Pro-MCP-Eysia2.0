@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x1",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "frameCount": 13,
+  "frameKeys": [
+    "B00",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12"
+  ],
+  "expectedCountsPerFrame": {
+    "B00": 78,
+    "B01": 90,
+    "B02": 84,
+    "B03": 78,
+    "B04": 30,
+    "B05": 84,
+    "B06": 78,
+    "B07": 90,
+    "B08": 84,
+    "B09": 78,
+    "B10": 90,
+    "B11": 84,
+    "B12": 72
+  },
+  "emptyFrames": [],
+  "partialFrames": [
+    {
+      "frame": "B04",
+      "reason": "the declared coverage gap days 30-34 fall inside it"
+    }
+  ],
+  "fixedVisualRules": {
+    "classBreaks": "identical on every frame",
+    "colourTokens": "identical",
+    "cameraExtent": "identical",
+    "timestampText": "the bin label only"
+  },
+  "failureModes": [
+    "a dropped or duplicated frame",
+    "a class break that moves between frames",
+    "an encoded claim without a read-back of frame count"
+  ]
+}

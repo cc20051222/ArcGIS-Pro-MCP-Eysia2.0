@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x8",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "candidateReport": {
+    "quote": "vacancy rate is 15.0 percent",
+    "factTableValue": "12.2"
+  },
+  "expectedDisposition": "FAIL",
+  "reason": "SRP-001 requires every printed figure to resolve to the fact table; a fluent sentence with the wrong number is the exact failure this rule exists to catch",
+  "note": "the deck path additionally cannot be scored editable until an approved generator exists"
+}

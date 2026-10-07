@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x6",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "facilities": [
+    "N2",
+    "N6"
+  ],
+  "demands": [
+    "N1",
+    "N3",
+    "N4",
+    "N5",
+    "N7",
+    "N9"
+  ],
+  "answer": {
+    "N1": {
+      "costs": {
+        "N2": 12,
+        "N6": 5
+      },
+      "assigned": "N6",
+      "unassignedReason": null
+    },
+    "N3": {
+      "costs": {
+        "N2": 3,
+        "N6": 10
+      },
+      "assigned": "N2",
+      "unassignedReason": null
+    },
+    "N4": {
+      "costs": {
+        "N2": 7,
+        "N6": 14
+      },
+      "assigned": "N2",
+      "unassignedReason": null
+    },
+    "N5": {
+      "costs": {
+        "N2": 4,
+        "N6": 11
+      },
+      "assigned": "N2",
+      "unassignedReason": null
+    },
+    "N7": {
+      "costs": {
+        "N2": null,
+        "N6": null
+      },
+      "assigned": null,
+      "unassignedReason": "no directed path from any facility"
+    },
+    "N9": {
+      "costs": {
+        "N2": null,
+        "N6": null
+      },
+      "assigned": null,
+      "unassignedReason": "no directed path from any facility"
+    }
+  },
+  "tieRule": "lowest cost, then lexicographic facility id",
+  "rule": "a demand with no path stays unassigned and visible; the Euclidean nearest is not the answer"
+}

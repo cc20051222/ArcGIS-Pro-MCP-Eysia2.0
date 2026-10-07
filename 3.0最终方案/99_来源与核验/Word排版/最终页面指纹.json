@@ -1,0 +1,639 @@
+{
+  "renderer": "Microsoft Word native PDF export followed by Poppler pdftoppm 144 dpi rasterization",
+  "docxSha256": "6E71E38DAAAA69DF89893BF366DB4106A5DF8E23AA2ECDE076E4667BDA104259",
+  "pdfSha256": "519F19C91DF13A04268750C1190D75B695A6E0BFD3BBD95EBFB1BED674744D58",
+  "pages": 50,
+  "changedPages": [
+    1
+  ],
+  "unchangedPages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "images": [
+    {
+      "page": 1,
+      "sha256": "9EEF37615722AE416D2AD9D30D731F11451941BFE0D1753E9699DA9AA079ECF3",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-1.png"
+    },
+    {
+      "page": 2,
+      "sha256": "4500868F0EBA1501CBBE8A6445D211A9C2DB89BFBD238D83FF3ECD52EF2B3722",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-2.png"
+    },
+    {
+      "page": 3,
+      "sha256": "3271380CAC425DF0F7939AA6AAC78BA9CD5FD9351EB28EF3141FD62922EA440F",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-3.png"
+    },
+    {
+      "page": 4,
+      "sha256": "0F224076750E9E4F223F385F6FF92E407ADF1A502064B2FAB0667119B38654AF",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-4.png"
+    },
+    {
+      "page": 5,
+      "sha256": "D3484BE9F65E4E3BB6D52417F012D22916DEC201FB032616A3EE49D292F0B62D",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-5.png"
+    },
+    {
+      "page": 6,
+      "sha256": "851B556857EDC8BF9DDD3E8C91472B50B7E52AF4B3B1E0F9DF6809D1EF0A514C",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-6.png"
+    },
+    {
+      "page": 7,
+      "sha256": "4409FA4101C5144857002F42451EC3111D48264C2472BA4A43F163E60382DF4B",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-7.png"
+    },
+    {
+      "page": 8,
+      "sha256": "7E7951DD5FAFED29A8724B2E1261E9D978721686DD04A1795DB52E664741C859",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-8.png"
+    },
+    {
+      "page": 9,
+      "sha256": "E8DE6443A7A2161AAF96770CBB6CD8020BCB74DF208A72389A4FAD2A6C0165C3",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-9.png"
+    },
+    {
+      "page": 10,
+      "sha256": "5389A4DE8E376254762F278D2CB59722BCB7023DDFED1CC44C10CC526A8040B5",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-10.png"
+    },
+    {
+      "page": 11,
+      "sha256": "7F0DECD9704B717F4AB25170ADAF6B86A2D0257730084223718593F4C7BF7618",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-11.png"
+    },
+    {
+      "page": 12,
+      "sha256": "420D4B703881C6B908B682A3198C28AEBB4E6743F02FE077525DF4D72F9D8D52",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-12.png"
+    },
+    {
+      "page": 13,
+      "sha256": "051A3EB9070B289F748BD15D54A40461B6119A7FD2F463631490E184CF7ABF98",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-13.png"
+    },
+    {
+      "page": 14,
+      "sha256": "4010476FFE7055E4953051EC48D80ECAA48B2C18FD834EA6FBA19B6AF624555F",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-14.png"
+    },
+    {
+      "page": 15,
+      "sha256": "6573A026F2ABE3CB2F53DACB43EF911A0F62D29C49A3E95BF20201A405660F84",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-15.png"
+    },
+    {
+      "page": 16,
+      "sha256": "E5B219C9202647CAD0B8844AA334BD686F5F7D53D72DA5597C338BF5B6B72C77",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-16.png"
+    },
+    {
+      "page": 17,
+      "sha256": "1F6A538DBADE6381CA3AD9E5E9F411D75DB8E41E94BDE746BEA33C1BE3DE51D6",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-17.png"
+    },
+    {
+      "page": 18,
+      "sha256": "62BF008522ADDCE04CB5A830CCE8F896B568999F4D616752D037869BA84045A7",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-18.png"
+    },
+    {
+      "page": 19,
+      "sha256": "D4CD40328F6654CA71AE9DC4DB458B383A7C072B986AA17CB74ED73B42302494",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-19.png"
+    },
+    {
+      "page": 20,
+      "sha256": "E2BBAF7DA7C2313820FB704B42485D5BABD68054F5C7F31D169BE5759E71FB6A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-20.png"
+    },
+    {
+      "page": 21,
+      "sha256": "0A0EDC2D65268674A5890CF465E7F7BF22EE4B0E17039A007DC3EE572FD6BD62",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-21.png"
+    },
+    {
+      "page": 22,
+      "sha256": "AF88ADEE424DD1244D02E53E7213797C4988DD149446498EA33AB7B6703D4730",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-22.png"
+    },
+    {
+      "page": 23,
+      "sha256": "2D0E32214EFCF83EE6B4214ABB702B4897C5FFED35A8EDD09B0C6C9DC699725A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-23.png"
+    },
+    {
+      "page": 24,
+      "sha256": "3A54D916A5A9F73A114327675F2189A6B750B55721C2032441A8454D6EDEDC64",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-24.png"
+    },
+    {
+      "page": 25,
+      "sha256": "F8355DF2120AAD4E4448AFEB672119A79630AE5FBB842D698B5D24FB35477114",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-25.png"
+    },
+    {
+      "page": 26,
+      "sha256": "F4F121D2A86E24E513E29800439132587E19C9E61731C4F7F662B83D9A26E298",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-26.png"
+    },
+    {
+      "page": 27,
+      "sha256": "5822C4794DC336A1106170C0D2C0DC99CC9415F8BF076D84B1AD47E29D3CD1E5",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png"
+    },
+    {
+      "page": 28,
+      "sha256": "F64F139090ECDCDDA218704C8A602136664D9AACD5FC016158EA8B888931EB9D",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png"
+    },
+    {
+      "page": 29,
+      "sha256": "0EECB79670789816B95BE0E87FC08CBBCD23413D224B31175A2A10CBC80D4085",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png"
+    },
+    {
+      "page": 30,
+      "sha256": "01BBB1184706BCDB8A4374F08C18B35093686B4D9151DA5CA5C53C9498FA9536",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png"
+    },
+    {
+      "page": 31,
+      "sha256": "864A1735C02343BB010B3B4BA15DB5F8259D3A42E6B1EE1869D35AB3EC18FC35",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png"
+    },
+    {
+      "page": 32,
+      "sha256": "C56EA82CC9ABADE248EFB2DF3F78DEA241CA49C22AED532A0238D68721FADA15",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png"
+    },
+    {
+      "page": 33,
+      "sha256": "17ED461533CE8DB0685A17D7ED08E67BF2EDAE530136982740EEAD8F88EC2423",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png"
+    },
+    {
+      "page": 34,
+      "sha256": "76E633ECAE6C72F642D0A562549E0364DAA798649828B411542EEFD1931845DC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png"
+    },
+    {
+      "page": 35,
+      "sha256": "1BFFF927A43B4245D0762E467A2196EC5303BD20F12F961966A62A91141D6B6B",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png"
+    },
+    {
+      "page": 36,
+      "sha256": "CF61BCC1799D4B3CC48D7066C1A3A770FDAD8E849B8992717F68BA852796A4B8",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png"
+    },
+    {
+      "page": 37,
+      "sha256": "7041020666348CFFD3AF3B550A374AA2D41500B846A279F73BCA61A865872DBC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png"
+    },
+    {
+      "page": 38,
+      "sha256": "206EA8926376C8E32EADA069756F689FA482FD63A8CEDAAB2CD44D50F542427A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png"
+    },
+    {
+      "page": 39,
+      "sha256": "F949AF49FAB358780CA18BA4E44CAA5C5E8D06064041C385668E88F8CD610B1E",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png"
+    },
+    {
+      "page": 40,
+      "sha256": "41A9C190A545EC16E83FA8828F7B895625D943A04BAB25C9E33BCE62497744E3",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png"
+    },
+    {
+      "page": 41,
+      "sha256": "0FAD38165E3D0D34F87C55F6996B745E9F6F34D2E23FA26D4FE1110FC793DBF9",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png"
+    },
+    {
+      "page": 42,
+      "sha256": "B57783600FEA099C28DDAA29F591CB147B137E5D6CA2184133BF02FFE3A0E421",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png"
+    },
+    {
+      "page": 43,
+      "sha256": "D5C3C3C53101CFA1829D300C1E32C59655A4C1803370FB643E8EC660C52F5126",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png"
+    },
+    {
+      "page": 44,
+      "sha256": "40570663F91D8D40813F747C7F8003743CAA4CE7924CE619D80D8980302196D7",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png"
+    },
+    {
+      "page": 45,
+      "sha256": "B9DE3811408F800E0DD60CDF741BEB8D058655B5C4A3ED181D6CD47E562EF67A",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png"
+    },
+    {
+      "page": 46,
+      "sha256": "896984F2598CE35069095EA2FF4CBA7B7E934F42B3F7F785163A007B8F4A40B6",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png"
+    },
+    {
+      "page": 47,
+      "sha256": "7DA26FD6284BD0FBE93FEBAAA87511DBBA7F7356F39EF2C5D480CFE03419E5BF",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png"
+    },
+    {
+      "page": 48,
+      "sha256": "CFD2B2A632B3862B878D778CA3F7789E79C5C4F9D456ED170AED0BB556C1C2A0",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png"
+    },
+    {
+      "page": 49,
+      "sha256": "3AD0A30619A947D5D127DBF893BD490D588A9DBBDD5FC337A7C743533D196FEC",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png"
+    },
+    {
+      "page": 50,
+      "sha256": "E9FEA00FB2A46CEAF7836B369D2B64B06E6BF7CD4DA9165BAE737C8C1C20CF0C",
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png"
+    }
+  ],
+  "scale": 2,
+  "dpi": 144,
+  "previousFingerprintSnapshot": {
+    "renderer": "Microsoft Word native PDF export then PDFium rasterization",
+    "docxSha256": "CA2152B96F714C840F1603B824B420C642F1154931BF499BBFF43EA9AE642EE3",
+    "pdfSha256": "87404F14502818C1F60B9FC7BAAE041C5FAB5A070FAAB31407911DABBC610215",
+    "pages": 52,
+    "changedPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "unchangedPages": [],
+    "images": [
+      {
+        "page": 1,
+        "sha256": "0D1BB070EE610CFB65F0688971514F9F09E97AC04365AE96908DEE5D818C5B64",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-1.png"
+      },
+      {
+        "page": 2,
+        "sha256": "682E1D9C8988DD78D107939FC2E298560CFE327C790A757D0F6D4564C90BDD73",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-2.png"
+      },
+      {
+        "page": 3,
+        "sha256": "75A0D630C4275F2D34634701106DF75DF5662EE6ED84D9AE5B3DE1F463F079FC",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-3.png"
+      },
+      {
+        "page": 4,
+        "sha256": "B5F4EBA7C1AFFC0306A630DDC0A646F0FE0CE8505FAC8989A00F12C0ABBA33F0",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-4.png"
+      },
+      {
+        "page": 5,
+        "sha256": "4569B2E2F6FA00829190C38644C3C78B96F57D06D9A6E582544F6A8A1C98E8D6",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-5.png"
+      },
+      {
+        "page": 6,
+        "sha256": "3EC261EA8E1CEA9F13C9415BB15167A0E33A32D80D6C7136D5B137DBC13AE8AD",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-6.png"
+      },
+      {
+        "page": 7,
+        "sha256": "19EB8AD7AED7412BE264136D46E5269A4AE5B7E3CFA28A607B07D187C459385F",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-7.png"
+      },
+      {
+        "page": 8,
+        "sha256": "D06B463CCFF22A312799C23A6558DFDBB66685E03D41AA0F9CAB4AF7E7EEA89C",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-8.png"
+      },
+      {
+        "page": 9,
+        "sha256": "DADB5118B227E5AE99E332361701CF70E70320FD09BF85C6BD002066756F65D2",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-9.png"
+      },
+      {
+        "page": 10,
+        "sha256": "2479863291DF1642658DB640FD791832615D7F7EE3FBB4D43FB0EB957951B015",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-10.png"
+      },
+      {
+        "page": 11,
+        "sha256": "8F9B3B0C248710939D5CE0ADB60231E247D41EEB648132EBC4123FDC450327EB",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-11.png"
+      },
+      {
+        "page": 12,
+        "sha256": "B2C4BEC30D6A04DBBC87FD56E1C7DCC883087C8B740D16DB23B4D7B6636B4054",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-12.png"
+      },
+      {
+        "page": 13,
+        "sha256": "B0360E4AB59BF4CCF4F38A294387915489A1F7949BA323B59FACC5B39CC01600",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-13.png"
+      },
+      {
+        "page": 14,
+        "sha256": "66EB3604755AE3F82A6DD61F87D69CF0421477D625DDBF07CAB38A09C3275B51",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-14.png"
+      },
+      {
+        "page": 15,
+        "sha256": "82697D90AA0EC2B99FF6434A9FFD4B6DA1B9557532CC86B74C4BE42F492CBDBC",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-15.png"
+      },
+      {
+        "page": 16,
+        "sha256": "02AD039BB4AEFB7F27AE84806873850F2C5D50BB4885CDB56FDB816B5C8B7766",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-16.png"
+      },
+      {
+        "page": 17,
+        "sha256": "3C591FEF0E0A588A0267EE0F36EBAC5039E585127CE8610C51A5E75248FC8DA6",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-17.png"
+      },
+      {
+        "page": 18,
+        "sha256": "71D09342643F5A22F93BD524325277943228A1B89E0303B7BB068FAD6924516D",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-18.png"
+      },
+      {
+        "page": 19,
+        "sha256": "8D426A753423C2649CA6216EF6AD24BF55EDCB7DF0C618313BF5C41FEF18E4D4",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-19.png"
+      },
+      {
+        "page": 20,
+        "sha256": "A925D4E04657A3D73040CB74AA1C9E8E11B5FB4409865B6D6837947293603CBE",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-20.png"
+      },
+      {
+        "page": 21,
+        "sha256": "AA5651F5A897075CA3FBD259A026C18399900E0884A22CE49F10D44451179A95",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-21.png"
+      },
+      {
+        "page": 22,
+        "sha256": "6B754B61FCE7972C1DAA3B45E05047E572D332C47AA57C7B0A4F2D78278FDB4D",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-22.png"
+      },
+      {
+        "page": 23,
+        "sha256": "A6D53806FF31E2E75F94507592596B744FC7933247BB3EEBB1EBCA2E99BF914D",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-23.png"
+      },
+      {
+        "page": 24,
+        "sha256": "BF177482EED667FFBE3977D5E01B9CA6D3E3FD0E661A927E9B0BE482556DE002",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-24.png"
+      },
+      {
+        "page": 25,
+        "sha256": "3A2845EE8739001ABFB602D91987DB5FEB045C5A423B248D5FEAF2EEBBEF58CE",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-25.png"
+      },
+      {
+        "page": 26,
+        "sha256": "BD1EBE6DC879FADB92C891F4B75F6043B241C4FD2D14EB06949DDFF9CB36BDBF",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-26.png"
+      },
+      {
+        "page": 27,
+        "sha256": "5878E2CEBC5653809136887569B395C59530F105925BB5A582EA4BF77DE655AB",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-27.png"
+      },
+      {
+        "page": 28,
+        "sha256": "A10A23311A5B15B61E32BE664FDCD6850D8BA3B36ACC37181E0498A8766F272F",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-28.png"
+      },
+      {
+        "page": 29,
+        "sha256": "B23F4E2ED0554013283D740404E2957FF2F92045445B661C13FB6F98212434A6",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-29.png"
+      },
+      {
+        "page": 30,
+        "sha256": "1A1ED2A1A6667D8A4FE4EA4C2A465DD9D85EF025606DA5F0B315F7520E9D5F05",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-30.png"
+      },
+      {
+        "page": 31,
+        "sha256": "BA3A308F5E45FE43F368C7678B0249CEE138095ACC52200E2FE16667A65B1A30",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-31.png"
+      },
+      {
+        "page": 32,
+        "sha256": "54CF2774F73BE4497C0AC7EB63A1619E64B0A51194B9366A08A361113ED4D4EE",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-32.png"
+      },
+      {
+        "page": 33,
+        "sha256": "DDA3D6E09B000379423479470619EB4AD5ACCE9A37379174077B662410C4DF43",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-33.png"
+      },
+      {
+        "page": 34,
+        "sha256": "85D1C6DCBD5E0A201550DF7E1F11B5DB37DFE78F72816A5FCD959D41529EFA75",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-34.png"
+      },
+      {
+        "page": 35,
+        "sha256": "AD5A78139DD137E6404E5C0314D7185BA954CE142AAF7404DAF4A24310756F8E",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-35.png"
+      },
+      {
+        "page": 36,
+        "sha256": "7A5298AAC760BE12C65AB3C39C73D71B5285FEA7B45E8931CE90DCC9764CCD94",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-36.png"
+      },
+      {
+        "page": 37,
+        "sha256": "E8A12E9DD18B91E74E79196CA9264F30DE68873F1C33F326E4E7BBE5E81ACA9A",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-37.png"
+      },
+      {
+        "page": 38,
+        "sha256": "DEF3A41750230BF5792D9AE70C1055AD9B886CE1960B82745982FF0C73ADE572",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-38.png"
+      },
+      {
+        "page": 39,
+        "sha256": "02A32CA1B98CF0C55AB01833F493305759F4E21ECEDF9772765D9CB11CE6833F",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-39.png"
+      },
+      {
+        "page": 40,
+        "sha256": "AD19E2AAE5069A7C3857301585855CCEFA43C23EE7F79BBA649234ECA936C681",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-40.png"
+      },
+      {
+        "page": 41,
+        "sha256": "D54000E65BF51132A1F9104535B3AF3113620D037DAE09CCAF98B4B1CE7B1E35",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-41.png"
+      },
+      {
+        "page": 42,
+        "sha256": "002EBCA306DDE04D4028830386934EEED4A868C8D2586EC2E6D8E8EDBE57F8BE",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-42.png"
+      },
+      {
+        "page": 43,
+        "sha256": "92439DA58E6057651AD751951D6EF28A4C1CDAB0BB964367120E93AE4AF80818",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-43.png"
+      },
+      {
+        "page": 44,
+        "sha256": "43E286511D0EF39D7F5CBE141088F8C4C019A8DBFBD788FEE7F55335A81B484B",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-44.png"
+      },
+      {
+        "page": 45,
+        "sha256": "9FAEDA3B0C4DFDBA22C68C76C4FA48802BC0174E99DF83B996F94357A2E2039E",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-45.png"
+      },
+      {
+        "page": 46,
+        "sha256": "5C0A6C16640E25F9770DF763AE426006ED7A3816734B3B940B372F4A93B71854",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-46.png"
+      },
+      {
+        "page": 47,
+        "sha256": "EB64424EDAEC6464274B8A8D6EC57A0CEA21FA57EA61BC11A82AB6D65C1BB4FA",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-47.png"
+      },
+      {
+        "page": 48,
+        "sha256": "58830F80A554F217D44D8E93FED5A736D6CAA7E486CF351BB568FB8979BF9BD4",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-48.png"
+      },
+      {
+        "page": 49,
+        "sha256": "8035CF3FB3E2697DC1EE435F86EED0EDA799FCD1BC41F2463567C1963F25066A",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-49.png"
+      },
+      {
+        "page": 50,
+        "sha256": "8649CA8300912CB4C418B5AFE39907EF8223CEDE657768F9FE6B7FB0D893F82F",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-50.png"
+      },
+      {
+        "page": 51,
+        "sha256": "7B79645D7797F203623059886A39F34321E32A91584B790F54442D85613622F6",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-51.png"
+      },
+      {
+        "page": 52,
+        "sha256": "FEF1E0451DE7AC497979CD2470ACF7DF89794E75E51628810C918030734564E2",
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\rendered\\page-52.png"
+      }
+    ],
+    "scale": 2,
+    "dpi": 144
+  }
+}

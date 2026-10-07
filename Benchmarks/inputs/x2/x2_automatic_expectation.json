@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x2",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a TP15 or TP16 page whose every printed number recomputes from the answer files",
+    "the scene configuration trio asserted as host state, never as a written file",
+    "no manual editing step in the action log"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "no vertical datum is attached to these grids; a real datum-bound product is still not represented here"
+  ]
+}

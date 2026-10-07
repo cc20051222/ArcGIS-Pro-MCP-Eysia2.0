@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x2",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "samplingInterval": 2.0,
+  "path": {
+    "row": 6,
+    "fromCol": 0,
+    "toCol": 40
+  },
+  "vertexCount": 21,
+  "vertices": [
+    {
+      "col": 0,
+      "row": 6,
+      "z": 18.0,
+      "break": false
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "z": 22.0,
+      "break": false
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "z": 26.0,
+      "break": false
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "z": 30.0,
+      "break": false
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "z": -9999.0,
+      "break": true
+    },
+    {
+      "col": 10,
+      "row": 6,
+      "z": -9999.0,
+      "break": true
+    },
+    {
+      "col": 12,
+      "row": 6,
+      "z": 42.0,
+      "break": false
+    },
+    {
+      "col": 14,
+      "row": 6,
+      "z": 46.0,
+      "break": false
+    },
+    {
+      "col": 16,
+      "row": 6,
+      "z": 50.0,
+      "break": false
+    },
+    {
+      "col": 18,
+      "row": 6,
+      "z": 54.0,
+      "break": false
+    },
+    {
+      "col": 20,
+      "row": 6,
+      "z": 58.0,
+      "break": false
+    },
+    {
+      "col": 22,
+      "row": 6,
+      "z": 62.0,
+      "break": false
+    },
+    {
+      "col": 24,
+      "row": 6,
+      "z": 66.0,
+      "break": false
+    },
+    {
+      "col": 26,
+      "row": 6,
+      "z": 70.0,
+      "break": false
+    },
+    {
+      "col": 28,
+      "row": 6,
+      "z": 74.0,
+      "break": false
+    },
+    {
+      "col": 30,
+      "row": 6,
+      "z": 78.0,
+      "break": false
+    },
+    {
+      "col": 32,
+      "row": 6,
+      "z": 82.0,
+      "break": false
+    },
+    {
+      "col": 34,
+      "row": 6,
+      "z": 86.0,
+      "break": false
+    },
+    {
+      "col": 36,
+      "row": 6,
+      "z": 90.0,
+      "break": false
+    },
+    {
+      "col": 38,
+      "row": 6,
+      "z": 94.0,
+      "break": false
+    },
+    {
+      "col": 40,
+      "row": 6,
+      "z": 98.0,
+      "break": false
+    }
+  ],
+  "breaks": [
+    8,
+    10
+  ],
+  "rule": "a vertex inside NoData is published as a break, never as zero and never interpolated"
+}

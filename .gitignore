@@ -1,0 +1,75 @@
+## .NET build output
+bin/
+obj/
+
+## Runtime self-test artifacts
+.runtime/
+
+## UI automation scratch scripts
+.test-uia/
+
+## Build / editor logs
+*.log
+*.user
+.vs/
+
+## Test results
+TestResults/
+
+# D-060: ArcGIS Pro SDK reference sets (Esri EULA; compile-time only, never redistributed)
+sdk-refs/**
+
+# ==== D-148 / G-355 终裁排除面（开源发布，勿放宽） ====
+
+# 方案甲：治理账簿与同步镜像不入库
+Docs/_gatekeeper/
+同步/治理台账全量/
+
+# 运行期产物与宿主/Office/浏览器缓存镜像（含本机身份信息）
+**/office-temp/
+**/office-profile/
+**/browser-cache/**
+**/浏览器独立配置/**
+**/Cache/Cache_Data/**
+**/GrShaderCache/**
+**/DawnGraphiteCache/**
+**/GPUPersistentCache/
+**/packaged-renderer.log
+**/渲染工具诊断.txt
+
+# 历史核验记录与测试运行结果（非对外文档，且含本机绝对路径）
+Docs/phases/
+**/TestResults/
+
+# 运行期根、代理工作目录、发布件二进制与 Esri SDK（EULA：零分发）
+.runtime/
+.workbuddy/
+sdk-refs/
+Archive/
+Release/*.zip
+Release/**/*.zip
+Release/发送给同事-*/
+
+# 兜底
+*.log
+*.user
+.vs/
+bin/
+obj/
+
+# ==== D-148 返工 · G-357 §三：构建中间产物（既含本机绝对路径，又是构建产物，双重理由排除） ====
+**/obj/
+**/bin/
+
+# ==== D-148 返工第三版 · G-359 §二-1：运行日志不入库 ====
+**/*.log
+
+# ==== D-153 · G-362 改判 (乙)：r23 历史验收记录不入公开面（本地保留，治理链不断） ====
+Release/release-acceptance-record-r23-d112.json
+# ==== D-153 · G-362 裁定 (P1)：同步/ 原件不入公开面，脱敏成果以 同步-脱敏/ 发布 ====
+同步/
+
+# ==== D-154 · G-365／G-367 复核采纳：r16 遗留暂存目录、根级构建产物与 Python 字节码缓存 ====
+Release/.staging-oneclick-r16-python/
+/ArcGISProMCP.Core.dll
+**/__pycache__/

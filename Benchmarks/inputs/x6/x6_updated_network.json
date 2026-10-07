@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "d101-updated-v1",
+  "group": "x6",
+  "artefact": "GDOM-04 updated instance",
+  "synthetic": true,
+  "network": {
+    "nodes": {
+      "N1": [
+        0,
+        0
+      ],
+      "N2": [
+        2,
+        0
+      ],
+      "N3": [
+        5,
+        0
+      ],
+      "N4": [
+        5,
+        4
+      ],
+      "N5": [
+        2,
+        4
+      ],
+      "N6": [
+        0,
+        4
+      ],
+      "N7": [
+        7,
+        7
+      ],
+      "N8": [
+        9,
+        7
+      ],
+      "N9": [
+        9,
+        9
+      ]
+    },
+    "edges": [
+      {
+        "from": "N1",
+        "to": "N2",
+        "impedance": 2
+      },
+      {
+        "from": "N2",
+        "to": "N3",
+        "impedance": 6
+      },
+      {
+        "from": "N3",
+        "to": "N4",
+        "impedance": 4
+      },
+      {
+        "from": "N4",
+        "to": "N5",
+        "impedance": 2
+      },
+      {
+        "from": "N5",
+        "to": "N6",
+        "impedance": 3
+      },
+      {
+        "from": "N6",
+        "to": "N1",
+        "impedance": 5
+      },
+      {
+        "from": "N2",
+        "to": "N5",
+        "impedance": 4
+      },
+      {
+        "from": "N5",
+        "to": "N3",
+        "impedance": 6
+      },
+      {
+        "from": "N7",
+        "to": "N8",
+        "impedance": 1
+      },
+      {
+        "from": "N8",
+        "to": "N9",
+        "impedance": 2
+      }
+    ],
+    "directed": true,
+    "units": "cost units (synthetic, not minutes)",
+    "declaredIsolatedComponent": [
+      "N1..N6 cannot reach N7..N9 in either direction"
+    ]
+  },
+  "change": "edge N2->N3 impedance 3 to 6",
+  "expectedDelta": {
+    "N1->N3": 5,
+    "N1->N4": 9,
+    "N1->N5": 6
+  }
+}

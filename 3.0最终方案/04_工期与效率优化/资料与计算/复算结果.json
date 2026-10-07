@@ -1,0 +1,369 @@
+{
+  "status": "PLANNING_ARITHMETIC_CHECKED_NOT_PRODUCT_ACCEPTANCE",
+  "sourceRevision": "V11-DATA-METHOD-AND-MEDIA-20261002",
+  "actualStartDate": null,
+  "actualObservedCosts": null,
+  "actualActivityLedger": null,
+  "actualScheduleWitness": null,
+  "actualProjectFeasibility": "UNKNOWN",
+  "actualProductAcceptance": "NOT_RUN",
+  "full60DayCapacityProven": false,
+  "lifecycleCostAssessment": {
+    "status": "UNKNOWN",
+    "entryCount": 15,
+    "missingFields": [
+      "WI04:clock-context.engineeringHours",
+      "WI04:clock-context.professionalHours",
+      "WI04:clock-context.hostServiceMinutes",
+      "WI04:clock-context.independentQaMinutes",
+      "WI04:clock-context.integrationMinutes",
+      "WI04:clock-context.unallocatedWaitMinutes",
+      "WI04:clock-context.peakOwnedDiskBytes",
+      "WI04:clock-context.evidenceRefs",
+      "WI10:current-time-admission.engineeringHours",
+      "WI10:current-time-admission.professionalHours",
+      "WI10:current-time-admission.hostServiceMinutes",
+      "WI10:current-time-admission.independentQaMinutes",
+      "WI10:current-time-admission.integrationMinutes",
+      "WI10:current-time-admission.unallocatedWaitMinutes",
+      "WI10:current-time-admission.peakOwnedDiskBytes",
+      "WI10:current-time-admission.evidenceRefs",
+      "WI13:licence-validity-adapter.engineeringHours",
+      "WI13:licence-validity-adapter.professionalHours",
+      "WI13:licence-validity-adapter.hostServiceMinutes",
+      "WI13:licence-validity-adapter.independentQaMinutes",
+      "WI13:licence-validity-adapter.integrationMinutes",
+      "WI13:licence-validity-adapter.unallocatedWaitMinutes",
+      "WI13:licence-validity-adapter.peakOwnedDiskBytes",
+      "WI13:licence-validity-adapter.evidenceRefs",
+      "WI15:gp-validity-test.engineeringHours",
+      "WI15:gp-validity-test.professionalHours",
+      "WI15:gp-validity-test.hostServiceMinutes",
+      "WI15:gp-validity-test.independentQaMinutes",
+      "WI15:gp-validity-test.integrationMinutes",
+      "WI15:gp-validity-test.unallocatedWaitMinutes",
+      "WI15:gp-validity-test.peakOwnedDiskBytes",
+      "WI15:gp-validity-test.evidenceRefs",
+      "WI02:retention-index.engineeringHours",
+      "WI02:retention-index.professionalHours",
+      "WI02:retention-index.hostServiceMinutes",
+      "WI02:retention-index.independentQaMinutes",
+      "WI02:retention-index.integrationMinutes",
+      "WI02:retention-index.unallocatedWaitMinutes",
+      "WI02:retention-index.peakOwnedDiskBytes",
+      "WI02:retention-index.evidenceRefs",
+      "WI03:reclaim-reconcile.engineeringHours",
+      "WI03:reclaim-reconcile.professionalHours",
+      "WI03:reclaim-reconcile.hostServiceMinutes",
+      "WI03:reclaim-reconcile.independentQaMinutes",
+      "WI03:reclaim-reconcile.integrationMinutes",
+      "WI03:reclaim-reconcile.unallocatedWaitMinutes",
+      "WI03:reclaim-reconcile.peakOwnedDiskBytes",
+      "WI03:reclaim-reconcile.evidenceRefs",
+      "WI22:delivery-pin-publish.engineeringHours",
+      "WI22:delivery-pin-publish.professionalHours",
+      "WI22:delivery-pin-publish.hostServiceMinutes",
+      "WI22:delivery-pin-publish.independentQaMinutes",
+      "WI22:delivery-pin-publish.integrationMinutes",
+      "WI22:delivery-pin-publish.unallocatedWaitMinutes",
+      "WI22:delivery-pin-publish.peakOwnedDiskBytes",
+      "WI22:delivery-pin-publish.evidenceRefs",
+      "WI23:validity-and-read-pin.engineeringHours",
+      "WI23:validity-and-read-pin.professionalHours",
+      "WI23:validity-and-read-pin.hostServiceMinutes",
+      "WI23:validity-and-read-pin.independentQaMinutes",
+      "WI23:validity-and-read-pin.integrationMinutes",
+      "WI23:validity-and-read-pin.unallocatedWaitMinutes",
+      "WI23:validity-and-read-pin.peakOwnedDiskBytes",
+      "WI23:validity-and-read-pin.evidenceRefs",
+      "WI28:lifecycle-workbench.engineeringHours",
+      "WI28:lifecycle-workbench.professionalHours",
+      "WI28:lifecycle-workbench.hostServiceMinutes",
+      "WI28:lifecycle-workbench.independentQaMinutes",
+      "WI28:lifecycle-workbench.integrationMinutes",
+      "WI28:lifecycle-workbench.unallocatedWaitMinutes",
+      "WI28:lifecycle-workbench.peakOwnedDiskBytes",
+      "WI28:lifecycle-workbench.evidenceRefs",
+      "WI11:source-verification-watermark.engineeringHours",
+      "WI11:source-verification-watermark.professionalHours",
+      "WI11:source-verification-watermark.hostServiceMinutes",
+      "WI11:source-verification-watermark.independentQaMinutes",
+      "WI11:source-verification-watermark.integrationMinutes",
+      "WI11:source-verification-watermark.unallocatedWaitMinutes",
+      "WI11:source-verification-watermark.peakOwnedDiskBytes",
+      "WI11:source-verification-watermark.evidenceRefs",
+      "WI12:bundle-member-closure.engineeringHours",
+      "WI12:bundle-member-closure.professionalHours",
+      "WI12:bundle-member-closure.hostServiceMinutes",
+      "WI12:bundle-member-closure.independentQaMinutes",
+      "WI12:bundle-member-closure.integrationMinutes",
+      "WI12:bundle-member-closure.unallocatedWaitMinutes",
+      "WI12:bundle-member-closure.peakOwnedDiskBytes",
+      "WI12:bundle-member-closure.evidenceRefs",
+      "WI15:update-canary-recovery-cases.engineeringHours",
+      "WI15:update-canary-recovery-cases.professionalHours",
+      "WI15:update-canary-recovery-cases.hostServiceMinutes",
+      "WI15:update-canary-recovery-cases.independentQaMinutes",
+      "WI15:update-canary-recovery-cases.integrationMinutes",
+      "WI15:update-canary-recovery-cases.unallocatedWaitMinutes",
+      "WI15:update-canary-recovery-cases.peakOwnedDiskBytes",
+      "WI15:update-canary-recovery-cases.evidenceRefs",
+      "WI06:content-origin-and-intent-binding.engineeringHours",
+      "WI06:content-origin-and-intent-binding.professionalHours",
+      "WI06:content-origin-and-intent-binding.hostServiceMinutes",
+      "WI06:content-origin-and-intent-binding.independentQaMinutes",
+      "WI06:content-origin-and-intent-binding.integrationMinutes",
+      "WI06:content-origin-and-intent-binding.unallocatedWaitMinutes",
+      "WI06:content-origin-and-intent-binding.peakOwnedDiskBytes",
+      "WI06:content-origin-and-intent-binding.evidenceRefs",
+      "WI17:style-candidate-consumption.engineeringHours",
+      "WI17:style-candidate-consumption.professionalHours",
+      "WI17:style-candidate-consumption.hostServiceMinutes",
+      "WI17:style-candidate-consumption.independentQaMinutes",
+      "WI17:style-candidate-consumption.integrationMinutes",
+      "WI17:style-candidate-consumption.unallocatedWaitMinutes",
+      "WI17:style-candidate-consumption.peakOwnedDiskBytes",
+      "WI17:style-candidate-consumption.evidenceRefs",
+      "WI27:learning-feedback-provenance.engineeringHours",
+      "WI27:learning-feedback-provenance.professionalHours",
+      "WI27:learning-feedback-provenance.hostServiceMinutes",
+      "WI27:learning-feedback-provenance.independentQaMinutes",
+      "WI27:learning-feedback-provenance.integrationMinutes",
+      "WI27:learning-feedback-provenance.unallocatedWaitMinutes",
+      "WI27:learning-feedback-provenance.peakOwnedDiskBytes",
+      "WI27:learning-feedback-provenance.evidenceRefs"
+    ],
+    "wholeProjectWitness": false,
+    "originalWiDetailOnly": true,
+    "noInventedTotalsOrDates": true
+  },
+  "actualServiceCapacityAssessment": {
+    "status": "UNKNOWN",
+    "missingFields": [
+      "actualServiceCapacity.measurementWindowStart",
+      "actualServiceCapacity.measurementWindowEnd",
+      "actualServiceCapacity.capacityWindowStart",
+      "actualServiceCapacity.capacityWindowEnd",
+      "actualServiceCapacity.remainingQualificationUnitRefs",
+      "actualServiceCapacity.resourcePools",
+      "actualServiceCapacity.stages",
+      "actualServiceCapacity.evidenceRefs",
+      "qualificationStrata.classificationVersion",
+      "qualificationStrata.remainingQualificationUnitRefs",
+      "qualificationStrata.assignments",
+      "qualificationStrata.strata"
+    ],
+    "resourcePoolRows": [],
+    "fullProjectFeasibility": "UNKNOWN",
+    "isCapacityProof": false,
+    "actualProductAcceptance": "NOT_RUN"
+  },
+  "sharedPoolLongTailExampleOnly": {
+    "status": "ESTIMATED_SERVICE_OVERLOAD",
+    "missingFields": [],
+    "resourcePoolRows": [
+      {
+        "poolId": "EXAMPLE_SHARED_HOST",
+        "netAvailableMinutesExact": "500",
+        "estimatedDemandMinutesExact": "520",
+        "netAvailableMinutes": 500.0,
+        "estimatedDemandMinutes": 520.0,
+        "estimatedLoadGapMinutes": 20.0,
+        "estimatedOverloadMinutes": 20.0,
+        "stageRows": [
+          {
+            "stageId": "EXAMPLE_PRO",
+            "stratumRows": [
+              {
+                "stratumId": "EXAMPLE_SIMPLE",
+                "remainingUniqueUnits": 40,
+                "estimatedMinutesPerNetAccepted": 2.0,
+                "estimatedLoadMinutes": 80.0
+              },
+              {
+                "stratumId": "EXAMPLE_COMPLEX",
+                "remainingUniqueUnits": 10,
+                "estimatedMinutesPerNetAccepted": 20.0,
+                "estimatedLoadMinutes": 200.0
+              }
+            ],
+            "estimatedDemandMinutes": 280.0
+          },
+          {
+            "stageId": "EXAMPLE_PS",
+            "stratumRows": [
+              {
+                "stratumId": "EXAMPLE_SIMPLE",
+                "remainingUniqueUnits": 40,
+                "estimatedMinutesPerNetAccepted": 3.0,
+                "estimatedLoadMinutes": 120.0
+              },
+              {
+                "stratumId": "EXAMPLE_COMPLEX",
+                "remainingUniqueUnits": 10,
+                "estimatedMinutesPerNetAccepted": 10.0,
+                "estimatedLoadMinutes": 100.0
+              }
+            ],
+            "estimatedDemandMinutes": 220.0
+          }
+        ],
+        "capacityCountedOnce": true
+      }
+    ],
+    "remainingUniqueUnits": 50,
+    "primaryStratumCounts": {
+      "EXAMPLE_SIMPLE": 40,
+      "EXAMPLE_COMPLEX": 10
+    },
+    "fullProjectFeasibility": "UNKNOWN",
+    "isCapacityProof": false,
+    "actualProductAcceptance": "NOT_RUN",
+    "caveat": "Observed means are estimates; calendar/arrival/peak load and full activities still require a schedule witness"
+  },
+  "workItemCount": 30,
+  "ownerCounts": {
+    "E1": 5,
+    "E2": 6,
+    "E3": 9,
+    "E4": 6,
+    "E5": 4
+  },
+  "dependenciesAcyclic": true,
+  "originalGateCount": 18,
+  "additionalGateCount": 11,
+  "qualificationExamplesOnly": [
+    {
+      "K_GP": 2100,
+      "K_overlap": 2100,
+      "Q0_union": 0,
+      "K_sem": 3000,
+      "K_union": 3000,
+      "requiredNetAcceptedPerWeek": 750,
+      "reviewMinuteUpperBoundAt25Hours": 2.0,
+      "hostMinuteUpperBoundAt60Hours": 4.8
+    },
+    {
+      "K_GP": 2100,
+      "K_overlap": 816,
+      "Q0_union": 0,
+      "K_sem": 3000,
+      "K_union": 4284,
+      "requiredNetAcceptedPerWeek": 1071,
+      "reviewMinuteUpperBoundAt25Hours": 1.4005602240896358,
+      "hostMinuteUpperBoundAt60Hours": 3.361344537815126
+    },
+    {
+      "K_GP": 2100,
+      "K_overlap": 0,
+      "Q0_union": 0,
+      "K_sem": 3000,
+      "K_union": 5100,
+      "requiredNetAcceptedPerWeek": 1275,
+      "reviewMinuteUpperBoundAt25Hours": 1.1764705882352942,
+      "hostMinuteUpperBoundAt60Hours": 2.823529411764706
+    }
+  ],
+  "serviceBoundsExamplesOnly": {
+    "reviewCostMinutesExact": "7/5",
+    "reviewWeeklyUpperBound": 1071,
+    "hostWeeklyUpperBound": 1200,
+    "preparationWeeklyUpperBound": 1200,
+    "jointResourceSchedulingStillRequired": true,
+    "fourWeekNonCarryoverReviewUpperBound": 4284,
+    "fourWeekNonCarryoverMinimumOverlap": 816,
+    "fourWeekCarryoverReviewUpperBound": 4285,
+    "fourWeekCarryoverMinimumOverlap": 815,
+    "inputsAreExamplesOnly": true,
+    "ratesFromObservedMeansWouldStillBeEstimates": true,
+    "isCapacityProof": false
+  },
+  "D28ResidualExamplesOnly": [
+    {
+      "dayEnd": 28,
+      "target": 3000,
+      "currentValidAccepted": 1500,
+      "remaining": 1500,
+      "qualificationDaysLeft": 14,
+      "requiredNetAcceptedPerWeek": 750
+    },
+    {
+      "dayEnd": 28,
+      "target": 3000,
+      "currentValidAccepted": 1200,
+      "remaining": 1800,
+      "qualificationDaysLeft": 14,
+      "requiredNetAcceptedPerWeek": 900
+    },
+    {
+      "dayEnd": 28,
+      "target": 3000,
+      "currentValidAccepted": 1400,
+      "remaining": 1600,
+      "qualificationDaysLeft": 14,
+      "requiredNetAcceptedPerWeek": 800
+    }
+  ],
+  "lowerBoundExamplesOnly": [
+    {
+      "netRatePerWeek": 180,
+      "K_union": 3000,
+      "Q0_union": 0,
+      "qualificationWeeks": 16.666666666666668,
+      "lowerBoundWeeks": 20.666666666666668,
+      "lowerBoundCalendarDaysCeil": 145,
+      "isWholeProjectForecast": false
+    },
+    {
+      "netRatePerWeek": 300,
+      "K_union": 3000,
+      "Q0_union": 0,
+      "qualificationWeeks": 10.0,
+      "lowerBoundWeeks": 14.0,
+      "lowerBoundCalendarDaysCeil": 98,
+      "isWholeProjectForecast": false
+    },
+    {
+      "netRatePerWeek": 525,
+      "K_union": 3000,
+      "Q0_union": 0,
+      "qualificationWeeks": 5.714285714285714,
+      "lowerBoundWeeks": 9.714285714285714,
+      "lowerBoundCalendarDaysCeil": 68,
+      "isWholeProjectForecast": false
+    },
+    {
+      "netRatePerWeek": 750,
+      "K_union": 3000,
+      "Q0_union": 0,
+      "qualificationWeeks": 4.0,
+      "lowerBoundWeeks": 8.0,
+      "lowerBoundCalendarDaysCeil": 56,
+      "isWholeProjectForecast": false
+    },
+    {
+      "netRatePerWeek": 1275,
+      "K_union": 5100,
+      "Q0_union": 0,
+      "qualificationWeeks": 4.0,
+      "lowerBoundWeeks": 8.0,
+      "lowerBoundCalendarDaysCeil": 56,
+      "isWholeProjectForecast": false
+    }
+  ],
+  "lateWI30CounterexampleNotMeasured": {
+    "prerequisiteEndDay": 43,
+    "implementationDays": 10,
+    "packageDaysAfterFunctional": 7,
+    "functionalEarliestDay": 53,
+    "releaseEarliestDay": 60
+  },
+  "fivePackagePipelineExampleNotMeasured": {
+    "packages": 5,
+    "integrationMinutesEach": 20,
+    "reviewMinutesEach": 10,
+    "lastIntegrationFinishMinutes": 100,
+    "lastReviewFinishMinutes": 110
+  },
+  "noProductCommandsOrLiveEffects": true
+}

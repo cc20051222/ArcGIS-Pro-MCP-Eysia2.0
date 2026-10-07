@@ -1,0 +1,13 @@
+category,indicator,value,source,period
+transport,busRoutes,12,synthetic register,2024-Q1
+transport,railStations,7,synthetic register,2024-Q1
+transport,averageHeadwayMinutes,8.5,synthetic register,2024-Q1
+green,parkAreaHectares,143,synthetic register,2024-Q1
+green,treeCanopyPercent,21.4,synthetic register,2024-Q1
+housing,permits,318,synthetic register,2024-Q1
+housing,vacant,44,synthetic register,2024-Q1
+housing,vacancyRatePercent,12.2,synthetic register,2024-Q1
+services,clinics,5,synthetic register,2024-Q1
+services,averageTravelMinutes,17,synthetic register,2024-Q1
+housing,renovations,26,synthetic register,2024-Q2
+green,newTrees,640,synthetic register,2024-Q2

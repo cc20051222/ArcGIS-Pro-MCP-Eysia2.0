@@ -1,0 +1,2733 @@
+{
+  "kind": "support-implementation-planning-only",
+  "schemaVersion": "proposal-1",
+  "date": "2026-10-01",
+  "status": "PASS_CANDIDATE_PLANNING_ONLY",
+  "isExecutableMcpSchema": false,
+  "runtimeEvidence": [],
+  "facts": {
+    "source": "G-240 plus read-only source review",
+    "latestDispatchObserved": "G-240",
+    "registeredTools": 224,
+    "candidateCatalog": 285,
+    "errorCodes": 33,
+    "gpWhitelist": 53,
+    "sourceDefaultTfm": "net6.0-windows",
+    "packagePolicyVariants": [
+      "net6.0-windows",
+      "net8.0-windows"
+    ],
+    "policyVerifiedProSeries": [
+      "3.5"
+    ],
+    "currentMcpImplementationVersion": "2024-11-05",
+    "mcpMultiversionNegotiationImplemented": false,
+    "psPersistentTokenCarrier": "process-memory-dictionaries",
+    "modelAdapterRuntimeEvidence": []
+  },
+  "contracts": [
+    {
+      "id": "SP01",
+      "name": "ProviderCapabilityProfile",
+      "workItemRef": "WI10",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP02",
+      "name": "ProposalEnvelope",
+      "workItemRef": "WI09",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP03",
+      "name": "ExposurePolicy",
+      "workItemRef": "WI10",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP04",
+      "name": "EnvironmentCapabilitySnapshot",
+      "workItemRef": "WI30",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP05",
+      "name": "FormatActionSupportRow",
+      "workItemRef": "WI15",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP06",
+      "name": "ResourcePackManifest",
+      "workItemRef": "WI30",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP07",
+      "name": "RecipeFormSpec",
+      "workItemRef": "WI28",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SP08",
+      "name": "TaskReadinessReport",
+      "workItemRef": "WI09",
+      "status": "PROPOSED_INTERNAL_CONTRACT",
+      "runtimeEvidence": []
+    }
+  ],
+  "modelRoutes": [
+    {
+      "id": "MR01",
+      "family": "OpenAIResponses",
+      "workItemRef": "WI10",
+      "status": "PLANNED",
+      "requiresVerifiedProfile": true
+    },
+    {
+      "id": "MR02",
+      "family": "ChatCompletionsCompatible",
+      "workItemRef": "WI10",
+      "status": "PLANNED",
+      "requiresVerifiedProfile": true
+    },
+    {
+      "id": "MR03",
+      "family": "ProviderNative",
+      "workItemRef": "WI10",
+      "status": "PLANNED",
+      "requiresVerifiedProfile": true
+    },
+    {
+      "id": "MR04",
+      "family": "ExistingLocalHttp",
+      "workItemRef": "WI10",
+      "status": "PLANNED",
+      "requiresVerifiedProfile": true,
+      "autoInstallAllowed": false
+    },
+    {
+      "id": "MR05",
+      "family": "DeterministicRecipeForm",
+      "workItemRef": "WI28",
+      "status": "PLANNED",
+      "countsAsModel": false
+    }
+  ],
+  "providerStatusValues": [
+    "VALID_PROPOSAL",
+    "INVALID_SCHEMA",
+    "SEMANTIC_REJECTED",
+    "REFUSED",
+    "INCOMPLETE",
+    "TRANSIENT_FAULT",
+    "CANCELLED",
+    "UNAVAILABLE",
+    "BUDGET_EXHAUSTED"
+  ],
+  "formatActions": [
+    "READ",
+    "WRITE_NEW",
+    "QUERY",
+    "EDIT_OWNED",
+    "ROUND_TRIP"
+  ],
+  "formatFamilies": [
+    {
+      "id": "FileGDB",
+      "focus": "schema-domain-relationship-lock",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "SHP",
+      "focus": "sidecars-fields-encoding-null",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "CSV",
+      "focus": "delimiters-quotes-types-coordinates",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "XLSX",
+      "focus": "sheets-formulas-cached-values-dates",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "GeoJSON",
+      "focus": "coordinates-geometry-properties-crs-semantics",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "GeoPackage",
+      "focus": "container-geometry-columns-integrity",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "GeoParquet",
+      "focus": "geometry-metadata-version-partitions",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "FlatGeobuf",
+      "focus": "spatial-index-fields-completeness",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "GeoTIFF",
+      "focus": "pixels-grid-mask-nodata-bit-depth",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "COG",
+      "focus": "cog-structure-and-pixel-equivalence",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "NetCDF",
+      "focus": "dimensions-calendar-units",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "Zarr",
+      "focus": "version-chunks-metadata-science",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "LAS",
+      "focus": "points-classification-vertical-reference",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "LAZ",
+      "focus": "verified-codec-point-semantics",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "COPC",
+      "focus": "hierarchy-range-points",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "CAD",
+      "focus": "exact-dwg-dxf-version-text-curves-crs",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "CoordinateTXT",
+      "focus": "profile-precision-rings-grouping",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "STAC",
+      "focus": "item-asset-pagination-time-space",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "OGCService",
+      "focus": "exact-protocol-capabilities-axis-pagination",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "ArcGISService",
+      "focus": "service-type-pagination-permissions-costs",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "DocumentSource",
+      "focus": "page-cell-original-string-ocr-adoption",
+      "exactVersions": "REQUIRES_EXPLICIT_PROFILE",
+      "runtimeEvidence": []
+    }
+  ],
+  "formatActionInventory": [
+    {
+      "id": "FA-FileGDB-READ",
+      "formatId": "FileGDB",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FileGDB-WRITE_NEW",
+      "formatId": "FileGDB",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FileGDB-QUERY",
+      "formatId": "FileGDB",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FileGDB-EDIT_OWNED",
+      "formatId": "FileGDB",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FileGDB-ROUND_TRIP",
+      "formatId": "FileGDB",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-SHP-READ",
+      "formatId": "SHP",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-SHP-WRITE_NEW",
+      "formatId": "SHP",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-SHP-QUERY",
+      "formatId": "SHP",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-SHP-EDIT_OWNED",
+      "formatId": "SHP",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-SHP-ROUND_TRIP",
+      "formatId": "SHP",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CSV-READ",
+      "formatId": "CSV",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CSV-WRITE_NEW",
+      "formatId": "CSV",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CSV-QUERY",
+      "formatId": "CSV",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CSV-EDIT_OWNED",
+      "formatId": "CSV",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CSV-ROUND_TRIP",
+      "formatId": "CSV",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-XLSX-READ",
+      "formatId": "XLSX",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-XLSX-WRITE_NEW",
+      "formatId": "XLSX",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-XLSX-QUERY",
+      "formatId": "XLSX",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-XLSX-EDIT_OWNED",
+      "formatId": "XLSX",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-XLSX-ROUND_TRIP",
+      "formatId": "XLSX",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoJSON-READ",
+      "formatId": "GeoJSON",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoJSON-WRITE_NEW",
+      "formatId": "GeoJSON",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoJSON-QUERY",
+      "formatId": "GeoJSON",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoJSON-EDIT_OWNED",
+      "formatId": "GeoJSON",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoJSON-ROUND_TRIP",
+      "formatId": "GeoJSON",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoPackage-READ",
+      "formatId": "GeoPackage",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoPackage-WRITE_NEW",
+      "formatId": "GeoPackage",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoPackage-QUERY",
+      "formatId": "GeoPackage",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoPackage-EDIT_OWNED",
+      "formatId": "GeoPackage",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoPackage-ROUND_TRIP",
+      "formatId": "GeoPackage",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoParquet-READ",
+      "formatId": "GeoParquet",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoParquet-WRITE_NEW",
+      "formatId": "GeoParquet",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoParquet-QUERY",
+      "formatId": "GeoParquet",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoParquet-EDIT_OWNED",
+      "formatId": "GeoParquet",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoParquet-ROUND_TRIP",
+      "formatId": "GeoParquet",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FlatGeobuf-READ",
+      "formatId": "FlatGeobuf",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FlatGeobuf-WRITE_NEW",
+      "formatId": "FlatGeobuf",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FlatGeobuf-QUERY",
+      "formatId": "FlatGeobuf",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FlatGeobuf-EDIT_OWNED",
+      "formatId": "FlatGeobuf",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-FlatGeobuf-ROUND_TRIP",
+      "formatId": "FlatGeobuf",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoTIFF-READ",
+      "formatId": "GeoTIFF",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoTIFF-WRITE_NEW",
+      "formatId": "GeoTIFF",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoTIFF-QUERY",
+      "formatId": "GeoTIFF",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoTIFF-EDIT_OWNED",
+      "formatId": "GeoTIFF",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-GeoTIFF-ROUND_TRIP",
+      "formatId": "GeoTIFF",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COG-READ",
+      "formatId": "COG",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COG-WRITE_NEW",
+      "formatId": "COG",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COG-QUERY",
+      "formatId": "COG",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COG-EDIT_OWNED",
+      "formatId": "COG",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COG-ROUND_TRIP",
+      "formatId": "COG",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-NetCDF-READ",
+      "formatId": "NetCDF",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-NetCDF-WRITE_NEW",
+      "formatId": "NetCDF",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-NetCDF-QUERY",
+      "formatId": "NetCDF",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-NetCDF-EDIT_OWNED",
+      "formatId": "NetCDF",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-NetCDF-ROUND_TRIP",
+      "formatId": "NetCDF",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-Zarr-READ",
+      "formatId": "Zarr",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-Zarr-WRITE_NEW",
+      "formatId": "Zarr",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-Zarr-QUERY",
+      "formatId": "Zarr",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-Zarr-EDIT_OWNED",
+      "formatId": "Zarr",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-Zarr-ROUND_TRIP",
+      "formatId": "Zarr",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAS-READ",
+      "formatId": "LAS",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAS-WRITE_NEW",
+      "formatId": "LAS",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAS-QUERY",
+      "formatId": "LAS",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAS-EDIT_OWNED",
+      "formatId": "LAS",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAS-ROUND_TRIP",
+      "formatId": "LAS",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAZ-READ",
+      "formatId": "LAZ",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAZ-WRITE_NEW",
+      "formatId": "LAZ",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAZ-QUERY",
+      "formatId": "LAZ",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAZ-EDIT_OWNED",
+      "formatId": "LAZ",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-LAZ-ROUND_TRIP",
+      "formatId": "LAZ",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COPC-READ",
+      "formatId": "COPC",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COPC-WRITE_NEW",
+      "formatId": "COPC",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COPC-QUERY",
+      "formatId": "COPC",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COPC-EDIT_OWNED",
+      "formatId": "COPC",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-COPC-ROUND_TRIP",
+      "formatId": "COPC",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CAD-READ",
+      "formatId": "CAD",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CAD-WRITE_NEW",
+      "formatId": "CAD",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CAD-QUERY",
+      "formatId": "CAD",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CAD-EDIT_OWNED",
+      "formatId": "CAD",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CAD-ROUND_TRIP",
+      "formatId": "CAD",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CoordinateTXT-READ",
+      "formatId": "CoordinateTXT",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CoordinateTXT-WRITE_NEW",
+      "formatId": "CoordinateTXT",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CoordinateTXT-QUERY",
+      "formatId": "CoordinateTXT",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CoordinateTXT-EDIT_OWNED",
+      "formatId": "CoordinateTXT",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-CoordinateTXT-ROUND_TRIP",
+      "formatId": "CoordinateTXT",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-STAC-READ",
+      "formatId": "STAC",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-STAC-WRITE_NEW",
+      "formatId": "STAC",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-STAC-QUERY",
+      "formatId": "STAC",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-STAC-EDIT_OWNED",
+      "formatId": "STAC",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-STAC-ROUND_TRIP",
+      "formatId": "STAC",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-OGCService-READ",
+      "formatId": "OGCService",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-OGCService-WRITE_NEW",
+      "formatId": "OGCService",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-OGCService-QUERY",
+      "formatId": "OGCService",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-OGCService-EDIT_OWNED",
+      "formatId": "OGCService",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-OGCService-ROUND_TRIP",
+      "formatId": "OGCService",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-ArcGISService-READ",
+      "formatId": "ArcGISService",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-ArcGISService-WRITE_NEW",
+      "formatId": "ArcGISService",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-ArcGISService-QUERY",
+      "formatId": "ArcGISService",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-ArcGISService-EDIT_OWNED",
+      "formatId": "ArcGISService",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-ArcGISService-ROUND_TRIP",
+      "formatId": "ArcGISService",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-DocumentSource-READ",
+      "formatId": "DocumentSource",
+      "action": "READ",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-DocumentSource-WRITE_NEW",
+      "formatId": "DocumentSource",
+      "action": "WRITE_NEW",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-DocumentSource-QUERY",
+      "formatId": "DocumentSource",
+      "action": "QUERY",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-DocumentSource-EDIT_OWNED",
+      "formatId": "DocumentSource",
+      "action": "EDIT_OWNED",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    },
+    {
+      "id": "FA-DocumentSource-ROUND_TRIP",
+      "formatId": "DocumentSource",
+      "action": "ROUND_TRIP",
+      "actionDecision": "REVIEW_REQUIRED",
+      "isReleasePromise": false,
+      "maturity": "DECLARED",
+      "environmentAvailability": "UNKNOWN",
+      "profileKeyRequirements": [
+        "formatVersion",
+        "adapterId",
+        "adapterVersion",
+        "supportedDomainDigest"
+      ],
+      "evidenceRefs": []
+    }
+  ],
+  "formatSupportKey": [
+    "formatId",
+    "formatVersion",
+    "action",
+    "adapterId",
+    "adapterVersion",
+    "supportedDomainDigest"
+  ],
+  "availabilityStates": [
+    "AVAILABLE",
+    "CONDITIONAL",
+    "UNAVAILABLE",
+    "UNKNOWN"
+  ],
+  "maturityStates": [
+    "DECLARED",
+    "CONTRACT_DEFINED",
+    "IMPLEMENTED",
+    "RUNTIME_VERIFIED",
+    "E2E_VERIFIED",
+    "INDEPENDENTLY_ACCEPTED"
+  ],
+  "taskReadinessStates": [
+    "READY_FOR_ORIGINAL_CONTRACT",
+    "READY_WITHIN_ADOPTED_EQUIVALENCE",
+    "OPTIONAL_GAPS_ONLY",
+    "WAITING_REQUIRED_CAPABILITY"
+  ],
+  "resourcePack": {
+    "schemaStatus": "PROPOSED_INTERNAL",
+    "allowedContent": [
+      "DeclarativeRecipe",
+      "RestrictedRuleAst",
+      "DesignTemplateSpec",
+      "OfficeTemplateSpec",
+      "StaticAsset",
+      "MethodCard",
+      "Citation",
+      "SyntheticFixture",
+      "EvidenceMetadata"
+    ],
+    "prohibitedContent": [
+      "Credentials",
+      "HistoricalApproval",
+      "LocalFileToken",
+      "UserAbsoluteProjectPath",
+      "ArbitraryPython",
+      "ArbitraryJavaScript",
+      "Dll",
+      "InstallCommand",
+      "DynamicDependencyDownload"
+    ],
+    "stateFlow": [
+      "IMPORTED_CANDIDATE",
+      "STRUCTURE_VALIDATED",
+      "DEPENDENCIES_VALIDATED",
+      "QUALIFIED_CANDIDATE",
+      "INDEPENDENTLY_ADOPTED",
+      "RETIRED_FOR_NEW_SELECTION"
+    ],
+    "importDispatchesHost": false,
+    "oldTasksLockVersion": true,
+    "hashAloneProvesTrust": false,
+    "retirementDeletesHistory": false,
+    "stateFlowMeaning": "SUCCESS_PATH_NOT_AUTOMATIC_IMPORT_EXECUTION",
+    "waitingAndRejectedStates": ["WAITING_REQUIRED_CAPABILITY", "WAITING_QUALIFICATION", "WAITING_ADOPTION", "REJECTED"],
+    "stateReasonRequired": true,
+    "importChecksExistingQualificationEvidenceOnly": true,
+    "qualificationJobSeparateFromImport": true,
+    "qualificationJobRequires": ["CURRENT_APPROVAL", "OWNED_FIXTURE", "COMMON_INVOKER_GATE", "CONTENT_ORACLE", "INDEPENDENT_EVIDENCE"],
+    "packageSelfClaimAdvancesLocalState": false,
+    "importAndQualificationHaveSeparateIdsAndReceipts": true
+  },
+  "caseGroups": {
+    "model": [
+      {
+        "id": "MC01",
+        "inputCase": "complete-schema-current-semantic-valid",
+        "expected": "ADOPT_PROPOSAL_ONLY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC02",
+        "inputCase": "complete-schema-but-wrong-unit-or-method",
+        "expected": "REJECT_SEMANTIC",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC03",
+        "inputCase": "invalid-schema-extra-unapproved-field",
+        "expected": "REJECT_SCHEMA",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC04",
+        "inputCase": "provider-refusal",
+        "expected": "SHOW_REFUSAL_NO_ADOPTION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC05",
+        "inputCase": "incomplete-stream-or-token-limit",
+        "expected": "DISCARD_INCOMPLETE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC06",
+        "inputCase": "late-response-old-revision-or-invalidated-generation-same-revision",
+        "expected": "REJECT_STALE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC07",
+        "inputCase": "duplicate-slot-reply-even-with-different-request-or-proposal-id",
+        "expected": "IGNORE_DUPLICATE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC08",
+        "inputCase": "language-request-user-cancelled",
+        "expected": "CANCEL_LANGUAGE_ONLY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC09",
+        "inputCase": "temporary-429-valid-delay-within-budget",
+        "expected": "BOUNDED_LANGUAGE_RETRY_ONLY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC10",
+        "inputCase": "quota-or-account-error",
+        "expected": "WAIT_CONFIGURATION_NO_RETRY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC11",
+        "inputCase": "server-delay-exceeds-remaining-deadline",
+        "expected": "DEFER_NO_EARLY_RETRY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC12",
+        "inputCase": "usage-cost-unknown-with-strict-budget",
+        "expected": "WAIT_BUDGET_DECISION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC13",
+        "inputCase": "local-to-remote-outside-exposure-scope",
+        "expected": "REJECT_SEND",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC14",
+        "inputCase": "model-fails-while-fixed-host-action-runs",
+        "expected": "KEEP_HOST_CONTROL_NO_REDISPATCH",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC15",
+        "inputCase": "missing-required-psd-capability",
+        "expected": "WAIT_ORIGINAL_OUTPUT_CONTRACT",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC16",
+        "inputCase": "no-model-qualified-standard-form-dependencies-ready",
+        "expected": "RUN_SAME_VALIDATED_CHAIN",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC17",
+        "inputCase": "sent-attempt-timeout-cancel-missing-usage-or-missing-provider-request-id",
+        "expected": "KEEP_UNKNOWN_COST_RESERVATION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC18",
+        "inputCase": "duplicate-late-usage-and-concurrent-requests-without-provider-id",
+        "expected": "RECONCILE_COST_ONCE_NO_HOST_DISPATCH",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC19",
+        "inputCase": "interleaved-stream-output-call-items",
+        "expected": "ASSEMBLE_SEPARATE_COMPLETE_BUCKETS",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC20",
+        "inputCase": "stream-bytes-events-or-payload-depth-over-limit",
+        "expected": "FAIL_EXPLICITLY_NO_VALID_TRUNCATED_PROPOSAL",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC21",
+        "inputCase": "sdk-retries-plus-schema-repair-reach-attempt-limit",
+        "expected": "STOP_WITHIN_PER_LOGICAL_REQUEST_TOTAL",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "MC22",
+        "inputCase": "model-switch-plan-revision-or-restart-near-root-limit",
+        "expected": "PRESERVE_ROOT_BUDGET_NO_RESET",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "expectedUnapprovedHostDispatches": 0,
+        "expectedDuplicateHostDispatches": 0,
+        "runtimeEvidence": []
+      }
+    ],
+    "pack": [
+      {
+        "id": "PC01",
+        "inputCase": "valid-manifest-and-closed-content",
+        "expected": "IMPORT_CANDIDATE_NO_EXECUTION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC02",
+        "inputCase": "parent-path-or-member-escape",
+        "expected": "REJECT_PATH",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC03",
+        "inputCase": "unknown-executable-content",
+        "expected": "REJECT_CONTENT_TYPE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC04",
+        "inputCase": "credentials-or-local-token-in-package",
+        "expected": "REJECT_SECRET",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC05",
+        "inputCase": "historical-approval-in-package",
+        "expected": "REJECT_AUTHORIZATION_TRANSFER",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC06",
+        "inputCase": "dependency-cycle-or-version-conflict",
+        "expected": "REJECT_DEPENDENCY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC07",
+        "inputCase": "required-font-or-icc-missing",
+        "expected": "WAIT_REQUIRED_CAPABILITY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC08",
+        "inputCase": "self-claimed-trusted-origin-not-verified",
+        "expected": "REJECT_TRUST_CLAIM",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC09",
+        "inputCase": "member-digest-mismatch",
+        "expected": "REJECT_INTEGRITY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC10",
+        "inputCase": "retired-pack-referenced-by-old-task",
+        "expected": "PRESERVE_LOCKED_HISTORY_BLOCK_NEW_SELECTION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC11",
+        "inputCase": "template-overrides-protected-quantitative-colors",
+        "expected": "REJECT_SCIENCE_CHANGE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC12",
+        "inputCase": "offline-but-required-asset-is-remote",
+        "expected": "WAIT_REQUIRED_NETWORK",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC13",
+        "inputCase": "package-self-reports-qualified-or-adopted",
+        "expected": "IGNORE_LOCAL_STATE_CLAIM_WAIT_EVIDENCE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      },
+      {
+        "id": "PC14",
+        "inputCase": "qualification-missing-import-only-authorized",
+        "expected": "IMPORT_CANDIDATE_WAIT_SEPARATE_QUALIFICATION_JOB",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "importCanDispatchHost": false,
+        "runtimeEvidence": []
+      }
+    ],
+    "format": [
+      {
+        "id": "FC01",
+        "inputCase": "read-verified-write-not-verified",
+        "expected": "KEEP_ACTION_STATUSES_SEPARATE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC02",
+        "inputCase": "tiff-output-does-not-pass-cog-structure",
+        "expected": "REJECT_COG_CLAIM",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC03",
+        "inputCase": "shapefile-required-sidecar-missing",
+        "expected": "REJECT_INCOMPLETE_OUTPUT",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC04",
+        "inputCase": "query-next-page-exists-but-not-consumed",
+        "expected": "REJECT_COMPLETE_COLLECTION_CLAIM",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC05",
+        "inputCase": "conversion-loss-is-unknown",
+        "expected": "WAIT_LOSS_DECISION_NOT_LOSSLESS",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC06",
+        "inputCase": "actual-loss-exceeds-adopted-contract",
+        "expected": "REJECT_CONVERSION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC07",
+        "inputCase": "roundtrip-error-exceeds-frozen-tolerance",
+        "expected": "REJECT_ROUNDTRIP",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC08",
+        "inputCase": "claimed-xlsx-edit-only-produced-gdb",
+        "expected": "REJECT_DIFFERENT_ACTION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "FC09",
+        "inputCase": "format-version-outside-profile-domain",
+        "expected": "REJECT_OR_REVIEW_UNSUPPORTED_VERSION",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      }
+    ],
+    "environment": [
+      {
+        "id": "EC01",
+        "inputCase": "unknown-tfm",
+        "expected": "KEEP_UNKNOWN_NO_NET6_FALLBACK_CLAIM",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC02",
+        "inputCase": "active-host-and-adopted-package-identity-mismatch",
+        "expected": "STOP_AND_EXPLAIN_IDENTITY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC03",
+        "inputCase": "checker-pass-but-host-task-unverified",
+        "expected": "KEEP_TASK_NOT_VERIFIED",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC04",
+        "inputCase": "unsupported-protocol-profile",
+        "expected": "NO_MULTIVERSION_SUPPORT_CLAIM",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC05",
+        "inputCase": "resource-probe-access-denied",
+        "expected": "UNKNOWN_NOT_ZERO",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC06",
+        "inputCase": "project-runtime-root-on-c-drive",
+        "expected": "REJECT_PROJECT_PATH",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC07",
+        "inputCase": "ps-restart-or-token-lost",
+        "expected": "REBIND_AND_REVERIFY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC08",
+        "inputCase": "ps-capability-digest-changed",
+        "expected": "INVALIDATE_RELATED_PROFILE",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC09",
+        "inputCase": "optional-output-unavailable",
+        "expected": "DISCLOSE_OPTIONAL_GAP",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      },
+      {
+        "id": "EC10",
+        "inputCase": "mandatory-output-unavailable",
+        "expected": "BLOCK_FULL_DELIVERY",
+        "scope": "PROPOSED_TEST_CASE_NOT_EXECUTED",
+        "runtimeEvidence": []
+      }
+    ]
+  },
+  "refinements": [
+    {
+      "id": "RF01",
+      "name": "provider-adapter-and-normalized-terminal-status",
+      "workItemRefs": [
+        "WI09",
+        "WI10"
+      ],
+      "contractRefs": [
+        "SP01",
+        "SP02"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF02",
+      "name": "stream-stale-dedup-budget-and-single-retry-owner",
+      "workItemRefs": [
+        "WI09",
+        "WI10",
+        "WI23"
+      ],
+      "contractRefs": [
+        "SP02"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF03",
+      "name": "exposure-policy-and-context-selection",
+      "workItemRefs": [
+        "WI10",
+        "WI27",
+        "WI30"
+      ],
+      "contractRefs": [
+        "SP03"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF04",
+      "name": "active-host-capability-and-task-readiness",
+      "workItemRefs": [
+        "WI09",
+        "WI30"
+      ],
+      "contractRefs": [
+        "SP04",
+        "SP08"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF05",
+      "name": "format-action-profile-and-loss-oracles",
+      "workItemRefs": [
+        "WI06",
+        "WI15",
+        "WI26"
+      ],
+      "contractRefs": [
+        "SP05"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF06",
+      "name": "declarative-pack-validation-and-adoption",
+      "workItemRefs": [
+        "WI26",
+        "WI27",
+        "WI30"
+      ],
+      "contractRefs": [
+        "SP06"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF07",
+      "name": "deterministic-standard-recipe-forms",
+      "workItemRefs": [
+        "WI07",
+        "WI08",
+        "WI28"
+      ],
+      "contractRefs": [
+        "SP07",
+        "SP08"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "RF08",
+      "name": "event-driven-workbench-accessibility-offline",
+      "workItemRefs": [
+        "WI22",
+        "WI23",
+        "WI28"
+      ],
+      "contractRefs": [
+        "SP04",
+        "SP07",
+        "SP08"
+      ],
+      "status": "REFINEMENT_NOT_NEW_DISPATCH",
+      "runtimeEvidence": []
+    }
+  ],
+  "budgetRules": {
+    "rootScope": "same-root-task-across-revisions-models-pages-and-restarts",
+    "rootLimits": ["totalLanguageRequests", "totalCost", "elapsedDeadline", "hostResources"],
+    "attemptLimitScope": "per-logicalLanguageRequest",
+    "proposedMaximumTotalAttemptsPerLogicalLanguageRequest": 3,
+    "sdkRetriesIncludedInTotal": true,
+    "schemaRepairIncludedInAttemptLimit": true,
+    "newLanguageRequestConsumesSameRootBudget": true,
+    "validRetryAfterIsMinimum": true,
+    "deadlineIncludesRetries": true,
+    "unknownCostIsNotZero": true,
+    "sentAttemptMissingUsageRetainsReservation": true,
+    "retryRequiresSeparateWorstCaseReservation": true,
+    "lateUsageDedupKey": ["logicalLanguageRequestId", "attempt"],
+    "localSettlementIdentityPersistedBeforeSend": true,
+    "providerRequestIdBoundOnlyWhenReceived": true,
+    "lateUsageMustProveOwnership": true,
+    "usageReconciliationDispatchesHost": false,
+    "modelFailureRetriesHost": false
+  },
+  "invariantRefs": [
+    "INV01",
+    "INV02",
+    "INV03",
+    "INV06",
+    "INV07",
+    "INV08",
+    "INV09",
+    "INV10",
+    "INV11",
+    "INV12",
+    "INV13",
+    "INV14",
+    "INV15",
+    "INV16"
+  ],
+  "availabilityReasonValues": [
+    "MISSING_DEPENDENCY",
+    "UNSUPPORTED",
+    "TEMPORARILY_UNAVAILABLE",
+    "PROBE_FAILED",
+    "UNVERIFIED_PROFILE",
+    "NOT_IN_SCOPE"
+  ],
+  "supportEvidenceFields": [
+    "sourceEvidence",
+    "runtimeEvidence",
+    "endToEndEvidence",
+    "independentAcceptanceEvidence",
+    "availabilityReason"
+  ],
+  "proposalAdoptionRules": {
+    "requiredIdentity": [
+      "logicalProposalSlotId",
+      "requestGeneration",
+      "activeAttempt",
+      "taskRevision",
+      "planRevision",
+      "inputRevision",
+      "catalogRevision",
+      "schemaRevision"
+    ],
+    "atomicallyRequires": [
+      "ACTIVE_REQUEST",
+      "CURRENT_GENERATION_AND_ATTEMPT",
+      "CURRENT_REVISIONS",
+      "NOT_CANCELLED",
+      "BEFORE_DEADLINE",
+      "SLOT_NOT_ADOPTED"
+    ],
+    "durableAdoptionAndSlotCloseAreAtomic": true,
+    "differentProposalIdsCanReuseAdoptedSlot": false,
+    "modelSwitchInvalidatesOldGeneration": true,
+    "currentRevisionsAloneProveActiveRequest": false
+  },
+  "streamRules": {
+    "bucketKey": [
+      "requestGeneration",
+      "outputItemIdOrCallId"
+    ],
+    "completeItemsAndValidResponseTerminalRequired": true,
+    "hardLimitDimensions": [
+      "aggregateBytes",
+      "eventCount",
+      "typedPayloadDepth"
+    ],
+    "overflowStates": [
+      "INCOMPLETE",
+      "BUDGET_EXHAUSTED"
+    ],
+    "overflowCanProduceValidProposal": false,
+    "partialArgumentsDispatchHost": false
+  },
+  "secretRules": {
+    "portableReferenceOnly": "credentialRef",
+    "prohibitedSecretLocations": [
+      "endpointQuery",
+      "rawHttpHeaderDump",
+      "errorDetails",
+      "debugTrace",
+      "projectPackage",
+      "proposalPayload"
+    ],
+    "credentialStoreRequiresExistingAuthorization": true,
+    "defaultNewCDriveStoreAllowed": false
+  },
+  "sources": [
+    {
+      "title": "OpenAI Structured outputs",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "use": "format constraints, refusals, incomplete output and local semantic validation"
+    },
+    {
+      "title": "OpenAI Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "use": "application owns execution, proposals enter the common invoker"
+    },
+    {
+      "title": "OpenAI Rate limits",
+      "url": "https://developers.openai.com/api/docs/guides/rate-limits",
+      "use": "bounded retries and SDK retry accounting"
+    },
+    {
+      "title": "Esri .NET8 upgrade",
+      "url": "https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-NET-8-Upgrade",
+      "use": "platform compatibility is distinct from project acceptance"
+    },
+    {
+      "title": "Esri .NET10 upgrade",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/sdk/api-reference/conceptdocs/docs/ProGuide-NET-10-Upgrade.html",
+      "use": "future host profiles need separate engineering and runtime evidence"
+    },
+    {
+      "title": "Adobe Manifest v5",
+      "url": "https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/",
+      "use": "manifest declaration and actual capabilities are separate"
+    }
+  ]
+}

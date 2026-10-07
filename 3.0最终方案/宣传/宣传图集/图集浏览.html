@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="ArcGIS Pro MCP 3.0 原生矢量宣传图集，八幅概念插画的离线浏览与原文件入口。">
+  <title>ArcGIS Pro MCP 3.0 宣传图集</title>
+  <style>
+    :root { --navy:#122333; --navy-deep:#0b1722; --cream:#f5f1e9; --ink:#203546; --muted:#63717b; --teal:#86c5b4; --line:rgba(223,232,237,.18); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid #319181; outline-offset:5px; }
+    .masthead { background:var(--navy); color:var(--cream); }
+    .wrap { width:min(1440px,calc(100% - 96px)); margin:0 auto; }
+    .topline { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:32px 0; border-bottom:1px solid var(--line); }
+    .brand { font-size:17px; letter-spacing:.08em; font-weight:600; }
+    .status { padding:8px 13px; border:1px solid rgba(134,197,180,.45); border-radius:30px; color:#b3ddcf; font-size:12px; letter-spacing:.08em; white-space:nowrap; }
+    .hero { display:grid; grid-template-columns:1.25fr 1fr; gap:80px; align-items:end; padding:78px 0 62px; }
+    .eyebrow { color:#a4c8bb; font-size:12px; letter-spacing:.2em; margin:0 0 22px; }
+    h1 { margin:0; font-size:clamp(34px,4.4vw,66px); font-weight:500; line-height:1.25; letter-spacing:-.04em; }
+    .hero-copy { margin:0 0 24px; max-width:510px; color:#c9d1d6; font-size:15px; line-height:1.95; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .action { display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border:1px solid rgba(223,232,237,.35); border-radius:3px; font-size:13px; transition:background .2s,border-color .2s; }
+    .action:hover { background:rgba(255,255,255,.07); border-color:#c4d9d1; }
+    .action.primary { background:var(--cream); border-color:var(--cream); color:var(--navy); }
+    .action.primary:hover { background:#e4f0e9; }
+    .gallery-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; padding:44px 0 25px; }
+    .gallery-heading h2 { margin:0; font-size:20px; font-weight:500; letter-spacing:.02em; }
+    .gallery-heading p { margin:0; color:var(--muted); font-size:12px; line-height:1.8; text-align:right; }
+    .gallery { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:30px 24px; }
+    .tile { margin:0; min-width:0; }
+    .image-button { display:block; width:100%; padding:0; border:0; background:#eae4d9; cursor:zoom-in; text-align:left; position:relative; overflow:hidden; border-radius:3px; }
+    .image-button img { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:contain; transition:transform .35s; }
+    .image-button:hover img { transform:scale(1.025); }
+    .zoom-cue { position:absolute; right:12px; bottom:12px; background:rgba(13,30,42,.78); color:white; font-size:11px; line-height:1; padding:8px 10px; border-radius:3px; opacity:0; transform:translateY(5px); transition:.2s; pointer-events:none; }
+    .image-button:hover .zoom-cue,.image-button:focus-visible .zoom-cue { opacity:1; transform:translateY(0); }
+    figcaption { padding:15px 0 0; }
+    .caption-main { display:flex; align-items:baseline; gap:11px; }
+    .number { color:#83928e; font-size:11px; font-weight:600; letter-spacing:.1em; }
+    .tile h3 { margin:0; font-size:15px; font-weight:500; line-height:1.5; }
+    .caption-note { margin:8px 0 11px 28px; font-size:12px; line-height:1.8; color:var(--muted); }
+    .file-links { margin-left:28px; display:flex; gap:18px; }
+    .file-links a { font-size:11px; letter-spacing:.06em; border-bottom:1px solid #b4c1bd; padding-bottom:3px; }
+    .file-links a:hover { color:#14796d; border-color:#14796d; }
+    .note { display:grid; grid-template-columns:1fr 1.7fr; gap:42px; margin:62px 0 0; padding:30px 0; border-top:1px solid #d1d7d3; }
+    .note h2 { margin:0; font-size:16px; font-weight:500; }
+    .note p { margin:0; color:var(--muted); font-size:13px; line-height:1.9; }
+    footer { margin-top:18px; padding:20px 0 30px; display:flex; gap:20px; justify-content:space-between; color:#74818a; font-size:11px; line-height:1.8; }
+    footer a { border-bottom:1px solid #b8c2c5; }
+    .viewer { margin:auto; padding:0; border:0; max-width:none; width:min(1280px,calc(100vw - 56px)); height:min(94vh,1100px); max-height:94vh; background:var(--navy-deep); color:var(--cream); border-radius:5px; box-shadow:0 24px 110px rgba(0,0,0,.45); overflow:hidden; }
+    .viewer::backdrop { background:rgba(5,13,20,.92); backdrop-filter:blur(6px); }
+    .viewer-shell { height:100%; display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+    .viewer-header { padding:17px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); }
+    .viewer-header p { margin:0; font-size:12px; color:#b7c6ca; }
+    .close,.arrow { color:var(--cream); border:1px solid rgba(223,232,237,.3); background:transparent; cursor:pointer; border-radius:50%; width:38px; height:38px; display:grid; place-items:center; font-size:23px; transition:background .2s; }
+    .close:hover,.arrow:hover { background:rgba(255,255,255,.12); }
+    .viewer-stage { min-height:0; display:grid; grid-template-columns:64px minmax(0,1fr) 64px; gap:10px; align-items:center; padding:18px 16px; }
+    .arrow { margin:auto; }
+    .viewer-image { display:block; width:100%; height:100%; min-height:0; object-fit:contain; }
+    .viewer-footer { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:17px 24px 19px; border-top:1px solid var(--line); }
+    .viewer-title { margin:0; font-size:17px; font-weight:500; line-height:1.6; }
+    .viewer-count { display:block; margin-top:5px; color:#a0b4bb; font-size:11px; letter-spacing:.06em; }
+    .viewer-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:15px; font-size:12px; }
+    .viewer-links a { padding:5px 0; border-bottom:1px solid #67817f; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width:1100px) { .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:34px 26px; } .hero { gap:35px; } .wrap { width:calc(100% - 64px); } }
+    @media (max-width:680px) { .wrap { width:calc(100% - 36px); } .topline { padding:22px 0; gap:12px; } .brand { font-size:12px; letter-spacing:.03em; } .status { font-size:10px; padding:7px 9px; } .hero { grid-template-columns:1fr; gap:28px; padding:48px 0 38px; } .hero-copy { font-size:14px; margin-bottom:22px; } .gallery-heading { display:block; padding-top:32px; } .gallery-heading p { text-align:left; margin-top:9px; } .gallery { gap:27px 15px; } .caption-main { display:block; } .number { display:block; margin-bottom:4px; } .caption-note,.file-links { margin-left:0; } .tile h3 { font-size:13px; } .caption-note { font-size:11px; } .file-links { gap:12px; } .note { grid-template-columns:1fr; gap:15px; margin-top:40px; } footer { display:block; } footer p { margin:8px 0; } .viewer { width:calc(100vw - 16px); height:95vh; max-height:95vh; } .viewer-stage { grid-template-columns:30px minmax(0,1fr) 30px; padding:12px 5px; gap:4px; } .arrow { width:29px; height:29px; font-size:18px; } .viewer-header,.viewer-footer { padding:14px; } .viewer-footer { align-items:start; gap:16px; } .viewer-title { font-size:14px; } .viewer-links { gap:10px; font-size:11px; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="topline"><a class="brand" href="#gallery">ArcGIS Pro MCP 3.0</a><span class="status">3.0 方案预告</span></div>
+      <div class="hero">
+        <div><p class="eyebrow">原生矢量宣传图集 · 08 幅</p><h1>从一个想法<br>到一套成果</h1></div>
+        <div><p class="hero-copy">用八幅城市、山川与成果的概念插画，呈现 GIS 分析、自动成图、参考学习和交付更新的规划体验。点击任一图片，即可进入大图浏览。</p><div class="hero-actions"><a class="action primary" href="#gallery">浏览整套图集 <span aria-hidden="true">↓</span></a><a class="action" href="03_整套图集/ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf" target="_blank" rel="noopener">打开整套 PDF <span aria-hidden="true">↗</span></a></div></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="gallery-heading"><h2 id="gallery">八幅画面，一条成果链</h2><p>点击图片放大 · 左右键翻页 · Esc 关闭<br>PNG 用于分享，SVG 用于编辑</p></div>
+    <section class="gallery" aria-label="八幅宣传插画">
+      <figure class="tile"><button class="image-button" type="button" data-index="0" aria-label="查看第 1 幅 全链路主视觉"><img src="01_PNG分享图/01_全链路主视觉.png" alt="全链路主视觉概念插画" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">01</span><h3>全链路主视觉</h3></div><p class="caption-note">让分析、设计与成果连成一条链。</p><div class="file-links"><a href="01_PNG分享图/01_全链路主视觉.png" download>PNG 分享图</a><a href="02_SVG可编辑图/01_全链路主视觉.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="1" aria-label="查看第 2 幅 自然语言任务"><img src="01_PNG分享图/02_自然语言任务.png" alt="自然语言任务概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">02</span><h3>自然语言任务</h3></div><p class="caption-note">从业务目的出发，组织方法与资料。</p><div class="file-links"><a href="01_PNG分享图/02_自然语言任务.png" download>PNG 分享图</a><a href="02_SVG可编辑图/02_自然语言任务.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="2" aria-label="查看第 3 幅 PS 自动成图"><img src="01_PNG分享图/03_PS自动成图.png" alt="Photoshop 自动成图概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">03</span><h3>PS 自动成图</h3></div><p class="caption-note">规划自动设计，让普通用户参与专业成图。</p><div class="file-links"><a href="01_PNG分享图/03_PS自动成图.png" download>PNG 分享图</a><a href="02_SVG可编辑图/03_PS自动成图.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="3" aria-label="查看第 4 幅 参考风格学习"><img src="01_PNG分享图/04_参考风格学习.png" alt="参考风格学习概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">04</span><h3>参考风格学习</h3></div><p class="caption-note">学习配色与结构，保留事实与适用边界。</p><div class="file-links"><a href="01_PNG分享图/04_参考风格学习.png" download>PNG 分享图</a><a href="02_SVG可编辑图/04_参考风格学习.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="4" aria-label="查看第 5 幅 GP 持续适配"><img src="01_PNG分享图/05_GP持续适配.png" alt="GP 持续适配概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">05</span><h3>GP 持续适配</h3></div><p class="caption-note">发现、验证、接入，持续扩展可信能力。</p><div class="file-links"><a href="01_PNG分享图/05_GP持续适配.png" download>PNG 分享图</a><a href="02_SVG可编辑图/05_GP持续适配.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="5" aria-label="查看第 6 幅 成果同步更新"><img src="01_PNG分享图/06_成果同步更新.png" alt="成果同步更新概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">06</span><h3>成果同步更新</h3></div><p class="caption-note">资料变化时，联动同版图表与报告。</p><div class="file-links"><a href="01_PNG分享图/06_成果同步更新.png" download>PNG 分享图</a><a href="02_SVG可编辑图/06_成果同步更新.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="6" aria-label="查看第 7 幅 多业务场景"><img src="01_PNG分享图/07_多业务场景.png" alt="多业务场景概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">07</span><h3>多业务场景</h3></div><p class="caption-note">连接规划汇报、科研专题与规范建库。</p><div class="file-links"><a href="01_PNG分享图/07_多业务场景.png" download>PNG 分享图</a><a href="02_SVG可编辑图/07_多业务场景.svg" download>SVG 编辑图</a></div></figcaption></figure>
+      <figure class="tile"><button class="image-button" type="button" data-index="7" aria-label="查看第 8 幅 完整成果交付"><img src="01_PNG分享图/08_完整成果交付.png" alt="完整成果交付概念插画" loading="lazy" decoding="async"><span class="zoom-cue">查看大图 ↗</span></button><figcaption><div class="caption-main"><span class="number">08</span><h3>完整成果交付</h3></div><p class="caption-note">交付成图、可编辑素材与有依据的成果。</p><div class="file-links"><a href="01_PNG分享图/08_完整成果交付.png" download>PNG 分享图</a><a href="02_SVG可编辑图/08_完整成果交付.svg" download>SVG 编辑图</a></div></figcaption></figure>
+    </section>
+    <section class="note" aria-labelledby="preview-note"><h2 id="preview-note">关于这些画面</h2><p>本图集为 D 盘制作的原生矢量概念宣传画面，呈现的是 3.0 规划方向；不是软件实际截图，也不是实际 GIS 分析成果。发布功能、支持条件与自动化表现以实际验收为准。图片中的地形、城市和数据符号均为视觉概念示意。</p></section>
+    <footer><p>ArcGIS Pro MCP 3.0 · 方案预告 · 本地离线图集</p><p><a href="README_图集导航.md">文件导航与使用说明</a> · 浏览器无需联网</p></footer>
+  </main>
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-shell">
+      <div class="viewer-header"><p>ArcGIS Pro MCP 3.0 · 方案预告</p><button class="close" id="close-viewer" type="button" aria-label="关闭大图">×</button></div>
+      <div class="viewer-stage"><button class="arrow" id="previous" type="button" aria-label="上一幅">‹</button><img class="viewer-image" id="viewer-image" alt=""><button class="arrow" id="next" type="button" aria-label="下一幅">›</button></div>
+      <div class="viewer-footer"><div><h2 class="viewer-title" id="viewer-title"></h2><span class="viewer-count" id="viewer-count" aria-live="polite"></span></div><div class="viewer-links"><a id="viewer-png" download>PNG 分享图</a><a id="viewer-svg" download>SVG 编辑图</a><a href="03_整套图集/ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf" target="_blank" rel="noopener">整套 PDF</a></div></div>
+    </div>
+  </dialog>
+  <noscript><p class="wrap" style="padding-bottom:30px">浏览器未启用 JavaScript。可通过每幅图下的 PNG、SVG 链接及页首 PDF 链接直接打开原文件。</p></noscript>
+  <script>
+    'use strict';
+    const artworks = [
+      ['01_全链路主视觉','全链路主视觉'],['02_自然语言任务','自然语言任务'],
+      ['03_PS自动成图','PS 自动成图'],['04_参考风格学习','参考风格学习'],
+      ['05_GP持续适配','GP 持续适配'],['06_成果同步更新','成果同步更新'],
+      ['07_多业务场景','多业务场景'],['08_完整成果交付','完整成果交付']
+    ];
+    const viewer = document.getElementById('viewer');
+    const viewerImage = document.getElementById('viewer-image');
+    const viewerTitle = document.getElementById('viewer-title');
+    const viewerCount = document.getElementById('viewer-count');
+    const pngLink = document.getElementById('viewer-png');
+    const svgLink = document.getElementById('viewer-svg');
+    let current = 0;
+    let returnFocus = null;
+    function display(index) {
+      current = (index + artworks.length) % artworks.length;
+      const [file,title] = artworks[current];
+      const png = '01_PNG分享图/' + file + '.png';
+      viewerImage.src = png;
+      viewerImage.alt = title + '概念宣传插画';
+      viewerTitle.textContent = title;
+      viewerCount.textContent = String(current + 1).padStart(2,'0') + ' / 08 · 概念示意';
+      pngLink.href = png;
+      pngLink.download = file + '.png';
+      svgLink.href = '02_SVG可编辑图/' + file + '.svg';
+      svgLink.download = file + '.svg';
+    }
+    function openViewer(index,trigger) {
+      returnFocus = trigger;
+      display(index);
+      if (typeof viewer.showModal === 'function') viewer.showModal();
+      else { window.open(pngLink.href,'_blank','noopener'); return; }
+      document.getElementById('close-viewer').focus();
+    }
+    function closeViewer() { viewer.close(); }
+    document.querySelectorAll('.image-button').forEach(button => {
+      button.addEventListener('click',() => openViewer(Number(button.dataset.index),button));
+    });
+    document.getElementById('close-viewer').addEventListener('click',closeViewer);
+    document.getElementById('previous').addEventListener('click',() => display(current - 1));
+    document.getElementById('next').addEventListener('click',() => display(current + 1));
+    viewer.addEventListener('close',() => { if (returnFocus) returnFocus.focus(); });
+    viewer.addEventListener('click',event => {
+      if (event.target !== viewer) return;
+      const rect = viewer.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeViewer();
+    });
+    document.addEventListener('keydown',event => {
+      if (!viewer.open) return;
+      if (event.key === 'ArrowLeft') { event.preventDefault(); display(current - 1); }
+      else if (event.key === 'ArrowRight') { event.preventDefault(); display(current + 1); }
+      else if (event.key === 'Home') { event.preventDefault(); display(0); }
+      else if (event.key === 'End') { event.preventDefault(); display(7); }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "m3-z12-precalibration-v1",
+  "status": "PASS_CANDIDATE",
+  "workPackageId": "Z12",
+  "title": "持续设计验收 / continuous design acceptance",
+  "owners": "M19 plus independent professional reviewers (roadmap §10)",
+  "finalCompletionEvidenceText": "每模板标准/坏例，开发期人工修图不计自动成功 (roadmap §10 Z12)",
+  "calibrationStatus": "PRE_CALIBRATION_DEFINITION_ONLY_NOT_VERIFIED",
+  "whyM3": "M3 closes the base thirty scenarios and base twenty templates, so the per-template standard and bad-example requirement becomes checkable across the whole base set for the first time.",
+  "criteria": [
+    {
+      "criterionId": "Z12-C01",
+      "assertion": "Every template in the base set has one standard example and at least one bad example frozen before any result, and the pair is identified by template id plus revision.",
+      "recompute": "Walk the template definitions across the three faces and assert each base template has a frozen standard row and at least one bad-example row with distinct ids.",
+      "ruleRefs": [
+        "WF-001",
+        "PRT-001"
+      ],
+      "failureSeverity": "major",
+      "thresholdOrigin": "inherited from the frozen v1 target block by reference; no new numeric threshold is introduced in this batch"
+    },
+    {
+      "criterionId": "Z12-C02",
+      "assertion": "Development-time manual repair is never counted as an automatic success; a repaired row is booked as regression and a fresh unseen set is required for a generalisation claim.",
+      "recompute": "Compare the repair ledger against the success ledger and assert no row appears in both; assert the generalisation statement cites a different unseen set.",
+      "ruleRefs": [
+        "WF-001",
+        "GBC-001"
+      ],
+      "failureSeverity": "critical",
+      "thresholdOrigin": "inherited from the frozen v1 target block by reference; no new numeric threshold is introduced in this batch"
+    },
+    {
+      "criterionId": "Z12-C03",
+      "assertion": "Every acceptance row carries an evidence level (DECLARED, SOURCE VERIFIED, RUNTIME VERIFIED, E2E VERIFIED, INDEPENDENTLY ACCEPTED) or the explicit NOT VERIFIED marker; blocked rows stay in the denominator.",
+      "recompute": "Recount rows by evidence level and assert the sum equals the total row count and that no row is level-less; assert blocked and deferred rows are still counted.",
+      "ruleRefs": [
+        "GBC-001",
+        "PRM-001"
+      ],
+      "failureSeverity": "critical",
+      "thresholdOrigin": "inherited from the frozen v1 target block by reference; no new numeric threshold is introduced in this batch"
+    },
+    {
+      "criterionId": "Z12-C04",
+      "assertion": "Reviewer discipline stays as frozen: at least two independent reviewers, five-point scale, mean at least 4, no item below 3, with scientific correctness judged separately and never offset by appearance.",
+      "recompute": "Assert reviewer count and scale equality with the inherited v1 target block; assert a scientific failure cannot be averaged away by a visual pass.",
+      "ruleRefs": [
+        "SCI-001",
+        "WF-001"
+      ],
+      "failureSeverity": "critical",
+      "thresholdOrigin": "inherited from the frozen v1 target block by reference; no new numeric threshold is introduced in this batch"
+    },
+    {
+      "criterionId": "Z12-C05",
+      "assertion": "Error expression and error computation are booked on separate rows for every uncertainty-bearing template, so a visualisation pass never closes a computation row.",
+      "recompute": "Assert the two row ids are distinct for TS10 and any uncertainty row; assert the computation row remains NOT VERIFIED when the expression row passes.",
+      "ruleRefs": [
+        "OSV-001",
+        "SRC-001"
+      ],
+      "failureSeverity": "critical",
+      "thresholdOrigin": "inherited from the frozen v1 target block by reference; no new numeric threshold is introduced in this batch"
+    }
+  ],
+  "applicableTemplateIds": {
+    "M1": [
+      "TP01",
+      "TP02",
+      "TP03",
+      "TS01",
+      "TS02",
+      "TS08"
+    ],
+    "M2": [
+      "TP04",
+      "TP05",
+      "TP06",
+      "TP07",
+      "TP08",
+      "TP09",
+      "TP10",
+      "TP17",
+      "TS03",
+      "TS04",
+      "TS05",
+      "TS06",
+      "TS07",
+      "TS09",
+      "TS10",
+      "TS15"
+    ]
+  },
+  "deferredScopeNote": "Reviewer recruitment, blind ordering and the professional panel are execution-side activities of a later batch; these criteria freeze only what will be checked and how.",
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §10:Z12, §9:M3",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4-6",
+    "D-093 board ticket scope 4"
+  ],
+  "ts08CarriedStatus": "GOLD_ARTIFACT_PATH_NOT-AVAILABLE-PENDING-USER (G-205); unchanged in this batch"
+}

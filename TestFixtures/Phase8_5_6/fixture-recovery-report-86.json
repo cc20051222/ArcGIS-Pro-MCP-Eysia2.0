@@ -1,0 +1,62 @@
+{
+  "fixture": "Phase8_5_6",
+  "action": "recover-full-baseline",
+  "started": "2026-09-13T16:54:58",
+  "steps": [
+    {
+      "step": "open aprx",
+      "ok": true,
+      "detail": "<arcpy._mp.ArcGISProject object at 0x00000172AE3B7350>"
+    },
+    {
+      "step": "find WB_Map",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "step": "layers before",
+      "ok": true,
+      "detail": "L_Group,L_Sub_A,L_Lines,L_Polygons"
+    },
+    {
+      "step": "add missing L_Points",
+      "ok": true,
+      "detail": "L_Points"
+    },
+    {
+      "step": "L_Group children",
+      "ok": true,
+      "detail": "L_Sub_A"
+    },
+    {
+      "step": "save aprx",
+      "ok": true,
+      "detail": "saved"
+    },
+    {
+      "step": "verify",
+      "ok": true,
+      "detail": "[{'name': 'WB_Map', 'layers': ['L_Points', 'L_Group', 'L_Lines', 'L_Polygons'], 'layers_flat': ['L_Points', 'L_Group', 'L_Sub_A', 'L_Lines', 'L_Polygons'], 'group_children': {'L_Group': ['L_Sub_A']}, 'visible': {'L_Points': True, 'L_Group': True, 'L_Sub_A': True, 'L_Lines': True, 'L_Polygons': True}}, {'name': 'WB_Map_Empty', 'layers': [], 'layers_flat': [], 'group_children': {}, 'visible': {}}]"
+    }
+  ],
+  "checks": {
+    "flat_matches_inventory": true,
+    "flat_actual": [
+      "L_Points",
+      "L_Group",
+      "L_Sub_A",
+      "L_Lines",
+      "L_Polygons"
+    ],
+    "group_children_ok": true,
+    "empty_ok": true
+  },
+  "test_gdb_counts": {
+    "FC_Points": 5,
+    "FC_Lines": 3,
+    "FC_Polygons": 4,
+    "TBL_Attr": 4
+  },
+  "aprx_sha256_after": "19F8D747255CDD28DBAD15F97026126C050007F7A93C475B5087FBC7736BCA18",
+  "finished": "2026-09-13T16:54:59"
+}

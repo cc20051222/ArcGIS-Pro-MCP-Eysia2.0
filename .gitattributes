@@ -1,0 +1,35 @@
+# 行尾与二进制识别（本仓库的构建与校验依赖精确字节，勿随意改动）
+* text=auto eol=lf
+
+# Windows 脚本必须保持 CRLF：cmd.exe 与部分 PowerShell 宿主按行解析
+*.ps1  text eol=crlf
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# 二进制产物：禁止行尾转换、禁止 diff
+*.zip           binary
+*.esriAddInX    binary
+*.dll           binary
+*.dylib         binary
+*.pdb           binary
+*.docx          binary
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.pdf           binary
+*.tif           binary
+*.tiff          binary
+*.rrd           binary
+*.img           binary
+*.gdb/**        binary
+*.trx           text eol=lf
+
+# 语言与序列化文件
+*.cs      text eol=lf
+*.csproj  text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+*.py      text eol=lf
+*.yml     text eol=lf
+*.html    text eol=lf
+*.xml     text eol=lf

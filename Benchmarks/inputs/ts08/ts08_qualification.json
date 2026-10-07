@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "d101-ts08-qualification-v1",
+  "status": "PASS_CANDIDATE",
+  "batch": "D-101",
+  "predicateId": "TS08-INPUT-QUAL-001",
+  "predicateSource": "Benchmarks/comparison-rules-v1.json (M1 frozen member, byte-unchanged)",
+  "authorisation": "G-222 R-1 (user-authorised generated fixture; the predicate itself is unchanged)",
+  "synthetic": true,
+  "clauseWalk": {
+    "minimumSpectrallyIndependentBands": {
+      "required": 3,
+      "provided": 4,
+      "evidence": "four distinct closed-form generators (see per-band formula), not four copies"
+    },
+    "spectralIndependence": {
+      "bands": [
+        "B01-coastal-blue",
+        "B02-green",
+        "B03-red",
+        "B08-narrowband-NIR"
+      ],
+      "formulaPerBand": [
+        "320 + 3*col - (row % 13)",
+        "540 + 5*row - (col % 7)",
+        "700 + 2*col + 3*row",
+        "2400 + ((col*7 + row*11) % 23) * 40"
+      ],
+      "pairwiseDistinctness": "each pair differs in at least 96 percent of valid pixels"
+    },
+    "sharedGrid": {
+      "CRS": "EPSG:32651 (WGS 84 / UTM zone 51N, projected metres)",
+      "width": 64,
+      "height": 48,
+      "cellSize": 2.0,
+      "origin": [
+        500000.0,
+        4000000.0
+      ],
+      "extent": [
+        500000.0,
+        3999904.0,
+        500128.0,
+        4000000.0
+      ],
+      "bandAlignment": "single file, band-interleaved-by-pixel, one strip, PlanarConfiguration=1, so every band shares the identical grid by construction"
+    },
+    "noDataRule": {
+      "valueOrMask": "GDAL_NODATA tag = -9999, applied identically to all four bands",
+      "validityMaskSemantics": "a pixel is invalid when any band equals the NoData value; no interpolation and no fill is permitted across it",
+      "edgeHandling": "the 4x3 corner hole and the 6-cell right-edge run are published as invalid; an edge run must be reported as truncated coverage, not as zero"
+    },
+    "bandIdentityAndSpectralRole": [
+      {
+        "index": 0,
+        "identity": "B01-coastal-blue"
+      },
+      {
+        "index": 1,
+        "identity": "B02-green"
+      },
+      {
+        "index": 2,
+        "identity": "B03-red"
+      },
+      {
+        "index": 3,
+        "identity": "B08-narrowband-NIR"
+      }
+    ],
+    "provenance": {
+      "sourceIdentity": "SYNTHETIC-D101-TS08-01",
+      "acquisitionOrProductIdentity": "none - synthetic, no sensor, no acquisition datetime",
+      "processingLineage": "closed-form per-band formula plus a published NoData injection mask",
+      "sourceHash": "02D200960FB8B9C613612BDDBC9265A6363834621815C007CF0CE559A2B250B7",
+      "referenceClassmap": "B60716115341BC5824637DBEEA3FBEC6CCBFE99DE286E189D666F165377D6BBB"
+    },
+    "rejectRepeatedSingleBandLineage": {
+      "honoured": true,
+      "counterExample": "ts08_negative_repeated_lineage_b3.tif is three byte-identical copies of one band and must be refused"
+    }
+  },
+  "whatThisDoesNotChange": {
+    "frozenPredicateState": "comparison-rules-v1 keeps goldArtifactPath = NOT-AVAILABLE-PENDING-USER; this batch does not edit any M1 byte",
+    "realDataGap": "the real product gap that G-205 registered is not retired by a synthetic fixture; any conclusion drawn from this file must say 合成输入基准",
+    "multiTif": "not used, not referenced as an input or a gold anywhere in this corpus"
+  },
+  "expectedUpdatedDelta": {
+    "pixelsChangedInBand1": 80,
+    "block": {
+      "rows": [
+        20,
+        27
+      ],
+      "columns": [
+        30,
+        39
+      ]
+    },
+    "classCellsAffected": 0
+  },
+  "classRule": {
+    "revision": "revision-2 (GATE-G231 R-3 rectification of D103-DEF-01)",
+    "authorisation": "GATE-G231 R-3 (rectification of D103-DEF-01, registered by the L2 execution seat)",
+    "formula": "d = B08(narrowband-NIR) - B03(red) on the same grid; class = 1 if d<1700, 2 if d<2000, 3 if d<2300, else 4",
+    "thresholds": [
+      1700,
+      2000,
+      2300
+    ],
+    "observedDifferenceRange": [
+      1450,
+      2561
+    ],
+    "classCounts": {
+      "1": 510,
+      "2": 996,
+      "3": 998,
+      "4": 550
+    },
+    "invalidCells": 18,
+    "whyThePriorRuleFailed": "prior rule 'nir-red>1200 -> 1; green>700 -> 2; red>900 -> 3; else 4' fired on the first branch for every valid pixel (min NIR-RED was 1450 > 1200), so classes 2/3/4 were unreachable and the published legend {1,2,3,4} existed only in text",
+    "dependsOnBands": [
+      "B03-red",
+      "B08-narrowband-NIR"
+    ],
+    "updatedInstanceEffect": "the updated instance moves B02(green) only, so the class map is unchanged by it and classCellsAffected stays 0 by construction"
+  }
+}

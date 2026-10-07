@@ -1,0 +1,161 @@
+{
+  "steps": [
+    {
+      "step": "Open Blank.aprx template",
+      "ok": true,
+      "detail": "<arcpy._mp.ArcGISProject object at 0x0000018C02C2EE10>"
+    },
+    {
+      "step": "deleteItem(template map Map)",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "createMap MD_Active (MAP)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000018C02C20AD0>"
+    },
+    {
+      "step": "createMap MD_Inactive (MAP)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000018C02C20850>"
+    },
+    {
+      "step": "createMap MD_Scene (SCENE)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000018C02C143D0>"
+    },
+    {
+      "step": "createMap MD_Empty (MAP)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000018C0CF3E450>"
+    },
+    {
+      "step": "createMap duplicate MD_Active",
+      "ok": true,
+      "detail": "created 'MD_Active1' -> forced 'MD_Active'"
+    },
+    {
+      "step": "drop default basemap on ALL maps",
+      "ok": true,
+      "detail": "{'MD_Active': ['Topographic'], 'MD_Empty': ['Topographic'], 'MD_Inactive': ['Topographic'], 'MD_Scene': 'none'}"
+    },
+    {
+      "step": "add L_Points",
+      "ok": true,
+      "detail": "FC_Points -> L_Points"
+    },
+    {
+      "step": "add L_Lines (#1)",
+      "ok": true,
+      "detail": "FC_Lines -> L_Lines"
+    },
+    {
+      "step": "add L_Polygons",
+      "ok": true,
+      "detail": "FC_Polygons -> L_Polygons"
+    },
+    {
+      "step": "createGroupLayer L_Group",
+      "ok": true,
+      "detail": "L_Group"
+    },
+    {
+      "step": "group += L_Sub_A",
+      "ok": true,
+      "detail": "group L_Group += L_Sub_A (removed top-level original)"
+    },
+    {
+      "step": "group += L_Sub_B",
+      "ok": true,
+      "detail": "group L_Group += L_Sub_B (removed top-level original)"
+    },
+    {
+      "step": "add L_Lines (#2 重名)",
+      "ok": true,
+      "detail": "FC_Lines -> L_Lines"
+    },
+    {
+      "step": "add L_Hidden (visible=False)",
+      "ok": true,
+      "detail": "L_Hidden (visible=False)"
+    },
+    {
+      "step": "createLayout LY_Discovery",
+      "ok": true,
+      "detail": "<arcpy._mp.Layout object at 0x0000018C0CFA8C90>"
+    },
+    {
+      "step": "saveACopy",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_1\\Phase8_1_MapDiscovery.aprx"
+    },
+    {
+      "step": "verify saved project",
+      "ok": true,
+      "detail": "{'maps': [{'name': 'MD_Active', 'mapType': 'MAP', 'layers': ['L_Lines', 'L_Hidden', 'L_Group', 'L_Sub_A', 'L_Sub_B', 'L_Points', 'L_Lines', 'L_Polygons'], 'group_children': {'L_Group': ['L_Sub_A', 'L_Sub_B']}, 'visible': {'L_Lines': True, 'L_Hidden': False, 'L_Group': True, 'L_Sub_A': True, 'L_Sub_B': True, 'L_Points': True, 'L_Polygons': True}}, {'name': 'MD_Active', 'mapType': 'MAP', 'layers': [], 'group_children': {}, 'visible': {}}, {'name': 'MD_Empty', 'mapType': 'MAP', 'layers': [], 'group_children': {}, 'visible': {}}, {'name': 'MD_Inactive', 'mapType': 'MAP', 'layers': [], 'group_children': {}, 'visible': {}}, {'name': 'MD_Scene', 'mapType': 'SCENE', 'layers': [], 'group_children': {}, 'visible': {}}], 'layouts': ['LY_Discovery']}"
+    }
+  ],
+  "maps": [
+    {
+      "name": "MD_Active",
+      "mapType": "MAP",
+      "layers": [
+        "L_Lines",
+        "L_Hidden",
+        "L_Group",
+        "L_Sub_A",
+        "L_Sub_B",
+        "L_Points",
+        "L_Lines",
+        "L_Polygons"
+      ],
+      "group_children": {
+        "L_Group": [
+          "L_Sub_A",
+          "L_Sub_B"
+        ]
+      },
+      "visible": {
+        "L_Lines": true,
+        "L_Hidden": false,
+        "L_Group": true,
+        "L_Sub_A": true,
+        "L_Sub_B": true,
+        "L_Points": true,
+        "L_Polygons": true
+      }
+    },
+    {
+      "name": "MD_Active",
+      "mapType": "MAP",
+      "layers": [],
+      "group_children": {},
+      "visible": {}
+    },
+    {
+      "name": "MD_Empty",
+      "mapType": "MAP",
+      "layers": [],
+      "group_children": {},
+      "visible": {}
+    },
+    {
+      "name": "MD_Inactive",
+      "mapType": "MAP",
+      "layers": [],
+      "group_children": {},
+      "visible": {}
+    },
+    {
+      "name": "MD_Scene",
+      "mapType": "SCENE",
+      "layers": [],
+      "group_children": {},
+      "visible": {}
+    }
+  ],
+  "layouts": [
+    "LY_Discovery"
+  ]
+}

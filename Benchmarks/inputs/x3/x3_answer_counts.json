@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x3",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "pointCount": 2400,
+  "countsByClass": {
+    "2": 1275,
+    "5": 1000,
+    "6": 125
+  },
+  "zSumCentimetresByClass": {
+    "2": 6729000,
+    "5": 5650000,
+    "6": 740000
+  },
+  "headerBbox": {
+    "maxX": 19.4,
+    "minX": -0.5,
+    "maxY": 19.45,
+    "minY": -0.45,
+    "maxZ": 59.800000000000004,
+    "minZ": 50.0
+  },
+  "conservationIdentity": {
+    "filter": "class == 2 and x < 10.0",
+    "kept": 902,
+    "dropped": 1498,
+    "total": 2400,
+    "statement": "kept + dropped == total and the source file is not modified"
+  },
+  "sourceSha256Unchanged": "C3E55EC0C7CB149B34ED8EAAE73AD294EEC4B365A0B3ED3D27561C55EBE56DA5",
+  "cellTruth": {
+    "cells": 400,
+    "buildingCells": 25,
+    "vegetationCells": 200,
+    "groundCells": 175,
+    "slopeSubsetCells": 100
+  },
+  "updatedInstance": {
+    "extraPoints": 200,
+    "expectedTotal": 2600
+  }
+}

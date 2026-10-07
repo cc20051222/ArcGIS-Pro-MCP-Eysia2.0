@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x5",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "folds": {
+    "F1": {
+      "train": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "validate": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "bufferCells": 2
+  },
+  "expectedDisposition": "FAIL the row",
+  "reason": "the validation point (1,1) sits inside the buffer of its own training point (1,0), which is spatial leakage; any score from this split is unusable"
+}

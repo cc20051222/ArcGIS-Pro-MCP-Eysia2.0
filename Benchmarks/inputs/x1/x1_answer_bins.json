@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x1",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "binRule": "bin = floor((t normalised to +08:00 - 2024-01-01T00:00+08:00) / 7 days); week bins B00-B12",
+  "countsByUnitThenBin": {
+    "U1": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    },
+    "U2": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    },
+    "U3": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    },
+    "U4": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    },
+    "U5": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    },
+    "U6": {
+      "B00": 13,
+      "B01": 15,
+      "B02": 14,
+      "B03": 13,
+      "B04": 5,
+      "B05": 14,
+      "B06": 13,
+      "B07": 15,
+      "B08": 14,
+      "B09": 13,
+      "B10": 15,
+      "B11": 14,
+      "B12": 12
+    }
+  },
+  "totalsPerBin": {
+    "B00": 78,
+    "B01": 90,
+    "B02": 84,
+    "B03": 78,
+    "B04": 30,
+    "B05": 84,
+    "B06": 78,
+    "B07": 90,
+    "B08": 84,
+    "B09": 78,
+    "B10": 90,
+    "B11": 84,
+    "B12": 72
+  },
+  "declaredNoCoverage": {
+    "days": [
+      30,
+      34
+    ],
+    "fallingIntoBin": "B04",
+    "expectation": "B04 keeps only days 28-29 and must be reported as a partial period, never interpolated"
+  },
+  "mixedOffsets": {
+    "rows": [
+      {
+        "event_id": "E00001",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      },
+      {
+        "event_id": "E00002",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      },
+      {
+        "event_id": "E00003",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      },
+      {
+        "event_id": "E00004",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      },
+      {
+        "event_id": "E00005",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      },
+      {
+        "event_id": "E00006",
+        "t": "2024-01-01T13:00:00+09:00",
+        "bin": "B00"
+      }
+    ],
+    "rule": "these instants are written in +09:00 notation only; after normalising back to +08:00 each must land in the same week bin as its unshifted twin, so a binner that reads the wall clock instead of the instant is caught here"
+  },
+  "mixedOffsetsExpectation": "every listed bin equals the bin of the same instant in +08:00 notation",
+  "excluded": [
+    "X00000",
+    "X00001",
+    "X00002"
+  ],
+  "conservationIdentity": {
+    "inputRows": 1023,
+    "binnedRows": 1020,
+    "excludedRows": 3,
+    "statement": "binned + excluded == input rows, and every excluded row is listed"
+  },
+  "updatedInstance": null
+}

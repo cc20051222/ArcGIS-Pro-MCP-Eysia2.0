@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "m4-g-domain-precalibration-v1",
+  "status": "PASS CANDIDATE",
+  "gateId": "G-DOMAIN",
+  "title": "领域已知答案门 / per-domain known-answer completion gate",
+  "owners": "domain reviewer plus the independent benchmark custodian (roadmap §9 M4 row, §8 gate list)",
+  "finalCompletionEvidenceText": "每领域已知答案、负例、完整自动成果和更新实例 (roadmap §9:153)",
+  "calibrationStatus": "PRE_CALIBRATION_DEFINITION_ONLY_NOT_VERIFIED",
+  "whyM4": "M4 is the batch that names the breadth domains, so the gate has to say what a domain row will be judged on before any of those rows can be claimed complete.",
+  "criteria": [
+    {
+      "criterionId": "GDOM-01",
+      "name": "known answer from an independent path",
+      "predicate": "For each domain row the manifest names an answer computed by a path other than the candidate under test, with the method and its version recorded.",
+      "recompute": "diff the candidate result against the manifest answer within the rule's frozen tolerance; assert the manifest names the independent path.",
+      "failureSeverity": "critical",
+      "stateToday": "NOT-AVAILABLE-PENDING-USER for all eight M4 domains (no qualifying domain input exists in this workspace)"
+    },
+    {
+      "criterionId": "GDOM-02",
+      "name": "negative example",
+      "predicate": "Each domain ships at least one input that must be refused before output, with the reason expected in advance.",
+      "recompute": "assert the refusal happened before any artifact was written and that the reason names the missing precondition.",
+      "failureSeverity": "critical",
+      "stateToday": "defined per scenario as the invalid profile; not run"
+    },
+    {
+      "criterionId": "GDOM-03",
+      "name": "complete automatic result",
+      "predicate": "The result is produced without a manual step; a development-time manual fix is never booked as an automatic success (inherited from Z12 wording).",
+      "recompute": "walk the action log for manual interventions; assert none feeds the scored artifact.",
+      "failureSeverity": "major",
+      "stateToday": "PENDING-EXECUTION"
+    },
+    {
+      "criterionId": "GDOM-04",
+      "name": "updated instance",
+      "predicate": "A changed input re-run keeps the design intent and publishes only the declared deltas.",
+      "recompute": "diff the two runs on slots and figures; assert the delta set equals the declared one.",
+      "failureSeverity": "major",
+      "stateToday": "PENDING-EXECUTION"
+    },
+    {
+      "criterionId": "GDOM-05",
+      "name": "domain ledger separated from the tool ledger",
+      "predicate": "A domain pass never increments a tool-availability account by itself, and a GP or bridge path used under a whitelist entry is booked as an algorithm use, not as a new tool (FINAL §2 five accounts).",
+      "recompute": "assert the account written for a row is the one its rule declares.",
+      "failureSeverity": "critical",
+      "stateToday": "definition only; inherited from GBC-001 and RAS-003"
+    }
+  ],
+  "applicableDomainIds": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8"
+  ],
+  "applicableScenarioIds": [
+    "S31",
+    "S32",
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38",
+    "S39",
+    "S40",
+    "S41",
+    "S42",
+    "S43",
+    "S44",
+    "S45",
+    "S47",
+    "S48",
+    "S49",
+    "S50",
+    "S51",
+    "S53",
+    "S54",
+    "S55",
+    "S56",
+    "S57",
+    "S58",
+    "S59"
+  ],
+  "applicableTemplateIds": [
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP18",
+    "TS11",
+    "TS12",
+    "TS13",
+    "TS14",
+    "TS16",
+    "TS17",
+    "TS18"
+  ],
+  "domainReadiness": [
+    {
+      "domain": "space-time-trends",
+      "scenarios": [
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "a time-enabled series with a declared calendar and a known change or forecast answer"
+    },
+    {
+      "domain": "three-dimensional",
+      "scenarios": [
+        "S36",
+        "S37",
+        "S38",
+        "S39"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "an elevation surface with published control heights and a declared vertical datum"
+    },
+    {
+      "domain": "point-cloud-terrain",
+      "scenarios": [
+        "S40",
+        "S41",
+        "S42",
+        "S43"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "a real point cloud per format with a reference ground set (no .las/.laz/.copc here)"
+    },
+    {
+      "domain": "remote-sensing-models",
+      "scenarios": [
+        "S44",
+        "S45",
+        "S47",
+        "S48",
+        "S49"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "multi-band imagery with published QA plus a reference mask, class legend or model register"
+    },
+    {
+      "domain": "science-decision-uncertainty",
+      "scenarios": [
+        "S50",
+        "S51",
+        "S53",
+        "S54"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "observations plus a published design, method and fold geometry"
+    },
+    {
+      "domain": "network-facility",
+      "scenarios": [
+        "S55",
+        "S56",
+        "S57",
+        "S58"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "a network dataset with impedance and direction (no solver entry in the frozen 53)"
+    },
+    {
+      "domain": "local-interchange",
+      "scenarios": [
+        "S59"
+      ],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "an interchange standard version and a modern container adapter (none in the accepted source)"
+    },
+    {
+      "domain": "same-source-report",
+      "scenarios": [],
+      "qualifyingInputPresentInWorkspace": false,
+      "blockingPrecondition": "an approved Open XML generator and a verified document channel"
+    }
+  ],
+  "deferredScopeNote": "Reviewer recruitment, blind ordering and the professional panel are execution-side activities of a later batch; this file freezes only what will be checked and how.",
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:153 M4 exit row and §8 gate list",
+    "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §10:258-282 per-domain acceptance index",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4-§5",
+    "Benchmarks/z12-precalibration-v1.json (inherited Z12 wording)"
+  ],
+  "ts08CarriedStatus": "GOLD_ARTIFACT_PATH_NOT-AVAILABLE-PENDING-USER (G-205); unchanged in this batch"
+}

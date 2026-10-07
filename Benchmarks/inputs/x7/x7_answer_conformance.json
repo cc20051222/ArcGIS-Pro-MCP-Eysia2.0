@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x7",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "standardVersion": "RFC 7946 (GeoJSON)",
+  "expectedFailures": [
+    {
+      "featureIndex": 0,
+      "failure": "Polygon ring is not closed"
+    },
+    {
+      "featureIndex": 1,
+      "failure": "member type is not Feature"
+    },
+    {
+      "featureIndex": 2,
+      "failure": "coordinates outside [-180,180] x [-90,90]"
+    }
+  ],
+  "expectedCount": {
+    "passing": 0,
+    "failing": 3
+  },
+  "rule": "schema and spatial semantics are checked; package hashes alone never make a conformance claim",
+  "hashesDiffer": {
+    "conformant": "FEE2D6296F0807D39F93E40804C37F1ED6D4A6B9F575756700DA19CCD37498DB",
+    "nonconformant": "028951AFC7F96C146EB9E8630F25AC343E6C4AD57ECCF9B7CD647BBD800D6AA0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "name": "x7_conformant",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "label": "parcel"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              10.0,
+              0.0
+            ],
+            [
+              10.0,
+              10.0
+            ],
+            [
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "label": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5,
+          4.5
+        ]
+      }
+    }
+  ]
+}

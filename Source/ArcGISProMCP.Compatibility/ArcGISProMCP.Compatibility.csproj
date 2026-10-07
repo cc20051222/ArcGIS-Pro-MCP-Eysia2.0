@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ArcGISProMCP.Compatibility</RootNamespace>
+    <AssemblyName>ArcGISProMCP.Compatibility</AssemblyName>
+    <Nullable>enable</Nullable>
+    <!-- D-060：声明本构件消费 ArcGIS Pro SDK 引用集 ⇒ 触发 VerifyArcGISProSdkRefs 前置校验 -->
+    <ArcGISProSdkConsumer>true</ArcGISProSdkConsumer>
+    <!-- net6 单包 ⇒ 依赖检测/身份链见 Config/compatibility-policy.json -->
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- ArcGIS Pro SDK 程序集：引用集由 sdk-refs/ 提供（net6 世代 13.0），根变量见 Directory.Build.props -->
+  <ItemGroup>
+    <Reference Include="ArcGIS.Desktop.Core">
+      <HintPath>$(ArcGISProSdkRefs)Extensions\Core\ArcGIS.Desktop.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Mapping">
+      <HintPath>$(ArcGISProSdkRefs)Extensions\Mapping\ArcGIS.Desktop.Mapping.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Catalog">
+      <HintPath>$(ArcGISProSdkRefs)Extensions\Catalog\ArcGIS.Desktop.Catalog.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Framework">
+      <HintPath>$(ArcGISProSdkRefs)ArcGIS.Desktop.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Core">
+      <HintPath>$(ArcGISProSdkRefs)ArcGIS.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Layouts">
+      <HintPath>$(ArcGISProSdkRefs)Extensions\Layout\ArcGIS.Desktop.Layouts.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- D-062：EditOperation（B 段编辑栈）所在程序集 -->
+    <Reference Include="ArcGIS.Desktop.Editing">
+      <HintPath>$(ArcGISProSdkRefs)ArcGIS.Desktop.Editing.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Add-in 内容：Config.daml 与图片进入 .esriAddinX 包根目录 -->
+  <ItemGroup>
+    <Content Include="Config.daml" />
+    <Content Include="Images\**\*" />
+  </ItemGroup>
+
+  <!-- D-062：受控 GP 白名单随程序集嵌入（LIVE 兜底；解析链 env → 程序集旁 → 嵌入） -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Config\gp-whitelist.json" Link="Config\gp-whitelist.json" />
+  </ItemGroup>
+
+  <!-- Shared Core（不含 ArcGIS Pro SDK） -->
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Core\ArcGISProMCP.Core.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Protocol\ArcGISProMCP.Protocol.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Configuration\ArcGISProMCP.Configuration.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Logging\ArcGISProMCP.Logging.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Security\ArcGISProMCP.Security.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Tools\ArcGISProMCP.Tools.csproj" />
+    <ProjectReference Include="..\Shared\ArcGISProMCP.Server\ArcGISProMCP.Server.csproj" />
+  </ItemGroup>
+
+  <!--
+    打包说明：
+    官方 Esri.ProApp.SDK.Desktop.targets 使用 CodeTaskFactory 打包 .esriAddinX，
+    但 CodeTaskFactory 在 .NET Core MSBuild（dotnet build）中不受支持（MSB4801）；
+    而本机 VS 2026 MSBuild.exe 又缺少 .NET SDK 解析器与 .NET 桌面工作负载，无法解析
+    Microsoft.NET.Sdk。因此本项目采用 scripts/package-addin.ps1 复刻官方打包产物布局
+    （Config.daml + Images 在包根，编译输出在 Install\），并使用官方 RegisterAddIn.exe 注册。
+  -->
+</Project>

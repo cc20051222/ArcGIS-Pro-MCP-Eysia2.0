@@ -1,0 +1,1053 @@
+{
+  "kind": "FINAL_DOCUMENT_CONSOLIDATION_PROVENANCE",
+  "date": "2026-10-02",
+  "sourceRevision": "V11-DATA-METHOD-AND-MEDIA-20261002",
+  "sourceRoot": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新",
+  "productCodeChanges": 0,
+  "productBuildInstallLiveRuns": 0,
+  "originalsUnchanged": true,
+  "retainedTechnicalMarkdownFiles": 15,
+  "files": [
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "originalBytes": 42576,
+      "originalSha256": "9B303B59BF18534ED613F575A4CF6F5374A21115732B4D24DD5901909E407A40",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "finalBytes": 42593,
+      "finalSha256": "9923F7297471B275F73394E2F35959B9AD2A695CD1B31C3D30E84A33FD5119B4",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "originalBytes": 45922,
+      "originalSha256": "23B7D023FE950F644624A3537271C2D8D9733DF6D6D18B011594A64C5315137D",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "finalBytes": 45967,
+      "finalSha256": "AC6AF5F8CFF07B23133A2B7AD5971A604D8E723313387150FB606D06206FF54E",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "originalBytes": 55010,
+      "originalSha256": "98D20C615F01DC5301176B97FD961FF97CEB827D66EFEB6F260C507005D5C6F8",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "finalBytes": 55087,
+      "finalSha256": "BCDB53420B7AD1ACB609E09E6BAE710309481EFCC7D61DA6DEF088C9DD612D2E",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\INTELLIGENCE_AND_ORCHESTRATION.md",
+      "originalBytes": 46648,
+      "originalSha256": "B12BD9EC8FF08372CF098B23EFF289AF5F7C3CDA3B96C2EF9C21D95225229244",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\INTELLIGENCE_AND_ORCHESTRATION.md",
+      "finalBytes": 46650,
+      "finalSha256": "73A1A14D6F0349CF91CFABB6F189F90BFC9429D66B3032B17B272E9D10E11128",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\README_FINAL.md",
+      "originalBytes": 41002,
+      "originalSha256": "5A872C169F8D8E647120A1BEA135596252272E0999716D751B25313D04B776B0",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "finalBytes": 41943,
+      "finalSha256": "FDF4A06F867F7BA8B1F702C2C5E72322E94ECD74AA82747C4009BF986C511867",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "originalBytes": 45295,
+      "originalSha256": "B80216E0E5863EB37925DF0FC1FDD4712DC12044FFCF42F20CC4C8F47B334B2C",
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "finalBytes": 46197,
+      "finalSha256": "9EF63CF4D01EF9F70F6B85E589631E8B3ED41849643D7F7EC12159C0A42F2DE4",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "originalBytes": 57474,
+      "originalSha256": "29EAAD4EB566B57B456180789144F4FDBCE99114B9A703AF92139DF52431F3AE",
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "finalBytes": 57501,
+      "finalSha256": "CDB6B10A6E1225DA41AB6D10B583A1680A113EDAE623097C6CF7943ACA5C1F5E",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "originalBytes": 55484,
+      "originalSha256": "0F24B0EBAA55926D37B646553F1839B72278C82D41CAA12578FCA98C31CCC9C3",
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "finalBytes": 55573,
+      "finalSha256": "7FD33AFD14E1714D2278AE2781C7B9C5BCEC6053759C3DDEF50CA26345E1D5CB",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "originalBytes": 50777,
+      "originalSha256": "BCE185EE6C3502767B8141A968E012096112ECC63BB6847BDFC9FCC1A7185FEB",
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "finalBytes": 50984,
+      "finalSha256": "3E9D36A3F5192A1B5827139D667E7B92B76A51F5382DF260AE6CAA775E1615D4",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "originalBytes": 34377,
+      "originalSha256": "3246D3C456F2AE02E3548766CCC496DB90E52D77F5721F1D90F449B93286F0AC",
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "finalBytes": 34548,
+      "finalSha256": "A0691CF34D800C0344F9012CB4FEAAC83F3FEE4DB5ACB3B59227A99DB0D5E201",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\02_模块实现详稿（5份）\\THREE_CHAIN_IMPLEMENTATION.md",
+      "originalBytes": 47884,
+      "originalSha256": "E062AD212A30424008F2827DB54B581DC1CCAE5D3846F8B3E5CA7AB2AA4BD81E",
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\THREE_CHAIN_IMPLEMENTATION.md",
+      "finalBytes": 47911,
+      "finalSha256": "110E494AB5F614C678C4A8FB774689E55994600D5F6E8ED4D1B2B220D8EA03D0",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "originalBytes": 44438,
+      "originalSha256": "A36F073ABB0D7C006E35F5C92B9F72883C9C4C7A64BDEF1F6A12A286F46F14C5",
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "finalBytes": 44442,
+      "finalSha256": "D7DEFF7D3393D9F2987812FB0687F51ACA9964688A5D1CA49DFEEA6D80C8C432",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "originalBytes": 45446,
+      "originalSha256": "27E3122EC9131F3D21607BEA0244A4F0BBED81B2A40B0D35F02EB941D895C6F1",
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "finalBytes": 45454,
+      "finalSha256": "6DB57EF61720F1B16C74AA90F94D1042DEFA2E869CB5867E5F75DD692AB4A6B9",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "originalBytes": 38517,
+      "originalSha256": "F58B7F9A89B146748BF255C6D295104376E5286A6411F1223F04EDED9366F181",
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "finalBytes": 38525,
+      "finalSha256": "4A15F9C47DBE662F265D123581D2277882E134E614E8DE29AABC1EC60C80FBB1",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "originalBytes": 33137,
+      "originalSha256": "21E6D12B27C1BA8DD0694C082A6D76A870738FDB0D46EDBF291537C8B397E7DB",
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "finalBytes": 33180,
+      "finalSha256": "C49A70C5A8D0B26331158168F6791A0898B99B263236B47B81694F638EB0A163",
+      "change": "local Markdown link destinations only"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\创新执行规格.json",
+      "originalBytes": 131399,
+      "originalSha256": "905D29151062570617807A41E891B681AAA84BD571AFBAE207B53A9E9F99AD15",
+      "finalPath": "02_技术详稿\\原始创新执行规格.json",
+      "finalBytes": 131399,
+      "finalSha256": "905D29151062570617807A41E891B681AAA84BD571AFBAE207B53A9E9F99AD15",
+      "change": "byte-identical archive"
+    },
+    {
+      "originalPath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\规划核验清单.json",
+      "originalBytes": 33640,
+      "originalSha256": "7646B0B4EDBDDD5C1D7146BD6093FCF5E3C9AEB7584F92C76877B531B09B1CBC",
+      "finalPath": "02_技术详稿\\原始规划核验清单.json",
+      "finalBytes": 33640,
+      "finalSha256": "7646B0B4EDBDDD5C1D7146BD6093FCF5E3C9AEB7584F92C76877B531B09B1CBC",
+      "change": "byte-identical archive"
+    }
+  ],
+  "localLinkRewrites": [
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "original": "../../../Docs/TOOL_EXPANSION_BRIEF_FOR_CHATGPT.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Docs/TOOL_EXPANSION_BRIEF_FOR_CHATGPT.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "original": "../临时/V9_五线接力实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V9_五线接力实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "original": "CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "target": "CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "original": "../../3.0项目规划/05_效率优化/优化执行规格.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/优化执行规格.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\INTELLIGENCE_AND_ORCHESTRATION.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "target": "CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "INTELLIGENCE_AND_ORCHESTRATION.md",
+      "target": "INTELLIGENCE_AND_ORCHESTRATION.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "target": "CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "VERIFICATION_AND_TRACEABILITY.md",
+      "target": "VERIFICATION_AND_TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "target": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../02_模块实现详稿（5份）/MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "../02_模块实现详稿（5份）/MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "../02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../02_模块实现详稿（5份）/THREE_CHAIN_IMPLEMENTATION.md",
+      "target": "../02_模块实现详稿（5份）/THREE_CHAIN_IMPLEMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../02_模块实现详稿（5份）/GP_PS_AND_INNOVATION_RECIPES.md",
+      "target": "../02_模块实现详稿（5份）/GP_PS_AND_INNOVATION_RECIPES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "target": "../03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../03_支持与用户体验详稿（4份）/MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "target": "../03_支持与用户体验详稿（4份）/MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../03_支持与用户体验详稿（4份）/ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "target": "../03_支持与用户体验详稿（4份）/ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../03_支持与用户体验详稿（4份）/FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "target": "../03_支持与用户体验详稿（4份）/FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../创新执行规格.json",
+      "target": "../原始创新执行规格.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V4_20261001_深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V4_20261001_深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "VERIFICATION_AND_TRACEABILITY.md",
+      "target": "VERIFICATION_AND_TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/开源与可行性研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/开源与可行性研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../深化与核验方案.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/深化与核验方案.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V5_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V5_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../增量深化与核验方案.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/增量深化与核验方案.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V6_容量与工期审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V6_容量与工期审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V6_取消与恢复审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V6_取消与恢复审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V6_资料决策与创新审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V6_资料决策与创新审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../自动化与全范围排程核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/自动化与全范围排程核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V6_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V6_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V7_GP更新实现审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V7_GP更新实现审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V7_学习与自动设计审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V7_学习与自动设计审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../临时/V7_完整排程实现审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V7_完整排程实现审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../输入复用与交付核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/输入复用与交付核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../规划核验清单.json",
+      "target": "../原始规划核验清单.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V7_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V7_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V8_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V8_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../资格资源与接力核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/资格资源与接力核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V9_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V9_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../语义学习与质量核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/语义学习与质量核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../规划核验清单.json",
+      "target": "../原始规划核验清单.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../../3.0项目规划创新历史/V10_20261002_本轮深化前/备份逐件核验.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新历史/V10_20261002_本轮深化前/备份逐件核验.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../数据方法与媒介核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/数据方法与媒介核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\README_FINAL.md",
+      "original": "../规划核验清单.json",
+      "target": "../原始规划核验清单.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V6_交叉复核与修订_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V6_交叉复核与修订_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V8_输入与复用实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V8_输入与复用实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V8_科学出图实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V8_科学出图实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V8_交付与体验实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V8_交付与体验实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V8_契约一致与收益研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V8_契约一致与收益研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V9_资格持续更新实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V9_资格持续更新实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V9_运行资源准入实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V9_运行资源准入实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V9_五线接力实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V9_五线接力实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V9_根证据与交接研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V9_根证据与交接研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../资格资源与接力核验.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/资格资源与接力核验.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V10_数据语义实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V10_数据语义实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V10_学习与体验实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V10_学习与体验实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V10_质量与提速实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V10_质量与提速实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V10_根合同与可行性研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V10_根合同与可行性研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V11_数据发现与补缺实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V11_数据发现与补缺实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V11_方法与敏感性实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V11_方法与敏感性实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V11_多媒介与可访问实现研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V11_多媒介与可访问实现研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "original": "../临时/V11_根合同与工期研究_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V11_根合同与工期研究_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "original": "README_IMPLEMENTATION_DETAILS.md",
+      "target": "README_IMPLEMENTATION_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "original": "../../3.0项目规划/05_效率优化/优化执行规格.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/优化执行规格.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "../../3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "README_IMPLEMENTATION_DETAILS.md",
+      "target": "README_IMPLEMENTATION_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "../临时/V6_取消与恢复审查_20261002.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V6_取消与恢复审查_20261002.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Docs/Final/20261001-implementation-details/DESIGN_SPECIFICATION.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Docs/Final/20261001-implementation-details/DESIGN_SPECIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../3.0项目规划/05_效率优化/优化执行规格.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/优化执行规格.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Logging/StructuredFileLogger.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Logging/StructuredFileLogger.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Jobs/JobManifest.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Jobs/JobManifest.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/ToolValidatorPipeline.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/ToolValidatorPipeline.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Server/Internal/PsChannelHandler.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Server/Internal/PsChannelHandler.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\MODULE_INTERFACES_AND_BACKLOG.md",
+      "original": "../../../Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../01_主方案（6份）/README_FINAL.md",
+      "target": "../01_主方案（6份）/README_FINAL.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../../3.0项目规划/05_效率优化/优化执行规格.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/优化执行规格.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../../3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../../../Docs/_gatekeeper/GATE-G240-D108-PASS_VERDICT.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Docs/_gatekeeper/GATE-G240-D108-PASS_VERDICT.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "THREE_CHAIN_IMPLEMENTATION.md",
+      "target": "THREE_CHAIN_IMPLEMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "GP_PS_AND_INNOVATION_RECIPES.md",
+      "target": "GP_PS_AND_INNOVATION_RECIPES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../../../Docs/Final/20261001-implementation-details/DESIGN_SPECIFICATION.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Docs/Final/20261001-implementation-details/DESIGN_SPECIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../../../Docs/Final/20261001-implementation-details/DETAILS_VALIDATION.json",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/Docs/Final/20261001-implementation-details/DETAILS_VALIDATION.json",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../深化与核验方案.py",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/深化与核验方案.py",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "../01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "GP_PS_AND_INNOVATION_RECIPES.md",
+      "target": "GP_PS_AND_INNOVATION_RECIPES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "THREE_CHAIN_IMPLEMENTATION.md",
+      "target": "THREE_CHAIN_IMPLEMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "../03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "target": "../03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "target": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\README_IMPLEMENTATION_DETAILS.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\THREE_CHAIN_IMPLEMENTATION.md",
+      "original": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "target": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\02_模块实现详稿（5份）\\THREE_CHAIN_IMPLEMENTATION.md",
+      "original": "../../3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/05_效率优化/质量不变的效率优化方案.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "original": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "target": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "original": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "target": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "original": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "target": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "original": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "target": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "original": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "target": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "original": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "target": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "original": "README_SUPPORT_DETAILS.md",
+      "target": "README_SUPPORT_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "original": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "target": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "original": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "target": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "original": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "target": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../01_主方案（6份）/README_FINAL.md",
+      "target": "../01_主方案（6份）/README_FINAL.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../01_主方案（6份）/CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "target": "../01_主方案（6份）/CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "target": "../02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "target": "MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "target": "ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "target": "FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../01_主方案（6份）/CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "target": "../01_主方案（6份）/CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "target": "../01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "target": "../01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "from": "02_技术详稿\\03_支持与用户体验详稿（4份）\\README_SUPPORT_DETAILS.md",
+      "original": "../../3.0项目规划/03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "target": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "exists": true
+    }
+  ],
+  "missingOriginalLinkTargets": [],
+  "scopeDecision": "Original scope and frozen gate table preserved; current revised copies tracked separately. Documentation only, not product acceptance.",
+  "currentRevisionDate": "2026-10-03",
+  "currentRevisions": [
+    {
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "baseMigrationSha256": "AC6AF5F8CFF07B23133A2B7AD5971A604D8E723313387150FB606D06206FF54E",
+      "currentSha256": "D5186F19D5FC378352EC3D709CDBEC149BCCC6D8214B9C390243BC841283050A",
+      "currentBytes": 53896,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "baseMigrationSha256": "BCDB53420B7AD1ACB609E09E6BAE710309481EFCC7D61DA6DEF088C9DD612D2E",
+      "currentSha256": "701B8F4586420FABCB5AB1395980D04D446F651628AC53A58C74874BC2C4EA6B",
+      "currentBytes": 56850,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\VERIFICATION_AND_TRACEABILITY.md",
+      "baseMigrationSha256": "9EF63CF4D01EF9F70F6B85E589631E8B3ED41849643D7F7EC12159C0A42F2DE4",
+      "currentSha256": "A47AC2059A3ED998CD906200A1324403A24D2345AB230B9EB10BE4AC18B7D832",
+      "currentBytes": 48446,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "baseMigrationSha256": "CDB6B10A6E1225DA41AB6D10B583A1680A113EDAE623097C6CF7943ACA5C1F5E",
+      "currentSha256": "DF20918FAAF87390FA2E9A497709537C4DA21A62E3972BC95A045B0DBFB60C6B",
+      "currentBytes": 84652,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "baseMigrationSha256": "6DB57EF61720F1B16C74AA90F94D1042DEFA2E869CB5867E5F75DD692AB4A6B9",
+      "currentSha256": "811BA0ABAE21A7AABD4622C616E412CC0118ABCBD1F82616C45F9A067211BA65",
+      "currentBytes": 53574,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "baseMigrationSha256": "D7DEFF7D3393D9F2987812FB0687F51ACA9964688A5D1CA49DFEEA6D80C8C432",
+      "currentSha256": "754D7A69307E29FA86A1063F9151F774F5237E237690883C4FD26B3A1142651E",
+      "currentBytes": 48529,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\01_主方案（6份）\\INTELLIGENCE_AND_ORCHESTRATION.md",
+      "baseMigrationSha256": "73A1A14D6F0349CF91CFABB6F189F90BFC9429D66B3032B17B272E9D10E11128",
+      "currentSha256": "0D1C40F4B19178E8FF6601FDE8F0017D0B12E1E5361828A1864F898CE149F36D",
+      "currentBytes": 55577,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\02_模块实现详稿（5份）\\GP_PS_AND_INNOVATION_RECIPES.md",
+      "baseMigrationSha256": "7FD33AFD14E1714D2278AE2781C7B9C5BCEC6053759C3DDEF50CA26345E1D5CB",
+      "currentSha256": "08B42AA4FED3B4F5306F3CA7DEEC2C8551D186C0E05521DA9ADEEFF97611F74A",
+      "currentBytes": 62733,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    },
+    {
+      "finalPath": "02_技术详稿\\03_支持与用户体验详稿（4份）\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "baseMigrationSha256": "4A15F9C47DBE662F265D123581D2277882E134E614E8DE29AABC1EC60C80FBB1",
+      "currentSha256": "C2F22CD854CEFD9D8B79A3ECC0D9A942F303C44E8985B47251CF70B81038B0A6",
+      "currentBytes": 43113,
+      "change": "Authorized in-place source/update and content-flow refinement; all original technical paragraphs and gates retained"
+    }
+  ],
+  "initialMigrationRecordIsHistorical": true,
+  "currentDocumentRevision": "FINAL-20261003-INPLACE-03"
+}

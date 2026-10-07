@@ -1,0 +1,831 @@
+{
+  "kind": "V11_ACCESSIBLE_MULTIMEDIA_PLANNING_RESEARCH",
+  "revision": "V11-MULTIMEDIA-ACCESSIBILITY-RESEARCH-20261002",
+  "status": "COMPLETED_RESEARCH_ONLY_NO_FORMAL_DOCUMENT_OR_PRODUCT_CHANGE",
+  "researcher": "/root/v11_accessible_delivery",
+  "underlyingFormalRevision": "V10-SEMANTIC-LEARNING-AND-QUALITY-20261002",
+  "productRuns": 0,
+  "builds": 0,
+  "installs": 0,
+  "liveHostRuns": 0,
+  "psRuns": 0,
+  "dispatches": 0,
+  "productAcceptance": "NOT_RUN",
+  "sourceDate": "2026-10-02",
+  "scope": "Only new planning research JSON and D-drive writable probe; scanned all15 MD keywords and read relevant sections, not a full original-scope acceptance reread.",
+  "evidence": {
+    "formalMarkdownCount": 15,
+    "documents": [
+      {
+        "relativePath": "01_主方案（6份）/CAPABILITY_AND_SUPPORT_MATRIX.md",
+        "sha256": "E07C458E4A253595D608A78D60CE680E48ED8FED4FDECB08D5030C8087089705",
+        "characters": 19434,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "01_主方案（6份）/CONTRACTS_AND_EXECUTION_RECIPES.md",
+        "sha256": "166D2D3C8E2047943F6685B0F99C6BC268D47B3738190CE59580D00F7E53267C",
+        "characters": 22847,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+        "sha256": "E5F1271F9DDDD98D9057F97A8C15E906A7E7DCB9161D2C004296C44EB17D5CB0",
+        "characters": 24270,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "01_主方案（6份）/INTELLIGENCE_AND_ORCHESTRATION.md",
+        "sha256": "A6811CB7C9F4AA5018D6F4DB397FD3132EDB7A6A75F34A76AB72A970DF961BB2",
+        "characters": 18248,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "01_主方案（6份）/README_FINAL.md",
+        "sha256": "FBB915BB3903AB195F8203D63682C2175FAED70F1000371DA6C588FCC58E5127",
+        "characters": 17600,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+        "sha256": "8F06F353B94D8A58CED9EC2731F82D9149FB1A9A9257B9CC80560BCC58C2AF2E",
+        "characters": 18951,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+        "sha256": "A2220B5D2B2C32E4CC441AD8A9D8347158CE8B04DF058EB46B9CC35C9D4CEA8B",
+        "characters": 27626,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "02_模块实现详稿（5份）/GP_PS_AND_INNOVATION_RECIPES.md",
+        "sha256": "5DD9B890624136D7E7B9BD93AD745A151A517041617F48B868FC3F2142D8295A",
+        "characters": 23919,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "02_模块实现详稿（5份）/MODULE_INTERFACES_AND_BACKLOG.md",
+        "sha256": "8E4FCA0C68E6C0B5A4A1CD7C6F5457F7BA78A34AC3D1801264AFF56C16C19651",
+        "characters": 25784,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+        "sha256": "16890CBDD6C8367CD4DD0F33AB855CA7A24ACF036864A28EA400DF86E2F480A9",
+        "characters": 14679,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "02_模块实现详稿（5份）/THREE_CHAIN_IMPLEMENTATION.md",
+        "sha256": "033903EF5D1CB00E89AC7360217E40BD72B795C1ED281627EEDE1A9C7DE523E2",
+        "characters": 20536,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "03_支持与用户体验详稿（4份）/ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+        "sha256": "1AD206B4E1E03DE12CF2FD2FE3F4380BBDACEBBDA80329F5C49BE6702CB8B4DF",
+        "characters": 19173,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "03_支持与用户体验详稿（4份）/FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+        "sha256": "F49C96FD869A5D813DCC67C4514E8449455E9011F46963078803D0C1C6207A85",
+        "characters": 20112,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "03_支持与用户体验详稿（4份）/MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+        "sha256": "10023E3536DF7F876C23B939DC602966D89212256100353EA4A3C7C0BB5E22E0",
+        "characters": 16246,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      },
+      {
+        "relativePath": "03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+        "sha256": "AE9A72944F1444266C0F35547592CF663DEFD97B145C75FD52BA36C39E17B539",
+        "characters": 13820,
+        "reviewType": "ALL_FILE_KEYWORD_SCAN_WITH_RELEVANT_SECTIONS_READ_NOT_FULL_ACCEPTANCE_REVIEW"
+      }
+    ],
+    "specification": {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\创新执行规格.json",
+      "sha256": "C718F1A0826C723FA7F28513F48B88D0BAE8FC272DD4F2F7CC8BDE908CFDCF9B",
+      "revision": "V10-SEMANTIC-LEARNING-AND-QUALITY-20261002",
+      "workItemCount": 30,
+      "innovationCount": 12,
+      "runtimeRuns": 0
+    },
+    "sourceAnchors": [
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\Source\\ArcGISProMCP.Compatibility\\Services\\AttributeService.cs",
+        "sha256": "AD9B1D36946055B8A74F3712064D7FBE323AE688096381B4CEA3B0FDD5160192"
+      },
+      {
+        "path": "D:\\ArcGIS-Pro-MCP 2.0\\Source\\Shared\\ArcGISProMCP.Tools\\AggregateStatisticsTools.cs",
+        "sha256": "FFF0FD7CB85D5D456F4257CF949C019DF90EA5C384130DD2780B51DD04949108"
+      }
+    ]
+  },
+  "primarySources": [
+    {
+      "id": "S01",
+      "title": "Unicode LDML Numbers",
+      "url": "https://unicode.org/reports/tr35/tr35-numbers.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "百分比模式会把输入值乘100；数值、符号、单位与紧凑记法可作为不同语义词元；Kelvin的K不等于千的K。"
+      ],
+      "adoption": "固定展示数量种类和每个词元的语义，避免百分数二次乘100、单位错认；借鉴规则，不新增CLDR/ICU包安装前置。",
+      "scope": "数字展示规则；不是本项目翻译或所有locale已资格证据"
+    },
+    {
+      "id": "S02",
+      "title": "Microsoft CultureInfo",
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-8.0",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "文化数据随系统/运行时及用户设置变化；线程当前文化影响格式；持久数据应使用独立于具体文化的稳定表示。"
+      ],
+      "adoption": "任务冻结明确locale和所用NumberFormatInfo数据摘要，编码canonical数值与显示字符串分离。",
+      "scope": "内置.NET合同；实际net6/net8、ICU/NLS和locale支持逐环境验证"
+    },
+    {
+      "id": "S03",
+      "title": ".NET standard numeric format strings",
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "P格式乘100；显示精度不是计算精度；不同运行时舍入行为不能不经验证视为同一政策。"
+      ],
+      "adoption": "显式记录数量kind、舍入mode、精度与formatter版本，不依赖线程默认格式。",
+      "scope": "纯展示，科学原值和独立oracle不改"
+    },
+    {
+      "id": "S04",
+      "title": "W3C WAI Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "复杂图表与地图需要短描述及包含必要信息的长描述；结构化表格不能只用一段aria-describedby替代。"
+      ],
+      "adoption": "同FactCell/ClaimBinding生成短标识、可见结构化长描述及事实表，保留结构关系。",
+      "scope": "Web最佳实践来源，不能单凭生成描述宣称PDF/PSD/Office已可访问"
+    },
+    {
+      "id": "S05",
+      "title": "W3C WCAG 2.2 Use of Color",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "信息不应只靠颜色，须提供可见附加线索；辅助技术里的文字不自动满足有视力色觉障碍用户的可见替代。"
+      ],
+      "adoption": "符号/文字/外部对应表与原类别ID绑定，不能只写alt后就判地图色觉可辨。",
+      "scope": "适用Web内容；产品科学图须按自身具体媒介与任务合同验证"
+    },
+    {
+      "id": "S06",
+      "title": "W3C WCAG 2.2 Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "适用文字普通门4.5:1、大文字3:1且有定义和例外；阈值比较不把4.499四舍五入为4.5。"
+      ],
+      "adoption": "工作台/UI文字按明确标准/尺寸/前背景/状态核验，实际字形和媒介阅读性另核。",
+      "scope": "不是所有印刷地图、分类色带或任何色差的普适可读证明"
+    },
+    {
+      "id": "S07",
+      "title": "W3C WCAG 2.2 Non-text Contrast",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "必要图形与UI状态有3:1规则及例外，颜色梯度表达测量的热图属于可能的essential例；不因此豁免其他标准。"
+      ],
+      "adoption": "锁定定量颜色，不为刷对比门改热图数值/色义；列适用或不适用理由，并补同源信息通路。",
+      "scope": "essential需具体理由，不能给所有科学图自动PASS或任意ΔE门"
+    },
+    {
+      "id": "S08",
+      "title": "Esri ArcGIS Pro 3.5 PDF export",
+      "url": "https://pro.arcgis.com/en/pro-app/3.5/help/sharing/overview/pdf-export.htm",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "tagged PDF仅布局导出；阅读顺序按布局drawing order；开启accessibility tags后不能同时包含feature attributes；双语逐元素语言可能需额外后处理。"
+      ],
+      "adoption": "将同文件能力冲突放入OutputContract编译；允许多成员时分别交付地理属性PDF和阅读PDF，均绑定同事实版，逐消费者核验。",
+      "scope": "3.5文档，不证明SDK/当前运行版自动具备该API，也不自动覆盖全部旧版"
+    },
+    {
+      "id": "S09",
+      "title": "Microsoft PowerPoint accessibility",
+      "url": "https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "阅读顺序可不同于视觉摆放；内置布局/标题/表头/alt及实际屏幕阅读测试重要；内置checker对透明背景文字和非文字对比有检测限制。"
+      ],
+      "adoption": "PPTX adapter把视觉层顺序、逻辑阅读顺序和结构检查分别记录；checker输出不是完整资格。",
+      "scope": "产品支持版本/格式consumer和实际验证范围明确"
+    },
+    {
+      "id": "S10",
+      "title": "Vega-Lite mark definition",
+      "url": "https://vega.github.io/vega-lite/docs/mark.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "aria及description字段只针对SVG输出；默认invalid策略会过滤或隐藏某些数据，其他配置可将invalid展示为零等值。"
+      ],
+      "adoption": "借鉴声明式语义描述与输出域限制；不继承会隐藏缺失的默认行为，不安装Vega或新增运行服务。",
+      "scope": "原项目文档，不证明canvas/PNG/Office保留ARIA"
+    },
+    {
+      "id": "S11",
+      "title": "Matplotlib hatch reference",
+      "url": "https://matplotlib.org/stable/gallery/shapes_and_collections/hatch_style_reference.html",
+      "verifiedOn": "2026-10-02",
+      "facts": [
+        "纹理支持依赖backend，官方示例列PS/PDF/SVG/macOSX/Agg与不支持的WX/Cairo。"
+      ],
+      "adoption": "辅助符号或纹理只在已资格renderer/medium上提供且不污染科学层；不能由源配置推断最终效果。",
+      "scope": "借鉴原理，不新增Matplotlib安装或所有纹理通用可读承诺"
+    }
+  ],
+  "invariants": {
+    "originalWorkItems": 30,
+    "originalInnovations": 12,
+    "originalPerformanceGates": 8,
+    "originalOwnershipAndDependenciesUnchanged": true,
+    "originalQuantityFormulaUnchanged": true,
+    "newAlgorithmQuantityDelta": 0,
+    "noOriginalFeatureReduction": true,
+    "noLoweredGateOrErrorBudget": true,
+    "noNewServiceLibraryInstallationOnlineTrainingPrerequisite": true,
+    "scientificValuesMethodsCategoriesColorMeaningGeographyScalesFrozen": true,
+    "allActualWritesUseOriginalInvoker": true,
+    "qualityUnchangedMustBeObservedNotAssumed": true,
+    "psManualDesignTarget": 0,
+    "targetDays": 60,
+    "completionProven": false,
+    "newEngineeringAndQaCosts": null
+  },
+  "priorScopeAnchors": [
+    {
+      "file": "02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "lines": [
+        38,
+        46,
+        51,
+        53
+      ],
+      "use": "已有原精度、显示精度、舍入和ClaimBinding；本轮只补实际词元/语言合同"
+    },
+    {
+      "file": "03_支持与用户体验详稿（4份）/ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "lines": [
+        145,
+        147,
+        181,
+        208,
+        219
+      ],
+      "use": "已有可访问性、实际文字、有限修复；本轮只补媒介/consumer结构和互斥见证"
+    },
+    {
+      "file": "03_支持与用户体验详稿（4份）/FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "lines": [
+        165,
+        171,
+        299,
+        315
+      ],
+      "use": "原真实Office/交付/引用与VIEW EDIT RECOMPUTE域保留"
+    },
+    {
+      "file": "02_模块实现详稿（5份）/THREE_CHAIN_IMPLEMENTATION.md",
+      "lines": [
+        176,
+        278,
+        280,
+        362
+      ],
+      "use": "锁原定量色带/类别/图框与同源事实；实际科研数字和必要文件不动"
+    },
+    {
+      "file": "Source/ArcGISProMCP.Compatibility/Services/AttributeService.cs",
+      "lines": [
+        219,
+        222,
+        275
+      ],
+      "use": "源码只显示局部InvariantCulture，尚不证明新PresentationToken API已有"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "AD-M01",
+      "name": "SemanticPresentationContract / PresentationTokenWitness",
+      "implemented": false,
+      "primaryWorkItem": "WI21",
+      "primaryOwner": "E4",
+      "costAccountingOwner": "WI21/E4 owns the presentation compiler integration cost; WI16/E3 contributes fact and scientific binding under its original ownership. Shared work is counted once with contribution breakdown, never zero or duplicated across owners.",
+      "supportingWorkItems": [
+        {
+          "id": "WI17",
+          "owner": "E4",
+          "purpose": "DesignSpec的事实词元占位与真实图层内容读取"
+        },
+        {
+          "id": "WI16",
+          "owner": "E3",
+          "purpose": "当前已验科学事实、原精度/分母/数量类型及独立semantic binding；不移转事实真值责任"
+        },
+        {
+          "id": "WI23",
+          "owner": "E3",
+          "purpose": "术语/展示规则更新闭包"
+        },
+        {
+          "id": "WI28",
+          "owner": "E5",
+          "purpose": "业务说明、语言选择和词元出处"
+        }
+      ],
+      "innovationRefs": [
+        "J09",
+        "J10",
+        "J12"
+      ],
+      "performanceGateRefs": [
+        "PF05",
+        "PF06",
+        "PF07"
+      ],
+      "newWorkItemOrService": false,
+      "algorithmQuantityDelta": 0,
+      "noveltyAgainstV5toV10": {
+        "alreadyPresent": [
+          "DC08已有displayPrecision/比例/单位/空值与ClaimBinding",
+          "同FactTable输出图表文字并查100%事实一致",
+          "V10已补实体粒度/连接基数/科学支持和偏好/参考同层冲突",
+          "旧版已要求中文/英文/上下标实际文字测量与有限修复"
+        ],
+        "incrementalGap": "尚缺跨locale/媒介每一实际数字词元的quantityKind、变换顺序、术语ID、舍入误差与格式环境见证，无法仅凭同factId发现百分比乘100两次、百分点误叫百分比、单位K歧义或Office旧字串。新增内部见证将既有同源约束落到词元，非新增分析算法。",
+        "notProposed": "不重复新建偏好冲突解析器、批量参考选择器、模板评分器或未知效果重派。"
+      },
+      "contracts": [
+        {
+          "type": "SemanticPresentationContract",
+          "fields": {
+            "contractId": "StableId",
+            "revision": "PositiveInt",
+            "factRevision": "Digest",
+            "locale": "SpecificBcp47Tag",
+            "formatterProfileRef": "QualifiedFormatterProfileRef",
+            "termPackRef": "VersionedAdoptedTermPackRef",
+            "quantityKind": "enum MEASURE | RATIO | PERCENT_NUMBER | PERCENTAGE_POINT_DIFFERENCE | ENTITY_ID | DATE | DURATION | NULL_REASON",
+            "sourceUnit": "CanonicalUnitId | null for non-quantity",
+            "displayUnit": "CanonicalUnitId | null",
+            "unitTransformRef": "AdoptedDimensionCheckedDisplayTransformRef | null",
+            "transformOrder": "ordered enum list IDENTITY/LINEAR_SCALE/AFFINE_ABSOLUTE/LINEAR_DIFFERENCE/RATIO_TO_PERCENT/FIXED_ROUND/LOCALIZE",
+            "rounding": "{mode:explicit enum,precisionKind:FIXED_DECIMALS|SIGNIFICANT_DIGITS,digits:nonnegative bounded int,zeroAfterRoundingPolicy:QUALIFIED_APPROXIMATE_TEXT|SMALL_VALUE_TEXT|EXPLICIT_ROUNDED_WITH_RAW_AVAILABLE}",
+            "nullLexemeByReason": "Map<nullReason,TermId>; known zero separate",
+            "glossaryScope": "domain/method/unit/denominator/time/adoption revisions; no alias by string similarity",
+            "valuePolicy": "original typed numerical representation preserved; scalar/IEEE nonfinite/decimal/rational identity explicit",
+            "permittedNormalization": "finite enumerated whitespace/superscript equivalence only when meaning proven; minus/sign/direction/percent/denominator never dropped",
+            "consumerDomains": "fixed format/version adapter and its extractable text/script range",
+            "sourceScientificDigest": "facts/method/categories/colors/geography/scale/uncertainty/denominator immutable refs"
+          }
+        },
+        {
+          "type": "PresentationToken",
+          "fields": {
+            "occurrenceId": "StableId distinct per actual placement",
+            "artifactMemberId": "StableId",
+            "objectRef": "logical page/shape/cell/layer identifier",
+            "factKey": "OriginalTypedFactKey | no invented generated key",
+            "claimBindingRef": "CurrentVersionRef",
+            "termId": "StableAdoptedTermId",
+            "canonicalValueRef": "ImmutableFactValueRef | nullReasonRef",
+            "displayTransformTrace": "ordered declared steps and units",
+            "semanticTokens": "Array<{kind:VALUE|SIGN|UNIT|PERCENT|PERIOD|QUALIFIER|CLASS_LABEL|ENTITY_ID,text,semanticCode}>",
+            "expectedLexeme": "string",
+            "representedValueAndRoundingError": "typed expression with exact/qualified tolerance, not new scientific uncertainty",
+            "languageAndDirection": "explicit tag/script/direction, no current-thread fallback",
+            "requirementRefs": "nonempty originalOutputContract requirement ids"
+          }
+        },
+        {
+          "type": "PresentationTokenWitness",
+          "fields": {
+            "artifactRevision": "ImmutableCandidateRevision",
+            "consumerIdentity": "Host/format/version/adapter/method digest",
+            "observedObjectRef": "actual object identity",
+            "actualContent": "string | UNKNOWN if unsupported extraction",
+            "textContentCheck": "PASS|FAIL|UNKNOWN",
+            "glyphMeasureCheck": "PASS|FAIL|UNKNOWN",
+            "truncationCheck": "PASS|FAIL|UNKNOWN",
+            "semanticComparison": "each term/kind/value/unit/denominator/time/sign/qualifier against independent expected contract",
+            "contentEvidenceRef": "actual reopen/extract receipt, not source Spec alone",
+            "scientificStatus": "not changed by content PASS; original scientific oracle stays required"
+          }
+        }
+      ],
+      "interfaces": [
+        "SV08 CompilePresentationTokens(VerifiedFactCells, AdoptedTermPack, SemanticPresentationContract) -> TokenSet | typed RequiredGap.",
+        "SV09/SV11 BindPresentationTokens(TokenSet, DesignSpec|ReportSpec|WorkbookSpec|PresentationSpec, slot bindings) -> immutable candidate specs + per-placement requirement map.",
+        "固定受审Host/Office observers ReadActualPresentationTokens(candidate artifacts, qualified consumer domain) -> observed tokens + extraction/glyph/clipping gaps.",
+        "SV08 independent ValidateTokenWitnesses(expected contract, original fact/claim refs, observations) -> per-token CheckReport; renderer自身的expected string不能独立证明正确。",
+        "SV12 ChangePresentationProfile(old/new rule/term/locale/formatter refs) -> only affected display/render/recheck closure when science unchanged; semantic term/denominator change uses full real affected closure."
+      ],
+      "steps": [
+        "1.读取已验TypedFactCell和当前采用术语包；锁locale、formatter实际number-symbol snapshot及版本，不从线程当前文化或图片OCR猜语义。",
+        "2.每个展示位置绑定quantityKind；比例原分子/分母按原零分母规则，PERCENT_NUMBER与RATIO_TO_PERCENT严格分支，只允许一次乘100。",
+        "3.采用已审同维度displayTransform：平方米与公顷等纯展示可换算，绝对温度的offset不能套温差；变方法/业务单位/分母是实际语义变更，走原计划。",
+        "4.显式数值表示与舍入：原始值不改；用锁定mode和digits得到展示值，记录误差/近似限定，不把displayPrecision变置信区间；非零舍为0须有合法文字策略。",
+        "5.术语译名来自采用的domain/method/termId；未资格目标语言必需术语UNKNOWN并集中缺口，不能模型自动将净变化译成总体变化；可选语言回原语言需原合同允许。",
+        "6.将TokenSet送原Design/Office适配；不同语言排版调用同科学素材，重测字体、符号、断行、图例和实际内容，不消耗新分析算法资格。",
+        "7.保存重开读实际图层/shape/cell内容，分开核符号、内容、字体/截断；不能只检查Spec绑定或从PNG OCR正确推断PSD字层可编辑。",
+        "8.所有必需出现均有当前witness才可交给原完整DeliveryRevision门；抽取未知/旧版/同数量错字不隐藏；个人术语候选仍需采用，不改变原科学truth。",
+        "9.编译与同源绑定可纯并行准备；真实PS全局modal和保存串行，所有版本/语言共享原根12候选/3首次及5总预览/2修复/2最终渲染预算。"
+      ],
+      "finiteCounterexamples": [
+        {
+          "id": "AD1-01",
+          "input": "RATIO numerator=1 denominator=4, percent digits0",
+          "expected": "25%且transform只有一次×100，canonical仍1/4",
+          "failureCaught": "先算25再送P格式得到2500%"
+        },
+        {
+          "id": "AD1-02",
+          "input": "PERCENT_NUMBER value=25, unit=PERCENT_NUMBER",
+          "expected": "25%作为已百分数显示，不能再次×100",
+          "failureCaught": "数量kind缺失"
+        },
+        {
+          "id": "AD1-03",
+          "input": "ratio numerator=0 denominator=0, nullReason=undefined-ratio",
+          "expected": "明确未定义/待分母；不得0%",
+          "failureCaught": "零分母填零"
+        },
+        {
+          "id": "AD1-04",
+          "input": "1000000 m²，已采用display为ha",
+          "expected": "100 ha, canonical1000000m²不变，单位词元绑定",
+          "failureCaught": "变显示单位但数值未换"
+        },
+        {
+          "id": "AD1-05",
+          "input": "20 °C absolute 与20 °C temperature-difference",
+          "expected": "绝对68°F；温差36°F差值，合法变换和quantityKind分开",
+          "failureCaught": "对温差加32或单位未资格自动换"
+        },
+        {
+          "id": "AD1-06",
+          "input": "百分点变化5，模型译成5% relative increase",
+          "expected": "术语/kind不匹配FAIL，不使用更顺口错译",
+          "failureCaught": "百分比与百分点混同"
+        },
+        {
+          "id": "AD1-07",
+          "input": "三个比例都1/3，显示1小数",
+          "expected": "33.3%,33.3%,33.3%，合计99.9有合法舍入说明，原值仍各1/3",
+          "failureCaught": "暗调一类为33.4刷100"
+        },
+        {
+          "id": "AD1-08",
+          "input": "canonical0.0049，fixed2舍入为0.00",
+          "expected": "按已采用精度策略标近似/小值并可见原值依据，不允许断言科学值0",
+          "failureCaught": "显示零成为事实零"
+        },
+        {
+          "id": "AD1-09",
+          "input": "entityId='0001' 与entityId='1'",
+          "expected": "原字符串身份分别保留，不套数值locale格式",
+          "failureCaught": "显示格式成为实体归并"
+        },
+        {
+          "id": "AD1-10",
+          "input": "same fact 1234.5, en-US/de-DE，两份合法locale",
+          "expected": "1,234.5与1.234,5按各合同对应同原值；不可按整字符串不相同误判科学矛盾",
+          "failureCaught": "跨语言直接字节相同检查"
+        },
+        {
+          "id": "AD1-11",
+          "input": "currentFactRevision r2比例105/145，Office实际残留旧71.4%",
+          "expected": "旧lexeme/绑定见证FAIL，不因same cellId或spec指r2通过",
+          "failureCaught": "保存后实际内容陈旧"
+        },
+        {
+          "id": "AD1-12",
+          "input": "必需译名无已采用termId，或script/font实际缺字",
+          "expected": "UNKNOWN具体缺口；图为好看图片不能代替词元与glyph门",
+          "failureCaught": "词典fallback/字体名字存在假证明"
+        },
+        {
+          "id": "AD1-13",
+          "input": "null=not-applicable与known0混为同'-'文字",
+          "expected": "原因与零必须有区别，必要说明可访问",
+          "failureCaught": "缺失、零、不适用语义丢失"
+        },
+        {
+          "id": "AD1-14",
+          "input": "formatter环境从ICU/NLS/自定义separator改变而profile同名",
+          "expected": "实际symbol/profile摘要变化，相关展示资格失效；不得给同名旧witness",
+          "failureCaught": "culture名字等于格式稳定"
+        }
+      ],
+      "finiteTestStatus": "PLANNED_COUNTEREXAMPLES_NOT_EXECUTED_PRODUCT_TESTS",
+      "implementationReuse": [
+        "只在原SV08内部追加纯DTO与确定性有限表，不另建服务；.NET已具CultureInfo/NumberFormatInfo/System.Numerics，不宣称所有locale和数值类型无需资格。",
+        "首实现以原既有中文/英文/符号域建立固定小术语/单位表；原所有语言/格式承诺保留在相应支持矩阵，对未资格域逐项补证，不以此偷缩最终范围。",
+        "显示规则/术语包是合法声明式ResourcePack，不允许任意代码或外部下载权限；J10原缓存闭包与当前invoker、Host observer复用。",
+        "Source当前AttributeService局部使用InvariantCulture只证已有实现点，不能宣称TypedFactCell/PresentationToken新API已实现。"
+      ],
+      "userVisibleDifference": "用户选择用途与语言后同源生成图、Word、Excel、PPT及各文字说明；系统能指出具体哪页哪个数字/单位/术语和当前资料不一致并自动给安全修复，普通用户不需要到PS找字改字。",
+      "cost": {
+        "engineeringHours": null,
+        "hostQualificationHours": null,
+        "psModalHours": null,
+        "officeOpenReopenHours": null,
+        "independentQaHours": null,
+        "integratorHours": null,
+        "c0AcceptanceHours": null,
+        "memoryPeakBytes": null,
+        "storagePeakBytes": null,
+        "status": "UNKNOWN_UNTIL_D7_D14_D28_MEASUREMENT",
+        "measure": [
+          "D7：在原WI合同准备中测术语/数字词元编译、候选冲突发现、字符/内容见证的工程时间与故意错误检出；计未通过、重工和无法抽取的分母。",
+          "D14 / PF05：用拥有合成fixture做真实GIS→PS→Office切片，在已授权Host窗口测所有实际渲染、保存重开、编辑性、阅读顺序和辅助阅读成本；研究报告本轮未执行。",
+          "D28 / PF07：并入全剩余分支的资源受限排程，统计C0/E1工程与独立验收、PS全局modal、Office读取、失败复验、可访问真实用户评估和完整附加文件存储；不得只算纯DTO运行时间。",
+          "完整候选仍跑原36模板/108图、60场景、原全格式门及24新手/至少48任务；既有类别/方法/数量/质量门不缩，额外成本不能写0。",
+          "60日仍目标，当前实际开始时间、所有新增成本、净收益与吞吐未知；不宣称两个月已证明或永久领先。"
+        ]
+      }
+    },
+    {
+      "id": "AD-M02",
+      "name": "AccessibleMediumProjection / ProjectionRequirementWitness",
+      "implemented": false,
+      "primaryWorkItem": "WI17",
+      "primaryOwner": "E4",
+      "costAccountingOwner": "WI17/E4 owns medium projection and layout compiler integration cost; WI21/22 keep original Office/delivery ownership and WI28/E5 keeps accessible user-flow ownership. Overlapping support work receives one measured contribution entry.",
+      "supportingWorkItems": [
+        {
+          "id": "WI20",
+          "owner": "E4",
+          "purpose": "真实文字/符号测量、有限PS修复"
+        },
+        {
+          "id": "WI21",
+          "owner": "E4",
+          "purpose": "Office结构与阅读顺序观察"
+        },
+        {
+          "id": "WI22",
+          "owner": "E4",
+          "purpose": "同事实双投影成员的完整激活"
+        },
+        {
+          "id": "WI28",
+          "owner": "E5",
+          "purpose": "原可访问UI与用户可理解修复说明"
+        },
+        {
+          "id": "WI30",
+          "owner": "E2",
+          "purpose": "格式/版本消费者能力资格"
+        }
+      ],
+      "innovationRefs": [
+        "J09",
+        "J12"
+      ],
+      "performanceGateRefs": [
+        "PF05",
+        "PF06",
+        "PF07"
+      ],
+      "newWorkItemOrService": false,
+      "algorithmQuantityDelta": 0,
+      "noveltyAgainstV5toV10": {
+        "alreadyPresent": [
+          "LayoutFeasibility必需元素/字体测量、有限模板与修复",
+          "所有格式原真实打开/编辑性、原VIEW/EDIT/RECOMPUTE引用闭包",
+          "工作台色觉/灰度/键盘/屏幕缩放与普通用户PS手工设计=0",
+          "V10同科学语义颜色与参考冲突保护"
+        ],
+        "incrementalGap": "尚缺每个消费者的语义阅读结构、非颜色可见编码和同文件能力互斥见证；Esri PDF已存在标签与feature attributes冲突，多个必需属性不能由单个通用导出参数偷偷覆盖。追加有限媒介投影与完整requirement覆盖，使既有可访问承诺可开发和可验。",
+        "notProposed": "不新增独立无障碍平台、声音合成服务、PDF任意脚本后处理或图例缩减算法。"
+      },
+      "contracts": [
+        {
+          "type": "MediumProjectionProfile",
+          "fields": {
+            "profileId": "StableId",
+            "version": "PositiveInt",
+            "consumerRef": "format/version/Host/adapter/renderer qualification digest",
+            "medium": "enum PRINT_POSTER | REPORT_PAGE | PRESENTATION | LONG_IMAGE | ACCESSIBLE_LAYOUT_PDF | GIS_ATTRIBUTE_PDF | ORIGINAL_EDITABLE_MASTER",
+            "outputContractRef": "CurrentImmutableOutputContract",
+            "physicalOrViewport": "bounded size/units/DPI/zoom/viewing assumption; physical map scale explicit",
+            "requiredSemanticNodes": "typed title/map/legend/scale/north/class/table/method/limitation/source nodes",
+            "readingOrder": "ordered logicalNodeIds with uniqueness/all-required coverage and defined decorative exclusions",
+            "nonColorEncoding": "Map<categoryId,visible label/symbol/line style refs> | qualified equivalent visible projection",
+            "textAlternative": "shortDescriptionId + visible longDescription nodes with exact facts/claims/relations and no inferred scientific causality",
+            "languageCoverage": "document/per-node supported tags/script/font ranges and actual export limits",
+            "capabilityConstraints": "qualified conjunctions/incompatibilities per file; unknown consumer feature is UNKNOWN",
+            "editablePromise": "logical node types promised editable + actual native observation method",
+            "outputMembers": "finite member ids/owned paths/current grants/consumer versions",
+            "requiredStatus": "PASS|FAIL|UNKNOWN|NOT_APPLICABLE with applicability source and coverage"
+          }
+        },
+        {
+          "type": "ProjectionRequirementWitness",
+          "fields": {
+            "projectionSetId": "StableId",
+            "factAndScientificDigest": "immutable same fact/method/geometry/categories/colors/scales refs",
+            "originalRequiredSet": "frozen requirement ids, unchanged denominator",
+            "witnessRows": "Array<{requirementId,memberId,nodeId,consumer,actualObservationRef,status}>",
+            "sameFileConstraints": "explicit requirements that must coexist in one member; cannot covered by cross-file set",
+            "legalComposition": "required membership/duplicate descriptions/same-version obligations/bundleAllowed bool",
+            "uncoveredOrConflicting": "all original ids plus typed reason; never silently OPTIONAL",
+            "readingOrderEvidence": "actual consumer semantic traversal report | UNKNOWN",
+            "visualEncodingEvidence": "actual rendered category/symbol/legend correspondence plus human task evidence when required",
+            "commonFinalGateRef": "original completeDeliveryCheck; ancillary description or preview doesn't replace scientific artifact"
+          }
+        },
+        {
+          "type": "MediumRepairCandidate",
+          "fields": {
+            "baseRevision": "immutable version",
+            "reason": "specific observed unsatisfied requirement",
+            "allowedPatch": "enum REALLOW_BREAKS | WIDEN_LEGAL_TEXT_SLOT | USE_QUALIFIED_FONT | ADD_MEASURED_LABEL | PAGINATE_OUTSIDE_PROTECTED_FRAME | SPLIT_MEMBERS_IF_ORIGINAL_CONTRACT_ALLOWS",
+            "unchangedProof": "fact/method/category/color/scale/geography and required content hashes",
+            "changeImpact": "current actual output/space/print/consumer/rights/budget changes",
+            "candidateCost": "unknown or measured; allroot attempts counted",
+            "requiresDecision": "only when original adopted output/consumer/style/pagecount/rights/effects boundary changes",
+            "previewAndCheckRef": "same original finite budget and true render/semantic check, never successful just because suggested",
+            "userExplanation": "business statement of reason, proposed change, all consequences and remaining unknown"
+          }
+        }
+      ],
+      "interfaces": [
+        "SV09 CompileMediumProjections(DesignSpec, PresentationTokenSet, OutputContract, QualifiedConsumerCapabilities) -> finite projection candidate set + mandatoryConflictReport.",
+        "SV09 BuildAccessibleDescriptions(CurrentVerifiedFacts, adopted descriptions/claims, medium profile) -> short/structured-long nodes; cannot derive causality/significance/accuracy not proven.",
+        "SV09/SV11 CheckProjectionRequirementCoverage(originalRequired, candidateMembers, sameFileConstraints, actual witnesses) -> each requirement status and uncovered ids.",
+        "SV10/SV11 ExecuteOriginalQualifiedProjection(render/save/export) -> current intent/effect observations; all actual writes still original Invoker/Host/file grants.",
+        "WI28 presenter ExplainMediumRepair(report,candidate) -> plain business prompt or automated adopted repair; no user-facing codec/WCAG/error internals required."
+      ],
+      "steps": [
+        "1.从TaskBrief用途、必要文件/编辑性/大小/语言/标准冻结OutputContract；不把未答可选偏好变成额外业务确认。",
+        "2.读取固定consumer能力矩阵：PDF的标签、feature属性、矢量/栅格、字体/语言和阅读顺序分开；PPTX视觉层顺序与可访问阅读顺序分开；PNG/PSD不自动具有PDF或SVG标签。",
+        "3.将same-file required conjunction与已资格mutual exclusion逐项比对。原合同允许bundle时有限候选可覆盖不同文件，但同文件必需条件不能拆成两份假通过；未知或冲突保留原分母。",
+        "4.科学层保持锁定。分类类别不能删、色带/阈值不因视觉检查重映射；冗余文字/符号仅在合法独立层或同源旁置图表，实际证明没有遮挡/改变科学编码。保护像素域不允许覆盖时选旁置/附页而非强加纹理。",
+        "5.每张图生成同源短标识与可见结构化长描述/数据表，保留日期/范围/分母/方法/未知原因；量化趋势和地域关系只能来自已验事实及明示查询，不由模型解释颜色想象。",
+        "6.按独立阅读节点编译目录/标题/表头/类别对应。真实SDK/格式adapter资格不足不假定post-processing自动具备；Esri tagged layout drawing order若与保护视觉层冲突，原同文件规则决定等待还是已验双投影，绝不偷偷更改绘图遮挡。",
+        "7.先独立核内容/结构，再真实文字与glyph/布局/灰度/色觉任务检查；WCAG规则按工作台或所采用Web/文件标准范围明确，不能给某个ΔE或3:1当所有科学地图可读证书。",
+        "8.容量不足依预验有限patch顺序修复：合法断行/槽位与字体→辅助标题/图例分页或完整已验模板→原合同允许的多成员投影；不能缩到低于原字号/DPI、删类别或非等比拉伸图框。",
+        "9.所有repair与语言/媒介共享原最大2自动修复和预览/最终渲染预算，额外页/文件/文本测量进入峰值空间、许可/内存和真实Host窗口；越界需业务决定而非用户手工PS排版。",
+        "10.分别真打开/读取/遍历可访问结构/检查实际可编辑对象与同版科学内容，失败与UNKNOWN保持；全部original required状态成立才由原candidate DeliveryRevision完整激活。"
+      ],
+      "finiteCounterexamples": [
+        {
+          "id": "AD2-01",
+          "input": "同一Esri3.5 PDF要求feature attributes与accessibility tags",
+          "expected": "qualified capability conflict，不能单文件PASS",
+          "failureCaught": "两个checkbox承诺同时支持"
+        },
+        {
+          "id": "AD2-02",
+          "input": "原合同允许两个成员：GIS属性PDF与阅读PDF",
+          "expected": "自动有限候选分别验证，所有原同版事实与必要内容覆盖，成本/空间加总后才完整",
+          "failureCaught": "只交阅读PDF丢属性或只交属性PDF无阅读结构"
+        },
+        {
+          "id": "AD2-03",
+          "input": "原合同明确同一PDF必须兼有，两文件已有witness",
+          "expected": "same-file条件仍FAIL/UNKNOWN等待，跨文件覆盖不能冒充",
+          "failureCaught": "把required conjunction变析取"
+        },
+        {
+          "id": "AD2-04",
+          "input": "颜色heatmap必需量化渐变，自动repair拟改色阶刷3:1",
+          "expected": "拒改科学色义；按具体标准essential原因与同源辅助手段核，不能自动全图PASS",
+          "failureCaught": "普适阈值取代科学语义"
+        },
+        {
+          "id": "AD2-05",
+          "input": "图上红绿类别没有可见标识，但alt写两类",
+          "expected": "视觉非颜色通路未满足，alt不能单独代替色觉可辨",
+          "failureCaught": "有alt即全部可访问"
+        },
+        {
+          "id": "AD2-06",
+          "input": "20类表用同一符号/代号，图例全有但地图无法关联",
+          "expected": "映射不可辨FAIL；实测合法唯一符号/标签或完整等价旁置投影，类别不删",
+          "failureCaught": "coverage仅计legend rows"
+        },
+        {
+          "id": "AD2-07",
+          "input": "PPTX视觉顺序标题→图→注释，实际结构读注释→标题→图",
+          "expected": "阅读顺序witness FAIL并用固定adapter修复后真核",
+          "failureCaught": "视觉摆放即语义阅读顺序"
+        },
+        {
+          "id": "AD2-08",
+          "input": "PNG伴随文本描述，用户要求带标签PDF",
+          "expected": "描述可作为辅助成员，所需PDF仍未完成；不能PNG文件内标签PASS",
+          "failureCaught": "SVG aria能力自动推断PNG"
+        },
+        {
+          "id": "AD2-09",
+          "input": "双语layoutPDF整体Language一个，部分语言无已资格postprocess",
+          "expected": "per-node语言需求UNKNOWN；不宣称全部双语辅助阅读正确",
+          "failureCaught": "document locale覆盖所有text tags"
+        },
+        {
+          "id": "AD2-10",
+          "input": "内置Officechecker绿灯，但透明底文字与真实背景低可辨",
+          "expected": "checker scope不足需真实已定义检查，原文字可读门不通过",
+          "failureCaught": "checker无报告等全部质量PASS"
+        },
+        {
+          "id": "AD2-11",
+          "input": "长英文译名/48类别legend，字号已到原最小",
+          "expected": "合法断行/槽位/分页/模板候选，不能缩字/删类；新页条件必须原合同允许",
+          "failureCaught": "压字减内容追速度"
+        },
+        {
+          "id": "AD2-12",
+          "input": "缩放地理主图以塞长描述，已锁物理比例尺",
+          "expected": "拒不等比/不核scale缩图，优先科学框外排版或合法分页；实际scale重验",
+          "failureCaught": "文字修复影响地理尺度"
+        },
+        {
+          "id": "AD2-13",
+          "input": "unknown安全风险数据，自动长描述写'区域安全'",
+          "expected": "未知原因同源明确，句子无合法fact/claim拒绝",
+          "failureCaught": "无障碍叙述补造结论"
+        },
+        {
+          "id": "AD2-14",
+          "input": "某hatch源配置有效，但目标renderer不支持或最小图面遮挡科学区域",
+          "expected": "实际编码witnessFAIL/UNKNOWN，换已资格旁置路径；不把源配置当最终可读",
+          "failureCaught": "不验backend或污染保护区域"
+        },
+        {
+          "id": "AD2-15",
+          "input": "每新增媒介重置2repair/5preview计数",
+          "expected": "原rootBudget聚合不可重置，超界等待明确条件",
+          "failureCaught": "多语言/多文件无限试错"
+        }
+      ],
+      "finiteTestStatus": "PLANNED_COUNTEREXAMPLES_NOT_EXECUTED_PRODUCT_TESTS",
+      "practicalCase": "普通用户选择'汇报PPT＋可查询GIS图＋阅读版PDF'，系统同资料自动排版并解释'地图属性查询和阅读标签在当前导出器不能同文件保持，已按你允许的成果组合分别生成，两者都来自同一版数据'；若原合同限定单文件，则保留可领取已验部分、指出该必需条件尚无已资格路径。",
+      "implementationReuse": [
+        "同原WI17/20的LayoutFeasibility与受保护层工作，加入纯DTO projection/requirement rows；原WI21/22绑定Office/真实Delivery，不新建Web服务/图表runtime。",
+        "原布局导出器的固定参数/SDK读写须真实逐版本资格，不能根据3.5UI文档推断当前SDK属性setter或旧Host可用。",
+        "若已经可用的固定adapter无法生成某种必需阅读结构，本轮合同明确UNKNOWN并进入原支持资格任务；不为赶工新增任意PDF脚本、联网下载、宏或库安装。",
+        "视觉母版和阅读投影同事实科学摘要；阅读版增加同源辅助手段不改分析。原PSD/Office/APRX可编辑与其他必需文件仍完整，辅助描述不能替代原母版。",
+        "产品界面只展示具体用途、已知限制、系统修复方案和需要决定的业务边界；技术细节可供支持人员展开。"
+      ],
+      "userVisibleDifference": "用户一份数据自动得到可打印、可演示、可阅读且同源的成果组合；长标题、字体、灰度辨识、阅读顺序和导出器互斥由系统发现并给具体可行修复，普通用户无需学习PS或手调导出选项。",
+      "cost": {
+        "engineeringHours": null,
+        "hostQualificationHours": null,
+        "psModalHours": null,
+        "officeOpenReopenHours": null,
+        "independentQaHours": null,
+        "integratorHours": null,
+        "c0AcceptanceHours": null,
+        "memoryPeakBytes": null,
+        "storagePeakBytes": null,
+        "status": "UNKNOWN_UNTIL_D7_D14_D28_MEASUREMENT",
+        "measure": [
+          "D7：在原WI合同准备中测术语/数字词元编译、候选冲突发现、字符/内容见证的工程时间与故意错误检出；计未通过、重工和无法抽取的分母。",
+          "D14 / PF05：用拥有合成fixture做真实GIS→PS→Office切片，在已授权Host窗口测所有实际渲染、保存重开、编辑性、阅读顺序和辅助阅读成本；研究报告本轮未执行。",
+          "D28 / PF07：并入全剩余分支的资源受限排程，统计C0/E1工程与独立验收、PS全局modal、Office读取、失败复验、可访问真实用户评估和完整附加文件存储；不得只算纯DTO运行时间。",
+          "完整候选仍跑原36模板/108图、60场景、原全格式门及24新手/至少48任务；既有类别/方法/数量/质量门不缩，额外成本不能写0。",
+          "60日仍目标，当前实际开始时间、所有新增成本、净收益与吞吐未知；不宣称两个月已证明或永久领先。"
+        ]
+      }
+    }
+  ],
+  "finiteCounterexampleCount": 29,
+  "finiteExampleExecutions": 0,
+  "noDuplicateAcceptanceClaim": "The report is not implementation, Host testing, WCAG conformance certification, scientific accuracy acceptance, or a proven two-month schedule. Both internal mechanisms deepen already-approved WI17/16/21/28 scope and add no count inflation.",
+  "memoryUsed": {
+    "path": "<user-home>/.codex/memories/MEMORY.md",
+    "lines": [
+      85,
+      91,
+      95,
+      96
+    ],
+    "use": "unified fact-preserving execution and candidate-versus-verified separation",
+    "rolloutId": "01a0c936-f62a-7e23-844d-011dc140dd2c"
+  },
+  "writableProbe": {
+    "path": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/V11_多媒介研究可写探针_20261002.txt",
+    "sha256": "883616999DEC86054188CE53CB7E33BC2C3EBC8A3D2B00731356039A7876C0C8"
+  }
+}
+

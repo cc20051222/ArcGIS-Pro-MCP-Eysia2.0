@@ -1,0 +1,728 @@
+{
+  "schemaVersion": "m3-comparison-rules-v3",
+  "ruleSetId": "M3-COMPARISON-RULES",
+  "version": "3.0.0",
+  "status": "PASS_CANDIDATE",
+  "inheritsFrom": [
+    {
+      "ruleSetId": "M2-COMPARISON-RULES",
+      "version": "2.0.0",
+      "file": "Benchmarks/comparison-rules-v2.json"
+    },
+    {
+      "ruleSetId": "M1-COMPARISON-RULES",
+      "version": "1.0.0",
+      "file": "Benchmarks/comparison-rules-v1.json"
+    }
+  ],
+  "inheritedRuleIdsV2": [
+    "QLT-001",
+    "QLT-002",
+    "CMP-001",
+    "CMP-002",
+    "FLD-001",
+    "ALN-001",
+    "TRF-001",
+    "DEP-001",
+    "LNG-001",
+    "DUP-001",
+    "RPT-001",
+    "STY-001",
+    "BAT-001",
+    "RFL-001",
+    "PRT-001",
+    "SRC-001",
+    "PRM-001"
+  ],
+  "inheritedRuleIdsV1": [
+    "GEO-001",
+    "NUM-001",
+    "SCI-001",
+    "LAY-001",
+    "TXT-001",
+    "OUT-001",
+    "WF-001",
+    "TS08-INPUT-QUAL-001"
+  ],
+  "v1BytesUnchanged": true,
+  "v2BytesUnchanged": true,
+  "appliesTo": [
+    "S09",
+    "S14",
+    "S17",
+    "S24",
+    "S25"
+  ],
+  "carriedScenarioIds": {
+    "M1": [
+      "S07",
+      "S18",
+      "S19",
+      "S20",
+      "S22",
+      "S23"
+    ],
+    "M2": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S08",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S21",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S46",
+      "S52",
+      "S60"
+    ]
+  },
+  "templateIdsReferenced": {
+    "M1": [
+      "TP01",
+      "TP02",
+      "TP03",
+      "TS01",
+      "TS02",
+      "TS08"
+    ],
+    "M2": [
+      "TP04",
+      "TP05",
+      "TP06",
+      "TP07",
+      "TP08",
+      "TP09",
+      "TP10",
+      "TP17",
+      "TS03",
+      "TS04",
+      "TS05",
+      "TS06",
+      "TS07",
+      "TS09",
+      "TS10",
+      "TS15"
+    ]
+  },
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §8:F05, §9:M3, §10:Z12",
+    "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5-P9, §3, §6, §7, §10",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §1-2, §4-5, §7-8",
+    "D-093 board ticket scope 2",
+    "run-20260928-d082/f03a-1/f03a-3/f03a-4 terminal review (internal services and parameter extension)",
+    "run-20260928-d082/f03b-5-schemas (frozen input surfaces of all 32 candidates)",
+    "run-20260928-d083/a-roster/prereg-131-table.md (classification rows)",
+    "GATE-G205 / GATE-G206 / GATE-G214 rulings (frozen faces, append-only extension)",
+    "GATE-G207 rulings on overwrite and revision semantics; GATE-G202 reportPath ruling"
+  ],
+  "freezeBeforeResults": true,
+  "baselineContext": {
+    "acceptedToolCount": 189,
+    "acceptedSourceAggregate": "675DDF5F (G-215) / 262 files",
+    "previousAcceptedBaselines": [
+      "D4FC24B6 (G-209) / 256 / 170 tools",
+      "02DD4CAE (G-213) / 259 / 179 tools"
+    ],
+    "nineAccepted": [
+      "validate_geometries",
+      "check_topology_rules",
+      "compare_datasets",
+      "compare_schemas",
+      "validate_field_constraints",
+      "inspect_raster_alignment",
+      "list_geographic_transformations",
+      "trace_dataset_dependencies",
+      "get_dataset_lineage"
+    ],
+    "p3p4AcceptedByD092": [
+      "create_domain",
+      "update_domain",
+      "delete_domain",
+      "assign_domain_to_field",
+      "remove_domain_from_field",
+      "configure_subtypes",
+      "create_relationship_class",
+      "calculate_geometry_attributes",
+      "define_projection",
+      "validate_relationship_class"
+    ],
+    "p5DispatchedNotAccepted": [
+      "calculate_service_areas",
+      "generate_tessellation",
+      "hotspot_analysis",
+      "polygon_neighbors",
+      "simplify_features",
+      "smooth_features",
+      "solve_routes",
+      "spatial_autocorrelation"
+    ],
+    "p5DispatchNote": "the P5 eight tools were dispatched to the build line as D-094 (G-215, ACTIVE-D094) while this calibration batch was running; they are not accepted yet, so criteria bound to them state PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED and assert no runtime behaviour",
+    "m3CandidateCount": 32,
+    "m3IndependentContracts": 29,
+    "m3NonContractItems": [
+      "create_layout_map_frame",
+      "extract_raster_values",
+      "raster_reclassify"
+    ],
+    "deferredOnlinePublish": [
+      "discover_remote_datasets",
+      "import_remote_dataset",
+      "publish_map_service"
+    ],
+    "whitelistEntries": 53,
+    "errorCodes": 33,
+    "roster": "94/33/158 = 285",
+    "note": "candidates are bound as not implemented and not dispatched for a batch; no rule asserts runtime behaviour"
+  },
+  "gpProvenanceSummary": {
+    "recomputedFrom": "Config/gp-whitelist.json (53 entries, hash recomputed at build time)",
+    "whitelistHash": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46",
+    "citedPresent": [
+      "analysis.Frequency",
+      "analysis.TabulateIntersection",
+      "management.Project",
+      "sa.CellStatistics",
+      "sa.Con",
+      "sa.ExtractValuesToPoints",
+      "sa.RasterCalculator",
+      "sa.Reclassify",
+      "sa.ZonalStatisticsAsTable"
+    ],
+    "citedAbsent": [
+      "Network Analyst route solve",
+      "Network Analyst service area",
+      "analysis.FeatureNeighborhood",
+      "management.BuildRasterPyramids",
+      "management.CreateTessellation",
+      "management.MosaicToNewRaster",
+      "management.ProjectRaster",
+      "management.Simplify",
+      "management.SmoothLine",
+      "management.SmoothPolygon",
+      "stats.HotSpotAnalysis",
+      "stats.SpatialAutocorrelation"
+    ],
+    "candidatesWithGap": [
+      "build_raster_pyramids",
+      "calculate_service_areas",
+      "compose_raster_bands",
+      "generate_tessellation",
+      "hotspot_analysis",
+      "polygon_neighbors",
+      "raster_reproject",
+      "simplify_features",
+      "smooth_features",
+      "solve_routes",
+      "spatial_autocorrelation"
+    ],
+    "hydrologyPresent": [
+      "sa.FlowDirection",
+      "sa.FlowAccumulation",
+      "sa.Watershed",
+      "sa.Slope",
+      "sa.Aspect",
+      "sa.Contour"
+    ],
+    "rule": "a gap is a precondition on the frozen whitelist and host licence, which is a user ruling; the criterion freezes the assertion shape and the blocked state"
+  },
+  "ruleSet": [
+    {
+      "ruleId": "NET-001",
+      "category": "network-accessibility",
+      "toolBinding": "calculate_service_areas",
+      "implementationStatus": "PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Service-area output is eligible only when the named network dataset, impedance attribute, break list and travel direction are all declared and the host reports the network extension available. Each break yields exactly one polygon set bound to the facility identity, and break counts equal the facility count times the break count. Where the algorithm has no admitted path, the run must return a blocked result naming the missing precondition, and that blocked result is the correct answer, not a failure to hide.",
+      "recompute": "Assert the parameter echo equals the request; assert polygon-set count equals breaks x facilities; assert that with no admitted algorithm path the response is BLOCKED with the precondition named, and that no partial polygon set is written.",
+      "failureSeverity": "critical",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §2 (account 3: GP algorithms are named, a general executor is not an unlimited verified set)",
+        "Config/gp-whitelist.json recomputed 53 entries"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "Network Analyst service area"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "NET-002",
+      "category": "network-routing",
+      "toolBinding": "solve_routes",
+      "implementationStatus": "PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "A route solution must echo the network source, impedance attribute, stop order and whether findBestOrder was requested; total impedance recomputes from the returned legs; an unreachable stop is reported as unreachable and never dropped from the stop count; preserveFirstLast is honoured.",
+      "recompute": "Recompute total impedance from the leg list and assert equality with the reported total; assert stop identity set equals the request; assert any unreachable stop keeps its position and reason in the report.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "Network Analyst route solve"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "GEN-001",
+      "category": "generalisation",
+      "toolBinding": "simplify_features, smooth_features",
+      "implementationStatus": "PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "The generalisation verdict binds algorithm, tolerance and preserveTopology to the input's declared XY tolerance and unit; vertex and part counts, area delta and ring-count changes are reported against the frozen expected values; the input feature class is untouched and the result is a new output path; self-intersection introduced by smoothing is refused rather than silently repaired.",
+      "recompute": "Assert input hash unchanged; recompute vertex/part counts and area delta from the output and compare with the frozen expected values at exact equality of the stored decimals; assert tolerance echo names its source.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5",
+        "run-20260928-d082/f03a-4-quantity-review.md (whitelist expansion candidates)"
+      ],
+      "gpProvenance": {
+        "tools": [
+          "simplify_features",
+          "smooth_features"
+        ],
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "management.Simplify",
+          "management.SmoothLine",
+          "management.SmoothPolygon"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-name list plus host licence, which is a user ruling; the criterion freezes the assertion shape and the blocked state for every bound tool"
+      },
+      "d093CalibrationChoice": true,
+      "choiceBasis": "FINAL requires quality thresholds frozen before results but publishes no generalisation delta limits; exact comparison against a pre-registered expected value set is the D-093 choice."
+    },
+    {
+      "ruleId": "AGR-001",
+      "category": "adjacency-and-grid",
+      "toolBinding": "polygon_neighbors, generate_tessellation",
+      "implementationStatus": "PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Neighbour relations must equal the frozen expected relation set under the declared rule (edge, edge-with-length, point-touch flags echoed), and a tessellation must cover the declared extent with no gap and no cell overlap at the candidate tolerance of zero, with cell count recomputed from extent and size.",
+      "recompute": "Compare the returned relation set with the frozen expected set in both directions; recompute cell count and total area and assert equality with the declared extent area at exact stored precision.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §5"
+      ],
+      "gpProvenance": {
+        "tools": [
+          "polygon_neighbors",
+          "generate_tessellation"
+        ],
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "analysis.FeatureNeighborhood",
+          "management.CreateTessellation"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-name list plus host licence, which is a user ruling; the criterion freezes the assertion shape and the blocked state for every bound tool"
+      }
+    },
+    {
+      "ruleId": "STA-001",
+      "category": "spatial-statistics",
+      "toolBinding": "spatial_autocorrelation, hotspot_analysis",
+      "implementationStatus": "PENDING-D094-IN-FLIGHT-NOT-ACCEPTED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Statistic, p-value, conceptualisation, standardisation, local flag and false-discovery-rate setting are echoed and bound to the analysis manifest; class counts equal the frozen known answer; a class is never created, merged or coloured to improve appearance, and where the method precondition is unmet the result is reported as inapplicable rather than significant.",
+      "recompute": "Assert each echoed field equals the request; recompute class counts from the returned feature classes and compare with the frozen expected counts; assert an unmet precondition yields an inapplicable report, not a significance class.",
+      "failureSeverity": "critical",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P5",
+        "Benchmarks/comparison-rules-v1.json SCI-001 (inherited by reference)",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3"
+      ],
+      "gpProvenance": {
+        "tools": [
+          "spatial_autocorrelation",
+          "hotspot_analysis"
+        ],
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "stats.HotSpotAnalysis",
+          "stats.SpatialAutocorrelation"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-name list plus host licence, which is a user ruling; the criterion freezes the assertion shape and the blocked state for every bound tool"
+      }
+    },
+    {
+      "ruleId": "RAS-001",
+      "category": "raster-projection",
+      "toolBinding": "raster_reproject",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Reprojection is asserted on the declared target CRS, the chosen transformation from the published candidate list, the resampling method and the resulting grid fields; the cell size and origin of the output equal the declared target grid; NoData handling is stated; where only the vector projection path is admitted and the raster path is not, the raster request is refused with the missing algorithm named.",
+      "recompute": "Recompute output grid fields from the returned metadata and compare with the declared target; assert the transformation name appears in the TRF-001 candidate list; assert a refused raster path writes no output file.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "Benchmarks/comparison-rules-v2.json TRF-001, ALN-001 (inherited by reference)"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [
+          "management.Project"
+        ],
+        "whitelistGap": [
+          "management.ProjectRaster"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-002",
+      "category": "pyramids-in-place",
+      "toolBinding": "build_raster_pyramids",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "in-place-raster",
+      "predicate": "Pyramid building is an in-place side effect on the named input raster, so the criterion is not an overwrite refusal: the declared levels, resampling and skipFirst are echoed, the reduced-resolution set is verifiable, rebuilding is idempotent, the full-resolution band values and statistics are unchanged, and the mutation of the input is disclosed as a side effect rather than reported as read-only.",
+      "recompute": "Compare full-resolution band statistics before and after and assert equality of stored values; assert the reported level list equals the requested levels; re-run and assert no additional level appears; assert the side-effect manifest records the mutated input path.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "intake finding: frozen schema exposes only input/resampling/levels/skipFirst"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [
+          "management.BuildRasterPyramids"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-003",
+      "category": "internal-service-equivalence",
+      "toolBinding": "run_geoprocessing",
+      "implementationStatus": "INTERNAL-SERVICE-PATH-ACTIVE-TOOL",
+      "sideEffectClass": "file-output",
+      "predicate": "For the two candidates F03-a ruled to be internal services rather than public names, the assertion is on the controlled GP path: the named whitelist entry is cited exactly, its parameter mapping is echoed, the output is a new dataset with a recomputable hash, and no new algorithm is implied. Counting stays honest: these two add nothing to the public tool count.",
+      "recompute": "Assert the cited entry exists in the recomputed 53-entry whitelist; assert parameter names match the whitelist declaration; assert output hash recomputes and the input hash is unchanged; assert the response does not present a new tool name.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §3 rows 9-10",
+        "run-20260928-d082/f03a-3-overlap16-adjudication.md §9-10",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §2 (account 3)"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [
+          "sa.Reclassify"
+        ],
+        "whitelistGap": [],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-004",
+      "category": "zonal-aggregation",
+      "toolBinding": "zonal_histogram",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Per-zone histograms equal the recomputed cross-tabulation of the zone field against the value raster: zone identity set, bin edges, per-bin counts and row totals all match the frozen known answer; zones with no valid pixels are reported as empty and never merged into a neighbour; the ignore-nodata flag is echoed.",
+      "recompute": "Recompute the cross-tabulation from the returned table and assert both directions of equality, including the empty-zone list; assert totals equal the count of valid pixels.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §5"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [
+          "sa.ZonalStatisticsAsTable",
+          "analysis.Frequency",
+          "analysis.TabulateIntersection"
+        ],
+        "whitelistGap": [],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-005",
+      "category": "band-composition",
+      "toolBinding": "compose_raster_bands",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "Composition is eligible only after the inputs satisfy the frozen common-grid predicate; band order and output pixel type are echoed and the result's band count and order equal the request; where the band-assembly algorithm has no admitted path the request is refused naming the gap, and no expression workaround is presented as a verified band assembly.",
+      "recompute": "Assert ALN-001 verdicts for all inputs precede the composition; recompute band count, order and pixel type from the output metadata; assert a refusal writes nothing.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "Benchmarks/comparison-rules-v2.json ALN-001 (inherited by reference)"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [
+          "sa.RasterCalculator"
+        ],
+        "whitelistGap": [
+          "management.MosaicToNewRaster"
+        ],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-006",
+      "category": "change-detection",
+      "toolBinding": "raster_change_detection",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "The two periods must share one grid or be reconciled with the offset quantified; method and threshold are echoed; change-class counts equal the frozen known answer; NoData pairs are excluded explicitly with the excluded count reported, and no NoData pair is counted as change.",
+      "recompute": "Recompute class counts from the change raster and compare with the frozen answer; assert the excluded-pixel count plus the classified count equals the common-extent pixel count; assert an unaligned pair is refused.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": true,
+        "citedWhitelistEntries": [
+          "sa.Con",
+          "sa.CellStatistics"
+        ],
+        "whitelistGap": [],
+        "rule": "fail-closed: a gap is a precondition on the frozen 53-entry whitelist plus host licence, which is a user ruling, so the criterion freezes the assertion shape and the blocked state and never a completed result"
+      }
+    },
+    {
+      "ruleId": "RAS-007",
+      "category": "pixel-inspection",
+      "toolBinding": "raster_pixel_inspect",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED (Read layer in the roster)",
+      "sideEffectClass": "read-only",
+      "predicate": "Read-only sampling returns, for each requested point, the band values, the neighbourhood if requested, and the cell identity; values equal the frozen known answer at stored precision; points outside the extent or on NoData are reported as such instead of returning an empty value silently; no output dataset is written.",
+      "recompute": "Assert the run-root file listing is unchanged by the call; compare returned values cell-by-cell with the frozen answer; assert out-of-extent and NoData points carry distinct stated reasons.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §2 (account 5: capability actually usable per host/licence)"
+      ],
+      "gpProvenance": {
+        "requiresWhitelistEntry": false,
+        "citedWhitelistEntries": [],
+        "whitelistGap": [],
+        "rule": "no controlled-GP algorithm consumed"
+      }
+    },
+    {
+      "ruleId": "HYD-001",
+      "category": "hydrology-path",
+      "toolBinding": "run_geoprocessing",
+      "implementationStatus": "CONTROLLED-GP-PATH-ACTIVE-TOOL-EXTENSION-LICENCE-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "For the terrain and hydrology chain the flow-direction, flow-accumulation, watershed, slope, aspect and contour algorithms are all named entries in the frozen whitelist, so this is the one M3 family calibratable end to end today: pour-point identity, accumulation monotonicity along the declared flow path, watershed area containment within the accumulation surface and unit/Z-datum declaration are all assertable.",
+      "recompute": "Assert each cited entry exists in the recomputed whitelist; assert every pour point appears in the watershed output; assert accumulated values do not decrease along the derived downstream direction; assert declared units and Z datum are echoed.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P6 context",
+        "Config/gp-whitelist.json recomputed (six hydrology entries present)",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3"
+      ]
+    },
+    {
+      "ruleId": "LYT-001",
+      "category": "layout-resource-round-trip",
+      "toolBinding": "export_layout_template, import_layout_template, clone_layout, remove_layout",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "in-project-resource",
+      "predicate": "A template exported and re-imported preserves the semantic slot set, style tokens and element identities modulo the declared rename; import honours conflictPolicy and targetName and never silently replaces an existing layout; clone with copyMapFrames states what was and was not copied; removal requires confirmDelete and refuses to remove a layout referenced by an open job. These effects are in-project resources, so the assertion is on project state and conflict policy, not on file overwrite.",
+      "recompute": "Diff slot sets and style tokens between export manifest and re-import report and assert equality; assert an existing-name import under each conflictPolicy value yields the documented outcome; assert removal without confirmDelete is refused; assert a referenced layout removal is refused with the reference named.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P7a",
+        "intake finding: import_layout_template exposes templatePath/targetName/conflictPolicy",
+        "GATE-G207 rulings on in-project versus file effects"
+      ]
+    },
+    {
+      "ruleId": "FRM-001",
+      "category": "map-frame-binding",
+      "toolBinding": "set_map_frame_properties, create_layout",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "in-project-resource",
+      "predicate": "Map-frame properties bind one frame to one map revision; regenerateSurrounds is echoed and its effect on legend, scale bar and north arrow is stated; the F03-a conclusion is carried openly: the create-frame candidate is a parameter extension of create_layout's existing optional surface, so no separate public name is asserted and the criterion tests the parameter path instead.",
+      "recompute": "Assert frame-to-map identity equals the declared map and one revision; assert each surround element's binding after regeneration; assert a request naming a non-existent frame is refused; assert the layout created through the optional parameter面 reports the same frame identity as the dedicated path would.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P7a",
+        "run-20260928-d082/f03a-1-base88-terminal-review.md §2.11 row 62 (parameter extension)"
+      ]
+    },
+    {
+      "ruleId": "LEG-001",
+      "category": "legend-and-scale-bar",
+      "toolBinding": "configure_legend, configure_scale_bar",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "in-project-resource",
+      "predicate": "Legend columns, item set, title and font family and scale-bar units, divisions and style are applied exactly as requested; legend entries bind to the renderer class set of the bound map frame and never to a detached copy; scale-bar units equal the declared map units; a configuration request that would leave a legend entry without a class is refused.",
+      "recompute": "Read back element properties and compare with the request key by key; assert legend entry set equals the renderer class set; assert units equality with the map declaration; assert a mismatch request is refused.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P7a",
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §3 rows configureLegend/configureScaleBar",
+        "Benchmarks/comparison-rules-v1.json SCI-001, LAY-001 (inherited by reference)"
+      ]
+    },
+    {
+      "ruleId": "PIC-001",
+      "category": "picture-and-deletion",
+      "toolBinding": "add_layout_picture, delete_layout_element",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "in-project-resource",
+      "predicate": "Picture placement honours preserveAspect, reports the resulting frame in page units, and requires a D-drive image path; element deletion requires confirmDelete and states cascadeDependents explicitly, so a cascade never happens silently; both effects are in-project resources counted separately from file writes.",
+      "recompute": "Assert reported frame geometry equals the requested box within the declared precision and aspect is honoured; assert an off-D image path is refused; assert deletion without confirmDelete is refused and that a cascade lists every dependent element removed.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P7b (G-190 Q-DELTA approved补差 two)",
+        "G-190 ruling 3 in DECISIONS_LOG.md"
+      ]
+    },
+    {
+      "ruleId": "PKG-001",
+      "category": "data-package",
+      "toolBinding": "export_data_package, validate_data_package",
+      "implementationStatus": "PENDING-M3-BATCH-NOT-DISPATCHED-NOT-VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "A package export resolves the dependency closure (reusing DEP-001) and lists every artifact with type, size and hash under one declared packageType on a D-drive path; validation in strict mode reports missing, extra and mismatched items as separate classes and refuses overwrite of an existing package; an unresolved dependency fails validation instead of being omitted from the manifest.",
+      "recompute": "Recompute each artifact hash and compare with the manifest; assert manifest set equals the recomputed closure for the listed datasets; assert a package with a broken dependency fails with the dependency named; assert overwrite refusal on an existing package path.",
+      "failureSeverity": "critical",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §2:P9",
+        "Benchmarks/comparison-rules-v2.json DEP-001, RPT-001, PRT-001 (inherited by reference)",
+        "GATE-G207 rulings on overwrite and revision semantics"
+      ]
+    },
+    {
+      "ruleId": "FMT-001",
+      "category": "modern-format-round-one",
+      "toolBinding": "run_geoprocessing, get_raster_info, get_schema_info",
+      "implementationStatus": "DEFINITION_ONLY_NOT_RUNTIME_VERIFIED",
+      "sideEffectClass": "file-output",
+      "predicate": "The first modern-format round is scoped to what FINAL names and the frozen support matrix admits: read-back equality of metadata, CRS, units, band or field structure and row counts; an unsupported format is refused with a named capability gap and never degraded silently into a supported container; no support claim is made beyond the combinations actually measured.",
+      "recompute": "Write then read back each declared format and assert metadata equality field by field; assert an unsupported request returns a named gap; assert the support matrix row cited exists in the frozen matrix.",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §1 (comparison set names modern formats)",
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3 (现代格式第一轮)",
+        "run-20260928-d082/f03b-8-support-matrix-freeze.md"
+      ],
+      "d093CalibrationChoice": true,
+      "choiceBasis": "FINAL requires a first modern-format round at M3 without publishing a format list; the round is scoped to the formats named in the benchmark comparison set and the frozen support matrix, which is a D-093 choice."
+    },
+    {
+      "ruleId": "GBC-001",
+      "category": "base-acceptance-accounting",
+      "toolBinding": "list_jobs, get_audit_log, get_performance_stats",
+      "implementationStatus": "ACCOUNTING-RULE-NO-TOOL-CLAIM",
+      "sideEffectClass": "read-only",
+      "predicate": "G-BASE accounting is recomputable: every base candidate row has a named evidence level (DECLARED / SOURCE / RUNTIME / E2E / INDEPENDENT) or is marked NOT VERIFIED; the nominal count uses the dedup-corrected form (88 nominal base candidates become 84 public names after removing two internal services, one merged contract and one parameter extension); blocked and deferred rows stay inside the denominator, and the three deferred online or publish items are listed rather than hidden.",
+      "recompute": "Recount the roster rows for the P5-P9 families; assert the 88 to 84 arithmetic with each subtraction named; assert every row carries an evidence level; assert deferred rows appear in the report rather than being excluded from a pass rate.",
+      "failureSeverity": "critical",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3 (G-BASE, 名义242口径经去重修正)",
+        "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §2 (five accounts, evidence levels)",
+        "run-20260928-d082/f03a-4-quantity-review.md"
+      ]
+    },
+    {
+      "ruleId": "OSV-001",
+      "category": "error-visualisation-versus-computation",
+      "toolBinding": "generate_quality_report, get_dataset_lineage",
+      "implementationStatus": "ACCOUNTING-RULE-NO-TOOL-CLAIM",
+      "sideEffectClass": "read-only",
+      "predicate": "Roadmap §9 forbids counting an error visualisation as completed error computation: an M3 pass on any uncertainty or error row is booked as an expression result only, and the computation result stays NOT VERIFIED until the domain batch that actually computes it is accepted. The two are reported as separate rows and never merged into one success counter.",
+      "recompute": "Assert the row identifiers for expression and computation are distinct; assert the computation row is NOT VERIFIED whenever the expression row passes; assert no aggregate success rate includes the computation row on the strength of the expression result.",
+      "failureSeverity": "critical",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M3 (不把误差可视化算成本项目已完成误差计算)",
+        "Benchmarks/m2-templates-16.jsonl TS10 analysisInputPolicy (referenced, unchanged)"
+      ]
+    },
+    {
+      "ruleId": "PSG-001",
+      "category": "ps-side-ownership-boundary",
+      "toolBinding": "export_design_bundle, validate_design_bundle, validate_delivery_package",
+      "implementationStatus": "GIS-SIDE-ACTIVE-TOOLS-COMPOSITION-SIDE-OUT-OF-L2-SCOPE",
+      "sideEffectClass": "file-output",
+      "predicate": "For the base scenario whose remaining half is a composition-side chain, the M3 criterion stops at the GIS boundary: the design bundle must validate, carry dependency and lineage closure, and be accepted as a delivery package. No criterion here asserts any composition-side behaviour; that surface is owned by another line and its acceptance is that line's evidence, so this rule's own claim limit is explicit.",
+      "recompute": "Assert bundle validation verdict and dependency closure equal the frozen manifest; assert the delivery package check names every missing artifact; assert the criterion set contains no assertion about the composition side (verified by walking this rule's predicate).",
+      "failureSeverity": "major",
+      "sourceRefs": [
+        "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §6:S25",
+        "Docs/_gatekeeper/inbox/D-091_l4-ps-half-five-tools.md (ownership, cited not depended on)"
+      ]
+    }
+  ],
+  "inheritedTargets": {
+    "note": "Global and M2 targets are inherited by reference from the frozen v1 and v2 files; nothing is restated as changed.",
+    "standardMaps": "unchanged (108 = 36 templates x 3 frozen inputs)",
+    "firstRender": "unchanged",
+    "stress": "unchanged (at least 40 nominal; 0.95 applicable)",
+    "hidden": "unchanged (at least 12; 0.9 first version)",
+    "visualReview": "unchanged (two reviewers, mean at least 4)",
+    "m2Additions": "batch atlas pages, six media profiles, same-source pairs, permission accounting: unchanged in the v2 file"
+  },
+  "m3AdditionalTargets": {
+    "baseScenarioClosure": {
+      "requirement": "all 30 base scenarios and all 20 base templates have frozen definitions after this batch",
+      "achievedAtDefinitionLevel": true,
+      "runtimeClaim": "NOT VERIFIED"
+    },
+    "dedupCorrectedNominal": {
+      "from": 88,
+      "publicNames": 84,
+      "subtractions": {
+        "internalServices": [
+          "raster_reclassify",
+          "extract_raster_values"
+        ],
+        "mergedContract": [
+          "detect_geometry_duplicates (accepted earlier at D-082/D-088)"
+        ],
+        "parameterExtension": [
+          "create_layout_map_frame"
+        ]
+      },
+      "note": "the subtraction set is recomputed from the F03-a terminal review rows, not asserted from memory"
+    },
+    "modernFormatRoundOne": {
+      "requirement": "read-back metadata equality for the formats named in the benchmark comparison set",
+      "status": "DEFINITION_ONLY_NOT_RUNTIME_VERIFIED"
+    },
+    "onlineGates": {
+      "requirement": "three online or publish items await a separate decision",
+      "status": "DEFERRED-G190-NOT-CALIBRATED",
+      "basis": "roadmap §9 M3; benchmark §9"
+    }
+  },
+  "candidateCalibrationNotes": [
+    "Rules v3 adds rule bodies only; the v1 and v2 files are byte-unchanged and referenced by ID and path.",
+    "Twenty-two new ids, none colliding with the 25 already in use across v1 and v2 (8 in v1 plus 17 in v2).",
+    "Twenty-two rules bind either candidates that no batch has dispatched, a controlled-GP path, an ownership boundary or an accounting duty; each states its own implementation status.",
+    "No rule introduces an error code; the frozen 33-code set is reused.",
+    "Nothing here is runtime evidence: no tool call, render, export, batch, reviewer score or benchmark measurement."
+  ]
+}

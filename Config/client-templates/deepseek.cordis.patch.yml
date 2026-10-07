@@ -1,0 +1,9 @@
+# MANAGED BY ARC GIS PRO MCP: BEGIN arcgis-pro-mcp
+- insert:
+    - id: mcp-arcgis-pro
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: arcgis-pro-mcp
+        transport: streamable-http
+        url: http://127.0.0.1:6520/mcp
+# MANAGED BY ARC GIS PRO MCP: END arcgis-pro-mcp

@@ -1,0 +1,855 @@
+{
+  "reportType": "PRIMARY_SOURCE_RESEARCH_AND_FEASIBILITY_PROPOSALS",
+  "reportDate": "2026-10-02",
+  "status": "RESEARCH_ONLY_NOT_PRODUCT_ACCEPTANCE",
+  "outputPath": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/临时/开源与可行性研究_20261002.json",
+  "authorizationScope": {
+    "readOnlyInputs": [
+      "现V4规划和源码锚点",
+      "官方文档及项目自有README/许可证"
+    ],
+    "authorizedWrite": "仅本JSON；D盘可写探针已写后删除",
+    "didNotPerform": [
+      "修改15份方案",
+      "修改产品码或执行规格",
+      "安装依赖",
+      "打包或真实安装",
+      "启动ArcGIS Pro/Photoshop或LIVE",
+      "运行竞品",
+      "写入C盘或TEMP"
+    ],
+    "proposalsAreNotImplementation": true
+  },
+  "executiveConclusion": {
+    "adopt": "复用现有IToolInvoker和WorkflowJobStore，增加可信元数据合同编译、逐操作QualificationSpec与Evidence Certificate、私有依赖缓存、效果感知恢复。借用社区机制，不默认引入完整工作流运行时。",
+    "count": "发现数量、命名MCP端点、GP可调用目录、完成逐项独立验收的操作、跨provider去重核心语义必须分账。当前没有证据证明3000项互不重复且可获得合法运行环境和独立oracle的核心语义已经存在于工作池。",
+    "schedule": "60日是条件目标；D15-D42只有4个完整资格周，净工作池3000要求750项/周，无重叠5100要求1275项/周。须以两完整周真实净服务率、独立验收和其他分支资源DAG共同证明；目录生成速度或短试点不能证明。",
+    "quality": "不删旧功能，不用家族抽样替代每操作真实正例、关键负例和独立验收，不把同一实现输出自动升格为科学oracle。",
+    "competitiveCaveat": "代表性公开项目不是市场份额排名；GeoAIChat今日直读失败，仅保留本地10-01公开核查的历史记录。"
+  },
+  "workspaceReuse": {
+    "evidenceLevel": "READ_ONLY_SOURCE_OBSERVED_NOT_RUNTIME_VERIFIED",
+    "anchors": [
+      {
+        "path": "Source/Shared/ArcGISProMCP.Core/Tools/IToolInvoker.cs",
+        "line": 6,
+        "observation": "已有统一调用接口；继续作为受控执行入口。"
+      },
+      {
+        "path": "Source/Shared/ArcGISProMCP.Core/Tools/ToolInvoker.cs",
+        "line": 26,
+        "observation": "默认使用LoggerToolInvocationJournal；145行起将intent写入ILogger。单凭日志消息不能证明落盘刷新、跨崩溃恢复和副作用关联正确。"
+      },
+      {
+        "path": "Source/Shared/ArcGISProMCP.Core/Jobs/WorkflowJobStore.cs",
+        "line": 49,
+        "observation": "已有FencingGeneration；70行起有job状态、lease、JSONL指纹增量写和回放机制。应复用并验证，不新建竞争的JobStore。"
+      },
+      {
+        "path": "Source/Shared/ArcGISProMCP.Server/Internal/PsChannelHandler.cs",
+        "line": 315,
+        "observation": "已有PS fencing检查；须验证实际写入前后、重启和迟到请求全链路，而不是只依据字段存在。"
+      }
+    ],
+    "retainedArchitecture": [
+      "唯一Composition注册中心",
+      "Shared不引用ArcGIS SDK",
+      "SDK对象访问经MCT QueuedTask.Run",
+      "localhost MCP及既有受限Bridge",
+      "不新增任意Python/JS或旁路"
+    ],
+    "gapsToProve": [
+      "统一invocation与job日志关联及真实持久化边界",
+      "回执丢失时产物/Host状态核对",
+      "lease过期后旧writer仍活动时隔离",
+      "执行环境与oracle证书指纹失效规则"
+    ]
+  },
+  "sourceVerificationPolicy": {
+    "reviewedDate": "2026-10-02",
+    "sourceTypes": "仅官方文档、项目自有仓库README或许可证；没有把二手宣传当工程证据。",
+    "mutablePageLimitation": "下列stable/main网页是观察日的公开文本，未全部固定commit和下载哈希。拟复制代码、fixture或发布二进制前必须固定版本、许可证、NOTICE、SBOM及实际资产许可。",
+    "publicClaims": "PUBLIC_DECLARED并不等于本项目复测；单元mock、构建、真实运行、完整任务验收分列。",
+    "geoAIChatRefresh": "NOT_REFRESHED_20261002；官网/features/changelog和前端资产请求失败。本地旧对比正文记录2026-10-01核查，不能说是10-02最新结果。",
+    "frameworkAdoption": "阅读机制不等于批准新增依赖、改变架构或获取新软件许可证。"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "GDAL Python Algorithms API",
+      "url": "https://gdal.org/en/stable/api/python/utilities.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "gdal.Run文档标为3.11新增；各高级元数据方法须按实际版本探测",
+      "supports": [
+        "算法registry及子算法、别名、JSON usage",
+        "参数类型、输入输出、基数、依赖及互斥元数据",
+        "算法Finalize与输出生命周期"
+      ],
+      "doesNotProve": [
+        "目录项互不重复",
+        "完整适配或科学正确",
+        "全部方法在本机可用"
+      ],
+      "licenseRef": "S02"
+    },
+    {
+      "id": "S02",
+      "title": "GDAL license",
+      "url": "https://gdal.org/en/stable/license.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "license": "核心通常MIT；部分BSD等，实际构建的驱动/依赖许可另审",
+      "supports": [
+        "不能只用核心许可证推定整个分发包许可"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "QGIS Processing standalone",
+      "url": "https://docs.qgis.org/3.44/en/docs/user_manual/processing/standalone.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "文档3.44",
+      "supports": [
+        "qgis_process列举、帮助及运行",
+        "结构化参数与JSON交换",
+        "实际provider与插件能力需检测"
+      ],
+      "doesNotProve": [
+        "Provider全部安装",
+        "插件全部可信",
+        "目录即独立核心算法数"
+      ],
+      "licenseRef": "S05"
+    },
+    {
+      "id": "S04",
+      "title": "QGIS Processing tests",
+      "url": "https://docs.qgis.org/3.44/en/docs/developers_guide/processingtesting.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "文档3.44",
+      "supports": [
+        "按algorithm声明YAML参数、输入和expected结果",
+        "几何/字段比较精度及不同输出类型验证",
+        "从历史生成测试脚手架"
+      ],
+      "doesNotProve": [
+        "从被测实现生成的expected具有独立科学正确性",
+        "家族代表测试覆盖所有操作"
+      ],
+      "licenseRef": "S05"
+    },
+    {
+      "id": "S05",
+      "title": "QGIS COPYING",
+      "url": "https://raw.githubusercontent.com/qgis/QGIS/master/COPYING",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "GPL-2.0文本；具体文件GPL版本及附加许可需随固定版本审查",
+      "boundary": "只借设计模式；复制代码或随包分发不能仅因独立进程而自动推定许可义务不存在。fixture还须逐资产核查。"
+    },
+    {
+      "id": "S06",
+      "title": "muend arcgis-mcp-bridge",
+      "url": "https://github.com/muend/arcgis-mcp-bridge",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，未固定commit",
+      "license": "README及GitHub声明Apache-2.0；许可证原文直读失败，复制前补固定文件审查",
+      "supports": [
+        "100声明式目录、10类",
+        "86单元测试使用mock ArcPy",
+        "ToolSpec和统一代理工厂",
+        "协议层不加载ArcPy、worker崩溃隔离"
+      ],
+      "doesNotProve": [
+        "100项全量真实资格",
+        "作者延迟数字可移用到本项目",
+        "测试数等于科学覆盖"
+      ],
+      "rejectedParts": [
+        "任意PYTHON3计算字段逃生通道",
+        "未经测量照搬每任务冷启动ArcPy"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "Knight60 ArcGIS-Pro-MCP",
+      "url": "https://github.com/Knight60/ArcGIS-Pro-MCP",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，未固定commit",
+      "license": "README说明v1.1起AGPL-3.0/商业双许可；旧v1.0及以前MIT不能套用于新代码",
+      "supports": [
+        "112命名MCP工具及109 in-process声明",
+        "通用GP入口约2000范围的作者声明",
+        "批调用及MCT执行模式"
+      ],
+      "doesNotProve": [
+        "约2000是冻结精确N",
+        "全目录逐项运行验收",
+        "9ms作者数字可移用于我们的端到端任务"
+      ],
+      "rejectedParts": [
+        "execute_arcpy_code任意代码回退"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "marcovgonzalezv arcgis-mcp",
+      "url": "https://github.com/marcovgonzalezv/arcgis-mcp",
+      "status": "PROJECT_PRIMARY_README_REVIEWED_NOT_RUN",
+      "version": "main观察2026-10-02，README要求Pro3.7",
+      "license": "GitHub显示MIT；本次raw许可证请求失败，复制前固定许可证文件",
+      "supports": [
+        "167 MCP工具、71 Add-In命令、2resources、2prompts声明",
+        "C# Add-In与本地Named Pipe/Python MCP结构",
+        "通用run_gp_tool入口"
+      ],
+      "doesNotProve": [
+        "167互不重复的GP核心算法",
+        "全部Pro版本兼容",
+        "有限公开检查已替代真实全量验收"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "GeoAIChat官方功能与更新",
+      "url": "https://www.geoaichat.cn/features",
+      "additionalUrls": [
+        "https://www.geoaichat.cn/changelog"
+      ],
+      "status": "FETCH_FAILED_20261002_CARRY_FORWARD_ONLY",
+      "lastVerifiedDate": "2026-10-01",
+      "license": "源码仓库/许可证未核实；不能列为可复制的开源代码资产",
+      "localSnapshot": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划/07_社区对比与工期提效资料/主流项目对比正文.md",
+      "historicalSnapshotClaims": [
+        "15内建结构化GIS工具、1900+通用GP范围",
+        "0.25.1记录日期2026-09-30",
+        "0.24.0记录日期2026-09-24含Word/Excel/PPT、图层属性与完整性检查"
+      ],
+      "doesNotProve": [
+        "1900+是精确去重N",
+        "15项是15个对外MCP端点",
+        "今日功能、许可或版本已刷新"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "pygeoapi OGC API Processes",
+      "url": "https://docs.pygeoapi.io/en/stable/publishing/ogcapi-processes.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "stable文档观察0.24.0",
+      "supports": [
+        "Process插件与执行manager分离",
+        "异步job轮询需manager支持",
+        "多产物宜用引用载荷"
+      ],
+      "doesNotProve": [
+        "OGC接口提供新增科学算法",
+        "TinyDB保证跨Host恰好一次副作用"
+      ],
+      "rejectedDefaults": [
+        "示例/tmp输出",
+        "示例0.0.0.0服务暴露",
+        "直接用默认TinyDB替代现有JobStore"
+      ],
+      "licenseRef": "S11"
+    },
+    {
+      "id": "S11",
+      "title": "pygeoapi license",
+      "url": "https://raw.githubusercontent.com/geopython/pygeoapi/master/LICENSE.md",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT；实际集成另核查provider与传递依赖"
+    },
+    {
+      "id": "S12",
+      "title": "Snakemake between-workflow caching",
+      "url": "https://snakemake.readthedocs.io/en/stable/executing/caching.html",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "stable文档观察9.27.0",
+      "supports": [
+        "代码、参数、依赖和软件栈形成Merkle依赖指纹",
+        "缓存前提须显式声明相关参数"
+      ],
+      "doesNotProve": [
+        "所有隐式环境自动被捕获",
+        "科学正确性由哈希保证"
+      ],
+      "rejectedDefaults": [
+        "当前文档仍称experimental",
+        "共享缓存可由系统其他用户读写"
+      ],
+      "licenseRef": "S13"
+    },
+    {
+      "id": "S13",
+      "title": "Snakemake license",
+      "url": "https://snakemake.readthedocs.io/en/stable/project_info/license.html",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT"
+    },
+    {
+      "id": "S14",
+      "title": "DVC run-cache",
+      "url": "https://dvc.org/doc/user-guide/pipelines/run-cache",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "resolvedUrl": "https://doc.dvc.org/user-guide/pipelines/run-cache",
+      "supports": [
+        "stage输入、参数及执行定义决定结果复用",
+        "缓存结果与可追踪依赖关联"
+      ],
+      "doesNotProve": [
+        "CRS/字体/ICC/Host/licence等未声明环境已自动追踪",
+        "缓存可替代首次独立资格"
+      ],
+      "licenseRef": "S16"
+    },
+    {
+      "id": "S15",
+      "title": "DVC dvc.yaml",
+      "url": "https://dvc.org/doc/user-guide/project-structure/dvcyaml-files",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "resolvedUrl": "https://doc.dvc.org/user-guide/project-structure/dvcyaml-files",
+      "supports": [
+        "显式deps/params/outs",
+        "persist默认false，重跑会清理输出"
+      ],
+      "rejectedParts": [
+        "把用户GDB/PSD/aprx作为默认可清理输出",
+        "任意stage cmd成为产品执行入口"
+      ],
+      "licenseRef": "S16"
+    },
+    {
+      "id": "S16",
+      "title": "DVC license",
+      "url": "https://raw.githubusercontent.com/iterative/dvc/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "S17",
+      "title": "Temporal Activity execution",
+      "url": "https://docs.temporal.io/activity-execution",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": [
+        "工作流历史与活动执行/超时区分",
+        "活动心跳与协作取消",
+        "任务完成和外部效果不能简单等同"
+      ],
+      "doesNotProve": [
+        "超时表示外部操作没有发生",
+        "取消表示旧writer已停止"
+      ],
+      "licenseRef": "S19"
+    },
+    {
+      "id": "S18",
+      "title": "Temporal Activity definition",
+      "url": "https://docs.temporal.io/activity-definition",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": [
+        "活动重试及幂等设计要求"
+      ],
+      "doesNotProve": [
+        "无幂等键的GIS/PS写入可安全盲重试"
+      ],
+      "licenseRef": "S19"
+    },
+    {
+      "id": "S19",
+      "title": "Temporal server license",
+      "url": "https://raw.githubusercontent.com/temporalio/temporal/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "MIT；具体SDK、部署和传递依赖需单独审查"
+    },
+    {
+      "id": "S20",
+      "title": "Prefect v3 caching",
+      "url": "https://docs.prefect.io/v3/concepts/caching",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "version": "v3文档",
+      "supports": [
+        "缓存依赖策略、结果持久化和锁分开配置",
+        "TASK_SOURCE不包含嵌套任务代码",
+        "READ_COMMITTED可重复执行，SERIALIZABLE需适当锁"
+      ],
+      "doesNotProve": [
+        "缓存事务让GIS/PSD外部副作用具有原子性",
+        "缓存锁可以替代Host全局资源锁"
+      ],
+      "rejectedDefaults": [
+        "默认用户目录缓存会落C盘",
+        "未显式配置跨进程锁",
+        "Python/server默认引入产品"
+      ],
+      "licenseRef": "S21"
+    },
+    {
+      "id": "S21",
+      "title": "Prefect license",
+      "url": "https://raw.githubusercontent.com/PrefectHQ/prefect/main/LICENSE",
+      "status": "PRIMARY_LICENSE_TEXT_REVIEWED",
+      "license": "Apache-2.0"
+    }
+  ],
+  "competitorCounting": {
+    "snapshotDate": "2026-10-02",
+    "examples": [
+      {
+        "sourceRef": "S06",
+        "mcpNamedCatalogClaim": 100,
+        "coreEndpointsClaim": 3,
+        "realWholeCatalogAccepted": null,
+        "unitMockTestsClaim": 86,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S07",
+        "mcpNamedToolClaim": 112,
+        "genericGpRangeClaim": "约2000，非精确N",
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S08",
+        "mcpNamedToolClaim": 167,
+        "addinCommandClaim": 71,
+        "resourcesClaim": 2,
+        "promptsClaim": 2,
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      },
+      {
+        "sourceRef": "S09",
+        "claimDate": "2026-10-01历史快照",
+        "internalStructuredToolClaim": 15,
+        "genericGpRangeClaim": "1900+，非精确N",
+        "mcpNamedToolClaim": null,
+        "realWholeCatalogAccepted": null,
+        "semanticGpCount": null
+      }
+    ],
+    "rules": [
+      "不得相加MCP端点、内部命令、resources、prompts作为核心数量。",
+      "同一算法的别名、参数排列、输入格式、自动生成wrapper和provider重复实现不能增加跨provider语义分子。",
+      "一个通用GP入口可有很大目录范围；目录范围不证明完整参数合同、合法运行权限、真实产物或独立验收。",
+      "pygeoapi/REST/job状态等新增接口不是新增科学算法。",
+      "可学习批调用、声明式注册、上下文感知、录制、办公输出和恢复；竞争优势最终须比较相同完整任务和冻结环境。"
+    ]
+  },
+  "feasibilityAudit": {
+    "planWindow": {
+      "calendarDays": 60,
+      "engineeringDays": 56,
+      "contingencyDays": 4,
+      "qualificationStartDay": 15,
+      "qualificationEndDay": 42,
+      "qualificationDaysInclusive": 28,
+      "qualificationWeeks": 4
+    },
+    "unknowns": {
+      "N_GP": null,
+      "N_sem": null,
+      "K_overlap": null,
+      "Q_union": null,
+      "actualNetRatePerWeek": null,
+      "actualReviewCostMinutesPerAcceptedUnit": null,
+      "actualHostMinutesPerAcceptedUnit": null,
+      "licensedIndependentCoreSemanticCandidateCount": null
+    },
+    "formulas": {
+      "K_GP": "max(2100, ceil(1.1 * N_GP))",
+      "K_sem": "max(3000, ceil(1.5 * N_sem))",
+      "K_union": "K_GP + K_sem - K_overlap",
+      "remaining": "K_union - Q_union",
+      "weeklyRequired": "ceil((K_union - Q_union)/4)",
+      "qualificationLowerBoundWeeks": "2 + max((K_union-Q_union)/r, B4) + 1 + 1 + extraWait"
+    },
+    "qualifications": [
+      "N_GP/N_sem必须在固定竞品版本、Host、许可证和去重规则下现场形成，保持未知时不得代入1900+。",
+      "K_overlap仅来自每语义组已选provider的逐资格单位交集，不能假定全部GP均进入3000语义池。",
+      "Q_union仅承认在相同合同域、Host、许可、安全和oracle版本下已有独立资格；源码注册数和route health无抵扣。",
+      "下界不是完整项目预测；B4和其他任务成本、依赖、互斥Host及独立验收资源必须纳入有限资源DAG。",
+      "新增provider、科学oracle与专家资料缺失时可阻断目标可行性；新增名称不解决阻断。"
+    ],
+    "poolExamples": [
+      {
+        "scope": "OLD_GP_ONLY_REFERENCE",
+        "pool": 2100,
+        "Q": 0,
+        "weeklyNetRequired": 525,
+        "dualGateUnionExample": null
+      },
+      {
+        "scope": "DUAL_GATE_POOL_EXAMPLE",
+        "pool": 3000,
+        "Q": 0,
+        "weeklyNetRequired": 750,
+        "condition": "GP与核心语义资格见证充分真实重叠；不是已知现态"
+      },
+      {
+        "scope": "DUAL_GATE_POOL_EXAMPLE",
+        "pool": 5100,
+        "Q": 0,
+        "weeklyNetRequired": 1275,
+        "condition": "2100与3000无见证重叠；示例而非精确目标"
+      }
+    ],
+    "gpLowerBoundExamples": [
+      {
+        "pool": 3000,
+        "Q": 0,
+        "rate": 180,
+        "B4": 4,
+        "extraWait": 0,
+        "weeksRoundedUp": 21
+      },
+      {
+        "pool": 3000,
+        "Q": 0,
+        "rate": 300,
+        "B4": 4,
+        "extraWait": 0,
+        "weeksRoundedUp": 14
+      },
+      {
+        "pool": 3000,
+        "Q": 0,
+        "rate": 525,
+        "B4": 4,
+        "extraWait": 0,
+        "weeksRoundedUp": 10
+      },
+      {
+        "pool": 3000,
+        "Q": 0,
+        "rate": 750,
+        "B4": 4,
+        "extraWait": 0,
+        "weeksRoundedUp": 8
+      },
+      {
+        "pool": 5100,
+        "Q": 0,
+        "rate": 750,
+        "B4": 4,
+        "extraWait": 0,
+        "weeksRoundedUp": 11
+      }
+    ],
+    "reviewerHostBudgetExamples": [
+      {
+        "netAcceptedPerWeek": 750,
+        "independentReviewHoursPerWeek": 15,
+        "hostHoursPerWeek": 20,
+        "maxMeanReviewMinutes": 1.2,
+        "maxMeanHostMinutes": 1.6,
+        "warning": "包含失败、返工、负例及等待；其他分支成本不能另藏。"
+      },
+      {
+        "netAcceptedPerWeek": 750,
+        "independentReviewHoursPerWeek": 25,
+        "hostHoursPerWeek": 60,
+        "maxMeanReviewMinutes": 2,
+        "maxMeanHostMinutes": 4.8,
+        "warning": "只是资源示例，未证明Host/用户/验收员真的可投入。"
+      },
+      {
+        "netAcceptedPerWeek": 1275,
+        "independentReviewHoursPerWeek": 25,
+        "hostHoursPerWeek": 60,
+        "maxMeanReviewMinutes": 1.1764705882,
+        "maxMeanHostMinutes": 2.8235294118,
+        "warning": "无重叠示例的容量更严；复杂工具可能显著超限。"
+      }
+    ],
+    "sixSeatAudit": "一指挥验收+五执行共六活动席位；当前平台四槽不能宣称六个AI同刻运行。需现场证明额外外部线程/席位，或以四槽轮转DAG重算。",
+    "semanticFeasibility": "单一Esri全集存在上限，多个provider去重后也不自动达到3000。当前没有固定候选清单、逐项独立科学用途及oracle、许可/Host覆盖，不能承诺该目标已具备可信供给。",
+    "noScopeCutFallback": "保留全部旧功能、创新功能和原质量门；若D7/D14/D28门不通过，延长真实完工日期并报告缺口，不把未完功能改成发布后工作来宣称60日达成。",
+    "decisionGates": [
+      {
+        "gate": "D7",
+        "proof": "固定目录、语义去重及每候选科学用途；真实N、许可与专家/oracle资料；六席位或真实轮转资源；未知项不能隐藏。"
+      },
+      {
+        "gate": "D14",
+        "proof": "30-50项试点，至少3个工具箱、6个codec族，含动态参数/复杂写入/长任务；T0故障；真实GIS→PS→Office链。短样本不能证明750/周。"
+      },
+      {
+        "gate": "D28",
+        "proof": "两个完整7日周真实净资格服务率及固定困难任务比例，逐项独立资格，全部失败/返工成本，以及其余完整范围资源DAG。"
+      },
+      {
+        "gate": "D56-D60",
+        "proof": "全部功能和原独立质量门通过后才做真实安装/升级/恢复/卸载与一键包；缓冲不是提前删减功能的空间。"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "id": "R1",
+      "decision": "ADOPT_PATTERN_CONDITIONAL_PROVIDER_RUNTIME",
+      "title": "可信参数合同编译器，消除逐项手写wrapper",
+      "sourceRefs": [
+        "S01",
+        "S03",
+        "S06",
+        "S07"
+      ],
+      "reuse": "在唯一Composition注册及IToolInvoker上编译受控Contract IR；不增加第二注册中心，不照搬新的Python主执行器。",
+      "implementationSteps": [
+        "从固定可信provider和固定版本读取 canonical id、别名、参数类型/基数、依赖/互斥、输入输出；原始descriptor保留哈希。",
+        "codec族集中处理Raster/FeatureClass、ValueTable、多值、单位、CRS、字段、表达式和依赖更新；动态类型不明标UNSUPPORTED_CONTRACT，不用LLM猜执行参数。",
+        "从IR生成DTO、JSON schema、表单、目录索引和调用适配；效果合同、输出边界、许可和科学oracle独立补全。",
+        "目录更新生成差异及影响图；未变合同保持原证据，变更域进入shadow/canary逐项重资格，受控推广和回退。",
+        "GDAL/QGIS仅作为可信provider候选；先测合法分发、体积、外部依赖及真实Host成本，不改ArcGIS受管环境。"
+      ],
+      "proofExperiment": {
+        "sample": "30-50操作，至少3工具箱/6 codec族；困难参数和长任务占比冻结。",
+        "baseline": "相同操作、fixture、质量门和独立验收，比较人工逐项wrapper与IR工厂。",
+        "measures": [
+          "工程分钟/操作",
+          "完整合同编译比例",
+          "每操作真实正例与关键负例",
+          "输出/状态/effects错误率",
+          "更新受影响域识别precision/recall"
+        ],
+        "proposedSuccess": "包装人工时间下降≥50%只是试验目标；完整参数合同原门≥95%且每项资格不变。漏报安全/科学影响不得为PASS。",
+        "nonProof": "仅schema生成数、目录发现数、一个家族代表成功不算适配。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，纳入既有WI11-15/30预算，不是追加免成本工期",
+        "licenseBoundary": "只借模式；复制代码/资产前固定具体license/SBOM。GDAL/QGIS完整运行时成本另审。"
+      },
+      "rejectOrFallback": "动态参数、effects、专家oracle未知时隔离候选；允许增加人工合同补全工时，不能用任意代码通道过门。"
+    },
+    {
+      "id": "R2",
+      "decision": "ADOPT_DECLARATIVE_PER_OPERATION_QUALIFICATION_FACTORY",
+      "title": "逐操作QualificationSpec与独立oracle，减少测试搭建成本",
+      "sourceRefs": [
+        "S04",
+        "S06"
+      ],
+      "reuse": "复用现有测试/owned D盘fixture；工厂生成场景，不授予执行端自验PASS。",
+      "implementationSteps": [
+        "每操作生成QualificationSpec：合同域/Host/许可、合法正例、关键负例、输入与expected资产、oracle规则版本、科学容差、effects和清理归属。",
+        "共享fixture构建、参数编码和验证器；仍为每操作执行其真实合法正例及关键负例。",
+        "oracle来源分为解析解/独立参考资料/审定上游测试/专家固定样例；同实现自生成expected仅标REGRESSION_BASELINE。",
+        "几何、属性、栅格、网络/拓扑、CRS、单位和状态变化分别校验；精度容差预先固定，不看结果调宽。",
+        "Golden资产更新须说明科学原因、差异和独立复核；不能失败后自动重录expected。"
+      ],
+      "proofExperiment": {
+        "sample": "沿R1同一困难混合试点，每项正例及关键负例，外加≥12人工植入不同层面的已知缺陷。",
+        "measures": [
+          "测试资产搭建/审查分钟",
+          "科学/effects缺陷检出率",
+          "假PASS",
+          "fixture隔离及重跑一致性"
+        ],
+        "proposedSuccess": "所有植入关键缺陷被正确拒绝，科学错误/越权写假PASS=0，原逐项门完整；搭建时间下降目标≥40%，以实测为准。",
+        "nonProof": "metamorphic属性和checksum只能补充，不能单独证明每算法科学正确；tests pass数量不是资格数量。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，与R1共享试点和fixture工时，避免重复记账",
+        "licenseBoundary": "QGIS模式可借；上游fixtures/expected逐资产许可证与来源核对。"
+      },
+      "rejectOrFallback": "独立oracle不可取得的领域先形成阻断与专家材料需求；不降成API返回成功。"
+    },
+    {
+      "id": "R3",
+      "decision": "ADOPT_PER_ITEM_CERTIFICATES_AND_BATCH_REVIEW",
+      "title": "全项证书与批次签证，加速独立验收而不以抽样替代",
+      "sourceRefs": [
+        "S04",
+        "S06"
+      ],
+      "reuse": "执行端提交PASS CANDIDATE，C0逐项核实；证书接现有日志/manifest，不建立自批通道。",
+      "implementationSteps": [
+        "每操作Evidence Certificate含canonical id、语义组、合同/Host/许可/policy/oracle哈希、输入产物哈希、真实正负例、effects核对和失败重跑链。",
+        "独立验证器自动检查证据完整、哈希一致、资格域、去重交集和关键负例；异常送人工核定。",
+        "每10-15项组成审阅批次，仅复用解析上下文/相同fixture说明；批次签名列举每个证书和判定，不抽样替代。",
+        "报告按真正净新增资格计数；失败、返工、未知结果、复用审查成本全计时。",
+        "抽检仅额外测缺陷率；若证明仅自动完整性检验而独立科学判定不足，不称独立验收完成。"
+      ],
+      "proofExperiment": {
+        "sample": "D15后两个完整7日周，同样任务困难比例；数量目标由真实K_union-Q决定，不固定假设750。",
+        "measures": [
+          "每净资格独立审查分钟",
+          "产物/Host占用分钟",
+          "失败及返工",
+          "排队p50/p95",
+          "证据错误假通过",
+          "每周净资格"
+        ],
+        "proposedSuccess": "完整原门下两周均满足weeklyRequired且其他分支DAG容量通过；750/周在25h审阅示例下≤2min/净项，须包含全部返工。",
+        "nonProof": "审阅一个家族、整批无逐项结论、短时峰值、执行AI自评分均不证明服务率。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "1-2证书/队列原型，C0持续审查时间单独预算",
+        "licenseBoundary": "本地合同自主实现；不复用未经许可的竞品测试资产。"
+      },
+      "rejectOrFallback": "批证书不能降低科学判断成本时承认审查瓶颈，增加合法独立验收容量或延工期。"
+    },
+    {
+      "id": "R4",
+      "decision": "ADOPT_PRIVATE_DEPENDENCY_CACHE_PATTERN_REJECT_FRAMEWORK_DEFAULTS",
+      "title": "三类依赖指纹与私有不可变产物缓存",
+      "sourceRefs": [
+        "S12",
+        "S14",
+        "S15",
+        "S20"
+      ],
+      "reuse": "增量补现有manifest、WorkflowJobStore指纹与artifact index；只共享已审定资产，不运行任意Snakefile/DVC stage。",
+      "implementationSteps": [
+        "分开科学产物键、渲染交付键、资格证据键；科学与样式变化不互相错误失效。",
+        "键纳入原始数据内容、CRS/轴序/单位/转换、合同与算法版本、Host/许可域、显式参数；渲染再纳字体、ICC、模板及PS版本；证据再纳policy/oracle版本。",
+        "D盘private cache写入owned临时目录后校验再原子发布不可变manifest；禁止用户资产可写硬链接/自动删除输出。",
+        "仅对已证明纯且确定的步骤复用；GPU/模型非确定性、云数据更新与隐式依赖必须显式标注不缓存或受限域。",
+        "in-flight合并与资源fence分开；缓存命中仍核实产物完整性，不能替代首次独立资格或当前Host效果核对。"
+      ],
+      "proofExperiment": {
+        "sample": "固定三业务链，在数据、CRS、参数、codec、Host、oracle、字体/ICC、模板各类依赖共≥30次变更，比较增量与完全重算。",
+        "measures": [
+          "漏失效",
+          "错误复用",
+          "科学内容等价",
+          "render完整性",
+          "端到端p50/p95",
+          "私有数据隔离",
+          "缓存损坏恢复"
+        ],
+        "proposedSuccess": "漏失效/科学错误/越权读取=0；反馈p50下降≥30%是待证目标，p95不因缓存锁显著恶化；原门全部保留。",
+        "nonProof": "哈希相同不证明模型结论正确；隐式依赖漏报不可用更宽容差掩盖。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3，先补manifest键与1条链，纳入WI更新/数据/交付原型预算",
+        "licenseBoundary": "设计参考MIT/Apache项目；不默认安装框架/新DB/Conda。"
+      },
+      "rejectedDefaults": [
+        "Snakemake全用户可读写experimental共享cache",
+        "Prefect用户目录默认C盘存储",
+        "DVC默认清理用户outputs",
+        "任意shell stage成为产品工具"
+      ],
+      "rejectOrFallback": "不确定或副作用步骤关闭缓存，仍走原正确执行路径；这是缓存策略边界，不删功能。"
+    },
+    {
+      "id": "R5",
+      "decision": "ADOPT_EFFECT_AWARE_RECOVERY_ON_EXISTING_JOURNAL",
+      "title": "复用持久化日志与fence，补未知效果对账恢复",
+      "sourceRefs": [
+        "S10",
+        "S17",
+        "S18",
+        "S20"
+      ],
+      "reuse": "IToolInvoker负责intent/receipt，WorkflowJobStore负责持久任务/lease/replay，既有PS fencing负责写入约束；不引入Temporal server或TinyDB替换。",
+      "implementationSteps": [
+        "区分用户任务、科学步骤、Host活动和产物版本；长期任务状态可轮询，但新增状态API不计核心算法。",
+        "把intent到invoke到artifact/state verification到receipt的ID统一；验证Logger-backed journal真实持久化边界并补到现有store。",
+        "丢回执进入UNKNOWN_EFFECT/RECONCILE：检查owned输出、Host状态、journal与fence后再判完成/可重试/需用户介入。",
+        "仅纯读或已证明幂等的活动允许同ID受限重试；外部写入不能因timeout盲重试。",
+        "lease过期不推定旧worker停止；旧writer活性与跨Host副作用未知时隔离资源，取消须复核剩余进程和实际状态。",
+        "复用本地过程与job分离的接口模型；未来确有OGC互通需求再独立评估pygeoapi服务边界。"
+      ],
+      "proofExperiment": {
+        "sample": "在intent写前/后、Host写前/后、产物发布前/后、receipt丢失、日志截断、锁过期旧writer、PS modal busy等每边界注入崩溃/超时。",
+        "measures": [
+          "假完成",
+          "重复外部写入",
+          "错误对象写入",
+          "不确定状态被误判",
+          "可恢复比例和耗时",
+          "日志flush/回放一致性",
+          "fence迟到写拦截"
+        ],
+        "proposedSuccess": "假完成/重复写入/错误对象写入=0；确定性可恢复项达到原门，未知效果不冒充成功；不扩大原自动修复次数。",
+        "nonProof": "activity已取消、cache事务已提交或任务future失败，均不能直接判定GIS/PSD状态。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "2-3故障原型，与既有job/fence/PS合同复用；完整跨Host验收另计原门",
+        "licenseBoundary": "模式借鉴MIT/Apache；新增服务运行时及依赖未获本研究授权。"
+      },
+      "rejectOrFallback": "持久化或外部效果无法确定时停在可解释未完成状态，保留资产与证据；不用自动回滚猜测用户后续编辑。"
+    },
+    {
+      "id": "R6",
+      "decision": "ADOPT_EVIDENCE_GAP_ROADMAP_REJECT_COUNT_AND_DATE_GUARANTEES",
+      "title": "数量与学习更新按证据缺口推进，形成可持续竞争优势",
+      "sourceRefs": [
+        "S01",
+        "S03",
+        "S06",
+        "S07",
+        "S08",
+        "S09"
+      ],
+      "reuse": "保持两个数量门、原30WI及完整创新范围；用户习惯与参考成图学习只提出偏好/模板候选，执行仍经现有受控合同。",
+      "implementationSteps": [
+        "冻结核心语义字典及provider见证，逐项列独立输入输出用途、算法/方法来源、许可、oracle与安装前提；先求实际可供给集合，不以3000倒推发明名称。",
+        "更新差异变成候选资格队列；science/params/effects/Host变化重资格，文本描述变化不制造新算法，旧证书按精确依赖复用。",
+        "同义provider重复实现记录为冗余/恢复能力，不能重复计核心语义；完全不同分析方法才经独立定义和证明进入语义分子。",
+        "学习用户偏好与参考成图时保留来源、权限、个人空间和可撤销偏好；只迁移颜色/排版/视觉语法，禁止模仿图中地理事实替换真实数据。",
+        "记录经验为版本化Skill/DesignSpec候选，离线回放、留出集与事实保真门、shadow对照、canary后推广；未验证用户喜欢不等于科学正确。",
+        "用冻结完整任务比较效率、正确性、人工介入、恢复与交付，而不宣称‘永久领先’或用模型能力取代工程资格。"
+      ],
+      "proofExperiment": {
+        "sample": "D7形成实际核心候选清单及精确N/交集，D14困难试点，D28两完整周容量；学习另用两类模板、来源合法的参考集和留出集，独立科学内容审查。",
+        "measures": [
+          "重复/伪算法率",
+          "有科学用途及独立oracle的候选比例",
+          "合法Host覆盖",
+          "未知领域阻断",
+          "习惯撤销和跨用户污染",
+          "参考样式迁移事实保真",
+          "完整任务自动化成功率"
+        ],
+        "proposedSuccess": "数量资格按原门全项完成；假计数/事实替换/跨用户污染=0，其他指标不低于原门。只有真实池与净率充分才冻结60日可承诺排程。",
+        "nonProof": "3000目录名、全GP ListTools、上传1000图、自动生成1000Skill或缓存命中数不证明核心算法领先。"
+      },
+      "integrationCost": {
+        "status": "NOT_MEASURED",
+        "suggestedBoundedSpikeEngineeringDays": "1-2数量/供给冻结；学习原型成本保留在J/SC及既有WI，不归零",
+        "licenseBoundary": "GeoAIChat仅公开产品学习，许可未核实不复用源码；上传参考集需来源/使用权限。"
+      },
+      "rejectOrFallback": "真实供给、领域资料、六席位或服务率不足时如实延长，不阉割功能，不把缺失能力转成无限任意代码入口。"
+    }
+  ],
+  "antiPatternsRejected": [
+    "用算法家族或工具箱抽样代替每操作正例、关键负例和独立资格",
+    "从被测实现生成expected后自动自批科学PASS",
+    "将metadata/alias/wrapper/参数组合/Office/PS/UI/模型管理计入核心算法",
+    "任意Python、SQL、JavaScript或shell作为自动适配万能逃生入口",
+    "照搬Temporal/Snakemake/Prefect/DVC运行时，未证明成本就重写现有IToolInvoker/JobStore",
+    "共享或C盘默认缓存、/tmp或用户工程自动清理输出",
+    "由timeout/lease失效/取消直接推定Host副作用未发生",
+    "把公开竞品声明及作者bench数字写成我们的复测证据",
+    "没有固定语义供给清单、精确N、真实交集和两周净率即承诺3000/60日",
+    "将未完旧范围或创新功能挪到发布后，以名义60日满足用户要求"
+  ],
+  "prototypePortfolioIntegration": {
+    "note": "父指挥已规划8个PF原型采用门；本研究只给R1-R6机制和试验，PF编号/排期由主计划统一，不另造派工授权。",
+    "integrationRule": "R1/R2/R3共享同一试点；R4/R5复用现有执行和恢复基础。各原型工程日仅预算占位，不能相加或宣称已完成，必须纳入全范围有限资源DAG和原质量门。",
+    "noAutomaticAdoption": "建议通过不等于产品PASS；执行仅PASS CANDIDATE，独立验收由指挥承担。",
+    "dataFormat": "建议合同与证书采用版本化JSON schema；算法和效果具体实现仍由受控注册及codec负责。"
+  },
+  "verificationOfThisReport": {
+    "DDriveWriteProbe": "PASS",
+    "researchOnly": true,
+    "JSONParse": "TO_BE_CHECKED_AFTER_WRITE",
+    "sourceRuntimeClaimsVerified": false,
+    "numericalExamples": "纯规划算术示例，未代表运行实绩",
+    "currentGeoAIChatVerified": false
+  },
+  "memoryContext": {
+    "registry": "<user-home>/.codex/memories/MEMORY.md",
+    "relevantLines": "85-95",
+    "rolloutId": "01a0c936-f62a-7e23-844d-011dc140dd2c",
+    "use": "历史事实保真、单调用入口和证据等级边界；本次源码锚点及网页独立复核，不把历史运行状态当当前状态。"
+  }
+}

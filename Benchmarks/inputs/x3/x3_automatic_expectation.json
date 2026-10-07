@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x3",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a TS13 page plus a copy manifest that reconciles input and output point counts",
+    "the source file hash unchanged after any filter run",
+    "classification errors reported separately for the slope subset and the building subset"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "LAZ and COPC per-format verdicts"
+  ]
+}

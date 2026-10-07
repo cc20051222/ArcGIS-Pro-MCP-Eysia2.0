@@ -1,0 +1,202 @@
+{
+  "fixture": "Phase8_5_6",
+  "started": "2026-09-12T18:42:41",
+  "steps": [
+    {
+      "step": "CreateFileGDB WorkBuddyTest.gdb",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyTest.gdb"
+    },
+    {
+      "step": "CreateFileGDB WorkBuddyScratch.gdb",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyScratch.gdb"
+    },
+    {
+      "step": "Create FC_Points",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyTest.gdb\\FC_Points"
+    },
+    {
+      "step": "Create FC_Lines",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyTest.gdb\\FC_Lines"
+    },
+    {
+      "step": "Create FC_Polygons",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyTest.gdb\\FC_Polygons"
+    },
+    {
+      "step": "Create TBL_Attr",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyTest.gdb\\TBL_Attr"
+    },
+    {
+      "step": "AddFields FC_Points",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "AddFields FC_Lines",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "AddFields FC_Polygons",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "AddFields TBL_Attr",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "Insert FC_Points (5)",
+      "ok": true,
+      "detail": "5 rows"
+    },
+    {
+      "step": "Insert FC_Lines (3)",
+      "ok": true,
+      "detail": "3 rows"
+    },
+    {
+      "step": "Insert FC_Polygons (4)",
+      "ok": true,
+      "detail": "4 rows"
+    },
+    {
+      "step": "Insert TBL_Attr (4)",
+      "ok": true,
+      "detail": "4 rows"
+    },
+    {
+      "step": "Count FC_Points",
+      "ok": true,
+      "detail": "5"
+    },
+    {
+      "step": "Count FC_Lines",
+      "ok": true,
+      "detail": "3"
+    },
+    {
+      "step": "Count FC_Polygons",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "step": "Count TBL_Attr",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "step": "Open Blank.aprx template",
+      "ok": true,
+      "detail": "<arcpy._mp.ArcGISProject object at 0x0000024B70EDA910>"
+    },
+    {
+      "step": "deleteItem(template map Map)",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "step": "createMap WB_Map (MAP)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000024B70EBBC50>"
+    },
+    {
+      "step": "createMap WB_Map_Empty (MAP)",
+      "ok": true,
+      "detail": "<arcpy._mp.Map object at 0x0000024B70EBA110>"
+    },
+    {
+      "step": "drop default basemap on ALL maps",
+      "ok": true,
+      "detail": "{'WB_Map': ['Topographic'], 'WB_Map_Empty': ['Topographic']}"
+    },
+    {
+      "step": "add L_Points",
+      "ok": true,
+      "detail": "FC_Points -> L_Points"
+    },
+    {
+      "step": "add L_Lines",
+      "ok": true,
+      "detail": "FC_Lines -> L_Lines"
+    },
+    {
+      "step": "add L_Polygons",
+      "ok": true,
+      "detail": "FC_Polygons -> L_Polygons"
+    },
+    {
+      "step": "createGroupLayer L_Group",
+      "ok": true,
+      "detail": "L_Group"
+    },
+    {
+      "step": "group += L_Sub_A",
+      "ok": true,
+      "detail": "group L_Group += L_Sub_A (removed top-level original)"
+    },
+    {
+      "step": "saveACopy",
+      "ok": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0\\TestFixtures\\Phase8_5_6\\WorkBuddyControlled.aprx"
+    },
+    {
+      "step": "verify saved project (exact)",
+      "ok": true,
+      "detail": "{'maps': [{'name': 'WB_Map', 'mapType': 'MAP', 'layers': ['L_Group', 'L_Points', 'L_Lines', 'L_Polygons'], 'layers_flat': ['L_Group', 'L_Sub_A', 'L_Points', 'L_Lines', 'L_Polygons'], 'group_children': {'L_Group': ['L_Sub_A']}, 'visible': {'L_Group': True, 'L_Sub_A': True, 'L_Points': True, 'L_Lines': True, 'L_Polygons': True}}, {'name': 'WB_Map_Empty', 'mapType': 'MAP', 'layers': [], 'layers_flat': [], 'group_children': {}, 'visible': {}}], 'feature_counts': {'FC_Points': 5, 'FC_Lines': 3, 'FC_Polygons': 4, 'TBL_Attr': 4}}"
+    }
+  ],
+  "maps": [
+    {
+      "name": "WB_Map",
+      "mapType": "MAP",
+      "layers": [
+        "L_Group",
+        "L_Points",
+        "L_Lines",
+        "L_Polygons"
+      ],
+      "layers_flat": [
+        "L_Group",
+        "L_Sub_A",
+        "L_Points",
+        "L_Lines",
+        "L_Polygons"
+      ],
+      "group_children": {
+        "L_Group": [
+          "L_Sub_A"
+        ]
+      },
+      "visible": {
+        "L_Group": true,
+        "L_Sub_A": true,
+        "L_Points": true,
+        "L_Lines": true,
+        "L_Polygons": true
+      }
+    },
+    {
+      "name": "WB_Map_Empty",
+      "mapType": "MAP",
+      "layers": [],
+      "layers_flat": [],
+      "group_children": {},
+      "visible": {}
+    }
+  ],
+  "feature_counts": {
+    "FC_Points": 5,
+    "FC_Lines": 3,
+    "FC_Polygons": 4,
+    "TBL_Attr": 4
+  },
+  "finished": "2026-09-12T18:45:19"
+}

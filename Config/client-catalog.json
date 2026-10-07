@@ -1,0 +1,83 @@
+{
+  "schema": "arcgis-pro-mcp-client-catalog-v1",
+  "version": "1.0",
+  "server": {
+    "name": "arcgis-pro-mcp",
+    "namespace": "arcgis-pro-mcp",
+    "endpoint": "http://127.0.0.1:6520/mcp",
+    "canonicalProductionToolCount": 239,
+    "helperToolsExcludedFromProduction": [
+      "mcp_auth"
+    ]
+  },
+  "credentialPolicy": {
+    "prohibitedKeys": [
+      "token",
+      "password",
+      "secret",
+      "apiKey",
+      "authorization",
+      "header",
+      "login",
+      "provider",
+      "model"
+    ],
+    "allowCredentials": false
+  },
+  "normalization": {
+    "productionToolCount": 239,
+    "helperToolsAreClientScoped": true,
+    "narrativeToolCountsAreUntrusted": true
+  },
+  "clients": [
+    {
+      "id": "codex",
+      "displayName": "Codex",
+      "priority": "P0",
+      "required": true,
+      "transport": "streamable-http",
+      "configScope": "project",
+      "configPath": ".codex/config.toml",
+      "format": "toml",
+      "applyMode": "managed-fragment",
+      "template": "Config/client-templates/codex.toml.fragment"
+    },
+    {
+      "id": "cursor",
+      "displayName": "Cursor",
+      "priority": "P1",
+      "required": true,
+      "transport": "streamable-http",
+      "configScope": "project",
+      "configPath": ".cursor/mcp.json",
+      "format": "json",
+      "applyMode": "structured-merge",
+      "template": "Config/client-templates/cursor.mcp.json"
+    },
+    {
+      "id": "deepseek-harness",
+      "displayName": "DeepSeek Harness",
+      "priority": "P1",
+      "required": true,
+      "transport": "streamable-http",
+      "configScope": "external-user-profile",
+      "pathStrategy": "userProfileRelative",
+      "configPath": ".dsh\\profiles\\web\\cordis.patch.yml",
+      "format": "yaml-patch",
+      "applyMode": "managed-fragment",
+      "template": "Config/client-templates/deepseek.cordis.patch.yml"
+    },
+    {
+      "id": "claude-desktop",
+      "displayName": "Claude Desktop",
+      "priority": "P2",
+      "required": false,
+      "transport": "streamable-http",
+      "configScope": "user",
+      "configPath": "platform-specific",
+      "format": "json",
+      "applyMode": "validate-template-only",
+      "template": "Config/client-templates/claude-desktop.mcp.json"
+    }
+  ]
+}

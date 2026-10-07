@@ -1,0 +1,101 @@
+{
+  "kind": "planning-validation-only",
+  "date": "2026-10-01",
+  "status": "PASS CANDIDATE",
+  "scope": "Documents and planning consistency; no product or leadership acceptance",
+  "knownGovernanceThrough": "G-239",
+  "sourceRegistrationCount": 224,
+  "coreErrorCodes": 33,
+  "documents": [
+    {
+      "path": "Docs/Final/20261001-v2/CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "bytes": 16673,
+      "sha256": "C1D37FE0AEE78DDC17748951E69622E4D5751F7EB8056B4EC48ACB2362AF1CDD"
+    },
+    {
+      "path": "Docs/Final/20261001-v2/CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "bytes": 10838,
+      "sha256": "F6DD8C5E69017A3C0C9AFDB2EF45D90B87CF2A89024EA140E99114780D8F71F1"
+    },
+    {
+      "path": "Docs/Final/20261001-v2/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "bytes": 14821,
+      "sha256": "6FFE689932B62232BAC93FE45021A3A16B1A3B95F82B2CCC9AA4222FDA6B6296"
+    },
+    {
+      "path": "Docs/Final/20261001-v2/INTELLIGENCE_AND_ORCHESTRATION.md",
+      "bytes": 13374,
+      "sha256": "C4DDB91CDC96475650179565FBE5599260860286BB26EFF640D99A64844164C6"
+    },
+    {
+      "path": "Docs/Final/20261001-v2/README_FINAL.md",
+      "bytes": 12393,
+      "sha256": "621C087365DF4D1C7D93F26173591B4A183D9356BEC5090B14594E428B02A1EB"
+    },
+    {
+      "path": "Docs/Final/20261001-v2/VERIFICATION_AND_TRACEABILITY.md",
+      "bytes": 14422,
+      "sha256": "4B64092735B377D5D177BC2B9DB55F97877C68D3E3E932842A637CE6DC76CD24"
+    }
+  ],
+  "packageCounts": {
+    "M": 20,
+    "U": 12,
+    "I": 10,
+    "R": 6,
+    "GA": 8,
+    "SC": 13,
+    "BR": 28,
+    "PsOperations": 20
+  },
+  "effortChecks": {
+    "I": {
+      "max": 22,
+      "min": 12
+    },
+    "R": {
+      "max": 23,
+      "min": 13
+    }
+  },
+  "parsedJsonExamples": 2,
+  "priorInputs": [
+    {
+      "path": "Docs/GIS_AUTOMATION_FINAL_BLUEPRINT_20260927.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GEOAICHAT_COMPARISON_20261001.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_FINAL_PLAN_20261001.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_PRODUCT_IMPLEMENTATION_20261001.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GP_AUTO_ADAPTER_AND_SCALE_20261001.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/GIS_AUTOMATION_DEVELOPMENT_AND_ACCEPTANCE_20261001.md",
+      "unchanged": true
+    }
+  ],
+  "issues": []
+}

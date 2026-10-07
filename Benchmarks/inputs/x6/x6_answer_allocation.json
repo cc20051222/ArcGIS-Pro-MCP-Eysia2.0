@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x6",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "candidates": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "capacities": {
+    "C1": 8,
+    "C2": 6,
+    "C3": 7,
+    "C4": 5
+  },
+  "demands": {
+    "D1": 3,
+    "D2": 4,
+    "D3": 2,
+    "D4": 5,
+    "D5": 6
+  },
+  "candidateNodes": {
+    "C1": "N1",
+    "C2": "N2",
+    "C3": "N5",
+    "C4": "N6"
+  },
+  "demandNodes": {
+    "D1": "N3",
+    "D2": "N4",
+    "D3": "N6",
+    "D4": "N7",
+    "D5": "N9"
+  },
+  "unreachableSentinel": 1000000,
+  "openCount": 2,
+  "algorithm": "full enumeration of every two-candidate selection, largest demand first",
+  "optimum": {
+    "chosen": [
+      "C1",
+      "C4"
+    ],
+    "servedDemand": 9,
+    "totalCost": 14,
+    "unserved": [
+      "D4",
+      "D5"
+    ]
+  },
+  "enumeratedCombinations": 6,
+  "rule": "unserved demand stays listed and in the denominator; capacity violations are never feasible"
+}

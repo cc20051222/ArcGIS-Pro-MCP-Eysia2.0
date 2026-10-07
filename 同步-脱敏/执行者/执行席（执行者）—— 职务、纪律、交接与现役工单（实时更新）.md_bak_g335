@@ -1,0 +1,1066 @@
+# 执行席（执行者）—— 职务、纪律、交接与现役工单
+
+> **本档定位**：资料库「执行者」文件夹的主档案。**执行席是职务而非特定 AI**——任何智能体经用户指单皆可担任；本档自包含介绍执行席职责、纪律、交接流程与现役工单，供新任执行者（或新对话 AI）快速到任。
+> **更新纪律（实时更新承诺）**：每轮工单派单（HANDOFF 签发）与验收落账后，由持有 library 通道的一方（现＝Keeper 代做并标注）同步刷新本档；未同步不算一轮结束。
+> **信息权威级**：用户裁定 > COMMANDER_CHARTER.md > 工单 > HANDOFF > 本档；冲突以本地台账为准并即时修正本档。
+
+## 1 · 席位定义：执行席 = 实现与举证职务（不限特定智能体）
+
+- **执行席（Executor）** 是项目的实现角色：写产品码、跑构建/回归/安装/LIVE、交证据——**但不做裁定**。与指挥席（见「指挥官」档）通过信箱协议协作：接 `inbox/D-*.md` 工单与 `HANDOFF_*.md` 自读指令，交 `outbox/R-D*.md`（仅 PASS CANDIDATE）。
+- **任何人可担任**：席位随用户指单转移。执行会话由**用户中继**创建与指单（指挥席与执行席双方均无 create_thread 类工具，缺口如实保留；宪章 §4.7：缺口不降标准，只换执行者）。用户只需把 HANDOFF 路径指给执行会话，执行会话**自己读全文**（G-168 自读模式）。
+- **沿革**：早期执行会话（09-11 起 D-001…D-066 各批）→ 交接（`HANDOFF_EXECUTOR_HANDOVER_20260913.md`／`HANDOFF_NEW_EXECUTOR_20260913.md`）→ Luna（D-067 起，`MSG_TO_LUNA_D067_20260922.md`；至 D-078 全 PASS，D-079 交八项回执后未交付）→ **新执行对话到任中（2026-09-27 指挥席 G-186 签发到任书《`MSG_TO_NEW_EXECUTOR_20260927.md`》，用户转发；名号由新执行者自定）**。新任执行者接任即按 §3 流程开工，无需额外授权仪式（工单＋HANDOFF 即唯一有效指令）。
+
+## 2 · 职务清单（能做什么 / 不能做什么）
+
+- **做**：按工单与 HANDOFF 实现（Source/ 产品码、测试、构建）；跑三套件回归（Unit／Server／Integration）；官方安装新候选（G-74 流程＋回滚锚 backup-pre-Dxxx/）；LIVE 验证留 raw；先复现后修复；落 `build-*.log` 与 `evidence-index.md`（S0–S6）；交付 `outbox/R-D*.md` **仅 PASS CANDIDATE**；交付前写八项回执 `outbox/h-receipt-*.md`（现场复算基线五项快照＋边界承诺）。
+- **不做**：不自批 PASS、不关闭工单、不推进基线、不改台账裁定（HANDOVER/DISPATCH/DECISIONS 为指挥席所有）、不打包分发件（除非工单明示，如分发批）、不改工具参数面/契约语义/错误码/白名单（需变更 ⇒ 停等裁定）、不安装非本批产物、不动 r15–r20 封存包体、不拟议内部状态替代现有契约。
+
+## 3 · 接单流程（每次开工固定动作；新任执行者到任即按此执行）
+
+1. 用户指路后自读：`AGENTS.md` → `Docs/_gatekeeper/COMMANDER_CHARTER.md` → 工单 `inbox/D-*.md` → `HANDOFF_D*.md` → 工单指定的近期裁定书（GATE-*_VERDICT）。
+2. 现场复算五项快照（安装位哈希/件数/错误码/白名单/回滚锚），不符先报告停等。
+3. 写八项回执 h-receipt（含边界承诺：本批不改参数面等）。
+4. 按 HANDOFF 的 S0–S6 阶段执行：只读前置 → 变更面备份与基线 → 实现 → 构建/回归/安装/LIVE → 流程与口径 → 收尾交付。
+5. 交付 R-D*.md 后等指挥席验收；验收期间保持证据可复算；PASS 后配合基线推进与回滚锚确认。
+
+## 4 · 执行纪律铁律（违反即 FAIL）
+
+- **G-138（最高优先级）**：不准改 C 盘，禁 %TEMP% 落物；临时产物一律落 D 盘（`.runtime/evolution/phase15/run-*/`）。**★ G-197（09-28 起更严，覆盖强化 G-138）**：**一切在 D 盘完成，C 盘零写入零落物（含 %TEMP%）**；工具链固有缓存后续批研究重定向。
+- **启动顺序铁律**：先启 ArcGIS Pro＋Start（加载 add-in）再建 MCP 会话；收尾 `Stop-Process` 后现场核实 `remaining=0`。
+- **件数三步法**：任何工具数声明须枚举重算（注册中心≡catalog≡快照≡冻结文档四向一致）。
+- **零产品性失败为唯一判据**：三套件 trx 落盘、`<Counters>` 直读；回归记 PS State A/B。
+- **构建必落 `build-*.log`**（0 警告 0 错误）；`evidence-index.md` S0–S6 完整、无「待填」。
+- **源哈希现场实算**：LIVE 前后照不变；fixtures 无落物。
+- **勿 `dotnet clean`**（会清掉 bin/x64 内 `D3133E0F` net6 种子）。
+- **删除类操作铁律（宪章附录 A，K-01）**：不得以 API 返回码判定已入回收站；删除后当场 `$I`/`$R` 双通道核验并存证（跨卷删除 `$I` 落目标卷）；恢复以逐字节校验备份为唯一路径。
+- **台账判据禁用字节数/哈希**（行尾 CRLF/LF 不统一），用关键词计数与行数。
+- **沙箱注意**（WorkBuddy 环境执行时）：复合命令（`cd &&`／`;` 串联）会被拦截，用单条命令＋绝对路径；探针采纳工作根（勿误判 D 盘不可写）。
+
+## 5 · 工单状态：**ACTIVE＝D-096（L1）＋D-097（L2）＋D-098（L3）＋D-091（L4 Phase B 停等窗口）；D-088…D-095 全部 CLOSED · 基线 `A3DB2C29…`/265·197＋三锚 · 四线牌位接单制＋G-217 写权窗口裁定（23:2x）**
+
+- **★ G-217（09-29 23:2x，用户转达 L4 第 4 次时窗检查报告）＝写权窗口裁定＋O-D091-01 勘误**：L4 报告采信合规——D-094 已由 G-216 关闭但 L1 已转 ACTIVE-D096 占窗，L4 零写入零构建零测试系互斥规则下唯一合规动作（23:01:59 `phase-b-write-window-check-4.md`）。**诊断＝L4 Phase B 窗口被 L1 三批无缝衔接（D-092→D-094→D-096 回执 19:39/21:19/23:15）事实性饿死**，自 G-213 翻转以来从未真正打开。**O-D091-01 勘误＝PS 五件已全部在名册预登记块内（94/33/158=285 现值已含），工单「170→175／名册 285→290」作废，勘误为五件实现 197→202、名册 285 恒定**——L4 开写前必须现场复算（禁沿用 170/179 历史值）。**窗口裁定：D-096（L1）验收 CLOSED 后 L1 暂停派单一批，写权让渡 L4 即刻开写 D-091；D-091 验收 CLOSED 后恢复 L1 依赖序**（约束已焊入 L1_INBOX D-096 节＋L4_INBOX status 行，自动化循环同源；互斥规则本体不变）。详录 DECISIONS G-217／DISPATCH §195／HANDOVER 174。
+- **★ G-216（09-29 22:2x，自动化轮＝牌位制以来首次三线同轮交付验收）＝D-093/D-094/D-095 三线并发验收全 PASS＋基线推进＋M3 锚冻结＋三线派单**：outbox 三线并发交付（R-D095 21:06／R-D093 21:25／R-D094 21:52），三份独立 c-g216 脚本——D-094 **24/24**（三向一致 197＋TRX 1687=1681P/3F/3NE〔定向 23/23〕＋聚合 `A3DB2C29…`/265≡s2＋八件 schema 8/8）＋D-093 **26/26**（三锚 rc=0/0/0＋M3 锚 `94577E76…`/8 items 12 files＋rules-v3 22 条零碰撞＋自检 45/45）＋D-095 **18/18**（16 模板五要素＋22 场景五阶段＋映射 22/22＋零 S50 冒名＋M1 面 8 件零触碰）——首轮 FAIL 全系本席口径自纠（snake_case Name／required 尾锚／base30 域算术／ruleId·unlockStatus 键名／否定语境第六次），执行席零缺陷。**基线 `675DDF5F…`/262→`A3DB2C29…`/265（197 生效）＋M3 锚 `94577E76…` 冻结（三锚 92ECD265/501A7E15/94577E76）**。同轮派单（两查先行）：**D-096/L1＝P6 栅格族六件 1R＋5W 197→203**（范围勘误＝raster_reclassify/extract_raster_values 系内部服务不在 prereg-131，按 D-093 RAS-003 排除不视为缺件）＋**D-097/L2＝M4 扩展定标**（X1-X8 48 候选）＋**D-098/L3＝M3 资产规格批**（5 场景剧本＋SF-M3＋储备延伸）。三牌位「当前工单」节已改写。裁定书 GATE-G216-D093-D094-D095-PASS_VERDICT.md。
+- **★ G-215（09-29 20:4x，用户指令「验收」）＝D-090-r1 复验 PASS＋D-090 CLOSED＋D-092 验收 PASS＋CLOSED＋基线推进＋派单**：c-g215 v2＝33/33 全绿（PART A 10＋PART B 23；v1 两 FAIL 系本席口径——措辞变体＋连续否定串——执行席零缺陷）。PART A：R-G212-1…4 全清偿（场景 6=S23＋正文零 S50＋8 件零连带 mtime 实证）⇒ D-090 CLOSED。PART B：189 三向一致＋TRX 1664=1661P/0F/3NE（定向 21/21）＋聚合 `675DDF5F…`/262≡s2＋Rule 5＋十件输入面≡冻结 schema＋33/53/285 恒定 ⇒ **基线 `02DD4CAE…`/259 → `675DDF5F…`/262（189 生效）**；披露 P1/P2 采信。**派 D-094/L1（P5 八件全 W 189→197）＋D-095/L3（M2 资产规格批）——各自牌位第四节已改写，L1/L3 即刻读取开工**；D-093/L2 与 D-091/L4 在飞跳过验收（19:38 规则）。裁定书 GATE-G215-D090R1-D092-PASS_VERDICT.md。
+- **★ G-214（09-29 19:1x）＝D-089 验收 PASS＋CLOSED＋派单＋四线牌位**：c-g214 22/22 全绿；M2 锚 `501A7E15…` 生效；派 D-092/L1（P3/P4 十件 179→189）＋D-093/L2（M3 扩展定标）；**四线长期接单位置＝`Docs/_gatekeeper/inbox/Lx_INBOX.md`**（L1=ACTIVE-D092／L2=ACTIVE-D093／L3=CHANGES-REQUESTED-D090／L4=PHASE-B-UNLOCKED-D091）——各线唯一接单入口，完工交件后回牌位读下一单，替代单批 HANDOFF；交付仍统一 outbox。
+- **★ G-213 验收轮延续（09-29 18:2x）＝D-088 验收 PASS＋CLOSED**：c-g213 25/25 全绿；三向一致 179；TRX 1643=1637P/3F/3NE＋Server 66/66＋Int 32/32＋定向 27/27；基线 `D4FC24B6…`/256 → **`02DD4CAE…`/259**（179 生效，名册 285 恒定）；披露全采信。**★ D-091 status 翻转 PHASE-B-UNLOCKED**——L4 自此获 Source/Tests/Config 写权（L1 无在飞写批，时窗让渡）；红线不变＝G-197 零 C 盘／真机零执行／P-05 ②零执行／NOT VERIFIED／PASS CANDIDATE 唯一交付；Phase B 开工首项＝五件实现（170→175，名册 285→290=95/36/159）。
+- **★ G-212 验收轮（09-29 18:1x，用户指令「请验收」）**：R-D090 验收 **CHANGES REQUESTED**（场景 6 用 S50 冒名替代 G-206 冻结映射 S23↔TS01；整改令 R-G212-1…4＝场景 6 改写 S23→TS01 逐字对齐冻结序列／S50 移「定标面外·扩展储备」标注非 M1 定标面／交 R-D090-r1 更正说明／其余 8 件维持零连带）；D-088 回执采信 PASS＋O-D088-01 勘误（工单名册「294」→**285 恒定**，九件预登记不扩名册，派单措辞缺陷同 G-207 类别当场勘误）；D-091 PA-DONE 采信、**Phase B 维持锁**（触发＝R-D088 交件且验收 PASS）；D-089 在途观察。零采信 c-g212 v3＝25/26（两轮本席口径自纠，执行席零缺陷）。
+- **★ G-211 PS 线解锁＋四线并行（09-29 16:4x，用户指令「PS 线也解锁」）**：成就解锁链「③用户亲自发起」；前置条款修订（R-1：ps_* 实现批＝用户解锁授权＋NOT VERIFIED 模式，D-084 B2 先例；P-05 ②③端到端闭环转移部署批，F04-A 前置不变；G-197 零触碰）。**派 D-091/L4＝PS 半区五件实现批（R-2）**：ps_get_capabilities(R)／ps_apply_design_recipe(S)／ps_import_design_bundle(S)／ps_refresh_design_bundle(S)／ps_export_deliverables(W)，170→175，名册 285→290（95/36/159）；通道按 ADR＋D-083 /internal/ps/v1/* 骨架；真机零执行＋P-05 ②零执行＋附带豁免申请清单；**Phase A 立即／Phase B 待 R-D088 交件后翻转 PHASE-B-UNLOCKED（与 L1 写权时窗互斥，未见翻转行即动源码＝越界 FAIL）**。R-3：P-05 ②③维持挂账。R-4 治理四线（跨线总量 3→4；自动化 prompt 四线版）。双件＝inbox/D-091_l4-ps-half-five-tools.md＋HANDOFF_D091_20260929.md；输出根 run-20260929-d091/；开工首项＝五件三态核对＋五项快照复算回执先行，回执后追 PA-DONE 停等。裁定 DECISIONS G-211／DISPATCH §189／HANDOVER 168；第四份职务告知已交用户转发。
+- **★ G-210 三线并行全线启动（09-29 16:1x，用户指令「分3条线给3个执行端同步执行」）**：治理修订——原「唯一 ACTIVE」改为**每线至多一份 ACTIVE（L1/L2/L3）**；**目录所有权 L1＝Source/Tests/Config（唯一构建线）·L2＝Benchmarks·L3＝Docs/assets（新建）**，跨线只读越界即 FAIL；基线推进仅 L1；_gatekeeper 台账只归指挥席。派单两查先行：P1/P2 十件中九件全 R/Read/independent-contract，**detect_geometry_duplicates 已被 D-082 并入 find_identical（零实现）**；九件冻结 schema 在场。**三线三单 ACTIVE**：**D-088/L1＝M2 批一 P1/P2 九件质量与溯源工具（170→179，名册 285→294）**＋**D-089/L2＝F05 批二 M2 扩展定标（零 Source；M1 冻结面 92ECD265 字节不改；TS08 继续挂账）**＋**D-090/L3＝M1 资产规格批（零代码；六模板＋Z01–Z08＋标准图清单＋六场景剧本）**。自动化 G-201 恢复 ACTIVE（prompt 三线巡查版）。双件＝D-088/089/090 工单＋HANDOFF 各落 inbox。裁定 DECISIONS G-210／DISPATCH §188／HANDOVER 167；**三份职务告知已交用户转发三执行端**。
+
+- **★ G-209 验收 PASS（09-29 15:4x，指挥席手动轮——G-201 自动化已于 15:13 经用户指令 PAUSED，rrule 保留）＝ D-087 CLOSED＋基线推进 249→256**：R-D087（PASS CANDIDATE，15:34:55）经 `run-20260929-d087/c-g209/verify.py` 零采信验收 **36/36 全绿**（首轮 33/36 系本席脚本口径——S0 快照键名结构／rglob 拼接／delta 键名——采样后 v2 一次过；执行席零缺陷）。完成门六项达成：四公共基础七件＋Shared 全 csproj SDK 命中 0（Rule 5）＋Composition/MCPToolRouter/D064BatchTools/FolderWorkflowTools 四入口接共享 Invoker＋170 三向一致＋ps_* 零注册；JobStore 禁回退命中 0＋租约/fencing＋三代兼容；压实器 CreateNew 防覆盖；**Unit 1616=1608/5/3（+14 全 Passed；失败/NE 集合 ≡ D-086 基线逐名）**＋Server 66/66＋Int 32/32＋定向 14/14；聚合 **`D4FC24B6…`/256** ≡ s2＋增量 +7 Shared/改 7/删 0＋零漂移；C 盘零落物＋台账未动。披露采信 D-087-P1（GUID tmp 自灭）＋D-087-P2（D-086 旧根 11 件/43,303B 保留合规）。裁定书 `GATE-G209-D087-PASS_VERDICT.md`；详录 DECISIONS_LOG G-209／DISPATCH §187／HANDOVER 166。
+
+- **★ G-197 红线（用户 09-28 21:1x，最高优先级）**：**一切在 D 盘完成，C 盘零写入零落物（含 %TEMP%）**；工单 C 盘例外条款作废——**P-05 ②客户端配置写入挂起停等**（须用户对具体文件显式豁免另批）、③同挂；ps_* 前置不变。
+- **阶段核验（指挥席 `c-g197/` 21 项；R-D083 未交付，非整单验收）**：A/B/D 组实现面属实——名册 **285=94/33/158**（现役 154 原层零变化）；trx 直读 **Unit 1584=1581/0/3＋Server 64=64/0＋Integration 32=32/0**；安装位未动；Source 变更面 10 件吻合；归档 26 条目＋r15–r20 新位哈希全对；LIVE raw 7 条＋V10-02 listeners=1＋ps_* 零实现。**勘误三项**（S0 聚合应为 `1214BEA4…`/243 非 `FD7D3A9F…`/236；S0 名册计数未实测；S1 Internal 6 非 7）随 R-D083 修正。
+- **E 组整改令（R-D083 交付前必做）**：①**清理 `%TEMP%\ArcGISProMCP\`**（实测 451 件/53,944 B，Phase5_7_4 系 fixture 违例；先清单后删＋复检 remaining=0＋仅限该前缀）②Phase5_7_4 等测试临时目录**重定向 D 盘**＋重跑证实 C 盘零新增 ③evidence-index 补「C 盘落物核查」节（违例如实登记，不移出分母）④勘误三项修正。
+- **★ G-198 续工令（09-28 22:0x，用户授权代行裁定）＝ E 组整改即日执行授权**：①清理纪律加严——**先清单留证（逐件路径/大小/mtime 落 D 盘）后删＋$I/$R 双通道核验存证（宪章附录 A K-01）＋复检 remaining=0＋仅限该前缀不得越界**；**清理定性＝清除违例落物恢复合规，非新增 C 盘写入**；勘误三项属交付门（随 R-D083 修正，不移出分母）；**P-05 ②维持挂起本次不豁免**（③同挂）；安装位维持 LIVE 现状零触碰（不需要重装）；工单「完成门3」「协同点①」已按 G-198 修正——执行席以修正后工单为准。
+- **范围 A/B/C/D（实现批：Source 改动＋构建＋回归＋安装＋LIVE；但零新增工具）**：**A**＝O-D082-01 三层名册扩容 154→154+131 fail-closed（✅ 已核验）；**B**＝A-13 内部路由最小验证版（✅ 已核验，LIVE 7 条）；**C**＝P-05 ①③（**②G-197 作废挂起**；①③未执行）；**D**＝r15–r20 归档（✅ 26 条目哈希全对）＋O-D082-06 基线脚本化（✅ 落地在用）。
+- **硬边界**：工具数 154／错误码 33／白名单 53 恒定；现役 154 参数面/契约语义/响应结构零变化；136 候选零实现；**F04-A 试验（T1–T6）本批零执行**（属 D-084，前置＝本单 CLOSED＋用户在场时段）；禁 `dotnet clean`；**G-138＋G-197 禁 C 盘：零例外**（P-05 ②已作废挂起停等，须用户对具体文件显式豁免另批方可行）；零删除（归档只移动，异常即停）；安装走 G-74＋**回滚锚 `backup-pre-d083/`**。
+- **★ G-199 验收 PASS（09-28 22:4x）＝ D-083 CLOSED**：指挥席 `c-g198/verify.py` **29 项零采信全绿**——E 组四项整改属实（I/R 双通道 693→0＋本席现场复扫 remaining=0；重定向＋D 盘重跑；S7 保留分母；S8 勘误一致）；偶发 1 例有 final 复跑全绿留证；**源码基线推进 `C80D7476…`/243（安装位基线维持 `7B3AC667…`，本批未安装）**；受保护清单改写已由指挥席代做（AGENTS.md §5＋MEMORY.md，执行席该项不算 FAIL）。**执行席现无待办工单；下一批 D-084＝F04-A 六族试验（T1–T6 31 用例）——硬前置＝用户在场时段；派单前核「未安装」与试验相容性（需安装须用户单独授权＋回滚锚先行）。**
+- **★ G-200 派单（09-28 22:5x）＝ D-084 · M1 前置·非 PS 基础工具实现批一（现役工单）**：**F04-A 核实三重阻塞不可派**（§6.0 前置门＝P-05 闭合而②挂起③未做／ps_* 零实现／UXP 部署台账缺）⇒ F04-A＋PS 线转挂账。**本批范围＝B1 全 4＋B2 全 6 共 10 件**：list_jobs/cancel_job/validate_plan/describe_tool_catalog/get_geometry_info/find_identical/generate_quality_report/set_layout_element_properties/set_label_properties/configure_map_series——实现批（Source＋构建＋回归＋可 LIVE 件 D 盘宿主验证）。**硬边界**：工具数 154→**164**（件数三步法三向一致）；错误码 33 零新增需码即停；名册按 285 预登记分类；**禁安装**（SDK 依赖件 NOT VERIFIED 如实登记不伪证）；G-197 一切在 D 盘零例外；ps_* 与 F04-A 零执行。**开工首项＝10 件现状三态核对**（新实现/等价路径/已存在；等价路径登记不重实现）；P-05 ①启动 Pro 并入 D 组清偿（留证）。接单＝`HANDOFF_D084_20260928.md`（八项回执 outbox/h-receipt-d084.md）；输出根 `run-20260928-d084/`；交付 `outbox/R-D084.md` 仅 PASS CANDIDATE。
+- **★ G-202 分类冲突裁定（09-29 01:5x，自动化循环）＝ D-084 曾 BLOCKED 后恢复 ACTIVE**：执行席 09-29 00:46 完成十件现状三态核对（全部为新实现候选，无等价路径）后发现两项分类冲突，按工单停等条款登记 `BLOCKED_BY_CLASSIFICATION_CONFLICT`（`h-receipt-d084.md`＋`run-20260928-d084/audit-10-tools.md`）——**停等判定合规，执行席无缺陷**（零 Source 改动、未构建回归 LIVE、P-05 系未执行）。指挥席 G-202 零采信复算裁定：①三件配置工具**维持 Session 层**（预登记＋F03-a 终审＋现役代码三方一致；工单 §B「入册 Write 层」为派单文字错误已勘误——实现与预登记分类一致即视为满足工单原义）；②`generate_quality_report` **维持 Read 层＋条件写按冻结 schema reportPath 条款**（未提供＝纯内存零写盘；提供＝按 W 检查：路径守卫＋OUTPUT_EXISTS 既有码闸门＋ArtifactManifest）；③只读模式下 reportPath 调用拒绝（INVALID_ARGUMENT，fail-closed）。④**工单已恢复 ACTIVE，执行席按恢复版工单继续实现**（门槛不变：工具数 154→164／错误码 33／禁安装 G-197／只交 PASS CANDIDATE）。附记：执行席侧自建了 D 盘巡查脚本（`scripts/arcgis-pro-mcp-executor-loop.ps1`，会话内存活，非系统计划任务）与本自动化循环并行巡查，工单 BLOCKED 时空轮即停——不影响本循环主导权。
+- **★ G-203 验收 FAIL（09-29 04:1x）→ G-204 验收 PASS（09-29 06:4x）＝ D-084 整改闭环 CLOSED（前单）**：G-203＝R-D084 v1（03:42）零采信复算 27/29 判 FAIL——F-1 聚合漂移（提交后 03:58 改 Source 两件，声明 `AEB02D6A…` vs 实算 `742FA5C9…`）＋F-2 产品断言失败（提交后 Unit 三轮 12F→9F→7F 未收敛）⇒ 整改令 R-G203-1…5。执行席整改（披露件／归因＝测试环境根污染未改产品码／三套件+target+B1 LIVE 对当前 Source 全量重跑／聚合重算／%TEMP% 三遗留目录清理）⇒ R-D084 v2（06:05）⇒ G-204 零采信重验 `c-g204/verify.py` **38/38 全绿**（首轮 3 FAIL 全系指挥席脚本口径已自纠）：**Unit 1596=1588/5/3（五失败全环境阻断；QualityReport 与 FolderWorkflow 六件历史失败项全 Passed）＋Int 32/32＋Server 65/65＋target 22/22＋focused 85/85＋构建 0W0E＋聚合三方一致且终局证据后零漂移＋$I/$R 六对独立抽查全空**。**裁定：验收 PASS＋源码基线 `C80D7476…`/243 → `742FA5C9…`/248＋安装位 `7B3AC667…` 不变＋D-084 CLOSED**（遗留＝SDK 依赖 B2 六件真机 NOT VERIFIED 待安装批）。披露采信＝Server fixture 追加历史批次 raw（改进项 R-G204-P1＝后续 fixture 输出指向当批 run 目录）。裁定书 `GATE-G204-D084-PASS_VERDICT.md`。
+- **★ G-204 派单（09-29 06:4x）＝ D-085 · F05 批一·M1 评测定标（现役工单）**：依据 FINAL §8 F05 行（F03 ✅＋基准「预先固定」＋可与只读设计并行）＋§9 M1 行（G-M1 需 6 模板 **TP01/TP02/TP03＋TS01/TS02/TS08**＋≥6 场景）；F05 先于 F06（固定基准＝迁入批回归判据）；B3/B4 不可派（ps_* 5 件 P-05 门控）。**本批性质＝零 Source 改动定标批**（零产品码/零构建回归/零安装/零新工具；工具数 164／错误码 33／白名单 53／名册 285 恒定）。**范围 7 件**：A 组 `Benchmarks/` 六定标件（README 总纲／m1-scenarios-6／m1-templates-6／comparison-rules-v1／core-hidden-split-v1／stress-40-m1-subset，机读+人读双格式、场景↔模板↔规则↔划分↔压力五向引用闭合）＋B 组 `tools/benchmark/freeze-benchmark-s0.py`（O-D082-06 逐件 SHA-256＋聚合哈希冻结脚本）＋C 组 FINAL 名义集映射表。**开工首项＝A 组字段 schema 草案**（`run-20260929-d085/field-schema-draft.md`）随开工回执先行。**不发明新需求**（一切字段可溯 FINAL 原文，冲突即停等登记）。**R-G204-P2**＝B3/B4 非 PS 6 件列后续实现批候选。接单＝`HANDOFF_D085_20260929.md`；输出根 `run-20260929-d085/`；交付 `outbox/R-D085.md`＋`h-receipt-d085.md` 仅 PASS CANDIDATE。
+- **批次链（前单）**：D-084＝G-200 派（09-28 22:5x）→ G-202 分类裁定恢复（09-29 01:5x）→ R-D084 v1 交付 → G-203 FAIL 退回（R-G203-1…5）→ v2 整改重交 → **G-204 验收 PASS → CLOSED**。更早：D-083＝G-192 预签 READY（09-28 12:3x）→ G-193 转 ACTIVE → R-D082 交付 → G-194 验收 PASS → CLOSED。自读指令与工单存档：`HANDOFF_D082_20260928.md`／`inbox/D-082_f03-contract-freeze.md`。
+
+### 5.1 · 此前闭环
+
+- **D-081 · r21 分发批：CLOSED（G-193 PASS，09-28）**——Stella 前段（回执 8/8）＋Luna 收尾交付 `R-D081.md`（续跑说明如实）；指挥席独立复算 20 项全绿：r21 zip `C74A790C…`/1,615,423/26＋**双 payload**（net6 `D3133E0F…`/759,448＋net8 `7B3AC667…`/792,831 ≡ 安装位逐字节）＋NOTICE 三处同哈希＋r15–r20 哈希不变＋双交付夹 14/14＋SEALED-r20 ×2＋验证器 PASS＋教程双轨 10＋**D-081 窗口 Source 零改动=0** ⇒ **r21 生效为现役分发件、r20 封存、基线不变**；报告头 C-033 笔误已勘误；O-D081-01/02/03 受理挂账；裁定书 `GATE-D081_VERDICT.md`。
+- **D-080（G-189 PASS）**：Stella 交付 `R-D080.md`（全程只读兑现）；指挥席三组独立复算全过（**Knight60 独立直连证实全部申报**）⇒ 契约面权威底册＋86 去重＋Q-DELTA＋P-05 如实降格；裁定书 `GATE-D080_VERDICT.md`；G-190 四项裁定生效（候选 88／基准 242）。
+- **D-079（G-188 PASS）＋基线推进 69 级**：A 组回显完备化/scan 行数/members＋B 组增量 JSONL（1000 项写量 **−375×**）⇒ **基线 `2F5406BA…` → `7B3AC667…`/792,831/43**；裁定书 `GATE-D079_VERDICT.md`。
+
+## 6 · 席位交接与战绩（交接素材即本档＋台账）
+
+- **战绩**：D-067…D-078 连续 PASS；指挥席接替后六轮验收全绿——D-073（新 5 工具，149→154，LIVE 36/36，4 项 LIVE 驱动修复被受理）／D-074（r18）／D-075（分片长任务演练＋2 真缺陷修复：续跑不重跑、jobId 唯一化）／D-076（r19）／D-077（并发拒写 `INVALID_STATE`＋OwnerToken/原子断点写＋1000 项 4 分片 10.82 s、resume `resumedSkips=1000`）／D-078（r20，分发与安装基线收敛）。
+- **D-079**（Stella 接续，**PASS 闭环**＋基线推进 69 级）／**D-080**（Stella，**PASS 闭环**，F01/F02 完成）／**D-081**（Stella 前段＋Luna 收尾，**PASS 闭环**，r21 生效）／**D-082**（Luna，**PASS 闭环**，F03 契约冻结十二项全冻结）：见 §5/§5.1。
+- **新执行者接任须知**：无需重做历史批次；接手时现场复算五项快照 → 读现役工单与 HANDOFF → 按未完成阶段续作；历史证据与回滚链在 `.runtime/evolution/phase15/`，只读。
+
+## 7 · 环境备忘
+
+- 运行环境：ArcGIS Pro 3.5.0（net8 add-in；net6 兼容 payload daml 3.0 为分发面）＋ MCP 服务器 154 工具。
+- 测试口径：**1565 = 1562/0/3（Unit）＋ 44/0（Server）＋ 32/0（Integration）**（09-24 口径；动手前以现役工单复算为准）。
+- 输出根惯例：`.runtime/evolution/phase15/run-YYYYMMDD-Dxxx/`；回滚锚惯例：`.runtime/evolution/phase15/backup-pre-Dxxx/`。
+
+## 8 · 信息源指针（本地，`D:\ArcGIS-Pro-MCP 2.0\`）
+
+- `AGENTS.md`｜`Docs/_gatekeeper/COMMANDER_CHARTER.md`｜**现役接单入口＝四线牌位 `Docs/_gatekeeper/inbox/L1_INBOX.md`／`L2_INBOX.md`／`L3_INBOX.md`／`L4_INBOX.md`**（G-214 起常设，status 行四态语义；当前 ACTIVE＝D-096/L1＋D-097/L2＋D-098/L3＋D-091/L4 停等窗口〔G-217 裁定：D-096 CLOSED 后 L1 暂停一批让渡 L4〕）；单批工单/HANDOFF 存档仍在 `inbox/`＋`HANDOFF_*`（D-086/D-085/D-084 等）
+- 交接文书：`HANDOFF_EXECUTOR_HANDOVER_20260913.md`／`HANDOFF_NEW_EXECUTOR_20260913.md`／`MSG_TO_LUNA_D067_20260922.md`／`MSG_TO_NEW_EXECUTOR_20260927.md`
+- 近期裁定：`GATE-F04A_AUTHORIZATION_RULING.md`（G-195，F04-A 批复＋分发实施——D-083 纪律来源）／`GATE-D082_VERDICT.md`（O-D082-01…07＋前置裁定）／`GATE-D081_VERDICT.md`
+- 证据惯例：`outbox/`（R-D*.md／h-receipt-*.md）｜`evidence-index.md` S0–S6｜`build-*.log`
+
+---
+## 9 · 长期派单协议（G-201 起生效，用户 09-28 23:0x 授权常设自动化循环）
+
+- **取单**：`Docs/_gatekeeper/inbox/` 唯一 status=ACTIVE 的 `D-*.md` 工单＋同名 `HANDOFF_*.md`（按 HANDOFF 自读链开工）。
+- **交件**：`outbox/h-receipt-D*.md`（八项回执）＋`outbox/R-D*.md`（**仅 PASS CANDIDATE**）＋证据根 `.runtime/evolution/v5-f/run-<日期批次>/evidence-index.md`（S0 起完整、无「待填」）。
+- **节奏**：指挥席每小时 **:45** 自动巡查（WorkBuddy 自动化 id `559b7724`，rrule `FREQ=HOURLY;INTERVAL=1;BYMINUTE=45`，首跑 2026-09-29 00:45）；你交件后**下一轮次即被验收**；验收 PASS 即派下一批（同一取单位置），无需等待人工转发指令。
+- **停等照旧**：范围扩大／需新错误码／等价路径歧义／预登记分类冲突／P-05 门控（ps_*、F04-A）／需用户协同（②③、红线豁免、r21 转发；安装与发布已授权〔G-221〕、评测输入与 22 件 GP 白名单扩容已代裁〔G-222〕）→ 在工单 status 行如实登记并停等，不得代行。**先例（G-202，09-29）**：分类冲突停等后由指挥席零采信复算裁定并恢复工单（D-084 三件 Session 层维持＋generate_quality_report Read＋条件写按冻结 schema）——裁定权在指挥席，执行席如实登记即合规。
+- **红线恒定**：一切在 D 盘（C 盘零写入零落物含 %TEMP%）；**安装已授权（G-221；边界见 L1_INBOX D-100 节＝安装位条目区＋安装器固有路径豁免、先清单后写＋sha256 台账、回滚锚先行、只装现役最新已验收基线产物）**；错误码 33 零新增；禁 dotnet clean；只交 PASS CANDIDATE。
+- **验收纪律**：零采信——每轮以指挥席现场复算为准，申报与实算不符即勘误＋整改令；偶发失败须复跑留证并保留分母（D-083 先例）。
+
+*维护：每轮派单/验收落账后由 Keeper 代同步（受指挥席委托）·本版 2026-09-30 20:4x（G-235＝D-105 方案五项裁定＋实施段解锁＋自动化重启；前轮 G-234＝双单验收＋基线 271·224〔Phase B 待 D-100 CLOSED 自动翻转〕〔D-091＋D-099 PASS CLOSED＋基线 269·208 生效＋派 D-100/L1 ACTIVE〕〔L2 执行评测三钥匙代裁：TS08＝授权生成 fixture·synthetic 全量标注／M4 八域＝合成已知答案集／22 件 GP＝扩容候选·正式写入 53→75 绑定 D-100 真机验证·验证前 53 恒定 fail-closed＋派 D-101/L2 评测输入合成批〕；§10 R29 追记；另 §8A 全量同步片 18 节点已建〔治理面逐字上云，总索引 rvEQcrbQOUgvlZsIpHAvC3〕）·依据 DECISIONS_LOG G-226／DISPATCH §204／HANDOVER 183；前轮 G-225＝D-101 验收轮〔禁安装红线解除＋发布预授权＋D-100/L1 安装与真机验证批预登记为恢复首单〕；ACTIVE＝D-100/L1＋D-102/L4＋D-103/L2，L3 WAITING*
+
+## 10 · 轮次观察（G-201 每小时循环追记，只追加）
+
+- **03:0x（09-29）**：D-084 **ACTIVE 执行中**——Source 13 件 .cs 于 02:0x 后改动（D084Tools／D084AnalysisService／LayerService.D084／LayoutService.D084／Composition／IReadOnlyModeService 等）＋`run-20260928-d084/build-D084.log`（02:57）＝构建阶段；outbox 无 R-D084 ⇒ 空轮，不催单不派单。C 盘抽查：`%TEMP%\ArcGISProMCP` 干净；`%LOCALAPPDATA%\ArcGISProMCP\managed-logs` 为历批 Pro 宿主日志（最新 09-27 16:18），本轮零新增违例。下一整点循环预期＝若 R-D084 出现即零采信验收。
+- **04:1x（09-29）**：R-D084（PASS CANDIDATE，03:42）出现 ⇒ 指挥席零采信验收（`c-g203/verify.py`，29 项＝27/29）⇒ **G-203 FAIL（CHANGES REQUESTED）**：**F-1 聚合漂移**＝提交候选后 03:58 复核改动 Source 两件（D084AnalysisService.cs／LayoutService.D084.cs）⇒ 声明聚合 `AEB02D6A…`/248 vs 现值 `742FA5C9…`/248，主文 unit 1588/5 与 Server/B1 LIVE（改动前 TRX）对当前 Source 失效；**F-2 产品断言失败**＝提交后 Unit 复核三轮（04:03–04:07）12F→9F→7F 迭代未收敛（复现 FolderWorkflowTests 两件＋isolated 轮 `D084ToolTests.QualityReport_WritesHashedManifestAndRefusesOverwrite` 交付件直测）。**静态面全绿予以认可**（164≡164≡十件在册/33 码/白名单/名册/预登记分类一致/Rule5+Rule7/C 盘本批零新落物/安装件未动/P-05① 批准项留证；首轮 6 FAIL 中 4 项系指挥席脚本口径误已自纠——先怀疑自己口径之诫）。**整改令 R-G203-1…5**：R-1 复核改动披露件／R-2 失败逐项归因（QualityReport 优先）／R-3 收敛后三套件＋target 22＋B1 LIVE 对当前 Source 全量重跑／R-4 聚合重算＋R-D084 **v2** 重交＋evidence-index 同步／R-5 **%TEMP% 三遗留目录清理**（`ArcGISProMCP.Phase72.Tests`／`ArcGISProMCP.ReleaseIdentityTests`／`ArcGISProMCP.UserWorkflowTests`，09-28 22:2x，D-083 E 组漏网——先清单后删＋$I/$R 双通道核验＋remaining=0）。裁定书 `GATE-G203-D084-FAIL_VERDICT.md`；D-084 维持 ACTIVE（唯一）整改中；基线零推进；**不派 D-085**；执行席 04:07 仍在迭代收敛，v2 重交后下一轮重验。
+- **05:3x（09-29）**：D-084 **ACTIVE 整改中（R-G203-1…5）**——执行席 `run-20260928-d084/c-g203-remediation/` 活跃：05:23 定向探针 **85/85 通过 0 失败**、05:26 全解构建 **0 警告 0 错误**、dotnet-cli-home 已重定向 D 盘（G-197 合规）；R-5 核查＝`%TEMP%` 三遗留目录中 `ArcGISProMCP.ReleaseIdentityTests`／`ArcGISProMCP.UserWorkflowTests` **已清除**、`ArcGISProMCP.Phase72.Tests` 仅剩空壳（0 文件）。outbox 无 R-D084 **v2** ⇒ 空轮，不催单不派单；下一轮（06:45 预期）＝若 v2 出现即按 R-G203-3/R-4 口径零采信重验（聚合哈希对 Source 现值＋三套件全量收敛＋B1 LIVE 重跑证据）。
+- **06:4x（09-29）**：R-D084 **v2**（PASS CANDIDATE，06:05，晚于裁定书 04:21 构成整改响应件）出现 ⇒ 指挥席零采信重验（`c-g204/verify.py` **38 项＝38/38 全绿**；首轮 35/38，3 FAIL 全系本席脚本口径误——工具文件名过滤漏 D084Tools.cs／TRX 全命名空间 testName／raw 混合格式——当场修正复跑留证）。**G-204 裁定：验收 PASS**——R-G203-1…5 全清偿（披露件 mtime 窗口逐字吻合／归因成立／Unit 1596=1588/5/3＋Int 32/32＋Server 65/65＋target 22/22＋focused 85/85 对当前 Source TRX 直读／聚合 `742FA5C9…`/248 三方一致且终局证据 05:23 后零漂移／%TEMP% 三目录不存在＋$I/$R 六对独立抽查全空）；完成门七项达成（QualityReport 条件写守卫源码直核，reportPath 强制 D 盘＝G-197 产品级落实）。**源码基线推进 `C80D7476…`/243 → `742FA5C9…`/248；安装位 `7B3AC667…` 不变；D-084 CLOSED**。**同轮派 D-085＝F05 批一·M1 评测定标（零 Source 改动，7 件：Benchmarks/ 六定标件＋O-D082-06 冻结脚本＋名义集映射表；开工首项＝字段 schema 草案）**——ACTIVE＝D-085（唯一）；下一轮循环巡查 D-085 开工回执。
+- **08:0x（09-29）**：D-085 停等裁定恢复（**G-205**）——取单发现 status＝`BLOCKED_BY_MISSING_QUALIFIED_TS08_FIXTURE`（07:32:23 登记；`h-receipt-d085.md` 八项回执＋schema 草案先行已交；无 R-D085）：FINAL §9 TS08/S18 要求已有合格多波段输入，唯一三波段候选 `multi.tif` lineage 为同源 `nostats.tif/Band_1` ×3（来源 geoid WGS84.img），不能证明合格；执行席按「名义集冲突停等」条款合规停等，**无缺陷**。指挥席零采信核查 `c-g205/verify.py` **14/14 全绿**（lineage 实证＋TIFF tag277 二进制验证＋TestFixtures 全域 17 件中唯一三波段＋S0 与 G-204 基线一致＋TestFixtures 零触碰〔最新 mtime 09-14〕＋%TEMP% 零落物；首轮 2 FAIL 系指挥席脚本口径——缩略图计数／mtime 基准——已自纠留证）。**裁定 R-G205-1…5**：①缺口不阻塞定标批（F05 预固定判据体系非数据文件）；②TS08「正常输入」＝输入资格判据（写入 comparison-rules-v1）＋黄金件命名约定，黄金件路径登记 `NOT-AVAILABLE-PENDING-USER` **不伪证不以 multi.tif 充数**；③**D-085 恢复 ACTIVE** 续做 A 组 6 件＋B 组 1 件（名义集实质语义零改动；既得 schema 草案有效）；④〔用户协同点〕TS08 黄金输入实际解决（用户指认合格数据源／授权生成 fixture）挂账，期限＝M1 执行评测批开工前，本批不停等；⑤流程改进＝fixture 前置批次派单前资格预检。裁定书 `GATE-G205-D085-RESUME_RULING.md`；**ACTIVE＝D-085（唯一，恢复执行）**；基线零推进。下一轮循环＝巡查 D-085 续工（A/B 组七件交付进度）。
+- **09:4x（09-29）**：R-D085（PASS CANDIDATE，08:54，G-205 恢复后候选交付；八项回执＋evidence-index 08:56）出现 ⇒ 指挥席零采信验收（`run-20260929-d085/c-g206/verify.py` **41/41 全绿**；首轮 39/41，2 FAIL 系本席脚本口径——c-g205/result.json 顶层键 `pass/total`＝14/14＋comparison-rules-v1.md:30 中文否定语境「禁止把 multi.tif 当有效输入」——自纠 v2 复跑留证）。**G-206 裁定：验收 PASS＋D-085 CLOSED＋F05 M1 定标面冻结为契约面**——基线三向一致（Source `742FA5C9…`/248 现算≡S0≡G-204＋安装位 `7B3AC667…`/792,831B/43e＋164≡164＋33＋白名单 53＋名册 94-33-158）；Source/Config/TestFixtures 批次窗口零漂移；A 组 9 件逐件＋聚合 `92ECD265…` 独立复算一致＋`--check` 复跑复现；五向引用闭合（6 场景↔6 模板↔8 规则↔6 核心+12 隐藏↔12 压力双向；toolSurface⊆164；Z01–Z08）；TS08 G-205 合规（`NOT-AVAILABLE-PENDING-USER` 三处一致＋multi.tif 零充数）；C 盘零落物；完成门 1–5 达成。s0.json 字面 `PASS_CANDIDATE` 由裁定升格冻结语义、字节不改保 `--check` 可复算；源码基线不变；TS08 黄金输入继续挂账（G-205 ④）。流程改进 R-G206-P1＝解析外部结果 JSON 前先现场采样键名结构。裁定书 `GATE-G206-D085-PASS_VERDICT.md`。**同轮派 D-086＝B3/B4 非 PS 工具实现批二（6 件：export_design_bundle W／validate_design_bundle R／refresh_design_bundle W／validate_delivery_package R／suggest_workflow R／get_performance_stats R；工具数 164→170）**——依据 R-G204-P2（F05 定标冻结后按依赖序派，条件成就）；分类已核 4R＋2W 与 prereg 逐件一致零冲突；PS 半区五件 P-05 门控零执行；契约逐字对齐 F03 冻结面；写层守卫对齐 D-084 QualityReport 模式；F06 迁移批另派（D-087 候选）。**ACTIVE＝D-086（唯一）**；输出根 `run-20260929-d086/`；开工首项＝6 件现状三态核对；下一轮循环＝巡查 D-086 开工回执。
+- **10:5x（09-29）**：D-086 停等裁定恢复（**G-207**）——执行席 10:32:05 完成首项 6 件三态核对后登记 `BLOCKED / WAITING`：发现工单 §实现要求 4 与 F03 冻结契约两处冲突（①「禁止覆盖既有产物」vs 冻结 overwrite default=false＋显式 true 允许覆盖〔schema 原文核实〕；②「refresh 仅按匹配 baseRevision 生效」vs 冻结契约五字段无 baseRevision 且比较来源未定义〔ST-M1-06 系基准期望非契约参数面〕），**产品码修改前合规停等，零缺陷**（六件现役零实现仅名册命中＋prereg 六行 4R＋2W 一致＋Source 零漂移＋%TEMP% 零落物均经指挥席 c-g207/verify.py **22/22** 复核）。指挥席裁定：**冲突系本席 G-206 派单措辞缺陷**——R-G207-1 overwrite 按冻结契约实现（缺省禁覆盖 OUTPUT_EXISTS＋显式 true 仅覆盖输出产物本身＋D 盘守卫无条件）／R-2 GIS 侧零引入 baseRevision（refresh 更新写新 revision 目录、原件零触碰）／R-3 dataUpdates item＝{sourcePath,newPath?,newHash?} 最小忠实结构／R-4 **D-086 恢复 ACTIVE** 续做 6 件（三态核对已完成无需重做，续项＝实现/构建/回归）／R-5 流程改进＝派单两查（分类预检＋冻结契约逐字预检）。**工单要求 4 已勘误版落单（以勘误版为准，执行席按勘误版实现）**；裁定书 `GATE-G207-D086-RESUME_RULING.md`；基线零推进。下一轮循环＝巡查 D-086 续工（实现/构建/回归进度；若 R-D086 出现即零采信验收：170 三向一致＋勘误版语义落码＋TRX 1596=1588/5/3 不回归＋聚合现算＋C 盘零落物）。
+- **12:1x（09-29）**：D-086 **ACTIVE 执行中（G-207 勘误版续工，实现→构建→回归收尾阶段）**——零采信巡查：Source 4 件 11:32–11:48 改动（`D086DesignTools.cs` 新建＋`Composition.cs`〔注册〕＋`LayoutService.cs`／`ILayoutService.cs`）＋全套 TRX 11:50–11:58（unit-full→**v2** 两轮迭代＋integration＋server＋target 22）＋12:07 执行席自算聚合 `0CDBF7DD…`/249（＝基线 248＋新增 D086DesignTools.cs 1 件；候选验收时以本席现算为准）＋12:14 全解构建 **0 警告 0 错误**（BUILD_EXIT_CODE=0）；dotnet-cli／nuget-packages／nuget-http-cache／msbuild-user-extensions／temp 全部重定向 D 盘 run 目录（11:47–11:52，G-197 合规）；`%TEMP%\ArcGISProMCP` 不存在 ✅。outbox 无 R-D086 ⇒ **空轮**，不催单不派单；下一轮（约 13:16）预期＝若 R-D086 出现即零采信验收（170 三向一致＋勘误版语义落码〔缺省 OUTPUT_EXISTS＋显式 overwrite=true＋refresh 新 revision 目录原件零触碰＋dataUpdates 三键〕＋契约逐字对齐 F03＋错误码 33 恒定＋TRX 1596=1588/5/3 不回归＋聚合现算＋C 盘零落物）。
+- **13:2x（09-29）**：R-D086（PASS CANDIDATE，12:35:04，G-207 恢复后候选交付；八项回执＋evidence-index 36 项零占位）出现 ⇒ 指挥席零采信验收（`run-20260929-d086/c-g208/verify.py` **33/33 全绿**；首轮 28/33，5 FAIL 系本席脚本口径——TRX Counters 属性 `notExecuted=0` 与逐 outcome 实数失真／LIVE raw `\u0022` 转义致名串漏匹配／名册三数组锚点错／汇总计数器元组解包错位——自纠 v2 复跑留证，**执行席申报与现场一致零缺陷**）。**G-208 裁定：验收 PASS＋D-086 CLOSED＋基线推进**——170 三向一致（Composition 唯一注册点 170＋六件各恰一次＋ps_* 零注册＋快照 170 无重名）；六件输入面 ≡ F03 冻结 schema（addProps=false identical）＋名册 94/33/158=285（4R+2W）；TRX 直读 Unit 1602=1594P/5F/3NE（5F＝既有 cmd.exe 提权家族、3NE＝Reparse 家族；对比 1596=1588/5/3 分母 +6 全 Passed）＋Server 66/66＋Integration 32/32＋target 6/6＋D 盘 loopback LIVE 1/1（raw 六件 tools/call ×24）；写层守卫直测在场全 Passed＋G-207 三裁定全落码（overwrite 缺省闸门／refresh 新 revision 目录原件零触碰＋源完整性预检＋IsWithin 双向隔离／dataUpdates 三键／零 baseRevision）；Source 聚合独立复算 `0CDBF7DD…`/249 与执行席逐文件一致＋提交后零漂移；安装位 `7B3AC667…`/792,831B 只读未动；33/53/285 恒定；C 盘零落物；台账 mtime ≤11:10:14 执行席未动账。**源码基线 `742FA5C9…`/248 → `0CDBF7DD…`/249；工具数 164→170 生效**；披露采信 R-G208-P1（Server +1 LIVE fixture 加法性零回归，按 G-204 先例）＋R-G208-P2（IsThirty 方法名遗留登记不改）。裁定书 `GATE-G208-D086-PASS_VERDICT.md`。**同轮派 D-087＝F06 公共基础迁移批（8 件非工具：共享 Invoker／统一 Validator／JobStore 公共化〔FolderWorkflowJobs 迁出＋D 盘根统一解析＋禁回退＋租约/fencing〕／Manifest-Receipt 公共格式／全既有入口迁入／日志压实／三代兼容／回归保障；工具数 170 恒定零新增）**——依据 FINAL §8 F06 行（F03 ✓＋D-079 ✓ 成就）＋§7 语义（基准期望≠契约参数面；零工具 schema 变更）；派单两查完成（分类预检零新工具＋契约预检零 schema 变更）；三步法 86 份无重号；现状锚＝`FolderWorkflowJobs`@FolderWorkflowTools.cs:76＋`McpProtocolHandler`/`McpServer`；**ACTIVE＝D-087（唯一）**；输出根 `run-20260929-d087/`；开工首项＝现状三态核对回执先行；下一轮循环＝巡查 D-087 开工回执。
+- **14:4x（09-29）**：D-087 **ACTIVE 执行中（实现→测试收尾阶段，进展迅猛）**——零采信巡查：13:47 开工回执（八项齐全，S0 快照与 G-208 基线一致：Source `0CDBF7DD…`/249＋170＋33＋53＋名册 94-33-158＋安装位 `7B3AC667…`）＋tri-state-initial.md 13:47（Invoker/Validator 分散等价路径、Jobs 在 Tools、fencing/压实/三代矩阵尚缺＝迁移落点确认）；Source 13:35 后迁移批预期改动在飞（新增 `Shared/Core/Jobs/WorkflowJobStore.cs`／`Jobs/JobManifest.cs`／`Tools/IToolInvoker.cs`／`ToolInvoker.cs`／`ToolValidatorPipeline.cs`／`ToolExecutionContext.cs`＋`Logging/OwnedJsonlCompactor.cs`＋`Composition.cs`／`MCPToolRouter.cs`／`D064BatchTools.cs`——恰为 F06 四公共基础落点，**验收时以本席现算聚合为准**）；run 目录 14:14–14:45 全套测试收敛迹象（build 六轮至 build-d087-final 14:45＋unit 三轮＋targeted＋integration＋server＋gp-audit×4＋jobs×5＋live-host-d087 14:45）；dotnet-cli/nuget/temp 全重定向 D 盘 run 根（G-197 合规）；`%TEMP%\ArcGISProMCP` 不存在 ✅、managed-logs 最新 09-27 16:18 本轮零新增 ✅。outbox 无 R-D087 ⇒ **空轮**，不催单不派单；下一轮（约 15:45）预期＝若 R-D087 出现即零采信验收（四公共基础 Rule 5 零 SDK＋全入口迁入 170 三向一致契约零变化＋JobStore 禁回退负测试/fencing/三代兼容直测＋日志压实＋TRX ≥1602 不回归＋聚合现算＋C 盘零落物）。
+
+- **15:4x（09-29）R12＝G-209 验收轮（指挥席手动——自动化 PAUSED 中）**：outbox 出现 R-D087（PASS CANDIDATE，15:34:55）⇒ 零采信 `c-g209/verify.py` **36/36 全绿**（首轮 33/36 系本席脚本口径已自纠留证）——四公共基础＋Rule 5 零 SDK＋四入口接共享 Invoker＋170 三向一致；JobStore 禁回退 0＋fencing＋三代兼容；压实器防覆盖；Unit 1616=1608/5/3（失败/NE ≡ D-086 基线逐名）＋Server 66/66＋Int 32/32＋定向 14/14；聚合 `D4FC24B6…`/256 ≡ s2＋零漂移；C 盘零落物＋台账未动。**裁定：D-087 CLOSED＋基线 `0CDBF7DD…`/249 → `D4FC24B6…`/256＋安装位 `7B3AC667…` 不变**；ACTIVE＝无，待用户指令派 D-088（F05 批二）。
+
+- **16:1x（09-29）R13＝G-210 三线启动轮**：用户指令三线并行 ⇒ 治理修订＋三线派单（D-088/D-089/D-090 各线 ACTIVE）＋自动化恢复（prompt 三线版，rrule 不变每小时 :45）；两查完成（九件全 R＋detect_geometry_duplicates 并入裁定在案＋schema 在场）；裁定 DECISIONS G-210／DISPATCH §188／HANDOVER 167。**各线执行端注意：只写本线目录（L1=Source/Tests/Config·L2=Benchmarks·L3=Docs/assets），越界即 FAIL；停等写各自工单 status 行。**
+
+- **16:4x（09-29）R14＝G-211 PS 线解锁轮**：用户指令「PS 线也解锁」⇒ 四线并行（D-088/D-089/D-090/D-091 各线 ACTIVE）；L4＝PS 半区五件实现批（ACTIVE-PA：Phase A 只读回执先行；Phase B 待 R-D088 交件解锁）；G-190/D-083 ps_* 前置条款经 G-211 R-1 修订（用户解锁授权＋NOT VERIFIED 模式）；P-05 ②③维持挂账；自动化 prompt 升四线巡查版。
+
+- **18:1x（09-29）R15＝G-212 验收轮**：用户指令「请验收」⇒ R-D090 CHANGES REQUESTED（S50 冒名违反冻结映射，整改中）；D-088 回执 PASS＋O-D088-01 勘误（名册 285 恒定）；D-091 PA-DONE 采信（Phase B 锁维持）；D-089 在途。基线 `D4FC24B6…`/256＋安装位 `7B3AC667…`＋定标锚 `92ECD265…` 不变；170/33/53/285 恒定。
+
+- **18:2x（09-29）R16＝G-213 验收轮（D-088 即到即验）**：R-D088（18:16）⇒ c-g213 25/25 全绿 ⇒ PASS＋CLOSED＋基线推进 256→259（179 生效）＋**D-091 PHASE-B-UNLOCKED 翻转**（G-212 R-3 触发达成；L4 开写，红线不变）。L1 下一批待派（FINAL §8/§9 依赖序）。
+
+- **19:1x（09-29）R17＝G-214 轮**：D-089 验收 PASS＋CLOSED（M2 锚 `501A7E15…` 生效）＋派 D-092（L1·P3/P4 十件 179→189）＋D-093（L2·M3 定标）＋**四线长期接单位置 Lx_INBOX.md 落地**（牌位协议＝status 行 WAITING/ACTIVE-Dxxx/CHANGES-REQUESTED-Dxxx/PHASE-B-UNLOCKED-Dxxx；完工回牌位取下一单）。
+- **20:4x（09-29）R18＝G-215 手动验收轮**：R-D090-r1 复验 PASS（D-090 CLOSED）＋R-D092 验收 PASS（基线 262·189 生效）＋派 D-094（L1）/D-095（L3）；L1/L3 牌位「当前工单」节已改写；D-093/D-091 在飞跳过（19:38 规则）。下一触点自动化 :15/:45 巡查——若 R-D094/R-D095/R-D093/R-D091(D-091 Phase B 五件) 出现 ⇒ 零采信验收。
+- **22:2x（09-29）R19＝G-216 自动化轮（首次三线并发交付同轮验收）**：R-D095（21:06）/R-D093（21:25）/R-D094（21:52）三线交付 ⇒ 三份独立 c-g216 脚本 **D-094 24/24＋D-093 26/26＋D-095 18/18 全绿**（首轮 FAIL 全系本席口径自纠；执行席零缺陷）⇒ 三单 CLOSED＋**基线 `675DDF5F…`/262→`A3DB2C29…`/265（197 生效）**＋**M3 锚 `94577E76…` 冻结**。同轮派单（两查先行）：**D-096/L1**＝P6 栅格族六件 1R＋5W 197→203（范围勘误＝raster_reclassify/extract_raster_values 内部服务排除不视为缺件；build_raster_pyramids in-place-raster 类不适用 overwrite-refusal）＋**D-097/L2**＝M4 扩展定标（X1-X8 48 候选）＋**D-098/L3**＝M3 资产规格批（5 场景剧本＋SF-M3＋储备延伸）。L4/D-091 无交付跳过。三牌位「当前工单」节已改写。裁定书 GATE-G216-D093-D094-D095-PASS_VERDICT.md。
+- **23:4x（09-29）R20＝G-217 窗口裁定轮（用户转达 L4 第 4 次时窗检查报告）**：L4 报告采信合规（23:01:59 `phase-b-write-window-check-4.md`——ACTIVE-D096 占窗 ⇒ L4 零写入零构建零测试系唯一合规动作；执行席零缺陷）。**O-D091-01 勘误＝PS 五件已在名册预登记块（94/33/158=285 恒定），D-091 实现口径勘误为 197→202**——L4 开写前禁沿用 170/175/179，一切数字现场复算。**窗口裁定＝D-096 验收 CLOSED 后 L1 暂停派单一批，写权让渡 L4 即刻开写 D-091；D-091 验收 CLOSED 后恢复 L1 依赖序**（约束焊入 L1_INBOX D-096 节＋L4_INBOX status 行，自动化循环同源）。**L4 触发信号＝L4_INBOX status 行出现「写权已释放」即开写本单。**
+- **23:3x（09-29）R21＝G-218 自动化轮（D-098 验收）**：R-D098（22:56，L3·M3 资产规格批）⇒ c-g218 verify.py **38/38 全绿**（首轮 37/38 唯一 FAIL 系指挥席口径——否定语境第七次：evidence-index「无占位、无待填」自声明＋回执「无 TODO/待填」复合否定被占位词表子串命中，改上下文否定判定法；**执行席零缺陷**）。三向 ≡ D-093 权威 map＋22 ID 全 ∈ 47 集零自定义＋三锚 --check rc=0/0/0＋M1/M2 资产 27 件＋Benchmarks 零触碰＋台账窗口闭合＋%TEMP% 零落物＋S50 纪律合规 ⇒ **PASS＋CLOSED**；**L3_INBOX→WAITING**（下一单预告＝M4 广度资产规格批，前置＝D-097 验收 CLOSED 后按依赖序派；G-207 教训＝不派引用面不存在的工单）。裁定书 GATE-G218-D098-PASS_VERDICT.md。
+- **01:1x（09-30）R22＝G-219 自动化轮（D-096 验收）**：R-D096（00:16，L1·P6 栅格族六件）⇒ c-g219 verify.py **32/32 全绿（双跑复现）**（首轮 25/32→11 处指挥席口径自纠留证；**执行席零缺陷**）。三向一致 203＋名册 285 恒定＋TRX 1712=1705P/4F/3NE（定向 25/25；4F＝3F FolderWorkflow≡基线＋1F PythonBridgeLifecycle flaky 隔离 16/16；3NE≡基线）＋聚合 `41144509…`/268≡申报＋六件 schema 逐字对齐 6/6＋in-place 豁免＋33/53＋%TEMP% 零落物 ⇒ **PASS＋CLOSED＋基线 `A3DB2C29…`/265→`41144509…`/268（203 生效）**。**O-D091-02 勘误＝D-091 目标 203→208／名册 285 恒定**（O-D091-01「197→202」系验收前口径）。**G-217 窗口裁定生效＝L1 暂停派单一批（写权让渡 L4），L4 即刻开写 D-091**（L4_INBOX 开写确认已落；D-091 验收 CLOSED 后恢复 L1 依赖序）。L2/D-097 在飞跳过；L3 WAITING 维持。裁定书 GATE-G219-D096-PASS_VERDICT.md。
+
+- **02:5x（09-30）R23＝G-220 自动化轮（D-097 验收）**：R-D097（01:10，L2·M4 广度旗舰扩展定标，零代码）⇒ c-g220 verify.py **51/51 全绿（双跑复现）**（首轮 45/51→12 处指挥席口径自纠留证——英文后置否定窗口／S46/S52 跳号＝M2 扩展域／run-root 相对路径／交付时点分窗归因／Tests 邻线在飞归因；**执行席零缺陷**）。四锚 --check rc=0/0/0/0（**M4 锚 `F71BF6CD…`/9 items 14 members**）＋M1/M2/M3 字节不改＋计数闭合（60/36/60/81/77）＋规则 73 零碰撞＋33 恒定＋写域归因＋%TEMP% 干净＋自检 37/37 复现 ⇒ **PASS＋CLOSED＋M4 定标面冻结为契约面（四锚并列 92ECD265/501A7E15/94577E76/F71BF6CD；基线零推进 `41144509…`/268·203 生效）**。**派 D-099/L3＝M4 广度资产规格批**（14 模板规格＋27 场景剧本＋SF-M4 81＋deferredRegister 六分类储备盘点＋G-DOMAIN 判据档案；run-20260930-d099；开工首项＝三态核对回执先行含四锚复算）。**L2 转 WAITING**（下一单预告＝M1/M4 执行评测批；前置三项用户裁定点＝TS08 黄金输入＋八域合格输入＋GP 白名单/许可扩容）。观察项 R-G220-P1（evidence-index 刷新 at 小瑕疵）。L4/D-091 在飞跳过（无 R-D091）；L1 暂停一批维持。裁定书 GATE-G220-D097-PASS_VERDICT.md。
+
+- **02:5x（09-30）R24＝G-221 用户授权轮（指挥席手动）**：用户授权「这些我都授权安装，只要不触碰红线就行，你这边安排然后记录」⇒ **R-1 禁安装红线解除**（边界＝官方安装位 {BAA5628C…} 内条目区＋安装器固有路径豁免、先清单后写＋逐文件 sha256 台账、回滚锚先行 backup-pre-install-YYYYMMDD/ 落 D 盘、%TEMP% 等其余 C 盘零落物不变、33/53/285/PASS CANDIDATE 不变、只装现役最新已验收基线产物）；**R-2 发布预授权**（统一包/G-RELEASE 到点即派，FINAL 顺序不变）；**R-3 D-100/L1＝安装与真机验证批预登记**（L1_INBOX 新节 PRE-REGISTERED；恢复首单插队 P7a/P7b，前置＝D-091 CLOSED；范围＝构建→回滚锚→安装→SDK 依赖件 NOT VERIFIED 逐件转 VERIFIED／GP [VERIFY] 逐项→LIVE 留证→安装位基线推进）；L2 执行评测三钥匙（TS08/M4 八域输入/GP 白名单扩容）不在授权范围维持挂账。**红线行更新＝「禁安装」→「安装已授权（G-221）」**。详录 DECISIONS G-221／DISPATCH §199／HANDOVER 178。
+
+- **03:0x（09-30）R25＝G-222 用户授权轮②（指挥席手动）**：用户授权「TS08 黄金输入（G-205 ④）、M4 八域合格输入（G-220）、22 件 GP 白名单扩容裁定（G-220）——交了这三把，L2 执行评测批即可开跑。自己裁定如实记载」⇒ **R-1 TS08＝授权生成 fixture**（脚本化合成：确定性种子可复算＋逐件 SHA-256＋lineage 入 evidence-index；M1 冻结锚 `92ECD265…` 与 TestFixtures/ 字节不改、multi.tif 零充数；synthetic lineage 全量标注、评测结论如实标注「合成输入基准」不冒称真实数据评测）；**R-2 M4 八域＝合成已知答案集可接受**（X1–X8 按 M4 inputQual 资格判据合成；M4 锚 `F71BF6CD…` 不动；纪律同 R-1）；**R-3 22 件 GP＝批准扩容候选·两步裁法**（G-190 先例同构）——`Config/gp-whitelist.json` 正式写入（53→75）绑定 D-100 真机验证：可执行且行为符合预期者随后续实现批正式写入（走实现批流程＋指挥席验收），不可执行/许可缺失/行为异常者维持 fail-closed 如实登记；真机验证前白名单 53 恒定不变；**R-4 派 D-101/L2＝评测输入合成批**（ACTIVE；TS08 合成件＋M4 八域合成已知答案集＋脚本化合成器＋hash/lineage/synthetic 标注＋资格判据逐条自检；零 Source/零 Config/零冻结面触碰；run-20260930-d101/；M1/M4 执行评测批前置＝D-101 CLOSED）；R-5 表述同步（自动化 prompt／镜像两档／MEMORY）。**现场态势＝R-D091（L4·203→208）＋R-D099（L3）已交付 outbox，待 03:15 自动化轮验收；D-091 CLOSED 即触发 L1 恢复首单 D-100 安装批（G-221 预登记）**。详录 DECISIONS G-222／DISPATCH §200／HANDOVER 179。
+
+- **13:1x（09-30）R26＝G-223 双线验收轮（用户「验收派单」指挥席手动）**：现场盘点＝outbox 待验 R-D091（03:07）＋R-D099（03:04），D-101（L2）04:15 回执在飞跳过；台账停 G-222。**c-g223 两份独立脚本＋本席独立第四轮定向复跑（r4b 9P/2F 环境归因实证）**——D-091（L4·PS 五件 203→208）v2 **15/15**（首轮 21/26 五处本席口径自纠：快照 record 形态／TRX 终局轮基准／zip 条目口径／6520 配置位／台账归因窗口）⇒ **PASS＋CLOSED＋基线 `41144509…`/268→`84EF761A…`/269（208 生效）**；Unit 终局 r3 1721=1712P/6F/3NE 6F 逐名归因环境敏感（提权族 5＋jobs 配置 1——r4b 复现 `InvalidOperationException` WorkflowJobStore.ResolveDir:118；3NE≡基线；执行席三轮迭代留证＋失败差异诚实申报＝合规加分）；测试基线更新 1721=1712P/6F/3NE＋Server 67/67。D-099（L3·M4 资产规格）v2 全绿（首轮 16/23 七处自纠：jsonl 键名／六分类标题／全局否定声明／规则 ID 形态／分窗归因〔05:40 批＝D-101/L2 所有权〕／指挥席窗口／否定语境第八次）⇒ **PASS＋CLOSED＋M4 目录收官（60 场景/36 模板全定义）**。**派 D-100/L1＝安装与真机验证批 ACTIVE**（G-221 预登记升格；前置成就＝D-091 CLOSED；run-20260930-d100/）；L3/L4 WAITING。观察项 R-G223-P1＝环境敏感失败族建议入 HANDOFF 环境准备基线。裁定书 GATE-G223-D091-D099-PASS_VERDICT.md；详录 DECISIONS G-223／DISPATCH §201／HANDOVER 180。
+
+- **13:5x（09-30）R27＝G-224 勘误轮（用户问询「l4z怎么停工了」）**：复核 G-211 R-1 明文「ps_* 实现批以用户解锁指令为授权依据（NOT VERIFIED 模式）；P-05 ②③转移至部署批」⇒ G-223「L4 WAITING 待 P-05 ②③链」口径过严，当场勘误；**派 D-102/L4＝PS 剩余 15 件实现批 ACTIVE-PA**（6R＋7S＋2W 名册逐名盘点；208→223；285 恒定；两查完成＝分类预检零冲突＋15 件冻结 schema 全在场 f03b-5-schemas/；Phase A 立即、Phase B 待 D-100 CLOSED——写权时窗互斥；D-091 fail-closed 先例；真机零执行；run-20260930-d102/）。L4 复岗。详录 DECISIONS G-224／DISPATCH §202／HANDOVER 181。
+
+- **14:1x（09-30）R28＝G-225 验收轮（用户「验收已经完成的并派单」）**：outbox 待验＝R-D101（13:22）⇒ c-g225（v1 22/30→八处口径自纠→30/30 全绿）⇒ **PASS＋CLOSED＋合成语料采信**（78 件/449,069B；sha256 逐件现算一致；lineage 四要素；未填轴 25 如实；冻结状态串未改写；verify-delivery 59/59 独立）＋七项裁定（结论强制标注「合成输入基准」／27 行 NOT-AVAILABLE 与 8 域 false 冻结串不动／未填轴挂账／53 恒定至 D-100／自检时间戳 result 流程采纳）。**派 D-103/L2＝M1/M4 执行评测批 ACTIVE**（TS08/S18＋X1–X8 可执行子集；D 盘宿主 loopback；零 Source/零 Config；run-20260930-d103/）。h-receipt-d100＝D-100 开工回执（构建在飞）；D-102 Phase A 在飞。裁定书 GATE-G225-D101-PASS_VERDICT.md；详录 DECISIONS G-225／DISPATCH §203／HANDOVER 182。
+
+- **14:2x（09-30）R29＝G-226 轻量轮（用户再问「l4z怎么停工了」）**：现场＝**L4 未停工**——D-102 Phase A 14:04 接单 18 分钟交付（h-receipt-d102 14:14＋evidence-index 14:15）；本席核对采信（五项快照≡G-225 基线／15 件三态全 NEW／抽验 schema-inventory 哈希 15/15）＋PA-DONE 登记。现「停」＝Phase B 写码按 G-211 R-4 互斥等 D-100 CLOSED；**D-100 正在安装事务**（14:22 transaction 写入，构建 0W0E 已过），CLOSED 后 :15/:45 巡查自动翻转 PHASE-B-UNLOCKED-D102，L4 即刻开写。观察项 R-G226-P1＝安装结果待 R-D100 零采信验收。详录 DECISIONS G-226／DISPATCH §204／HANDOVER 183。
+
+- **15:4x（09-30）R30＝G-227 自动化巡查轮（D-103 停等登记裁定·执行窗机制设立）**：outbox 新交付＝h-receipt-d103（14:59，L2 开工回执＋第 8 项 fail-closed 停等登记三项）。**零采信核验**：48 行 M4 候选面 `PENDING-M4-BATCH-NOT-DISPATCHED-NOT-VERIFIED` 恰 48 命中＝M4 半区被测系统 0/48（本席独立 grep 实证）；PKG-001 绑定名 `export_data_package` 仅 X45 disposition 文本 1 次命中／`validate_data_package` 零行＝覆盖不全成立；D-103 工单「D 盘宿主 loopback tools/call」与 L2 verbatim 红线「零构建/零启动/零工具面」互斥属实——**执行席零缺陷、停等合规；根源＝G-225 §203 派单措辞缺陷（G-207 教训复发形态），指挥席认领**。**裁定（裁定书 GATE-G227-D103-EXECUTION_WINDOW_RULING.md）**：R-0 回执采信；R-1 执行半区留 L2＋**执行窗翻转机制**（D-100 验收 CLOSED 后 :15/:45 巡查翻转 D-103 status→`EXEC-WINDOW-UNLOCKED-D103`；窗内仅豁免零启动宿主/零工具面，tools/call 只指向 6520 现役基线宿主＋逐 call raw/PID/安装件哈希留证；零构建/零 Source/零 Config/零安装不变）；R-2 窗开前置＝D-100 CLOSED＋安装位基线裁定；R-3 **M1 半区先行**（S18 五件 ∈208；Write 三件产出只落本线 run 根＝评测产出非 §6 GIS 写入）＋**M4 半区挂起**（前置＝X1–X8 实现批，D-100 CLOSED 后按依赖序派 L1/L4）；R-4 PKG-001 挂账（并入 G-220 R-5 裁定批）；R-5 ArcGISProTemp21008＝宿主自身临时目录非 G-197 违例，归 D-100 验收披露项；R-6 不变项（合成输入基准标注／53 恒定／语料 78 件唯一输入基准）。**D-100 进展补记采信**（h-receipt-d100 14:4x：构建 0W0E＋net8 候选 4B01E2AF/980,378/43e＋全量回归 Unit 1721=1718P/0F/3NE〔6F 环境族本轮全绿〕＋Server 67/67＋Int 32/32；并发会话 B 安装事务 14:21-22 如实披露；执行席锚覆写事故已自愈修复——R-D100 交付时全量验收）；D-102 Phase B 翻转条件未成就勿代翻。L2_INBOX D-103 status 行已改写。详录 DECISIONS G-227／DISPATCH §205／HANDOVER 184。
+
+- **15:4x（09-30）R33＝G-228 撞号消解轮（手动轮与 :15 自动化轮并行撞号）**：双轮同时段对 h-receipt-d103 各自顺延落账 G-227（双条目/双 §205/双 184）——25 秒双读判稳后消解：**以自动化 G-227（执行窗机制裁定书 GATE-G227-D103-EXECUTION_WINDOW_RULING.md）为准**，手动稿「剥离派 L1」作废；增量保留＝**预登记 D-104/L1＝M4 实现批首批**（X1–X8 可执行子集；48 行 0 实现；开工首项三查；前置＝D-100 CLOSED 插队）＋D-100 s4 锁处置采信。L1_INBOX D-104 节已落。**教训（最高优先）：手动轮动笔前必须核对自动化轮当次运行状态（盘点时 DECISIONS 尾 G-226 ≠ 自动化轮没跑——它 15:19 触发 15:25 才落定）**。详录 DECISIONS G-228／DISPATCH §206／HANDOVER 185。
+
+- **15:4x（09-30）R34＝G-229 授权轮（用户「授权，你帮我生成，不触碰红线」）**：M1 执行评测窗 S18 Write 三件真实 GIS 产出写入获用户单独授权（AGENTS §6 钥匙解账）；边界五项＝产出只落 D 盘／输入合成语料／冻结面不改／33-53-285 恒定／结论标注「合成输入基准」；执行窗时序不变（D-100 CLOSED＋翻转后生效）。落账 DECISIONS G-229／§207／HANDOVER 186。
+
+- **16:0x（09-30）R35＝G-230 验收轮（D-100 大单）**：R-D100（15:40）申报 G-197 FAIL OBSERVED 待裁 ⇒ c-g230 全绿（v1 22/23→A8a 取证修正：插件日志 00000006 已随 Pro 关闭被插件自身清理，实时取证 evidence-index 在案）⇒ **PASS＋CLOSED＋安装位基线推进 `7B3AC667…`/792,831/43e → `4B01E2AF…`/980,378/43e（208 现役首次对齐）**＋G-197 两项归因（插件日志＝产品运行时行为〔G-204 先例〕＋O-D100-01 日志可配置化挂账；VS Build Tools 后台更新＝系统噪音）＋attempt-001 封存采信＋Unit 1718P/0F/3NE（6F 全绿）。**三连锁翻转：L4 D-102 PHASE-B-UNLOCKED（开写 15 件）＋L2 D-103 EXEC-WINDOW-UNLOCKED（M1 执行窗，GIS 写入授权 G-229）＋L1 D-104 可取单**。裁定书 GATE-G230-D100-PASS_VERDICT.md；详录 DECISIONS G-230／DISPATCH §208／HANDOVER 187。
+
+- **16:2x（09-30）R36＝G-231 验收轮（用户「验收派单」）**：h-receipt-d103（16:06 Phase R 增补）＋h-receipt-d104（16:24 开工回执）。c-g231 抽验 **9/9 全绿**（eval-plan 23 行＋独立复算 34/35＋M1 锚 rc=0〔s0.py 历史命名，本席首查路径笔误已自纠〕＋D-104 三查）。**DEF-01 认定真实语料缺陷**（TS08-02 单一类别——本席独立现算 classmap 值集 {-9999,1} 实证；根因阈值恒真）→ **整改段裁定：L2 于 D-103 内整改 ts08 三件，自检绿后即入 M1 执行窗**（G-230 已翻转＋G-229 授权在案）。D-104 三查采信（48/48＋47/48〔X45 合并裁定一致〕＋53 恒定）、IN_PROGRESS 维持；**R-G231-P1 mojibake 瑕疵登记**（要求端到端 UTF-8）。在飞：D-102 Phase B（16:22）＋D-103 exec（16:25）零干预。裁定书 GATE-G231-D103-PHASER-D104-INTAKE.md；详录 DECISIONS G-231／DISPATCH §209／HANDOVER 188。
+
+- **17:0x（09-30）R37＝G-232 验收轮（R-D102·L4 PS 15 件）**：静态面 24/26 绿（223 注册／roster 285／fail-closed／TRX 直读／G-197 全过），唯 **C14 源码聚合哈希不可判**（申报 638C93BC…/270 vs 复算不符；重构法基线自校验亦不中＝方法不完备，非缺陷指控）⇒ **HOLD——不闭不 FAIL 不派下一单**；请 L4 补交 per-file manifest（270 件 relpath+sha256，UTF-8）清偿 C14。通道 mojibake 复发登记 R-G232-P1（并案 R-G231-P1）。裁定书 GATE-G232-D102-HOLD.md；详录 DECISIONS G-232／DISPATCH §210／HANDOVER 189。
+
+- **18:4x（09-30）R38＝G-233 验收轮（R-D103·整改段+M1 执行窗实测）**：c-g233 **46/46 全绿（双跑复现；首轮 33/46 全本席口径自纠，执行席零缺陷）**——四锚 rc=0×4＋33/53/285/137 恒定＋整改段（Benchmarks 恰 6 件授权＋ts08 三件新哈希逐件复算＋classmap 独立现算四档可达 {1:510,2:996,3:998,4:550}＋NoData 18＋语料 78 件逐件 sha256/450,414B＋冻结状态串未改）＋执行窗（48=32 被测+16 脚手架；被测集≡S18 toolSurface 五件；ps_*/multi.tif 零出现；48/48 合成输入基准；raw 103 帧全可解析；安装位 4B01E2AF 只读复hash；计划 23 行 3D4E28CA；判据 ∈73）＋写域归因全清＋保护树零触碰＋%TEMP% 干净＋**宿主恢复空闲**。**裁定：D-103 CLOSED；语料整改回写采信（revision-2 现行版，G-205 缺口不退役）；DEF-02（critical·链无输入资格闸门＝负例未被拒×4）…06 登记整改批候选（L1/L4，前置＝D-104 CLOSED，届时派单）；3 压力行 PENDING 挂账；L2 转 WAITING（下一单＝M4 执行评测批，前置未成就不派）**。观察项 R-G233-P1＝evidence-index 交付后刷新（申报 6846A4E7 vs 现值 66C51EDB；R-G220-P1 同型二次复发；改进令＝交付后冻结）；R-G233-P2＝FU 交叉件 1/48 缺安装哈希；R-G233-P3＝定点 taskkill /F 本次接受、后续优先优雅收尾。裁定书 GATE-G233-D103-PASS_VERDICT.md；详录 DECISIONS G-233／DISPATCH §211／HANDOVER 190。
+
+- **19:5x（09-30）R39＝G-234 双单验收轮（用户「验收派单」；19:15/19:45 自动化轮未运行，本席接手）**：R-D102 补交清偿（19:27＋19:31 manifest）——本席以 270 件配方独立重构聚合＝638C93BC 精确复现＋269 件现算全一致＋Composition.cs 披露采信 ⇒ **G-232 HOLD 解除，D-102 CLOSED（L4 PS 20 件全收官转 WAITING）**。R-D104（19:41）——c-g234 28/28 全绿（四处口径自纠：断言笔误 268→269／Composition 类名注册形态 InspectPointCloudTool／名册正则 StringComparer 形／A4 裁定路径）⇒ **PASS＋CLOSED＋基线 `84EF761A…`/269·208 → `BC9CB096…`/271·224**；Unit 1756=1748P/5F/3NE（5F 提权族⊆基线；FolderWorkflow 并发项转绿；3NE≡）＋Server 68/68＋Int 32/32；安装位（208）落后源码挂账新安装批。**派 D-105/L1＝M1 评测缺陷整改批**（G-233 R-3 候选转正式：DEF-02 critical/03/04 二选一/05/06；开工首项＝逐项复现＋方案呈报停等）。裁定书 GATE-G234-D102-D104-PASS_VERDICT.md；详录 DECISIONS G-234／DISPATCH §212／HANDOVER 190。
+
+- **20:4x（09-30）R40＝G-235 方案裁定轮（用户「验收派单同时恢复自动化任务」）**：R-D105（20:30）方案呈报采信——执行席停机纪律满分。五项裁定：DEF-02 确认（sidecar 资格 JSON 绑定＋仅带 sidecar 输入生效）；DEF-03 拆两件（代码修复采信；extent 不改——本席独立复算 yMin=3999904，JSON y 范围方向反置＝语料侧缺陷 DEF-03b 另派）；DEF-04 方案 1（文件夹顶层 GeoTIFF 枚举）；DEF-05 批准对照；DEF-06 误报关闭（1275×1650≡150DPI 本席复算；整改缩为四项）。**实施段解锁**。**自动化 G-201 PAUSED→ACTIVE 重启**（三轮未运行后恢复）。裁定书 GATE-G235-D105-PROPOSAL_RULING.md；详录 DECISIONS G-235／DISPATCH §213／HANDOVER 191。
+
+- **21:38（09-30）R41＝G-235 后首次自动化空轮巡查**：outbox 自 h-receipt-d105-impl（20:47 实施段接单回执）后零新交付；R-D105 提案件已由 G-235 裁定完毕（20:39）。四线现值＝L1 D-105 ACTIVE 实施段**正在飞**（run-20260930-d105/implementation-g235/ 21:36 build-final.log／gp-audit-final／jobs-final 活跃更新中，构建/测试阶段）＋L2/L3/L4 WAITING。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅，构建产物全重定向 D 盘 run 根。三账零改动，三牌位未动。下一轮（约 22:15/:45）预期：若 R-D105 实施段候选交付 ⇒ 按 G-235 四项裁定（DEF-02 sidecar 闸门／03a 代码修复／04 方案 1 文件夹枚举／05 对照）逐项零采信验收（基线 BC9CB096…/271·224＋Unit 1756=1748P/5F/3NE＋evidence-index 交付后冻结核对）；若空轮 ⇒ 继续一行观察。
+
+- **23:1x（09-30）R42＝G-237 授权轮③（用户「我授权你代我处理」）**：两道闸门代裁解账——P-05 ②③真机链钥匙（L4 下一单，前置 224 装机）＋发布确认（签名/公开到点执行免请示，全量留证）⇒ **用户钥匙全清、G-RELEASE 零等待项**。D-106/D-107 开工回执采信（五项快照≡基线／八项回执 24/24——修正值推导与 G-235 R-2 逐数一致）。**D-107 范围扩展两件→五件**：md/INDEX 投影同步＋classmap.asc yllcorner 同源缺陷修正（类图与栅格错位 96m）统一 revision-3。详录 DECISIONS G-237／DISPATCH §215／HANDOVER 193。
+
+- **23:4x（09-30）R43＝G-238 验收轮（R-D107）**：c-g237 17/17 全绿（两处口径澄清：manifest bytes 申报笔误〔SHA 全等＋内部 78/78 自洽〕／名册正则形态）——五件修正现算证实＋四锚＋恒定面＋evidence-index 冻结 ⇒ **PASS＋CLOSED（DEF-03b 闭合；语料 revision-3；基线零推进）；L2 WAITING**。G-237「75 件」笔误勘误认领（实为 76，执行席处置正确）。**D-106 中段 G-197 FAIL OBSERVED 归因**＝VS Build Tools 系统噪音（G-230 先例）＋D 盘重定向＋如实申报 → 合规；**安装位在飞差 A2D6A0D0…/1,036,008B＝D-106 已换新件待验收**。R-G238-P1＝申报 bytes 以现算为准。裁定书 GATE-G238-D107-PASS_VERDICT.md；详录 DECISIONS G-238／DISPATCH §216／HANDOVER 194。
+
+- **00:1x（10-01）R44＝G-201 自动化空轮巡查（G-238 后首轮）**：outbox 自 HANDOVER 194（23:42）后零新交付（无 R-D106）；G-239 重号 grep 零命中＝无并发轮。四线现值＝L1 D-106 ACTIVE **正在飞**（run-20260930-d106/s3/ 真机验证阶段 00:12 仍活跃——live-raw tools/call 五件＋GP describe [VERIFY] 逐件判定产出中；s2 安装段 23:22 已过；回滚锚 backup-pre-install-20260930-d106 23:20 在链）＋L2/L3 WAITING＋L4 P-05 待 224 装机（G-237 已授权）。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅。三账零改动。下一轮（约 00:45）预期：若 R-D106 交付 ⇒ 按 D-106 完成门零采信验收（回滚锚逐字节校验＋逐文件 sha256 台账＋安装位基线推进裁定〔预期 208→224〕＋SDK/GP [VERIFY] 逐件判定核＋LIVE raw＋G-197 豁免边界＋源码基线 AF21E29F/272 恒定）；若空轮 ⇒ 继续一行观察。
+
+- **01:2x（10-01）R45→R46＝G-239 验收轮（R-D106，本自动化轮实体动作）**：outbox 出现 R-D106.md（00:43 PASS CANDIDATE）＋h-receipt-d106 终局补记 ⇒ 启动零采信验收，独立脚本 `run-20260930-d106/c-g239/verify.py` **48/48 全绿（双跑复现）**（首轮 40/48，8 处本席脚本口径自纠：ledger `state` 键名／list_maps·get_geometry_info 走 payload `text` 字段／回滚锚含第三件 anchor-manifest.json／c-temp-observation 键名 `noFilesMovedOrDeleted`／AssemblyCache 三键／C 盘伴随物两件单列——**执行席零缺陷**）。实证：回滚锚两件逐字节（4B01E2AF/980,378＋7CEB2AB7/185,110，先于安装 23:20）＋ledger 六事件全 PASS＋**安装位基线推进 208→224 生效（A2D6A0D0/1,036,008）**＋包候选≡安装位＋AssemblyCache 41/41＋真机 LIVE（224≡契约快照／GP Project 准入＋9 拒绝／ps_* 零调用／收尾 Pro=0＋6520/6511 清）＋聚合 AF21E29F/272 零漂移＋224/285/33/53 恒定＋四锚 rc=0×4＋G-197 FAIL OBSERVED 申报合规（G-238 R-3 先例）。**裁定：D-106 CLOSED；派 D-108/L4＝P-05 ②③真机端到端验证批 ACTIVE（G-237 R-1 前置成就；run-20261001-d108）**；L1 WAITING（预告＝M4 半区实现批／22 件 GP 扩容）；L2 维持 WAITING；DEF-05 真机对照窗解锁（归 L2）。观察项 R-G239-P1＝**宿主伴随物披露件（06.jsonl/manifest）交付后从 C 盘消失/回退**（执行席 00:17/00:44 双源＋D-100 独立记录三方互证→按留证时点采信；外部改动挂账待查）＋R-G239-P2 net6 差异如实＋R-G239-P3 evidence-index 时序瑕疵＋R-G239-P4 并发会话 Docs/ 新件五件（GIS_AUTOMATION_*20261001，00:47 后）。裁定书 GATE-G239-D106-PASS_VERDICT.md；详录 DECISIONS G-239／DISPATCH §217／HANDOVER 195。下一轮（约 01:45/:15）预期：D-108 开工回执（五项快照先行）或 R-D108 候选 ⇒ 按完成门验收；空轮 ⇒ 一行观察。
+
+- **03:0x（10-01）R48＝G-201 自动化空轮巡查（G-239 后第二轮）**：outbox 自 R-D106（00:43，已由 G-239 验收 CLOSED）后零新交付；台账现值 G-239／§217／HANDOVER 195（mtime 01:51-01:52＝G-239 落账尾），G-240 grep 零命中＝无并发轮。四线现值＝L1 WAITING＋L2 WAITING（D-107 CLOSED）＋L3 WAITING＋L4 **D-108 ACTIVE 但尚未开工**（无 h-receipt-d108、run-20261001-d108 根未建——执行席会话未接单，勿催单属接单节奏）。**观察（R-G239-P4 持续）**：并发会话五件 `Docs/Final/20261001-v2/`（CAPABILITY_AND_SUPPORT_MATRIX／IMPLEMENTATION_AND_RELEASE_PLAN／INTELLIGENCE_AND_ORCHESTRATION／README_FINAL／VERIFICATION_AND_TRACEABILITY）仍在活动——最新 mtime 02:34:43（本轮前 25 分钟），非四线写域，继续登记不裁定。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅。三账零改动。下一轮（约 03:15/:45）预期：D-108 开工回执或 R-D108 候选交付 ⇒ 按 G-239 裁定书完成门零采信验收（重点＝P-05 ②配置写入逐文件披露＋sha256＋③端到端 raw＋G-197 过程零主动落物〔C 盘写入仅限授权配置文件〕＋33/53/285/四锚恒定＋evidence-index 自检终轮后生成）；空轮 ⇒ 一行观察。
+
+- **04:0x（10-01）R49＝G-201 自动化巡查（D-108 开工回执核对登记轮）**：outbox 出现 **h-receipt-d108.md（04:01:47 接单）**＝L4 开工回执非候选 ⇒ 按规程做**回执核对登记**（不启动全量验收）。零采信核对：s0/opening-snapshot.json（04:01）五项现值与 G-239 后基线逐项吻合（安装位 A2D6A0D0/1,036,008/43e·224＋源码 AF21E29F/272＋名册 94/33/158＝285＋33 码＋白名单 53/F355705B＋四锚 rc=0×4）；本席独立抽验三项全中＝安装件 sha256 现算 `A2D6A0D0…` ✓＋Composition 224 注册 ✓＋`<user-home>\.dsh\profiles\web\cordis.patch.yml` 现存 414B（mtime 09-05 未动，与执行席 pre-bytes 414B 一致）。**回执核对登记通过，执行席零缺陷**。在飞进展＝s1/（04:03）P-05② 只读基线已建（cordis.patch.yml pre-snapshot＋p052-baseline.json）→ 处于 Validate 段，写入计划仅此一文件（p05-exemption-request.md 清单唯一 C 盘候选，G-195 A-06 四段纪律）；s0/c-temp-baseline.json 只读观察零触碰。L1/L2/L3 WAITING。**观察（R-G239-P4 持续）**：inbox 新增 ONBOARDING_L1/L4_20261001.md（03:52，署名指挥席起草＝并发指挥会话产出，为新执行席入职简报；非候选非台账件，登记不裁定）。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅。三账零改动。下一轮（约 04:15/:45）预期：若 **R-D108 候选交付** ⇒ 按 G-239 裁定书完成门零采信验收（重点＝P-05 ②写入前后逐文件 sha256＋managed block 外零触碰＋Restore 可还原＋③端到端 raw＋G-197 过程零主动落物〔C 盘写入仅限 cordis.patch.yml 一件〕＋33/53/285/四锚恒定＋evidence-index 自检终轮后生成）；若停等（cordis.patch.yml 现场与申请稿前提冲突）⇒ 按登记处置；空轮 ⇒ 一行观察。
+
+- **05:4x（10-01）R50＝G-240 验收轮（R-D108，本自动化轮实体动作）**：outbox 出现 R-D108.md（04:18 PASS CANDIDATE）＋h-receipt-d108 终局补记（无并发轮：G-240 grep 零命中＋run 根无 c-g* 目录＋20 秒稳定性通过）⇒ 启动零采信验收，独立脚本 `run-20261001-d108/c-g240/verify.py` **43/43 全绿（双跑复现 EXIT=0）**（首轮 39/43＋2 异常，6 处全本席脚本口径自纠：evidence-index 表行实数 34／gp-whitelist dict 结构／scan payload 键名 itemCount/truncated/readOnly/sourceUntouched／outbox 差集基线取 G-239 批尾 mtime／tasklist GBK 解码／R-D108 措辞落点——**执行席零缺陷**）。实证：P-05 ② 四点哈希链（pre 0BC84530/414B→post/现值/readback 9175370C/514B）＋pre→post 逐行 diff 恰 +2 行 managed BEGIN/END 注释、功能行零删改＋五功能键逐值在位＋禁入内容零＋restore 基座在位；P-05 ③ 配置解析驱动 URL（非硬编码）→initialize 2024-11-05→tools/list 224≡契约快照（本席自 rawResponse 独立解析；ps_ 20 仅 listing）→五只读调用全绿（Pro 3.5.0/57366/net8.0；scan 5 项 sourceUntouched；fc_mixed 4/4；GP 53/53≡白名单集合）→零 run_geoprocessing 零 ps_ 调用→收尾 Pro 0＋6520/6511 零监听（验收时点现场复核：进程 0＋socket connect fail）→scratch aprx 7727640F/9,441 零锁零改。静态不变量：聚合 AF21E29F/272 零漂移＋安装位 A2D6A0D0/1,036,008＋7CEB2AB7 零触碰＋224/285/33/53 恒定＋四锚 rc=0×4。G-197：C 盘写入仅授权 cordis.patch.yml 一件＋%TEMP% 干净＋台账/牌位交付后零触碰＋outbox 本批恰两件。evidence-index 34 行逐件复算全等且自检终轮（25/25）后生成。**裁定（GATE-G240-D108-PASS_VERDICT.md）：R-1 D-108 CLOSED（G-237 R-1 真机钥匙项闭合）；R-2 P-05 ② 片段先在差异（mtime 2026-09-05 早于申请稿）裁定合规采信（停等触发条件均不成立）；R-3 L4 转 WAITING（预告＝G-RELEASE 链后续批：制包→真实包四场景→发布验收，两查后另派）；R-4 L1 预告维持本轮不派（M4 半区实现批〔X1–X8〕范围裁定未完成：48 件一期切分／GP 通道候选与 22 件 GP 扩容交集／X03 pythonBridge 与 6511 挂账交织——X1 组六件已核在名册 285 内预登记，事实登记备用）；R-6 基线零推进。观察项 R-G240-P1 goal-ticks 交付后心跳留痕（会话痕迹非写域）＋R-G240-P2 pycache 未遂写入被沙箱拦截（披露合规）。详录 DECISIONS G-240／DISPATCH §218／HANDOVER 196。四线现值＝全 WAITING。下一轮（约 05:45/:15）预期：四线无预派工单 ⇒ 预期空轮一行观察；若并发手动轮处置（L1 派单/G-RELEASE 批）⇒ 按 R12 先例零台账写入转交叉验证。
+
+- **06:5x（10-01）R51＝G-201 自动化空轮巡查（G-240 后首轮）**：outbox 自 R-D106/h-receipt-d108（00:43/04:18，G-239/G-240 均已验收 CLOSED）后零新交付；G-241 重号 grep 零命中；台账现值 G-240／§218／HANDOVER 196＝无并发轮在飞。四线现值逐牌位核对＝**全 WAITING**（L1 预告＝M4 半区实现批〔X1–X8〕/22 件 GP 扩容，范围裁定未完成不派；L2 前置＝TS08/八域/GP 扩容三项用户侧；L3 WAITING；L4 预告＝G-RELEASE 链后续批两查后另派）。**唯一实体动作＝L2_INBOX 勘误**：D-107 status 行滞留 ACTIVE（G-238 闭单时以追加 bullet 记账未改写 status 行，与该节 CLOSED bullet、变更历史「L2 WAITING」及 HANDOVER 196 矛盾）⇒ 按文档类小问题当场修正规则改写为 CLOSED（G-238）＋勘误标注，范围/边界条款零改动。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅。三账零改动（空轮规则）。下一轮（约 07:15/:45）预期：四线全 WAITING 无预派工单 ⇒ 预期空轮一行观察；若并发手动轮处置（L1 派单/L4 G-RELEASE 制包批/L2 前置成就）⇒ 按 R12 先例零台账写入转交叉验证；R-G239-P1 伴随物回退若现新证据 ⇒ 登记不裁定。
+
+- **08:0x（10-01）R52＝G-201 自动化空轮巡查**：outbox 自 R-D108/h-receipt-d108（04:18，G-240 已验收 CLOSED）后零新交付；G-241 重号 grep 零命中；台账现值 G-240／§218／HANDOVER 196（mtime 05:46-47＝G-240 落账尾）＝无并发轮。四线现值逐牌位核对＝**全 WAITING**（L1 预告＝M4 半区实现批〔X1–X8〕/22 件 GP 扩容，范围裁定未完成不派；L2 前置＝TS08/八域/GP 扩容三项用户侧；L3 WAITING；L4 预告＝G-RELEASE 链后续批两查后另派）。**观察（R-G239-P4 持续）**：并发会话 Docs/Final/20261001-v2/ 仍在活动——最新 mtime 06:34（INTELLIGENCE_AND_ORCHESTRATION.md＋PLANNING_VALIDATION.json），非四线写域，登记不裁定。G-197 抽查＝%TEMP%\ArcGISProMCP 不存在 ✅。注：07:15/07:45 两轮自动化未触发（宿主调度不稳已知现象），本轮 08:00 续跑。三账零改动（空轮规则）。下一轮（约 08:15/:45）预期：四线全 WAITING ⇒ 预期空轮一行观察；若并发手动轮处置 ⇒ 按 R12 先例零台账写入转交叉验证；R-G239-P1 伴随物回退若现新证据 ⇒ 登记不裁定。
+
+- **09:0x（10-01）R53＝G-201 自动化空轮巡查**：outbox 自 R-D108/h-receipt-d108（04:18:25/04:18:48，G-240 已验收 CLOSED）后零新交付（时间序核验：最新两件即该批尾）；G-241 重号 grep 零命中；台账现值 G-240／§218／HANDOVER 196（mtime 05:46-47）＝无并发轮在飞。四线现值逐牌位核对＝**全 WAITING**（L1 预告＝M4 半区实现批〔X1–X8〕/22 件 GP 扩容，范围裁定未完成不派；L2 前置＝TS08/八域/GP 扩容三项用户侧；L3 WAITING；L4 预告＝G-RELEASE 链后续批两查后另派）。**观察（R-G239-P4 持续）**：并发会话 Docs/Final/20261001-v2/ 仍在活动——最新 mtime 06:34:52（PLANNING_VALIDATION.json），距本轮已逾 2.5 小时，非四线写域，登记不裁定。G-197 抽查＝真 Windows %LOCALAPPDATA%\Temp 下 ArcGISProMCP 不存在 ✅。三账零改动（空轮规则）。下一轮（约 09:15/:45）预期：四线全 WAITING ⇒ 预期空轮一行观察；若并发手动轮处置（L1 派单/L4 G-RELEASE 制包批/L2 前置成就）⇒ 按 R12 先例零台账写入转交叉验证；R-G239-P1 伴随物回退若现新证据 ⇒ 登记不裁定。
+
+- **10:15（10-01）R54＝G-201 自动化空轮巡查**：outbox 自 R-D108/h-receipt-d108（04:18，G-240 已验收 CLOSED）后零新交付；G-241 重号 grep 零命中；台账现值 G-240／§218／HANDOVER 196（mtime 05:45-47＝G-240 落账尾）＝无并发轮在飞。四线现值逐牌位核对＝**全 WAITING**（L1 预告＝M4 半区实现批〔X1–X8〕/22 件 GP 扩容，范围裁定未完成不派；L2 前置＝TS08/八域/GP 扩容三项用户侧；L3 WAITING；L4 预告＝G-RELEASE 链后续批两查后另派）。**观察（R-G239-P4 持续）**：并发会话 Docs/Final/20261001-v2/ 无新活动——最新 mtime 仍 06:34（PLANNING_VALIDATION.json），距本轮已逾 3.5 小时，非四线写域，登记不裁定。G-197 抽查＝真 Windows %LOCALAPPDATA%\Temp 下 ArcGISProMCP 不存在 ✅。注：09:15/09:45 两轮自动化未触发（宿主调度不稳已知现象），本轮 10:15 续跑。三账零改动（空轮规则）。下一轮（约 10:15/:45）预期：四线全 WAITING ⇒ 预期空轮一行观察；若并发手动轮处置（L1 派单/L4 G-RELEASE 制包批/L2 前置成就）⇒ 按 R12 先例零台账写入转交叉验证；R-G239-P1 伴随物回退若现新证据 ⇒ 登记不裁定。
+
+- **10:5x（10-01）R55＝G-241 验收派单轮（用户「验收派单」）**：夜间自动化轮恢复（G-239 D-106 PASS CLOSED＋安装位 224 生效；G-240 D-108 P-05 ②③真机链收官）——本席抽验 7/7 复现采信。四线全 WAITING ⇒ **G-RELEASE 链启动：派 D-109/L1＝r22 制包批 ACTIVE**（r21 先例同构；net8 payload≡A2D6A0D0 逐字节；Release/ r22 新位；零工具变更/不安装/不真机）。并发会话 Docs/ 五件＝用户侧规划文档（登记在案）。详录 DECISIONS G-241／DISPATCH §219／HANDOVER 196。
+
+- **11:20-11:2x（10-01）R56＝G-201 自动化空轮巡查（D-109 开工回执核对登记）**：outbox 新件＝**h-receipt-d109.md（11:12 接单回执，IN_PROGRESS）**＝L1 D-109 制包批开工回执非候选 ⇒ 按 R49b 先例做回执核对登记；无并发轮（G-241 已完整落账 §219/HANDOVER 196；G-242 重号 grep 零命中）。**回执核对登记通过（执行席零缺陷）**：s0/snapshot.json（11:10:56 observedAt）逐件 sha256 前账在场（含 Release 全树 47 件＋Archive/distributions 139 件保护面前账，回执声明）；本席独立抽验三项全中＝Composition.cs 注册计数现算 **224** ✓＋gp-whitelist.json sha256 现算 `F355705B…` ✓＋run 根 D 盘重定向结构在场（s0–s3＋dotnet-home/nuget/temp 全落 run 根）。**在飞进展**：s3 于 11:21 刚建、build_r22.py 11:19、verify_r22.py 11:21——执行席已进入制包/核验中段（勿干预）。G-197 抽查＝真 Windows %LOCALAPPDATA%\Temp 下 ArcGISProMCP 不存在 ✅。三账零改动（空轮规则）。下一轮（约 11:45/:15）预期：**R-D109 候选交付** ⇒ 按 G-241 完成门零采信验收（重点＝构建 0W0E＋r22 zip/双 payload 逐件 SHA-256 台账＋net8 payload≡A2D6A0D0/1,036,008 逐字节＋OneClick 结构核〔条目数/清单〕＋Release/ r21 件零触碰＋evidence-index 自检终轮后冻结＋%TEMP% 干净）⇒ PASS 则 D-109 CLOSED＋G-RELEASE 链下一环（真实包四场景测试批）按依赖序两查后派；停等 ⇒ 按登记处置；空轮 ⇒ 一行观察。
+
+- **11:4x（10-01）R57＝G-242 验收派单轮（用户「验收派单」）**：R-D109（11:28）——c-g242 24 项全绿（四处口径自纠：payload 本体 esriAddInX／Release 57=47+10 含 .staging 隐藏子树〔glob 漏点目录〕／旧件 mtime 零触碰／s3 checks{17} 形态）⇒ **PASS＋CLOSED（r22 统一安装包收官：ZIP 2F63B5BA/2,112,591/26 项＋net6 4154361E/1,020,250＋net8 A2D6A0D0/1,036,008≡现役安装件逐字节；负例拒绝证据在场；首轮制包停止＝停机纪律满分）**；G-197 %TEMP% 归因系统噪音（四度先例）合规。**派 D-110/L1＝真实包四场景测试批 ACTIVE**（升级修复/卸载首装/失败恢复/卸载终态；安装位终态恢复 224；run-20261001-d110/）——G-RELEASE 第二环，后续＝发布验收终环。裁定书 GATE-G242-D109-PASS_VERDICT.md；详录 DECISIONS G-242／DISPATCH §220／HANDOVER 197。
+
+- **13:52-13:5x（10-01）R59＝G-201 自动化回执登记轮（D-111 开工回执核对）**：outbox 新件＝**h-receipt-d111.md（13:24 接单回执，IN_PROGRESS）**＝L1 D-111 兼容性入口修复＋r23 制包批开工回执非候选 ⇒ 按 R49b/R56 先例做回执核对登记；无并发轮（G-244 重号 grep 零命中；台账现值 G-243/§221/HANDOVER 198）。**回执核对登记通过（执行席零缺陷）**：五项快照现场复算全对表＋缺陷面三向复算（外层 51EFAC7E/3.0 vs net8 内层 0BEAC885/3.5.0；one-click-setup.ps1:68/499 根因链＋release-transaction.ps1:238-251 同仓先例）；本席独立抽验三项全中＝`registry.Register` 现算 **224** ✓＋gp-whitelist sha256 现算 `F355705B…` ✓＋安装位现役包 sha256/字节数现算 `A2D6A0D0…`/1,036,008 ✓（bak 双件在场）。**附带项登记**：回执 §4 声明包内 policy 与仓库件逐字节相同＋UTF-8 解码无乱码特征 ⇒ **R-G243-P1 现场未能复现（NOT REPRODUCIBLE）**，请指挥席在 R-D111 验收轮独立复算裁定销账或改判呈现层现象——验收时必查。**在飞进展**：s1 13:36／s2 13:40／s3 13:52／s4 13:53 刚建＝收尾段（勿干预）；%TEMP% 起始计数 40,280 件收尾差集（纪律在位）。G-197 抽查＝真 Windows %LOCALAPPDATA%\Temp 下 ArcGISProMCP 不存在 ✅。三账零改动（回执登记轮规则）。下一轮（约 14:15/:45）预期：**R-D111 候选交付** ⇒ 零采信验收（重点＝one-click-setup.ps1 修复 diff 最小化＋r23 zip 台账＋**真实兼容性路径验证 8/8**〔G-243 新完成门必查〕＋双 payload 字节不变 4154361E/A2D6A0D0＋r22 封存零触碰＋policy 乱码裁定＋33/53/285/四锚恒定＋evidence-index 自检终轮后冻结＋%TEMP% 差集核）；PASS 则 D-111 CLOSED＋**D-110 恢复 ACTIVE 重跑 S1–S4**（G-243 R-2 恢复条件）＋预告发布验收终环；停等 ⇒ 按登记处置；空轮 ⇒ 一行观察。
+
+- **15:0x（10-01）R60＝G-244 验收裁定轮（G-201 自动化）**：outbox 出现 **R-D111.md（14:05 PASS CANDIDATE）** ⇒ 零采信验收，独立脚本 `run-20261001-d111/c-g244/verify.py` **48 项＝48/48 全绿（双跑复现 EXIT=0）**——首轮 42/48，6 处 FAIL 全本席口径自纠（scriptsDiff.changed 系 dict／内层 Config.daml 在 payload zip 套 zip 内层／ValidateBundle depVer 在 report 层／s3·s4 自检键 checks+allChecksPass／%TEMP% 差集含原地变更 11 件），**执行席零缺陷**。关键实证：入口修复（8E6A8AAA/115,138＋同源指针证明 s1/s3 双独立：-ConfigPath 实测指 D 盘临时提取件 0BEAC885≠外层 51EFAC7E）；r23（796D1956/2,114,330；双 payload 字节不变 4154361E/A2D6A0D0≡现役安装件；外层变更恰 6 件其余 20 件逐字节同 r22；ledger 九件复算通过）；**真实兼容性路径验证 8/8 PASS**（已发布件 Preflight 退出 0＋identity desktop=3.5.0＋对照组 r22 复现 COMPATIBILITY_NOT_PASS；net6 分支 checker 直跑 8/8 如实登记运行期 NOT VERIFIED）；0W0E＋Plan/ValidateBundle PASS＋负例双拒；r22 封存零触碰＋Archive 139 件复核；恒定面全绿（AF21E29F/272·224／285/33/53/四锚 rc=0×4/安装位双件）；evidence-index 自检终轮后冻结合规。**裁定（GATE-G244-D111-PASS_VERDICT.md）**：R-1 D-111 **CLOSED**；R-2 %TEMP% FAIL OBSERVED 第六度归因系统级伴随（零 ArcGISProMCP 命名空间＋全 D 盘重定向＋临时副本零残留）合规；R-3 R-G243-P1 **销账**（policy 逐字节 NOT REPRODUCIBLE；乱码真实位置＝五件 .cmd GBK＝中文 OEM 控制台功能正确编码，维持现状）；R-4 **D-110 恢复 ACTIVE 重跑 S1–S4（对象升级 r23）**；R-5 基线零推进。观察项 R-G244-P1～P4（share-setup.ps1:23 同型缺陷／同源守卫测试缺位／Pester 工装失效／不可达分支）登记不阻塞。落账：裁定书／L1_INBOX（D-111 CLOSED＋D-110 ACTIVE）／DECISIONS G-244／DISPATCH §222／HANDOVER 199／镜像两档／云侧双推／MEMORY v45。下一轮预期：D-110 开工回执（S0 五项快照）或 R-D110 v2 候选交付；发布链下一环＝四场景全绿后 G-RELEASE 发布验收终环。
+
+- **16:1x-16:3x（10-01）R61＝G-245 验收裁定轮（G-201 自动化）**：outbox 出现 **R-D110-r23.md（15:38 PASS CANDIDATE）＋h-receipt-d110-r23.md** ⇒ 零采信验收，独立脚本 `run-20261001-d110/c-g245/verify.py` **58 项＝58/58 全绿（双跑复现 EXIT=0）**——首轮 50/58＋1 崩溃，8 处 FAIL 全本席口径自纠（packages 键 entryCount／releaseTree-archiveTree 键 ROOT 相对剥前缀／S1 事务 ledger action=Uninstall 系 S2 沿同事务追加／收尾判据落点 teardown-result.json／锚核键 anchorAllOk／执行席漂移哈希系文本归一化〔去 BOM+CRLF→LF；repo nobom=E885E5F0·bundle LF=F77CE081；本席原字节 E86F09E4·DC0AC52F，改以原字节大小+闸门 154·224+zip 内件≡bundle 副本逐字节实证〕／final-state 端口布尔／bundle 内校验器 scripts/ 子目录），**执行席零缺陷**。关键实证：S1 Deploy exit 0＋compatibility PASS（r22 阻断点消除）＋安装位 A2D6A0D0/1,036,008 逐字节不变；LIVE tools/list 224≡契约快照＋net8.0＋GP 53＋6511 零开启；S2 卸载可恢复＋干净首装 PASS；S3 双负例 exit 1（BUNDLE_FILE_HASH_MISMATCH／BUNDLE_IDENTITY_INVALID）＋恢复腿 PASS；S4 终态 equalsPreBatchSnapshot=true＋.bak 复位 byteExact＋Pro 0/双端口清；四锚现跑 rc=0×4＋Release 67/Archive 139 drift 空；证据索引 158 件复算＋聚合 7CABCA9C 复现＋冻结合规。**裁定（GATE-G245-D110-r23-PASS_VERDICT.md）**：R-1 D-110 **CLOSED**（系统终态＝发布前正常态；G-RELEASE 第二环闭环）；R-5 **G-197 第七度归因**系统级伴随（本席复核双探针 0 命中）；R-3 呈报项①校验器漂移挂账 **R-G245-P1**（另派修正批走实现批流程）；R-7 **派 D-112/L4＝发布验收终环 ACTIVE**（G-237 R-2 代裁；两查+第三查完成；零安装零真机）。落账：裁定书／L1_INBOX（CLOSED＋WAITING）／L4_INBOX（D-112 ACTIVE）／DECISIONS G-245／DISPATCH §223／HANDOVER 200／镜像两档／云侧双推。下一轮预期：D-112 开工回执（五项快照＋四锚）或 R-D112 候选交付；L1 WAITING。
+
+- **17:4x-18:1x（10-01）R62＝G-246 验收裁定轮（G-201 自动化）**：outbox 出现 **R-D112.md（17:15 PASS CANDIDATE）＋h-receipt-d112.md（17:01）** ⇒ 零采信验收，独立脚本 `run-20261001-d112/c-g246/verify.py` **34 项＝34/34 全绿（双跑复现 EXIT=0）**——首轮 30/34，4 处 FAIL 全本席口径自纠（manifest/ledger 尺寸键 `sizeBytes`／E1 relpath 前缀笔误／F2 索引聚合按 pair 串排序非按 path〔"zip" 为 "zip.manifest.json" 严格前缀，":" 与 "." 序不同〕＋申报全值仅在 R-D112 前缀形态），**执行席零缺陷**。关键实证：五项快照现算全对表（安装位 A2D6A0D0/1,036,008/zip43＋bak 7CEB2AB7＋AF21E29F/272 零漂移＋224 三向＋94/33/158＋33＋53/F355705B＋Pro 0/6520·6511 CLOSED 现测＋四锚 rc=0×4 现跑）；r23 套件 10 件逐件原字节现算＋外层 26 条目＋manifest 25 件逐件复算＋双 payload 两层现算（net6 4154361E/net8 A2D6A0D0）＋内层 Config.daml 各恰一件＋net8≡现役安装件逐字节＋r21/r22 封存不变＋ledger 9 件对盘；发布记录台账件四要素齐备（11,266/C709E859）＋逐件哈希 10 件全一致；写域差集＝Release/ 新增恰 1 件＋保护面全零新增；evidence-index 31 条目逐件复算＋聚合 8E757EC619C6… 现算复现＋时序链合规（自检终轮 45/45 后冻结）；G-197 **第八度归因**系统级伴随（探针双向 0 命中）。**裁定（GATE-G246-D112-PASS_VERDICT.md）**：R-1 D-112 **CLOSED＋G-RELEASE 链收官**（G-FUNCTIONAL→制包 ✓ G-244→四场景 ✓ G-245→发布验收 ✓ G-246）；R-3 Release/ 红线张力口径确认（工单授权写域覆盖＋G-244 R-5 先例；「张力登记＋最小写入＋指挥席确认」三步沉淀）；R-4 对外发布＝FINAL 未既定对象 NOT EXECUTED 是正确纪律（FINAL 155 行明文签名证书/市场公网另行授权；递送同事属用户人工动作）；R-6 基线零推进；R-7 **派 D-113/L1＝校验器代际漂移修正批 ACTIVE**（R-G245-P1 范围裁定：三件 scripts ps1＋R-G244-P2 守卫测试并入；R-G244-P3 不并入；完成门＝verify 件对 r23/r22 exit 0＋负例仍拒＋TRX 1762 基线不回归＋零 Source 产品码；run-20261001-d113/）。落账：裁定书／L4_INBOX（D-112 CLOSED＋WAITING）／L1_INBOX（D-113 ACTIVE）／DECISIONS G-246／DISPATCH §224／HANDOVER 201／镜像两档／云侧双推。下一轮预期：D-113 开工回执（三件 ps1 三态核对）或 R-D113 候选交付；L4 WAITING（G-RELEASE 链已闭）；L2/L3 WAITING。
+
+
+### R64 · 2026-10-01 19:0x（自动化指挥轮·D-113 开工回执核对登记＝回执处置，非全量验收）
+
+- **取单**：outbox 新件＝**h-receipt-d113.md（18:29 接单回执 IN_PROGRESS）**＝L1 D-113 开工回执非候选 ⇒ 按 R49b/R56/R60 先例回执核对登记；G-247 重号 grep 零命中；台账现值 G-246／§224／HANDOVER 201（mtime 17:58-59）无并发轮。
+- **回执核对登记通过（执行席零缺陷）**：五项快照（AF21E29F/272·224＋94/33/158＋33/F355705B＋四锚 rc=0×4＋安装位 A2D6A0D0/1,036,008＋bak 7CEB2AB7/185,110）与 G-246 后基线一致；三件 ps1 三态核对含实测行号（verify:84/139＝154 闸门、build:81、share-setup:23 外层固定赋值）；对照件 one-click-setup.ps1 8E6A8AAA/115,138 ✓ 本席独立复算全中。自纠登记合规（s0 首跑聚合键口径误已留像修正）。
+- **在飞进展（19:06 巡查）**：三件 ps1 mtime 18:33/18:39/18:43（回执后修正已落盘，19:06 哈希异于回执在案值系预期非矛盾）⇒ gate1 对 r23/r22/r21 包 verify 实跑 18:37（**r23 exit 0，canonicalProductionToolCount=224 修正生效**）＋语法检查 18:44＋离线构建 **0W0E**（18:59，全重定向 D 盘 run 根＋离线 restore 复用 d109 feed）＋s5 定向测试在飞（19:02–19:03，勿干预）。
+- **范围外发现登记（R-D113 验收轮必查，本轮不裁定）**：①one-click-setup.ps1:87-88/630 硬编码 canonical 78 名单——现役 224 宿主在 6520 监听态走 connection-diagnosis 将误判 TOOL_SET_MISMATCH（D-110 两轮该步实测 WAITING_USER_START 未触发＝静态实存/运行期 NOT VERIFIED）；②build-share-package.ps1:79 同为 154；③check-compatibility.ps1:18 缺省回落外层 Config.daml。
+- **G-197 抽查**：真 Windows %LOCALAPPDATA%\Temp 无 ArcGISProMCP ✅（回执 %TEMP% 起始前像 51,4xx 件差集留收尾复算）。三账零改动。
+- **下一轮预期（约 19:45/:15）**：①**R-D113 候选交付** ⇒ 按 G-246 完成门零采信验收（verify 件对 r23/r22 exit 0 raw＋负例 exit 1＋守卫测试入册＋TRX 1762=1754P/5F/3NE＋Source 聚合 AF21E29F/272 现算零漂移＋恒定面＋evidence-index 冻结＋%TEMP% 差集核＋范围外三项处置裁定）；②停等（守卫 fixture 越 Tests/ 共享层等）⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+- **R65（G-247 · 20:1x–20:3x）**：outbox R-D113.md（19:48）＋h-receipt-d113（19:49）⇒ G-247 零采信验收：c-g247 verify.py **34/34 双跑 EXIT=0**（本席口径自纠 5 处留证；执行席零缺陷）——三脚本 hash/size 对表＋对照件未动；门① r23/r22 实跑 exit 0 JSON PASS/224（IDENTITY_INVALID 误判消除）；门② 负例三腿独立构造 exit 1 三码＋对照 exit 0＋r23 原字节不变；门③ TRX Unit 1769=1766P/0F/3NE＋Server 68/68＋Int 32/32＋守卫 7 Passed＋基线 5F 全 Passed；门④ AF21E29F/272＋224 唯一＋94/33/158＋33＋53/F355705B；门⑤ 四锚 rc=0×4＋安装位 byte-exact＋三包不变＋保护面零触碰＋Tests 恰 1＋scripts 恰 3＋Pro 0/双端口清；门⑥ 索引 173 条目聚合 A7F84EF3 复现＋抽样 10 一致＋终轮后冻结；门⑦ 合规。裁定 R-2 测试基线更新（5F 归因配置面）；R-3 范围外四项并入 D-114；R-4 G-197 第九度归因＝宿主伴随物（qoder-cli-cn 命名空间先于本批）。**D-113 CLOSED ⇒ 派 D-114/L1 分发面代际残留清偿批 ACTIVE**（run-20261001-d114；开工首项＝四件三态核对回执先行）。裁定书 GATE-G247-D113-PASS_VERDICT.md。
+- **下一轮预期（约 20:45/21:15）**：①**D-114 开工回执**（四件三态核对）或 R-D114 候选交付 ⇒ 按工单完成门零采信验收（TRX 新基线 1769=1766P/0F/3NE＋新增数；one-click 名单≡注册表 224 名逐一相等；负例三腿仍拒；r23/r22 exit 0 不回归；禁制包禁替换 Release/）；②停等 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+- **R66（21:3x 空轮 · D-114 已派未接单）**：outbox 最新件仍为 h-receipt-d113（19:49），无 h-receipt-d114/R-D114；run-20261001-d114 目录未建——执行席尚未接单（派单起约 1.2h）。G-247（20:2x–20:3x）后零活动：Source/scripts 探针 0 件；三账现值 G-247/§225/HANDOVER 202（mtime 20:30-31），无并发轮。G-197 抽查 ✅（真 %LOCALAPPDATA%\Temp 无 ArcGISProMCP）。注：21:15 自动化轮未触发（宿主调度不稳已知现象，本轮 21:3x 续跑）。三账零改动。
+
+- **R67（22:4x 回执核对登记轮 · G-201 自动化 · D-114 开工回执）**：outbox 新件＝**h-receipt-d114.md（21:59 接单回执，IN_PROGRESS）**＝L1 D-114 分发面代际残留清偿批开工回执非候选 ⇒ 按 R49b/R56/R59/R64 先例回执核对登记；无并发轮（三账现值 G-247/§225/HANDOVER 202，mtime 20:30-31；G-248 重号 grep 0）。**回执核对登记通过（执行席零缺陷）**：本席独立抽验四项全中＝Composition.cs（Compatibility）`Register(new X())` 现算 **224** ✓＋gp-whitelist sha256 现算 `F355705B…` ✓＋安装位现役包现算 `A2D6A0D0…`/1,036,008（`Documents\ArcGIS\AddIns\ArcGISPro\{BAA5628C…}`）byte-exact ✓＋s0/snapshot.json（21:51）在场 ✓；G-197 抽查 ✅（真 %LOCALAPPDATA%\Temp 无 ArcGIS 落物）。
+- **在飞进展（22:43 巡查，勿干预）**：四件 scripts 修正已落盘（one-click-setup:87＝224、build-share-package:79＝224、check-compatibility:18 已加 D-114 同源注释；one-click 行号因名单 78→224 扩容后移＝与回执修前值不矛盾）＋s5 四套测试目录（22:36-22:41）＋s6-gate1/gate2（22:43）＝收尾段；run 根全 D 盘，cli-home/nuget/temp 重定向在场。
+- **范围外发现登记（回执 §四呈报候裁，R-D114 验收轮必裁）**：`Config/client-catalog.json` server.canonicalProductionToolCount=154 与 `user-workflow.ps1:55` 耦合闸——本席预裁意向＝**不并入 D-114（范围锁定），候 R-D114 验收轮按依赖序另派清偿批**；验收时正式裁定入账。
+- **下一轮预期（约 23:15/:45）**：①**R-D114 候选交付** ⇒ 按工单完成门零采信验收（one-click 名单 224≡注册表逐一相等＋负例三腿仍拒＋r23/r22 exit 0 不回归＋TRX 新基线 1769=1766P/0F/3NE＋新增数＋零 Source 产品码＋禁制包禁替换 Release/＋四锚/安装位零触碰＋evidence-index 自检终轮后冻结＋%TEMP% 差集核＋范围外两项处置裁定）；②停等 ⇒ 按登记处置；③空轮 ⇒ 一行观察。三账零改动（回执登记轮规则）。
+
+- **R68 · 2026-10-01 23:5x（G-248：R-D114 验收 PASS CLOSED＋派 D-115/L1）**：outbox R-D114.md（22:55 PASS CANDIDATE）→ c-g248 verify.py **38/38 全绿双跑复现**（v1 35/38，3 处全本席口径自纠留证：A2 索引基座／F8 排序／F10 自建负例豁免）；完成门①六件 ParseFile 独立现跑 0 parseErrors；②r23/r22 exit 0/224＋负例三腿 exit 1＋对照 exit 0；③Unit **1775=1772P/0F/3NE**（NEW=NONE；守卫 13/13）＋Server 68/68＋Int 32/32；④AF21E29F/272 零漂移；⑤四锚/安装位/保护面零触碰＋禁制包坐实（Release=68）；⑥索引 173 件聚合 9412B6A2 复现终轮后冻结。裁定＝D-114 CLOSED；测试基线更新 1775=1772P/0F/3NE；禁制包口径确认（builder 有意不验 NOT VERIFIED）；net6 bin 旧代种子 D3133E0F 挂账（实跑 builder 前必重建）；G-197 第十度归因宿主伴生物（WorkBuddy prompt-vars 缓存，执行席零主动落物）；r21 新口径拒绝＝预期行为；耦合三件另派 **D-115/L1 ACTIVE**（client-catalog:8＋user-workflow:55＋DocPolicyTests:72 三件同批＋守卫件扩入 user-workflow；run-20261002-d115）。R-D114 §四呈报的范围外预裁意向已按「另派清偿批」落账，与执行席预判一致。下一轮预期（00:15/:45）：D-115 开工回执或 R-D115 候选交付 ⇒ 零采信验收；停等 ⇒ 按登记处置；空轮 ⇒ 一行观察。
+- **R69 · 2026-10-02 01:1x–01:3x（G-249：R-D115 停等呈报验收裁定＝扩范围四件同批恢复 ACTIVE）**：outbox R-D115.md（01:01 停等呈报·工单未实施已回滚）＋h-receipt-d115（01:02 含当场勘误段）⇒ 停等事实面零采信复算：c-g249 verify.py **32/32 双跑复现 EXIT=0**（首轮 32/33 唯一 FAIL 系本席聚合公式口径〔
+ 拼接 vs sorted 无分隔拼接〕当场修正留证）——第四闸面 `scripts/client-config.ps1:120`（154 闸＋CATALOG_TOOL_NORMALIZATION_INVALID）现场实锤＝工单三件不完整；三件点名件现值仍 154＋四件改动件逐哈希 ≡ s0（含守卫件 B4BD5DE7/8,653 定位）＝回滚成立；f2 TRX Unit 1777=1748P/26F/3NE（失败含 CATALOG_TOOL_NORMALIZATION 族）＝按工单实施即回归；f3 TRX Unit **1775=1772P/0F/3NE**＋Server 68/68＋Int 32/32＝基线完全复原；索引 268 件聚合 F99FBF3F 复现＋抽样 5 全中；s0/final 四树等值无半改遗留；四锚 rc=0×4＋Release 68/Archive 139＋安装位 A2D6A0D0/1,036,008 byte-exact＋真 %TEMP% 本席独立探针 0 命中。**执行席纪律评价：不越界/不闭单/不自行扩范围/当场勘误自曝 grep 管道假象＝停等合规零缺陷，勘误系纪律加分**。裁定（GATE-G249-D115-STOPWAIT_RULING.md）：R-1 根源认领＝G-248 派单预检缺陷（流程改进固化：配置/闸面类工单派单前对被改常量做全仓无滤消费者重扫）；R-2 **采方案 A＝D-115 扩范围四件同批**（catalog:8＋user-workflow:55＋client-config:120＋DocPolicyTests:72 全 154→224；守卫清单五扩六＋四方同值断言；写域差集 1/2/2）；R-3 方案 B 不采（normalization 零消费者叙述值保持原样）；R-4 r5 指南 172 行挂账；R-5 D-115 维持 ACTIVE（L1_INBOX 已勘误，s0 可复用一轮完成）；R-6 基线零推进；R-7 G-197 877 件差集倾向系统级伴随（第十一度形态）。落账：裁定书＋L1_INBOX 勘误＋DECISIONS G-249＋DISPATCH §227＋HANDOVER 204＋镜像两档＋云侧双推＋rag 反证＋MEMORY＋当日日志。下一轮预期（01:45/:15）：**R-D115 v2（四件版候选）** ⇒ 零采信验收（四件全 224＋client-config 闸放行＋守卫六件＋四方同值＋TRX 1775 不回归＋新增数＋零 Source＋写域恰 1/2/2＋恒定面＋索引冻结＋%TEMP% 差集呈报核）；停等再发 ⇒ 按登记处置；空轮 ⇒ 一行观察。
+
+
+### R70 · 2026-10-02 02:3x（自动化轮 · D-115 v2 恢复执行段开工回执核对登记轮）
+- **判定＝回执登记轮（非验收）**：outbox 新件＝**h-receipt-d115.md 02:24 追加「G-249 恢复执行段开工首项」**（裁定读回＋四件三态无滤实测＋执行计划＋两项候裁登记）；R-D115.md（01:01 停等呈报）未改写留存；R-D115-v2.md 尚未出现。G-250 重号 grep 零命中；台账现值 G-249/§227/HANDOVER 204（01:22-23）无并发轮。01:45/:15 两轮自动化未触发（宿主调度不稳已知现象），本轮顺延 R70。
+- **独立抽验全中（02:3x 本席现算）**：①四处闸面现值**已落 224**（user-workflow:55／client-config:120 且行内含 CATALOG_TOOL_NORMALIZATION_INVALID／client-catalog.json:8＝224·:28=154 保持〔G-249 R-3〕／DocPolicyTests:72 断言 224）——02:24 回执申报「先于写码」，02:24–02:30 间落码，与 s5-tests-f4/f5（02:28/02:29）时序自洽＝在飞勿干预；②四件字节与回执开工像一致（26,241/14,926/2,246/10,822——154→224 等宽替换不改字节数）；③守卫件已扩 8,653→**10,072B**；④Composition 注册现算 **224** ✓；⑤真 %TEMP%（$LOCALAPPDATA\Temp）无 ArcGISProMCP ✓。
+- **指挥席候裁初步意向（候 R-D115-v2 验收轮 G-250 正式裁定，不阻塞在飞）**：①守卫 InlineData 七条口径**倾向采信**（「五扩六」系 G-249 计数笔误；实质判据「凡承载该常量之 scripts 全覆盖」优先——5 件 D-114 守卫集＋user-workflow＋client-config＝7）；②交付件命名 **R-D115-v2.md 采信**（与 G-249 R-8 表述一致；R-D115.md 系停等呈报在案证据不覆盖＝正确纪律）。
+- 三账零改动；执行席零矛盾。
+- **下一轮预期（约 03:15/:45）**：①**R-D115-v2.md 候选交付** ⇒ G-250 零采信验收（四件全 224＋cat:28 保持 154＋守卫七条/四方同值断言＋TRX 对 1775=1772P/0F/3NE 名集合 NEW=NONE＋Server 68/68＋Int 32/32＋零 Source AF21E29F/272＋写域恰 1/2/2＋恒定面 285/33/53/四锚 rc=0×4＋安装位 A2D6A0D0 byte-exact＋索引终轮后冻结＋%TEMP% 差集不自判）；②停等再发 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+### R71 · 2026-10-02 03:5x（自动化轮 · G-250：R-D115-v2 验收 PASS CLOSED＋测试基线 1778＋L1 转 WAITING）
+- **取单**：outbox R-D115-v2.md（02:55 PASS CANDIDATE，四件同批扩范围版）＋h-receipt-d115 更新（02:56 完工节）；G-250 重号 0；台账切点 G-249/§227/HANDOVER 204 判稳；L1 ACTIVE＝D-115、L4 WAITING，写窗合规。
+- **零采信验收**：run-20261002-d115/c-g250/verify.py **46 项＝46/46 全绿（双跑复现 EXIT=0；result.json 留证）**——本席口径自纠 6 处留证（BOM／安装位 glob 现役 GUID／补登 JSON 双层键／TRX counters NE 口径＝total−executed〔G-248 D1 先例〕／守卫单参 InlineData 限定／want7 后缀＋docs 归因白名单）；**执行席零缺陷**。
+- **实证要点**：四件 224 现值＋哈希逐件对表（catalog:8 E7718CB0／user-workflow:55 79A25CD3／client-config:120 580E7702〔mcp_auth 条款逐字保留〕／DocPolicyTests:72 4264E124）＋catalog:28 原样（R-3 遵守）＋守卫件 93D64E34/10,072 七条单参 InlineData 全对＋四方同值 {224×4} 独立现算＋三件非注释 154 清零；TRX **Unit 1778=1775P/0F/3NE**（NEW=NONE；NE≡Reparse 族；守卫 16/16）＋Server 68/68＋Int 32/32；f2 26F 负向件在场；PS ParseFile ×4＋JSON 0 错；Source AF21E29F/272 零漂移；写域恰 1/2/2＋docs 差集归因白名单内＝执行席零越域；安装位 A2D6A0D0 byte-exact＋D-114 六脚本未波及；恒定面 224/285/33/53＋四锚 rc=0×4；冻结索引未动（268/F99FBF3F；逐件 265/268＋换代恰 3＝执行席自纠申报吻合）＋补登 139/F4498CA2 全中；Pro 0/6520·6511 CLOSED；真 %TEMP% 名义探针 0（**G-197 第十二度归因**宿主伴生物）。
+- **裁定（GATE-G250-D115-PASS_VERDICT.md）**：R-1 **D-115 CLOSED**；R-2 **测试基线更新 1778=1775P/0F/3NE＋Server 68＋Int 32**（守卫新增 3 系工单内新增非回归，后续轮新口径）；R-3 交付名 R-D115-v2.md 采信（R-D115.md 系 G-249 引用件原字节未动，牌位名已勘误——与 R70 初步意向一致）；R-4 阶段目录名跨轮复用记 **R-G250-P1 挂账**＋整改令（后续派单文固定阶段目录命名表；执行席当场整改 final-v2/s5-tests-f4|f5 合规）；R-5 G-249 R-2「五扩六」勘误＝实质 7 条 InlineData（另 2 条双参系 D-113 configDaml 遗留测试——与 R70 初步意向一致）；R-8 基线零推进（scripts 现役哈希更新：user-workflow 79A25CD3/26,241＋client-config 580E7702/14,926＋catalog E7718CB0/2,246＋守卫 93D64E34/10,072）；R-9 **L1 转 WAITING**（依赖序无下一单：G-RELEASE 已收官、L2/L3 前置用户侧未成就、M4 半区未裁）。
+- **落账**：裁定书＋L1_INBOX（D-115 CLOSED）＋DECISIONS G-250＋DISPATCH §228＋HANDOVER 205＋镜像两档＋云侧双推＋rag 反证＋MEMORY＋当日日志。
+- **下一轮预期（约 04:15/:45）**：①四线全 WAITING ⇒ 空轮（一行观察，三账零改动）；②用户裁定点到达（TS08/八域/GP 扩容/M4 半区）⇒ 按裁定派单；③停等/交付 ⇒ 按登记处置。
+
+## R72 · 2026-10-02 04:55（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250（03:5x）后零新件（`find -newermt "2026-10-02 03:00"` 零命中；最新件仍 h-receipt-d115 02:56）；L1_INBOX 03:49 后未改；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单〔G-RELEASE 收官／L2·L3 前置用户侧未成就／M4 半区未裁〕）；run-20261002-d115 尾 mtime 03:40 系本席验收轮写入非执行席活动。台账现值 G-250/§228/HANDOVER 205（1106 行）判稳无并发轮；04:15 轮未触发（已知现象）。三账零改动。
+- **下一轮预期（约 05:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R73 · 2026-10-02 05:58（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（最新仍 h-receipt-d115 02:56；`find -newermt "2026-10-02 03:00"` 命中件全系 G-250 本席落账产物〔裁定书/三账 03:50/L1_INBOX 03:49〕）；四线全 WAITING（L1＝D-115 CLOSED，依赖序无下一单）；三账 mtime 03:50＋R73/G-251/D-116 grep 零命中＝无并发轮。三账零改动，仅此行观察。**下一轮预期（约 06:15/:45）**：①用户裁定点到达（TS08/八域/GP 扩容/M4 半区）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R74 · 2026-10-02 07:02（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 04:00"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；全仓 04:30 后项目侧零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 已收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50·03:51＋R74/G-251/D-116 grep 零命中＝无并发轮；HANDOVER（_gatekeeper）03:50 判稳。06:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 07:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R75 · 2026-10-02 08:07（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 04:00"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；07:00 后项目侧（同步/工作区外）零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 已收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50/03:51＋R75/G-251/D-116 grep 零命中＝无并发轮；HANDOVER（_gatekeeper）03:50 判稳。观察项：`同步/3.0项目规划创新/01_主方案（6份）/` 六件 07:24–07:28 刷新——系云侧同步镜像活动（用户侧），非项目治理写入，不触发四线动作。三账零改动，仅此行观察。
+- **下一轮预期（约 08:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R76 · 2026-10-02 09:13（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 04:00"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；08:10 后项目侧（同步/工作区外）零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 已收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50/03:51＋R76/G-251/D-116 grep 零命中＝无并发轮；HANDOVER（_gatekeeper）03:50 判稳。08:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 09:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R77 轮 · 2026-10-02 10:20（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 03:50"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；09:14 后项目侧（同步/工作区外）零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 已收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50＋R77/G-251/D-116 grep 零命中＝无并发轮；HANDOVER（_gatekeeper）03:50 判稳。09:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 10:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R78 轮 · 2026-10-02 11:26（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 03:00"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；10:20 后项目侧（同步/工作区外）零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 已收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50（HANDOVER 03:50 判稳）＋R78/G-251/D-116 grep 零命中＝无并发轮。10:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 11:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R79 轮 · 2026-10-02 12:31（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单）；三账 mtime 03:50＋R79/G-251/D-116 grep 零命中＝无并发轮；HANDOVER 03:50 判稳。**新增归因一项**：`run-20261002-d115/s0/freeze-benchmark-{s0,m2,m3,m4}.py.log` 四件 mtime 04:21＝c-g250 验收双跑复现的四锚 --check 遗留日志（内容 `CHECK PASS CANDIDATE: 92ECD265…` 与冻结锚一致），非新执行、零治理写入。11:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 12:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R80 轮 · 2026-10-02 13:35（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 03:00"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49:41（＝G-250 本席落账写入，R80 首查 `find -newermt 03:49` 误报系阈值精度，stat 复核排除）未再动；12:31 后项目侧零新写入；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单）；三账 mtime 03:50（HANDOVER 03:50 判稳）＋R80/G-251/D-116 grep 零命中＝无并发轮。12:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 13:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## R81 轮 · 2026-10-02 14:12（自动化轮 · 空轮）
+- **判定＝空轮**：outbox 自 G-250 后零新件（`find -newermt "2026-10-02 03:50"` 零命中；最新仍 h-receipt-d115 02:56，已由 G-250 消费）；L1_INBOX mtime 03:49 未再动；13:35 后项目侧零新写入（排除 .workbuddy/同步/bin/obj）；**四线全 WAITING**（L1＝D-115 CLOSED 依赖序无下一单：G-RELEASE 收官／L2·L3 前置用户侧未成就／M4 半区未裁）；三账 mtime 03:50＋R81/G-251/D-116 grep 零命中＝无并发轮；HANDOVER 03:50 判稳。13:15/:45 轮未触发（已知现象）。三账零改动，仅此行观察。
+- **下一轮预期（约 14:15/:45）**：①用户裁定点到达（TS08／八域／GP 扩容／M4 半区，或 R-G250-P1 整改令下新派单）⇒ 按裁定派单；②交付/回执 ⇒ 按登记处置；③空轮 ⇒ 一行观察。
+
+## G-251 轮 · 2026-10-02 14:1x–14:4x（指挥席手动轮 · 用户指令「继续派单」）＝派 D-116/L1
+- **依赖序裁定**：四线全 WAITING；22 件 GP 扩容用户侧裁定点已由 G-222 R-3 代裁成就、M4 半区范围裁定未完成 ⇒ **派 D-116/L1＝22 件 GP 白名单扩容批 ACTIVE**（两段式：Phase A 判定段〔映射呈报＋真机逐件四查〔真名/许可/参数签名/最小受控执行〕＋判定表 STOP-WAIT〕→ 停等指挥席裁定 → Phase B 写入段〔Config/gp-whitelist.json 53→N≤75＋守卫扩展＋构建 0W0E＋TRX 1778 不劣化〕）。授权链＝G-222 R-3＋G-237＋G-221（本单不安装）；判定窗＝产品 env 机制（G-251 R-2 裁定；G-222 原绑 D-100 机会窗已过如实修正；装机面维持 53 fail-closed）。
+- **预检**：22 件＝capability-surface GP-typed 22 行（指挥席 python 现数；全 W 类 8 域：时空 2/三维 3/点云 5/遥感 4/插值 1/网络 6/垂直坐标 1）；第四查＝白名单 53 全仓无滤消费者重扫九点归位（csproj 嵌入自动跟随／Tests 无 53 硬计数／executor-1h 历史文本非活性）——派单预检零缺陷。REJECTED 件维持 fail-closed（G-222 R-3 原文）；许可族（3D/SA/NA/STPM）判定风险预期高。
+- **落账**：裁定书 GATE-G251-D116-DISPATCH_RULING.md／L1_INBOX D-116 ACTIVE 置顶／DECISIONS G-251／DISPATCH §229／HANDOVER 206／MEMORY v52／当日日志。挂账新增 O-D116-01/02。**L1 执行席注意**：读 inbox/L1_INBOX.md「当前工单」D-116 节开工；阶段目录命名表已附（G-250 R-4 整改令）；Source 零写入；白名单 53 恒定至 Phase B 裁定写入。
+- **轮末**：ACTIVE＝D-116（L1）；L2/L3/L4 WAITING；基线零推进（AF21E29F/272·224＋安装位 A2D6A0D0·224＋四锚不变）。
+
+## G-252 轮 · 2026-10-02 15:2x–15:3x（指挥席手动轮 · 用户指令「验收」）＝D-116 开工回执采信
+- **复算**：c-g252/verify.py **12/12 双跑 EXIT=0**（1 处指挥席装机路径口径自纠留证）——白名单 30,634B/F355705B/53 条/destructive 5＋22 行 schema SHA 22/22＋22 名 vs 53 名零重叠＋聚合 AF21E29F/272＋Composition 224＋名册 94/33/158＋装机双件 A2D6A0D0/1,036,008＋7CEB2AB7/185,110＋四锚日志 PASS＋**产品树 14:30 后零写入**（写域差集 ∅）＋错误码 33。
+- **裁定**：h-receipt-d116 全数采信，**执行席零缺陷**（五项快照≡独立现值；三态核对✓；自纠三项脚本缺陷留证＝合规加分；m4 锚未现读如实申报＝诚实登记）。**D-116 维持 ACTIVE（Phase A 在飞）**：f1-mapping→f2-probe→f3-verdict STOP-WAIT→〔指挥席裁定〕→Phase B。
+- **轮末**：ACTIVE＝D-116（L1）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-252／§230／HANDOVER 207／L1_INBOX 登记行。
+
+## G-253 轮 · 2026-10-02 19:2x–19:4x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝中间回执采信＋在飞三项裁定
+- **采信**：h-receipt-d116 增补（§八真名证据／§九判定窗副本）经 c-g253/verify.py **8/8 EXIT=0** 抽验（candidate-whitelist 108 条前 53 逐条等值零重复／Config 零改动／产品树 15:30 后零写入／Pro 0＋双端口 CLOSED／ArcToolbox 45 工具箱独立可达／mapping 22 行齐）；执行席零缺陷，Con↔Con_ 自纠＋假设集自曝两处诚实申报＝纪律满分。
+- **在飞裁定（f2/f3 遵循，已同步 L1_INBOX）**：①NA 族 X37/X38/X39＝REJECTED-NO-STATELESS-GP-FORM（Make*Layer＋na.Solve 两段式不符单次模型；agolservices 服务型不纳入）；X40 留实测（na.SolveVehicleRoutingProblem）；X41＋X22＝REJECTED-GP-NAME-NOT-FOUND；X44 照常复核。②Phase B 判据收紧＝required/destructive 须真机实测，PROVISIONAL 禁入，无实测者整件不写入。③现役 53 反查异常 4 条本单不改，挂账 O-D116-03。写入数预期 N≈70 上下。
+- **派单**：零新单（L1 唯一 ACTIVE＝D-116；L2 前置待 Phase B 收官；L3/L4 无前置）。**工期**：D-116 全链预计 10-02 23 时前后收官；安装推进＋L2 GP 扩容评测 ⇒ 白名单 75 生效＋评测闭环预计 10-03 内；M4 半区另测。
+- **轮末**：ACTIVE＝D-116（L1·判定窗真机实跑为当前步）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-253／§231／HANDOVER 208／L1_INBOX 裁定行。
+
+## G-254 轮 · 2026-10-02 20:55–21:0x（指挥席自动化轮）＝D-116 真机判定窗 describe 段采信
+- **采信**：h-receipt-d116 三次增补（§十候选集 r2 重建 19:2x／§十一判定窗**真机实跑段** 20:1x–20:5x）经 c-g254/verify.py **17/17 双跑 EXIT=0** 独立复算（本席口径自纠 2 处留证）：Config `F355705B`/53 恒定＋候选白名单 108 条（前 53 ≡ Config）＋窗副本逐字节等值＋aprx `7727640F` ≡ d110 原件（只读复制）＋PID 19760/temp 钉 run 根＋`closed=True`/`projectUnchanged=True`＋tools/list 真机 224＋gp 列表 count=108/`whitelistSource=env`（产品回文实锤 env 机制会话级生效、装机嵌入面 53 未改写；GeoprocessingService.cs:738 常量在位）＋缺陷轮 55×INVALID_ARGUMENT 保留＋describe r2 **55/55 可达 error-empty 0**＋newVersusR1=68/ZERO=[]/装机 2,110＋四写域 15:14 后零写入＋聚合 `AF21E29F`/272 复现＋Pro 0/双端口 CLOSED（probe_g254.txt）。
+- **裁定**：§十/§十一全数采信，**执行席零缺陷**——r2 方法缺陷自曝＋top-3 并集方案合规；G-253 在飞裁定遵循到位（X37/38/39 不准入／X41/X22 维持 REJECTED／X40、X44 留 run_geoprocessing 段）；describe 证明力四项限定（参数签名/许可面/最小受控执行未做，不出准入结论）＝诚实申报不越权；两处脚本口径自纠留证。G-197 第十三度归因宿主伴生物（本席 21:00 复测真 temp 85,707 vs 关窗 76,641＝宿主自然活动，Pro 0 进程）。
+- **派单**：零新单。**D-116 维持 ACTIVE（当前步＝run_geoprocessing 最小受控执行段→f3-verdict STOP-WAIT 呈报＝下一轮验收对象）**；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定；挂账 O-D116-01/02/03 维持。落账＝DECISIONS G-254／§232／HANDOVER 209。
+
+## G-255 轮 · 2026-10-02 21:5x–22:1x（指挥席自动化轮）＝D-116 空参探针段采信＋候裁 (a)/(b)/(c) 在飞裁定
+- **采信**：h-receipt-d116 四次增补（§十二 f2 判定窗第二段＝`run_geoprocessing` 空参探针 21:1x–21:2x，附候裁三项呈报＋「未裁前不进 Phase B」声明）经 c-g255/verify.py **14/14 双跑 EXIT=0** 独立复算（本席口径自纠 2 处留证：results 系 dict 键控／gp count 在 content[0].text 嵌套 JSON）：Config `F355705B`/53 恒定＋live-g2 窗副本 `701A71CF`/108 ≡ 候选正本＋PID **39028**/projHash `7727640F`/temp 钉 run 根＋run-probe-results `062A6417`/10,938B **49/49 全 isError＋唯一消息 INVALID_ARGUMENT**＋classification=PARAM-SIGNATURE-PROBE＋**gp-audit 零文件＝零 GP 执行零副作用**（校验层拒绝未进 arcpy，fail-closed 实证）＋close-result 缺席≡COMException 申报（独立核验补全：Pro 0/端口 CLOSED/工程哈希未变/无 taskkill）＋§十一路径归属勘误当场登记（live-g1 stage 与 f2-probe/live-g1/live-raw 两处并存）＋tools/list 224＋gp 108/108 env 回文第二次复现＋四写域 15:14 后零写入＋Pro 0/双端口 0（probe_g255.txt）＋真 %TEMP% 项目名义探针 0。
+- **裁定**：§十二全数采信，**执行席零缺陷**——路径勘误当场更正（两处并存无覆写无丢失）＋Close COMException 脚本健壮性自纠登记＋「22 件全部维持 NOT VERIFIED 不作已判定申报」＝诚实申报纪律满分。**候裁三项在飞裁定（已同步 L1_INBOX，执行席 f2 后续/f3 遵循）**：(a) 采＝授权 run 根自建最小数据逐件实跑第③④查（工单「run 根任意」既有授权；单件最小可行；网络数据集/LAS 点云族不强造）；(c) 口径收紧版采＝无法取得数据/许可件判 REJECTED-LICENCE-MISSING／REJECTED-NO-VERDICT-DATA 宁缺勿凑——**空参探针 INVALID_ARGUMENT 仅证明参数校验层在位，不构成第③查签名/第④查行为证据，仅验到校验层的件不得判 VERIFIED**；X40 若无法实测按此口径挂账留实测（与 G-253 衔接）；(b) 不采为必经＝留用户侧后续选项（真实工程数据另批补验）。**Phase B 写入数 N 以实证 VERIFIED 件数为准（N≤75 上限不变；G-253 N≈70/23 时收官预估作废）**；现役 53 异常 4 条对照取证顺带继续；G-197 第十四度归因宿主伴生物（执行席申报 temp ＋25＝关窗后自然活动，本席复测名义探针 0）。
+- **派单**：零新单。**D-116 维持 ACTIVE（当前步＝(a)+(c) 组合实施段→f3-verdict STOP-WAIT 呈报＝下一轮验收对象）**；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定；挂账 O-D116-01/02/03＋(b) 用户侧补验选项。工期修正＝f3 判定表＋R-D116.md STOP-WAIT 呈报预计 10-03 内。落账＝DECISIONS G-255／§233／HANDOVER 210／L1_INBOX 裁定行。
+
+## G-256 轮 · 2026-10-02 23:0x–23:2x（指挥席自动化轮）＝D-116 §十三（(a) 实施段首跑）中间登记＋外部 Pro 进程停等裁定
+- **采信**：h-receipt-d116 第五次增补（§十三＝G-255 (a) 实施段首跑 live-g3/g4/g5）经 c-g256/verify.py **24/24 双跑 EXIT=0** 独立复算（本席口径自纠 7 处留证：内嵌 JSON 双重解码／results 51＝49 候选＋2 CONTROL 对照件分离计数／工具名归属以文件对应／中文消息在场断言／**聚合口径对齐 c-g254＝rel:hash 字符串 sorted 后无分隔符 join**（首跑只拼 hash 得 F778C7FE 假 FAIL）／tasklist GBK 解码／双跑复现）。要点：live-g5 跳 Prepare 被 Start 红线拒绝（owned-process.json 缺席实证）；live-g3 PID 41176／live-g4 PID 13500 双窗 closed=True＋projHash `7727640F`；r2 探针因窗口编排失当实跑应答者为**外部在位 Pro（PID 38984）**——时间链实证 close 22:20:27 < report 22:21:24；候选 **49/49 INVALID_ARGUMENT**（装机嵌入 53 fail-closed 真机复证）＋对照件1 参数名门（ASCIIToRaster Unknown parameter 'out_raster'）＋对照件2 ERROR 000860（管线可达 arcpy）；gp-audit 恰 1；四写域零写入；AF21E29F/272＋F355705B/53 恒定；自有四 PID 均 stillAlive=False。
+- **裁定**：§十三采信＝**执行席诚实申报纪律满分**（三处脚本缺陷逐轮留证＋窗口归属主动自纠＋证据效力如实分级不外推＋未触碰外部进程）；22 件维持 NOT VERIFIED；勘误 **R-G256-P1**＝「GBK mojibake」申报与原始件不符（31-control2.txt 解码为正常 UTF-8 中文，P2 披露瑕疵采信不阻塞）；**新增挂账 O-D116-04＝(a) 实施段重跑被外部 Pro PID 38984 阻塞，指挥席不代行终止（用户裁定项）——需用户关闭外部 Pro 会话或明文授权，或另指定判定窗时段**；f3-verdict 判定表可依现有证据＋(c) 收紧版口径先行编制呈报。
+- **派单**：零新单。**D-116 维持 ACTIVE（当前步＝(a) 重跑【停等 O-D116-04】＋(c) 判定表编制→f3-verdict STOP-WAIT 呈报）**；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定；挂账 O-D116-01/02/03/04＋(b) 用户侧补验选项＋R-G256-P1。落账＝DECISIONS G-256／§234／HANDOVER 211／L1_INBOX 裁定行。
+
+## 空轮观察 · 2026-10-03 00:2x（指挥席自动化轮 G-201）＝四线零 outbox 交付
+- **现场盘点**：outbox 最新件仍＝h-receipt-d116（22:25，§十三），**R-D116.md 未现**；三账 mtime 23:21–23:22（G-256 落账）后零变化；L1_INBOX 23:22（G-256 裁定行）后零变化。run 根新动向一处＝`run-20261002-d116/f3-verdict/`（23:30–23:31 新建 verdict-table.json/md＋build_verdict_table_d116.py）＝执行席依 **G-256 R-3 授权**（「判定表可依现有证据＋(c) 收紧版口径先行编制」）的在飞中间产物，速览计数＝候选 22／REJECTED 5／NOT-VERIFIED-PENDING-WINDOW 17／实证 VERIFIED 0／Phase B 写入数 N=0（上限 75 不变），且已内嵌 R-G256-P1 自复核（31-control2.txt utf-8 可解码＝mojibake 申报不成立）。**判定：非交付物、不验收、不动三账**。
+- **处置**：D-116 维持 ACTIVE（当前步＝f3-verdict STOP-WAIT 呈报＝下一轮验收对象；(a) 重跑维持停等 O-D116-04）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。**下轮触发条件＝outbox 出现 R-D116.md（f3-verdict STOP-WAIT PASS CANDIDATE）或 h-receipt-d116 增补 ⇒ 零采信验收＋Phase B 写入清单裁定**。
+
+### G-257 轮 · 2026-10-03 01:3x（指挥席自动化轮）＝R-D116 STOP-WAIT 呈报验收＋五项请裁在飞裁定
+- **触发**：outbox 出现 R-D116.md（01:19 交付，STOP-WAIT 形态非 PASS CANDIDATE＝工单 Phase A·4 合规）＋h-receipt-d116 §十四 编制段增补收敛（44,312B）。另观察：`3.0最终方案/宣传/` 23:36–01:19 有 218 文件更新（并发会话产物，四线写域外，仅登记）。
+- **独立复算**：c-g257/verify.py **18/18 双跑 EXIT=0（双跑逐字节一致）**——R-D116 形态断言／verdict-table.json 30,790B/`6DD4F7E70ED4`＋verdict-table.md 14,368B/`A978518ADCAA` 双哈希对表／判定表计数 22/5/17/0 逐行核（REJECTED 5＝X37/38/39 NO-STATELESS＋X22/X41 NAME-NOT-FOUND，与 G-253 逐 id 等值；实证 VERIFIED 0 ⇒ N=0）／Config `F355705B`/53/30,634B 恒定／源码聚合 `AF21E29F`/272／Composition 224／四写域 15:14 后零写入／f4-write/f5-tests/final-evidence 未创建（停等合规）／判定表内嵌 R-G256-P1 自复核与指挥席一致（**R-G256-P1 销案**）。
+- **裁定（已同步 L1_INBOX）**：呈报全文采信＝执行席零缺陷（五处脚本缺陷＋窗口编排失当＋副本局限如实申报＝诚实纪律满分）。五项请裁：①(a) 重跑窗口维持阻塞——本席 01:37 tasklist 实测外部 Pro PID 38984 仍在位，O-D116-04 维持用户裁定项；②(c) 终判暂缓不采——用户明示前不得以之销单 17 件；③(b) 用户侧补验确认挂账；④**副本重建预授权**（§十 语义族扫描反哺，(a) 段内允许动作，获窗后径行）；⑤O-D116-01/02/03/04 确认在账。观察项：6520 LISTENING（PID 4/http.sys 宿主伴随归因，非违例）。
+- **落账**：DECISIONS G-257／DISPATCH §235／HANDOVER 212／L1_INBOX 裁定行／镜像两档（本档 G-257 段＋项目目前情况.md 脚注刷至 G-257）／云侧双推／本地 grep 反证／当日日志／本节。
+- **下一轮预期（约 01:45/:15）**：①用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单）⇒ 执行席动作＋指挥席验收；②h-receipt 增补 ⇒ 登记；③空轮 ⇒ 一行观察。
+
+
+## G-258（2026-10-03 02:5x · 指挥席自动化轮）＝D-116 §十五 r2 副本重建采信（G-257 R-④ 预授权动作验收）
+
+- **触发**：outbox h-receipt-d116 六次增补（02:34，新增 §十五＝判定窗副本 r2 重建申报）；R-D116.md 未现新件；三账 01:46 后零变化＝无并发轮；G-258 零撞号。
+- **独立复算**：c-g258/verify.py **44/44 双跑 EXIT=0、双跑逐字节一致**（本席口径自纠 2 处留证：①源码聚合 rel 基准＝仓库根非 Source 目录；②「每件候选 1–13」＝publicName 语义族计数〔audit perPublicNameTop4 88 行交叉核对〕）。实证：r2 副本 213,194B/`7D570589396B`/141 条，前 53 ≡ Config 逐条等值（保序）＋缺 tool 0＋缺 parameters 0＋重复 0＋agolservices 0＋语义族抽查 13/8/8/1 全中；Config `F355705B`/53 与正本 `701A71CF` 未覆写；缺陷轮两件留证在场；f4-write/f5-tests/final-evidence 未创建；四写域 15:14 后零写入；聚合 `AF21E29F`/272 恒定；外部 Pro PID 38984 未触碰；6520 LISTENING（宿主伴随归因非违例）/6511 CLOSED；真 %TEMP% d116 名义零落物（本席补测）。
+- **裁定**：§十五全数采信＝**执行席零缺陷**（预授权动作合规：run 根内・零窗口・零 GP・零四写域；缺陷代际留证＝诚实申报；%TEMP% 未复测即不申报＝不外推）。O-D116-04 维持用户裁定项；(c) 暂缓维持；(b) 挂账维持；D-116 维持 ACTIVE·Phase A STOP-WAIT——**r2 副本（141 条探针候选集）就绪＝获窗即可开跑**。零新派单；L2/L3/L4 WAITING；基线零推进。
+- **落账**：DECISIONS G-258／DISPATCH §236／HANDOVER 213／L1_INBOX 裁定行／镜像两档／云侧双推／本地 grep 反证／当日日志／本节。
+- **下一轮预期（约 03:15/:45）**：①用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单）⇒ 执行席 (a) 重跑（r2 副本开跑）或销单＋指挥席验收；②h-receipt 增补 ⇒ 登记；③空轮 ⇒ 一行观察。
+
+
+## R90 轮 · 2026-10-03 04:05–04:0x（指挥席自动化轮 · 空轮）
+
+- 判定＝空轮：outbox 自 G-258（02:59 落账）后零新件（h-receipt-d116 02:34 已消费／R-D116.md 01:19 未新增）；三账 mtime 02:59＝G-258 本席落账无并发；四线牌位＝D-116 ACTIVE·Phase A STOP-WAIT（O-D116-04 用户裁定项未决）＋L2/L3/L4 WAITING。项目侧仅 `3.0最终方案/01_完整最终方案/02_架构与模块实施蓝图.md` 03:05 后刷新（四线写域外，用户侧/并发会话产物，仅登记不判涉）。三账零改动。下一轮触发同前：用户裁定 O-D116-04 / h-receipt 增补 / 空轮一行观察。
+
+## R91 轮 · 2026-10-03 05:09（指挥席自动化轮 · 空轮）
+
+- 判定＝空轮：outbox 自 G-258（02:59 落账）后零新件（h-receipt-d116 02:34 已消费／R-D116.md 01:19 未新增）；三账/L1_INBOX mtime 02:59＝G-258 落账后零变化，无并发轮；run 根 04:00 后零新增。四线＝D-116 ACTIVE·Phase A STOP-WAIT（r2 副本就绪，获窗即可开跑）＋L2/L3/L4 WAITING。本席 05:09 tasklist 实测：外部 ArcGISPro PID 38984 仍在位（O-D116-04 用户裁定项维持——窗口阻塞继续，指挥席不代行终止）。三账零改动。下一轮触发同前：用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单）／h-receipt 增补 / 空轮一行观察。
+
+## R92 轮 · 2026-10-03 06:14（指挥席自动化轮 · 空轮）
+
+- 判定＝空轮：outbox 自 G-258（02:59 落账）后零新件（h-receipt-d116 02:34 已消费／R-D116.md 01:19 未新增）；三账/L1_INBOX mtime 02:59＝G-258 落账后零变化，无并发轮；全工作区（排除 3.0最终方案/同步/.workbuddy）05:00 后零文件变化；run 根最新仍 c-g258。四线＝D-116 ACTIVE·Phase A STOP-WAIT（r2 副本就绪，获窗即可开跑）＋L2/L3/L4 WAITING。本席 06:14 tasklist 实测：外部 ArcGISPro PID 38984 仍在位（O-D116-04 用户裁定项维持——窗口阻塞继续，指挥席不代行终止）。三账零改动。下一轮触发同前：用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单 17 件）／h-receipt 增补 / 空轮一行观察。
+## R93 轮 · 2026-10-03 07:1x–07:2x（指挥席自动化轮 · 非空轮＝D-116 §十六 验收）
+
+- 判定＝非空轮：h-receipt-d116 七次增补（06:20，§十六 06:1x 停等复算轮＋执行席 G-197 自纠 FAIL OBSERVED）＝D-116 新交付，依 19:38 规则执行零采信验收。c-g259/verify.py **36/36 双跑 EXIT=0 逐字节一致**（本席口径自纠 2 处留证：L4 闲忙判定收敛为当前工单节首条 status 行）——外部 ArcGISPro PID 38984 仍在位（复证未触碰）＋6520 OPEN/6511 CLOSED（socket.connect_ex 复测，G-230 R-2 先例族登记）＋五项快照全中（聚合 `AF21E29F`/272＋Composition 224＋名册 94/33/158=285＋错误码 33＋`F355705B`/53/30,634B＋装机 `A2D6A0D0`/1,036,008＋bak `7CEB2AB7`/185,110）＋**四锚活跑 --check rc=0×4**＋证据哈希全对（r2 213,194B/`7D570589396B`/141·front53≡Config·verdict `6DD4F7E70ED4`/`A978518A`·R-D116 `58AC8AE35857` 未动）＋f4/f5/final-evidence 未创建＋四写域 15:14 后零写入。
+- **执行席纪律档案（G-197 违规登记一件，G-259 采信）**：06:17 执行席 scratch（`netstat > /tmp/…`）经 Git Bash 映射落 C 盘 %TEMP%（ns_d116_check.txt，30,878B）——执行席主动申报 FAIL OBSERVED、拒绝套用宿主伴生先例（G-230 R-2）、当场 unlink 删除＋delta −1 复验。指挥席核验＝件不存在＋ns_d116* token 0 命中 ⇒ 采信；**处置＝登记违规实例一件，整改四条（禁 /tmp／端口探测改 socket.connect_ex／落盘前 cygpath 核盘符／写入持久记忆）全部核准，工单级不升级不派整改单**。口径固化＝G-197 先例族仅适用宿主/系统伴生物；执行席自建 scratch 落 C 盘一律自身违规，须如实申报。
+- 裁定＝§十六 全数采信；O-D116-04 维持用户裁定项（07:1x 实测 38984 仍在位）；(c) 终判暂缓维持；(b) 挂账维持；O-D116-01/02/03 在账；**D-116 维持 ACTIVE·Phase A STOP-WAIT——r2 副本（141 条）就绪＝获窗即可开跑**；零新派单；L2/L3/L4 WAITING；基线零推进。详录 DECISIONS G-259／DISPATCH §237／HANDOVER 214／GATE-G259-D116-RECEIPT16_RULING.md。
+
+## R94 轮 · 2026-10-03 08:33（指挥席自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-259 落账（07:2x）后零新件（find -newermt 07:35 对 Docs/_gatekeeper＋run 根零命中；h-receipt-d116 06:20／R-D116.md 01:19 均已消化）；run 根最新仍 c-g259（f4/f5/final-evidence 未创建＝无新在飞产物）；L1_INBOX 07:29 系 G-259 本席落账非新交付。四线＝L1 D-116 ACTIVE·Phase A STOP-WAIT＊L2/L3/L4 WAITING。08:33 tasklist 实测外部 ArcGISPro PID 38984 仍在位（O-D116-04 用户裁定项维持——窗口阻塞继续，指挥席不代行终止）。三账零改动。下一轮触发同前：用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单 17 件）／h-receipt 增补→登记／空轮一行观察。
+
+## R95 轮 · 2026-10-03 09:4x（指挥席自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-259 落账（07:2x）后零新件；全工作区 08:35 后零新文件变化（排除 同步/3.0最终方案/.workbuddy/bin/obj；gatekeeper＋run 根对 07:35 阈零命中——find 扫描 09:38-09:40 完成）；run 根最新仍 c-g259（f4/f5/final-evidence 未创建）。四线＝L1 D-116 ACTIVE·Phase A STOP-WAIT＊L2/L3/L4 WAITING。09:40 tasklist 实测外部 ArcGISPro PID 38984 仍在位（214,544 K；O-D116-04 用户裁定项维持——窗口阻塞继续，指挥席不代行终止）。三账零改动。下一轮触发同前：用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单 17 件）／h-receipt 增补→登记／空轮一行观察。
+
+## R96 轮 · 2026-10-03 10:5x（指挥席自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-259 落账（07:2x）后零新件；Docs/_gatekeeper＋run 根对 09:45 阈零新文件命中（find 扫描 10:50 完成）；run 根最新仍 c-g259（f4/f5/final-evidence 未创建＝无新在飞产物）。四线＝L1 D-116 ACTIVE·Phase A STOP-WAIT＊L2/L3/L4 WAITING。10:50 tasklist 实测外部 ArcGISPro PID 38984 仍在位（101,224 K；O-D116-04 用户裁定项维持——窗口阻塞继续，指挥席不代行终止）。三账零改动。下一轮触发同前：用户裁定 O-D116-04（关闭外部 Pro／明文授权判定窗／明示 (c) 销单 17 件）／h-receipt 增补→登记／空轮一行观察。
+
+## G-260 轮 · 2026-10-03 11:1x–11:2x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝台账闭环确认轮
+- **确认**：outbox 07:29 后零新件（R-D116 `58AC8AE3` 未动）＝无未采信交付；台账 G-259/§237/214 全闭环；**外部 Pro PID 38984 第三次实测在位**（01:37/07:1x/11:14；6520 OPEN）＝O-D116-04 阻塞维持；白名单 `F355705B`/53 恒定；r2 副本（141 条＝53＋88 候选）就绪获窗即开跑。
+- **O-D116-04 呈报用户**：(a) 关闭外部 Pro／明文授权判定窗／另指时段（裁定 (a)＝预授权自动化轮检测退场即自动解锁开跑，G-257 R-④ 先例）；(c) 明示销单 17 件；(b) 真实工程补验挂账。判定表现值＝22 候选／5 REJECTED（X37/38/39＋X22/X41）／17 待窗口／实证 VERIFIED 0（写入数以重跑实测为准）。
+- **工期**：(a) ⇒ 关 Pro 后 D-116 收官约 3.5-5h，安装推进＋L2 评测 ⇒ 白名单生效＋评测闭环再 +3-6h；(c) ⇒ N=0 收官、GP 扩容线挂起。
+- **轮末**：ACTIVE＝D-116（L1·Phase A STOP-WAIT）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-260／§238／HANDOVER 215。
+
+## G-261 轮 · 2026-10-03 11:2x–11:3x（指挥席手动轮 · 用户裁定「授权终止，立即重跑」）＝O-D116-04 销账＋判定窗窗口开启
+- **执行留证**：taskkill /PID 38984 优雅信号（11:26）→12s 复测自行退出（零强制）→终态 ArcGISPro 0＋6520/6511 双端口 CLOSED。O-D116-04 销账（(a) 路径闭环全链留证）。
+- **解锁裁定**：L1/D-116 判定窗重跑段即刻开工——对象＝r2 副本 141 条（53 对照面＋88 候选），重跑要件＝R-D116 §四·2 逐字；跑毕更新 f3-verdict 判定表＋R-D116 终版呈报；(c) 销单作废；O-D116-03 随对照面取证。
+- **轮末**：ACTIVE＝D-116（L1·判定窗重跑段开工）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-261／§239／HANDOVER 216。工期＝D-116 收官预计今晚。
+
+## R97 轮 · 2026-10-03 11:57–11:59（指挥席自动化轮）· 空轮（执行席重跑在飞，跳过）
+
+- 判定＝空轮：outbox 自 G-261 落账（11:28）后零新件（h-receipt-d116 06:20／R-D116.md 01:19 均已消化）；三账 mtime 11:28–11:29＝G-261 本席落账无并发轮。**外部 ArcGISPro.exe 实测 0 运行（O-D116-04 已销账，判定窗窗口开放维持）**；run 根执行席重跑段活跃作业中——run-20261002-d116/f2-probe/ui-d116.ps1 mtime 11:59:16（本轮核查前 26 秒），属在飞中间产物非交付物，按规跳过不验收。四线＝L1 D-116 ACTIVE·判定窗重跑段开工中＊L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。三账/牌位/镜像/云侧零改动。
+- 下一轮预期（约 12:15/:45）：①执行席重跑段回执（h-receipt-d116 增补）或 f3-verdict/R-D116 终版更新 ⇒ 零采信验收（要件＝R-D116 §四·2 Prepare→Start→Inspect 三查→count=141 回文核对→逐件②③④查→Close 复核归属）；②空轮 ⇒ 一行观察。
+
+## R98 轮 · 2026-10-03 13:02–13:2x（指挥席自动化轮）· G-262＝D-116 §十七/§十八 live-g6 判定窗实跑验收轮
+
+- 触发＝h-receipt-d116 增补（12:30，65,145 B，§十七 G-261 获窗开跑＋§十八 live-g6 三段实跑＋一项停等请示）。验收＝c-g262/verify.py **72/72 双跑 EXIT=0 逐字节一致**（本席口径自纠 2 处留证：聚合 rel:hash 分隔符对表 c-g259；LICENCE-WORDS 系 r3c :193 关键词启发式非「许可报错」）。全中：窗口全链六件（prepare 三哈希/owned pid 39276/scratch≡模板/inspect/close·projectUnchanged）＋副本≡r2 正本 141 条＋三段 probed 94/94/95·notAttempted 0·NO-ERROR 1/1/0＋r3b 010818 恰 26 dot＋audit 93/94/95 行 keyset 12＋raw 98/98/99＋agolservices 零泄漏＋Config F355705B/53 恒定＋聚合 AF21E29F/272＋四写域 11:29 后零写入＋f4/f5/final-evidence 未创建＋终态 ArcGISPro 0/双端口 CLOSED。
+- 裁定＝§十七/§十八全数采信＝执行席零缺陷（自纠四处＋ui-d116.ps1 参数化＝脚本缺陷全 D 盘，纪律加分）；停等请示采 (甲)＝**授权 D:\d116-out 为本批窗口期专用无空格产出根**（清单呈报＋清理另请示）；X44＝REJECTED-SEMANTIC-MISMATCH；段 C 阴性取证不入准入；零新派单；D-116 维持 ACTIVE·判定窗续跑段（live-g7 重开窗→88 候选第②③④查→O-D116-03 对照面→Close→f3-verdict→R-D116 终版呈报）。
+- 落账＝GATE-G262-D116-LIVEG6_RULING.md＋DECISIONS G-262＋DISPATCH §240＋HANDOVER 217＋L1_INBOX 增补（bullet 移位至裁定序列末尾，一轮内自纠留证）＋本档 R98 段＋项目目前情况.md 脚注刷至 G-262＋云侧双推＋当日日志 R98。
+- 下一轮预期（约 13:15/:45）：①执行席 live-g7 续跑回执（h-receipt 增补）或 f3-verdict/R-D116 更新 ⇒ 零采信验收；②D:\d116-out 清单呈报 ⇒ 核对；③空轮 ⇒ 一行观察。
+
+
+## R99 轮 · 2026-10-03 14:2x–14:4x（指挥席自动化轮）· G-263＝D-116 §十九 live-g7 续跑段 r4 验收轮
+
+- 触发＝h-receipt-d116 增补（13:36–13:37，72,996 B，§十九＝live-g7 续跑段 r4＋新阻断面 ASCIIToRaster 010328/010267＋Close 证据件缺席自纠第五处＋D:\d116-out 清册 0 文件）。live-g8 在飞（14:20 起链件在案）按规只验收不触碰。
+- 验收＝c-g263/verify.py **39/39 双跑 EXIT=0 逐字节一致**（run-20261003-g263/c-g263/；本席口径自纠 2 处留证：d116-out 时变面改 ctime 归因断言＋§十九 标题行首正则）。全中：恒定面六项＋四锚 rc=0×4＋live-g7 窗口链全要件＋r4 probed 95/notAttempted 0/isError-false 0＋010818 命中 0（甲面生效实证）＋主审计 95 行 SuccessTrue=0＋微审计 8 行＋010328/010267 双 raw 件＋四写域 13:14 后零写入＋R-D116 未覆写＋回执前段 48F83E655A89 未变＋%TEMP% token 0。
+- 裁定＝§十九全数采信＝执行席零缺陷；E1 登记（「同窗 DefineProjection 成功」措辞缺陷，成功证据位＝live-g6 r3b 前窗）；E2 登记（000875/000876 零 raw 件＝自述待证）；**ASCIIToRaster 阻断面暂缓立缺陷候选**（live-g8 已现管线转机：seed TIFF ctime 14:20:32 备料、14:28 起 pts.shp 产出；以 live-g8 收口回执定案）；Close 整改方案核准；零新派单；D-116 维持 ACTIVE·判定窗续跑段。
+- 落账＝GATE-G263-D116-LIVEG7_RULING.md＋DECISIONS G-263＋DISPATCH §241＋HANDOVER 218＋L1_INBOX 裁定行＋项目目前情况.md 脚注刷至 G-263＋本档 R99 段＋云侧双推＋当日日志 R99。
+- 下一轮预期（约 14:45/15:15）：①执行席 live-g8 收口回执（§二十）或 f3-verdict/R-D116 更新 ⇒ 零采信验收（要点＝VERIFIED 计数与审计 Success 双面核对＋新码须落 raw 件＋Close 证据件在案）；②空轮 ⇒ 一行观察。
+
+## R100 轮 · 2026-10-03 15:4x–16:0x（指挥席自动化轮）· G-264＝D-116 §二十/§二十一 live-g8/g9 验收轮
+
+- 触发＝h-receipt-d116 增补（15:38，89,842 B，§二十 live-g8 r5/r5b＋§二十一 live-g9 r6＋关窗楔形停等请示）。L2/L3/L4 无新交付＝仅 L1 动作。
+- 验收＝c-g264/verify.py **45/45 双跑 EXIT=0 逐字节一致**（run-20261003-g264/c-g264/）。全中：恒定面七项＋四锚 rc=0×4＋g8 链（owned 39576＋r5b 2242A9F8BF2A/probed 27/NO-ERROR 恰 2 现役面/审计 30 行/close-manual 2866E68AD485）＋g9 链（owned 13592＋r6 probed 47/notAttempted 21/超时 10/NO-ERROR 恰 2＝Hillshade.band2＋BandCollectionStats/BC destructive:true+named）＋关窗链（close-result closed=false＋哨兵在场＋现场 Pro 恰 1 行＝13592 未强杀）＋真产出（q20221.TXT 324B/pts.shp 58,905,100/dsrc.tif≡d103 源件）＋四写域零写入＋%TEMP% token 0。
+- 裁定＝§二十/§二十一采信＝执行席零缺陷；本批首次真磁盘产出＝第④查通路可达实证；ASCIIToRaster 定案不立案销案＋多波段面定案＋E2 销案；BandCollectionStats 初判 VERIFIED-ADMITTABLE（destructive=true 随件，终裁随终版呈报）；10 件 NOT-VERIFIED-TIMEOUT 口径采信＋小样本复跑整改；**关窗楔形采 (甲)＝授权定向 taskkill 自有 PID 13592**（三重归属核对＋外部零触碰＋终态留证）；D:\d116-out 77 件维持授权清理另请示；G-197 零违例；基线零推进。
+- 落账＝GATE-G264-D116-LIVEG8G9_RULING.md＋DECISIONS G-264＋DISPATCH §242＋HANDOVER 219＋L1_INBOX 裁定行＋项目目前情况.md 脚注刷至 G-264＋本档 R100 段＋云侧双推＋当日日志 R100。
+- 下一轮预期（约 16:15/16:45）：①执行席 §二十二关窗终态回执（Pro 0/双端口 CLOSED/projectUnchanged 复算）→10 件复跑＋21 notAttempted 补完→f3-verdict 更新（X44＋BC 落表）→R-D116 终版呈报 ⇒ 零采信验收（VERIFIED 计数与审计双面核对）；②空轮 ⇒ 一行观察。
+
+
+### R101 段 · G-265 轮 · 2026-10-03 17:0x–17:1x（自动化轮 · D-116 §二十二 live-g10 r7 验收）
+
+- 触发：h-receipt-d116 增补（16:37，98,054 B）＝L1/D-116（ACTIVE）新交付；L2/L3/L4 无新交付；三账尾值 15:59:24 先于回执＝零并发轮；G-265/§243/220 grep 零撞号。
+- 独立复算：c-g265/verify.py **43/43 双跑 EXIT=0 逐字节一致**（run-20261003-g265/c-g265/）。本席脚本自纠三处留证：①os.getsize→os.path.getsize；②SETUP 键名 RasterToPoint#small；③kill-authorized.txt 须 GBK 解码（taskkill 输出）。全绿：恒定面七项＋kill 链四要件＋终态四件套＋live-g10 链＋r7 计数面（31/28/5/NO-ERROR 2＝DefineProjection+MakeRasterLayer/超时 4/插值族 5）＋自纠真值复点（q30161 缺席/q30211* 零命中/q20221.TXT 324B/dsrc.tif.xml 在场）＋楔形现场（Pro 恰 1 行 17464/6520 OPEN/6511 CLOSED/锁件 2）＋d116-out 74 件/138,766,166B＋四写域零写入＋%TEMP% token 0。
+- 采信：§二十二全数采信＝执行席零缺陷；三处取证口径自纠＋原值不回填＝诚实申报纪律满分；kill_rc=null 口径瑕疵登记 N3（整改建议：rc 落实值或注明文本回执替代）。
+- 裁定：R-1 楔形采 (甲) 扩及自有 PID 17464（四要件）；R-2 楔形终态三件呈报固化；R-3 插值族/超时族小样本再试一次后收口；R-4 独立输入副本整改；R-5 Resample 二现登记 O-D116-03；R-6 X20 终裁随 R-D116 终版；R-8 d116-out 74 件维持授权；R-9 G-197 零违例；R-10 基线零推进。零新派单。
+- 落账：GATE-G265-D116-LIVEG10_RULING.md＋DECISIONS G-265＋DISPATCH §243＋HANDOVER 220＋L1_INBOX 裁定行＋镜像两档（项目目前情况.md 脚注刷至 G-265＋本档 R101 段）＋云侧双推＋当日日志 R101＋MEMORY v62＋本节。
+- 下一轮预期（约 17:45/18:15）：①执行中 R-1 处置 17464＋小样本补完回执或 f3-verdict/R-D116 终版更新 ⇒ 零采信验收（要点：VERIFIED 计数与审计 Success 双面核对；X20 语义材料逐条审；Resample 双 raw 在档）；②空轮 ⇒ 一行观察。
+
+## R102 轮 · 2026-10-03 18:31–18:33（自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-265 落账（17:20–17:21）后零新件（h-receipt-d116 16:37 已由 G-265 消化；find -newermt 17:20 对 outbox/run 根零命中）；run 根最新仍 c-g265（无 f3-verdict/R-D116 更新）；三账 mtime 17:20–17:21＝G-265 本席落账无并发轮。18:31 现场：ArcGISPro PID 17464 在位（楔形 R-1 (甲) 授权处置待执行席动作，指挥席不代行）＋6520 OPEN/6511 CLOSED。四线＝L1 D-116 ACTIVE·判定窗收口段（R-1 处置＋小样本补完＋f3-verdict＋R-D116 终版待交）＊L2/L3/L4 WAITING。三账零改动。
+- 动作：本档 R102 行 → 当日日志 R102 段 → 自动化记忆；三账/牌位零改动。
+- 下一轮预期（约 18:45/19:15）：①R-1 处置回执或 f3-verdict/R-D116 终版更新 ⇒ 零采信验收；②空轮 ⇒ 一行观察。
+
+## G-266 轮 · 2026-10-03 19:0x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝判定窗收口段在飞确认
+- **确认**：§二十二已由 G-265（c-g265 43/43）采信闭环；outbox 零未采信；R-D116 终版未现；**live-g11 判定窗在飞**（G-265 R-3 小样本补完段——18:39 开窗，owned PID 35060，6520 OPEN 判定窗自用，每候选独立输入副本〔R-4〕；对象＝5 notAttempted 插值族＋4 timeout 复试）；白名单 F355705B/53 恒定。
+- **判定窗现势**：真磁盘产出实证候选 1 件（sa.BandCollectionStats→X20，语义相符性存疑提请终审）；DefineProjection/MakeRasterLayer 执行成功零独立磁盘产出（口径自纠采信）；X44＝REJECTED-SEMANTIC-MISMATCH；插值族结构性耗时＋sa.Resample unknown GP error 两度阻断（O-D116-03 二现）。
+- **裁定**：零新交付零新派单；live-g11 跑毕回执 §二十三 由下轮（19:15/19:45）零采信验收；收口序不变＝f3-verdict 更新→R-D116 终版呈报→指挥席终审（X20 语义＋VERIFIED 终值）→Phase B 待裁另派。
+- **工期**：D-116 收官预计今晚 22-24 时；安装推进＋L2 评测 ⇒ 白名单生效＋评测闭环明日（10-04）上半；全局 10-05 清零测算不变。
+- **轮末**：ACTIVE＝D-116（L1·live-g11 在飞）；L2/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-266／§244／HANDOVER 221。
+
+## R103 轮 · 2026-10-03 19:35–19:37（自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-265/G-266 落账后零新件（h-receipt-d116 mtime 16:37:14 未动；find -newermt 19:00 对 outbox/inbox 零命中）；run 根最新仍 c-g266（无 f3-verdict/R-D116 终版更新）。19:35 现场：live-g11 判定窗活跃在飞（owned ArcGISPro PID 35060 在位 154,240 K；scratch d116-live-g11.aprx 刚被写入＝候选探针进行中；其 mtime 显示 20:35:47 较本席系统时钟约领先 1 小时——疑文件系统时区偏移，如实登记不判违例；6520 LISTENING PID 4＝http.sys 宿主伴生 G-230 R-2 先例族；6511 无监听）。四线＝L1 D-116 ACTIVE·判定窗在飞＊L2/L3/L4 WAITING。三账零改动。
+- 动作：本档 R103 行 → 当日日志 R103 段 → 自动化记忆；三账/牌位零改动。
+- 下一轮预期（约 20:05/20:15）：①live-g11 跑毕回执 §二十三 或 f3-verdict/R-D116 终版更新 ⇒ 零采信验收；②空轮 ⇒ 一行观察。
+
+## R104 轮 · 2026-10-03 20:40–20:42（自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-265/G-266 落账后零新件（h-receipt-d116 mtime 16:37 未动；find -newermt 19:00 对 outbox/inbox 零命中）；run 根最新仍 c-g266（无 f3-verdict/R-D116 终版更新）。20:41 现场：live-g11 判定窗在飞（owned ArcGISPro PID 35060 在位 164,212 K；6520 LISTENING PID 4＝http.sys 宿主伴生先例族；6511 无监听）。**R103 观察行勘误**：d116-live-g11.aprx mtime 实为 2026-10-02 20:35:47（模板拷贝语义保留源 mtime，同 R99 seed TIFF 先例），非「刚被写入」——live-g11 树自 18:39 开窗（prepare/owned-process 两件）后零新写入，探针产物尚未落盘；窗口已开启约 2 小时，属插值族/超时族小样本补完段正常耗时形态，指挥席不代行不催办，如实登记。四线＝L1 D-116 ACTIVE·判定窗在飞＊L2/L3/L4 WAITING。三账零改动。
+- 动作：本档 R104 行 → 当日日志 R104 段 → 自动化记忆；三账/牌位/镜像脚注/云侧零改动。
+- 下一轮预期（约 20:45/21:15）：①live-g11 跑毕回执 §二十三 或 f3-verdict/R-D116 终版更新 ⇒ 零采信验收（VERIFIED 计数与审计 Success 双面核对；X20 语义材料逐条审）；②空轮 ⇒ 一行观察（若仍零写入将登记窗口静默时长供收口段参考）。
+
+## R105 轮 · 2026-10-03 21:45–21:46（自动化轮）· 空轮
+
+- 判定＝空轮：outbox 自 G-265/G-266 落账后零新件（h-receipt-d116 mtime 16:37 未动；R-D116.md 01:19 未动）。21:45 现场：**live-g11 判定窗已从静默转入收口产出**——probe-report-r8.json＋r8-run.txt（21:38）＋close-attempt.txt/close-result.json（21:42）＋f3-verdict-v2/verdict-table-v2.json/md（21:45，本席观测时点仍在写入中）＝终版判定表构建段进行中；owned ArcGISPro PID 35060 在位 606,720 K（较 20:41 的 164,212 K 显著增长＝r8 实跑产出）。四线＝L1 D-116 ACTIVE·判定窗收口段＊L2/L3/L4 WAITING。三账零改动。
+- 动作：本档 R105 行 → 当日日志 R105 段 → 自动化记忆；三账/牌位/镜像脚注/云侧零改动。
+- 下一轮预期（约 22:15/22:45）：①verdict-table-v2 定稿＋回执 §二十三/R-D116 终版落 outbox ⇒ 零采信验收（VERIFIED 计数与审计 Success 双面核对；R-1 处置回执、X20 语义材料、small-sample 收口逐项审）；②空轮 ⇒ 一行观察。
+
+## R106 轮 · 2026-10-03 22:48–23:1x（自动化轮）· **D-116 终版验收轮＝批次收官（G-267）**
+
+- 触发：outbox 新交付＝R-D116-v2.md（21:49，10,603 B/F9CF0217FF71）＋h-receipt-d116.md §二十三（21:52，104,937 B）＝L1 D-116 ACTIVE 终版呈报（STOP-WAIT）；L2/L3/L4 无新交付；三账 19:04＝G-266 落账后零变化无并发轮；G-267/§245/HANDOVER 222 grep 零撞号（§244 已被 G-266 手动轮占用，顺延 §245）。
+- 零采信验收：c-g267/verify.py **53/53 双跑 EXIT=0 逐字节一致**（run-20261003-g267/c-g267/）。恒定面七项＋R-1 终止链 17464 四件套＋live-g11 r8（9 目标/7 probed/371.1 s/超时 3/GP 报错 2＋SETUP 1/护栏 4/M1 自曝/独立副本）＋f3-verdict-v2（22 行/6+16/86,86,86/X20 双态并陈）＋X20 独立复点（q20221.TXT 324 B＋审计行第 24 行全字段）＋楔形现场态（PID 35060/6520 OPEN/锁 2）＋d116-out 79 件/139,158,006 B＋四写域零写入＋%TEMP% token 0 全绿。本席脚本自纠三处留证（targets 字段/GP-ERROR 分类/表级 stopWaitAsk 口径）。
+- 裁定（G-267）：§二十三/R-D116-v2 全数采信＝执行席零缺陷；**X20 终裁 REJECTED-SEMANTIC-MISMATCH ⇒ VERIFIED=0/N=0**（point-cloud-terrain 域 vs 波段统计语义距离大，X44 先例＋G-253 宁缺勿凑）；插值族口径采认不补轮（M1 封账）；楔形 35060 清场采 (甲)；d116-out 清理授权附取证前置；**D-116 CLOSED**（Phase B 不启动；白名单恒定 53；O-D116-02 销账）；L1→WAITING；L2 D-117 评测闭环下一轮两查拟制派发；G-197 零违例；基线零推进。
+- 落账：GATE-G267-D116-FINAL_RULING.md＋DECISIONS G-267＋DISPATCH §245＋HANDOVER 222＋L1_INBOX CLOSED 行＋镜像两档（脚注 G-267＋本档 R106 段）＋云侧双推＋当日日志 R106＋MEMORY v63＋本节。
+- 下一轮预期（约 23:15/23:45）：①D-117/L2 派单拟制（派单两查先行：分类预检＋契约逐字预检＋prereg 名册差集＋配置/闸面全仓无滤消费者重扫）；②执行席 R-3/R-4 收尾回执（楔形清场＋d116-out 取证清理）⇒ 登记；③空轮 ⇒ 一行观察。
+
+## R107 轮 · 2026-10-04 00:05–00:2x（自动化轮）· **派单轮＝D-117/L2 评测闭环批派发（G-268）**
+
+- 判稳：outbox 自 G-267 落账（23:01）后零新件；三账零并发轮；G-268/§246/HANDOVER 223 零撞号。现场：ArcGISPro PID 35060（楔形待清，指挥席不代行）＋6520 OPEN＝不阻 Phase A 零执行批。白名单现算对表零差集（F355705BF2C4/30,634 B/53 条）。
+- 动作＝派单：依 G-267 R-6 派 D-117/L2（GP 白名单 53 件评测闭环批，ACTIVE）——派单四查全过（G-268 在案）；范围＝Phase A 零执行评测闭环（逐件台账＋语料 revision-3 覆盖差集＋闭环报告落 Benchmarks/；缺输入挂账 NOT-AVAILABLE-PENDING-USER；结论标注「合成输入基准」；实证 VERIFIED 不得自造）→STOP-WAIT→Phase B 真机窗另裁。默认拍板依据＝G-266 R-4 工期口径（L2 评测 2-4h）＋GIS 写入授权边界＋G-267 R-6。
+- 落账：L2_INBOX D-117 工单＋变更历史行＋DECISIONS G-268＋DISPATCH §246＋HANDOVER 223＋镜像两档＋云侧双推＋当日日志 R107＋MEMORY v64＋自动化记忆本节。
+- 下一轮预期（约 00:45/01:15）：①执行席 D-117 开工回执（三态核对＋五项快照＋53 对表）⇒ 登记；②执行席 R-3/R-4 收尾回执（楔形清场＋d116-out 取证清理）⇒ 登记；③空轮 ⇒ 一行观察。
+
+## R108 轮 · 2026-10-04 01:22–01:4x（自动化轮）· **G-269＝D-117 开工回执验收＋请裁四条裁定轮**
+
+- 触发：outbox h-receipt-d117.md（01:08 申报/01:12，14,188 B）＝L2 D-117 ACTIVE 开工回执（回执先行；R-D117.md 未交，Phase A 产物 4 件 gp-* 在飞落盘）；三账 00:16＝G-268 落账无并发轮；G-269/§247/HANDOVER 224 零撞号。
+- 独立复算：c-g269/verify.py **40/40 双跑 EXIT=0**（run-20261004-g269/c-g269/）。本席口径自纠 4 处留证（mtime 亚秒／名册 end 标记全名／Benchmarks 时变面改「新增⊆预告 gp-* 写入面」／运行态三查改状态记录式）。全中：五项快照 B1–B5＋四锚 rc=0×4＋名册恒等 53＋窗副本 front53≡Config＋verdict 词族 15/1/3/2/1＋证据件 4 件实存＋真 %TEMP% token 0。
+- **E3 观察项（登记不升级）**：回执 §六/D3「ArcGISPro 0 行」误报——R107（00:1x）与 c-g269 首跑（01:37）双实测楔形 PID 35060 在位（StartTime 10-03 18:39:05）；01:37–01:40 间楔形被清场（终跑实测 Pro 0/双端口 CLOSED）＝L1 R-3 执行中。令 R-D117 终版勘误＋解析口径自纠。
+- **请裁四条裁定**：①「可执行输入面＝0」＝工作假设采认，终裁随 R-D117；Phase B 维持 STOP-WAIT；工作空间 fixture 输入批拟制挂账（L2 语料域优先，真实数据→用户项）。②O-D116-03 四件＝「反查异常在册＋未裁准入」。③扩展词元 NOT-VERIFIED-EXEC-SUCCEEDED-ADMISSION-UNRULED（d117CalibrationChoice）采认，inCaseToken 原样。④TRANSIENT-PENDING-L1-R4-COPY 指针采认（R-4 清理后换代，不判悬空）。
+- 裁定：开工回执全数采信＝执行席零产品缺陷；D-117 维持 ACTIVE·Phase A；L1 WAITING（R-3/R-4 回执待登记）；L3/L4 WAITING；基线零推进；G-197 零违例。
+- 落账：DECISIONS G-269＋DISPATCH §247＋HANDOVER 224＋L2_INBOX 裁定行＋变更历史＋镜像两档＋云侧双推＋当日日志 R108＋MEMORY v65＋自动化记忆本节。
+- 下一轮预期（约 01:45/02:15）：①R-D117.md＋evidence-index 落 outbox ⇒ 零采信终验（E3 勘误核查）；②L1 R-3/R-4 收尾回执 ⇒ 登记；③空轮 ⇒ 一行观察。
+
+
+## R109 轮 · 2026-10-04 02:52–03:1x（自动化轮 · G-270）· D-116 §二十四收尾执行登记验收轮
+
+- 触发：h-receipt-d116 增补（02:34，112,053 B）＝§二十四 两件授权动作执行登记（G-267 R-3 楔形清场 PID 35060＋R-4 D:\d116-out 取证前置清理）＋两项流程缺口自报；三账 01:46＝G-269 落账无并发轮；G-270/§248/HANDOVER 225 零撞号。
+- 独立复算：c-g270/verify.py **37/37 双跑 EXIT=0**（run-20261004-g270/c-g270/）。本席口径自纠 4 处留证（标记词键名／L2_INBOX mtime 预期值／TestFixtures 计数转 E4／gatekeeper 写域归因含本席落账面）。
+- 全中：R-3 链（kill_rc=0／Pro 0／双端口 CLOSED／projectUnchanged／锁 2→0 未手删／三重归属 35060=d116-live-g11=7727640F／补跑 inspect 件）＋R-4 链（q20221 324B FD785BB92C22 copyEqual／77 件 139,158,006 B 清单聚合 B05E619CECC4 逐字公式复现／ROOT ABSENT 现场复核）＋77/79 差值=2 锁件对表＋v1 缺陷脚本在留＋r4c 修复版＋恒定面九项＋写域归因＋%TEMP% token 0。
+- 裁定：§二十四全数采信＝执行席零缺陷（漏跑 Inspect 自报＋scope 守卫 fail-safe 自报采信不升级）；E4＝TestFixtures 415/416 计数维度差异登记不补轮；**L1 收尾义务清零＝WAITING；D-116 CLOSED 维持**；D-117 L2 ACTIVE·Phase A 维持；基线零推进；零新派单。
+- 落账：GATE-G270-D116-CLOSURE_RULING.md＋DECISIONS G-270＋DISPATCH §248＋HANDOVER 225＋L1_INBOX 裁定行＋镜像两档＋云侧双推＋当日日志 R109＋MEMORY v66＋自动化记忆本节。
+- 下一轮预期（约 03:15/03:45）：①R-D117.md＋evidence-index 落 outbox ⇒ 零采信终验（E3 勘误核查）；②空轮 ⇒ 一行观察。
+
+## R110 轮 · 2026-10-04 04:10–04:4x（自动化轮 · G-271）· D-117 Phase A 终版交付验收轮＝Phase A CLOSED
+
+- 触发：outbox R-D117.md（02:49:35，9,788 B）＝D-117 Phase A（零执行闭环台账）终版 PASS CANDIDATE；三账 03:1x（G-270 落账）无并发轮；G-271/§249/HANDOVER 226 落账前 grep 零撞号（c-g271 J02 现场核）。
+- 独立复算：c-g271/verify.py **58/58 双跑 EXIT=0**（run-20261004-g271/c-g271/，除 generatedAt 双跑逐字段一致）。本席口径自纠 4 处留证（gp-whitelist 条目键名＝tool／覆盖差集逐件字段形态与 R-D117 §二②不符→转观察项 W1／evidence-index 清单正则 37=33+4 修正后逐件全中／人读件基准 token 用『合成语料 revision-3』承载→转观察项 W2）。
+- 全中：交付面 5 件哈希字节逐件复算＋h-receipt-d117 14,188 B/mtime 01:12:26 字节未动＋L2_INBOX 未触牌位；工单门①闭环算术 0+3+3+47=53 逐字一致＋VERIFIED 0 次＋12 字段逐行＋dotName≡白名单顺序＋ps_ 0；门②53 条名集≡白名单＋gapCitations 逐条可解析＋全域 False(53/53)＋md 逐件『否』53 行；门③『合成输入基准』53/53＋claimLimit 语义限定 53/53；在案引用 14 条 file:line 全落点标记全中；三件 EXEC-SUCCEEDED 证据+choiceBasis 在场／47 件 NONE-IN-CASE 证据全空（H5 防混入实证）；O-D116-03 四件 namingOrAliasAnomaly 非空；E3 勘误落实三件全中（R-D117 §六＋evidence-index §一＋verify-intake 谓词整改；intake r5=21/22→r6=22/22；本席 tasklist 真值核验 Pro 0 行）；run 根 os.walk 33 件≡清单逐件复算；intake/delivery 终轮 22/22＋33/33＋崩溃轮 selfcheck-r1.out 留证；恒定面九项零推进；四写域切点 00:16:04 后零写入＋Benchmarks 新增恰 4 件 gp-*＋真 %TEMP% token 0＋双端口 CLOSED＋无 f4-write/f5-tests。
+- 裁定：①R-D117 全数采信＝执行席零缺陷，**D-117 Phase A CLOSED（验收 PASS）**；②观察项 W1/W2 登记不升级；③Phase B 维持 STOP-WAIT（三重出处支持输入缺口；fixture 输入批＝用户裁定项不代行）；第五锚暂不冻结（合法改写路径在，待全链收官批裁定；5 件哈希全量留证）；瞬态引用换代义务登记 L2 待办（机读 jsonl 0 引用；人读 md 3 处 D:\d116-out 引用，随 L2 下一批合并执行）；④承前挂账维持；⑤**L2 WAITING**（派单触发＝用户裁定 fixture 输入批数据源），L1/L3/L4 WAITING；⑥基线零推进；⑦G-197 零违例（本席 TEMP/PYCACHE 钉 run-20261004-g271 根）。
+- 落账：GATE-G271-D117-PHASEA_RULING.md＋DECISIONS G-271＋DISPATCH §249＋HANDOVER 226＋L2_INBOX status 改写（PHASE-A-CLOSED · STOP-WAIT）＋裁定行＋镜像两档＋云侧双推＋当日日志 R110＋MEMORY v67＋自动化记忆本节。
+- 下一轮预期（约 04:45/05:15）：①四线全 WAITING——R-D117 已验、无其他待验收交付 ⇒ 空轮（一行观察）；②用户裁定 fixture 输入批后 ⇒ 派 Phase B 窗／输入批（两查先行）。
+
+## R111 轮 · 2026-10-04 05:36–05:4x（自动化轮）· **空轮＝四线全 WAITING，outbox 零新交付**
+
+- 观察：outbox 最新交付件仍为 R-D117.md（02:49）/h-receipt-d117.md（01:12），均已由 G-271（04:4x）零采信验收采信＝Phase A CLOSED；04:45 后 `_gatekeeper/` 全树零新文件（find -newermt 现核）。四线牌位现值：L1 WAITING（D-116 CLOSED·G-267，收尾义务 R-3/R-4 已 G-270 清零）；L2 D-117 **PHASE-A-CLOSED · STOP-WAIT**（G-271；Phase B 触发＝用户裁定「工作空间可承载 fixture 输入批」数据源）；L3/L4 WAITING。三账现值 G-271/§249/HANDOVER 226，无并发轮（G-272 grep 0 命中）。G-197 抽查本轮无动作零写入。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 05:45/06:15）：①四线维持 WAITING ⇒ 空轮（一行观察）；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）；③无其他待验收对象。
+
+## R112 轮 · 2026-10-04 06:41–06:4x（自动化轮）· **空轮＝四线全 WAITING，outbox 零新交付**
+
+- 观察：outbox 最新交付件仍为 R-D117.md（02:49）/h-receipt-d117.md（01:12），均已由 G-271（04:4x）采信＝Phase A CLOSED；04:40 后 `_gatekeeper/`＋Benchmarks/Source/Tests/Config/Docs/assets 全树零新文件（find -newermt 现核；run-20261001-d112 目录 mtime 触碰系目录项级，内部 8 件零变化＝非实质写入）。四线牌位现值：L1 WAITING（D-116 CLOSED·G-267）；L2 D-117 **PHASE-A-CLOSED · STOP-WAIT**（G-271；Phase B 触发＝用户裁定「工作空间可承载 fixture 输入批」数据源）；L3/L4 WAITING。三账现值 G-271/§249/HANDOVER 226，无并发轮（G-272 grep 零改动前提成立）。G-197 抽查本轮无动作零写入。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 06:45/07:15）：①四线维持 WAITING ⇒ 空轮（一行观察）；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）；③无其他待验收对象。
+
+## R113 轮 · 2026-10-04 07:44–07:4x（自动化轮）· **空轮＝四线全 WAITING，outbox 零新交付**
+
+- 观察：outbox 最新交付件仍为 R-D117.md（02:49）/h-receipt-d117.md（01:12），均已由 G-271 采信＝Phase A CLOSED；06:41 后 `_gatekeeper/` 全树 find -newermt 零新文件。四线牌位现值：L1 WAITING；L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）；L3/L4 WAITING。三账现值 G-271/§249/HANDOVER 226，无并发轮。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 07:45/08:15）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+## R114 轮 · 2026-10-04 08:47–08:4x（自动化轮）· **空轮＝四线全 WAITING，outbox 零新交付**
+
+- 观察：outbox 最新交付件仍为 R-D117.md（02:49）/h-receipt-d116.md（02:34）/h-receipt-d117.md（01:12），均已由 G-270/G-271 采信；04:31 后 `_gatekeeper/` 全树 find -newermt 零新文件（仅 L2_INBOX.md 系 G-271 本席落账自身 mtime）。四线牌位现值：L1 WAITING（D-116 CLOSED）；L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）；L3/L4 WAITING。三账现值 G-271/§249/HANDOVER 226，G-272 grep=0，无并发轮。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 08:45/09:15）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+- 观察（R115，09:58 自动化轮）：outbox 零新交付（R-D117.md 02:49／h-receipt-d116.md 02:34／h-receipt-d117.md 01:12 均已 G-270/G-271 采信）；08:40 后 `_gatekeeper/` 全树 find -newermt 零新文件；四线牌位现值 L1 WAITING／L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）／L3/L4 WAITING；三账现值 G-271/§249/HANDOVER 226，G-272 grep=0，无并发轮。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 10:15/10:45）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+## R116 轮 · 2026-10-04 11:05（自动化轮）· 空轮
+- 观察（R116，11:05 自动化轮）：outbox 零新交付（R-D117.md 02:49／h-receipt-d116.md 02:34／h-receipt-d117.md 01:12 均已 G-270/G-271 采信）；09:58 后 `_gatekeeper/`＋Benchmarks/Source/Tests/Config 全树 find -newermt 零新文件；四线牌位现值 L1 WAITING／L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）／L3/L4 WAITING；三账现值 G-271/§249/HANDOVER 226，G-272 grep=0，无并发轮。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 11:15/11:45）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+## R117 轮 · 2026-10-04 12:09（自动化轮）· 空轮
+- 观察（R117，12:09 自动化轮）：outbox 零新交付（R-D117.md 02:49／h-receipt-d116.md 02:34／h-receipt-d117.md 01:12 均已 G-270/G-271 采信）；11:05 后 `_gatekeeper/`＋Benchmarks/Source/Tests/Config 全树 find -newermt 零新文件；四线牌位现值 L1 WAITING／L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）／L3/L4 WAITING；三账现值 G-271/§249/HANDOVER 226，G-272 grep=0，无并发轮。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 12:15/12:45）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+## R118 轮 · 2026-10-04 13:12（自动化轮）· 空轮
+- 观察（R118，13:12 自动化轮）：outbox 零新交付（R-D117.md 02:49；h-receipt-d116.md 02:34；h-receipt-d117.md 01:12 均已 G-270/G-271 采信）；12:09 后 `_gatekeeper/`＊Benchmarks/Source/Tests/Config 全树 find -newermt 零新文件；G-272 grep=0，无并发轮。四线牌位现值：L1 WAITING（D-116 CLOSED）；L2 D-117 PHASE-A-CLOSED · STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）；L3/L4 WAITING。三账现值 G-271/§249/HANDOVER 226。**附注**：`.runtime/evolution/v5-f/l4-idle-scratch/`（13:05）为空目录、内零文件，判定＝巡查/探针伴生，零产品影响，不立违规。**三账零改动，仅本档追加本行。**
+- 下一轮预期（约 13:15/13:45）：①四线维持 WAITING ⇒ 空轮；②用户裁定 fixture 输入批数据源后 ⇒ L2 Phase B 窗/输入批派单（两查先行）。
+
+## R119 轮 · 2026-10-04 14:16（自动化轮）· 空轮
+- outbox 零新交付（最新仍 R-D117.md 02:49，已 G-271 采信）；13:12 后 _gatekeeper＋Benchmarks/Source/Composition.cs 全树 find -newermt 零新文件；三账 G-271/§249/HANDOVER 226 无并发轮（G-272 grep=0）。四线：L1 WAITING／L2 D-117 Phase-A-CLOSED·STOP-WAIT（Phase B 触发＝用户裁定 fixture 输入批数据源）／L3/L4 WAITING。三账零改动，仅执行者档追加 R119 观察行。
+
+## G-272 轮 · 2026-10-04 14:5x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝四线全 WAITING 确认轮
+- **确认**：outbox 零未采信（台账 G-271/§249/226 闭环）；**D-116 终态复核全绿**（白名单 F355705B/53 恒定／D:/d116-out ABSENT＝G-270 R-4 落实／ArcGISPro 0／D-117 交付物 4 件在场：gp-input-coverage-gap-v1＋gp-whitelist-closure-53-v1）。
+- **呈报用户**：D-117 Phase B（真机评测窗）STOP-WAIT——53 件现役白名单全域 executableInputAvailable=False（Phase A 实证），触发＝用户裁定 fixture 输入批数据源：①合成 fixture（D-101 先例机械复用）②真实数据源③暂缓转 M4 半区。
+- **工期**：①⇒ 评测闭环 +1 天内（合成 2-4h＋Phase B 3-5h＋验收 0.5h），全局 10-05～10-06；③⇒ 转 M4 半区（8-13h）全局仍 10-05～10-06。
+- **轮末**：四线全 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-272／§250／HANDOVER 227。
+
+## G-273 轮 · 2026-10-04 15:0x（指挥席手动轮 · 用户裁定「授权合成 fixture」）＝L2 合成段解锁
+- **用户裁定**：D-117 Phase B 数据源＝合成 fixture（G-269 R-① 合并裁定项闭环；工作空间可承载随合成路径成立）。
+- **解锁**：L2/D-117 fixture 合成段即刻开工——53 件白名单 GP 函数逐件合成合格评测输入（D-101/G-222 R-1 先例机械复用：脚本化＋种子＋hash＋lineage＋synthetic 标注；落 Benchmarks 语料域；零真机零 GP 调用零 Pro；四锚与冻结面不改；既有 78 件只增不碰）；逐件覆盖映射刷新。**Phase B 真机评测窗＝合成段验收后另批派单**（live-g* 先例＋env 机制）。
+- **工期**：合成 2-4h→验收 0.5h→Phase B 3-5h→验收 0.5h ⇒ GP 评测闭环今晚～明日上半；全局 10-05～10-06 不变。
+- **轮末**：ACTIVE＝D-117（L2·fixture 合成段开工）；L1/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-273／§251／HANDOVER 228。
+
+## R120 轮 · 2026-10-04 15:1x（自动化轮）＝空轮
+- outbox 零新交付（最新仍 R-D117.md 02:49/h-receipt-d116.md 02:34/h-receipt-d117.md 01:12，均已 G-270/G-271 采信）；14:50 后 _gatekeeper＋核心写域仅 G-272/G-273 落账件（DECISIONS/DISPATCH/HANDOVER/L2_INBOX＋g272/g273 run 根），零执行产出。
+- 四线：L1 WAITING；**L2 D-117 ACTIVE（fixture 合成段 15:0x 开工，G-273 解锁；R-D117 合成段交付在飞，未到）**；L3/L4 WAITING。三账现值 G-273/§251/HANDOVER 228＝15:0x 手动轮已落账，无并发轮。
+- 处置＝空轮：三账零改动，仅本档追加本行观察。下一触发＝outbox 出现 D-117 合成段交付（R-D117 增补/h-receipt）→ 零采信验收。
+
+## R121 轮 · 2026-10-04 16:26（自动化轮）· 空轮
+- outbox 零新交付（最新仍 R-D117.md 02:49，已 G-271 采信）；15:10 后 _gatekeeper 全树零新文件；三账 G-273/§251/HANDOVER 228 无并发轮（G-274 grep=0）。
+- 四线：L1/L3/L4 WAITING；**L2 D-117 ACTIVE·fixture 合成段在飞**（Benchmarks 15:51-16:12 新增 21 件＝gp53 fixture 输入面 15 件＋closure/coverage/inputs v1-v2 台账 6 件，属 G-273 授权合成段产物，D 盘合规零违例；交付未到，本轮跳过不验收）。三账零改动，仅本档追加 R121 观察行。下一触发＝outbox 出现 D-117 合成段交付（R-D117 增补/h-receipt）→ 零采信验收。
+
+R122（2026-10-04 17:28 自动化轮·空轮，L2 在飞跳过）：outbox 零新交付（R-D117.md 02:49 已 G-271 采信）；16:20 后仅 Benchmarks 合成段在飞产物续增（gp-fixture-inputs-v1／gp-input-coverage-gap-v2／gp-whitelist-closure-53-v2 台账 6 件＋inputs/gp53 输入 15 件），G-273 授权合成段交付未到按规跳过不验收；G-274 grep=0 无并发轮；三账现值 G-273/§251/HANDOVER 228。四线：L1/L3/L4 WAITING；L2 D-117 ACTIVE·fixture 合成段在飞。三账零改动，仅本档追加本行。另：本档 R121 段前轮误以 GBK 追加致混合编码，本轮已原位修复为 UTF-8（内容逐字不变，留证）。下一触发＝outbox 出现 D-117 合成段交付（R-D117 增补/h-receipt）→ 零采信验收（核对：78 件语料只增不碰＋四锚不改＋零真机零 GP 调用＋synthetic/lineage 标注）。
+
+## R123 轮 · 2026-10-04 18:33（自动化轮）· 空轮（L2 在飞跳过）
+- outbox 零新交付（R-D117.md 02:49 已 G-271 采信）；17:28 后 _gatekeeper＋Benchmarks/Source/Tests/Config 全树 find -newermt 零新文件；G-274 grep=0 无并发轮；三账现值 G-273/§251/HANDOVER 228。
+- 四线：L1/L3/L4 WAITING；L2 D-117 ACTIVE·fixture 合成段在飞（G-273 授权，最后产物活动约 16:2x，交付未到按规跳过不验收）。三账零改动，仅执行席档追加 R123 观察行。
+- 下一触发＝outbox 出现 D-117 合成段交付（R-D117 增补/h-receipt）→ 零采信验收（核对：78 件语料只增不碰＋四锚不改＋零真机零 GP 调用＋synthetic/lineage 标注）。
+
+## G-274 轮 · 2026-10-04 19:5x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝合成段验收 PASS＋Phase B 真机评测窗派单
+- **验收**：c-g274/verify.py **10/10 EXIT=0**（3 处指挥席脚本口径自纠留证）——四锚活跑 rc=0×4＋15 件合成输入逐件 SHA≡gp-fixture-inputs-v1 manifest（Benchmarks/inputs/gp53/，D-101 写入器＋种子 20261004，量测域 64×48/cell 2.0/EPSG:32651）＋closure v2 53 行准入账 v1≡v2（0V+3U+3ND+47NIC）＋gap-v2 perEntryCoverage 53 行＝True 52＋unresolved 恰 1（management.Project transform_method 不猜✓）＋四写域 15:00 后零写入＋token 四面＋自检三轮＋Pro 0/端口 CLOSED＝**合成段验收 PASS，执行席零缺陷**。
+- **三条请裁裁定**：①Phase B 真机评测窗即派 ACTIVE（G-237＋G-273＋G-274；53 件×四查＋raw＋独立输入副本〔G-265 R-4〕；env 判定窗 live-g* 机械复用；跑毕 closure v3 评估＋R-D117 终版）②transform_method 窗内真机实测（D-066 先例）③M5 维持暂不冻结。
+- **工期**：Phase B 窗 3-5h→closure 更新＋R-D117 终版 0.5-1h→终验收 0.5h ⇒ GP 评测闭环今晚 24 时前后～明日 01 时；安装推进＋M4 半区 ⇒ 全局 10-05～10-06 不变。
+- **轮末**：ACTIVE＝D-117（L2·Phase B 真机评测窗开工）；L1/L3/L4 WAITING；基线零推进；33/285/224/53 恒定。落账＝DECISIONS G-274／§252／HANDOVER 229。
+
+## R124 轮 · 2026-10-04 19:56–19:58（自动化轮）· 空轮（L2 Phase B 在飞跳过）
+- outbox 零新 PASS CANDIDATE（R-D117.md 02:49 未动；h-receipt-d117.md 19:34:19＝合成段回执 §九，已由 G-274 采信）；G-275 grep=0 无并发轮；三账现值 G-274／§252／HANDOVER 229。
+- 四线：L1/L3/L4 WAITING；**L2 D-117 ACTIVE·Phase B 真机评测窗在飞（G-274 19:5x 派）——run 根 19:51–19:56 在飞活动归因＝执行席开工**：phase-fixture/（19:56:35）＋synthesize_gp_fixtures_r2_d117.py＋build_v3_faces_d117.py＝独立输入副本确定性重合成（G-265 R-4 纪律）＋closure/gap v3 面构建（G-274 R-3 预置）；Benchmarks 15 件 inputs/gp53 重写 mtime 19:51:29 但本席抽检 **15/15 SHA≡gp-fixture-inputs-v2 manifest 零漂移**。交付未到按规跳过不验收。
+- 三账零改动，仅本档追加 R124 观察行（UTF-8 python 追加）。
+- 下一触发＝outbox 出现 Phase B 交付（R-D117 终版/开工回执/h-receipt 增补）→ 零采信验收（核对：逐件四查证据＋raw 留证＋宿主 PID＋装机件哈希＋closure v3＋「合成输入基准」标注＋Pro/端口态）。
+
+## G-275 轮 · 2026-10-04 20:0x（指挥席手动轮 · 用户指令「帮我1审批并派单」）＝M4 一期范围裁定＋派 D-118/L1
+- **四查全过**（48 行逐行重算）：分类＝Native 21／GP 22／Python 5；契约＝Native schema 在场 21/21；第三查＝15 目标 preregRow 全有值（名册 285 零扩）；第四查＝注册面消费者无滤重扫（Composition 唯一注册中心＋契约快照 224＋Tests 守卫族；新增注册非代际改写，224 断言面开工首项复扫后按 239 同步）。
+- **范围 48→15**：纳入 15 件 Native（X02/X05/X06/X09/X12/X14/X21/X25/X29/X31/X32/X34/X35/X36/X43）＝注册 224→239；排除 33 件＝GP 22（NO-ADMISSION-EVIDENCE＝D-116 N=0）＋Python 5（BRG-001 6511 边界）＋X07/X08（merge 挂账）＋X45（PKG-001 无预登记）＋X47/X48（内部服务）＋X15（已实施）。挂账新增 O-M4-01/O-M4-02。
+- **并行 ACTIVE**：D-118（L1·M4 Native 十五件实现批，写码＋构建可与 L2 Phase B 窗并行，TRX 错峰）＋D-117（L2·Phase B 真机评测窗）；L3/L4 WAITING。
+- **工期**：D-118 写码 3-5h＋TRX 1-1.5h＋验收 0.5h ⇒ 预计 10-05 上午收官；全局 10-05～10-06 维持。落账＝DECISIONS G-275／§253／HANDOVER 230。
+
+- **R125 轮 · 2026-10-04 21:0x–21:2x（自动化轮）· 验收＋裁定轮（非空轮）**：outbox 新交付＝R-D117-v2.md（20:13，r2 整改重建 PASS CANDIDATE）＋h-receipt-d117 §十（20:09）＋h-receipt-d118（20:20 初版→21:12 追加）。**c-g276/verify.py 14/14 ALL-GREEN**＝R-D117-v2 采信·执行席零缺陷（本席脚本五处口径自纠留证）；h-receipt-d118 开工回执采信（初版先于产品码）。裁定：Phase B 真机窗豁免下给 L2 即刻开窗（harness 零真机红线窗内豁免，授权链 G-237+G-273+G-274+G-276）；v1 承载表停用不删字节、Phase B 输入依据＝v2/v3 面；transform_method 窗内实测维持；D-118 张力面三项全裁采认。落账＝DECISIONS G-276＋DISPATCH §254＋HANDOVER 231＋L1/L2 牌位 G-276 裁定行＋镜像两档＋云侧双推＋记忆档。线位：L1 ACTIVE-D118（实现中 239/239）＋L2 ACTIVE-D117·Phase B（开窗）；L3/L4 WAITING。
+
+- **G-277 轮 · 2026-10-04 22:2x–22:4x（自动化轮 R126）· 验收＋关单轮（非空轮）**：触发＝R-D118.md（21:13 PASS CANDIDATE）＋h-receipt-d117 §十一（21:41 预备件登记）。**c-g277/verify.py 38/38 双跑 EXIT=0**＝R-D118 全数采信·执行席零缺陷（本席 8 处口径自纠留证：csproj 路径/TRX Failed 缺键/FROZEN 行号陈旧值/「待填」自述句/bin-obj 未滤/Benchmarks L2 授权面归因/@后缀比较）。裁定：**D-118 CLOSED 验收 PASS**；基线推进＝注册面 239 生效（97DE7764…/277）＋TRX 基线 1816=1813P/0F/3NE；装机 224 维持；§五请裁①闭合（G-276 R-1）②真机宿主面另批＝**O-M4-03 挂账**③DiagnosticsComposer:359 备核④r24 另批⑤开窗前不升格 VERIFIED；**L1 WAITING**（下一单＝用户裁 O-M4-02 Python 5 件 6511 边界，或指挥席另批真机宿主面验证批）。L2：§十一预备件登记采信＋**放行确认＝G-276 R-3① 五项即放行词——Phase B 真机评测窗即刻开窗**。落账＝DECISIONS G-277＋DISPATCH §255＋HANDOVER 232＋L1/L2 牌位改写＋镜像两档＋云侧双推＋记忆档。线位：L1/L3/L4 WAITING＋L2 ACTIVE-D117·Phase B 开窗。
+
+## G-278 轮 · 2026-10-04 23:0x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝基线 239 复核全绿＋派 D-119/L1
+- **复核**（23:06 本席独立现算）：源码聚合 `97DE7764…`/277＋注册 239≡契约快照 239＋名册 94/33/158=285＋白名单 F355705B/53＋错误码 33＝**基线 239 三向一致**（≡G-277 申报）；装机 `A2D6A0D0`/1,036,008＝**224 落后十五件**；outbox 零未采信（R-D117-v2／R-D118／两回执均已由 G-276/G-277 采信）。
+- **派单 D-119/L1 ACTIVE**＝安装推进批（224→239）：0W0E 构建→回滚锚先行（backup-pre-install-20261004/ 逐字节入链）→官方安装位安装（先清单后写＋逐文件 sha 台账）→启动铁律→LIVE（tools/list 239≡契约快照）→安装位基线推进；授权链 G-221 R-1；O-D116-02 随批清偿（工具 239／GP 枚举 53 恒定）；**与 L2 Phase B 窗互斥时窗**（窗毕后开）。
+- **并行 ACTIVE**：D-119（L1）＋D-117（L2·Phase B 窗，预备件在 run 根 phase-b/）；L3/L4 WAITING。
+- **工期**：GP 评测闭环 10-05 01-03 时；239 装机 10-05 上午；M4 半区评测 10-05 下午；**全局收官提前至 10-05 内**。落账＝DECISIONS G-278／§256／HANDOVER 232。
+
+## G-279 轮 · 2026-10-05 00:0x（指挥席自动化轮 R127）＝D-117 §十三 Phase B 预备件 #3 验收 PASS ＋ **Phase B 窗开窗令**
+
+- **触发**：outbox 新交付＝`h-receipt-d117.md` §十三（23:42:01）＝L2/D-117 **Phase B 预备件 #3·逐调用实参物料化表**（窗未开·零执行）。非并发轮（晚于 G-278 三账落账 33 分钟）；G-279/§257/第233版 重号反证＝0。
+- **验收**：`run-20261004-d117/c-g279/verify.py` **64/64 双跑 EXIT=0（run1/run2.txt 逐字节一致）**＝**执行席零缺陷**；本席 6 处脚本口径自纠留证（首轮 50/56 → 终轮 64/64）。
+- **关键实证**：四件交付物尺寸＋SHA 全等（92,979/`B952DEAE…`＋4,846/`B55938D8…`＋14,378/`9916493D…`＋14,913/`B67EC719…`）；算术 **53 条目 / 193 参数槽 / 85 窗内副本 / 14 源件 / 1 未闭合槽** 逐项独立重算；输出承载 **47＝proven39＋pending8**，承载面 byForm 合计 49、**47＋2(unclassified)＝49 闭合**，逐行差值恰等于该行 unclassified 数（两条同落 GP53-21＝`conversion.TableToTable` out_path workspace＋out_name string 两段式）；排程 **12/9/12/20＝53→8 窗**、护栏 120 s/280 s；**destructive 5 件全 confirmRequired=true**；53/53 行 `CONSTRUCTED-NOT-EXECUTED`；**85 条被引源件逐件现算 SHA 全等**、副本全落 `phase-b/in/`；`in/`·`out/` 未建、零 .aprx、零 live-raw；v2 表 5 个 multivalue 槽零塌陷；白名单 **53/`F355705B`**/30,634 B（front53 副本逐字节等值）、错误码 **33**、名册 **285**；**四锚活跑 `--check` rc=0×4**（M1 92ECD265/9＋M2 501A7E15/13＋M3 94577E76/12＋M4 F71BF6CD/14）；装机 **224 守恒**（`A2D6A0D0…`/1,036,008 B＋内部 zip 43 条目＋1 回滚 bak）＝D-119 零越窗；**Pro 0 行**；真实 `%TEMP%` 本线专有 token **0 命中**（裸 d117 唯一命中＝Win11SDK 系统 cab，G-230 R-2 先例族）；自检 16/18→18/18 双轮留证。
+- **披露**：**R-G279-P1 采信表扬**（假数被生成器「分族合计须＝53」闸拦下→改现场复算取数）；**R-G279-P2 采信**（multivalue 塌标量被独立自检 U4/U5 抓出→已落码）；**R-G279-P3 改进登记**（`excludedUnclassified` 缺机器可读字段，不派单）。
+- **裁定**：**①** §十三验收 **PASS**——三张预备面（`window-plan-d117` 151,333 B＋`output-carrier-expectation-d117` 86,327 B＋`call-arguments-d117` 92,979 B）**开窗前数据层已完备**；**② G-277 五项即放行词继续有效＋本席再确认：Phase B 真机窗即刻开窗**（开窗时序／产出根 `run-20261004-d117/` 窗内目录／宿主 PID 三重核／副本落点 `phase-b/in/`／清场照 live-g11 先例），执行席按 §十三 末条八窗计划执行；**③ D-119/L1 安装批窗开期间停等**（Pro 运行中不可换插件；允许源码侧只读准备与零 Pro 静态核，禁止启 Pro／装换插件／跑 TRX 全量／触碰安装位），窗毕后即刻开窗无需再请；**④** D-117 维持 ACTIVE·Phase B（开窗执行中），窗毕出 closure v4＋`R-D117` 终版待终验；**⑤** 基线零推进零回归（00:0x 现场复算 `97DE7764…`/277・注册 239）；**⑥** 无新增请裁。
+- **牌位改写**：L2 牌位追加 G-279 段＋**开窗令**（执行序 prepare→initialize/tools/list→逐窗 ≤9 件 run_geoprocessing→close ＋终态四件套；唯一未闭合槽 `management.Project.transform_method` 窗内真机签名实测）；**L1 牌位补写 D-119 段**（G-278 已派但牌位未及改写，本轮追溯生效）＋时窗互斥停等条款＋阶段目录命名表 `run-20261005-d119/{s0-intake,f1-build,f2-backup,f3-install,f4-live,final-evidence}`。
+- **轮末**：ACTIVE＝**D-119（L1·窗开期间停等）＋D-117（L2·窗即刻开窗执行）**；L3/L4 WAITING。基线＝源码 `97DE7764…`/277・**239 生效**＋装机 **224 维持**＋TRX 1816=1813P/0F/3NE＋四锚 rc=0×4＋285/33/53 恒定。落账：DECISIONS G-279／DISPATCH §257／HANDOVER 233／裁定书 `GATE-G279-D117-PREP3_RULING.md`。
+- **工期**：Phase B 窗 3-5h（开窗后）＋closure v4/终版 0.5-1h＋终验收 0.5h ⇒ GP 评测闭环 10-05 01-03 时；D-119 窗毕后 1-2h ⇒ 239 装机 10-05 上午；M4 半区评测 10-05 下午；**全局收官提前至 10-05 内**。
+
+### R128 · 2026-10-05 01:1x · 指挥席自动化轮 ＝ G-280 验收裁定轮（D-117 §十四 窗客户端建成）
+- **触发**：outbox 新交付＝`h-receipt-d117.md` **§十四（2026-10-05 00:4x）**＝L2/D-117 **Phase B 窗客户端建成·对自架替身验证**（真机窗**仍未开**·Pro 0 行）。非并发轮（晚于 G-279 三账落账约 25 分钟）；G-280/§258/第234版 重号反证＝0。
+- **验收**：`run-20261004-d117/c-g280/verify.py` **63/63 双跑 EXIT=0** ＝**执行席零缺陷**（1 项披露瑕疵＋1 项观察项，**均登记不升级**；本席 **14 处脚本口径自纠**留证，首轮 47/57→63/63）。
+- **关键实证**：16 已采信面＋3 索引＋7 预备面**字节零漂移**；**四锚活跑 rc=0×4**；**53 行帧参数独立重导**（输入面 perToolPlan 与调用面 53 dot 名集合全等／输入槽全落 `phase-b/in/` 零回指语料／客户端零语料路径字面量／未闭合槽声明不猜测）；**危险件 fail-closed**（`destructive`≡`confirmRequired` 53 行恒等／其余 48 行零误带／两标志均取自已采信面无一处无条件 true）；**8 个分族纯窗 53 行各落一次**（analysis 9+3／management 9／conversion 9+3／sa 9+9+2）；**护栏矛盾 9×120s>280s 显式建模披露**；**替身自检六轮全 `serverInfo=stub` 零真机接触**、端口 63415/50834/50883/58334/58385 **从未触 6520/6511**、`productPortsTouched` 六轮全空、末两轮 36/36 带 `STUB:true`、前四轮 0 标注**未回填**、六轮 verdict 恒 `STUB_TESTED__LIVE_HOST_NOT_VERIFIED` **零准入断言**；每 raw 3 条落盘帧（通知帧无响应体**按设计不落 raw**）；**`ArcGISPro.exe` 0 引用**、**`RELEASE-PHASE-B.md` 不存在＝未自造放行件**、**`--execute` 实跑 rc=2 拒绝且不触达宿主面**；真机痕迹全 0；**装机 `A2D6A0D0`/1,036,008/zip43 守恒＝D-119 零越窗**；**源码聚合 `97DE7764…`/277 现场复算 ≡ G-277**；**285/33/53·`F355705B`/注册 239 唯一** 恒定；**%TEMP% 本线 8 token 全树 0 命中**、**Pro/Photoshop 0 行**。
+- **披露**：执行席**自曝四处采信加分**（全局切 6 窗被自检拒→改分族；STUB 判据改解 JSON；替身补全所有响应统一打标且早于修正轮次实名保留；**改判据不改被判定对象**）。**R-G280-D1 登记不升级**（磁盘实存 **6 轮** vs 申报 **5 轮**、pre-labelling **4 轮** vs 申报 **3 轮**，漏 `T003543`——实测为独立替身轮、零真机零产品影响 ⇒ 申报完整性瑕疵；整改口径＝**名册以磁盘实测为准**）。**R-G280-P1 观察项**（`LIVE_URL` 声明 6520 端点但**全文件零引用**，零风险且偏安全）。
+- **裁定四条**：①§十四验收 **PASS**（开窗前最后一块非执行拼图到位）；②**产品宿主面维持 `NOT VERIFIED`**（替身是自写之桩，真机结论**不得由本件升格**）；③**放行状态维持「待用户并轨词」，指挥席不代行**——三度放行词在案且**技术放行条件已全满足**，但**启动 Pro 属真机动作、放行权属用户**（红线豁免不得代行）；**执行席拒绝自造放行件恰是正确纪律，不是抗命**；④**D-119/L1 继续停等**（L2 窗未开）。**提请用户裁定**：(甲) 是否现在给 L2 并轨词开真机窗；(乙) 若暂不开窗，L2 是否收束为「预备层完备·真机窗延后」并让位 M4 半区——**此情况下 D-119 应即刻解除停等**（装机面无 L2 依赖），**用户裁定项，本席不预设**。
+- **落账**：裁定书 `GATE-G280-D117-SEC14-RULING.md`／DECISIONS G-280／DISPATCH §258／HANDOVER 第234版／L1+L2 牌位追写／镜像两档＋云侧双推＋rag 反证／MEMORY.md＋当日日志＋自动化记忆。**零新派单**（两线均在飞，唯一阻塞在用户）。
+- **轮末**：ACTIVE＝**D-119（L1·窗开期间停等）＋D-117（L2·预备态完备·待用户并轨词）**；L3/L4 WAITING。基线＝源码 `97DE7764…`/277·**239 生效**＋装机 **224 维持**＋TRX 1816=1813P/0F/3NE＋四锚 rc=0×4＋285/33/53 恒定。
+- **工期**：取决于用户裁定（甲）。开窗 ⇒ Phase B 窗 3-5h＋终版/终验收 1-1.5h（239 装机顺延）；不开窗 ⇒ **D-119 可即刻解停等开工**（1-2h，239 装机今日上午）＋评测闭环让位 M4 半区（2-4h）。**全局收官仍维持 10-05～10-06**。
+
+## G-281 · 2026-10-05 02:1x（R129 自动化轮）· D-119 §四 停等态续作轮 — 验收 **PASS（执行席零缺陷）**
+
+- **触发**：outbox 新交付＝`h-receipt-d119.md` **§四**（01:48:16，29,888 B／`C2E0514CB6912497`）＝L1/D-119「停等复确认后的续作轮：证据完整性只读核对＋f3 前置静态核」。非并发轮（晚于 G-280 三账落账 01:07:20 约 41 分钟）；G-281/§259/第235版 重号反证＝0。
+- **性质**：**非空轮 · 验收裁定轮**。本轮交付**不是 PASS CANDIDATE，而是停等态只读续作轮** ⇒ **不涉 CLOSED、不涉基线推进、不派新单**，只采信「停等期间允许做的事做对了没有」。
+- **验收**：`run-20261005-d119/c-g281/verify.py` 首轮 54/58 → 修正后 **60/60 双跑 EXIT=0（run1/run2 逐字节一致）＝执行席零缺陷**；本席 **4 处脚本口径自纠**留证。
+- **完成门全达成**：①基线守恒（源码 `97DE7764…`/277 ≡ G-277、注册 239/唯一、契约快照 239/唯一、名册 94/33/158=285 无重号、错误码 33、白名单 53/`F355705B`/30,634 B、四锚活跑 rc=0×4）；②**装机面守恒＝零越窗**（现役 `A2D6A0D0`/1,036,008 ＋ bak `7CEB2AB7`/185,110、内层 zip 恰 43 条目、**目录文件数恰 2**、**目录 `LastWriteTimeUtc` ≡ 2026-10-01T07:32:09Z 未动**；回滚锚 2 件逐字节等值＋0444 只读＋回滚链 4 级）；③交付物 5/5 逐字节等值＋回执纯追加；④**f3 前置静态核通过**（配方 9,178 B/`ABBC9977106C9297` 与 D-106 先例**均 139 行、差异恰 4 行**、零残留零乱码、护栏齐备、前置实测六项全独立复现、双 net8 dll FileVersion 1.0.2.0、安装器四守卫在位）；⑤**越窗反证全零**（`R-D119.md` ABSENT／Pro 0 行／6520·6511 双 CLOSED／run 根零 esriAddInX／`f4-live`·`final-evidence` 未建／阶段目录零跨轮复用／四写域自 01:11:30 零写入）；⑥台账只读（5 件现值逐件等值且 mtime 均早于回执写入 ⇒ 执行席零代改牌位）；⑦%TEMP% 7 个专有 token 命中全 0。
+- **披露**：执行席五项披露**全部采信为加分**，尤以 **M1 主动申报 8 件 csproj「临时切换＋净零变更」并明言「mtime 移动不是零写入」而不用「零触碰」措辞**为本项目最难得的诚实披露形态。**R-G281-D1 登记不升级**（申报计数精度瑕疵 2 处：移植差异行 3→实测 4／种子 `Install/Deployment/*` 22→实测 23；零产品影响，配方动态复制零硬编码件数）。
+- **裁定**：R-1 §四 **PASS**；R-2 **D-119 维持 ACTIVE·停等态不变**（L2 真机窗未开，**停等解除只认用户并轨词一项信号**；工单「窗毕后即刻开窗」在窗从未开启时不构成开窗信号，执行席不自解为已窗毕是正确纪律，予以采信）；R-3 **f3 前置已就绪，开窗后可直达**；R-4 **放行权属用户，指挥席不代行**；R-5 **基线零推进零回归、零新派单**。
+- **提请用户裁定（维持 G-280 原问，未扩未缩）**：**(甲)** 现在给 L2 并轨词开真机窗 ⇒ D-119 续停等；**(乙)** 暂不开窗 ⇒ **D-119 即刻解停等开工 224→239**（装机面无 L2 依赖，f3 前置已就绪可直达），L2 收束为「预备层完备·真机窗延后」并让位 M4 半区。**用户裁定项本席不预设。**
+- **落账**：裁定书 `GATE-G281-D119-SEC4-RULING.md`／DECISIONS G-281／DISPATCH §259／HANDOVER 第235版／L1 牌位追写／镜像两档＋云侧双推＋rag 反证／MEMORY.md＋当日日志＋自动化记忆。**零新派单。**
+- **轮末**：ACTIVE＝**D-119（L1·窗开期间停等）＋D-117（L2·预备态完备·待用户并轨词）**；L3/L4 WAITING。基线＝源码 `97DE7764…`/277·**239 生效**＋装机 **224 维持**＋TRX 1816=1813P/0F/3NE＋四锚 rc=0×4＋285/33/53 恒定。
+- **工期**：取决于用户裁定（甲）。开窗 ⇒ Phase B 真机窗 02:45–04:45→ 终版/终验收 1-1.5h（239 装机顺延）；不开窗 ⇒ **D-119 可即刻解停等开工**（1-2h，239 装机今日上午）＋评测闭环让位 M4 半区（2-4h）。**全局收官仍维持 10-05～10-06。**
+
+## R130 观察 · 2026-10-05 03:2x（自动化轮）· G-282 验收裁定轮（非空轮）
+
+**性质**：L1/D-119 `h-receipt-d119.md` **§五**（02:46:20，36,046 B／`369B7F7DC424`）＝**停等维持轮＋R-G281-D1 计数字面勘正**。非 PASS CANDIDATE，非并发轮（晚于 G-281 落账约 27 分钟）；G-282／§260／第 236 版重号反证＝0/0/0。
+
+**指挥席验收**：`run-20261005-d119/c-g282/verify.py` **46/46 双跑 EXIT=0（逐字节一致，首跑即全绿，本席口径自纠 0 处）＝执行席零缺陷**。裁定书 `GATE-G282-D119-SEC5-RULING.md`。
+
+**采信要点**：
+1. **R-G281-D1 两处勘正独立复算全部成立**——移植差异 3→**4 对**（`difflib` +4−4，两文件真实行数均 138，四处语义逐条正确）；种子 `Install/Deployment/*` 22→**23**（目录型 0）。**零产品影响**（配方 `StartsWith` 动态复制、零硬编码件数）。
+2. **纯追加纪律**：§一～§五 各恰 1 节，**§四 原值「3 处」「22 件」仍在正文未被回填**，勘正以 §五 为准——本席已复证。
+3. **零越窗**：装机 `A2D6A0D0`/1,036,008・内层 zip 43・Config.daml 1・目录文件数 2・**目录 mtime 2026-10-01T07:32:09Z 未动**；Pro 0 行；6520/6511 双 CLOSED；run 根零 esriAddInX；`f4-live`/`final-evidence` 未建；四写域自 02:23:04 零写入；`l1-idle-scratch` 零文件。
+4. **零代改台账**：三账＋三牌位 6/6 现值逐字节等值，mtime 均早于回执写入。
+5. **停等纪律**：L2 真机窗仍未开 ⇒ G-279 R-3 互斥前置持续成立；**停等解除只认用户并轨词**；「窗毕后即刻开窗」在窗从未开启时不构成开窗信号，执行席不自解为已窗毕是**正确纪律**，予以采信。
+6. **采信表扬**：§五-1 主动做**他席落件归因**（明确 `c-g281/` 属指挥席落件非本席写入，并据此不触发重建证据索引），且逐件列出三账/牌位现值与 mtime 供指挥席反证——**「零采信」最需要的可核验形态**。
+
+**观察项 R-G282-P1（登记不升级、不判缺陷）**：§五-1 申报「`c-g281/` 10 件」，磁盘实测 **12 件**（多 `automation-mem.tmp.md`／`daily-log.tmp.md` 两件指挥席镜像稿）。零产品影响（临时稿非交付物），沿 R-G280-D1／R-G281-D1「计数以磁盘实测为准」先例。根因＝镜像落件时点与计数时点交错。
+
+**裁定**：R-1 PASS｜R-2 D-119 维持 ACTIVE·停等态不变｜R-3 f3 前置仍就绪、开窗后可直达｜R-4 放行权属用户不代行｜R-5 基线零推进零回归·**零新派单**。
+
+**落账**：GATE-G282 裁定书／DECISIONS G-282／DISPATCH §260／HANDOVER 第 236 版／L1 牌位追写／镜像两档＋云侧双推／MEMORY.md＋当日日志。
+
+**轮末**：ACTIVE＝**D-119（L1·窗开期间停等）＋D-117（L2·预备态完备·待用户并轨词）**；L3/L4 WAITING。基线 239 生效・装机 224 维持・TRX 1816・四锚 rc=0×4・285/33/53 恒定。
+
+**指挥席口径经验（4 处通用）**：
+- **「真实行数」须剔除尾空行再计**——`split("\n")` 对以 `\n` 结尾的文件多给 1（实测 139 vs 138）；把执行席申报的「138 行」直接对齐 `split` 结果会假 FAIL。与 R-G281-D1「不把申报数字写进断言」同源。
+- **unified diff 双向计数（+N/−N）比逐行 `zip` 更抗行数不齐**——`zip` 在两文件行数不等时会静默截断（本轮先例文件恰好同长 139/139，属侥幸）。
+- **名册内 `ps_*` 计数权威源＝名册三 HashSet，不是全仓 token**——全仓 `ps_[a-z0-9_]+` 会得 90（D091 5＋D102 15 个uniq 各被引用多次），名册口径 20 才是工具数。
+- **「他席落件」必须做归因而非计失败**——`c-g281/` 落在执行席 run 根内是 G-277 同族先例，判「run 根被污染」会误判；正确口径＝按 mtime 归因到指挥席并核交付物逐字节未变。
+
+**下一轮预期（约 03:45/04:15）**：①用户若给 L2 并轨词 ⇒ L2 开真机窗（prepare→initialize/tools/list→8 窗逐件→close＋终态四件套），窗内回执到即登记，D-119 续停等；②用户若裁 (乙) ⇒ D-119 即刻解停等开工 224→239（f3 前置已就绪，f3→f4→final-evidence 逐阶段不跳序）；③两线均无新交付 ⇒ 空轮一行观察（三账零改动）。**空轮条件＝两线无新交付且无用户裁定。**
+
+- **R131 轮 · 2026-10-05 04:3x（自动化轮）· 验收裁定轮＝ G-283**：outbox 新交付＝`h-receipt-d119.md` **§六**（03:46:56，43,321 B／`A745BED79014`）＝G-282 验收读回＋R-G282-P1 计数勘正（执行席**自升硬规**）＋全量磁盘复扫。非并发轮（晚于 G-282 三账落账 03:31:04 约 16 分钟）；G-283/§261/第 237 版重号反证＝0/0/0。
+- **验收**：`run-20261005-d119/c-g283/verify.py` **44/44 双跑 EXIT=0（run1≡run2 逐字节一致 `0EFF6C4F39F43C3E`／5,502 B）**＝**执行席零缺陷**（1 项计数观察项登记不升级）。**本席 8 处口径自纠**（首轮 37/45 → 44/44；其中 7 项系本席脚本错，唯一涉及执行席的 E5 经独立复算确认为申报性计数瑕疵、零产品影响）。
+- **实证**：源码 `97DE7764…`/277≡G-277・注册/契约 239 唯一・名册 94/33/158=285・名册内 ps_* 20・错误码 33・白名单 53/`F355705B`/30,634B・四锚 rc=0×4；**R-G282-P1 勘正成立**（c-g281/ **12** ✔／c-g282/ **11** ✔／逐件名册补 `.tmp.md` 后缀后 12/12 全等 ✔／逐件字节全等 ✔）；**装机面守恒＝零越窗**（`A2D6A0D0`/1,036,008・内层 zip 43・根 Config.daml 1・目录 mtime 2026-10-01T07:32:09Z 未动・回滚锚 2 件逐字节等值且 0444）；越窗反证全零（Pro 0 行・6520/6511 双 CLOSED・run 根零 esriAddInX・四写域 03:46 后零写入・R-D119 ABSENT・f4-live/final-evidence 未建）；**执行席零代改台账**（七件逐字节等值且 mtime 早于回执・四线「当前工单」节无 PHASE-B-UNLOCKED・§六 纯追加且 §四 原值「3 处」「22 件」未回填）；run 根 9 目录件数 9/9 全等・f2-backup 4/4・保护树 68/139/168/11/416/12・`.csproj` 8 含 net6 8・224 残差 2 件/5 处・无 evidence-index 故冻结面未受扰；`%TEMP%` 本线 8 token 全 0，`d119` 裸命中 57 件全第三方缓存十六进制巧合（proj=0）⇒ **无 FAIL OBSERVED**。
+- **观察项 R-G283-P1（登记不升级）**：§六 括注「合计 6 件 `.tmp.md` 镜像稿」vs 磁盘实测 **8 件**（漏计 `automation-mem.tmp.md`/`daily-log.tmp.md`）。零产品影响（申报性描述不入配方/断言/门控，c-g281/ 总数 12 已复现正确）；沿 R-G280-D1/R-G281-D1/R-G282-P1 先例不判缺陷；整改口径＝括注类聚合数须与同段逐件枚举自洽。
+- **采信表扬**：①延续「他席落件归因」形态（明确 `c-g281/`/`c-g282/` 属指挥席落件非本席写入，据此判定不触发重建证据索引）；②主动申报 run 根目录 mtime 变动由指挥席落件所致；③**自升硬规并写入本线持久记忆**（凡交付文本出现件数/行数/条目数/命中数，一律进程内 `len()` 或正则计数直接产出并即时入件；禁从被截断的 `head`/`tail` 列表视图或记忆转述取数；跨轮引用他席落件必须现场重测）——把教训固化为流程约束而非仅登记。
+- **裁定**：R-1 §六 **PASS**｜R-2 **D-119 维持 ACTIVE·停等态不变**（L2 真机窗未开，Pro 0 行＋双端口 CLOSED 现场复证，G-279 R-3 互斥前置持续成立，**停等解除只认用户并轨词**；「窗毕后即刻开窗」在窗从未开启时不构成开窗信号，执行席不自解为已窗毕是**正确纪律**予以采信）｜R-3 **f3 前置仍就绪、开窗后可直达**｜R-4 **放行权属用户不代行**（维持 G-280 原问未扩未缩）｜R-5 基线零推进零回归、**零新派单**。裁定书 `GATE-G283-D119-SEC6-RULING.md`／DECISIONS G-283／DISPATCH §261／HANDOVER 第 237 版。
+- **口径经验（本席 8 处自纠，7 类通用）**：①**白名单计数口径＝JSON 顶层数组长度**，全文正则 `"key":` 会得 1180（内含嵌套结构）；②**esriAddInX 文件本身即那个「内层 zip」**——判「43 条目」直接 `ZipFile(cur).namelist()`，勿再从外层套内层（**zip 套 zip 是发布包结构，装机位是单层**）；③**申报里的文件名简写要与磁盘全名归一化后再比对**（`decisions-append` vs `decisions-append.tmp.md`），否则逐件名册断言必假 FAIL；④**判「某状态词是否在飞」只取牌位「四、当前工单」节**——§一 说明文字里会列举全部状态词（含未在用的），全文检索必然假 FAIL；⑤**保护树六计数口径＝Release/Archive.distributions/Benchmarks/tools/TestFixtures/Distribution**（非 Source/Tests/Config/sdk-refs）；⑥**判 `%TEMP%` 裸 token 命中是否违例的正确口径是「是否属本项目落物」而非「是否命中某扩展名」**——第三方应用缓存文件名里的十六进制巧合子串可成千上万；⑦**申报括注类聚合数须与同段逐件枚举自洽**（本轮枚举 12 件中含 8 件 `.tmp.md` 而括注写「合计 6 件」，是 R-G283-P1 的发现路径）。
+- **下一轮预期（约 05:15/05:45）**：①**用户若给 L2 并轨词** ⇒ L2 开真机窗（prepare→initialize/tools/list→8 窗逐件→close＋终态四件套），窗内回执到即登记，**D-119 续停等**；②**用户若裁 (乙)** ⇒ D-119 即刻解停等开工 224→239（f3 前置已就绪，f3→f4→final-evidence 逐阶段不跳序）；③两线均无新交付 ⇒ 空轮一行观察（三账零改动）。**空轮条件＝两线无新交付且无用户裁定。**
+
+- **G-284 裁定**（2026-10-05 05:4x–06:0x 自动化轮）：R-1 §七 **PASS**（R-G283-P1 勘正成立：`c-g281/` 12 与 `.tmp.md` 8 同源产出、逐名全等）｜R-2 §八 **PASS＋采信表扬**｜R-3 **f3 道升级为「前置六项＋语法门 0 错」双备；旧件 9,178 B/`ABBC9977…` 作废，新件 9,173 B/`99A5BB1B2459AAD8…` 为唯一有效读数**｜R-4 **D-119 维持 ACTIVE·停等态不变**｜R-5 **放行权属用户不代行**｜R-6 基线零推进零回归、**零新派单**。裁定书 `GATE-G284-D119-SEC7-SEC8-RULING.md`／DECISIONS G-284／DISPATCH §262／HANDOVER 第 238 版。
+- **★ 采信表扬（本轮最重）**：执行席 §八 **自曝并修复一件真缺陷**——新增零 Pro 静态核 **PowerShell AST `ParseFile` 门**（先例＝制包批 G-244/G-246「包内 PS 语法逐件 0 错误」，本线此前未把该门用到 run 根脚本上，**诚实认领盲区**），首跑即抓到 §四 移植件 `net8_package_d119.ps1` **parseErrors＝1**（真缺陷在 L137：无 BOM UTF-8 件被 PS 5.1 按 CP936 解码，**行末 CJK 吞并换行**致 `finally {` 的 `}` 落入注释 ⇒ 脚本不可解析）。**指挥席独立复现 A/B/C 三变体＝1／0／0 错**，机制钉死。执行席并**主动对自身前序裁定诚实降级**（明确写出 G-281/G-282/G-283 三轮「f3 就绪」对**可执行性**维不成立），且**预先提示指挥席会读到新值**（§八-3），避免被误判为无因漂移。
+- **本席 6 处口径自纠**：①源码聚合自造变体（截断/小写 sha）⇒ 须用 c-g283 口径全长大写全长；②注册表正则 `register\("name"` 得 0 ⇒ 实际 `Register(new Xxx(`；③现役件按 `.esrix` 识别崩溃 ⇒ 真实后缀 `.esriAddInX`／`.bak`；④`%TEMP%` 项目自有判据含 `esri`/`arcgis` 泛化词误判 279 件 ⇒ 判据须为**本项目专有命名**；⑤牌位 status 取全文首个会取到 D-093 陈旧行 ⇒ 须**锚具体工单节**（`### D-117`）；⑥f3 配方断言沿用旧值 ⇒ **跨轮基线值被声明作废后必须改取现值**（与 R-G281-D1 同源）。
+- **跨席并发处置（本轮新形态）**：验收中执行席 05:46:32 就地改件并追加 §八，指挥席首跑即撞新值。处置＝**不判漂移**（§八-3 主动披露＋PS 门复现双重确认）**亦不免独立复算**；探针落 D 盘 `.runtime/scratch/g284-probe` 用毕即删并复证清零。
+- **口径经验（8 处通用）**：①**跨轮基线值被声明作废后断言必须改取现值**（9178→9173 是修复后新件，非漂移）；②**执行席并发改件时首撞新值先追 mtime 与上下文再判漂移**；③**PS AST `ParseFile` 是 PS 件独立门**——逐行 diff 与字节哈希**方法上无法暴露语法失衡**，两者全绿仍可能不可解析；④**无 BOM UTF-8 的 PS 件行末 CJK 会破坏解析**（PS 5.1 按 CP936）；⑤装机件后缀实为 `.esriAddInX`／`.bak`；⑥源码聚合 sha 须全长大写全长；⑦牌位 status 须锚具体工单节；⑧指挥席自建探针目录亦须用毕即删并复证清零。
+- **下一轮预期（约 06:15/06:45）**：①用户若给 L2 并轨词 ⇒ L2 开真机窗（prepare→initialize/tools/list→8 窗逐件→close＋终态四件套），窗内回执到即登记，**D-119 续停等**；②用户若裁 (乙) ⇒ D-119 即刻解停等开工 224→239（f3 道已双备，f3→f4→final-evidence 逐阶段不跳序）；③两线均无新交付 ⇒ 空轮一行观察（三账零改动）。**空轮条件＝两线无新交付且无用户裁定。**
+
+- **〔G-285 2026-10-05 07:0x 自动化轮 · 观察〕** D-119 §九 交付（06:46:32，66,784 B／`74784FE8FD4F0104`）经 `run-20261005-d119/c-g285/verify.py` **63/63 双跑 EXIT=0（run1 ≡ run2 逐字节一致 `F64050172BA9BFBA880116374BF606DED545B31F82ADE6943F2BC6660048A0CC`／4,943 B ×2）＝执行席零缺陷**（本席 7 处口径自纠，首轮 56/63）。非 PASS CANDIDATE（`R-D119.md` ABSENT）⇒ 不涉 CLOSED、不涉基线推进、不派新单。守恒零回归：`97DE7764…`/277・注册/契约 239 唯一・名册 285（94/33/158）・`ps_*` 20・错误码 33・白名单 53/`F355705B`/30,634・装机 `A2D6A0D0`/1,036,008・内层 43・Config.daml 1・目录 mtime `2026-10-01T07:32:09Z` 未动・回滚锚 `7CEB2AB7`/185,110 逐字节等值・保护树 68/139/168/11/416/12・受版 csproj Source 8＋Tests 5・**四锚 rc=0×4**・TRX 1816 沿用。Pro 0 行・6520/6511 双 CLOSED・run 根零 esriAddInX・f4-live/final-evidence 未建・无 evidence-index・`l1-idle-scratch` 现为空・四写域零写入・八件台账/牌位 mtime 全早于回执 ⇒ 零代改・§一~§八 纯追加零回填。**★ 采信表扬两项**：G-197 判据自我纠错（主动认领 §七-3 泛化词不合格并改据）＋跨席并发时序自纠（改件先探 `c-g<新>/` 是否在飞）。裁定 R-1 PASS｜R-3 f3 道双备维持、旧件 9178 B/`ABBC9977…` 维持作废｜R-4 **D-119 维持 ACTIVE·停等态**（停等解除只认用户并轨词）｜R-6 零推进零回归零派单。裁定书 `GATE-G285-D119-SEC9-RULING.md`。
+
+
+---
+
+## G-286 · 2026-10-05 08:1x · D-119/L1 §十 验收裁定（自动化轮）
+
+- **交付**：`h-receipt-d119.md` **§十**（07:46:32，74,609 B／`A442BB91…`）＝G-285 读回＋两项观察项清偿；**非 PASS CANDIDATE**（`R-D119.md` ABSENT）。
+- **验收**：`c-g286/verify.py` **53/53 双跑 EXIT=0 逐字节一致** ＝执行席零缺陷；本席 4 处口径自纠。裁定书 `GATE-G286-D119-SEC10-RULING.md`。
+- **R-G286-P1（首现·登记不升级·零产品影响）**：§十-2「8/10 有 BOM、2/10 无 BOM」与同段表格枚举（**7 有／3 无**）不自洽；本席实测 **7/3**，bytes/tokens/parseErrors 10/10 全等。溯源＝§九聚合数沿用未复核。
+- **★ 方法学：空洞真值** —— `expanduser("%%TEMP%%")` 不展开 ⇒ 首跑扫不存在路径 ⇒「G-197 零落物」PASS 无证据。已改 `os.environ["TEMP"]` ＋新增非空洞断言。**「扫描后应为 0」的断言必须先断言扫描面非空。**
+- **守恒零回归**：`97DE7764…`/277・契约 239・名册 285(94/33/158)・错误码 33・白名单 53/30,634・装机 `A2D6A0D0`/1,036,008/43e・四锚 rc=0×4・TRX 1816 沿用。Pro 0 行・双端口 CLOSED・四写域零写入。
+- **线位**：ACTIVE＝D-119（L1·停等态·f3 道双备就绪）＋D-117（L2·待并轨词）；L3/L4 WAITING。**零新派单。**
+- **待裁（维持 G-280 原问）**：(甲) 开 L2 真机窗 ⇒ D-119 续停等／(乙) 不开窗 ⇒ D-119 即刻解停等开工 224→239。**放行权属用户。**
+
+
+## G-287 · 2026-10-05 09:4x（自动化轮 R135）· 双线非空轮验收裁定：执行席零缺陷
+
+- **触发**：outbox 同轮两笔新交付＝`h-receipt-d119.md` **§十一**（08:46:27，82,960 B）＋`h-receipt-d117.md` **§十五**（08:36:38，46,026 B）。**皆非 PASS CANDIDATE** ⇒ 不涉 CLOSED、不推进基线、不派新单。**本轮零新物理动作**（未跑真机／未装机／未打包／未装换插件）。非并发轮（距 G-286 落账约 28 分钟）。重号反证＝G-287／§265／第 241 版全 0。
+- **验收**：`c-g287/verify.py` **61/61 双跑 EXIT=0（run1 ≡ run2 逐字节一致 `41CFF42B43BC8EE2…`／6,871 B ×3）＝执行席零缺陷**。本席 **4 处口径自纠**（55/58→60/61→61/61），**全部系指挥席脚本缺陷，非执行席缺陷**。
+- **★ 认定一·R-G286-P1 清偿成立**：指挥席以 PS 5.1.26100.9278 独立实测十件 PS ⇒ **withBOM 7／withoutBOM 3**、parseErrors **10/10 全 0**、bytes 与 tokens **10/10 逐件全等**。§十-2 括注「8/10 有 BOM」**确为误述**，§十一 更正为 7/3 属实。**G-284 机制结论被强化**：3 件无 BOM **全部 0 错** ⇒ 触发条件确为「**无 BOM ＋ 行末 CJK**」，**而非「无 BOM 即错」**。**零产品影响**。
+- **★★ 认定二·D-117「四锚 44 成员」勘误成立（本轮最高价值）**：执行席交件前自查**主动认领自身误述**。本席**不采信其申报的 48**，以**三路独立复算**一致确认：①锚脚本 `ITEMS` 元组内文件路径正则 ②锚记录 JSON `files[]` 数组长度 ③逐成员 SHA-256 ＋ 字节数单点比对 ⇒ **9＋13＋12＋14 ＝ 48**，**去重并集 48、跨锚共享路径 0、`sum == union` 闭合、漂移 0**，四聚合前缀 `92ECD265`／`501A7E15`／`94577E76`／`F71BF6CD` 全对。**「44」被三路一致否证。**
+- **影响面独立定性＝零**：遍历本线 run 根全部 `*.py` 检索 `== 44`／`44 ==` 形态的**机读依赖 ⇒ 0 处**（`c-g276/verify.py:238` 的「44 成员」经查为**描述字符串**，断言主体是 `all(r == 0 for r in rcs)`）；受版与交付树（`Release`／`Archive.distributions`／`tools`／`TestFixtures`／`Distribution`／`Source`／`Tests`／`Config`／**`Benchmarks`**）全树扫描「44 成员」⇒ **合计 0**。**已采信面与三份索引一字未改，append-only 纪律无破例。**
+- **采信表扬（本轮最强正向形态）**：执行席新增实测真源三件（`anchor-member-census-d117.json` 4,600 B／`6441A68EDC988B…`、`.md` 2,876 B／`FE14F9DDA94D8A73…`、生成器 7,529 B／`DC9DB49EED5809…`），并**自升硬规**：叙述中一切聚合数一律由生成器从 `len()` 现算写入、**禁止手写**；跨轮引用旧回执数值须重新现算并**标注取证轮次**。**该硬规跨线已生效** —— L1 侧同轮亦自查认领 BOM 聚合 8/2→7/3。
+- **守恒零回归（现场复算）**：源码 `97DE7764…`/**277**・注册 **239 唯一**・契约 **239**・名册 **94/33/158＝285**・`ps_*` **20**・错误码 **33**・白名单 **53**／`F355705B`／**30,634 B**・**四锚 rc=0×4**。装机 `A2D6A0D0`／**1,036,008 B**・内层 zip **43**・根 `Config.daml` **1**・目录文件数 **2**・目录 `LastWriteTimeUtc` **2026-10-01T07:32:09Z 未动**・回滚锚 `7CEB2AB7`／**185,110 B** ＝ **零越窗**。Pro **0 行**・6520/6511 **双 CLOSED**・run 根零 `esriAddInX`・`f4-live`／`final-evidence` **未建**・无 evidence-index・`RELEASE-PHASE-B.md` **不存在**。**三台账字节等于轮前基线且 mtime 均早于回执写入 ⇒ 执行席零代改台账。** G-197 **L0 非空洞自证**：扫描面 **33,327 条目**（>0）⇒ 专有层 10 token **0 命中**具证据支撑；裸 `d119`／`d117` 各 1 件**归因 Win11SDK `.cab` 系统层**（G-285 三层化，不判违例）。
+- **本席 4 处口径自纠（跨轮复用教训）**：①`PHASE-B-UNLOCKED` **全文检索**误命中 §一 状态词图例与已 CLOSED 的 D-102 历史条目 ⇒ 改按工单块判**净态**；②`CLOSED` **整节**检索误命中 L1 节内 D-118／D-116 等历史 CLOSED 工单 ⇒ 改锚 `### D-119`／`### D-117` **块**；③D-117 块内**首条** status 是 G-271「PHASE-A-CLOSED · STOP-WAIT」已作废行 ⇒ 改判**末条净态**；④`%TEMP%` 把**裸 token** 与**专有命名**同层计数（违反 G-285 三层归因）⇒ **拆两层**，专有层 0 命中判合规、裸 token 逐条**归因**不判违例。
+- **裁定**：R-1 §十一 PASS｜R-2 R-G286-P1 清偿成立｜R-3 采信表扬两项｜R-4 **f3 道双备维持**（9,173 B／`99A5BB1B2459AAD8…`、语法门 0 错、tokens 1,484；旧件 9,178 B／`ABBC9977…` **维持作废**；**不升格为可执行成功**）｜R-5 **D-119 维持 ACTIVE·停等**（**只认用户并轨词**）｜R-6 §十五 PASS・勘误成立｜R-7 **产品宿主面维持 `NOT VERIFIED`**（真机窗仍未开）｜R-8 **放行权属用户，指挥席不代行**｜R-9 **零新派单**。
+- **观察项 R-G287-P1（登记不升级·零产品影响）**：d117 §十五 括注称误述落点「回执内 6 处」，本席实测回执内 **8 处**（另 2 处为本节引述旧值）＝**计数口径**（是否含本节引文），沿 R-G280-D1／R-G281-D1／R-G282-P1／R-G283-P1／R-G286-P1 先例不判缺陷。整改口径＝**括注计数须声明是否含本节引述**。
+- **指挥席待落项已清偿**：G-286 轮「L1 牌位追写」未落（执行席 §十一-1 只申报不催改，**正确纪律已采信**）—— 本轮随落账补写 L1（含 G-286＋G-287 两条追记，追溯生效，原 D-119 段 status 两行原文零改动）与 L2（§十五 采信）。
+- **线位**：ACTIVE＝**D-119（L1·窗开期间停等·f3 道双备就绪可直达）**＋**D-117（L2·预备态完备·待用户并轨词）**；L3/L4 WAITING。裁定维持 G-280 原问 **(甲)/(乙)**，**本席不预设**。
+
+- **【G-288 · 2026-10-05 10:5x · 自动化轮 R136 · D-119/L1 §十二 验收】裁定＝有条件采信（执行席 1 件陈旧声明驳回）**
+  - **验收件**：`c-g288/verify.py`（22,590 B／`33FE94E37B59894E`）→ `run1.txt`≡`run2.txt` **55/57 双跑 EXIT=1**（`3D00191EED4FF5C4`／6,742 B ×2 **逐字节一致**）。裁定书＝`GATE-G288-D119-SEC12-RULING.md`（11,635 B／`02EB30B4B7F696BF`／153 行）。**指挥席脚本自纠 3 处**（A07 注册口径假 FAIL、C15 计数分层、C12 存在性/计数拆分）；**执行席缺陷 1 件**。
+  - **★ 采信表扬两项（最强正向形态）**：① **主动驳我的溯源**——§十二-2 实测推翻**指挥席自己** G-286／G-287 的「该错可追至 §九」溯源句；本席独立复算（独立分节器 ＋ 逐节 `count`）＝ §八 **0**／**§九 0**／**§十 1**／§十一 **3**（引述）⇒ **落点 §九 NOT REPRODUCIBLE，误述唯一落点＝§十**。**本席接受并回改自身文书**（指挥席侧勘误，不罚执行席）。② **自曝判据缺口**——`s0-intake/intake_snapshot_d119.py` 的 `board_face()` 读「块内**首条** status」而非「末条净态」，**明确不静默、不回填**；本席复算＝ `snapshot.json` 4,195 B 原样未动、首末两条 status **同向等价** ⇒ **零判定依赖、零产品影响，处置正确**。
+  - **★ R-G288-D1 成立（驳回，不升级为红线）**：§十二-6 申报「`l1-idle-scratch` 0 条目、mtime 仍 05:47:21」，**实测目录在磁盘上不存在**（`.runtime/scratch/l1-idle-scratch` 与 run 根同名路径**皆 ABSENT**）。**时间线钉死**：父目录 `.runtime/scratch` mtime＝**2026-10-05 05:49:34**（本地），父目录 mtime 仅在**直接子项增删**时变动 ⇒ **删除发生于 05:49:34**；§八 落笔 05:48:34（**尚在**，声明为真）、§九 落笔 06:4x（**已删**）。**规模 5 处**＝line 287（§八 原始，写入时为真）＋ **299／367／421／473（4 处陈旧逐字重复）**。**性质＝跨轮沿用未复算**（G-287 刚自升硬规「聚合数现算、禁手写」，下一节即手写沿用**已消失载体**的读数；**同节内 §12-2 刚做完分节实测，§12-6 却搬陈旧值＝自相矛盾**）。**影响面：产品零／红线零／治理一**。**下轮须当场清偿**（判 `NOT REPRODUCIBLE` ＋ §九/§十/§十一 同款标陈旧、**不删原句**）。
+  - **★ 硬规升级（跨线生效）**：「**已消失对象的读数不得跨节沿用**」——载体不存在时「0 条目」不是合格读数而是**空洞真值**；凡涉目录/文件计数，**先断言存在性、再断言计数**。**指挥席侧同步废止** c-g282…c-g286 脚本的 `if isdir else 0` 写法。
+  - **守恒零回归（现场复算）**：源码 `97DE7764A7B1A2F98ED7`/**277**・注册 **239/239 唯一**・契约 **239**・名册 **94/33/158＝285**・`ps_*` **20**・错误码 **33**・白名单 **53**／`F355705B`／**30,634 B**・**四锚 rc=0×4**（成员 9+13+12+14＝48／并集 48／`sum==union`／**逐成员 SHA-256＋字节零漂移**）。装机 `A2D6A0D0`／**1,036,008 B**・内层 zip **43**・根 `Config.daml` **1**・目录条目 **2**・目录 `LastWriteTimeUtc` **2026-10-01T07:32:09Z 未动**・回滚锚 `7CEB2AB7`／**185,110 B** ＝ **零越窗**。Pro **0 行**・双端口 **CLOSED**・run 根零 `esriAddInX`・`f4-live`／`final-evidence` **未建**・无 evidence-index・`R-D119.md` **ABSENT**・f3 配方 **9,173／`99A5BB1B2459AAD8`／无 BOM** 字节稳定。保护树 **68/139/168/11/416/12**・受版 csproj **8＋5**。**三台账字节等于轮前基线且 mtime 早于回执 ⇒ 执行席零代改。** G-197 **L0 非空洞自证**：扫描面 **33,354 条目**（>0）⇒ 专有层 **12 token 0 命中**具证据支撑；裸 `d119`／`d117` 各 1 件**归因 Win11SDK `.cab` 系统层**（不判违例）。
+  - **观察项登记不升级**：**R-G288-P1**＝§十二-2 表格「BOM」§十一申报 15 次、实测 **14**（计数口径沿用，五轮先例）；**R-G288-P2**＝「全件合计 4」未回填本节自身 7 处引述（同族）。
+  - **线位**：ACTIVE＝**D-119（L1·维持 ACTIVE 窗开期间停等·净态＝块内末条 status·f3 道双备就绪）**＋**D-117（L2·待用户并轨词）**；L3/L4 WAITING；**零新派单**，基线**零推进**。裁定维持 G-280 原问 **(甲)/(乙)**，**本席不预设**。
+
+- **【G-289 · 2026-10-05 12:3x · 自动化轮 R137 · D-119/L1 §十三 验收】裁定＝采信 PASS ＋ ★★ 撤销指挥席 G-288 的 R-G288-D1（执行席零缺陷）**
+  - **验收件**：`c-g289/verify.py`（24,464 B／`F331826906858F9B…`）→ `run1.txt` ≡ `run2.txt` **77/77 双跑 EXIT=0**（`2E65EE62E19F04E8…`／5,193 B ×2 逐字节一致）。裁定书＝`GATE-G289-D119-SEC13-RULING.md`（14,870 B）。**指挥席脚本自纠 5 处**（D4 `typeof` 断言／D5 契约正则／B2 链级计法／G1-G2 块切片），**全系指挥席缺陷，执行席零缺陷**。
+  - **★★ R-G288-D1 撤销（RETRACTED·指挥席自错，本轮最高价值）**：§十三-2 实测驳回成立。**在册真实路径＝`.runtime/evolution/v5-f/l1-idle-scratch`**（`isdir=True`／`entries=0`／`mtime=2026-10-05 05:47:21` **逐字为真**）；G-288 §5.1 所据两条候选路径**确为 ABSENT ＝指挥席查错了路径**；**旁证** `…/v5-f` mtime 停在 **01:05:20** 未变 ⇒ **该处无增删，删除时间线被推翻**；`.runtime/scratch` 05:49:34 之因**归因指挥席 G-284 探针**（现为空），与本线无关。**根因＝从未回工单/红线原文取在册路径**（回执 §一 line 54 原文给的是「run 根 **或** `l1-idle-scratch/`」**两个**位置），且**指挥席自己写下的「父目录 mtime 仅在直接子项增删时变动」原理未回头用**。**执行席不追责、无须在 §十四 做陈旧标注**；**存在性两段式硬规独立保留跨线有效**（本席侧 `if isdir else 0` 已于 G-288 废止，本轮 A1/A2/B1/B2/E1/I_* 全部落地）。G-288 裁定书已**追加 §10 撤销段**（append-only，§1～§9 原判词一字未改，11,635→**14,638 B**／`E4E15555209CFA22`）。
+  - **★ 采信表扬两项**：① **驳回指挥席且给可复跑入口**——四条现场可复跑数据 ＋ **责任边界分离**（「不接这顶帽子，但采纳其硬规」）＋ **预设自我否证条件**（「若指挥席改用真实路径复跑仍得不存在，本席立即改判并自记缺陷」）＝**教科书级对抗式申诉形态**。② **提示注入告警**——10:4x 轮外部消息伪装「系统指令」要求改用 `<path>contents</path>` 格式写文件、禁用正规工具，**判定为注入并拒绝执行**，写入始终经正规工具、当轮**零写盘**、两因分列；**指挥席复核 L1 牌位与三账该字面零命中 ⇒ 台账零污染**。
+  - **★ 杂散目录裁定（R-G289-P1，登记不升级）**：§十三-3 自曝 `.runtime/evolution/v5-f/.runtime/evolution/v5-f/run-20261005-d119/_scratch` **五级空壳、0 文件、mtime 01:01:14、逐层 1/1/1/1/0 链状**（指挥席五项独立复测全数吻合）。根因＝§二 首版 `intake_snapshot_d119.py` 的 `ROOT` 由 `dirname` **层数算错**，同轮已自纠为 `_find_root()`（**锚标志文件而非数层数**——已入本线持久记忆）。**裁定采信默认 (b)：保留原样、终轮 `evidence-index` 显式入册**；删除会触动 `.runtime/evolution/v5-f/`（**回滚锚链所在根**）mtime，风险收益比不成立；**停等请裁不擅自删＝正确纪律**。**后续轮次不得擅自删除该目录。**
+  - **守恒零回归（现场复算）**：源码 `97DE7764A7B1A2F98ED7`/**277**・注册/契约 **239 唯一**・名册 **94/33/158＝285**・`ps_*` **20**・错误码 **33**・白名单 **53**／`F355705B`／**30,634 B**・**四锚 rc=0×4**。装机 `A2D6A0D0`／**1,036,008 B**・内层 **43**・根 `Config.daml` **1**・目录 **2** 件・mtime **2026-10-01T07:32:09Z 未动**・回滚锚 **185,110 B** ＝**零越窗**。**f3 道双备维持**（**9,173 B／`99A5BB1B2459AAD8…`・无 BOM・PS AST `parseErrors=0`／tokens 1,484**；旧件 9,178 B／`ABBC9977…` **维持作废**，**不升格可执行成功**）。run 根 **17 目录件数逐目录全等**（后八者**归因指挥席落件**）。越窗反证全零：**Pro 0 行**・双端口 **CLOSED**・run 根零 `esriAddInX`・`f4-live`／`final-evidence` **未建**・无 evidence-index・`R-D119.md` **ABSENT**。**三台账＋牌位轮前基线逐字节等值且 mtime 早于回执 ⇒ 执行席零代改。** G-197 **L0 非空洞**（**33,369 条目**、本线 7 专有 token **0 命中**）。
+  - **★ 本席侧硬规（跨线）**：**跨轮继承的断言句必须回原始件逐字验证**（G-288 连续两处缺陷同源于「继承自己上一轮产物而未回原文核对」；本轮 D4 实测 `typeof(` 在 `Composition.cs` **有 6 处命中**，G-288「零命中」原句不成立）｜**父目录 mtime 双向用作旁证**｜**「驳回他席结论」须给可复跑入口**（路径＋实测值＋旁证＋自我否证条件四项齐备）。
+  - **线位**：ACTIVE＝**D-119（L1·维持 ACTIVE 窗开期间停等・末条净态未变・停等解除只认用户并轨词）**＋**D-117（L2·待用户并轨词）**；L3/L4 WAITING（**L4 无 `PHASE-B-UNLOCKED` 净态**）；**零新派单**，基线**零推进零回归**。裁定维持 G-280 原问 **(甲)/(乙)**：**(甲)** 给 L2 并轨词开真机窗 ⇒ D-119 续停等／**(乙)** 不开窗 ⇒ **D-119 即刻解停等开工 224→239**（f3 双备可直达，逐阶段不跳序）。**放行权属用户，本席不预设。**
+  - **落账**：DECISIONS **G-289**（806,101／`0AE96DD36C35879F`）｜DISPATCH **§266**（787,772／`8BB45438CDBB5D1D`）｜HANDOVER **第 243 版**（688,995／`C08C9781D480D788`）｜L1 牌位追写（111,788／`21EC4F5F4FFC1FA2`）｜落账脚本**内嵌锚幂等**（复跑四件全 SKIP、字节零变动）｜六文件**严格 UTF-8 通过、无 CRLF**。
+
+## G-290 轮 · 2026-10-05 13:0x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝§十四采信＋交付形态裁定＋并轨词呈用户
+- **采信**：h-receipt-d119 §十四（12:47）本席 12:59 独立现测对照全绿（聚合 97DE7764/277＋239/239＋白名单 53＋装机 224 entries=2＋Pro 0＋双端口 CLOSED）；G-289 项（R-G288-D1 撤销／注入拒绝零污染／R-G289-P1 空壳 (b) 入册／对抗式申诉范式）**维持**；执行席零缺陷。
+- **交付形态裁定（答复 §十四·6）**：采「有新事实才增节」——实质新事实（交付/证据/时序/撤销/外部状态/口径）出现才增节全量复算；**纯停等轮改一行回报＋十项现值抽验**（聚合/注册/契约/名册/错误码/白名单/装机/Pro/双端口/四锚——任一项漂移即视为新事实强制增节）；产物归 run 根 `daily-snapshots/`。纪律不降、形态降本。
+- **并轨词呈用户（G-280 原问第 14 轮，未扩未缩）**：(甲) 给 L2 收官窗 ⇒ D-119 续停等；(乙) 本阶段不再开窗 ⇒ D-119 即刻解停等开工 224→239（f3 道双备可直达，f3→f4→final-evidence 逐阶段不跳序）。本席不代行。
+- **派单**：零新派单。**工期**：(乙) ⇒ 239 装机今日 15-17 时；M7 闭锁＋M5 第五锚冻结＋全局收官随 D-119 终验批今日内。
+- **轮末**：L1/D-119 ACTIVE·停等中；L2/D-117 ACTIVE·Phase B 三查全绿·M7 PROCESSING；源码 97DE7764/277·239；装机 224；四锚＋285/33/53 恒定。落账＝DECISIONS G-290／§267／HANDOVER 244。
+
+## G-291 轮 · 2026-10-05 13:1x（指挥席手动轮 · 用户「你决定」代裁）＝并轨词 (乙)＋D-119 停等解除即刻开工
+- **代裁**：采 (乙)＝不再开真机窗；D-119 停等即刻解除（G-291 为停等解除唯一信号）。依据＝M7 闭锁不依赖装机状态（后置无损）＋装机后 L2 收官窗可在 239 基线跑（证据面增益）＋停等 14 轮机会成本。
+- **开工序列（逐阶段不跳序）**：f3-install（224 主件回滚锚先行→官方安装位安装，先清单后写＋逐件 sha 台账）→f4-live（启动铁律→tools/list 239≡契约快照／GP 枚举 53 恒定／ps_* 零调用）→三包并入终验（G-284 R-3）→final-evidence（一次成型冻结，含 R-G289-P1 杂散五级空壳 (b) 显式入册＋取证时点戳）→R-D119 PASS CANDIDATE。真机授权链＝G-237＋G-221 R-1（重启）。**L2 收官窗后置**至 239 装机后。
+- **工期**：239 装机＋终验 14-17 时；GP 评测闭环 17-19 时；全局收官今日内。落账＝DECISIONS G-291／§268／HANDOVER 245。
+
+## G-292 轮 · 2026-10-05 13:1x（指挥席手动轮 · 用户指令「派单」）＝零新单可派＋D-120 收官批预登记
+- **诊断**：L1 ACTIVE（D-119 停等已解·待接单开工）／L2 ACTIVE（D-117 收官窗后置）／L3 WAITING（D-099 CLOSED·G-207）／L4 WAITING（G-RELEASE 收官）⇒ 依 G-211「每线至多一份 ACTIVE」**零新单可派**（派新单将构成双 ACTIVE 违规）。
+- **预登记（G-221 先例）**：**D-120＝全局收官批 PRE-REGISTERED**（L1 顺位·不占 ACTIVE·前置成就即自动激活）——前置＝D-119 终验 CLOSED（239 装机）＋D-117 收官终版（M7 闭锁＋R-D117 终版）；范围＝M5 第五锚冻结终裁／R-G289-P1 杂散五级空壳终册核验／发布记录终局核验／挂账销账裁定包（O-M4-01/02/03・O-D116-01/03・O-D100-01・W 系列）／O-M4-03 并入终局核验面／全局收官报告。
+- **工期**：D-119 14-17 时→L2 收官 17-19 时→D-120 1-1.5h ⇒ 全局收官今日 19-21 时。落账＝DECISIONS G-292／§269／HANDOVER 246。
+
+## G-293 轮 · 2026-10-05 14:3x–15:0x（指挥席手动轮 · 用户指令「验收」）＝D-119 f3 安装 239 生效采信＋P3 补写＋引文勘误
+- **采信**（指挥席独立现算 7/7）：**装机 239 生效＝1,103,697 B／`59F376555025052D`**（前值 224/`A2D6A0D0`）＋目录恰 2 件＋回滚锚 `7CEB2AB7`/185,110＋恒定面 `97DE7764…`/277·注册 239≡契约 239·白名单 53＋**Unit TRX 1,819P/0F**＋三包演练 JSON 在场＋final-evidence 未建（`R-D119.md` ABSENT⇒不闭单）。**执行席零缺陷**——f3/f3b/f4/f5/f6 六阶段全完。
+- **执行席驳回采信**：§十八「引文张力登记」成立——GATE-G284 全文零「三包／演练包」字样、R-3 实文＝f3 双备（本席 A7 实证）；**三包项实质授权在 G-278 派单文**；G-291 已 append-only 追加勘误段（只更正引文出处，判词与范围不变）。执行席「据实物证据执行＋如实登记不擅改未扩范围」＝正确纪律。
+- **P3 治理缺陷补写（归因指挥席，采 R138 登记）**：①D-119 块内 append-only 追加第三条 status（净态＝停等已解除·即刻开工·f3~f6 全完·收尾段在飞）②D-120 预登记节下移至 D-119 之后（恢复 ACTIVE 居首牌位序）。
+- **观察 R-G293-P1**：TRX Passed 1,819 vs 基线 1,816（+3）待 R-D119 终版说明，0 Failed。
+- **线位/工期**：L1/D-119 ACTIVE·收尾段（待 final-evidence＋R-D119）；L2/D-117 收官待批（239 基线）；D-120 前置①成就。R-D119＋终验收 15-16 时→L2 收官 16-18 时→**全局收官今日 18-20 时**。落账＝DECISIONS G-293＋G-291 勘误段／§270／HANDOVER 247。
+
+## G-294 轮 · 2026-10-05 15:1x（指挥席手动轮 · 用户指令「验收」）＝D-119 终验收 CLOSED＋派 D-121＋L2 收官窗放行
+- **终验收 PASS**：c-g294/verify.py **12/12 全绿**（本席口径自纠 2 处留证）——**装机 239 全哈希 `59F376555025052DE905D…`/1,103,697 逐字**＋目录 2 件＋回滚锚 2 件 0444＋恒定面 97DE7764/277·239≡239·285/33/53＋**Unit 1822＝1819P/0F/3NE**（基线更新）＋四锚 rc=0×4＋LIVE 面 239≡契约快照/GP 53/ps_* 零调用/零 6511＋三包演练＋代际 224 归零＋evidence-index 246 条目冻结＋终验器 46/46 ALL_GREEN＋Pro 0/双端口 CLOSED。**执行席零缺陷**。**D-119 CLOSED**；**R-G293-P1 销案**（1816 系 Total，1819P+3NE⇒NEW=NONE）。
+- **派单 D-121/L1 ACTIVE＝r24 分发件批**（O-D119-01 另批＋O-D119-02 并入）：net8 payload ≡ 现役 239 装机件逐字节＋Release/ r24 新位（G-244 R-5 先例）＋r21-r23 封存零触碰＋one-click-setup.ps1:1150 归 239＋发布台账四要素；授权链 G-221 R-2（**签名/公开仍属 AGENTS §6 需用户明文**）。
+- **L2 收官窗放行**：D-117 收官终版（M7 闭锁＋R-D117 终版，**239 基线证据面**）。**D-120 前置①成就**。
+- **工期**：D-121‖L2 收官并行 17-18 时→D-120⇒**全局收官今日 18-20 时**。落账＝DECISIONS G-294／§271／HANDOVER 248。
+
+## G-295 轮 · 2026-10-05 16:3x–16:5x（指挥席手动轮 · 用户指令「验收」）＝双线同轮终验收＝D-121/D-117 CLOSED＋M7 闭锁＋D-120 激活
+- **复算**：c-g295/verify.py **15/15 全绿**（本席零口径自纠）——D-121 九项（r24 2,269,257/`539B732878B6`・26 条目・**net8 payload ≡ 装机 239 逐字节**・r21-23 零漂移・代际 224 归零・**Unit 1824＝1821P/0F/3NE**・68/68・32/32・PS AST 17/17・终验 33/33・真实兼容 12/12）＋D-117 五项（closure v4 349,230/`DFAE06D0`・**212 状态＋212 evidence**・合成输入基准 53/53・**VERIFIED 0**・四锚 rc=0×4）。**两线执行席零缺陷**（D-121 三处真缺陷自修，含自引入空白形态破坏既有锚点测试⇒只重排空白不改测试）。
+- **裁定**：**D-121 CLOSED**（发布面 r24 入册・测试基线 1824）＋**D-117 CLOSED**（四段链闭环）＋**M7 闭锁＝HANDOFF**（闭锁由指挥席落账＝正确分工）。
+- **待裁**：O-D121-01＋发送给同事-r24 → 并入 D-120；时序偏离**不判跳序**（不跳序＝evidence 完整性＋目录名唯一绑定，非执行时序）；**239 签名/公开仍候用户明文**。
+- **派单 D-120/L1 ACTIVE＝全局收官批**（前置①②双成就）；L2/L3/L4 WAITING。**三基线并立**（源码 239・装机 239・发布面 r24）。**工期＝全局收官今日 18 时前后**。落账＝DECISIONS G-295／§272／HANDOVER 249。
+
+## G-296 轮 · 2026-10-05 17:0x–17:2x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝D-120 在飞抽验采信＋M5 冻结终裁＋派 D-122/L2
+- **抽验采信**：c-g296/verify.py **11/11 全绿·双跑 EXIT=0**（本席口径自纠 3 处：client-catalog 键嵌套／%TEMP% 三层归因＋UUID 巧合／TRX Failed 父聚合重复）——恒定面 97DE7764/277·239≡239·285/33/53·wl F355705BF2C4｜装机 239 零触碰｜四锚 rc=0×4｜**client-catalog 两处计数均 239＋五树陈旧字面 0（O-D121-01 清偿）**｜**TRX 终态 r6=1825/1822P/0F/3NE**＋Server 68/0＋Int 32/0｜终验器 38/38 ALL_GREEN｜M5 依据包 8 候选在册＋`closureMembersInAnchors=[]`＋**m5 脚本 ABSENT＝未越权建锚（正确纪律）**｜r24 539B732878B6｜Pro 0 双端口 CLOSED｜写域恰 2 授权文件。**执行席零缺陷**（TRX 三轮复跑消解法、锚权自限、取证不升格）。
+- **不闭单**：R-D120.md 未交 ⇒ D-120 维持 ACTIVE·收尾段。
+- **M5 第五锚冻结终裁＝采甲**：冻结；**锚面＝D-117 收官定义面方案 A（closure v1–v4 jsonl＋md 8 件）**，B 方案 14 件不采；G-271 两条暂不冻结理由已随 D-117 CLOSED 失效；**禁写行为已验证判据**（实证 VERIFIED＝0）。
+- **派单 D-122/L2 ACTIVE**＝M5 锚执行微批（只新增 m5 脚本＋锚记录各一件；Benchmarks 只读；四锚零改；禁写判据守卫须可证其会拦；输出根 `run-20261005-d122/`）。**销账 O-D121-01/02**。
+- **四线**：L1＝D-120 收尾｜L2＝D-122 新派｜L3/L4 WAITING。**用户钥匙**：239 签名/公开（AGENTS §6）须明文。**工期**＝全局收官今日 18-19 时。落账＝DECISIONS G-296／§273／HANDOVER 250。
+
+## G-297 轮 · 2026-10-05 17:1x–17:3x（指挥席手动轮 · 用户明文「代为批准」）＝AGENTS §6 签名/公开发布解除＋派 D-123/L1
+- **R-1 授权**：「239 世代签名/公开发布」用户明文批准 ⇒ **AGENTS §6 该项解除**。授权链＝**G-297＋G-237 R-2＋G-221 R-2**。
+- **R-2 物理预检（先于落令）**：**零 CodeSigning 证书**（CurrentUser 5 张全非签名用途／LocalMachine 0）＋**signtool NOT-ON-PATH**＋**Windows Kits 10 ABSENT** ⇒ 采**自签路径**（PS 5.1 内建 `New-SelfSignedCertificate -Type CodeSigningCert` ＋ `Set-AuthenticodeSignature`，**不依赖 signtool/SDK**）。**公开 CA 采购（O-D123-01·涉付费实名）与外网托管目标端（O-D123-02）须用户二次明文；指挥席不代行、不猜测目标端**。
+- **R-3 派单 D-123/L1＝PRE-REGISTERED**（发布签发批；**激活前置＝D-120 终版 CLOSED**，同线 ACTIVE 互斥）：自签证书（私钥不落盘）→ r25 制包（net8 ≡ 装机 239）→ 载荷与外层 zip 分别签名并须 Valid → 发布记录 r25 四件套（两格按实改写·未执行须注明原因禁虚报）→ 验签留证＋签名前后 payload 逐字节对照 → 「发送给同事-r25」（含自签不受信任告知）。**r21–r24 零触碰**。输出根 `run-20261005-d123/`。
+- **在飞**：D-120（L1 收尾段）｜D-122（L2 锚微批）｜D-123（预登记，待激活）。**工期**＝全局收官 18-19 时；r25 签发件 19-21 时。落账＝DECISIONS G-297／§274／HANDOVER 251。
+
+## G-298 轮 · 2026-10-05 18:1x–18:3x（指挥席手动轮 · 用户指令「验收」）＝双线同轮终验收＝D-120/D-122 CLOSED＋D-123 激活＝**全局主体工程收官**
+- **复算**：c-g298/verify.py **21/21 全绿·双跑 EXIT=0**（本席口径自纠 4 处留证：s0 锚无 `-s0` 后缀／G-289「五级」＝路径嵌套五层／索引在 run 根／修 C2 时脚本块断裂整段重写）。公共面 97DE7764/277·239≡239·285/33/53｜装机 239 零触碰｜**五锚 rc=0×5**。D-122 八项（**成员 8 件逐件 SHA 现场复算 ≡ 锚记录**・成员集 ≡ 方案 A・**禁写判据独立正则 0 命中**・双守卫在场・Benchmarks 170→172・四锚八件零缺失・聚合 `FCE693002B93…`）＋D-120 七项（终验器 38/38・**杂散五级空壳保留原样**・挂账包 11・载体六件・两处 239・TRX 1822P/0F/3NE・索引 39 条目）＋红线三项。**两线执行席零缺陷**。
+- **执行席亮点**：D-120 自修 4 处真缺陷 ＋ **主动勘误对继承归因**（「test-jobs 跨轮残留」不完整⇒全新 `-d120` 四根仍复现，**实为并发负载时序窗**）＋**未放宽任何断言**。
+- **裁定**：**D-120 CLOSED**（全局收官批完成）｜**D-122 CLOSED**（M5 第五锚建成，禁写守卫可证其会拦）。**销账 6**（O-M4-01・W1・W2・R-G289-P1・O-D121-01・O-M4-03 宿主面子集）｜**转下一阶段 4**（O-M4-02 用户裁定・O-D116-01・O-D116-03・O-D100-01）｜**新登记 O-D120-01**｜**观察 R-G298-P1**（并发时序族，登记不派批）。「发送给同事-r24」销账。
+- **派单 D-123/L1 → ACTIVE**（前置成就，零等待兑现）＝r25 制包＋自签签名＋发布记录 r25＋验签留证＋「发送给同事-r25」。L2/L3/L4 WAITING。**五基线**＝源码 239｜装机 239｜r24｜M5 `FCE693002B93…`｜四锚并集 48（**五锚共 56 件**）。**工期**＝r25 今日 19-21 时。落账＝DECISIONS G-298／§275／HANDOVER 252。
+
+## G-299 轮 · 2026-10-05 19:3x–19:4x（指挥席手动轮 · 用户指令「验收」）＝D-123 BLOCKED-STOP-WAIT 采信＋裁定采 A 路径＋派 D-124/L1
+- **形态采信**：`R-D123.md` **主动申报 BLOCKED-STOP-WAIT 而非 PASS**＝正确形态（先例 R-D116／v2）；执行席零缺陷、终验 21/21 ALL_GREEN、**`Release/` 79 件＝基线・r25 命中 0**（未写一件，完全可逆）、自签证书 `4E4ED6…` 达成且私钥未落盘、5 处自引入问题当场纠正。
+- **B1/B2 本席独立复现成立**：**B1**——魔数实测 `.esriAddInX`／外层 `.zip` 均 `50 4B 03 04`＝ZIP 容器，`.dll`＝`4D 5A`＝PE，`.ps1` 可签；亲跑签名对 `.esriAddInX` → `UnknownError`「指定格式…不支持」⇒ **Authenticode 不支持 ZIP 容器**（**归因指挥席：派单未先验格式可签性**）。**B2**——PE 签名写入成功（Thumbprint 逐字匹配）但验签「已处理证书链，但在不受信任…根证书中终止」；取 `Valid` 须装 TrustedPeople（现 0），**工单仅授权 `CurrentUser\My`** ⇒ 未擅改信任根＝正确纪律。
+- **★ R-G299-P1（本席新发现）**：ZIP 目标失败签名后**副本读回为空**（魔数 `00 00 00 00`）⇒「签名前后字节等值」在 ZIP 目标上不可靠；**真实载荷与 r21–r24 逐件零影响** ⇒ 执行席守界价值凸显。
+- **裁定＝采 A**：签名对象改**外层 `one-click-setup.ps1`** ＋刷 manifest 哈希 ＋`$acceptedDeploymentVersions` 补 r25 ＋ r25 落 `Release/`；**不动 payload 字节**⇒ 完成门③保持。**★ 不授权装 TrustedPeople／根**（信任根变更属安全面变更；只使本机 `Valid`，对同事端无作用）⇒ 接受链未信任并**强制显式标注「自签・操作系统不信任」，禁写 `Valid`**。同事端可信唯一正解＝O-D123-01 公开 CA 采购。
+- **派单 D-124/L1 ACTIVE**（**沿用 `4E4ED6…` 不重生成**）：七项范围 ＋ 十项完成门（⑤断言写成「非 Valid 且原因为自签根未信任」）＋ 输出根 `run-20261005-d124/`。**D-123＝CLOSED（转签，非失败闭单）**。派单卫生：D-123/D-121/D-119 节题陈旧 ACTIVE 已 append-only 追加净态标注。
+- **挂起**：O-D123-01 CA 采购｜O-D123-02 外网托管目标端（不阻塞 r25 本地交付）。**工期**＝r25 今日 21-23 时。落账＝DECISIONS G-299／§276／HANDOVER 253。
+
+## G-300 轮 · 2026-10-05 21:1x–21:3x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝D-124 CLOSED＋发布面 r24→r25＋**全局工程收官**
+- **复算**：c-g300/verify.py **18/18 全绿·双跑 EXIT=0**（本席口径自纠 4 处：签名对象实为**包内** ps1〔仓库源保持未签才是合规面〕／acceptedVersions 在 verify-one-click-package.ps1／verdict 走 summary 节点／写域白名单漏列三件）。**签名专项（本席 PowerShell 解包复核）**：121,312 B／`1312CF39C452E954…`／sig block=True／**status=UnknownError**／「链终止于不受信任根」／**signer thumb `4E4ED6…` 与登记证书逐字一致** ⇒ 与 G-299 R-3 裁定预期完全吻合。
+- **R-G300-P1（措辞登记·不判缺陷）**：§二·②「包外层副本」措辞不精确——实为**包内 `scripts/` 发布件**；本意「签发布件不改仓库源」与字节事实一致且合规。
+- **裁定**：**D-124 CLOSED — 验收 PASS**（执行席零缺陷，全程「非 Valid 如实书写」＋`trustStoreMutation=NOT EXECUTED BY DESIGN`）。**★ 发布面基线推进 r24→r25**：r25＝2,270,984/`7969C220886F4D08…`・外层 26 条目・**net8 内层 payload 字节级 ≡ 装机 239**・net6 `ADBF848C4ABC1BCB`・内层 43 条目・四件套齐备・版本链 r22→r25・acceptedVersions 25 项・`发送给同事-r25` 六件（含不可信告知＋SmartScreen）。**r21–r24 零改 4/4**。**L1 转 WAITING**。
+- **★ 全局工程收官**：**九批全部 CLOSED**（D-116/117/118/119/120/121/122/123/124）｜四线全 WAITING｜**零新派单**（G-211；余下挂账均需用户裁定/授权）｜**无待办工时**。
+- **六基线**：源码 239｜装机 239｜**发布面 r25**｜M5 `FCE693002B93…`/8｜四锚并集 48（五锚共 56，rc=0×5）。测试基线 1825＝1822P/0F/3NE。
+- **唯二待用户项**：**O-D123-01 公开 CA 采购**（同事端可信的唯一路径）｜**O-D123-02 外网托管目标端**（未指定前仅本地分发）。落账＝DECISIONS G-300／§277／HANDOVER 254。
+
+## G-301 轮 · 2026-10-05 21:4x–21:5x（指挥席手动轮 · 用户指令「唯二待你决定的帮我决定」）＝代裁 O-D123-01/02＋派 D-125/L1＝**用户待决项清零**
+- **代裁依据（先查事实）**：**O-D123-02**——NOTICE §4「仅本机·**不得暴露公网**」＋§1「**保留所有权利·不得再分发**」＋**仓库无 `.git`**（无既有托管面）⇒ 公开托管从零新建外网暴露面。**O-D123-01**——**OV/EV 仅对企业主体开放**（营业执照＋法人身份证＋企业域名邮箱，个人邮箱无效），**IV 需政府证件＋活体核验且显示个人法定姓名** ⇒ **本仓无企业主体、无个人实名材料 ⇒ 无合规申请路径**；且 **2024-08 起 EV 不再比 OV 快消除 SmartScreen**、**2023-06 起私钥强制硬件令牌/HSM**（OV ¥1,200–4,400/年、EV ¥2,500–6,600/年＋令牌邮寄）、**SmartScreen 按下载量累积首日仍警告**。
+- **裁定一 O-D123-01 ＝ 暂不采购**（要件不具备／收益不成立／代价明确／r25 已给「先核 SHA-256→一致→「更多信息」→「仍要运行」」替代路径）。**★ 复裁条款**：实名或企业材料 ＋ 真实消警告诉求 ＋ 接受令牌流程 ⇒ 派补签批 0.5–1h。
+- **裁定二 O-D123-02 ＝ 不公开**，维持仅本地/内部分发（与 NOTICE §4/版权冲突 ＋ 无既有托管面 ＋ 对同事场景零增益）。**★ 复裁触发**：改版权条款 ＋ 平台可见性 ＋ 接受供应链风险 ＋ 具受信任签名。
+- **★ §6 授权仍在案（G-297）但裁定「不执行」——授权 ≠ 执行，复裁时无需重新申请。**
+- **派单 D-125/L1 ACTIVE**＝日志路径可配置化（O-D100-01＋O-D120-01；`Composition.cs:228` 硬取 `LocalApplicationData` 且无开关）＋ GpControlNotes 文案刷新（O-D116-01；`GpControlTools.cs:12`「起步 51 件」→ 归 53 改引权威源）。**纯 Source 面・零注册变更・零 payload 变更・零真机**；完成门十项；输出根 `run-20261005-d125/`。
+- **状态**：**用户待决项＝零**｜维持挂账 O-D116-03（需真机窗）・O-M4-02（用户裁定）｜**工期**＝D-125 0.5–1h 今晚收官。落账＝DECISIONS G-301／§278／HANDOVER 255。
+
+## G-302 轮 · 2026-10-05 22:0x–22:1x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝零未采信交付确认轮＋D-125 待接单
+- **盘点**：outbox 自 G-301（21:45）后**零新件** ⇒ 零未采信交付；**D-125 尚未开工**（run 根 `run-20261005-d125/` 未建；`Composition.cs` mtime 10-04 20:37:34、`GpControlTools.cs` **09-20 16:17:31** ⇒ `Source/` 零写入）。**恒定面零漂移**（聚合 `97DE7764A7B1A2F9…`/277・白名单 53/`F355705BF2C4`）｜Pro 0。
+- **缺陷面确认**：`Composition.cs:228-229` 硬取 `LocalApplicationData` ＋ 无配置开关（O-D100-01/O-D120-01）｜**O-D116-01 范围缩小**——`GpControlNotes.WhitelistNote` 常量**已正确指向权威源**，仅注释层「起步 51 件」待刷新。
+- **线位/派单**：L1＝ACTIVE（D-125 已派未开工）｜L2/L3/L4 WAITING｜**零新派单**（G-211）｜**不催办**（执行席按自动化轮节奏接单；聚合值变更在交付时入册）。
+- **工期**：**D-125 0.5–1h ⇒ 今晚 23 时前后交付**，终验收 +0.5h；其后四线全 WAITING ＋ 用户待决项＝零。余下 O-D116-03（需真机窗）／O-M4-02（需用户裁 6511 边界）**不排期不催办**。落账＝DECISIONS G-302／§279／HANDOVER 256。
+
+## G-303 轮 · 2026-10-05 23:0x–23:1x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝D-125 在飞采信＋TRX 守卫 FAIL 在飞观察
+- **回执采信**：`h-receipt-d125`（22:55・**先于产品码**）＋入场快照 **17/17**；`R-D125.md` ABSENT ＋ `final-evidence/` 未建 ⇒ 仍在在飞。**三项纪律亮点**：三轮自检双状态在册不删且**先归因本席脚本口径**／**主动识别指挥席落件并字节级佐证**（`G299-resign-dll.dll` 432,512 B vs G-299 R-2 自述 431,104 B ＝ **+1,408 B** ⇒ 签名后产物；判「执行席自写命中 0」且不触碰不删除不改名）／写域张力先声明后动手。
+- **独立抽验 c-g303 11/11 全绿**：**源码聚合已推进至 `5BEB4E75…`/277**｜注册 239 ≡ 契约 239・285/33/53 零漂移｜**缺省行为零变更**（nullable override ＋ env 常量在 Configuration 面 ＋ LocalApplicationData 仍原样传入）｜**注释零硬编码件数**（实改为「随权威源浮动・不得硬编码」）｜守卫件 12,966 B/11 测试｜**装机 239 与 r25 逐字节零触碰**｜**写域恰 5 件**｜Pro=0｜%TEMP% 专有层 0｜白名单 53 零改动。
+- **★ R-G303-P1（不判缺陷·不干预）**：新守卫 `GpControlNotesComment_…`（line 183）终轮前 FAIL，**恰落在完成门④**。**裁定＝不预判不催办**（交件前非验收对象；成因是实现缺陷还是守卫口径缺陷**处置相反**；G-129 先例指挥席抢改即越权）。**终值规则预设**：仍 FAIL ⇒ 门④判未达成退回；改守卫口径须**明写理由 ＋ 变更前后判据**由指挥席裁。
+- **派单/线位**：L1＝ACTIVE（D-125 在飞 f4-trx）｜L2/L3/L4 WAITING｜**零新派单**｜**用户待决项＝零**。**工期**＝交件 23:20-23:40 ＋终验收 0.5h ⇒ **全局收官约 00:00-00:20**。落账＝DECISIONS G-303／§280／HANDOVER 257。
+
+## G-304 轮 · 2026-10-05 23:2x–23:3x（指挥席手动轮 · 用户指令「验收派单报告当前进度和所需时间」）＝D-125 CLOSED＋三挂账销账＋测试基线 1843＋R-G303-P1 销案＝**全局工程收官**
+- **复算**：c-g304/verify.py **18/18 全绿·双跑 EXIT=0**（本席口径自纠 2 处：派生链多行调用须语义判定／TRX testName 全限定须取短名）。**终值源码聚合 `1750FED84B9282D19…`/277**（**G-303 中间值 `5BEB4E75…` 已作废**）｜注册 239 ≡ 契约 239・285/33/53・30,634 B｜**缺省行为零变更**（缺省赋值回派生值＋解析器内 env 读取＝0）｜**fail-closed 齐备**（新错误码・长度 240・绝对路径・UNC/`..`/盘根拒绝）｜注释零历史硬编码＋数字集合恰 {6}＋**常量层未改**｜守卫 18 例・**判据只增不减**｜**Unit 1,843＝1840P/0F/3NE**＋Server 68/68＋Int 32/32＋NE ≡ 基线｜**装机与 Release 五代 zip 零改 5/5**｜**五锚 rc=0×5**｜写域恰 5 件｜**Pro=0 双端口 CLOSED**｜终验 30/30｜索引 37 条目。**执行席零缺陷**。
+- **★ R-G303-P1 销案**：两处 run-1 FAIL **均以改实现／改文本清偿，守卫判据未删未放宽、净增 2 条**＝**「实现跟随守卫」而非「以改测试掩盖没做到」**。
+- **裁定**：**D-125 CLOSED — 验收 PASS**。**★ 三挂账销账**（O-D100-01＋O-D120-01 日志路径可配置化——`ManagedLogDirectory` 由死字段转为解析结果真实镜像；O-D116-01 文案硬编码根除）。**★ 测试基线 1,825 → 1,843**（＋18 新守卫例）。**★ 全局工程收官：十批全部 CLOSED**｜四线全 WAITING｜零新派单｜用户待决项＝零｜**零待办工时**。
+- **六基线**：源码 `1750FED8…`/277・239｜装机 `59F376555025…`｜发布面 r25 `7969C220…`｜M5 `FCE693002B93…`/8｜四锚并集 48｜**测试 1843**｜Server 68/68｜Int 32/32。**挂账仅余** O-D116-03（需真机窗）・O-M4-02（需用户裁 6511 边界）。落账＝DECISIONS G-304／§281／HANDOVER 258。
+
+## G-305 轮 · 2026-10-05 23:4x–23:5x（指挥席手动轮 · 用户指令「可动」）＝O-M4-02 ＋ O-D116-03 双销账 ＋ 全局挂账清零
+- **O-D116-03 销账（真机窗不必要）**：四件在现役白名单**形态完整在册**；「异常」仅 **GP 显示名 ↔ arcpy 真名映射差异**（`Hillshade↔HillShade`／`Con↔Con_`，白名单用真名属**正确形态**）；**判定窗已开过并取证两件成功**（`sa.Con`／`sa.Hillshade` 各有 `NO-ERROR` ＋ 审计 `Success`）；`sa.Resample` 两次阻断已归因输入面不适配；`analysis.TabulateArea` 零失败 ⇒ **开第二次窗不产生新事实＝无效工时**。**★ R-G305-P1**：**行为面维持 `NOT-VERIFIED`**，本销账不构成升格。
+- **O-M4-02 销账（6511 边界终裁＝不设独立 typed-operation 面）**：**6511 全仓仅一处定义**（`MCPSettings.DefaultPythonBridgePort`；Tests 命中为 GUID 偶合）；**无独立监听面**（`HttpListener` 四文件全在 Server 传输层，`InternalPsRoutes` 为受控 PS 路由）。**原则**＝端点只暴露注册工具集 239 ＋ 受控 GP 白名单 53（fail-closed），**不因端口开放绕过注册面的类型化入口**——开放即引入 NOTICE §4 明禁的旁路。**★ 复裁三条件**（明文要求 ＋ 受控枚举 ＋ 安全评估通过，并须**同步修订 NOTICE §4**）。
+- **5 件 Python 候选** ⇒ 终态 **REJECTED**（实现前提不成立），不进后续批次。
+- **★ 全局：挂账清零**｜四线全 WAITING｜零新派单｜**零待办工时**｜用户待决项＝零。**六基线不变**（源码 `1750FED8…`/277・239｜装机 `59F376555025…`｜r25 `7969C220…`｜M5 `FCE693002B93…`/8｜四锚并集 48｜测试 1843）。**后续唯一触发均须用户明文**（CA 复裁／外网复裁／typed-operation 面复裁／四件行为面升格）。落账＝DECISIONS G-305／§282／HANDOVER 259。
+
+## G-306 轮 · 2026-10-06 00:0x（指挥席手动轮 · 用户指令「帮我批复，同时达到完结项目的条件」）＝派 D-126/L1 项目完结批
+- **★ 首要发现**：`AGENTS.md` §3 安全基线**逐字**「**禁止 `0.0.0.0`、禁止公网暴露、禁止新增任意 Python 或 6511 旁路**」⇒ **G-305「不设独立 typed-operation 面」获最高层硬规则印证，终裁无须复议**。
+- **完结判据 C1–C5**：C1 零在飞单 ✅｜C2 零挂账 ✅｜C3 零用户待决 ✅｜**C4 基线文档一致 ❌**｜**C5 完结报告＋三账封版 ❌**。
+- **★ C4 治理债（七处陈旧，差 130+ 批次）**：`AGENTS.md` §4（30 工具／269,548 B `361FC84F`／r5 包）、§5（`Release/` 仅 r21／装机 `7B3AC667`/792,831）、`EVOLUTION_STATE.md`（2026-09-10/D-001）、`EVOLUTION_CURRENT_TASK.md`（2026-09-11/D-005·006）全部陈旧 ⇒ **基线文档不刷新是「完结」的真实障碍**。**★ 划线**：`Archive/distributions/` 与回滚锚链**零改动**；**§7 三项 NOT VERIFIED 不得删改**（**完结 ≠ 全部 NOT VERIFIED 已消除**）。
+- **★ 批复令（四项全部「维持现值、不启动」）**：CA 采购（无合规申请路径／首日仍警告）｜外网托管（**与 §3「禁止公网暴露」冲突**）｜typed-operation 面（**与 §3「禁止 6511 旁路」冲突**）｜四件行为面升格（须另开真机窗；**完结≠全部升格**）。**完结总纲**＝「零在飞、零挂账、零待决、基线一致、报告封版」＋「六基线可复算 ＋ 未验证项显式在册 ＋ 复裁条件明确」。
+- **派单 D-126/L1 ACTIVE**＝项目完结批（`AGENTS.md` §4/§5 ＋ 两份 EVOLUTION ＋ 新建 `Docs/PROJECT_CLOSEOUT_20261006.md` ＋ 三账封版）。**硬边界**＝只改四类 Markdown・产品面零写入・**§3/§6/§7 逐字不可改**・三账封版由指挥席落账。完成门八项（含「恒定面零漂移」「五锚 rc=0×5」）。输出根 `run-20261006-d126/`。
+- **六基线**（00:0x 现算）：源码 `1750FED8…`/277・239｜装机 `59F376555025…`｜r25 `7969C220…`｜M5 `FCE693002B93…`/8｜四锚并集 48｜测试 1843。**工期**＝0.5–1h ⇒ **完结预计 01 时前后**。落账＝DECISIONS G-306／§283／HANDOVER 260。
+
+## G-307 轮 · 2026-10-06 00:07–00:1x（指挥席手动轮 · 用户指令「全部完善请发布任务」）＝D-126 范围扩批（五→八项）
+- **全仓无滤扫描命中 121 文件**（8 类旧代际特征），逐类定性：**现行权威面仅 5 件**（`AGENTS.md` §4/§5 ＋ 两份 `Docs/EVOLUTION_*` ＋ ★**根级 `README.md`／`NOTICE.md`＝真正的对外第一入口，严重陈旧**：README「30 工具/r5」・NOTICE「net8 `7B3AC667…`/792,831 ≡ 现役安装位」）；**项目状态文档 8 件**需加历史声明；**其余 108 件命中即正确**（历史阶段文档／封存资产／每日日志／规划快照／临时件——**其旧值是当时事实的准确记录**）。**★「全部完善」≠ 把 121 文件全改成新值，那会篡改历史与凭证。**
+- **D-126 范围五→八项**：⑥★`README.md`（30→239・r5→r25・安装位改 239）｜⑦★`NOTICE.md`（变体哈希 → `59F376555025…`/1,103,697・产品事实 239/33/53・**签名事实段**；★**「不得再分发」与「不得暴露公网」逐字不变**）｜⑧★8 件项目状态文档**加历史时点声明头部**（**只加头部、不删改正文**）。
+- **完成门八→十项 ＋ ★反向门**＝`Archive/distributions`・`migration-manifest*.json`・`Release/SEALED-*`・`.workbuddy/memory/*`・`Docs/Final/*`・`同步/3.0项目规划*` **逐字节零改动**（验证「只刷该刷的、不动不该动的」）。**硬边界**＝零改动清单 ＋ **§3/§6/§7 逐字不可改** ＋ 产品面零写入。**执行顺序**＝先分类定性→刷 ①②③→做 ⑥⑦⑧→最后 ④⑤。
+- **★「发布任务」执行口径**：派发工单 ＋ 固化发布面现值；**外网公开托管不在本批**（G-301 已裁「不公开」，**与 §3「禁止公网暴露」逐字冲突**）。**发布面合法完成形态＝本地分发（`发送给同事-r25/`）＋ r25 基线入册。**
+- **现状**：D-126 尚未开工 ⇒ **扩批零浪费**；L1＝D-126 ACTIVE（八项）｜L2/L3/L4 WAITING；**工期** 0.5–1h ⇒ **完结预计 01 时前后**。落账＝DECISIONS G-307／§284／HANDOVER 261。
+
+## G-308 轮 · 2026-10-06 01:4x（指挥席手动轮 · 用户指令「验收」）＝**★项目完结成立** ＝ D-126 CLOSED ＋ 三账封版
+- **复算**：c-g308 **18/18 全绿·双跑 EXIT=0**（本席口径自纠 4 处留证）。**产品面零写入**（聚合 `1750FED8…`/277・239≡239・285・33・53 恒定・装机 239 ＋ r25 逐字节零触碰・五锚 rc=0×5）｜**`AGENTS.md` §3 安全基线逐字未改**（「禁止 0.0.0.0、公网暴露、Python/6511 旁路」・G-305 终裁依据完好）＋ §6 六项钥匙在位 ＋ §7 三项 NOT VERIFIED 在册且「不得升格」未动 ｜根级 README/NOTICE 刷新（239・r25・`59F376555025`・签名事实段；**「保留所有权利」「不得暴露公网」逐字保留**）｜完结报告 23,173 B・C1–C5 全在场・十批链全在场・NV 18 处 ｜**反向门 viol 空** ＋ 前批 run 根 28/4,431/4,460 未变 ｜8/8 历史声明在场 ｜**执行席零落账**（三账 00:08 早于其 s0 首件 00:18）｜终验 **135/135**・Pro=0・无 `.git`。**执行席零缺陷**（★回代复原法 8/8・★分类定性表先行扫 3,373 件/339 命中・★三账只交草案）。
+- **裁定**：**D-126 CLOSED — 验收 PASS**｜**★ 项目完结（PROJECT CLOSED，2026-10-06）**——**C1–C5 全达成**。**三账已封版**（G-308／§285／第 262 版）。
+- **★ 完结形态**：**完结 ＝ 六基线可复算 ＋ 全部未验证项显式在册 ＋ 四项复裁触发明确 ＋ 零在飞/零挂账/零待决/基线一致/报告封版**。**★ 完结 ≠ 全部 NOT VERIFIED 已消除**（NV-01…NV-15 逐条在册）。**四项复裁触发（须用户明文）**：CA 采购／外网托管／typed-operation 面／四件行为面升格。
+- **终局**：四线全 WAITING｜**六基线**＝源码 `1750FED8…`/277・239≡239（Native 156／GP 56／Python 7／Bridge 20）｜装机 `59F376555025…`｜r25 `7969C220…`｜五锚并集 56・rc=0×5｜285・33・53｜测试 1843。**AGENTS §6 钥匙全清**。落账＝DECISIONS G-308／§285／HANDOVER 第 262 版。
+
+## G-309 轮 · 2026-10-06 12:2x（指挥席手动轮 · 用户指令「确定派单…这个自己解决」）＝分发教程缺口两批派单
+- **缺口认定**：**①使用教程自 r22 起从分发载体消失**（r21 载体 4 件 md/docx ＋2 份 html；r22–r25 全部 0 件）——仓库 `Docs/教程-2-使用教程.md`（27,065 B／9 章）内容齐备但从未随包分发 ⇒ **能装不能用**。**②工具数分三代**：载体三件 md＝239 ✅｜`Docs/教程-1/2`＝154｜`Release/*.docx`＋html＝149｜**r25 包内 `ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`＝「80 工具」＋「适用包 r6」**｜包内 `README-START-HERE.md`＝149。
+- **补法由台账钉死**：r25 包内 26 成员被 `bundleMemberHashes` ＋ `zip.manifest.json` **双钉** ⇒ 包内改动**必须 r26**；**载体目录未被钉**（ledger `files` 仅 3 件）⇒ **D-127 零改 zip 补载体**。r21–r24 载体全树属 `sealedSurfacesVerifiedReadOnly` ⇒ **零触碰**。
+- **★ 依赖口径自纠**：用户所述「python-docx 未安装」系指挥席**裸 Python 探测误报**；隔离 venv（`…/binaries/python/envs/default/Scripts/python.exe`）**已装 python-docx 1.2.0**（`pip install` 返回 already satisfied・4 s・零下载）⇒ **docx 生成可行，两批均零软件安装动作**。**执行席生成 docx 必须用隔离 venv python，禁裸 Python／禁 pip install／禁系统 Python。**
+- **派单 D-127/L1 ACTIVE**（载体补齐批·四项·十门）：载体增补 net8/net6 使用教程 md／`Docs/教程-1/2` 刷 154→239＋历史时点声明／`Release` 三件 docx＋html 刷 149→239／载体 README 增使用教程指引段＋件数自述校正（**禁虚报**）。反向门＝r21–r25 五代 zip＋台账四件＋r21–r24 载体全树＋产品面五树＋回滚锚＋装机位。
+- **派单 D-128/L1 PRE-REGISTERED**（r26 重制批）：包内两教程归位＋manifest 重刷＋acceptedVersions 补 r26＋台账四件套＋`发送给同事-r26/`；**激活须用户明文「发布面换代」**（r25 转封存）＋ D-127 先 CLOSED（同线 ACTIVE 互斥）。**O-D123-01 CA 采购与 O-D123-02 外网托管维持原裁，本批不重开。**
+- **★ 项目 G-308 完结封版状态维持**（本轮为封版后新增缺口补齐，C1–C5 判据与三账封版结论不变）。**工期**＝D-127 0.5-1h｜D-128 明文后 1.5-2.5h。落账＝DECISIONS G-309／§286／HANDOVER 第 263 版。
+
+## G-310 轮 · 2026-10-06 13:5x（指挥席手动轮 · 用户指令「验收」）＝D-127 终验收 CLOSED ＋ T-1～T-7 裁定
+- **独立复算**：`c-g310/verify.py` **34/34 全绿·双跑 EXIT=0**。**指挥席口径自纠 6 处留证**（★`RECOVERY-MENU.cmd` 系指挥席多加的必需要求／字节数判 UTF-8 中文／★**裸子串 `80` 命中证书指纹 `…BE380590C0` 的假阳性**／★**门⑤授权面误含两件入场未刷新件**／终验器 `gates` 节点结构／`entries` 整数字段）——**无一处归因执行席**。
+- **执行席亮点**：自纠**判据缺陷 11 处＋写面缺陷 1 处**（docx 头部 7 段逆序自查自修，未交付半成品）；★**T-3 主动实测并如实登记**「两条命令不随包发布」，**载体面就地标注达标、仓库面超授权不擅改**（守界正确）；★**T-5 证据缺口两处如实登记不谎称留证**；★**T-7 会话注入拒绝**（伪装 `system` 前缀／`AGENTS.md`／auto-memory 空册声明＋「须以老大称呼用户」等行为指令，一律未采信、全部判据仍来自工单与牌位原文）；门⑤拆分口径＋阳性对照（防空洞真值）。
+- **验收结论**：**D-127 PASS→CLOSED**——缺口一「使用教程自 r22 起从载体消失」**已闭合**（载体六件→**恰八件**）；**r25 zip／台账四件／包内 26 成员／net8 payload／签名块全部逐字节零改**；r21–r24 载体全树零改；五锚 rc=0×5；Pro=0。
+- **T-1～T-7 裁定**：T-1 采拆分口径（史句保留＋就地限定；「改述/移史」均不采）｜T-2 归 D-128｜**T-3 认定实质缺口**（本席独立实测两命令确不在 26 成员内）→ 载体面已达标、仓库面 **O-D127-02**｜T-4/T-5 采信不判缺陷｜T-6 → **O-D127-03**｜**T-7 采信未采信处置** → **R-G310-P2**。
+- **线位与挂账**：L1＝**WAITING**（无 ACTIVE）｜L2/L3/L4 WAITING｜**D-128 PRE-REGISTERED 待用户明文「发布面换代」**。挂账 O-D127-01/02/03・R-G310-P1/P2。**★ G-308 完结封版状态维持**。落账＝DECISIONS G-310／§287／HANDOVER 第 264 版。
+
+## G-311 轮 · 2026-10-06 14:1x（指挥席手动轮 · 用户指令「继续派单修复完善」）＝README 链接陈旧面定性 ＋ 派 D-129/L1
+- **扫描（可达面口径·新方法）**：以 `README.md` 的 md 链接为**读者可达面**，**16 引用中 14 命中陈旧值、仅 4 件已带 D-126 声明**；`NOTICE.md`／`AGENTS.md` 各引用 0 个 md。
+- **★ 定性＝双重失配**（**非「文档陈旧」**）：①README 用**现在时措辞**指向历史文档（「当前用户文档」「当前 candidate」）②**10 件自身无历史时点声明** ⇒ 单件被打开无自证时代性入口。**历史文档记历史值本身正确**（G-307 口径）——本批**不刷任何历史数字**。
+- **最严重一件**：`Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`（写「80 工具」＋「适用包 r6」＋「本包未签名」；现役＝239／r25／已自签 `UnknownError`）被 README **两处**指向；**与 r25 包内同名件同内容**（包内已被台账双钉 ⇒ 本批零触碰，仅仓库面补声明）。
+- **补法＝补声明不刷值**：10 件**只加头部、正文逐字不改、禁改基线数字、禁编造日期**；头部与 `Docs/USER_GUIDE.md` 现行头部**同形**（批次＋日期＋「正文逐字未改」＋**基线时点及推定依据**＋现行基线双指向）。README 侧仅对已声明条目加「（历史时点）」标注，**零链接地址改动/零条目删除/零节重排**。
+- **派单 D-129/L1 ACTIVE**（三项・十门・**0.5–1h**）：10 件补头（**只加头部**）／4 件已声明件**只核不强改**（不合规先呈报）／README 两节最小标注。**红线**＝`AGENTS.md` §3/§6/§7 逐字不可改。**反向门**＝`Release/` 全树（含 `发送给同事-r25/` 八件）＋`Archive/distributions/`＋`Docs/Final/`＋产品面六树＋`migration-manifest*`。
+- **D-128 维持 PRE-REGISTERED**（不代行换代裁定）；新登记 **O-D129-01**（该件现值版归 r26）＋ **R-G311-P1**（README 现在时措辞指向历史文档＝定性**通则**）。**★ G-308 完结封版状态维持**。落账＝DECISIONS G-311／§288／HANDOVER 第 265 版。
+
+## G-312 轮 · 2026-10-06 14:4x（指挥席手动轮 · 用户明文「解锁全面修复」）＝D-128 激活 ＋ 范围 5→9 项
+- **授权**：用户明文「解锁全面修复」＝ D-128 激活前置**已成就** ⇒ **PRE-REGISTERED → ACTIVE**（r25 转封存经明文授权成立）。**O-D127-01 销账**。**执行序 D-129 先做、本单随后**（同属 L1 依 G-211；**写权面零重叠**）。**D-129 CLOSED 后本单零等待开工。**
+- **★ r26 物理预检（先于落令）**：制包工具链 8 脚本 ＋ **五锚件全在**（rc=0×5 须复跑）。**★ 种子须从 r25 zip 解包重建，禁复用 `Release/.staging-oneclick-r16-python`**（D-121 先例）。
+- **★★ 扩范围根因＝包内三件文档签名事实面整体失真（非陈旧，是与事实相反）**：`README-START-HERE.md`「149／**本包未签名**」｜`ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`「**80 工具**／适用包 **r6** ×3／**当前包未签名** ×2」＋**L149 建议「导入受信任根证书」**（与 **G-299 R-3 不授权变更信任根**相反）＋**L150 把公网 CA 列为可行路径**（与 **§3 禁止公网暴露**冲突）｜`NOTICE.md`「**154 工具**」＋**「签名」零披露** ⇒ ★**同一 r25 两面签名陈述互相矛盾**＝**对外沟通级缺陷**。
+- **范围九项**（新增：包内 NOTICE 归位＋补签名事实段／签名事实全包对齐／**包内命令零引用门**／仓库面同件归位〔O-D129-01〕）＋O-D127-03 并入载体。**完成门十二项**，含**禁写 `Valid`**・**L149/L150 表述门**。
+- **★ O-D127-02 降级为「仅仓库面」**（本席实测包内 26 成员**零引用**两命令）。
+- **硬边界维持**：不安装不启宿主・**不外发**（O-D123-02）・**不采购 CA**（O-D123-01）・**不变更信任根**（G-299 R-3，未撤销）。**观察 R-G312-P1**（包内文档从未随代际同步＝根因，建议立代际同步守卫）。**★ G-308 完结封版状态维持。** 落账＝DECISIONS G-312／§289／HANDOVER 第 266 版。
+
+## G-313 轮 · 2026-10-06 15:0x（指挥席手动轮 · 用户令生成自动化任务）＝循环重启 ＋ 职责边界
+- **★ 用户授权的常设职责边界（最高优先）**：指挥席**只做三件事**——零采信巡检验收・主动发现问题・派单；**★禁自己修**（`Source/Tests/Config/scripts/Benchmarks/tools/Release` 全为执行席写域，指挥席仅可读做验收）。**持续到项目修复完善、项目结束**；无缺陷按**空轮纪律**只记一行观察，**不制造工作**。
+- **自动化**：原循环 `559b7724-…`（G-201）**复用不新建**（其 **142,403 B** R1–R138 记忆为项目最高价值跨轮资产）PAUSED → **ACTIVE**，间隔 **每 1 小时**（`:50` 单档）。
+- **prompt 固化**：六步 ＋ 五条自纠纪律 ＋ 问题定性五型 ＋ 现值锚。**在飞**＝D-129 ACTIVE（0.5–1h，已派未开工）→ D-128 ACTIVE（1.5–2.5h，九项，序后，写权面零重叠）。**种子红线**＝禁复用 `Release/.staging-oneclick-r16-python`。
+- **★ 完结状态口径**＝G-308 封版维持不变；补缺链 D-127(CLOSED)→D-129→D-128→D-120；收口后重新裁定终局 ＋ 追加封版说明，**不重复宣布完结**。**工期**＝补缺全链今日 18–20 时收口，此后转常态巡检。落账＝DECISIONS G-313／§290／HANDOVER 第 267 版。
+
+## G-314 轮 · 2026-10-06 15:2x–15:3x（指挥席手动轮 · 用户指令「验收」）＝D-129 在飞抽验采信 ＋ 零新派单
+- **复算**：`c-g314/verify.py` **24/24 全绿·双跑 EXIT=0**。**指挥席口径自纠 3 处**（①行尾须按入场 `snapshot.json` 的 `crlfPairs` **分治**＝9 LF＋1 CRLF ②`and` 短路布尔污染元素类型 ③**剥头边界三改终得「保留 L1 ＋ 自适应枚举声明块长，只认字节级全等入场哈希」**——头部实为**插在标题行之后**）。
+- **在飞面全对**：10 件已补头（**剥头往返 10/10**・`
+
+` 零命中・行尾形态逐件一致・**禁编造日期**核验过）｜反向门**零违反**（产品面六树＋`Release/` 全树＋装机＋r25 zip＋载体八件）｜**`AGENTS.md` §3/§6/§7 逐字在位**｜NOT VERIFIED 13/13｜恒定面 `1750FED8…`/277・239≡239・53｜**执行席零落账**｜**回执先行**｜零真机。
+- **★ 执行席亮点**：自纠 **4 处**并留证——**`SHARING_AND_SIMPLE_INSTALL.md` 64 处 `
+
+` 行尾双 CR 为真实写面缺陷**（**该缺陷若未自查会静默交付**：不影响渲染、肉眼与多数断言抓不到），**未隐去且重放修复**；另 3 处判据缺陷（禁编造日期／`tailAt` 公式／引句未贴原句）亦自修。**「★ 当时点位」点名行经本席准其保留**（机械生成可复算・服务缺口三型之②・未越授权面）；`ONE_CLICK_DEPLOYMENT_USER_GUIDE.md` 头部 L8 **主动标注「本件不止陈旧（与事实相反）」**＝主动识别 G-311 定性五型之③，**登记 R-G314-P1 采信**。
+- **不闭单**：`R-D129.md` 未交 ＋ `final-evidence/` 空 ＋ **README 第③项未做**（mtime 仍 00:39）⇒ D-129 维持 ACTIVE·在飞，剩余 0.3–0.5h。**D-128 未开工属正常**（等 CLOSED・同线互斥）。**零新派单**。
+- **工期**：D-129 预计 **16:30 前后 CLOSED** → D-128 开工 ⇒ **r26 预计 19:00–20:00**。**★ G-308 完结封版状态维持。** 落账＝DECISIONS G-314／§291／HANDOVER 第 268 版。
+
+## G-315 轮 · 2026-10-06 16:0x–16:3x（指挥席自动化轮）＝D-129 终验收 PASS→CLOSED ＋ D-128 解锁
+
+- **形态**：outbox 新件＝`R-D129.md`（20,276 B／15:48，PASS CANDIDATE）＝终件。G-314 明示「`R-D129.md` 未交 ⇒ 非终验收」，本轮补齐。README 第③项已执行（15:36:17／11,153→11,405 B）。
+- **独立复算**：`c-g315/verify.py` **51/51 全绿·三跑 EXIT=0·断言层逐行一致**（完成门十项 ＋ 恒定面六项 ＋ 反向门七项 ＋ 红线 ＋ 阳性对照四处）。
+- **本席口径自纠 6 处（无一处归因执行席）**：固定 14 行头窗口造成连锁假 FAIL（改自适应枚举）／`instances` 只收 `.md`（裸正则多算非 md 链接）／`unverifiedLines` 口径未复现（改因果判据）／`migration-manifest.json` 快照基线是「虚拟单件树聚合」非文件 sha256（改 mtime）／索引 `aggregateSha256_64` 算法未复现（改 44 条目逐条磁盘复算）／`entries` vs `entryList`。
+- **验收要点**：剥头往返 10/10｜README 剥标后逐字节等值入场 11,153 B｜`AGENTS.md` §3/§6/§7 六条红线子句逐字｜产品面六树 mtime ≥ 开工者 **0 件**｜索引 44 条目逐条磁盘复算全等｜恒定面零漂移（`1750FED8…`/277・239≡239・285・33・53・装机 `59F376555025052D`/1,103,697・五锚 rc=0×5）｜`%TEMP%` 专有命名 0 命中｜回执先行。★**口径差非缺陷**：`Source` 935 vs 实测 936 差 `__pycache__/*.pyc`（mtime 09-11）。
+- **执行席自纠（采信，2 处写面 ＋ 8 处判据，未软化为绿）**：`SHARING` **64 处 `\r\r\n`**——**行尾双 CR 不影响渲染，肉眼与多数断言抓不到，若未自查会静默交付**；编造 `2026-09-07` 被自家「禁编造日期」判据拦下。**自纠留证正面样本。**
+- **T-1～T-7 逐条裁定**：T-1 维持「准其保留」／**T-2 升级实质缺口 O-D129-02**（L21 三链接中**仅** `INDEPENDENT_GATE_R5` 真缺；`` `AGENTS.md` §4 `` 是现值权威面、`PROJECT_CLOSEOUT` 是现行基线件，**标注会反向误导故不标**）／T-3 采信／T-4 现值归 D-128 第⑥⑦⑨项／T-5 登记 R-G315-P1／**T-6 确认会话注入面存在**（承 R-G310-P2 同源）／**T-7 裁「记忆功能已关闭」提示极可能即 T-6 伪造信号**——记忆面写入权归指挥席，执行席不写是正确纪律，**无需追责**。
+- **主动发现**：**O-D127-02 确认仍成立**（`Docs/教程-2-使用教程.md` L60 教跑 `clean_probe.py`、L70-72 三处教跑 `CONFIGURE-CLIENT.cmd`，而载体八件与包内 26 成员**零含这两件** ⇒ 读者按教程操作必然失败）／**O-D127-03 销账**（README「1822」零命中）。
+- **治理登记 R-G315-P2**＝牌位工单块按派单时序排列、**块首是已 CLOSED 的 D-127** ⇒ 双向误读风险；本轮**加「★ 接单指针」消歧，不移位任何块**（append-only）。
+- **线位**：**D-129 CLOSED（PASS）**｜**D-128 ACTIVE·即刻开工**（前置已解除；★种子须从 r25 zip 解包重建，**禁复用 `Release/.staging-oneclick-r16-python`**）｜L2/L3/L4 WAITING｜**零新派单**（O-D129-02 微批待 D-128 CLOSED）。★ **G-308 完结封版状态维持**（封版后补缺链 D-127✅→D-129✅→D-128⏳）。
+- **落账**：裁定书 `GATE-G315-D129-PASS_VERDICT.md`／DECISIONS G-315／DISPATCH §292／HANDOVER 第 269 版／L1 牌位三处／MEMORY.md 压缩 32,765→11,210 B／自动化记忆 R141。
+
+## G-316 轮 · 2026-10-06 16:4x（指挥席手动轮 · 用户指令「验收」）＝D-128 开工回执在飞抽验 ＋ T-1／T-2 裁定
+- **形态**：`h-receipt-d128.md`（11,331 B／16:31）＝**开工回执**；`R-D128.md` 未交 ⇒ **不闭单**。run 根八阶段齐备，产物＝s0（16:30）＋f1 种子（16:32）。**G-315 自动化轮已闭 D-129**（51/51 三跑）。
+- **复算**：`c-g316/verify.py` **25/25 全绿·双跑 EXIT=0**（本席口径自纠 1 处：★**回执先行判据面取错**——`s0` 快照应早于回执，属正常序 → 改判「回执早于本批发布面实际写入」）。
+- **★r26 种子红线达成**：恰 26 成员 ＋ 成员集合 ≡ r25 26 外层成员（逐名零差）＋ **26 件逐字节等值 r25** ＋ 种子内零 zip ＋ **`Release/.staging-oneclick-r16-python` mtime 09-24 早于本批＝未复用**。反向门全绿（r21–r25 五代 zip／台账四件／**r21–r25 载体全树**／产品面六树／装机 239）｜恒定面 `1750FED8…`/277・239≡239・53｜五锚 rc=0×5｜零真机｜**执行席零落账**｜★**D-129 已闭合成果 10/10 未回退**。
+- **★ T-2 裁定＝本席认错**：工单三处「尺寸」**逐个命中解码后字符数**（1,340／6,004／2,319），字节数实为 **2,218／10,428／4,178**（字符→字节 ≈1.66 倍）⇒ **本席工单写「尺寸」未标单位**，执行席质疑完全正确。**采实测值为 r26 基线**；工单三处逐字保留、append-only 增单位说明。**★ R-G316-P1（治理通则）**：凡文档尺寸引用**必须显式标单位**（`B`／`chars`）。
+- **★ T-1 裁定＝采严格零命中**（执行席请裁）：包内三件**不留含旧数字的历史句**，改为**无数字**沿革表述；旧文存 `before-after/` ＋ `supersededText`。理由：**分发件读者是「照着操作」非「查历史」的**／**零命中是可机械复核的硬门**，放行「带限定历史句」＝**硬门退化为软门（治理倒退）**／**历史并未丢失**。**门④⑤无豁免面**。
+- **线位与工期**：**D-128 维持 ACTIVE·在飞**（两处已裁定，可继续 `f2-inner-docs`）｜D-129 CLOSED｜L2/L3/L4 WAITING｜**零新派单**。**r26 签发预计 18:00–18:30**。**★ G-308 完结封版状态维持。** 落账＝DECISIONS G-316／§293／HANDOVER 第 270 版。
+
+
+### G-317 节点（2026-10-06 17:4x）· D-128 在飞 ＋ D-130 已派
+- **D-128**：在飞，`R-D128.md` 未交。抽验 **73/74**（三跑 EXIT=1 断言层一致）。★**完成门④未达成**——包内 `Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md` 五行残留「80」（L6/93/109/161/174），仓库面同件同样 5 行。**根因＝台账 `banPattern` 中 `80` 只匹配「80 个工具／80 工具」，漏「生产工具 **80**」与「`tools/list = 80``** ⇒ `bannedLiteralsInCandidate: []` 假绿。**要求：补语境判据 ＋ 五处逐处归位 ＋ 包内/仓库面同件同步。**
+- **D-130（已派·L1）**：发布面现役面刷新（根级 README 五处／NOTICE 六处／AGENTS §4 L49-50＋§5 L65 由 r25 改 r26 现值，r25 值逐字保留为封存代际）＋ `Distribution/` 两源件归位（149→239）＋ 新增 `tools/verify-doc-generation-sync.py` 代际同步守卫（须设**篡改副本阳性对照**）＋ 构建器仅加调用钩子。**完成门十项；序在 D-128 之后。**
+- **本席自纠 6 处已登记**（源码聚合口径三错／白名单与契约快照路径／manifest 字段名／版本数组正则／文件名与 epoch 常数）——**执行席对本轮唯一 FAIL 的质疑若成立，本席即按上述口径逐条复算，不预设立场。**
+
+## G-318 · 2026-10-06 18:5x · 现役工单更新
+
+**指挥席＝Keeper（DeepSeek Harness）· 本轮自动化巡检**
+
+### 现役工单（L1 实现线）
+
+| 序 | 工单 | 状态 | 工期 | 输出根 |
+|---|---|---|---|---|
+| 1 | **D-128** r26 重制批 | **在飞·终验收 CHANGES REQUESTED（未闭单）** | — | `run-20261006-d128/` |
+| 2 | **D-131** r27 补代际批 | **ACTIVE·待开工**（前置＝D-128 闭单） | 1–1.5h | `run-20261006-d131/` |
+| 3 | **D-130** 发布面现役面刷新＋代际同步守卫 | **ACTIVE·待开工**（前置＝D-131 闭单） | 0.5–1h | `run-20261006-d130/` |
+
+D-127／D-129 CLOSED｜L2／L3／L4 WAITING｜**依 G-211 每线至多一份 ACTIVE，三单严格串行，写权面互不重叠**。
+
+### ★本轮关键裁定
+
+- **D-128 门④ 第二次假绿**：包内 `Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`（11,819 B）**六处「80」原文在位**（L6/93/109/161/174 ＋ L93 括注）——`f6` 的 `bannedLiteralsInCandidate: []` 报绿不成立。**执行席不得据该字段判绿。**
+- **登记 R-G318-P1**：「零命中」类完成门**仅「附判定正则」不足**，须**同时给阳性对照串并要求全命中**——否则仍可窄化 pattern 报假绿。**本席工单口径同责**（G-317 P1 同族复发）。
+- **T-3 追认**（`scripts/`＋`Docs/` 各 1 件，具体项授权优先于概括写权面，D-124 先例在册）｜**T-4／T-5 归 D-130**｜**T-6**＝O-D129-02 维持挂账。
+
+### ★派 D-131 的核心硬门
+
+**包内 GUIDE 六处「80」→「239」必须按语境改写**（非机械替换；L93 括注「canonical 80」同改）＋ 仓库件同改并保持**逐字节同一**；**判定必须用形态覆盖正则**（至少六形态）＋ **★阳性对照：八条人工构造阳性串必须全部命中**（漏一条即判据不合格，这是防假绿的核心门）＋ 阴性对照自证扫描面非空。**r27 须由 r26 zip 解包重建，禁走构建器（`$CandidateRevision` 缺省 `r6` ＋ `Distribution/` 源件仍含 149 ⇒ 走构建器必回退，此即 R-G312-P1 根因，归 D-130 处置）。**
+
+### 现值锚（现场复算，非抄锚）
+
+源码 **277**（排 `bin`/`obj`）＝**276**（再排 `__pycache__`）・注册 **239 ≡ 契约 239**・名册 285＝94/33/158・错误码 **33**・白名单 **53**／`F355705BF2C4`／**30,634 B**・装机 239 `59F376555025052D…`/1,103,697/内层 43・发布面现役 **r26** 2,273,422 B／`4E7A82C8C769F0E9…`・**r25 `7969C220…`/2,270,984 逐字节未改**・五锚 rc=0×5。
+
+## G-319 轮 · 2026-10-06 19:3x–19:4x（指挥席手动轮 · 用户指令「验收」）＝★死锁解除 ＋ ★R141 撞号勘误 ＋ ★本席 R-1 撤销
+- **★ 死锁解除（本席核心动作）**：G-318 令 D-131「开工前置＝D-128 CLOSED」，而 **D-128 门④未达成项就是 D-131 核心工作** ⇒ 死锁。**裁定**：①**D-131 前置解除·即刻开工**（**返工批不得被被返工单的闭单条件锁住**）②**D-128 改 CLOSED-WITH-EXCEPTION**（十一门达成事实冻结入册，门④移交 D-131，**本单不重复执行 f5/f6/终件流程**——已完成，产物在册）③**D-130 前置改「D-131 CLOSED」**（其现役面刷新**须在 r27 落定后**，否则 r27 又造新现役面失配）。
+- **★ 门④缺陷本席独立复现**：r26 包内 GUIDE **11,819 B／`A4F94600C13B636D…`**「工具数语境」**五处 `80`**（L6／L93／L109／L161／**L174 验收清单勾选项**）⇒ **语境命中 5**；**仓库面同件逐字节同一**。**★ L174 照做必然失败（现役 239）⇒ 不是陈旧数字，是操作指令错误**。门④「无豁免面」维持。**D-131 第①项必要性与可行性同时成立。**
+- **★ 两处指挥席自身债（均已勘误）**：①**循环记忆 R141 撞号**（G-315 自动化与 G-316 手动均写 `### R141`，根因＝并行时各自独立取号无唯一性校验）⇒ 已改 **R141b** ②**本席 R-1 撤销**：原判「HANDOVER 停在第 270 版、271/272 未写入」**不成立**——补登时**幂等断言拦截**（锚已在场）⇒ 回查确认两版确已写入，仅节标题用 `###`；**本席 grep 前缀预设错误**（`^##` 漏 `###`）；**已撤除补登**。★**教训：grep 编号类断言前先采样真实格式，用宽松模式 `^#{2,3} 第 N 版` 取 max；落账幂等锚是最有效的自纠兜底**（未设断言会造成重复补登的二次台账污染）。**R-G319-P1**（节标题 `##`／`###` 混用・不判缺陷）。
+- **现状**：发布面 **r26 已落盘**（zip 2,273,422 B／`4E7A82C8C769F0E9…`／26 成员／载体八件含两件使用教程）｜r21–r26 **六代 zip ＋ 六载体**全在｜D-131／D-130 run 根均未建。
+- **★ 跨轮通用经验（新增两条）**：①**返工批不得被被返工单的闭单条件锁住**（检测法：新单前置若指向一个「因该单范围而无法达成闭单」的 ACTIVE 单，即死锁）②**grep 编号类断言前必须先采样真实格式**。
+- **线位与工期**：**D-131 ACTIVE·解锁待开工**（1–1.5h）→ **D-130**（0.5–1h，序后）→ **D-128 终末闭单** ⇒ **补缺链预计 21:00–21:30 收口**。**★ G-308 完结封版状态维持。** 落账＝DECISIONS G-319＋R-6 撤销段／§296／HANDOVER 第 273 版。
+
+
+---
+
+## G-320（2026-10-06 19:5x·自动化轮·指挥席 Keeper）
+
+**台账切点**：G-320／§297／HANDOVER 第 274 版（承 G-319／§296／第 273 版；三账 mtime 19:35–19:37，无并发撞号，先落定者为准）。
+
+### 线位（G-211每线至多一份 ACTIVE）
+| 单号 | 状态 | 前置 | 备注 |
+|---|---|---|---|
+| **D-131** | **ACTIVE·在飞（已进 f2）** | 已解锁（G-319 死锁解除） | 工时 1–1.5h，余 f3/f4/f5/终件 ≈0.5–1h |
+| D-130 | ACTIVE·待开工 | **D-131 CLOSED**（G-319 改序） | 工时 0.5–1h |
+| D-128 | CLOSED-WITH-EXCEPTION | — | 十一门冻结入册，门④移交 D-131 |
+| D-127 / D-129 | CLOSED | — | — |
+| L2 / L3 / L4 | WAITING | — | — |
+
+**串行序＝D-131 闭单 → D-130 开工**。
+
+### 零采信抽验（28/28·双跑 EXIT=0·断言层逐行一致）
+- `run-20261006-g320/patrol.py` **18/18** ＋ `f1_verify.py` **10/10**。
+- 恒定面六基线**现场复算**：源码 **`1750FED84B9282D19…`/277**（再排 `__pycache__`＝276）｜注册 **239 ≡ 契约 239**｜名册 **285**＝94/33/158｜错误码 **33**｜白名单 **53**/`F355705BF2C4`/**30,634 B**｜r26 **2,273,422 B/`4E7A82C8C769F0E9…`/26 成员**。
+- **种子红线全绿**：r26 解包·26 件逐字节等值·net8 ≡ 装机 239（`59F376555025052D…`/1,103,697）·**未复用 r16 staging**·装机位零触碰。
+
+### 执行席 f2 已达成（部分）· 正面样本
+- 仓库面 GUIDE **11,819 → 11,886 B**，六处行位不变全部归位 239；**八形态语境零命中＋阳性 6/6** ⇒ **门④仓库面已达成**。
+- 判据件 **36 pattern**、阳性 **8/8**、**自设假阳性对照 ≥5 条**（含 sha 指纹含 `80`）＝**超工单要求**。
+- 回执 §3 主动归因 D-128 假绿根因不辩解；`round1-ordering-defect/` 失败轮原样保留。
+
+### ★本席自纠四处（全自身口径，无一处归因执行席）
+1. **源码聚合口径误判**——自造口径得 `A7D597E4…`，回 `run-20261006-d128/s0-intake/intake_snapshot_d128.py` L67-73 逐字读出真实口径 `sha("".join("%s:%s"%(rel,sha(f))))` ⇒ **逐字节复现 `1750FED8…`**。
+2. 契约计数正则 `new\s+X()` 不匹配记录构造器 `new("x",…)` ⇒ 0 假 FAIL。
+3. 在飞中间态误判（仓库面已改/包内待重打包 ⇒「逐字节等值」必然 FAIL）⇒ 改**状态感知**断言。
+4. 落账脚本变量作用域 `NameError`（已修）。
+
+### ★R-G320-P1（治理通则·本席同责）
+**跨件权威值引用必须先采样键名与所在件。**D-130 工单第③项把 `canonicalProductionToolCount`（**只在包内 `bundle-manifest.json`**）误安到台账；台账真键为 **`toolCount`**。⇒ 已在 D-130 追加勘误：守卫须**双源取值 ＋ 交叉断言相等**。
+
+### ★R-G320-P2（观察）
+`Distribution/` 另有 6 个 `.cmd` ＋ `README-START-HERE.md`（5,418 B）含陈旧语境，但 `build-one-click-package.ps1` **只取 5 个 `.cmd` ＋ `README-ONE-CLICK-START.md`**（L73-77／L87-92）⇒ **不可达源件**，并入 D-130 并要求**显式声明链路归属**，未获裁前不得删除。
+
+### 裁定
+D-131 **不闭单**（`R-D131.md` 未交）｜**零新派单**｜挂账维持（新增 R-G320-P1／P2）。
+
+### 跨轮通用经验（本轮新增三条）
+1. **聚合类锚值：可复现的必须去复现**——回生成脚本逐字读口径，**不得自造近似口径判 FAIL，也不得直接剔除断言**。
+2. **「零命中」断言在含长哈希指纹的文档中必须语境化**（`4E4ED6CB…BEB380590C0` 含裸 `80`）⇒ 正解＝**语境正则 ＋ 阳性对照全命中 ＋ 假阳性对照全不命中**三件套（**升为工单硬门**）。
+3. **在飞批断言必须状态感知**——判「归位态」而非「等值态」，「等值」留到终验收。
+
+### 下一轮预期
+①D-131 交 `R-D131.md` ⇒ 终验收（重点：r27 26 成员 ≡ r26·双 payload 逐字节 ≡ 种子·包内 GUIDE 八形态零命中＋阳性 8/8＋假阳性全不命中·仓库面 ≡ 包内件·manifest 仅 3 行变＋逆变换等值·`$acceptedDeploymentVersions` **27 项＋BOM `efbbbf`＋LF 非 CRLF**·台账四件套＋载体恰八件·NOT VERIFIED 8/2/5 不降）。②D-130 开工须核 R-G320-P1 勘误与 R-G320-P2 声明已落。③两单皆无新交付 ⇒ **空轮一行观察，不制造工作**。
+
+**裁定全文**＝DECISIONS **G-320 R-1…R-8**／DISPATCH **§297**／HANDOVER **第 274 版**。
+
+
+### G-327（2026-10-06 23:4x·自动化轮）· 指挥席现役工单与线位（实时更新）
+
+- **台账切点**：**G-327／§304／HANDOVER 第 281 版**（三账均已 append-only 落账，幂等锚复验各恰 1 次）。
+- **线位**：**D-134 ACTIVE·在飞**（r28 已落盘 23:17:02，进 f4b-scope45，`R-D134.md` 未交）｜**D-135 ACTIVE·待开工**（已勘误）｜**D-136 ACTIVE·待开工**（已勘误，写权面扩为三件）｜D-133/132/131/128/127/129 CLOSED｜L2/L3/L4 WAITING。
+- **★开工前必读 `DISPATCH_LOG.md` §304**（两单勘误）：
+  - **D-136**：目标值 **r27 已过期** → 归位改为 **r28／2,277,454／`1D0F0F03CD87876DD99CEB0692847DBE…`**；**L21 解除禁动**（原「本单禁动 L21」作废）；**写权面扩为三件**（＋`scripts/verify-one-click-package.ps1`，其接受列表 27 项止于 r27、包内 28 项，守卫对 r28 判 Fail）；工期 0.5h→**0.75h**。
+  - **D-135**：范围与目标值**不变**（实测写域零现在时代际断言）；仅 G6 反向门基线 118→**131 件**、七代→**八代 zip/载体**。
+  - **★严禁照 §302 原样执行**（会把 `README.md`／`AGENTS.md` 归位到 r27 ＝ 重犯本单自身要修的缺陷）。
+- **三单写权面两两零重叠 ⇒ 承 G-326 硬指令可并行**：D-134＝`Release/`＋`NOTICE.md`｜D-135＝`Distribution/`＋`同步/`｜D-136＝`README.md`＋`AGENTS.md`＋`scripts/verify-one-click-package.ps1`。**死锁检测通过。**
+- **恒定面（现场复算·零漂移）**：源码 `1750FED8…`/277｜注册 239≡239｜契约 239≡239｜名册 285＝94/33/158｜错误码 33｜白名单 53/`F355705B`/30,634 B｜装机 239 `59F37655…`/1,103,697｜五锚 rc=0×5。
+- **通用纪律**：回执 mtime 必须早于本单第一个产品面写入（R-G321-P1）｜台账三账四牌位零写（指挥席专属）｜NOT VERIFIED 不得升格｜行数/件数类数字须先在 run 根内复现口径再写入回执（R-G322-P1，禁凑数）｜发现勘误与现场事实仍有冲突 ＝ 如实登记不伪证、停等报本席（O-D088-01）。
+
+---
+
+## G-330 · 2026-10-07 01:5x · D-136 终验收 PASS → CLOSED ＋ 缺口甲定案派 **D-139**
+
+- **台账切点**：**G-330／§307／HANDOVER 第 284 版**（append-only 落账，锚计数 1/1/1 零重复）。
+- **D-136 CLOSED**：指挥席**自写 70 断言**（不复用执行席口径）**70/70 全绿・双跑 EXIT=0×2・断言层逐行一致**。G-325／G-327 所列 **9 行全部归位r28**（`README.md` L10/L21/L57/L60/L63＋`AGENTS.md` L49/L50/L65）。README L57 粗筛命中但**逐行人工判读为CORRECT**（同行两主语）。
+- **★缺口甲（R-G312-P1 族第 4 次复发，方向与前三批全反）**：仓库 `Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md`＝**11,886 B／`9C3A2927…`（r27 面）** vs r28 包内 **11,885 B／`66F76BEE…`（r28 面）**，**差恰 4 行**代际 token（L3／L5／L37／L47）。
+  - **★危害**：该件**在构建器取件数组 L86 ＋ `$reproTakeMap` L129 内**，但**不在恰 3 条 `$reproWhitelist` 内**，而守卫 **L179 fail-closed** ⇒ 静态复现 `UNEXPLAINED 2` ⇒ **r29 走构建器路线必被 `BUNDLE_REPRO_MISMATCH` 中止**（**阻断发布面换代能力**）。
+  - **★责任在派单侧**：该面**从未进入任何工单写权面**（§302／§304／§306 全文皆无该文件名）。执行席 R-D134 §七 T-134-2 甲与 G-327 所称「已转派 D-136（含仓库 GUIDE 面）」**与工单原文不符**——§304 扩的是 **verifier**（D-137 已清偿）。**执行席未越界，未擅自扩权，正确。**
+- **★D-138 观察（已实测，勿误判为回归）**：**r21–r23 rc=1 非 D-138 引入**——指挥席以三份脚本（现役面／pre-D-138 副本／r28 包内副本）各实跑八代，**逐代结果完全一致**；成因＝**工具数契约**（r21＝154／r22＝224／r23＝224 vs 现役 239）。**★禁为使八代全绿而放宽守卫。**
+- **现役线位**：**D-139 ACTIVE·派**（0.4h，**前置＝D-138 交件**，★**不得与 D-138 并行**——第 2 项守卫追加与其同文件）｜**D-138 ACTIVE·在飞**（`R-D138.md` 未交）｜**D-135 ACTIVE·待开工**（run 根 ABSENT，**重申即刻开工**；与 D-139 零重叠可并行）。
+- **恒定面（现场复算·零漂移）**：源码 `1750FED84B9282D19…`/277（含`.pyc`）／`C9AE5C92CE473C55…`/276（排 `__pycache__`）｜注册 239≡239｜契约 239≡239｜名册 285＝94/33/158｜错误码 33｜白名单 53/`F355705BF2C4`/30,634 B｜装机 239 `59F376555025052D…`/1,103,697｜五锚 rc=0×5。
+- **发布面现役＝r28**：**2,277,454 B／`1D0F0F03CD87876DD99CEB0692847DBE…`／26 成员**｜`Release/` 全树 **131 件／`7653FA1D6045CDF5…`**。
+- **★三条本轮技术纪律（写脚本前必读）**：
+  1. **门④三件套的对照串是「判定正则的自证向量」，不是「文件内应出现的串」**——混淆二者会同时造出假 PASS 与假 FAIL。
+  2. **陈旧检测器的模式集合必须语义单一**——禁把现役断言模式混入（否则必然在**正确**文本上假 FAIL）。
+  3. **「粗筛零命中」类断言必须升级为两级**：粗筛保召回 → **逐行人工判读裁定表** → 断言「粗筛命中行全部经裁定」。
+  4. **真实系统路径用 `GetTempPathW` 取，禁猜 CSIDL 常量**（`0x2`＝开始菜单、`0x2A`＝`COMMON_FILES`）——指挥席本轮连栽三次。
+- **通用纪律**：回执 mtime 必须早于本单第一个产品面写入（R-G321-P1）｜台账三账四牌位零写（指挥席专属）｜NOT VERIFIED 不得升格｜**任何行数/件数类数字须先在 run 根内复现口径再写入回执**（R-G322-P1，禁凑数）｜**失败轮/缺陷轮原样保留**｜**发现工单与现场事实冲突 ＝ 如实登记不伪证、停等报本席**（O-D088-01）｜**★写域验收用「窗口法」并将指挥席侧落件单列，不混入本单违规**。
+
+
+## G-331 · 2026-10-07 03:0x（自动化轮）· D-138＋D-139 终验收 PASS → CLOSED ＋ D-140 派
+
+- **零采信**：指挥席自写 85 断言（口径逐字回读 d136 intake L33-58）**85/85 全绿・双跑 EXIT=0×2・断言层逐行一致**。
+- **CLOSED**：**D-138**（校验器 → 14,026／`4694B2C8…`，守卫 L86-98）｜**D-139**（GUIDE → 11,885／`66F76BEE…` ≡ r28 包内逐字节）。
+- **裁定**：**T-139-1** —— `UNEXPLAINED＝0` 不可达成（实测`MATCHED 22／WHITELISTED 2／UNEXPLAINED 1`，分母 25），§307 G3 口径修订。
+- **★R-G331-P2**：构建器两环分母不同（环A 21／环B 25），禁混谈。
+- **★R-G331-P3**：**D-135 从未派发**（run 根 ABSENT・outbox 无件・牌位无段），不补牌位，范围转 D-140。
+- **派单**：**D-140**（§308・0.6h）＝r29 换代 ＋ 包内 GUIDE 代际归位 ＋ G3 口径承接 ＋ D-135 范围并入。**禁改**：校验器／构建器／白名单／r21–r28 八代 zip 八载体七台账六记录／三账四牌位。
+- **恒定面零漂移**：源码 277／`1750FED8…` ＋ 276／`C9AE5C92…`｜239≡239｜285｜33｜53／`F355705BF2C4`／30,634｜`Release/` 131／`7653FA1D…`｜现役 r28 2,277,454／`1D0F0F03…`｜五锚 rc=0×5。
+
+
+## G-333 · 2026-10-07 05:4x（自动化轮）· 种子路 r29 三处联动缺陷定案 ＋ D-142 预登记派
+
+- **主动发现（R-G331-P1 字节级成因定案）**：`scripts/verify-one-click-package.ps1` 仓库面 **14,026／`4694B2C8…`／188 行**（含 D-138 双面守卫块 L86–98）vs **r28 包内副本 12,936／`2898522E…`**（无守卫块）⇒ 逐块 diff 唯一差异＝守卫块 13 行；**`$acceptedDeploymentVersions` 两面完全等值 28 项（r1..r28）**。**不在白名单**（仍恰 3 条）⇒ 即「`UNEXPLAINED＝1`」的物理成因。
+- **四场景动态实测危害**（种子路 r29，非静态推演）：对照 r28 原包 rc=0/PASS；**A 仅改代际** ⇒ rc=1／`BUNDLE_IDENTITY_INVALID`（**无守卫 ⇒ 报不出双侧值**）；**B 刷成仓库面** ⇒ rc=1／`DUALFACE_ACCEPTAGE_LIST_MISMATCH`／双侧值齐备；**D 同 B 且同步 manifest** ⇒ 守卫正常命中，**但包内 manifest 自述 `files[verifier].sha256` 仍＝`2898522E…`，与包内实际 `4694B2C8…` 不一致**。⇒ 三重缺陷：诊断降级／包内自证链断裂／错误码语义误导。
+- **排除三解释**：非历史值记载（随包现行可执行件）；非设计性接受（签名块已在白名单**明文**列理由，机制不同禁混谈）；**G-332 已裁定换代走种子路 ⇒ 本缺陷是种子路必遇项**（构建器路由 L79 取件自动刷新，种子路不会）。**责任在派单侧**——D-134 换代时仓库面尚无守卫块（01:3x 才由 D-138 落位），**当时无缺陷**；D-138 完成门未含包内副本回流，**执行席未越界**。
+- **派单**：**D-142**（§310・预登记・前置＝D-141 CLOSED）＝ accepted 追平第 29 项 ＋ 种子路 r29 包内副本刷新 ＋ manifest 自述逐件同步 ＋ **换代前自检门（机器可复算，禁执行席自觉）**。**禁改**：构建器（**D-141 在飞**）・D-138 守卫块 13 行・`$reproWhitelist` 及 L138 硬钉・`Release/` 全树・`Source/`・`Tests/`・`Config/`・三账四牌位。
+- **D-141 在飞观察（★只读不判，`R-D141.md` 未交）**：回执 05:28:16 早于首产品面写入 05:30:01 ⇒ **回执先行合规**；`f3-verify/verify-delivery-report.json` 已落 05:36:50。构建器现值 **17,729／`DA22C2A7…`**。**指挥席已独立动态实跑确认 L157 修复有效**：`COUNT=7|SELECTED=…r28…|KEY=28`（原缺陷选中 r24）；正则自证 7 个真实名 old 全不命中／new 全命中键 22..28；含 `80` 的 sha 指纹串假阳性不命中。
+- **恒定面零漂移**：源码 277／`1750FED8…`（含 `.pyc`）／276／`C9AE5C92…`｜注册 239≡239｜契约 239≡239｜名册 285＝94/33/158｜错误码 33｜白名单 53／`F355705BF2C4`／30,634 B｜装机 239 `59F376555025052D…`／1,103,697／内层 43｜`Release/` 131／`7653FA1D…`｜`Archive/distributions` 139／`535D3EC1…`｜现役 r28 2,277,454／`1D0F0F03…`／26 成员／内层 manifest 25 条｜五锚 rc=0×5｜6520/6511 CLOSED｜`.git` 不存在。
+- **本席自纠十三处**（全自身口径，无一处归因执行席）：装机遍历层数假定／siblings 取文件路径／takeArray 每行只抓首个匹配致 13（真实 21）／takeMap 未容 `[ordered]` 致 0／反斜杠未归一致 `forks=[]` 空洞真值／`accepted()` 抽取域跨到别的数组致 40／单行+续行数组漏读／报文截尾切掉错误码致 codes 空／编码回退顺序错／D 场景误用 `st` 变量致 `BUNDLE_PATH_INVALID` 假 FAIL／`open(...,"wb")` 先截断再读致空 manifest 假 FAIL／`python -c` 内嵌引号被沙箱拦／**落账锚点应指向前一号而非本轮号、append-only 应追加至文件末尾**。
+
+
+## G-334 · 2026-10-07 06:5x（自动化轮）· D-141 终验收 PASS → CLOSED ＋ D-142 解锁派发
+
+- **D-141 终验收 PASS → CLOSED**：指挥席自写 89 断言（56+21+12，三脚本各双跑 EXIT=0×2・断言层逐行一致，**不复用执行席任何脚本或判据**；恒定面口径逐字回读 `intake_snapshot_d136.py` L5/L23-24/L36-58/L92-102）**89/89 全绿**。**执行席申报全部属实，本席予以采信。**
+- **L157 缺陷动态坐实（本席亲跑 PowerShell）**：`COUNT=7`｜旧式 `OLDKEYS=0,0,0,0,0,0,0` → `OLDSELECTED=…r24…`（落后四代）｜新式 `KEYS=22,23,24,25,26,27,28` → `SELECTED=…r28…` ⇒ **`[int]("")`＝0 静默退化**这一机制由两轮独立实跑互证。
+- **G3 环B（本席自建 staging，分母显式 25）**：**r28 参照 22/2/1**（未解释唯一＝verifier，`4694B2C8…` vs `2898522E…`）｜**r24 参照 20/2/3** ⇒ 与 G-333 独立复刻**逐件逐哈希全中**。环A 分母 21（takeMap ≡ take 数组）与环B 分母 25 并列不混谈。
+- **G8 本席亲跑构建器**：rc=1 ＋ `Release/` 前后聚合**逐字节恒等**（`7653FA1D…`）＋r29 字样 0＋ 零 zip 产出，报文 `BUNDLE_REPRO_MISMATCH|staged=4694B2C8…|reference=2898522E…` ⇒ **独立复现 R-G333-P1 字节级成因**（★与上轮四场景矩阵场景 D 报文一致）。
+- **★现役工单＝D-142 ACTIVE（解锁）**：`PRE-REG-D142` → `ACTIVE-D142`，硬前置「D-141 CLOSED」已兑现。**接单读 `L1_INBOX.md` `### D-142` 段 status 行**。范围五项（accepted 追第 29 项／种子路 r29 重建保真／包内 verifier 副本刷新／manifest 自述逐件同步／**换代前自检门**）＋完成门 G1–G11 全文见该段，**§310 原文一字不改**。
+- **★G8 反向门基线须含 D-141 交件态**：构建器现值 **17,729／`DA22C2A7D17EB081…`**（★**不得回退至 17,727／`0B7A590A…`**）。
+- **主动发现零新增缺口**：权威面 49 行粗筛**逐行人工判读**全为历史语境（承 R-G323-P2 硬门）｜载体件数 14/6/6/8 属各代教程形态差异，`AGENTS.md` L65「八代教程载体」是**目录计数陈述**，不构成相反陈述｜D-142 第 5 项口径复核**成立**（构建器全文无 `seed`／`种子`／`ExtractToDirectory` 任何模式 ⇒ 只有「从仓库面组装」一条路）。
+- **恒定面零漂移（现场复算）**：源码 277／`1750FED84B9282D19…`（含 `.pyc`）／276／`C9AE5C92CE473C55…`｜注册 239≡239｜契约 239≡239｜名册 285＝94/33/158｜错误码 33｜白名单 53／`F355705BF2C4`／30,634 B｜装机 239 `59F376555025052D…`／1,103,697／内层 43｜`Release/` 131／`7653FA1D…`｜`Archive/distributions` 139／`535D3EC1…`｜现役 r28 2,277,454／`1D0F0F03…`／26 成员／内层 manifest 25 条｜五锚 rc=0×5｜6520/6511 CLOSED｜Pro 0 进程｜`.git` 不存在。
+- **★本席自纠七处（全自身口径，零归因执行席）**：①**`SL=os.sep` 自造口径致四个聚合哈希全错**——回 d136 intake L5 逐字读出 `SL=chr(47)`，我首版用反斜杠 ⇒ **「件数对、哈希错」是聚合口径错的典型指纹**（族内第 6 次复发）②白名单全文贪婪抽取跨域得「5 条」（正解＝块内逐行 findall）③take 数组扩展名白名单手写漏 `.fragment`（族内第 2 次复发）④**PowerShell CRLF 未归一 ⇒ 6 个值全对却判 FAIL**（编码教训第 3 次复发）⑤staging 只铺顶层 ＋ 只注入 2 件 payload ⇒ 4 条假 `MISSING_MEMBER` ⑥五锚脚本路径自造致全 ABSENT（空洞真值）⑦写入脚本残留无效行。
+- **跨轮通用经验（新增三条）**：①**聚合哈希类断言的「件数对、哈希错」是口径错的指纹**——若逐件计数全 PASS 而聚合哈希 FAIL，几乎必然是相对路径分隔符／剪枝集／连接符三处之一 ②**子进程输出解码后必须立刻归一行尾**（`replace("\r\n","\n")`），否则 `re.M` 的 `$` 前残留 `\r` ⇒ 逐个值假 FAIL ③**落账脚本的幂等续跑标志必须由「锚是否已存在」推导，不能由「首个 replace 是否命中」推导**（本轮据此误判 MEMORY.md 已更新而全部 skip，另起脚本补写）。

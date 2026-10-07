@@ -1,0 +1,1414 @@
+{
+  "kind": "planning-implementation-design-only",
+  "schemaVersion": "proposal-1",
+  "date": "2026-10-01",
+  "evidenceStatus": "PASS_CANDIDATE_PLANNING_ONLY",
+  "isExecutableMcpSchema": false,
+  "runtimeEvidence": [],
+  "snapshot": {
+    "basis": "G-240 verdict and read-only source review",
+    "batch": "D-108",
+    "batchStatus": "CLOSED_PASS_BY_COMMANDER",
+    "registeredTools": 224,
+    "catalogCandidates": 285,
+    "errorCodes": 33,
+    "gpWhitelist": 53,
+    "registeredPsContracts": 20,
+    "protocolObserved": "2024-11-05",
+    "d108GpExecutions": 0,
+    "d108PsBusinessCalls": 0,
+    "notVerified": [
+      "dsh application session",
+      "WorkBuddy connection",
+      "GP/PS business execution in D-108"
+    ]
+  },
+  "contracts": [
+    {
+      "id": "DC01",
+      "name": "DatasetContract",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC02",
+      "name": "DataAdequacyReport",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC03",
+      "name": "InputSnapshot",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC04",
+      "name": "DecisionRecord",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC05",
+      "name": "PreparedInvocation",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC06",
+      "name": "ExecutionEvent",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC07",
+      "name": "StepCheckpoint",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC08",
+      "name": "TypedFactCell",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC09",
+      "name": "CheckReport",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC10",
+      "name": "DeliveryRevision",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC11",
+      "name": "CompatibilityProfile",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    },
+    {
+      "id": "DC12",
+      "name": "UpdateImpactPlan",
+      "status": "PROPOSED_INTERNAL_CONTRACT"
+    }
+  ],
+  "services": [
+    {
+      "id": "SV01",
+      "name": "DataBindingService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV02",
+      "name": "AdequacyAndDecisionService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV03",
+      "name": "PlanCompiler",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV04",
+      "name": "InvocationPreparation",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV05",
+      "name": "ExecutionJournalRepository",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV06",
+      "name": "ResourceScheduler",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV07",
+      "name": "ReconciliationService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV08",
+      "name": "FactAndClaimService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV09",
+      "name": "DesignAndRenderService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV10",
+      "name": "PsExecutionServices",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV11",
+      "name": "DeliveryService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    },
+    {
+      "id": "SV12",
+      "name": "UpdateAndCompatibilityService",
+      "status": "PROPOSED_INTERNAL_SERVICE"
+    }
+  ],
+  "taskMachine": {
+    "initial": "DRAFT",
+    "states": [
+      "DRAFT",
+      "PREFLIGHT",
+      "AWAITING_DECISION",
+      "READY",
+      "QUEUED",
+      "RUNNING",
+      "RECONCILIATION_REQUIRED",
+      "VERIFYING",
+      "PREPARING_DELIVERY",
+      "DELIVERED",
+      "PARTIAL",
+      "FAILED",
+      "CANCELLED",
+      "SUPERSEDED"
+    ],
+    "transitions": {
+      "DRAFT": [
+        "PREFLIGHT",
+        "CANCELLED"
+      ],
+      "PREFLIGHT": [
+        "AWAITING_DECISION",
+        "READY",
+        "FAILED",
+        "CANCELLED"
+      ],
+      "AWAITING_DECISION": [
+        "PREFLIGHT",
+        "CANCELLED"
+      ],
+      "READY": [
+        "QUEUED",
+        "PREFLIGHT",
+        "CANCELLED"
+      ],
+      "QUEUED": [
+        "RUNNING",
+        "PREFLIGHT",
+        "CANCELLED"
+      ],
+      "RUNNING": [
+        "RECONCILIATION_REQUIRED",
+        "VERIFYING",
+        "PARTIAL",
+        "FAILED",
+        "CANCELLED"
+      ],
+      "RECONCILIATION_REQUIRED": [
+        "RUNNING",
+        "VERIFYING",
+        "PARTIAL",
+        "FAILED",
+        "CANCELLED",
+        "AWAITING_DECISION"
+      ],
+      "VERIFYING": [
+        "PREPARING_DELIVERY",
+        "RECONCILIATION_REQUIRED",
+        "PARTIAL",
+        "FAILED"
+      ],
+      "PREPARING_DELIVERY": [
+        "DELIVERED",
+        "RECONCILIATION_REQUIRED",
+        "PARTIAL",
+        "FAILED"
+      ],
+      "DELIVERED": [
+        "SUPERSEDED"
+      ],
+      "PARTIAL": [
+        "PREFLIGHT",
+        "RECONCILIATION_REQUIRED",
+        "SUPERSEDED"
+      ],
+      "FAILED": [
+        "PREFLIGHT",
+        "SUPERSEDED"
+      ],
+      "CANCELLED": [
+        "PREFLIGHT",
+        "SUPERSEDED"
+      ],
+      "SUPERSEDED": []
+    },
+    "guards": {
+      "RUNNING": "Current approved prepared invocation, durable intent, current fence and resource reservation.",
+      "DELIVERED": "All necessary checks pass for one revision; durable activation evidence and current fence.",
+      "CANCELLED": "No unresolved in-flight/unknown/partial effects; known completed effects disclosed; preserve artifacts.",
+      "RESUME": "Revalidate plan/input/approval/budget; reconcile ambiguous old attempts; changed plan is a new immutable revision."
+    }
+  },
+  "stepMachine": {
+    "initial": "NEW",
+    "states": [
+      "NEW",
+      "VALIDATED",
+      "INTENT_DURABLE",
+      "EXECUTING",
+      "EFFECT_OBSERVED",
+      "VERIFYING",
+      "VERIFIED",
+      "RECORD_PENDING",
+      "RECORDED",
+      "FAILED_NO_EFFECT",
+      "FAILED_VERIFICATION",
+      "PARTIAL_EFFECT",
+      "UNKNOWN_EFFECT",
+      "CANCELLED_NO_EFFECT",
+      "BLOCKED"
+    ],
+    "transitions": {
+      "NEW": [
+        "VALIDATED",
+        "BLOCKED",
+        "CANCELLED_NO_EFFECT"
+      ],
+      "VALIDATED": [
+        "INTENT_DURABLE",
+        "BLOCKED",
+        "CANCELLED_NO_EFFECT"
+      ],
+      "INTENT_DURABLE": [
+        "EXECUTING",
+        "BLOCKED",
+        "CANCELLED_NO_EFFECT",
+        "UNKNOWN_EFFECT"
+      ],
+      "EXECUTING": [
+        "EFFECT_OBSERVED",
+        "UNKNOWN_EFFECT",
+        "PARTIAL_EFFECT",
+        "FAILED_NO_EFFECT",
+        "CANCELLED_NO_EFFECT"
+      ],
+      "EFFECT_OBSERVED": [
+        "VERIFYING",
+        "UNKNOWN_EFFECT",
+        "PARTIAL_EFFECT"
+      ],
+      "VERIFYING": [
+        "VERIFIED",
+        "FAILED_VERIFICATION",
+        "UNKNOWN_EFFECT",
+        "PARTIAL_EFFECT",
+        "BLOCKED"
+      ],
+      "VERIFIED": [
+        "RECORDED",
+        "RECORD_PENDING"
+      ],
+      "RECORD_PENDING": [
+        "RECORDED",
+        "UNKNOWN_EFFECT"
+      ],
+      "RECORDED": [],
+      "FAILED_NO_EFFECT": [
+        "VALIDATED",
+        "CANCELLED_NO_EFFECT"
+      ],
+      "FAILED_VERIFICATION": [
+        "BLOCKED"
+      ],
+      "PARTIAL_EFFECT": [
+        "BLOCKED"
+      ],
+      "UNKNOWN_EFFECT": [
+        "EFFECT_OBSERVED",
+        "PARTIAL_EFFECT",
+        "FAILED_NO_EFFECT",
+        "BLOCKED"
+      ],
+      "CANCELLED_NO_EFFECT": [
+        "VALIDATED"
+      ],
+      "BLOCKED": [
+        "VALIDATED",
+        "VERIFYING",
+        "UNKNOWN_EFFECT",
+        "RECORD_PENDING"
+      ]
+    },
+    "guards": {
+      "EXECUTING": "At dispatch, current plan/input/approval/policy/license and the required input isolation remain valid; active resource reservation and remaining root budget; no unresolved effects for this logical action; validated prepared invocation plus durable intent/dispatch-start record and current fence. If validity changed while waiting, stop and prepare again.",
+      "FAILED_NO_EFFECT": "Reliable action-specific proof of no effect, not merely an error response.",
+      "CANCELLED_NO_EFFECT": "Reliable no-dispatch/no-effect proof, not merely a cancelled token.",
+      "UNKNOWN_EFFECT_TO_FAILED_NO_EFFECT": "Action-specific reconciliation proof; dispatch may resume only in a new eligible attempt.",
+      "BLOCKED_TO_VALIDATED": "Only NOT_STARTED or NONE_PROVEN effect; never unknown/partial/observed effects.",
+      "BLOCKED_TO_VERIFYING": "Observed correct-owned candidate artifacts; verification retry only, no host redispatch.",
+      "RECORD_PENDING_TO_RECORDED": "Reverify effect and artifact/owner/revision, append durable receipt; no host execution.",
+      "RECORDED": "Result oracle and durable receipt both succeeded.",
+      "FAILURE_RECEIPTS": "Failure, partial, unknown and cancellation outcomes require durable result events/receipts too; recording failure does not create a reusable successful checkpoint."
+    }
+  },
+  "effectStates": [
+    "NOT_STARTED",
+    "NONE_PROVEN",
+    "IN_FLIGHT",
+    "OBSERVED_UNVERIFIED",
+    "VERIFIED",
+    "PARTIAL",
+    "UNKNOWN"
+  ],
+  "reconciliationOutcomes": [
+    "NotExecuted",
+    "CompletedVerified",
+    "PartialEffect",
+    "Unknown"
+  ],
+  "invariants": [
+    {
+      "id": "INV01",
+      "name": "intent-failure-zero-dispatch",
+      "rule": "Durable intent failure blocks host dispatch."
+    },
+    {
+      "id": "INV02",
+      "name": "receipt-failure-no-blind-retry",
+      "rule": "Effect success with receipt failure enters RECORD_PENDING and reconciliation; host execution is not repeated."
+    },
+    {
+      "id": "INV03",
+      "name": "unknown-not-pending",
+      "rule": "Unknown or partial effects cannot become ordinary pending for automatic dispatch."
+    },
+    {
+      "id": "INV04",
+      "name": "cancel-is-request-not-outcome",
+      "rule": "A cancellation request does not prove no side effect."
+    },
+    {
+      "id": "INV05",
+      "name": "fence-check-not-rollback",
+      "rule": "Stale owner cannot record or activate; late effects still require isolation and reconciliation."
+    },
+    {
+      "id": "INV06",
+      "name": "one-invocation-boundary",
+      "rule": "MCP, workbench, recipes, repair and all GP modes share preparation and invocation."
+    },
+    {
+      "id": "INV07",
+      "name": "input-consistency-required",
+      "rule": "Input and dependency revisions must satisfy the required isolation level before reuse or delivery."
+    },
+    {
+      "id": "INV08",
+      "name": "null-is-not-zero",
+      "rule": "Missing/unknown facts retain nullReason and cannot be silently converted to zero."
+    },
+    {
+      "id": "INV09",
+      "name": "claim-bindings-same-revision",
+      "rule": "All necessary artifacts reference one validated fact revision and denominator policy."
+    },
+    {
+      "id": "INV10",
+      "name": "ps-global-single-writer",
+      "rule": "Photoshop modal writes are serialized across the host, with owned document identity."
+    },
+    {
+      "id": "INV11",
+      "name": "all-required-before-activation",
+      "rule": "Delivery activation requires all necessary artifact/state/science checks and a current fence."
+    },
+    {
+      "id": "INV12",
+      "name": "budget-survives-restart",
+      "rule": "Revisions, models, experiments and retries share the root budget; restart does not reset it."
+    },
+    {
+      "id": "INV13",
+      "name": "no-capability-count-inflation",
+      "rule": "Aliases, interfaces, examples and work items do not increase canonical operation counts."
+    },
+    {
+      "id": "INV14",
+      "name": "no-arbitrary-code",
+      "rule": "Model proposals and codecs cannot introduce arbitrary Python/JS or transport bypasses."
+    },
+    {
+      "id": "INV15",
+      "name": "final-installer-last",
+      "rule": "The final unified installer is built only after this roadmap's functional, quantity, quality and experience gates."
+    },
+    {
+      "id": "INV16",
+      "name": "legacy-ambiguity-reconcile",
+      "rule": "Legacy pending/corrupt/torn records never alone prove not-executed; preserve old carriers and resolve ambiguous effects."
+    }
+  ],
+  "workItems": [
+    {
+      "id": "WI01",
+      "slug": "durable-invocation-journal",
+      "packageRefs": [
+        "R03"
+      ],
+      "dependsOn": [],
+      "contractRefs": [
+        "DC05",
+        "DC06"
+      ],
+      "serviceRefs": [
+        "SV04",
+        "SV05"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI02",
+      "slug": "reliable-job-repository",
+      "packageRefs": [
+        "R03",
+        "R05"
+      ],
+      "dependsOn": [
+        "WI01"
+      ],
+      "contractRefs": [
+        "DC06",
+        "DC07"
+      ],
+      "serviceRefs": [
+        "SV05"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI03",
+      "slug": "reconciliation-and-child-receipt",
+      "packageRefs": [
+        "I06",
+        "R03"
+      ],
+      "dependsOn": [
+        "WI01",
+        "WI02"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC07"
+      ],
+      "serviceRefs": [
+        "SV07"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI04",
+      "slug": "fencing-and-late-effects",
+      "packageRefs": [
+        "R01",
+        "R03"
+      ],
+      "dependsOn": [
+        "WI01",
+        "WI02",
+        "WI03"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC06"
+      ],
+      "serviceRefs": [
+        "SV05",
+        "SV07"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI05",
+      "slug": "input-snapshot-consistency",
+      "packageRefs": [
+        "R04",
+        "U03"
+      ],
+      "dependsOn": [],
+      "contractRefs": [
+        "DC01",
+        "DC03"
+      ],
+      "serviceRefs": [
+        "SV01"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI06",
+      "slug": "typed-dataset-binding",
+      "packageRefs": [
+        "U06",
+        "I02"
+      ],
+      "dependsOn": [
+        "WI05"
+      ],
+      "contractRefs": [
+        "DC01",
+        "DC03"
+      ],
+      "serviceRefs": [
+        "SV01"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI07",
+      "slug": "adequacy-and-questions",
+      "packageRefs": [
+        "I01",
+        "I03",
+        "I04"
+      ],
+      "dependsOn": [
+        "WI06"
+      ],
+      "contractRefs": [
+        "DC02",
+        "DC04"
+      ],
+      "serviceRefs": [
+        "SV02"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI08",
+      "slug": "method-eligibility-feasibility",
+      "packageRefs": [
+        "I03",
+        "I04"
+      ],
+      "dependsOn": [
+        "WI07"
+      ],
+      "contractRefs": [
+        "DC02",
+        "DC04"
+      ],
+      "serviceRefs": [
+        "SV02"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI09",
+      "slug": "typed-plan-and-preparation",
+      "packageRefs": [
+        "U05",
+        "I04"
+      ],
+      "dependsOn": [
+        "WI01",
+        "WI05",
+        "WI08"
+      ],
+      "contractRefs": [
+        "DC05"
+      ],
+      "serviceRefs": [
+        "SV03",
+        "SV04"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI10",
+      "slug": "resource-budget-and-model-routing",
+      "packageRefs": [
+        "R01",
+        "I05"
+      ],
+      "dependsOn": [
+        "WI02",
+        "WI09"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC06"
+      ],
+      "serviceRefs": [
+        "SV06"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI11",
+      "slug": "trusted-gp-catalog",
+      "packageRefs": [
+        "GA00",
+        "GA01"
+      ],
+      "dependsOn": [],
+      "contractRefs": [
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI12",
+      "slug": "gp-typed-codecs",
+      "packageRefs": [
+        "GA02"
+      ],
+      "dependsOn": [
+        "WI11"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV04"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI13",
+      "slug": "gp-effects-and-admission",
+      "packageRefs": [
+        "GA03"
+      ],
+      "dependsOn": [
+        "WI12"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV04"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI14",
+      "slug": "unified-gp-invocation-discovery",
+      "packageRefs": [
+        "GA04",
+        "GA05"
+      ],
+      "dependsOn": [
+        "WI03",
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI13"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC06"
+      ],
+      "serviceRefs": [
+        "SV04",
+        "SV05"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI15",
+      "slug": "per-operation-oracles-and-upgrade",
+      "packageRefs": [
+        "GA06",
+        "GA07"
+      ],
+      "dependsOn": [
+        "WI14"
+      ],
+      "contractRefs": [
+        "DC07",
+        "DC09",
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV07",
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI16",
+      "slug": "facts-and-claims",
+      "packageRefs": [
+        "I07",
+        "U08"
+      ],
+      "dependsOn": [
+        "WI06",
+        "WI08"
+      ],
+      "contractRefs": [
+        "DC08",
+        "DC09"
+      ],
+      "serviceRefs": [
+        "SV08"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI17",
+      "slug": "protected-design-and-independent-check",
+      "packageRefs": [
+        "I08",
+        "U08"
+      ],
+      "dependsOn": [
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI16"
+      ],
+      "contractRefs": [
+        "DC08",
+        "DC09"
+      ],
+      "serviceRefs": [
+        "SV09"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI18",
+      "slug": "ps-peer-ownership-and-grants",
+      "packageRefs": [
+        "U08",
+        "R03"
+      ],
+      "dependsOn": [
+        "WI01",
+        "WI09",
+        "WI17"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV10"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI19",
+      "slug": "ps-global-queue-cancel-reconcile",
+      "packageRefs": [
+        "U08",
+        "R01",
+        "R03"
+      ],
+      "dependsOn": [
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI18"
+      ],
+      "contractRefs": [
+        "DC05",
+        "DC06",
+        "DC07"
+      ],
+      "serviceRefs": [
+        "SV06",
+        "SV07",
+        "SV10"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI20",
+      "slug": "twenty-real-ps-contracts",
+      "packageRefs": [
+        "I08",
+        "U08"
+      ],
+      "dependsOn": [
+        "WI17",
+        "WI19"
+      ],
+      "contractRefs": [
+        "DC07",
+        "DC09"
+      ],
+      "serviceRefs": [
+        "SV09",
+        "SV10"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI21",
+      "slug": "office-specs-and-reopen",
+      "packageRefs": [
+        "U08"
+      ],
+      "dependsOn": [
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI16",
+        "WI17"
+      ],
+      "contractRefs": [
+        "DC08",
+        "DC09"
+      ],
+      "serviceRefs": [
+        "SV11"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI22",
+      "slug": "delivery-revision-activation",
+      "packageRefs": [
+        "R04",
+        "U08"
+      ],
+      "dependsOn": [
+        "WI02",
+        "WI04",
+        "WI05",
+        "WI20",
+        "WI21"
+      ],
+      "contractRefs": [
+        "DC09",
+        "DC10"
+      ],
+      "serviceRefs": [
+        "SV11"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI23",
+      "slug": "update-impact-and-reuse",
+      "packageRefs": [
+        "I10",
+        "R04",
+        "R05"
+      ],
+      "dependsOn": [
+        "WI05",
+        "WI07",
+        "WI16",
+        "WI22"
+      ],
+      "contractRefs": [
+        "DC07",
+        "DC12"
+      ],
+      "serviceRefs": [
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI24",
+      "slug": "planning-coverage-chain",
+      "packageRefs": [
+        "U12",
+        "I03"
+      ],
+      "dependsOn": [
+        "WI08",
+        "WI14",
+        "WI16",
+        "WI17",
+        "WI22"
+      ],
+      "contractRefs": [
+        "DC02",
+        "DC04",
+        "DC08",
+        "DC10"
+      ],
+      "serviceRefs": [
+        "SV02",
+        "SV08",
+        "SV09",
+        "SV11"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI25",
+      "slug": "scientific-change-chain",
+      "packageRefs": [
+        "U12",
+        "I03",
+        "I07"
+      ],
+      "dependsOn": [
+        "WI14",
+        "WI16",
+        "WI17",
+        "WI22"
+      ],
+      "contractRefs": [
+        "DC01",
+        "DC08",
+        "DC09",
+        "DC10"
+      ],
+      "serviceRefs": [
+        "SV08",
+        "SV09",
+        "SV11"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI26",
+      "slug": "norm-database-chain",
+      "packageRefs": [
+        "U11",
+        "U12"
+      ],
+      "dependsOn": [
+        "WI06",
+        "WI09",
+        "WI13",
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "contractRefs": [
+        "DC01",
+        "DC02",
+        "DC04",
+        "DC09"
+      ],
+      "serviceRefs": [
+        "SV01",
+        "SV02",
+        "SV08"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI27",
+      "slug": "recording-skill-fit-and-replay",
+      "packageRefs": [
+        "U09",
+        "U10",
+        "I09"
+      ],
+      "dependsOn": [
+        "WI09",
+        "WI23",
+        "WI30"
+      ],
+      "contractRefs": [
+        "DC04",
+        "DC07",
+        "DC11",
+        "DC12"
+      ],
+      "serviceRefs": [
+        "SV03",
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI28",
+      "slug": "workbench-accessibility-novices",
+      "packageRefs": [
+        "R06",
+        "U01"
+      ],
+      "dependsOn": [
+        "WI07",
+        "WI22",
+        "WI23"
+      ],
+      "contractRefs": [
+        "DC02",
+        "DC09",
+        "DC10",
+        "DC12"
+      ],
+      "serviceRefs": [
+        "SV02",
+        "SV11",
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI29",
+      "slug": "bounded-innovation-experiments",
+      "packageRefs": [
+        "I01",
+        "I07",
+        "I08",
+        "I10"
+      ],
+      "dependsOn": [
+        "WI07",
+        "WI16",
+        "WI20",
+        "WI23",
+        "WI27"
+      ],
+      "contractRefs": [
+        "DC02",
+        "DC04",
+        "DC07",
+        "DC08",
+        "DC12"
+      ],
+      "serviceRefs": [
+        "SV02",
+        "SV08",
+        "SV09",
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    },
+    {
+      "id": "WI30",
+      "slug": "compatibility-pack-lock-and-migration",
+      "packageRefs": [
+        "R05",
+        "U12",
+        "GA07"
+      ],
+      "dependsOn": [
+        "WI02",
+        "WI11"
+      ],
+      "contractRefs": [
+        "DC11"
+      ],
+      "serviceRefs": [
+        "SV05",
+        "SV12"
+      ],
+      "status": "PLANNED_NOT_DISPATCHED",
+      "runtimeEvidence": []
+    }
+  ],
+  "innovationExperiments": [
+    {
+      "id": "EX01",
+      "name": "critical-question-selector",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI07",
+        "WI08"
+      ]
+    },
+    {
+      "id": "EX02",
+      "name": "fact-provenance-panel",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI16"
+      ]
+    },
+    {
+      "id": "EX03",
+      "name": "update-impact-preview",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI23"
+      ]
+    },
+    {
+      "id": "EX04",
+      "name": "bounded-scenario-study",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI09",
+        "WI10",
+        "WI24"
+      ]
+    },
+    {
+      "id": "EX05",
+      "name": "measured-layout-repair",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI17",
+        "WI20"
+      ]
+    },
+    {
+      "id": "EX06",
+      "name": "cross-project-skill-fit",
+      "workItem": "WI29",
+      "dependsOn": [
+        "WI27"
+      ]
+    }
+  ],
+  "goldenSpecifications": [
+    {
+      "id": "PL-GOLD-01",
+      "kind": "synthetic-fixture-specification-not-runtime-evidence",
+      "weights": {
+        "A": 50,
+        "B": 30,
+        "C": 20,
+        "D": 40
+      },
+      "coverageSets": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "expected": {
+        "totalPopulation": 140,
+        "perFacilityCovered": [
+          80,
+          50
+        ],
+        "overlapPopulation": 30,
+        "unionPopulation": 100,
+        "uncoveredPopulation": 40,
+        "unionCoverageFraction": {
+          "numerator": 100,
+          "denominator": 140
+        }
+      },
+      "negativeVariant": {
+        "id": "PL-NEG-01",
+        "missingPopulationEntity": "D",
+        "overallPopulation": null,
+        "overallCoverage": null,
+        "adoptedKnownRecordsOnly": {
+          "numerator": 100,
+          "denominator": 100,
+          "mustNotBeLabelledOverall": true
+        }
+      }
+    },
+    {
+      "id": "SCI-GOLD-01",
+      "kind": "synthetic-fixture-specification-not-runtime-evidence",
+      "t0": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "t1": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "noData": 0,
+      "classOrder": [
+        1,
+        2
+      ],
+      "cellAreaSquareMeters": 100,
+      "expected": {
+        "transitionCounts": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rowMarginal": [
+          3,
+          2
+        ],
+        "columnMarginal": [
+          3,
+          2
+        ],
+        "validCells": 5,
+        "validAreaSquareMeters": 500,
+        "changedCells": 2,
+        "changedAreaSquareMeters": 200,
+        "changedFraction": {
+          "numerator": 2,
+          "denominator": 5
+        },
+        "netAreaChangeSquareMeters": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "NORM-GOLD-01",
+      "kind": "synthetic-practice-rule-not-real-regulation",
+      "rule": {
+        "region": "IN",
+        "maximumHeightMeters": 10,
+        "exemptionField": "exempt",
+        "centimetersPerMeter": 100,
+        "effectiveTimeAssumption": "All seven synthetic records use a fixed time inside the adopted rule effective interval; no unknown dates in this fixture."
+      },
+      "records": [
+        {
+          "id": "A",
+          "region": "IN",
+          "exempt": false,
+          "value": 9,
+          "unit": "m",
+          "expected": "PASS"
+        },
+        {
+          "id": "B",
+          "region": "IN",
+          "exempt": false,
+          "value": 11,
+          "unit": "m",
+          "expected": "FAIL"
+        },
+        {
+          "id": "C",
+          "region": "IN",
+          "exempt": false,
+          "value": null,
+          "unit": "m",
+          "expected": "UNKNOWN"
+        },
+        {
+          "id": "D",
+          "region": "OUT",
+          "exempt": false,
+          "value": 20,
+          "unit": "m",
+          "expected": "NOT_APPLICABLE"
+        },
+        {
+          "id": "E",
+          "region": "IN",
+          "exempt": true,
+          "value": 11,
+          "unit": "m",
+          "expected": "NOT_APPLICABLE"
+        },
+        {
+          "id": "F",
+          "region": "IN",
+          "exempt": false,
+          "value": 1000,
+          "unit": "cm",
+          "expected": "PASS"
+        },
+        {
+          "id": "G",
+          "region": null,
+          "exempt": false,
+          "value": 9,
+          "unit": "m",
+          "expected": "UNKNOWN"
+        }
+      ],
+      "expectedCounts": {
+        "PASS": 2,
+        "FAIL": 1,
+        "UNKNOWN": 2,
+        "NOT_APPLICABLE": 2
+      },
+      "determinedApplicableRecords": 4,
+      "evaluatedApplicableRecords": 3
+    }
+  ],
+  "sampleFactCell": {
+    "exampleOnly": true,
+    "factKey": {
+      "entity": "union-of-facilities",
+      "metric": "covered-population-ratio",
+      "period": "synthetic-fixed-period",
+      "scenario": "synthetic-AB-BC",
+      "method": "set-union-known-weights",
+      "denominator": "all-four-known-demand-points",
+      "inputSnapshot": "synthetic-specification-only"
+    },
+    "value": {
+      "numerator": 100,
+      "denominator": 140
+    },
+    "nullReason": null,
+    "unit": "ratio",
+    "displayPrecision": {
+      "percentDecimalPlaces": 1
+    },
+    "sourceRef": "PL-GOLD-01",
+    "runtimeEvidence": []
+  },
+  "gpTarget": {
+    "minimumFormula": "max(2100, ceil(1.1 * N))",
+    "competitorNStatus": "requires frozen independently counted canonical operations",
+    "trustedDiscoveryCoverageTarget": 1,
+    "completeContractCoverageTarget": 0.95,
+    "currentGpWhitelist": 53,
+    "aliasDeduplicationRequired": true,
+    "perOperationRuntimeEvidenceRequired": true
+  },
+  "renderingBudget": {
+    "scope": "root-task-including-revisions-restarts-pages-and-experiments",
+    "maximumDesignCandidates": 12,
+    "maximumInitialPreviews": 3,
+    "maximumTotalPreviews": 5,
+    "maximumRepairRounds": 2,
+    "maximumFinalRenders": 2
+  }
+}

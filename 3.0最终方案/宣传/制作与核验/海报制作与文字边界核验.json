@@ -1,0 +1,359 @@
+{
+  "method": "Native editable SVG and ReportLab vector PDF; PDFium rasterization",
+  "imagegenCalled": false,
+  "copySha256": "1D1656A73CDA5CA91165D0FE8EDADCC49D5E027165480E856E5DA65DA261CC39",
+  "status": "DOCUMENT QA ONLY / NOT PRODUCT ACCEPTANCE",
+  "fonts": "Microsoft YaHei document subset embedded in PDF; system font referenced by SVG",
+  "posters": [
+    {
+      "poster": "01_主宣传海报_竖版",
+      "pixelSize": [
+        3000,
+        4243
+      ],
+      "pdfPoints": [
+        841.89,
+        1190.71
+      ],
+      "textPlacement": "PASS",
+      "textElements": [
+        {
+          "text": "产品愿景 / PRODUCT PREVIEW",
+          "x": 218,
+          "baseline": 187,
+          "size": 42,
+          "width": 608.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 2340,
+          "baseline": 187,
+          "size": 46,
+          "width": 267.58
+        },
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 218,
+          "baseline": 377,
+          "size": 96,
+          "width": 950.81
+        },
+        {
+          "text": "让 GIS 成果",
+          "x": 212,
+          "baseline": 657,
+          "size": 167,
+          "width": 884.74
+        },
+        {
+          "text": "从分析走向交付",
+          "x": 212,
+          "baseline": 856,
+          "size": 167,
+          "width": 1169.0
+        },
+        {
+          "text": "自然语言任务 · 自动专业成图 · 同版图表报告",
+          "x": 218,
+          "baseline": 1040,
+          "size": 58,
+          "width": 1140.57
+        },
+        {
+          "text": "同一任务  ·  同一事实  ·  同一成果版本",
+          "x": 322,
+          "baseline": 1400,
+          "size": 44,
+          "width": 741.34
+        },
+        {
+          "text": "GIS",
+          "x": 383,
+          "baseline": 1535,
+          "size": 64,
+          "width": 108.94
+        },
+        {
+          "text": "Office",
+          "x": 2020,
+          "baseline": 1535,
+          "size": 62,
+          "width": 187.45
+        },
+        {
+          "text": "Photoshop",
+          "x": 1133,
+          "baseline": 1726,
+          "size": 58,
+          "width": 318.63
+        },
+        {
+          "text": "概念示意 · 非真实分析结果",
+          "x": 222,
+          "baseline": 2910,
+          "size": 39,
+          "width": 461.47
+        },
+        {
+          "text": "GIS → Photoshop → Office",
+          "x": 218,
+          "baseline": 3024,
+          "size": 62,
+          "width": 831.46
+        },
+        {
+          "text": "不会 PS，也能参与专业成图",
+          "x": 292,
+          "baseline": 3194,
+          "size": 60,
+          "width": 753.4
+        },
+        {
+          "text": "参考风格与资料结构，合法学习、适用迁移",
+          "x": 292,
+          "baseline": 3364,
+          "size": 60,
+          "width": 1140.0
+        },
+        {
+          "text": "数据更新，相关图表与文字共同更新",
+          "x": 292,
+          "baseline": 3534,
+          "size": 60,
+          "width": 960.0
+        },
+        {
+          "text": "可信 GP 自主适配，持续扩展能力",
+          "x": 292,
+          "baseline": 3704,
+          "size": 60,
+          "width": 896.84
+        },
+        {
+          "text": "了解最终方案 · 从一个真实业务任务开始",
+          "x": 218,
+          "baseline": 3970,
+          "size": 48,
+          "width": 865.69
+        },
+        {
+          "text": "3.0 规划功能与目标体验；发布功能及支持条件以实际验收为准。",
+          "x": 218,
+          "baseline": 4088,
+          "size": 39,
+          "width": 1119.67
+        },
+        {
+          "text": "概念宣传视觉  ·  ArcGIS Pro MCP 3.0 产品方案预告",
+          "x": 218,
+          "baseline": 4160,
+          "size": 37,
+          "width": 855.08
+        }
+      ],
+      "renderedPixels": [
+        3000,
+        4243
+      ]
+    },
+    {
+      "poster": "02_产品亮点海报_横版",
+      "pixelSize": [
+        3840,
+        2160
+      ],
+      "pdfPoints": [
+        1190.55,
+        669.68
+      ],
+      "textPlacement": "PASS",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 190,
+          "baseline": 198,
+          "size": 84,
+          "width": 831.96
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 3290,
+          "baseline": 190,
+          "size": 46,
+          "width": 267.58
+        },
+        {
+          "text": "一条成果链",
+          "x": 183,
+          "baseline": 453,
+          "size": 132,
+          "width": 660.0
+        },
+        {
+          "text": "连接你的 GIS 工作",
+          "x": 183,
+          "baseline": 627,
+          "size": 132,
+          "width": 1095.32
+        },
+        {
+          "text": "规划汇报 · 科研专题 · 规范建库",
+          "x": 190,
+          "baseline": 795,
+          "size": 61,
+          "width": 833.57
+        },
+        {
+          "text": "懂任务",
+          "x": 190,
+          "baseline": 1015,
+          "size": 64,
+          "width": 192.0
+        },
+        {
+          "text": "围绕业务目的组织资料与方法",
+          "x": 485,
+          "baseline": 1015,
+          "size": 56,
+          "width": 728.0
+        },
+        {
+          "text": "会设计",
+          "x": 190,
+          "baseline": 1186,
+          "size": 64,
+          "width": 192.0
+        },
+        {
+          "text": "真实 PS 自动排版，支持语言改稿",
+          "x": 485,
+          "baseline": 1186,
+          "size": 56,
+          "width": 827.72
+        },
+        {
+          "text": "能更新",
+          "x": 190,
+          "baseline": 1357,
+          "size": 64,
+          "width": 192.0
+        },
+        {
+          "text": "保留依据，联动同版图表报告",
+          "x": 485,
+          "baseline": 1357,
+          "size": 56,
+          "width": 728.0
+        },
+        {
+          "text": "可检查",
+          "x": 190,
+          "baseline": 1528,
+          "size": 64,
+          "width": 192.0
+        },
+        {
+          "text": "成果、来源、编辑性与版本清楚可查",
+          "x": 485,
+          "baseline": 1528,
+          "size": 56,
+          "width": 896.0
+        },
+        {
+          "text": "GIS → Photoshop → Office",
+          "x": 190,
+          "baseline": 1785,
+          "size": 84,
+          "width": 1126.49
+        },
+        {
+          "text": "了解完整最终方案",
+          "x": 190,
+          "baseline": 1908,
+          "size": 48,
+          "width": 384.0
+        },
+        {
+          "text": "同一任务 · 同一成果版本",
+          "x": 2445,
+          "baseline": 457,
+          "size": 43,
+          "width": 465.8
+        },
+        {
+          "text": "GIS",
+          "x": 2450,
+          "baseline": 584,
+          "size": 54,
+          "width": 91.92
+        },
+        {
+          "text": "Office",
+          "x": 3120,
+          "baseline": 1668,
+          "size": 45,
+          "width": 136.05
+        },
+        {
+          "text": "Photoshop",
+          "x": 2490,
+          "baseline": 878,
+          "size": 46,
+          "width": 252.71
+        },
+        {
+          "text": "概念示意 · 非真实分析结果",
+          "x": 2395,
+          "baseline": 1751,
+          "size": 37,
+          "width": 437.8
+        },
+        {
+          "text": "3.0 规划功能与目标体验；发布功能及支持条件以实际验收为准。",
+          "x": 190,
+          "baseline": 2060,
+          "size": 40,
+          "width": 1148.38
+        },
+        {
+          "text": "概念宣传视觉",
+          "x": 2690,
+          "baseline": 2060,
+          "size": 40,
+          "width": 240.0
+        }
+      ],
+      "renderedPixels": [
+        3840,
+        2160
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "海报\\01_主宣传海报_竖版.png",
+      "bytes": 555159,
+      "sha256": "CF82A9C9C71B11F3B1AA7FC9D71380A9D4A933BF246332D1EF884F8BF54A5E1B"
+    },
+    {
+      "path": "海报\\01_主宣传海报_竖版.svg",
+      "bytes": 36445,
+      "sha256": "6FA27761210D3047470D70DAC79FC5A41747684538647F3ED57EFF7CA9FF51AB"
+    },
+    {
+      "path": "海报\\02_产品亮点海报_横版.png",
+      "bytes": 454630,
+      "sha256": "9E2279C383B25005616D2721AFFE0548F3DBDCC0FEAAE29D08677872B0A60422"
+    },
+    {
+      "path": "海报\\02_产品亮点海报_横版.svg",
+      "bytes": 35959,
+      "sha256": "E2A434A5603E012C2CD1DBCA6E82F47C99A8CCECCB101BA92ACA4493969EC01D"
+    },
+    {
+      "path": "海报\\ArcGIS_Pro_MCP_3.0_宣传海报_打印版.pdf",
+      "bytes": 125044,
+      "sha256": "35A2E2AC7990CBBA6D93329FAD2E0409EFE18E50FBFF6062357EDA796A2CCE18"
+    }
+  ]
+}

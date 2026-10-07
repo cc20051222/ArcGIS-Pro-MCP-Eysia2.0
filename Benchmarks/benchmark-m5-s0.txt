@@ -1,0 +1,30 @@
+F05 M5 benchmark S0 · PASS CANDIDATE (D-122, the D-117 GP-53 closure definition face, scheme A)
+
+Logical M5 items: 4
+Member files: 8
+Aggregate SHA-256: FCE693002B93DB2AD3FC67167B27CCD10F9B9A11397B01CD6BE6D4B04597CB43
+Aggregate method: sha256(concat('relpath:sha256\n' for every M5 member file, sorted by relpath))
+Carried M1 anchor: 92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD (9 files, recomputed equal, mismatches 0, GATE-G206)
+Carried M2 anchor: 501A7E15600850E64FA078972F41DF4F22D1E10A2E62EBFC5063358FF13E10A7 (13 files, recomputed equal, mismatches 0, GATE-G214)
+Carried M3 anchor: 94577E76D1602F61A8A5B292E07EC5B0C93668597A2D002A706F7A1055E44D12 (12 files, recomputed equal, mismatches 0, GATE-G216)
+Carried M4 anchor: F71BF6CD8AB9E8FD64907AA5EC7B3F126D101E00C99ECC42E20704E9AE636FA2 (14 files, recomputed equal, mismatches 0, GATE-G220)
+
+[closureV1] D-117 Phase A GP-53 closure ledger and coverage ledger, first generation · FCB938DE9AA99E1CF7BD1A70E9FFEF9C73C1EFB7E5852981DEA273142D2E2475
+  Benchmarks/gp-whitelist-closure-53-v1.jsonl · 91102 bytes · D7B12EB6B13A1E4B5A49AB4A86BD3B5E336A0E4751C5E91FB37815180E497082
+  Benchmarks/gp-whitelist-closure-53-v1.md · 14229 bytes · 33C3738707149A47AE5F0F5FC5494FE43B2C2A23172A69EA00141C856D685210
+[closureV2] D-117 fixture segment rectification, second generation of the same two ledgers · 98B97E5EE7FCD95127A452F055A929080EFEBDC0DA46654CE322398AAC23B754
+  Benchmarks/gp-whitelist-closure-53-v2.jsonl · 112948 bytes · EC0C80A868125AB4CD0C949BBE821C4A4E13FB2A0C816DC0E222A0356B2D82BA
+  Benchmarks/gp-whitelist-closure-53-v2.md · 5684 bytes · 68B51FED5B2B4385795DAD408A4E9588831CDCAD83A581B6277F25E36DA6820D
+[closureV3] D-117 r2 rebuild, third generation with per-parameter carrier pins · 29301A789240FEC87AAC666056DA5E5CE4CFE02E81E6D10B2075A3C331943E95
+  Benchmarks/gp-whitelist-closure-53-v3.jsonl · 123943 bytes · 827B1B403714E8A3C4A9EBEF3E69D1A028D4C03BB69767EDB016A91E2D90D599
+  Benchmarks/gp-whitelist-closure-53-v3.md · 6112 bytes · 9C78EC55A2A4B2EF72208C88B1BBDCE7270027F9DABE8A4592E5E9DF1295EC40
+[closureV4] D-117 close-out, fourth generation carrying the four-check columns · 7438A5D4414569D37F84DCC848CC5D15C78E407F12F4D0D77ADDC8CF3782BC10
+  Benchmarks/gp-whitelist-closure-53-v4.jsonl · 349230 bytes · DFAE06D0EC40F7A2ADB728382823FD052B3D45A529F207981781840B436A549D
+  Benchmarks/gp-whitelist-closure-53-v4.md · 11517 bytes · 408F0E0F00F6984152A77084BDB210B04DFEC97391915DEFE2F00B58E8501AC6
+
+This record freezes definitions for reproducibility only. It pins the bytes and status strings of
+the four generations of the D-117 closure ledger; it is not runtime, visual or benchmark acceptance
+evidence, it is not acceptance of the D-122 candidate, it says nothing about whether any geoprocessing
+tool behaves correctly or has been admitted (the close-out ledger records that column as not
+established, with zero entries of its own claiming otherwise), and it proves the M1, M2, M3 and M4
+faces were byte-unchanged at freeze time.

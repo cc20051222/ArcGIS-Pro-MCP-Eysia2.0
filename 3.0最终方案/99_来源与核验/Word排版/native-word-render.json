@@ -1,0 +1,36 @@
+{
+  "renderer": "Microsoft Word native PDF export",
+  "input": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+  "output": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+  "projectTemporaryRoot": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版",
+  "openedReadOnly": true,
+  "addedToRecentFiles": false,
+  "existingSessionsTouched": false,
+  "success": true,
+  "pageCount": 50,
+  "wordVersion": "16.0",
+  "remainingOwnedWordProcesses": [],
+  "elapsedSeconds": 11.0147737,
+  "previousRenderSnapshot": {
+    "renderer": "Microsoft Word native PDF export",
+    "input": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\06_Word项目介绍\\ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+    "output": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版\\项目介绍原生分页.pdf",
+    "projectTemporaryRoot": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\99_来源与核验\\Word排版",
+    "openedReadOnly": true,
+    "addedToRecentFiles": false,
+    "existingSessionsTouched": false,
+    "success": true,
+    "pageCount": 50,
+    "wordVersion": "16.0",
+    "remainingOwnedWordProcesses": [
+      21516
+    ],
+    "elapsedSeconds": 11.0147737
+  },
+  "processCleanupRecheck": {
+    "remaining": 0,
+    "ownedPids": [],
+    "recheckedPriorOwnedPid": 21516,
+    "checkedAtUtc": "2026-10-03T12:55:48.2397702Z"
+  }
+}

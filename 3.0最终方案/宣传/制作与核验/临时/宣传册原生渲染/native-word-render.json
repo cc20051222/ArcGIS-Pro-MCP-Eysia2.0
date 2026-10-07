@@ -1,0 +1,19 @@
+{
+  "renderer": "Microsoft Word native PDF export",
+  "input": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\Word\\ArcGIS_Pro_MCP_3.0_产品宣传册_预告版.docx",
+  "output": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\制作与核验\\临时\\宣传册原生渲染\\宣传册.pdf",
+  "projectTemporaryRoot": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\制作与核验\\临时\\宣传册原生渲染",
+  "openedReadOnly": true,
+  "addedToRecentFiles": false,
+  "existingSessionsTouched": false,
+  "success": true,
+  "pageCount": 10,
+  "wordVersion": "16.0",
+  "remainingOwnedWordProcesses": [
+    11168
+  ],
+  "elapsedSeconds": 9.6461932,
+  "cleanupRecheckUtc": "2026-10-02T15:23:40.5413334Z",
+  "remainingOwnedWordProcessesAfterRecheck": [],
+  "cleanupRemaining": 0
+}

@@ -1,0 +1,63 @@
+{
+ "schema": "arcgis-pro-mcp-one-click-release-record-v1",
+ "ticket": "D-134",
+ "deploymentVersion": "one-click-1.0.2-r28",
+ "deliveryForm": "PASS CANDIDATE — 本件不构成发布放行",
+ "writtenAt": "2026-10-06T23:17:02",
+ "gates": {
+  "G1": "r28 落地・26 成员・名集合与顺序 ≡ r27・双 payload 逐字节 ≡ r27・net8 ≡ 现役装机 239",
+  "G2": "r25／r26／r27 与 r21–r26 六代 zip／六载体逐字节零改（f4 写前 after==intake 复证）",
+  "G3": "载体恰八件・载体 zip ≡ 根 zip・侧车实测复核",
+  "G4": "包内三件文档门④三件套（语境零命中＋阳性 9/9＋假阳性 0/7）",
+  "G5": "仓库 NOTICE ≡ r28 包内逐字节（f2 逆变换复原 r27 面为副证）；`README.md` 子句不可复现＝T-134-1",
+  "G6": "manifest 逐条 sha/size 等值・deploymentVersion r28・行尾形态显式（CRLF 主导）",
+  "G7": "恒定面零漂移（276／C9AE5C92…）",
+  "G8": "反向门＋写域增量可枚举",
+  "G9": "回执先行＋写域"
+ },
+ "inPackageVerifierRuns": {
+  "r28zip": {
+   "schema": "arcgis-pro-mcp-one-click-verification-v1",
+   "status": "PASS",
+   "deploymentVersion": "one-click-1.0.2-r28",
+   "releaseVersion": "1.0.2",
+   "fileCount": 26,
+   "payloadSizeBytes": 1103697,
+   "payloadSha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+   "dualPayloadCount": 2,
+   "canonicalProductionToolCount": 239,
+   "cleanMachineAcceptance": "NOT VERIFIED",
+   "source": "ZIP"
+  },
+  "r28zip_rc": 0,
+  "r27zip": {
+   "schema": "arcgis-pro-mcp-one-click-verification-v1",
+   "status": "PASS",
+   "deploymentVersion": "one-click-1.0.2-r27",
+   "releaseVersion": "1.0.2",
+   "fileCount": 26,
+   "payloadSizeBytes": 1103697,
+   "payloadSha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+   "dualPayloadCount": 2,
+   "canonicalProductionToolCount": 239,
+   "cleanMachineAcceptance": "NOT VERIFIED",
+   "source": "ZIP"
+  },
+  "r27zip_rc": 0
+ },
+ "tamperNegativeControl": {
+  "file": "f3-repackage-r28/tampered.zip",
+  "rejected": true,
+  "errorCode": "BUNDLE_FILE_HASH_MISMATCH",
+  "deletedAfterProof": true
+ },
+ "cleanMachineAcceptance": "NOT VERIFIED",
+ "installationPerformed": false,
+ "hostStarted": false,
+ "releaseFaceCutPoint": {
+  "previous": "one-click-1.0.2-r27",
+  "current": "one-click-1.0.2-r28",
+  "bytes": 2277454,
+  "sha256": "1D0F0F03CD87876DD99CEB0692847DBEBF92A5D370264C4D9A2CCB64772D57CD"
+ }
+}

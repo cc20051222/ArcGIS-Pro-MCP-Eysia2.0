@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x7",
+  "artefact": "GDOM-01 known answer plus GDOM-03 and GDOM-04",
+  "synthetic": true,
+  "members": [
+    "README.txt",
+    "layers/parcels.geojson",
+    "layers/points.geojson",
+    "package.json"
+  ],
+  "memberHashes": {
+    "README.txt": "1095CF0BC46A39E9DE069955F0FD8794B4E56D40FBF034F28A8223093992E55A",
+    "layers/parcels.geojson": "BA5F67F044B667F2E53EC35AFC49315D87447A8628B72DE8480A06C8A922E1F2",
+    "layers/points.geojson": "03C778805934AF7FD6A09CBEA5422AF7CE63571BCBDE69B99251A4B6918018F2",
+    "package.json": "F1CAAAEB9A0B67CBE4CC2C4E8B4156D84709711E784E1E08C834A19CA41E6D90"
+  },
+  "dependencyClosure": {
+    "listed": [
+      "layers/parcels.geojson",
+      "layers/points.geojson"
+    ],
+    "externalPaths": []
+  },
+  "reopenExpectation": "opening the package with the source directory renamed must still resolve every layer; a reopen that reads the original path is invalid",
+  "negativeExternalRef": {
+    "packageWithOneExternalPath": "x7_package_external_ref.json",
+    "expectedDisposition": "FAIL the reopen row"
+  },
+  "updatedInstance": {
+    "addedMember": "layers/notes.txt",
+    "expectedMemberCount": 5
+  }
+}

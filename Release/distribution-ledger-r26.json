@@ -1,0 +1,788 @@
+{
+  "schema": "d128-r26-distribution-ledger-v1",
+  "createdAt": "2026-10-06T17:18:40+0800",
+  "submissionStatus": "PASS CANDIDATE",
+  "releaseRevision": "r26",
+  "deploymentVersion": "one-click-1.0.2-r26",
+  "ticket": "D-128",
+  "entryFix": "D-128（G-309 R-4 预登记・G-312 R-1 用户明文「解锁全面修复」激活・G-316 续作）：r26 ＝ r25 同双 payload 基线（net8 ≡ 现役装机 239 逐字节・net6 沿 r25 现件），外层仅**包内文档随代际归位**：README-START-HERE／Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE／NOTICE ＋ 包外 bundle-manifest／`$acceptedDeploymentVersions` 追加一项；**r26 未重新签名**（入口脚本字节与签名块与 r25 同一）",
+  "net8EqualsInstalledArtifact": true,
+  "toolCount": 239,
+  "rosterTotal": 285,
+  "errorCodeCount": 33,
+  "gpWhitelistCount": 53,
+  "sourceAggregateSha256": "1750FED84B9282D191BED5B90C5061A850C471C00C191799FA939FB2EF0D7E39",
+  "zipArchiveEntries": 26,
+  "manifestFilesListed": 25,
+  "manifestSelfExcluded": true,
+  "ledgerSelfExcluded": true,
+  "cleanMachineAcceptance": "NOT VERIFIED",
+  "fourScenarioAcceptance": "NOT EXECUTED IN D-128（工单硬边界：不安装不启宿主）",
+  "net6RuntimeAcceptance": "NOT VERIFIED",
+  "installExecuted": false,
+  "hostStarted": false,
+  "toolsCalled": false,
+  "digitalSignatureApplied": true,
+  "digitalSignatureTrusted": false,
+  "digitalSignatureTarget": "包内成员 scripts/one-click-setup.ps1（r25 施加、r26 沿用；本批**未**重新签名）",
+  "digitalSignatureStatus": "UnknownError",
+  "digitalSignatureStatusMessage": "A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider",
+  "digitalSignatureStatusMessageEnGloss": "A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider（r25 台账原文；本机读回为同义 zh-CN 文本，二者由 P6c 对照件证明同一）",
+  "digitalSignatureSignerThumbprint": "4E4ED6CBD52F7D9F73CEFC1462E78BEB380590C0",
+  "digitalSignatureCertSubject": "CN=ArcGIS-Pro-MCP SelfSigned",
+  "digitalSignatureTrustNote": "自签证书从未装入受信任存储（G-299 R-3 维持不授权）⇒ 同事端仍现「未知发布者／SmartScreen」提示；应对＝先核对 ZIP 的 SHA-256 一致再放行。**状态绝不写作受信任**。",
+  "publicDistribution": "NOT EXECUTED（O-D123-02 维持不公开，与 AGENTS.md §3「禁止公网暴露」逐字一致；本批仅本地分发＝发送给同事-r26）",
+  "gitOperations": "NONE",
+  "supersedes": {
+    "revision": "one-click-1.0.2-r25",
+    "r25ZipSha256": "7969C220886F4D085C6746AE9EE57FE27C1031698515C59718FDA68CA53FAD29",
+    "defect": "r25 包内三件文档的**工具数・适用包・签名事实**三处陈述与现役相反（149／80 工具／154 工具・「适用包 r6」・「本包未签名」），且包内 `Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md` 建议「导入受信任的根证书颁发机构」并把公网 CA 采购列为可行路径——与 `AGENTS.md` §3 及 G-299 R-3／G-301 R-1 冲突；r26 归位并删除该建议",
+    "defectScope": "外层发布面（文档沟通面）＋包内完整性凭据（manifest 三成员哈希／尺寸）；**payload 与签名块零改动**，非载荷正确性",
+    "r25StaysSealed": "逐字节零改动（本批反向门①②已复算，见 P5 与 final-evidence）"
+  },
+  "changedFromR25": [
+    "包内三件文档随代际归位（工具数・适用包・签名事实三处失真闭合，并删改「导入受信任根证书」建议与公网 CA 无限定表述） ＝ README-START-HERE.md／Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md／NOTICE.md",
+    "$acceptedDeploymentVersions 追加 'one-click-1.0.2-r26'（25→26 项・BOM 与行尾逐字节保持＝r26 携仓库现件） ＝ scripts/verify-one-click-package.ps1",
+    "bundle-manifest.json：deploymentVersion r25→r26 ＋ 上述四件的 sizeBytes/sha256 重刷（最小差分＝9 行变・形态与条目序零漂移・件尺寸仍 8,127 B；manifest 自件除外规则不变）",
+    "外层 zip 因上述 5 件字节变化而整体哈希变化（2,270,984 → 2273422 B）",
+    "**payload 两轨与已签 one-click-setup.ps1 及其余 21 个外层成员逐字节零改**"
+  ],
+  "changedFromR25Measured": {
+    "method": "逐外层成员 RAW-byte SHA-256 对比 r25 封存 zip 解包件（种子＝f1 逐件解包、Z3 全等）",
+    "changedMemberCount": 5,
+    "unchangedMemberCount": 21,
+    "contentMembers": [
+      "README-START-HERE.md",
+      "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+      "NOTICE.md",
+      "scripts/verify-one-click-package.ps1"
+    ],
+    "plus": "bundle-manifest.json（自身重刷，manifest 自件除外规则不变）",
+    "detail": [
+      {
+        "path": "README-START-HERE.md",
+        "r25": {
+          "bytes": 2218,
+          "sha256_16": "FB33C0EBB99E5E2E"
+        },
+        "r26": {
+          "bytes": 3146,
+          "sha256_16": "F22D3776BF604CB8"
+        },
+        "reason": "工具数 149→239・「tools/list=93」→239・「本包未签名」→自签事实段・补代际同步说明"
+      },
+      {
+        "path": "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+        "r25": {
+          "bytes": 10428,
+          "sha256_16": "5C4B2A2E67D14D55"
+        },
+        "r26": {
+          "bytes": 11819,
+          "sha256_16": "A4F94600C13B636D"
+        },
+        "reason": "80 工具→239・适用包 r6→r26・两处「未签名」→自签・删除导入信任根建议・公网 CA 句加冲突与未启动限定"
+      },
+      {
+        "path": "NOTICE.md",
+        "r25": {
+          "bytes": 4178,
+          "sha256_16": "9778DA1BCE071B6A"
+        },
+        "r26": {
+          "bytes": 6457,
+          "sha256_16": "7092CCF33FE88F55"
+        },
+        "reason": "154 工具→239・补签名事实段（与根级 NOTICE 同形・自签／UnknownError／从未 Valid）"
+      },
+      {
+        "path": "scripts/verify-one-click-package.ps1",
+        "r25": {
+          "bytes": 12855,
+          "sha256_16": "18904A897E6D13B4"
+        },
+        "r26": {
+          "bytes": 12882,
+          "sha256_16": "56D85DA21B59C370"
+        },
+        "reason": "`$acceptedDeploymentVersions` 追加 `one-click-1.0.2-r26`（25→26 项・BOM 与行尾逐字节保持）"
+      }
+    ]
+  },
+  "unchangedFromR25": [
+    "Config/client-catalog.json",
+    "Config/client-templates/claude-desktop.mcp.json",
+    "Config/client-templates/codex.toml.fragment",
+    "Config/client-templates/cursor.mcp.json",
+    "Config/client-templates/deepseek.cordis.patch.yml",
+    "Config/compatibility-policy.json",
+    "ONE-CLICK-SETUP.cmd",
+    "RECOVERY-MENU.cmd",
+    "RESTORE-CLIENT.cmd",
+    "ROLLBACK-PLUGIN.cmd",
+    "Source/ArcGISProMCP.Compatibility/Config.daml",
+    "UNINSTALL-PLUGIN.cmd",
+    "payload/net6/ArcGISProMCP.Compatibility.esriAddInX",
+    "payload/net6/ArcGISProMCP.Compatibility.release-manifest.json",
+    "payload/net8/ArcGISProMCP.Compatibility.esriAddInX",
+    "payload/net8/ArcGISProMCP.Compatibility.release-manifest.json",
+    "scripts/check-compatibility.ps1",
+    "scripts/client-config.ps1",
+    "scripts/one-click-setup.ps1",
+    "scripts/release-transaction.ps1",
+    "scripts/user-workflow.ps1"
+  ],
+  "unchangedMembers": [
+    "Config/client-catalog.json",
+    "Config/client-templates/claude-desktop.mcp.json",
+    "Config/client-templates/codex.toml.fragment",
+    "Config/client-templates/cursor.mcp.json",
+    "Config/client-templates/deepseek.cordis.patch.yml",
+    "Config/compatibility-policy.json",
+    "ONE-CLICK-SETUP.cmd",
+    "RECOVERY-MENU.cmd",
+    "RESTORE-CLIENT.cmd",
+    "ROLLBACK-PLUGIN.cmd",
+    "Source/ArcGISProMCP.Compatibility/Config.daml",
+    "UNINSTALL-PLUGIN.cmd",
+    "payload/net6/ArcGISProMCP.Compatibility.esriAddInX",
+    "payload/net6/ArcGISProMCP.Compatibility.release-manifest.json",
+    "payload/net8/ArcGISProMCP.Compatibility.esriAddInX",
+    "payload/net8/ArcGISProMCP.Compatibility.release-manifest.json",
+    "scripts/check-compatibility.ps1",
+    "scripts/client-config.ps1",
+    "scripts/one-click-setup.ps1",
+    "scripts/release-transaction.ps1",
+    "scripts/user-workflow.ps1"
+  ],
+  "outerPathSetIdenticalToR25": true,
+  "payloadByteInvariant": {
+    "net8": [
+      1103697,
+      "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "≡ 现役装机 239"
+    ],
+    "net6": [
+      1107215,
+      "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701",
+      "沿 r25 现件（逐字节等值）"
+    ],
+    "proof": "内层 esriAddInX 与 r25 逐件哈希等值 ＋ net8 ≡ 装机位实测哈希"
+  },
+  "buildGate": {
+    "executed": false,
+    "reason": "本单为发布面批且**零产品码改动**；payload 按字节原样搬运 ⇒ 未运行 dotnet（如实登记，不冒充 0W0E）",
+    "constantFacesRecomputedInstead": {
+      "sourceAggregate": [
+        "1750FED84B9282D191BED5B90C5061A850C471C00C191799FA939FB2EF0D7E39",
+        277
+      ],
+      "registrations": [
+        239,
+        239
+      ],
+      "contract": [
+        239,
+        239
+      ],
+      "roster": {
+        "ReadTools": 94,
+        "SessionTools": 33,
+        "WriteTools": 158,
+        "total": 285
+      },
+      "errorCodes": 33,
+      "whitelist": [
+        53,
+        "F355705BF2C4",
+        30634
+      ],
+      "psInContract": 20
+    }
+  },
+  "mojibakeScan": "见 final-evidence（新增文本件逐件复扫）",
+  "files": [
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip",
+      "sizeBytes": 2273422,
+      "sha256": "4E7A82C8C769F0E9CA0A2151DB67B0BD9E4294C99A21A7D7555730DAE598EAA5"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip.sha256",
+      "sizeBytes": 116,
+      "sha256": "19920BC0970252E554FE0ED6C03246A7561DB0CF3260515AB10DA95B7B03DA2F"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r26-Windows-x64.zip.manifest.json",
+      "sizeBytes": 8127,
+      "sha256": "ED21B26896EA6EE8BEAA7F865774F57E82C45BD6316821B3592FF94E6B00934A"
+    }
+  ],
+  "bundleMemberHashes": [
+    {
+      "path": "Config/client-catalog.json",
+      "sizeBytes": 2246,
+      "sha256": "068772E356E3027EEC79CCD6BB9A76BA41FB3E9002CC5F0B3EF7A32DEEB367A9"
+    },
+    {
+      "path": "Config/client-templates/claude-desktop.mcp.json",
+      "sizeBytes": 97,
+      "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+    },
+    {
+      "path": "Config/client-templates/codex.toml.fragment",
+      "sizeBytes": 163,
+      "sha256": "96E1C0D0554FF86AECFA373AE5E341F61B6B2B210437F052956E0736153F93AC"
+    },
+    {
+      "path": "Config/client-templates/cursor.mcp.json",
+      "sizeBytes": 97,
+      "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+    },
+    {
+      "path": "Config/client-templates/deepseek.cordis.patch.yml",
+      "sizeBytes": 300,
+      "sha256": "2A25E6125822EDEF9ACB6FAB63076F04D628678BF07C9D7B8059A802C69E7157"
+    },
+    {
+      "path": "Config/compatibility-policy.json",
+      "sizeBytes": 4159,
+      "sha256": "1C1AC09CF825374D14994DC7C2E06B14D815E56C8BADBC50B919050C92ACD9F0"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+      "sizeBytes": 11819,
+      "sha256": "A4F94600C13B636D8A03DE4C7C44893010FA33636F02DC5DDF60BA54361432CF"
+    },
+    {
+      "path": "NOTICE.md",
+      "sizeBytes": 6457,
+      "sha256": "7092CCF33FE88F55090A1B3AAD88178EB223E85A67FEAEEE5C3693C803D0C3A2"
+    },
+    {
+      "path": "ONE-CLICK-SETUP.cmd",
+      "sizeBytes": 1105,
+      "sha256": "6D475DEDC6CC478B018D3BB1F099DF4FB3F79C8E108307D58B0964F4584B9DE8"
+    },
+    {
+      "path": "payload/net6/ArcGISProMCP.Compatibility.esriAddInX",
+      "sizeBytes": 1107215,
+      "sha256": "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701"
+    },
+    {
+      "path": "payload/net6/ArcGISProMCP.Compatibility.release-manifest.json",
+      "sizeBytes": 3650,
+      "sha256": "83FDCB23BDD0E9D17EBE40C743E0CDB49AA38DA42F3B722F1F849A6F1FA45C25"
+    },
+    {
+      "path": "payload/net8/ArcGISProMCP.Compatibility.esriAddInX",
+      "sizeBytes": 1103697,
+      "sha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+    },
+    {
+      "path": "payload/net8/ArcGISProMCP.Compatibility.release-manifest.json",
+      "sizeBytes": 7380,
+      "sha256": "9CE98952C1C5C2A427172B993FA7D1EC116F86B6B96708694E6AF24B67F209DC"
+    },
+    {
+      "path": "README-START-HERE.md",
+      "sizeBytes": 3146,
+      "sha256": "F22D3776BF604CB843300FEBE7162BBE1476D675704007D6BC72BA5C38EE0116"
+    },
+    {
+      "path": "RECOVERY-MENU.cmd",
+      "sizeBytes": 1109,
+      "sha256": "415003BE36BC8798B34838C16513140A8AA4F64B5DC717D566F30D267791790C"
+    },
+    {
+      "path": "RESTORE-CLIENT.cmd",
+      "sizeBytes": 1143,
+      "sha256": "A058E858D208866D5EBF16366F73DE27EA5F0FE309DA2B95C3E6B926C3CC4F31"
+    },
+    {
+      "path": "ROLLBACK-PLUGIN.cmd",
+      "sizeBytes": 1130,
+      "sha256": "C6D0994F058375BC57DAA0BC7035796E3C0B814F6D6C092227F4CEBFE9A26766"
+    },
+    {
+      "path": "scripts/check-compatibility.ps1",
+      "sizeBytes": 19532,
+      "sha256": "C617EE611BA1A57870011A10D38A1EC3015FF47841E275EAB0C153B722149963"
+    },
+    {
+      "path": "scripts/client-config.ps1",
+      "sizeBytes": 14926,
+      "sha256": "2F2ED7A53FB9AED55BF7AB5A82377294E924A7AE22546C54BB2F19D64E918D55"
+    },
+    {
+      "path": "scripts/one-click-setup.ps1",
+      "sizeBytes": 121312,
+      "sha256": "1312CF39C452E954DD3A34B3BD1139E4583D800032E6736B7AC112142B96F6F7"
+    },
+    {
+      "path": "scripts/release-transaction.ps1",
+      "sizeBytes": 31112,
+      "sha256": "F822255FA2C12C5EBDA8CFAF4DFAFB1D74AB53A61B80AD53B7524009EA0E7F95"
+    },
+    {
+      "path": "scripts/user-workflow.ps1",
+      "sizeBytes": 26241,
+      "sha256": "6D052A99EFF8B87640CA8DCDA7C82B1507CC7707B6EC4C4B6C036DF124942AA1"
+    },
+    {
+      "path": "scripts/verify-one-click-package.ps1",
+      "sizeBytes": 12882,
+      "sha256": "56D85DA21B59C37098861D73F3F0CE8E804F1DF92DE31C68ABB0C99555407E67"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Config.daml",
+      "sizeBytes": 3184,
+      "sha256": "51EFAC7E57DAD11547004826AB92C1184C6378842F8ECEE0944A886DD1ABF6EA"
+    },
+    {
+      "path": "UNINSTALL-PLUGIN.cmd",
+      "sizeBytes": 1127,
+      "sha256": "16FDCAAFE009894BE442413A670DD9E8986CF95282DCA579CF127CC01A5EA48F"
+    }
+  ],
+  "filesSemantics": "Release 发布套件件清单（zip／侧车／包外 manifest），语义沿 r25 台账 files[]；包内 25 件逐件哈希见 bundleMemberHashes（≡ bundle-manifest.json files[]，manifest 自件除外）",
+  "payloadMemberLedgers": {
+    "net6": [
+      {
+        "path": "Images/AddInIcon.png",
+        "sizeBytes": 357,
+        "sha256": "DDE9F5DD359F02FCD7ADC9FEAAF8E8E7B7F7D0E627F82B4C79E28994F4D10874"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.deps.json",
+        "sizeBytes": 3598,
+        "sha256": "BA9CD277D53ED8C5390C5B0B84C54604F34A572B1458E5464F3C911E3C0741BB"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.dll",
+        "sizeBytes": 432640,
+        "sha256": "5E0E69F5443580C96B94598EAD295600D2C00B971F1664AB501F821E94FB97AC"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.pdb",
+        "sizeBytes": 124856,
+        "sha256": "6EC9622DFF36DD0C3EABB626A69FA08F770E272659264F2F6375350CEA91D4C2"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Configuration.dll",
+        "sizeBytes": 10752,
+        "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Configuration.pdb",
+        "sizeBytes": 12196,
+        "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Core.dll",
+        "sizeBytes": 487424,
+        "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Core.pdb",
+        "sizeBytes": 145408,
+        "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Logging.dll",
+        "sizeBytes": 59392,
+        "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Logging.pdb",
+        "sizeBytes": 23240,
+        "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Protocol.dll",
+        "sizeBytes": 13312,
+        "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Protocol.pdb",
+        "sizeBytes": 13452,
+        "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Security.dll",
+        "sizeBytes": 6144,
+        "sha256": "2DC997E0CB135D953D4F264768BEE3F4DF11C60121752874E5281B4CD187AEA2"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Security.pdb",
+        "sizeBytes": 10716,
+        "sha256": "31D10F835EBC8FB436973DB3638B9B57C46049394C84F048987A9418747C71EB"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Server.dll",
+        "sizeBytes": 86528,
+        "sha256": "F623660D5C2F7C6C1319E0F9096411E78DF1E2B9A7BBED1CE0DDA2687246286B"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Server.pdb",
+        "sizeBytes": 32896,
+        "sha256": "93AB025CE73DBA4201A27670EE2C1496F5544F54199EC456C172BD2A9ECB3B68"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Tools.dll",
+        "sizeBytes": 1208320,
+        "sha256": "84B2034627C23D4377DED4903A0202BEA18AC7534C9A8AE8C391D032B3BD5AD8"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Tools.pdb",
+        "sizeBytes": 208188,
+        "sha256": "7BF89974178959C98F561EA4B4EA3B7EE9721558A07EE1CE1251059B7B4ADB54"
+      },
+      {
+        "path": "Install/Deployment/check-compatibility.ps1",
+        "sizeBytes": 18230,
+        "sha256": "E6A5024D5152DA3280B0CF93D1B73873E20F64F4445226D48D5E1E0507CD4FB3"
+      },
+      {
+        "path": "Install/Deployment/deployment-manifest.json",
+        "sizeBytes": 7712,
+        "sha256": "188B0396A20B2EB19C212BBD8B527C0C3B39E73A7061175F83DC402F2890F240"
+      },
+      {
+        "path": "Install/Deployment/FINAL_GATE_SUMMARY.md",
+        "sizeBytes": 9463,
+        "sha256": "DBEC1772A0FAB0BA862D4B511A93D917FB8E295CC2D773A09493331BF958F27A"
+      },
+      {
+        "path": "Install/Deployment/FUNCTION_SCOPE_FREEZE.md",
+        "sizeBytes": 87121,
+        "sha256": "AEBA0ED1CB87540B3EB4EDDAE39E5E74C742813D7A9D3E86959B61185982A93F"
+      },
+      {
+        "path": "Install/Deployment/README-ONE-CLICK-START.md",
+        "sizeBytes": 2218,
+        "sha256": "FB33C0EBB99E5E2E5F84227928A07D497D868DDD0C339C0C1A5B33C575719A6C"
+      },
+      {
+        "path": "Install/Deployment/README-START-HERE.md",
+        "sizeBytes": 5418,
+        "sha256": "D53B3B46061420571727F7BD6201B89FB174F44ED2BC6FD9E7A0D505A4B69749"
+      },
+      {
+        "path": "Install/Deployment/release-manifest.snapshot.json",
+        "sizeBytes": 4505,
+        "sha256": "345D24106BE95033D015382B8DB4D37448A82E5BB1CF4783C89C8BEAEDB5F384"
+      },
+      {
+        "path": "Install/Deployment/SHARING_AND_SIMPLE_INSTALL.md",
+        "sizeBytes": 4716,
+        "sha256": "E94AD112F10000924F9F445AB1108B8FEADBE5BF9FBC90B2C9ACF8026B579760"
+      },
+      {
+        "path": "Install/Deployment/SIGNING_AND_RELEASE_PREP.md",
+        "sizeBytes": 2381,
+        "sha256": "C1365CD1FBF6659C0A47EC11678A61EFC4DC24DA98F5DAD35E0A55F9557F5363"
+      },
+      {
+        "path": "Install/Deployment/client-templates/claude-desktop.mcp.json",
+        "sizeBytes": 97,
+        "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+      },
+      {
+        "path": "Install/Deployment/client-templates/codex.toml.fragment",
+        "sizeBytes": 163,
+        "sha256": "96E1C0D0554FF86AECFA373AE5E341F61B6B2B210437F052956E0736153F93AC"
+      },
+      {
+        "path": "Install/Deployment/client-templates/cursor.mcp.json",
+        "sizeBytes": 97,
+        "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+      },
+      {
+        "path": "Install/Deployment/client-templates/deepseek.cordis.patch.yml",
+        "sizeBytes": 300,
+        "sha256": "2A25E6125822EDEF9ACB6FAB63076F04D628678BF07C9D7B8059A802C69E7157"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/CONFIGURE-CLIENT.cmd",
+        "sizeBytes": 5239,
+        "sha256": "A02F8FAB0735FBEC053574B961CB82FC0CF01DA087DA488C82424D52C8C704B7"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/CONFIGURE-CODEX.cmd",
+        "sizeBytes": 1597,
+        "sha256": "E3F0B01690B28126511E7DF11B89E06FA4BB9CC9E00070B546F4B5B016832A78"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/INSTALL-PLUGIN.cmd",
+        "sizeBytes": 2030,
+        "sha256": "1C47121268C50A15B6F961984C86A7FD5DB1A7C2E7862BCAFDFD3951B115D4B1"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ONE-CLICK-SETUP.cmd",
+        "sizeBytes": 1105,
+        "sha256": "6D475DEDC6CC478B018D3BB1F099DF4FB3F79C8E108307D58B0964F4584B9DE8"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ONE-CLICK-UNINSTALL-PLUGIN.cmd",
+        "sizeBytes": 1127,
+        "sha256": "16FDCAAFE009894BE442413A670DD9E8986CF95282DCA579CF127CC01A5EA48F"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/RECOVERY-MENU.cmd",
+        "sizeBytes": 1109,
+        "sha256": "415003BE36BC8798B34838C16513140A8AA4F64B5DC717D566F30D267791790C"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/RESTORE-CLIENT.cmd",
+        "sizeBytes": 1143,
+        "sha256": "A058E858D208866D5EBF16366F73DE27EA5F0FE309DA2B95C3E6B926C3CC4F31"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ROLLBACK-PLUGIN.cmd",
+        "sizeBytes": 1130,
+        "sha256": "C6D0994F058375BC57DAA0BC7035796E3C0B814F6D6C092227F4CEBFE9A26766"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/START-HERE.cmd",
+        "sizeBytes": 1417,
+        "sha256": "C9A10F60F02CEE3DF5CF3C899A6FFFDA0F504C3F1ECA32CEDECF0A1FC3D5D675"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/UNINSTALL-PLUGIN.cmd",
+        "sizeBytes": 1660,
+        "sha256": "9F5E345AD63D99AE5286DA6569C5EA188C2AA629A80D8F26167FA6B2EC1FD76A"
+      },
+      {
+        "path": "Install/PythonBridge/bridge_runner.py",
+        "sizeBytes": 45965,
+        "sha256": "C8D64A7AD872B9D691C74C5D36BD6C45F68A932AE945188993858C4943312397"
+      },
+      {
+        "path": "Config.daml",
+        "sizeBytes": 3184,
+        "sha256": "51EFAC7E57DAD11547004826AB92C1184C6378842F8ECEE0944A886DD1ABF6EA"
+      }
+    ],
+    "net8": [
+      {
+        "path": "Images/AddInIcon.png",
+        "sizeBytes": 357,
+        "sha256": "DDE9F5DD359F02FCD7ADC9FEAAF8E8E7B7F7D0E627F82B4C79E28994F4D10874"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.deps.json",
+        "sizeBytes": 3598,
+        "sha256": "D20A66106CF31BEEB635D9779069309A9D53A772D502E7590732B8D05F1AE8F3"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.dll",
+        "sizeBytes": 431104,
+        "sha256": "BF8E530184DECB8D840E6C51D4D73487F699B179797FE795C11F1DA2E81FDC3A"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Compatibility.pdb",
+        "sizeBytes": 124996,
+        "sha256": "64702ECE4372EA2E4355B3A50C0A6118A45E6A45D4EB76C0D576D07E4A57EC79"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Configuration.dll",
+        "sizeBytes": 9728,
+        "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Configuration.pdb",
+        "sizeBytes": 12272,
+        "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Core.dll",
+        "sizeBytes": 486400,
+        "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Core.pdb",
+        "sizeBytes": 145484,
+        "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Logging.dll",
+        "sizeBytes": 58368,
+        "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Logging.pdb",
+        "sizeBytes": 23340,
+        "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Protocol.dll",
+        "sizeBytes": 12288,
+        "sha256": "6FEA3C8F82D1A2918C68005916AAE8FBF624715F77C22D48BA8D0E7411754CF5"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Protocol.pdb",
+        "sizeBytes": 13536,
+        "sha256": "C0C3D6A5A641A4B56D9C98FC97BA4B36892853D50670679104435EACB041C7F2"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Security.dll",
+        "sizeBytes": 4608,
+        "sha256": "1864E1C87D2C70CBE3BC7E1F0BD6C02625077CB113DD391F9385152A4C414E8A"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Security.pdb",
+        "sizeBytes": 10664,
+        "sha256": "1D249B4503304C94F965266C22D17518AF20509CF95EA4525BB4929541F72761"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Server.dll",
+        "sizeBytes": 85504,
+        "sha256": "F223C6691DCBE622D0C60CB9414CFF2B5BB9A1002C86538F33ECFCAF0F14211C"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Server.pdb",
+        "sizeBytes": 32996,
+        "sha256": "8161DD5B532AD9CD8AFD8634D4938ADA2DAB223C6CF41DCA09C7DD90ABA147B0"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Tools.dll",
+        "sizeBytes": 1207296,
+        "sha256": "342737808AD12F02233FCAF355DA59B861F73AAA063B2F6C0996EC11454DDA66"
+      },
+      {
+        "path": "Install/ArcGISProMCP.Tools.pdb",
+        "sizeBytes": 208268,
+        "sha256": "F81735AF3610FF198B6F9F090CC01DDFBCC78C592692A7F683954BF3E8B5FCE5"
+      },
+      {
+        "path": "Install/Deployment/check-compatibility.ps1",
+        "sizeBytes": 18230,
+        "sha256": "E6A5024D5152DA3280B0CF93D1B73873E20F64F4445226D48D5E1E0507CD4FB3"
+      },
+      {
+        "path": "Install/Deployment/deployment-manifest.json",
+        "sizeBytes": 7712,
+        "sha256": "188B0396A20B2EB19C212BBD8B527C0C3B39E73A7061175F83DC402F2890F240"
+      },
+      {
+        "path": "Install/Deployment/FINAL_GATE_SUMMARY.md",
+        "sizeBytes": 9463,
+        "sha256": "DBEC1772A0FAB0BA862D4B511A93D917FB8E295CC2D773A09493331BF958F27A"
+      },
+      {
+        "path": "Install/Deployment/FUNCTION_SCOPE_FREEZE.md",
+        "sizeBytes": 87121,
+        "sha256": "AEBA0ED1CB87540B3EB4EDDAE39E5E74C742813D7A9D3E86959B61185982A93F"
+      },
+      {
+        "path": "Install/Deployment/README-ONE-CLICK-START.md",
+        "sizeBytes": 2218,
+        "sha256": "FB33C0EBB99E5E2E5F84227928A07D497D868DDD0C339C0C1A5B33C575719A6C"
+      },
+      {
+        "path": "Install/Deployment/README-START-HERE.md",
+        "sizeBytes": 5418,
+        "sha256": "D53B3B46061420571727F7BD6201B89FB174F44ED2BC6FD9E7A0D505A4B69749"
+      },
+      {
+        "path": "Install/Deployment/release-manifest.snapshot.json",
+        "sizeBytes": 4505,
+        "sha256": "345D24106BE95033D015382B8DB4D37448A82E5BB1CF4783C89C8BEAEDB5F384"
+      },
+      {
+        "path": "Install/Deployment/SHARING_AND_SIMPLE_INSTALL.md",
+        "sizeBytes": 4716,
+        "sha256": "E94AD112F10000924F9F445AB1108B8FEADBE5BF9FBC90B2C9ACF8026B579760"
+      },
+      {
+        "path": "Install/Deployment/SIGNING_AND_RELEASE_PREP.md",
+        "sizeBytes": 2381,
+        "sha256": "C1365CD1FBF6659C0A47EC11678A61EFC4DC24DA98F5DAD35E0A55F9557F5363"
+      },
+      {
+        "path": "Install/Deployment/client-templates/claude-desktop.mcp.json",
+        "sizeBytes": 97,
+        "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+      },
+      {
+        "path": "Install/Deployment/client-templates/codex.toml.fragment",
+        "sizeBytes": 163,
+        "sha256": "96E1C0D0554FF86AECFA373AE5E341F61B6B2B210437F052956E0736153F93AC"
+      },
+      {
+        "path": "Install/Deployment/client-templates/cursor.mcp.json",
+        "sizeBytes": 97,
+        "sha256": "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+      },
+      {
+        "path": "Install/Deployment/client-templates/deepseek.cordis.patch.yml",
+        "sizeBytes": 300,
+        "sha256": "2A25E6125822EDEF9ACB6FAB63076F04D628678BF07C9D7B8059A802C69E7157"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/CONFIGURE-CLIENT.cmd",
+        "sizeBytes": 5239,
+        "sha256": "A02F8FAB0735FBEC053574B961CB82FC0CF01DA087DA488C82424D52C8C704B7"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/CONFIGURE-CODEX.cmd",
+        "sizeBytes": 1597,
+        "sha256": "E3F0B01690B28126511E7DF11B89E06FA4BB9CC9E00070B546F4B5B016832A78"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/INSTALL-PLUGIN.cmd",
+        "sizeBytes": 2030,
+        "sha256": "1C47121268C50A15B6F961984C86A7FD5DB1A7C2E7862BCAFDFD3951B115D4B1"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ONE-CLICK-SETUP.cmd",
+        "sizeBytes": 1105,
+        "sha256": "6D475DEDC6CC478B018D3BB1F099DF4FB3F79C8E108307D58B0964F4584B9DE8"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ONE-CLICK-UNINSTALL-PLUGIN.cmd",
+        "sizeBytes": 1127,
+        "sha256": "16FDCAAFE009894BE442413A670DD9E8986CF95282DCA579CF127CC01A5EA48F"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/RECOVERY-MENU.cmd",
+        "sizeBytes": 1109,
+        "sha256": "415003BE36BC8798B34838C16513140A8AA4F64B5DC717D566F30D267791790C"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/RESTORE-CLIENT.cmd",
+        "sizeBytes": 1143,
+        "sha256": "A058E858D208866D5EBF16366F73DE27EA5F0FE309DA2B95C3E6B926C3CC4F31"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/ROLLBACK-PLUGIN.cmd",
+        "sizeBytes": 1130,
+        "sha256": "C6D0994F058375BC57DAA0BC7035796E3C0B814F6D6C092227F4CEBFE9A26766"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/START-HERE.cmd",
+        "sizeBytes": 1417,
+        "sha256": "C9A10F60F02CEE3DF5CF3C899A6FFFDA0F504C3F1ECA32CEDECF0A1FC3D5D675"
+      },
+      {
+        "path": "Install/Deployment/entrypoints/UNINSTALL-PLUGIN.cmd",
+        "sizeBytes": 1660,
+        "sha256": "9F5E345AD63D99AE5286DA6569C5EA188C2AA629A80D8F26167FA6B2EC1FD76A"
+      },
+      {
+        "path": "Install/PythonBridge/bridge_runner.py",
+        "sizeBytes": 45965,
+        "sha256": "C8D64A7AD872B9D691C74C5D36BD6C45F68A932AE945188993858C4943312397"
+      },
+      {
+        "path": "Config.daml",
+        "sizeBytes": 3186,
+        "sha256": "0BEAC885BFB0A096BF1E6F6A315765AA012F7A67D80F34F70BB3BF28BACEE713"
+      }
+    ]
+  },
+  "payloadMemberCountTotal": 86,
+  "payloadMemberLedgersNote": "两轨内层逐条目 RAW-byte SHA-256（本批由 r26 zip 现算）：net6 43／net8 43＝86 条目，与 r25 种子内层逐条目等值；net8 内层 ≡ 现役装机件内层（P8c/P8d 实证）",
+  "schemaRevision": "d128-r26-distribution-ledger-v1"
+}

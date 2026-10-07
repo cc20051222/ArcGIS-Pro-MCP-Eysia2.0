@@ -1,0 +1,232 @@
+{
+  "schema": "d124-release-record-v1",
+  "recordType": "release record (发布记录台账)",
+  "recordSelfExcluded": true,
+  "ticket": "D-124",
+  "executingLine": "L1 实现线（唯一构建线）",
+  "deliveryForm": "PASS CANDIDATE (self-acceptance: none; close-out authority: commander only)",
+  "createdAt": "2026-10-05T19:56:11+08:00",
+  "releaseRevision": "r25",
+  "deploymentVersion": "one-click-1.0.2-r25",
+  "releaseSubject": "ArcGIS Pro MCP 1.0.2 one-click r25 ＝ 239 代际分发件 ＋ 外层部署入口脚本自签 Authenticode（签名已写入・系统不信任，逐字标注）",
+  "hashConvention": "RAW-byte SHA-256, upper-case hex (no BOM/CRLF normalisation) — R-G245-P2 lesson",
+  "authorizationChain": [
+    "G-297 用户明文「代为批准」（AGENTS §6 签名与公开发布解除）",
+    "G-237 R-2 发布确认代裁",
+    "G-221 R-2 发布预授权",
+    "G-298 D-122 CLOSED（M5 第五锚）＋D-123 采信转签",
+    "G-299 R-3 采 A 路径（改签外层 .ps1・不授权信任根变更）＋R-4 派 D-124"
+  ],
+  "versionChain": [
+    {
+      "revision": "r22",
+      "zipSha256": "2F63B5BAB6BFF8EF20C2A80ECFFF9B4AC08C16DF7113D787563862EACB9ED2CC"
+    },
+    {
+      "revision": "r23",
+      "zipSha256": "796D1956B06BBE04DB0ECDA2819E2ACF32C8098843DD781FCB43544CC76308CB"
+    },
+    {
+      "revision": "r24",
+      "zipSha256": "539B732878B6DC75E8065235EB299B51A71C6399FDCF4F75FD2477C586D4F8C6"
+    },
+    {
+      "revision": "r25",
+      "zipSha256": "7969C220886F4D085C6746AE9EE57FE27C1031698515C59718FDA68CA53FAD29"
+    }
+  ],
+  "releaseActionStatus": {
+    "releaseRecordWritten": true,
+    "installExecuted": false,
+    "hostStarted": false,
+    "localVerificationExecuted": "PASS：包内 verifier 复验（fileCount 26・payloadSizeBytes 1,103,697・payloadSha256 ≡ 装机 239・dualPayloadCount 2・toolCount 239）；正向签名写入证据＝scripts/one-click-setup.ps1 119,230→121,312 B・sha 87C89C595554…→1312CF39C452…・signer ≡ 4E4ED6CBD52F7D9F73CEFC1462E78BEB380590C0",
+    "cleanMachineDeployment": "NOT EXECUTED (AGENTS §6・本批未派)",
+    "digitalSignature": "APPLIED-TO-OUTER-ENTRY-SCRIPT ONLY (scripts/one-click-setup.ps1; 119,230 B -> 121,312 B; signer 4E4ED6CBD52F7D9F73CEFC1462E78BEB380590C0; CN=ArcGIS-Pro-MCP SelfSigned) | Get-AuthenticodeSignature status=UnknownError | message=A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider | TRUST=NOT TRUSTED（自签根未入受信任存储；本批明文不变更信任根）| NOT Valid, 不得视为受信任签名",
+    "publicDistribution": "NOT EXECUTED (O-D123-02 目标端与可见性待用户指定；r25 仅本地分发给同事)",
+    "p05_2_clientConfigWrite": "NOT EXECUTED (本批不触碰客户端配置)",
+    "photoshopUxpRealMachine": "NOT EXECUTED (L4 域)",
+    "trustStoreMutation": "NOT EXECUTED BY DESIGN (G-299 R-3 明文不授权；不装 TrustedPeople／不装根)",
+    "certificateProcurement": "NOT EXECUTED (O-D123-01 付费＋实名，须用户二次明文)",
+    "gitOperations": "NONE (Rule 9)"
+  },
+  "outerPackageStructure": {
+    "archiveEntries": 26,
+    "manifestFilesListed": 25,
+    "entryPathSetIdenticalToR24": true,
+    "nestedAddInOutsidePayload": []
+  },
+  "payloadByteInvariant": {
+    "net8EqualsInstalledCarrier": true,
+    "net6": {
+      "sizeBytes": 1107215,
+      "sha256": "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701",
+      "sha256_16": "ADBF848C4ABC1BCB",
+      "innerEntries": 43
+    },
+    "net8": {
+      "sizeBytes": 1103697,
+      "sha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+      "sha256_16": "59F376555025052D",
+      "innerEntries": 43
+    },
+    "changedBySigningOnly_signedVsUnsigned": [
+      "bundle-manifest.json",
+      "scripts/one-click-setup.ps1"
+    ],
+    "innerEntryCounts": {
+      "net6": 43,
+      "net8": 43
+    }
+  },
+  "deltaFromR24Measured": {
+    "method": "逐外层成员 RAW-byte SHA-256(16) 对比 r24 封存 zip 解包件",
+    "changedMemberCount": 4,
+    "unchangedMemberCount": 22,
+    "detail": [
+      {
+        "path": "Config/client-catalog.json",
+        "r24": {
+          "bytes": 2246,
+          "sha256_16": "73106108942D0414"
+        },
+        "r25": {
+          "bytes": 2246,
+          "sha256_16": "068772E356E3027E"
+        },
+        "reason": "D-120 装机代际字面量修正随包发布：normalization.productionToolCount 154→239（r24 携 154＝D-120 修复前的仓库现件；r25 ≡ 修复后仓库件逐字节 068772E356E3027E）"
+      },
+      {
+        "path": "bundle-manifest.json",
+        "r24": {
+          "bytes": 8127,
+          "sha256_16": "4EB7B686870E2492"
+        },
+        "r25": {
+          "bytes": 8127,
+          "sha256_16": "83E857B3E886A922"
+        },
+        "reason": "deploymentVersion r24→r25 ＋ scripts/one-click-setup.ps1 与 scripts/verify-one-click-package.ps1 成员哈希/尺寸刷新（manifest 自件除外规则不变）"
+      },
+      {
+        "path": "scripts/one-click-setup.ps1",
+        "r24": {
+          "bytes": 119230,
+          "sha256_16": "87C89C595554A920"
+        },
+        "r25": {
+          "bytes": 121312,
+          "sha256_16": "1312CF39C452E954"
+        },
+        "reason": "119,230 → 121,312 B：外层部署入口脚本追加 Authenticode 签名块（本批唯一签名对象）"
+      },
+      {
+        "path": "scripts/verify-one-click-package.ps1",
+        "r24": {
+          "bytes": 12832,
+          "sha256_16": "178244343F18B9FA"
+        },
+        "r25": {
+          "bytes": 12855,
+          "sha256_16": "18904A897E6D13B4"
+        },
+        "reason": "12,832 → 12,855 B：$acceptedDeploymentVersions 追加 'one-click-1.0.2-r25'（＝D-124 编辑后的仓库现件）"
+      }
+    ]
+  },
+  "net8PayloadEqualsInstalledArtifact": {
+    "sizeBytes": 1103697,
+    "sha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+  },
+  "constantSurface": {
+    "sourceAggregate": [
+      "97DE7764A7B1A2F98ED7ED91F541A1881F0EA0D621B3670B2EF6F2AB47876C1D",
+      277
+    ],
+    "registrations": [
+      239,
+      239
+    ],
+    "contract": [
+      239,
+      239
+    ],
+    "roster": {
+      "ReadTools": 94,
+      "SessionTools": 33,
+      "WriteTools": 158,
+      "total": 285
+    },
+    "errorCodes": 33,
+    "gpWhitelist": [
+      53,
+      "F355705BF2C4",
+      30634
+    ],
+    "anchors": "五锚 rc=0×5（终验器复测）",
+    "installUntouched": true
+  },
+  "preReleaseNormalStateSnapshot": {
+    "releaseTreeFilesBefore": 79,
+    "topEntriesBefore": 26,
+    "r25PresentBefore": false,
+    "sealedR21R24Hashes": {
+      "r21": "C74A790C1E8629AA",
+      "r22": "2F63B5BAB6BFF8EF",
+      "r23": "796D1956B06BBE04",
+      "r24": "539B732878B6DC75"
+    }
+  },
+  "sealedSurfacesVerifiedReadOnly": "r21–r24 四代 zip＋其台账＋发送给同事-r21..r24 全树逐件哈希对表（终验器复算）",
+  "relatedLedgersReadOnly": [
+    "Release/distribution-ledger-r24.json",
+    "Release/release-record-r24-d121.json",
+    "Archive/distributions/**",
+    "三账＋四牌位（本批零改动）"
+  ],
+  "outOfScopeDeclarations": [
+    "未安装／未启宿主",
+    "未变更证书信任根",
+    "未采购证书",
+    "未外发",
+    "未改内层 payload 字节",
+    "未动 r21–r24 封存件",
+    "未新建 M5 锚件（L2 写域）",
+    "未 git 提交或推送"
+  ],
+  "releaseSuiteFiles": [
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r25-Windows-x64.zip",
+      "sizeBytes": 2270984,
+      "sha256": "7969C220886F4D085C6746AE9EE57FE27C1031698515C59718FDA68CA53FAD29"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r25-Windows-x64.zip.sha256",
+      "sizeBytes": 117,
+      "sha256": "7976880C94D0248CE301D5412FE01419064332C2CA54485A1AAA12014BB67669"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r25-Windows-x64.zip.manifest.json",
+      "sizeBytes": 8127,
+      "sha256": "83E857B3E886A922523BA8B102CE43628A381CF5F43446C7C7B8E637D4AC1AD4"
+    },
+    {
+      "path": "Release/distribution-ledger-r25.json",
+      "sizeBytes": 29870,
+      "sha256": "D7D8E3300CD37880C9ABD52CD47D24B2F9B7187EFB6EDBC3111A1B5B910A06BB"
+    },
+    {
+      "path": "Release/release-record-r25-d124.json",
+      "sizeBytes": 8577,
+      "sha256": null,
+      "note": "自件哈希不可自含（manifestSelfExcluded 同族规则），以侧车/终验器复算为准"
+    }
+  ],
+  "ledgerSchemaParity": {
+    "ledgerFilesAreReleaseSuite": true,
+    "bundleMembersMovedTo": "bundleMemberHashes",
+    "payloadMemberLedgersAdded": {
+      "net6": 43,
+      "net8": 43
+    }
+  }
+}

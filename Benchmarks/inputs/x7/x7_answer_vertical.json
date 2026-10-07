@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x7",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "rule": "zOrtho = zEll - offset of the containing cell, where the containing cell is (floor(y), floor(x)) - published so it is recomputable",
+  "expected": [
+    {
+      "id": 0,
+      "offset": 5.0,
+      "zOrthoTwiceCM": 19000
+    },
+    {
+      "id": 1,
+      "offset": 6.0,
+      "zOrthoTwiceCM": 16800
+    },
+    {
+      "id": 2,
+      "offset": 6.0,
+      "zOrthoTwiceCM": 14800
+    },
+    {
+      "id": 3,
+      "offset": 6.0,
+      "zOrthoTwiceCM": 12800
+    }
+  ],
+  "negativeNoGrid": {
+    "request": "transform with no grid, only writing a vertical CRS name into metadata",
+    "expectedDisposition": "BLOCK",
+    "reason": "metadata assignment never substitutes for a transformation (LIX-001)"
+  }
+}

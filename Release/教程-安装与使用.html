@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArcGIS Pro MCP · 安装与使用教程</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1c2024;--muted:#5b6570;--line:#e3e7ec;--accent:#1f6feb;--code:#f2f4f7}
+@media (prefers-color-scheme: dark){:root{--bg:#14171a;--card:#1c2126;--fg:#e8ecf1;--muted:#a3adb8;--line:#2b3238;--accent:#6cb6ff;--code:#22282e}}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 16px 64px;background:var(--bg);color:var(--fg);
+ font:15px/1.75 "Microsoft YaHei","PingFang SC",system-ui,-apple-system,"Segoe UI",sans-serif}
+.doc{max-width:900px;margin:0 auto 28px;background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:26px 30px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+h1{font-size:26px;margin:.2em 0 .6em;padding-bottom:.4em;border-bottom:2px solid var(--accent)}
+h2{font-size:20px;margin:1.6em 0 .5em;padding-left:10px;border-left:4px solid var(--accent)}
+h3{font-size:16px;margin:1.2em 0 .4em;color:var(--muted)}
+p{margin:.5em 0}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-family:Consolas,"Courier New",monospace;font-size:.92em}
+pre{background:var(--code);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;width:100%;margin:.8em 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--code)}
+blockquote{margin:.6em 0;padding:.4em 1em;border-left:4px solid var(--accent);background:var(--code);border-radius:0 6px 6px 0}
+ul,ol{margin:.4em 0;padding-left:1.6em}
+hr{border:none;border-top:1px solid var(--line);margin:1.4em 0}
+</style>
+</head><body>
+<div class="doc">
+<h1>ArcGIS Pro MCP · 一键安装教程（离线分享版）</h1>
+<blockquote>
+<p>你收到的是<strong>离线可用的安装包</strong>：不需要联网，不需要 GitHub / Visual Studio / Node.js。
+包：<code>ArcGIS-Pro-MCP-OneClick-1.0.2-r6-Windows-x64.zip</code> ＋ 同名 <code>.sha256</code> ＋ 本教程
+版本 1.0.2 ｜ 生产工具 <strong>239</strong> ｜ 错误码 <strong>33</strong> ｜ 适用 ArcGIS Pro <strong>3.0–3.5</strong>（Windows x64）</p>
+<p><strong>版本口径（如实；G-160 三段口径）</strong>：<strong>支持 ArcGIS Pro 3.5（已实测）</strong>；<strong>3.0–3.4 编译期兼容（运行期未验证，NOT VERIFIED）</strong>；<strong>3.6 / 3.7 未验证</strong>。禁止表述「支持 3.0–3.5」等无限定说法。</p>
+</blockquote>
+<blockquote>
+<p><strong>历史时点声明（D-127 分发载体教程补齐批 · 2026-10-06 加入）</strong>：本教程<strong>撰写时点</strong>＝文内各「新增 N 件」小节与 §5 分组名录的形成代际；本次仅按 2026-10-06 <strong>现场复算</strong>刷新文内生产工具数现值为 <strong>239</strong>（口径＝注册 239 ≡ 契约 239，见 <code>AGENTS.md</code> §4 与 <code>Docs/PROJECT_CLOSEOUT_20261006.md</code>），<strong>分组名录未随之扩列</strong>，不得读作 239 件穷尽清单。完整名册以客户端 <code>tools/list</code> 与源码注册表 <code>Composition.BuildRegistry()</code> 为准。未验证项（NOT VERIFIED／编译期兼容）<strong>逐字保留、不升格</strong>。</p>
+</blockquote>
+<hr />
+<h2>第 0 步 · 你会收到什么</h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ArcGIS-Pro-MCP-OneClick-1.0.2-r6-Windows-x64.zip</code></td>
+<td>安装包本体</td>
+</tr>
+<tr>
+<td><code>ArcGIS-Pro-MCP-OneClick-1.0.2-r6-Windows-x64.zip.sha256</code></td>
+<td>完整性校验值（务必一起拿）</td>
+</tr>
+<tr>
+<td><code>安装教程.md</code>（本文件）</td>
+<td>装的时候照着做</td>
+</tr>
+<tr>
+<td><code>使用教程.md</code></td>
+<td>装好之后怎么用</td>
+</tr>
+</tbody>
+</table>
+<h2>第 1 步 · 确认前置条件（3 项）</h2>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>要求</th>
+<th>怎么确认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArcGIS Pro</td>
+<td><strong>3.0–3.5（x64）</strong>已正确安装（3.5 已实测；3.0–3.4 编译期兼容·未验证）</td>
+<td>打开 Pro，关于界面看版本号</td>
+</tr>
+<tr>
+<td>ArcGIS Pro 未在运行</td>
+<td>安装时请先关闭 Pro</td>
+<td>关闭所有 Pro 窗口</td>
+</tr>
+<tr>
+<td>.NET 8 Runtime</td>
+<td>一般随 Pro/系统已有</td>
+<td>装的时候安装器会自动预检并提示</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>无需联网、无需管理员安装其他软件；安装器<strong>不会</strong>自动登录账号，<strong>不读取/不生成</strong> 任何 token、密码或 API key。</p>
+</blockquote>
+<h2>第 2 步 · 核对完整性，然后完整解压</h2>
+<ol>
+<li>把 ZIP 和 <code>.sha256</code> 放在同一个文件夹（例如 <code>D:\MCP-Install</code>）。</li>
+<li>打开命令提示符（Win+R 输入 <code>cmd</code> 回车），进入该目录后执行：</li>
+</ol>
+<p><code>bat
+   certutil -hashfile ArcGIS-Pro-MCP-OneClick-1.0.2-r6-Windows-x64.zip SHA256</code></p>
+<ol>
+<li>把输出的一长串与 <code>.sha256</code> 文件里的值<strong>逐字符比对</strong>（大小写不敏感）。
+   <strong>不一致就不要安装</strong>，让发送方重新发一份。</li>
+<li>右键 ZIP → <strong>全部解压缩</strong>（建议解到 <code>D:\MCP-Install\</code>）。
+   ⚠️ <strong>不要</strong>在压缩包内直接双击运行（会缺文件）。</li>
+</ol>
+<p>解压后你会看到：</p>
+<pre><code>ONE-CLICK-SETUP.cmd      ← 就点这个
+RECOVERY-MENU.cmd        ← 出问题/要卸载时用
+ROLLBACK-PLUGIN.cmd  UNINSTALL-PLUGIN.cmd  RESTORE-CLIENT.cmd
+README-START-HERE.md    bundle-manifest.json
+Docs\  Config\  scripts\  Source\  payload\
+</code></pre>
+<h2>第 3 步 · 双击 <code>ONE-CLICK-SETUP.cmd</code>，选一次，确认一次</h2>
+<p>窗口里需要你做的选择：</p>
+<table>
+<thead>
+<tr>
+<th>选择项</th>
+<th>怎么选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户端</td>
+<td>默认 <strong>Codex</strong>；用 <strong>Cursor</strong> 就选 Cursor；用 <strong>DeepSeek Harness</strong> 就选它；只想装插件不配客户端 → 勾选「<strong>仅安装插件</strong>」</td>
+</tr>
+<tr>
+<td>项目目录（Codex / Cursor）</td>
+<td>选一个<strong>真实存在</strong>的项目文件夹，配置会写到该项目下 <code>.codex\config.toml</code> / <code>.cursor\mcp.json</code></td>
+</tr>
+<tr>
+<td>DeepSeek Harness</td>
+<td>写到你的用户目录 <code>.dsh\profiles\web\cordis.patch.yml</code>（不用选目录）</td>
+</tr>
+</tbody>
+</table>
+<p>点「开始一键部署」后<strong>只确认一次</strong>，随后自动执行 5 步：</p>
+<ol>
+<li>只读环境预检（不改动系统）</li>
+<li>包完整性校验（逐文件哈希 + 插件载荷身份）</li>
+<li><strong>插件安装事务</strong>（写前自动快照，失败可回滚）</li>
+<li><strong>每个客户端的独立配置事务</strong>（互不影响，没有"全部应用"）</li>
+<li>HTTP 连接诊断（<code>tools/list</code> + 只读 <code>ping</code>）</li>
+</ol>
+<blockquote>
+<p>安装器<strong>不会</strong>替你启动或关闭 ArcGIS Pro，也不会替你点插件里的 Start。</p>
+</blockquote>
+<h2>第 4 步 · 打开 Pro，点一次 Start</h2>
+<ol>
+<li>打开 <strong>ArcGIS Pro</strong>，新建或打开一个工程。</li>
+<li>顶部找到 <strong>MCP 选项卡</strong> → 点击 <strong>Start</strong>。</li>
+<li>回到安装窗口（或重新运行 <code>ONE-CLICK-SETUP.cmd</code> 做诊断），看到：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>成功的样子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>端口</td>
+<td>6520 已监听</td>
+</tr>
+<tr>
+<td>工具发现</td>
+<td><code>tools/list = 239</code></td>
+</tr>
+<tr>
+<td>只读调用</td>
+<td><code>ping = pong</code></td>
+</tr>
+</tbody>
+</table>
+<p>只有这三项都对，才算"装好并能用"。<strong>端口开着 ≠ 连上了。</strong></p>
+<h2>第 5 步 · 在你选的 AI 客户端里验证一次</h2>
+<ol>
+<li><strong>重启该 AI 客户端</strong>（新会话才会加载到工具列表）。</li>
+<li>让它列出可用工具 → 应该能看到 <strong>239</strong> 个。</li>
+<li>试一句最简单的：<strong>"调用 ping，并告诉我返回结果"</strong> → 应返回 <code>pong</code>。</li>
+</ol>
+<p>到这一步就算安装成功。接下来看 <strong><code>使用教程.md</code></strong>。</p>
+<h2>出错了怎么办（对照表）</h2>
+<table>
+<thead>
+<tr>
+<th>提示</th>
+<th>含义</th>
+<th>你该做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COMPATIBILITY_NOT_PASS</code></td>
+<td>环境缺东西（Pro 版本 / .NET 运行时 ≥ 6 / arcpy）</td>
+<td>按窗口提示补齐后重试</td>
+</tr>
+<tr>
+<td><code>ARCGIS_PRO_RUNNING</code></td>
+<td>ArcGIS Pro 还开着</td>
+<td><strong>你先关闭 Pro</strong>，安装器不会强杀</td>
+</tr>
+<tr>
+<td><code>PROJECT_ROOT_NOT_FOUND</code></td>
+<td>项目目录不存在</td>
+<td>重新选一个真实存在的目录</td>
+</tr>
+<tr>
+<td><code>CLIENT_RUNNING</code></td>
+<td>目标客户端还开着</td>
+<td>先关闭 Cursor 等，再重试</td>
+</tr>
+<tr>
+<td><code>WAITING_USER_START</code></td>
+<td>插件还没被 Start</td>
+<td>到 Pro 的 MCP 选项卡点 Start</td>
+</tr>
+<tr>
+<td><code>PORT_OPEN_NOT_MCP</code></td>
+<td>6520 被别的程序占用</td>
+<td>关掉占用它的程序再重试</td>
+</tr>
+<tr>
+<td><code>STALE_BACKUP_REFUSED</code></td>
+<td>目标文件在上次之后被手工改过</td>
+<td>先备份你改的内容，再人工确认</td>
+</tr>
+<tr>
+<td><code>BUNDLE_*</code></td>
+<td>包缺件/被改动/哈希不符</td>
+<td>重新获取完整 ZIP 并核对哈希</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>不要用「改端点、删备份、删 <code>.lock</code>、手删安装目录」来绕错误——那会破坏可回滚性。</p>
+</blockquote>
+<h2>卸载 / 回滚（随时可退）</h2>
+<table>
+<thead>
+<tr>
+<th>想做的事</th>
+<th>双击</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>回滚到装之前</td>
+<td><code>ROLLBACK-PLUGIN.cmd</code></td>
+</tr>
+<tr>
+<td>彻底卸载插件</td>
+<td><code>UNINSTALL-PLUGIN.cmd</code></td>
+</tr>
+<tr>
+<td>只恢复客户端配置</td>
+<td><code>RESTORE-CLIENT.cmd</code></td>
+</tr>
+<tr>
+<td>图形化操作面板</td>
+<td><code>RECOVERY-MENU.cmd</code></td>
+</tr>
+</tbody>
+</table>
+<p>事务账本在 <code>%LOCALAPPDATA%\ArcGISProMCP\installer</code>（<strong>不要手工删</strong>里面的索引与备份）。</p>
+<hr />
+<h2>附：给发送方（分享者）的话</h2>
+<ol>
+<li>把 <strong>ZIP + <code>.sha256</code> + 两份教程</strong>一起发（微信/企业微信/邮箱/共享盘均可，无需公网服务器）。</li>
+<li>提醒接收方：<strong>先比对哈希再解压</strong>（§第 2 步）。</li>
+<li>本包<strong>未做代码签名</strong>，Windows 可能提示"未知发布者"——这是如实状态；若使用单位内需要消除该提示，
+   可用<strong>自签名证书</strong>（完全离线可做：<code>New-SelfSignedCertificate</code> 生成 → 接收方导入"受信任的根证书颁发机构" → 用 <code>signtool</code> 签名），
+   但这只解决"受控机器内的提示"，不代表公开信任。</li>
+<li>不要在包里夹带你的工程文件、GDB 或凭据。</li>
+</ol>
+</div>
+<div class="doc">
+<h1>ArcGIS Pro MCP · 使用教程</h1>
+<blockquote>
+<p>前置：已按《安装教程》装好并看到 <code>tools/list = 239</code> 与 <code>ping = pong</code>。
+版本 1.0.2 ｜ 生产工具 <strong>239</strong> ｜ 适用 ArcGIS Pro <strong>3.0–3.5</strong>（3.5 已实测；3.0–3.4 编译期兼容·未验证） ｜ 端点 <code>http://127.0.0.1:6520/mcp</code></p>
+</blockquote>
+<blockquote>
+<p><strong>历史时点声明（D-127 分发载体教程补齐批 · 2026-10-06 加入）</strong>：本教程<strong>撰写时点</strong>＝文内各「新增 N 件」小节与 §5 分组名录的形成代际；本次仅按 2026-10-06 <strong>现场复算</strong>刷新文内生产工具数现值为 <strong>239</strong>（口径＝注册 239 ≡ 契约 239，见 <code>AGENTS.md</code> §4 与 <code>Docs/PROJECT_CLOSEOUT_20261006.md</code>），<strong>分组名录未随之扩列</strong>，不得读作 239 件穷尽清单。完整名册以客户端 <code>tools/list</code> 与源码注册表 <code>Composition.BuildRegistry()</code> 为准。未验证项（NOT VERIFIED／编译期兼容）<strong>逐字保留、不升格</strong>。</p>
+</blockquote>
+<hr />
+<h2>1. 它是怎么工作的（一句话）</h2>
+<pre><code>你的 AI 客户端  ⇄  (本机 6520 端口的 MCP 服务)  ⇄  ArcGIS Pro（正在打开你的工程）
+</code></pre>
+<ul>
+<li>服务跑在<strong>本机</strong>，只监听 <code>127.0.0.1</code>，不对外暴露，不需要公网。</li>
+<li>你能用的能力 = ArcGIS Pro 当前打开的<strong>工程/地图/图层/数据</strong>，加上它跑的<strong>地理处理工具</strong>。</li>
+<li>因此：<strong>Pro 必须先打开工程，并在 MCP 选项卡点 Start</strong>；否则客户端调用会失败。</li>
+</ul>
+<h2>2. 每次使用前的 3 件事</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>动作</th>
+<th>判断成功的标志</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>打开 ArcGIS Pro，并打开你要处理的工程</td>
+<td>有一个活动地图视图（有视图才能做"当前地图"类操作）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pro → <strong>MCP 选项卡 → Start</strong></td>
+<td>一键窗口诊断显示 6520 监听</td>
+</tr>
+<tr>
+<td>3</td>
+<td>你的 AI 客户端开新会话</td>
+<td>工具列表里有 <strong>239</strong> 个工具</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>提示：MCP 服务随 Pro 的 Start 起、随 Pro 关闭停；退出 Pro 后客户端自然就连不上了。</p>
+</blockquote>
+<h2>3. 连接验证（逐个客户端确认"真的连上了"）</h2>
+<blockquote>
+<p>安装成功 ≠ 客户端连上。<strong>只有各客户端自己发起会话并成功调用工具，才算连接级验证通过。</strong>
+下面按"先通用、后分客户端"的顺序做，每步都记录结果（通过就勾，不通过就如实记失败原因）。</p>
+</blockquote>
+<h3>3.1 通用前置（每次都一样）</h3>
+<blockquote>
+<h3>⚠️ 顺序很重要（实测踩到的坑）</h3>
+<p><strong>必须先启动 ArcGIS Pro 并点 Start，再打开/新建客户端会话。</strong>
+客户端的工具列表是在<strong>会话建立时</strong>确定的：如果会话是在服务未启动时建立的，里面<strong>根本看不到</strong> ArcGIS 工具
+—— 即使配置文件完全正确、<code>6520</code> 随后已监听也一样（旧会话不会动态补上）。
+<strong>补救</strong>：让 Pro 处于 Start 状态，然后<strong>关掉客户端重开</strong>（或新建会话）。</p>
+</blockquote>
+<ol>
+<li>ArcGIS Pro 已打开工程 → <strong>MCP 选项卡 → Start</strong>（<code>6520</code> 开始监听）</li>
+<li>一键窗口点「诊断」，确认 HTTP 层两项：<strong><code>tools/list = 239</code></strong> 且 <strong><code>ping = pong</code></strong></li>
+<li>客户端<strong>关闭后重开</strong>（或新建会话）—— 旧会话不会加载新工具</li>
+</ol>
+<h3>3.2 HTTP 层独立复核（不依赖任何 AI 客户端）</h3>
+<pre><code class="language-powershell"># 只读验证包与载荷身份
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify-one-click-package.ps1 -RootPath . -Json
+
+# 直接探测本机 MCP 端点（等待 6520 → 工具清单 → 代表调用）
+python clean_probe.py --expect 239 --wait 300
+</code></pre>
+<p>期望：<code>tools_list.count = 239</code>、<code>duplicates = 0</code>、代表性调用 <code>isError = false</code>。</p>
+<h3>3.3 各客户端自身连接（逐项勾选）</h3>
+<table>
+<thead>
+<tr>
+<th>客户端</th>
+<th>配置位置</th>
+<th>验证动作</th>
+<th>通过标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WorkBuddy</strong></td>
+<td><code>%USERPROFILE%\.workbuddy\mcp.json</code>（引用 <code>arcgis-pro-mcp</code>）</td>
+<td>重开会话 → 让它列出可用工具 → 调 <code>ping</code></td>
+<td>工具清单含 arcgis 工具、<code>ping</code> 返回 <code>pong</code></td>
+</tr>
+<tr>
+<td><strong>Codex</strong></td>
+<td>项目内 <code>.codex\config.toml</code>（或 <code>%USERPROFILE%\.codex\config.toml</code>）</td>
+<td>用向导写入：<code>CONFIGURE-CLIENT.cmd codex "&lt;项目目录&gt;"</code> → 重开会话</td>
+<td>会话中可见工具、<code>ping</code> 成功</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>项目内 <code>.cursor\mcp.json</code></td>
+<td><code>CONFIGURE-CLIENT.cmd cursor "&lt;项目目录&gt;"</code> → <strong>重启 Cursor</strong> → Settings → MCP 查看连接状态 → 会话内调用</td>
+<td>MCP 列表显示 <code>arcgis-pro-mcp</code> 且已连接、<code>ping</code> 成功</td>
+</tr>
+<tr>
+<td><strong>DeepSeek Harness</strong></td>
+<td><code>%USERPROFILE%\.dsh\profiles\web\cordis.patch.yml</code></td>
+<td><code>CONFIGURE-CLIENT.cmd deepseek-harness</code> → 重启 → 会话验证</td>
+<td>同 Codex</td>
+</tr>
+<tr>
+<td><strong>claude-desktop</strong></td>
+<td>—</td>
+<td>当前为 <strong><code>APPLY_UNSUPPORTED</code></strong>（不支持自动写入）</td>
+<td>手工按其文档配置，或如实登记「未配置」</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>用向导配置时是<strong>逐客户端独立事务</strong>（Plan → 确认 → Apply → Validate），没有"一键全部应用"。
+失败<strong>不要</strong>包装成通过：记录客户端名称+版本、报错原文、时间。</p>
+</blockquote>
+<h3>3.4 连接失败对照表</h3>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>最常见原因</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户端里看不到任何工具</td>
+<td>①<strong>会话建立时服务还没起</strong>（顺序错了）②会话是旧的 / 客户端没重启</td>
+<td>先让 Pro 处于 Start，再<strong>关闭客户端重开</strong>（或新建会话）</td>
+</tr>
+<tr>
+<td>全部工具都调用失败</td>
+<td>Pro 关了（服务随之停止）</td>
+<td>重新打开 Pro → MCP 选项卡 → Start</td>
+</tr>
+<tr>
+<td>报端点不可达</td>
+<td><code>6520</code> 没监听</td>
+<td>上一步做 Start；确认没有被防火墙/安全软件拦</td>
+</tr>
+<tr>
+<td><code>PORT_OPEN_NOT_MCP</code></td>
+<td>6520 被<strong>别的程序</strong>占用</td>
+<td>关闭占用者后重启 Start；<strong>端口开着≠连上了</strong></td>
+</tr>
+<tr>
+<td>工具数少于 239</td>
+<td>连到了旧版本服务</td>
+<td>确认只装了本插件一个版本；重装后重开客户端</td>
+</tr>
+<tr>
+<td>写操作报错</td>
+<td>参数/图层名/输出已存在</td>
+<td>先让它只读报告现状（见 §6 注意事项）</td>
+</tr>
+</tbody>
+</table>
+<h3>3.5 记录模板（建议逐客户端复制填写）</h3>
+<pre><code>客户端：__________  版本：__________  配置路径：__________
+发现工具数：______  代表性调用（ping / 只读查询）：通过 / 失败：______
+失败原因（原文）：______________________________________
+</code></pre>
+<h2>4. 怎么跟它说话（示例提示词）</h2>
+<p>直接用自然语言即可（中文/英文都行），让它调用工具、把结果讲给你听：</p>
+<table>
+<thead>
+<tr>
+<th>你想做什么</th>
+<th>可以这样说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>了解工程</td>
+<td>"列出当前工程的路径、版本和许可信息"</td>
+</tr>
+<tr>
+<td>看地图内容</td>
+<td>"列出当前地图里的所有图层，以及每个图层的要素数量"</td>
+</tr>
+<tr>
+<td>查字段</td>
+<td>"列出 L_Points 的字段、别名的类型"</td>
+</tr>
+<tr>
+<td>按条件选要素</td>
+<td>"在 L_Points 里选出 POP 大于 10000 的要素，并告诉我选了多少个"</td>
+</tr>
+<tr>
+<td>改别名字段</td>
+<td>"把 L_Points 的 NAME 字段别名改成 名称"（写操作，见 §6）</td>
+</tr>
+<tr>
+<td>空间分析</td>
+<td>"对 L_Points 做 500 米缓冲区"</td>
+</tr>
+<tr>
+<td>制图出图</td>
+<td>"新建一个布局，加标题、图例、指北针、比例尺，然后导出 PDF 到 D:\out"</td>
+</tr>
+<tr>
+<td>排障</td>
+<td>"调用 ping 和 python_bridge_ping，告诉我是否都正常"</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>写清楚三件事</strong>：数据在哪（图层名/路径）、要什么参数、结果放哪。AI 客户端会把这些翻译成工具调用。</p>
+</blockquote>
+<h2>5. 你可以用的 239 个工具（按用途分组）</h2>
+<p><strong>① 环境与诊断（5）</strong>
+<code>ping</code>、<code>python_bridge_ping</code>、<code>python_runtime_info</code>、<code>get_arcgis_version</code>、<code>get_license_info</code></p>
+<p><strong>② 工程 / 地图 / 布局 只读信息（10）</strong>
+<code>get_project_info</code>、<code>get_current_map</code>、<code>list_maps</code>、<code>get_map_info</code>、<code>get_map_extent</code>、
+<code>list_layouts</code>、<code>get_layout_info</code>、<code>list_layout_elements</code>、<code>get_layer_info</code>、<code>get_layers</code></p>
+<p><strong>③ 数据与结构只读（14）</strong>
+<code>get_dataset_info</code>、<code>list_workspace_datasets</code>、<code>list_databases</code>、<code>dataset_summary</code>、<code>get_schema_info</code>、
+<code>list_fields</code>、<code>get_field_info</code>、<code>get_field_values</code>、<code>get_domains</code>、<code>get_subtypes</code>、<code>get_indexes</code>、
+<code>get_raster_info</code>、<code>raster_statistics</code>、<code>query_attributes</code></p>
+<p><strong>④ 选择与查询（6）</strong>
+<code>select_by_attribute</code>、<code>select_by_location</code>、<code>select_layer</code>、<code>get_selected_features</code>、
+<code>clear_selection</code>、<code>create_selection_snapshot</code> / <code>restore_selection_snapshot</code></p>
+<p><strong>⑤ 图层与地图操作（9）</strong>
+<code>add_layer</code>、<code>remove_layer</code>、<code>move_layer</code>、<code>set_layer_visibility</code>、<code>set_layer_symbology</code>（<code>set_simple_symbology</code>）、
+<code>get_layer_symbology</code>、<code>set_definition_query</code>、<code>get_definition_query</code>、<code>set_map_extent</code></p>
+<p><strong>⑥ 字段与属性写入（4）</strong>
+<code>add_field</code>、<code>alter_field</code>（改别名/可空/长度等）、<code>calculate_field</code>、<code>get_label_info</code> / <code>set_label_visibility</code></p>
+<p><strong>⑦ 数据管理（GP）（9）</strong>
+<code>copy_dataset</code>、<code>delete_dataset</code>、<code>rename_dataset</code>、<code>create_file_gdb</code>、<code>export_table</code>、<code>append_features</code>、
+<code>merge</code>、<code>project</code>、<code>clip</code></p>
+<p><strong>⑧ 空间分析（GP）（8）</strong>
+<code>buffer</code>、<code>intersect</code>、<code>union</code>、<code>erase</code>、<code>dissolve</code>、<code>near</code>、<code>spatial_join</code>、<code>select_by_location</code>（选择类复用）</p>
+<p><strong>⑨ 栅格（7）</strong>
+<code>raster_calc</code>、<code>raster_clip</code>、<code>raster_mosaic</code>、<code>raster_resample</code>、<code>raster_statistics</code>、<code>cell_statistics</code>（逐像元聚合）、<code>focal_statistics</code>（邻域统计）</p>
+<p><strong>⑩ 制图与出图（9）</strong>
+<code>create_layout</code>、<code>add_layout_text</code>、<code>add_legend</code>、<code>add_north_arrow</code>、<code>add_scale_bar</code>、
+<code>export_layout_pdf</code>、<code>export_layout_png</code>、<code>list_layouts</code>、<code>get_layout_info</code></p>
+<blockquote>
+<p>名称以客户端里看到的为准（共 <strong>239</strong> 个，无重复）。工具数变化会在版本的 <code>release-manifest</code> 中登记。</p>
+</blockquote>
+<p><strong>⑨ 生态对齐新增（13，D-061）</strong>
+<code>save_project</code>、<code>create_map</code>、<code>set_workspace</code>、<code>get_workspace</code>、<code>list_rasters</code>、<code>list_tables</code>、
+<code>get_unique_values</code>、<code>get_layer_features</code>、<code>export_layout_jpg</code>、<code>export_layout_tif</code>、<code>export_layout_svg</code>、<code>export_layout_eps</code>、
+<code>repair_geometry</code></p>
+<blockquote>
+<ul>
+<li><code>get_layer_features</code> = <code>query_attributes</code> 的<strong>行预览预设档</strong>（limit 默认 10 / 上限 100，返回 <code>preset=row-preview</code>）——同一数据源、同一实现，<strong>显著披露</strong>。</li>
+<li><code>create_map</code> 的 <code>basemap</code> 参数本批<strong>未实现</strong>（传非空 ⇒ 明确报 <code>NOT_IMPLEMENTED</code>，不会静默忽略）。</li>
+<li><code>list_rasters</code> / <code>list_tables</code> 本批<strong>仅支持文件地理数据库（<code>*.gdb</code>）工作区</strong>，非 <code>.gdb</code> 会明确拒绝。</li>
+<li><code>repair_geometry</code> 为<strong>就地破坏性</strong>操作，必须显式 <code>confirm=true</code>（缺省拒绝）。</li>
+</ul>
+</blockquote>
+<p><strong>⑪ 受控 GP 与信任层（D-062 新增，6）</strong>
+<code>run_geoprocessing</code>（<strong>白名单（D-062 起 51 件；★ D-066 起 53 件）</strong>受控 GP 通用调用：破坏性 confirm + 双向守卫 + OUTPUT_EXISTS + 审计落盘）、
+<code>list_geoprocessing_tools</code>、<code>describe_geoprocessing_tool</code>、<code>get_messages</code>、<code>check_extension</code>、<code>get_audit_log</code></p>
+<p><strong>⑫ 编辑栈（D-062 新增，6）</strong>
+<code>insert_features</code>、<code>update_features</code>、<code>delete_features</code>（<strong>默认不自动提交</strong>，进撤销栈；后两者 confirm 缺省拒）、
+<code>save_edits</code>、<code>discard_edits</code>、<code>get_edit_session</code>（未提交计数/涉及图层）</p>
+<p><strong>⑬ 统计聚合（D-062 新增，2）</strong>
+<code>get_field_statistics</code>（min/max/mean/median/sum/stddev/count，不落 GP）、
+<code>summarize_features</code>（group-by 一/多字段 + 7 种聚合 + topN）</p>
+<blockquote>
+<ul>
+<li><code>run_geoprocessing</code> <strong>只执行白名单内工具</strong>（白名单外一律拒绝，禁止绕过）；v1 不提供覆写语义（输出已存在 ⇒ 拒绝）。</li>
+<li>编辑栈三件套改完<strong>必须 <code>save_edits</code> 才落盘</strong>，<code>discard_edits</code> 可整体回滚——先在副本上演练。</li>
+</ul>
+</blockquote>
+<p><strong>⑭ 图层管理（D-063 新增，10）</strong>
+<code>set_layer_transparency</code>、<code>set_layer_scale_range</code>、<code>create_group_layer</code>、<code>set_basemap</code>、<code>get_broken_layers</code>、
+<code>repair_layer_source</code>、<code>add_join</code>、<code>remove_join</code>、<code>rename_layer</code>、<code>duplicate_layer</code></p>
+<p><strong>⑮ 渲染进阶（D-063 新增，4；<code>get_layer_symbology</code> 为既有件增强）</strong>
+<code>set_layer_renderer</code>（single / unique / graduated 三模式）、<code>list_color_ramps</code>、
+<code>apply_symbology_from_layer</code>（<strong>只替换 renderer，不动数据连接</strong>）、<code>save_layer_file</code>（写文件 ⇒ 过输出路径守卫）</p>
+<p><strong>⑯ 视图与书签 ＋ ★回图（D-063 新增，7）</strong>
+<code>get_map_view</code>、<code>set_map_view</code>、<strong><code>export_map_view</code>（★ 回图：直接返回 PNG 图像，AI 客户端可"看"图）</strong>、
+<code>list_bookmarks</code>、<code>create_bookmark</code>、<code>apply_bookmark</code>、<code>delete_bookmark</code></p>
+<blockquote>
+<p><strong>★ D-063 能力边界如实披露（重要）</strong>
+- <strong><code>add_join</code> / <code>remove_join</code></strong>：ArcGIS Pro 托管 SDK <strong>未提供可用接口</strong>（<code>JoinDescription</code> 仅支持关系类构造；
+  <code>BasicFeatureLayer.Join</code> 无可用重载；亦无 <code>RemoveJoin</code>）⇒ 两件工具<strong>如实返回 <code>NOT_IMPLEMENTED</code> 并说明原因</strong>，
+  <strong>不会静默成功</strong>。请在 Pro 中手工建立/解除连接。
+  <strong>★ 已被 D-066 取代：两件升级为受控 GP 代理（<code>management.AddJoin</code>/<code>RemoveJoin</code> 入白名单 53 件），见 ⑮bis。</strong>
+- <strong><code>set_map_view</code> 的 <code>rotation</code></strong>：SDK 相机（Camera）公开构造不含航向设置 ⇒ 同样如实拒绝；请用 <code>extent</code> 或 <code>centerX/Y + scale</code>。
+- <strong><code>export_map_view</code> 回图</strong>：默认 <strong>96 DPI、长边 ≤1200 px、PNG ≤1 MB</strong>。<strong>"不落盘模式"</strong>（省略 <code>outputPath</code>）
+  对外<strong>零文件副作用</strong>；实现上 SDK 只支持写文件导出，故<strong>经受控临时文件中转并立即删除</strong>（结果中 <code>usedTransientFile</code>/
+  <code>transientFileDeleted</code> 如实回报）。给 <code>outputPath</code> 则落盘，并先过输出路径守卫。
+- <strong><code>set_basemap</code> 需联网</strong>（底图库来自 ArcGIS Portal）；离线会<strong>明确报错且不挂起</strong>（带限时保护）。
+- <strong>回图与书签需地图视图处于打开状态</strong>（没有活动视图时工具会明确报 <code>NO_ACTIVE_VIEW</code>）。</p>
+</blockquote>
+<p><strong>⑰ Schema 创建（D-064 新增，6）</strong>
+<code>create_feature_class</code>、<code>create_table</code>、<code>add_fields</code>、<code>delete_field</code>、<code>truncate_table</code>、<code>export_features</code></p>
+<p><strong>⑱ 工程增强（D-064 新增，5）</strong>
+<code>remove_map</code>、<code>activate_map</code>、<code>set_map_properties</code>、<code>get_environment</code>、<code>set_environment</code></p>
+<p><strong>⑲ 数据发现（D-064 新增，4）</strong>
+<code>search_data</code>、<code>list_folder</code>、<code>add_folder_connection</code>、<code>get_project_items</code></p>
+<p><strong>⑳ 批处理与系列输出（D-064 新增，2）</strong>
+<strong><code>run_batch</code>（★ 安全重点：一次往返顺序执行多条既有工具调用）</strong>、<code>export_map_series</code></p>
+<p><strong>★ 自诊断与快照（D-064 新增 · 差异化，4）</strong>
+<strong><code>diagnose</code>（一键体检，只读）</strong>、<code>snapshot_project</code>、<code>restore_snapshot</code>、<strong><code>set_readonly_mode</code>（会话级只读模式）</strong></p>
+<blockquote>
+<p><strong>★ D-064 能力边界如实披露（重要）</strong>
+- <strong><code>add_join</code> / <code>remove_join</code></strong>：仍<strong>维持如实返回 <code>NOT_IMPLEMENTED</code></strong>（托管 SDK 无可用接口）。是否把 GP <code>AddJoin</code> 纳入受控白名单，属契约/安全面变更，<strong>须用户裁定</strong>；本版<strong>未改动白名单</strong>。
+  <strong>★ 已被 D-066 取代：用户已裁定「B 方案」，两件升级为受控 GP 代理（白名单 51→53），见 ⑮bis。</strong>
+- <strong><code>set_map_view</code> 的 <code>rotation</code></strong>：无可行放行路径 ⇒ <strong>永久如实拒绝</strong>（请用 <code>extent</code> 或 <code>centerX/Y + scale</code>）。
+- <strong><code>run_batch</code></strong>：① 仅限<strong>已注册工具</strong>，且<strong>禁</strong> <code>run_batch</code> 自身（禁嵌套）与 <code>set_readonly_mode</code>（禁批内翻转只读）——任一项不合规 ⇒ <strong>整批拒绝、零副作用</strong>；② 单次最多 <strong>50 项</strong>；③ <strong>顺序执行</strong>，每项经同一校验/守卫/confirm/只读闸门（<strong>批内破坏性项仍需各自 <code>confirm</code>，不豁免</strong>）；④ 单项失败按 <code>continueOnError</code>（缺省 <code>false</code> ⇒ 中止）；⑤ <strong>总耗时 ≤30 s 硬约束</strong>（预算只允许调更严；超限即截断并报告已完成项）。
+- <strong><code>get_environment</code> / <code>set_environment</code></strong>：<strong>会话级</strong>（不落盘，重启失效）。Pro SDK <strong>没有常驻 GP 环境的读回接口</strong> ⇒ 设置为"保存 + 每次 GP 调用下发"，未设置项列在 <code>unset</code>（<strong>不伪造值</strong>）；<code>reset=true</code> 还原到会话初始态。
+- <strong><code>set_readonly_mode</code></strong>：会话级开关。开启后<strong>写类/破坏类（84 件）在执行前被拒绝</strong>（<code>PERMISSION_DENIED</code> + 消息带 <code>(read-only)</code>），<strong>只读类（56 件）与会话/视图态（9 件）不受影响</strong>；<strong>错误码零新增</strong>。
+- <strong><code>snapshot_project</code> / <code>restore_snapshot</code></strong>：快照 = APRX + 图层引用清单 + 断点记录 + <strong>SHA256 清单</strong>；<strong>恢复是破坏性操作 ⇒ 必须 <code>confirm=true</code></strong>；恢复<strong>之前</strong>先做完整性校验，<strong>快照损坏或被篡改 ⇒ 拒绝恢复</strong>（不会"尽力恢复"）；恢复前会把当前 APRX 自动备份为快照目录<strong>之外</strong>的兄弟文件。快照目录须在 <strong>D 盘</strong>（<strong>禁 %TEMP%</strong>）。
+- <strong><code>diagnose</code></strong>：只读体检；<strong>不可判定项一律 <code>Unknown</code></strong>（不会伪装成 Ok）；某端口/组件不健康时会给 <code>recommendedAction</code>。
+- <strong><code>export_map_series</code></strong>：布局<strong>未启用 map series ⇒ 直接拒绝</strong>（<strong>不会静默退化成单页导出</strong>）；页数超过 <code>maxPages</code> ⇒ 拒绝（<strong>不会静默截断文件</strong>）。请先在 Pro 的布局中启用"地图系列"。
+- <strong><code>activate_map</code></strong>：属 UI 联动；环境不支持时<strong>如实返回 <code>activated=false</code> + 说明</strong>（不伪报成功）。
+- <strong><code>list_folder</code></strong>：只接受<strong>绝对路径</strong>；深度最多 5 层、条数最多 2000；<strong>受保护根拒绝</strong>；符号链接/联接点<strong>不穿越</strong>。
+- <strong><code>add_fields</code></strong>：<strong>缺省拒绝已存在字段</strong>（列入 <code>skippedExisting</code>，不报错）；字段规格非法则<strong>整批不提交</strong>。
+- <strong><code>get_project_items</code></strong> 的"工具箱"来自工程 home 目录下的 <code>*.tbx</code> / <code>*.pyt</code> <strong>事实枚举</strong>（不是工程注册项）。</p>
+</blockquote>
+<h2>6. 使用注意事项（很重要）</h2>
+<ol>
+<li><strong>写操作先备份</strong>：<code>add_field</code> / <code>alter_field</code> / <code>calculate_field</code> / <code>delete_dataset</code> / <code>rename_dataset</code>
+   会<strong>真实修改你的数据</strong>。动手前先复制一份数据集，或在工程里用副本试。</li>
+<li><strong>GP 输出会落盘</strong>：缓冲区、裁剪、合并等会产生新数据，请明确告诉它输出路径（例如 <code>D:\out\xxx.gdb</code>），
+   不要让它写进系统盘或你的原始数据目录。</li>
+<li><strong>先只读后写</strong>：让它<strong>先</strong>用只读工具报告现状（图层、字段、要素数、坐标系），你确认无误<strong>再</strong>执行写操作。</li>
+<li><strong>需要活动视图</strong>：<code>get_current_map</code>、<code>get_layers</code> 这类"当前地图"操作在<strong>没有打开地图视图</strong>时不会成功 —— 先在 Pro 里打开地图。</li>
+<li><strong>中文、空格、长路径</strong>都支持；路径里有空格请用引号。</li>
+<li><strong>长任务</strong>：大表/大体量栅格（例如十几万行、上千兆栅格）耗时会明显变长，客户端可能显示等待，不要中途关 Pro。</li>
+<li><strong>错误码</strong>：报错一般带错误码，常见的有
+   <code>LAYER_NOT_FOUND</code>（图层名写错）、<code>INVALID_ARGUMENT</code>（参数不合法）、<code>OUTPUT_EXISTS</code>（输出已存在）、
+   <code>PATH_ESCAPE_REJECTED</code>（路径越界被安全策略拒绝）、<code>ARCGIS_PRO_RUNNING</code>（有写事务时 Pro 在运行）。</li>
+<li><strong>不要</strong>在 Pro 里手工改同一个图层的同时让 AI 去改它（可能冲突）；改完一处再做下一处。</li>
+</ol>
+<h2>7. 三个现成的小抄（照着改就行）</h2>
+<p><strong>A. 快速体检</strong></p>
+<blockquote>
+<p>"按顺序调用：<code>get_project_info</code>、<code>get_current_map</code>、<code>get_layers</code>、<code>python_bridge_ping</code>，逐项告诉我结果是否正常。"</p>
+</blockquote>
+<p><strong>B. 图层盘点 → 导出清单</strong></p>
+<blockquote>
+<p>"列出当前地图所有图层及其要素数量与坐标系，然后导出成 CSV 到 <code>D:\out\layers.csv</code>。"</p>
+</blockquote>
+<p><strong>C. 一条完整的分析+出图链</strong></p>
+<blockquote>
+<p>"对 <code>L_Points</code> 做 1000 米缓冲区输出到 <code>D:\out\analysis.gdb\L_Points_Buf</code>；
+把结果图层加到当前地图、用单色符号化；
+新建布局并添加标题『缓冲区分析』、图例、指北针、比例尺；最后导出 PDF 到 <code>D:\out\report.pdf</code>。"</p>
+<p>建议分步执行（先分析 → 确认结果 → 再出图），每一步都让它回报结果。</p>
+</blockquote>
+<h2>8. 排障</h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>原因</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户端里工具少于 239 / 没有工具</td>
+<td>服务没起 或 客户端是旧会话</td>
+<td>Pro 里点 Start；在客户端<strong>开新会话</strong></td>
+</tr>
+<tr>
+<td>客户端连不上</td>
+<td>Pro 关闭了（服务随之停止）</td>
+<td>重新打开 Pro → Start</td>
+</tr>
+<tr>
+<td>调用报 <code>LAYER_NOT_FOUND</code></td>
+<td>图层名不对</td>
+<td>先让它 <code>get_layers</code> 列出准确的图层名</td>
+</tr>
+<tr>
+<td>写操作被拒 <code>OUTPUT_EXISTS</code></td>
+<td>输出已存在</td>
+<td>换输出名，或先自行删除旧输出</td>
+</tr>
+<tr>
+<td>路径被拒 <code>PATH_ESCAPE_REJECTED</code></td>
+<td>输出路径越界（安全策略）</td>
+<td>改到允许的工作目录（如 <code>D:\out\</code>）</td>
+</tr>
+<tr>
+<td>端口被占 <code>PORT_OPEN_NOT_MCP</code></td>
+<td>6520 被其他程序占用</td>
+<td>关闭占用者，重启 Pro 的 Start</td>
+</tr>
+<tr>
+<td>一切看起来正常但仍失败</td>
+<td>需要现场诊断</td>
+<td>重新运行 <code>ONE-CLICK-SETUP.cmd</code> 做「诊断」，把输出给发送方</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>本项目 1.0.2 的生产工具面为 <strong>239 个</strong>、错误码 <strong>33 个</strong>，均已在版本清单中冻结登记。
+未验证项（如"全新干净电脑自动通过"）在包内文档中<strong>如实标注</strong>，不包装为"已支持"。</p>
+</blockquote>
+<p><strong>⑮bis join 受控代理（D-066 行为升级，件数不变）</strong>
+<code>add_join</code>（建立图层连接：公共字段）、<code>remove_join</code>（解除连接）</p>
+<blockquote>
+<p><strong>★ D-066 能力边界更新（取代上文 D-063/D-064 中 join 的 NOT_IMPLEMENTED 表述）</strong>
+- <strong><code>add_join</code> / <code>remove_join</code> 已从占位升级为受控 GP 代理</strong>（用户已裁定 GP <code>AddJoin</code>/<code>RemoveJoin</code> 入受控白名单 51→53）。
+- 语义（D-066 spike 实测）：GP 就地修改输入图层——<code>add_join</code> 后连接字段以 <strong>表名.字段名</strong> 形式现身（<code>fieldsBefore/After</code> + <code>newFields</code> 回证）；<code>remove_join</code> 后字段名复原，源数据不变。
+- <strong>破坏性 confirm</strong>：两件均 <code>destructive=true</code>，<strong>confirm 缺省拒</strong>（须显式 <code>confirm=true</code>）；<code>run_batch</code> 批内调用同样各自 confirm，不豁免。
+- 前置校验：图层存在 / 连接表存在 / 连接字段存在（<code>NOT_FOUND</code>）；白名单外与 confirm 缺省 → <code>INVALID_ARGUMENT</code>（零副作用）。
+- 限制如实披露（<strong>D-066 阶段二 LIVE 实测精确化</strong>）：对已连接图层未解除再次 <code>add_join</code> ⇒ GP 执行级错误（<strong>实测 ERROR 160090</strong>「具有指定名称的保留属性域记录不存在」；阶段一 spike 场景曾见 160091），错误如实透传、零静默；<strong>先 <code>remove_join</code> 再重试即可成功</strong>。连接状态证据为字段命名探针（CIM join 内省未在 SDK 引用面暴露）。</p>
+</blockquote>
+</div>
+</body></html>

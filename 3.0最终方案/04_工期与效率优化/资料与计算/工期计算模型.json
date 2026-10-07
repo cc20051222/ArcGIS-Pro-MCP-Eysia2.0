@@ -1,0 +1,1616 @@
+{
+  "kind": "FINAL_DOCUMENTATION_FULL_SCOPE_60_DAY_MODEL",
+  "sourceRevision": "V11-DATA-METHOD-AND-MEDIA-20261002",
+  "sourceAbsolutePath": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划创新\\创新执行规格.json",
+  "sourceSha256": "905D29151062570617807A41E891B681AAA84BD571AFBAE207B53A9E9F99AD15",
+  "compiledDate": "2026-10-02",
+  "status": "PLANNING_ONLY_NOT_PRODUCT_ACCEPTANCE",
+  "actualStartDate": null,
+  "actualObservedCosts": null,
+  "actualResourceCalendar": null,
+  "actualActivityLedger": null,
+  "actualScheduleWitness": null,
+  "actualCompetitorN_GP": null,
+  "actualCompetitorN_sem": null,
+  "actualValidatedOverlap": null,
+  "actualReusableQualificationSet": null,
+  "engineeringTargetCalendarDays": 56,
+  "emergencyCalendarDays": 4,
+  "targetCalendarDays": 60,
+  "existingConcurrencySlotsIncludingCommander": 4,
+  "requiredSeatsForTrueOnePlusFive": 6,
+  "projectBatchGovernance": "ONE_ACTIVE_PROJECT_BATCH_WITH_DISTINCT_PARALLEL_WORK_PACKAGES",
+  "actualFiveExecutorsStarted": false,
+  "onlyProductionIntegrator": "E1",
+  "onlyFinalAcceptanceRole": "C0",
+  "executorDeliveryStatus": "PASS CANDIDATE",
+  "workItems": [
+    {
+      "id": "WI01",
+      "scope": "durable intent/receipt 内部合同，和 ILogger 分离",
+      "dependencies": [],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI02",
+      "scope": "JobStore 可靠保存、写后才记指纹、完整提交组重放",
+      "dependencies": [
+        "WI01"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI03",
+      "scope": "每动作对账及子步骤 receipt 传播，失败项续作闸门",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI04",
+      "scope": "current-fence 校验、迟到效果隔离、并发认领",
+      "dependencies": [
+        "WI01",
+        "WI02"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI05",
+      "scope": "InputSnapshot/选择全集/一致窗口策略",
+      "dependencies": [],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI06",
+      "scope": "DatasetContract 与字段/单位/时相/实体映射",
+      "dependencies": [
+        "WI05"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI07",
+      "scope": "DataAdequacyReport 与集中关键问题",
+      "dependencies": [
+        "WI06"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI08",
+      "scope": "MethodCard 适用判断、DecisionRecord、可行性",
+      "dependencies": [
+        "WI07"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI09",
+      "scope": "typed DAG、OutputContract、PreparedInvocation",
+      "dependencies": [
+        "WI05",
+        "WI08"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI10",
+      "scope": "根任务预算与资源预约、控制通道、模型路由",
+      "dependencies": [
+        "WI01",
+        "WI04"
+      ],
+      "owner": "E1",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI11",
+      "scope": "可信 GP 全集采集、规范 ID、冻结 metadata/diff",
+      "dependencies": [],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI12",
+      "scope": "标量/单位/多值/值表/复合/FieldMap codecs",
+      "dependencies": [
+        "WI11"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI13",
+      "scope": "条件 effects、env、许可与逐操作准入",
+      "dependencies": [
+        "WI10",
+        "WI11",
+        "WI12"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI14",
+      "scope": "旧/compact/granular 统一准备执行及发现投影",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI09",
+        "WI10",
+        "WI12",
+        "WI13"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI15",
+      "scope": "逐操作 fixture/oracle/evidence 和升级影响",
+      "dependencies": [
+        "WI14"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI16",
+      "scope": "TypedFactCell、比例/单位/空值、ClaimBinding",
+      "dependencies": [
+        "WI06",
+        "WI08",
+        "WI09"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI17",
+      "scope": "DesignSpec/语义图层/受保护区域与独立检查",
+      "dependencies": [
+        "WI09",
+        "WI16"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI18",
+      "scope": "PS peer、批准验证、DocumentOwnership/file grant",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI19",
+      "scope": "PS 宿主单写、协作取消、固定命令和对账",
+      "dependencies": [
+        "WI18",
+        "WI10"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI20",
+      "scope": "20 PS 合同逐业务实现、测量/有限修复与保存重开",
+      "dependencies": [
+        "WI17",
+        "WI18",
+        "WI19"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI21",
+      "scope": "Office 三种 Spec/adapter、原生可编辑性、同数值",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI22",
+      "scope": "candidate DeliveryRevision、整体验证/激活、部分领取",
+      "dependencies": [
+        "WI01",
+        "WI02",
+        "WI03",
+        "WI04",
+        "WI10",
+        "WI16",
+        "WI20",
+        "WI21"
+      ],
+      "owner": "E4",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI23",
+      "scope": "UpdateImpactPlan、依赖闭包、缓存复用资格",
+      "dependencies": [
+        "WI05",
+        "WI09",
+        "WI22"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI24",
+      "scope": "规划覆盖/方案链、网络条件、去重人口",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI25",
+      "scope": "科研同格网/掩膜/转移/科学解释链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI26",
+      "scope": "资料定位→规则采用→副本建库→QC 覆盖链",
+      "dependencies": [
+        "WI14",
+        "WI16",
+        "WI22"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI27",
+      "scope": "操作记录、RecordingGap、SkillFit 与跨项目回放",
+      "dependencies": [
+        "WI09",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI28",
+      "scope": "工作台状态/出处/更新影响、可访问/离线流程",
+      "dependencies": [
+        "WI09",
+        "WI22",
+        "WI23"
+      ],
+      "owner": "E5",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI29",
+      "scope": "六创新实验的最小实现/对照/采用门",
+      "dependencies": [
+        "WI08",
+        "WI15",
+        "WI20",
+        "WI23"
+      ],
+      "owner": "E3",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    },
+    {
+      "id": "WI30",
+      "scope": "支持/兼容矩阵、资源包锁、历史载体迁移与交接",
+      "dependencies": [
+        "WI15",
+        "WI22",
+        "WI27"
+      ],
+      "owner": "E2",
+      "incrementalInnovationCost": null,
+      "costStatus": "UNKNOWN_UNTIL_MEASURED",
+      "qualificationAndIndependentQaRequired": true
+    }
+  ],
+  "innovations": [
+    {
+      "id": "J01",
+      "name": "可信能力更新",
+      "workItemRefs": [
+        "WI11",
+        "WI12",
+        "WI13",
+        "WI30"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J02",
+      "name": "逐项资格工厂",
+      "workItemRefs": [
+        "WI01",
+        "WI03",
+        "WI15"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J03",
+      "name": "语义能力图谱与去重",
+      "workItemRefs": [
+        "WI08",
+        "WI11",
+        "WI14"
+      ],
+      "lead": "E2",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J04",
+      "name": "参考成图StyleDNA",
+      "workItemRefs": [
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J05",
+      "name": "参考数据DatasetDNA",
+      "workItemRefs": [
+        "WI05",
+        "WI06",
+        "WI08",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J06",
+      "name": "用户偏好记忆",
+      "workItemRefs": [
+        "WI17",
+        "WI23",
+        "WI28"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J07",
+      "name": "成功失败经验回放",
+      "workItemRefs": [
+        "WI03",
+        "WI15",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J08",
+      "name": "主动补缺与多方案探索",
+      "workItemRefs": [
+        "WI07",
+        "WI08",
+        "WI09",
+        "WI10",
+        "WI29"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J09",
+      "name": "科学约束自动设计",
+      "workItemRefs": [
+        "WI16",
+        "WI17",
+        "WI20"
+      ],
+      "lead": "E4",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J10",
+      "name": "因果增量更新与对账",
+      "workItemRefs": [
+        "WI22",
+        "WI23"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J11",
+      "name": "业务技能编译",
+      "workItemRefs": [
+        "WI09",
+        "WI27"
+      ],
+      "lead": "E3",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    },
+    {
+      "id": "J12",
+      "name": "演进工作台与资源调度",
+      "workItemRefs": [
+        "WI10",
+        "WI28",
+        "WI30"
+      ],
+      "lead": "E5",
+      "incrementalCost": null,
+      "implemented": false,
+      "qualificationRequired": true
+    }
+  ],
+  "prototypeIds": [
+    "PF01",
+    "PF02",
+    "PF03",
+    "PF04",
+    "PF05",
+    "PF06",
+    "PF07",
+    "PF08"
+  ],
+  "originalGateIds": [
+    "G-CLIENT",
+    "G-SUPPORT",
+    "G-GP-DISCOVERY",
+    "G-GP-ADAPTER",
+    "G-GP-EXECUTION",
+    "G-INTELLIGENCE",
+    "G-RELIABILITY",
+    "G-PS-CHANNEL",
+    "G-PS-OPERATIONS",
+    "G-DESIGN",
+    "G-SCENARIO",
+    "G-DOMAIN",
+    "G-PRODUCT",
+    "G-PRESSURE",
+    "G-HIDDEN",
+    "G-USABILITY",
+    "G-FUNCTIONAL",
+    "G-RELEASE"
+  ],
+  "additionalGateIds": [
+    "G-EVOLUTION",
+    "G-SEMANTIC-LEAD",
+    "G-REFERENCE-LEARN",
+    "G-DATASET-LEARN",
+    "G-PREFERENCE",
+    "G-EXPERIENCE",
+    "G-SCIENTIFIC-DESIGN",
+    "G-CAUSAL-UPDATE",
+    "G-SKILL-PORTABLE",
+    "G-EVOLUTION-UX",
+    "G-60D-ADOPTION"
+  ],
+  "originalQualityBaseline": {
+    "allOriginalReleaseGatesRequired": true,
+    "gateSource": "../3.0项目规划/01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+    "frozenGateSection": "2. 发行完成门",
+    "gpFormula": "max(2100,ceil(1.10*N))",
+    "N": null,
+    "Q_reuse": 0,
+    "semanticBaseline": 285,
+    "psOperations": 20,
+    "templates": 36,
+    "standardImages": 108,
+    "coreScenarios": 60,
+    "pressureRows": 60,
+    "newUsers": 24,
+    "minimumNewUserTasks": 48,
+    "psManualDesign": 0,
+    "severeScientificErrors": 0,
+    "factConsistencyPercent": 100,
+    "wrongTargetWrites": 0,
+    "noThresholdReduction": true
+  },
+  "additionalOriginalScope": {
+    "commonModules": 20,
+    "domains": 8,
+    "productPackages": 12,
+    "inputFamilies": 21,
+    "candidateFormatActionCells": 105,
+    "originalRules": 73,
+    "coreDefinitions": 60,
+    "minimumDefinitionRounds": 3,
+    "anchors": 4,
+    "hiddenCandidates": 77,
+    "minimumUnseenTasks": 12,
+    "minimumUnseenFirstSuccess": 11,
+    "maximumApprovedAutoRepairRounds": 2,
+    "minimumFirstRenderPassImages": 98,
+    "minimumUserIndependentSuccessPercent": 90,
+    "originalInnovationExperiments": 6,
+    "originalChangeContracts": 13,
+    "originalBriefTraceItems": 28,
+    "supportSpecificationRows": 55
+  },
+  "quantityFormulas": {
+    "initialWeeklyRate": "ceil((K_union-Q0_union)/4)",
+    "unknownsRemainNull": true,
+    "residualWeeklyRate": "ceil(7*currentRemaining/(42-dayEnd))",
+    "semantic": "max(3000,ceil(3*N_sem/2))",
+    "GP": "max(2100,ceil(11*N_GP/10))",
+    "union": "K_GP+K_sem-K_overlap"
+  },
+  "qualificationExamplesOnly": [
+    {
+      "K_GP": 2100,
+      "K_overlap": 2100,
+      "Q0_union": 0,
+      "K_sem": 3000
+    },
+    {
+      "K_GP": 2100,
+      "K_overlap": 816,
+      "Q0_union": 0,
+      "K_sem": 3000
+    },
+    {
+      "K_GP": 2100,
+      "K_overlap": 0,
+      "Q0_union": 0,
+      "K_sem": 3000
+    }
+  ],
+  "lowerBoundExamplesOnly": [
+    {
+      "netRatePerWeek": 180,
+      "K_union": 3000,
+      "Q0_union": 0
+    },
+    {
+      "netRatePerWeek": 300,
+      "K_union": 3000,
+      "Q0_union": 0
+    },
+    {
+      "netRatePerWeek": 525,
+      "K_union": 3000,
+      "Q0_union": 0
+    },
+    {
+      "netRatePerWeek": 750,
+      "K_union": 3000,
+      "Q0_union": 0
+    },
+    {
+      "netRatePerWeek": 1275,
+      "K_union": 5100,
+      "Q0_union": 0
+    }
+  ],
+  "checkpoints": {
+    "D28": "Two full weeks meet initial frozen net target and recompute full remaining resource constrained schedule",
+    "D56": "Actual release package acceptance after functional",
+    "D7": "Freeze full scope/source/quantity/licenses/seats/oracles/calendars",
+    "D49": "All original and additional functional gates incl late WI30",
+    "D14": "Reliable foundation/stratified30-50pilot/realProPSOfficechain/costcalibration",
+    "D57_60": "Emergency only, no planned unimplemented scope"
+  },
+  "costRules": {
+    "JIncrementalUnknownNotZero": true,
+    "eachDomainHostOracleAcceptanceStillRequired": true,
+    "calendarSemantics": "Dk end, one actual T0 origin",
+    "oneCostKeyPerSharedWork": true,
+    "failureNetAllocationOrAttemptModelNotBoth": true,
+    "allInternalAndExternalUncountedWaitsIncluded": true,
+    "fullFinalTestsNotReduced": true,
+    "WI30ResidualImplementationMustBeCounted": true,
+    "runningUnreconciledResourcesPinned": true
+  },
+  "historicalSpeed": {
+    "old26To36WeekModelNotReusedAsNewForecast": true,
+    "GPDiaryMinutesLower": 1491,
+    "source": "D:\\ArcGIS-Pro-MCP 2.0\\同步\\3.0项目规划\\04_工期估算\\历史速度与工期模型.json",
+    "GPDiaryMinutesUpper": 1509,
+    "weeklyShortWindowMidpointEquivalent": 60.48,
+    "old180NetPerWeekIsUnmeasuredTarget": true,
+    "sourceSha256": "B984F49820D97E2EC3DC673F0E020618B5985470B76BC7C6C56CED333E15B8AE",
+    "documentedLimitedDomainTotalClosedOperations": 20,
+    "isObservedFullWeekCapacity": false,
+    "documentedLimitedDomainGPClosedOperations": 9,
+    "independentlyReranHistoricalLiveThisTurn": false
+  },
+  "planningCapacityRevision": "20261003-PRIMARY-STRATA-SHARED-POOL",
+  "actualServiceCapacity": {
+    "measurementWindowStart": null,
+    "measurementWindowEnd": null,
+    "capacityWindowStart": null,
+    "capacityWindowEnd": null,
+    "remainingQualificationUnitRefs": null,
+    "resourcePools": null,
+    "stages": null,
+    "evidenceRefs": null
+  },
+  "qualificationStrata": {
+    "classificationVersion": null,
+    "remainingQualificationUnitRefs": null,
+    "assignments": null,
+    "strata": null
+  },
+  "serviceCapacityContract": {
+    "status": "PLANNING_INPUT_CONTRACT_NOT_OBSERVED_CAPACITY",
+    "resourcePoolRequiredFields": [
+      "poolId",
+      "physicalResourceIdentity",
+      "availableMinutes",
+      "unavailableMinutes",
+      "reservedNonQualificationMinutes",
+      "reservedControlAndReconciliationMinutes",
+      "reservedCostKeys",
+      "backlogMinutesOutsideUnitCosts",
+      "backlogCostKeysOutsideUnitCosts",
+      "evidenceRefs"
+    ],
+    "stageRequiredFields": [
+      "stageId",
+      "poolId",
+      "unitCostKey",
+      "fixedCostKey",
+      "remainingFixedMinutes"
+    ],
+    "assignmentRequiredFields": [
+      "unitRef",
+      "primaryStratumId",
+      "riskTags"
+    ],
+    "stratumRequiredFields": [
+      "stratumId",
+      "observedSampleSize",
+      "stageCosts"
+    ],
+    "stageCostRequiredFields": [
+      "stageId",
+      "costAllocation",
+      "netAcceptedServiceMinutes",
+      "minutesPerAttempt",
+      "acceptanceRate",
+      "evidenceRefs"
+    ],
+    "costAllocations": [
+      "NET_ACCEPTED_ALL_INCLUSIVE",
+      "ATTEMPT_ACCEPTANCE_MODEL"
+    ],
+    "NET_ACCEPTED_ALL_INCLUSIVE": "Observed full active service per current valid net accepted unit, including allocated fixed setup/failure/rework; stage remainingFixedMinutes must be 0 and attempt fields null",
+    "ATTEMPT_ACCEPTANCE_MODEL": "Observed active minutes per attempt divided by observed acceptanceRate in (0,1]; no additional net-item/rework charge; remainingFixedMinutes includes only setup excluded from attempt cost",
+    "remainingSetIdentity": "Exactly cover the same authoritative current remaining qualification unit set; unique unitRef and exactly one primaryStratumId each; risk tags do not produce extra counts",
+    "physicalPoolIdentity": "One budget row per exclusive physical resource for one capacity window; stages sharing it add their loads; distinct aliases for the same resource are rejected",
+    "costKeyRule": "Reservations, backlog outside unit costs, unit costs and unallocated fixed costs use disjoint costKeys; backlog already covered by a remaining unit or reservation is not charged again",
+    "nullRule": "Missing budget/stratum cost/evidence/sample values remain UNKNOWN; difficult remaining strata cannot inherit easy-stratum costs",
+    "outputStates": [
+      "UNKNOWN",
+      "ESTIMATED_SERVICE_OVERLOAD",
+      "SERVICE_BOUNDS_WITHIN_ESTIMATES"
+    ],
+    "noAutomaticFullProjectOrProductAcceptance": true,
+    "actualCapacityProof": false
+  },
+  "examplesOnly": {
+    "purpose": "SYNTHETIC_INPUTS_NOT_CURRENT_PROJECT_CAPACITY",
+    "qualificationWindowWeeks": 4,
+    "reviewHoursPerWeek": 25,
+    "hostHoursPerWeek": 60,
+    "preparationHoursPerWeek": 40,
+    "reviewBatchSize": 50,
+    "reviewFixedMinutesPerBatch": 20,
+    "reviewMinutesPerItem": "0.6",
+    "reviewReworkMinutesPerNetItem": "0.4",
+    "hostMinutesPerNetItem": 3,
+    "preparationMinutesPerNetItem": 2,
+    "lowerBoundPrefixWeeks": 2,
+    "lowerBoundOtherImplementationWeeks": 4,
+    "lowerBoundFinalFunctionalWeeks": 1,
+    "lowerBoundReleaseWeeks": 1,
+    "residualDayEnd": 28,
+    "qualificationEndDay": 42,
+    "residualTarget": 3000,
+    "residualAcceptedCounts": [
+      1500,
+      1200,
+      1400
+    ],
+    "lateWI30": {
+      "prerequisiteEndDay": 43,
+      "implementationDays": 10,
+      "packageDaysAfterFunctional": 7
+    },
+    "pipeline": {
+      "packages": 5,
+      "integrationMinutesEach": 20,
+      "reviewMinutesEach": 10
+    },
+    "sharedPoolLongTail": {
+      "capacity": {
+        "measurementWindowStart": "2026-10-01",
+        "measurementWindowEnd": "2026-10-07",
+        "capacityWindowStart": "2026-10-08",
+        "capacityWindowEnd": "2026-10-14",
+        "remainingQualificationUnitRefs": [
+          "EXAMPLE-SIMPLE-00",
+          "EXAMPLE-SIMPLE-01",
+          "EXAMPLE-SIMPLE-02",
+          "EXAMPLE-SIMPLE-03",
+          "EXAMPLE-SIMPLE-04",
+          "EXAMPLE-SIMPLE-05",
+          "EXAMPLE-SIMPLE-06",
+          "EXAMPLE-SIMPLE-07",
+          "EXAMPLE-SIMPLE-08",
+          "EXAMPLE-SIMPLE-09",
+          "EXAMPLE-SIMPLE-10",
+          "EXAMPLE-SIMPLE-11",
+          "EXAMPLE-SIMPLE-12",
+          "EXAMPLE-SIMPLE-13",
+          "EXAMPLE-SIMPLE-14",
+          "EXAMPLE-SIMPLE-15",
+          "EXAMPLE-SIMPLE-16",
+          "EXAMPLE-SIMPLE-17",
+          "EXAMPLE-SIMPLE-18",
+          "EXAMPLE-SIMPLE-19",
+          "EXAMPLE-SIMPLE-20",
+          "EXAMPLE-SIMPLE-21",
+          "EXAMPLE-SIMPLE-22",
+          "EXAMPLE-SIMPLE-23",
+          "EXAMPLE-SIMPLE-24",
+          "EXAMPLE-SIMPLE-25",
+          "EXAMPLE-SIMPLE-26",
+          "EXAMPLE-SIMPLE-27",
+          "EXAMPLE-SIMPLE-28",
+          "EXAMPLE-SIMPLE-29",
+          "EXAMPLE-SIMPLE-30",
+          "EXAMPLE-SIMPLE-31",
+          "EXAMPLE-SIMPLE-32",
+          "EXAMPLE-SIMPLE-33",
+          "EXAMPLE-SIMPLE-34",
+          "EXAMPLE-SIMPLE-35",
+          "EXAMPLE-SIMPLE-36",
+          "EXAMPLE-SIMPLE-37",
+          "EXAMPLE-SIMPLE-38",
+          "EXAMPLE-SIMPLE-39",
+          "EXAMPLE-COMPLEX-00",
+          "EXAMPLE-COMPLEX-01",
+          "EXAMPLE-COMPLEX-02",
+          "EXAMPLE-COMPLEX-03",
+          "EXAMPLE-COMPLEX-04",
+          "EXAMPLE-COMPLEX-05",
+          "EXAMPLE-COMPLEX-06",
+          "EXAMPLE-COMPLEX-07",
+          "EXAMPLE-COMPLEX-08",
+          "EXAMPLE-COMPLEX-09"
+        ],
+        "resourcePools": [
+          {
+            "poolId": "EXAMPLE_SHARED_HOST",
+            "physicalResourceIdentity": "EXAMPLE_EXCLUSIVE_MACHINE_1",
+            "availableMinutes": 600,
+            "unavailableMinutes": 0,
+            "reservedNonQualificationMinutes": 60,
+            "reservedControlAndReconciliationMinutes": 40,
+            "reservedCostKeys": [
+              "EXAMPLE-INTEGRATION-RESERVATION",
+              "EXAMPLE-CONTROL-RESERVATION"
+            ],
+            "backlogMinutesOutsideUnitCosts": 20,
+            "backlogCostKeysOutsideUnitCosts": [
+              "EXAMPLE-NONUNIT-HOUSEKEEPING"
+            ],
+            "evidenceRefs": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          }
+        ],
+        "stages": [
+          {
+            "stageId": "EXAMPLE_PRO",
+            "poolId": "EXAMPLE_SHARED_HOST",
+            "unitCostKey": "EXAMPLE-PRO-UNIT",
+            "fixedCostKey": "EXAMPLE-PRO-FIXED",
+            "remainingFixedMinutes": 0
+          },
+          {
+            "stageId": "EXAMPLE_PS",
+            "poolId": "EXAMPLE_SHARED_HOST",
+            "unitCostKey": "EXAMPLE-PS-UNIT",
+            "fixedCostKey": "EXAMPLE-PS-FIXED",
+            "remainingFixedMinutes": 0
+          }
+        ],
+        "evidenceRefs": [
+          "EXAMPLE_ONLY_NOT_ACTUAL"
+        ]
+      },
+      "classification": {
+        "classificationVersion": "EXAMPLE_PRIMARY_V1",
+        "remainingQualificationUnitRefs": [
+          "EXAMPLE-SIMPLE-00",
+          "EXAMPLE-SIMPLE-01",
+          "EXAMPLE-SIMPLE-02",
+          "EXAMPLE-SIMPLE-03",
+          "EXAMPLE-SIMPLE-04",
+          "EXAMPLE-SIMPLE-05",
+          "EXAMPLE-SIMPLE-06",
+          "EXAMPLE-SIMPLE-07",
+          "EXAMPLE-SIMPLE-08",
+          "EXAMPLE-SIMPLE-09",
+          "EXAMPLE-SIMPLE-10",
+          "EXAMPLE-SIMPLE-11",
+          "EXAMPLE-SIMPLE-12",
+          "EXAMPLE-SIMPLE-13",
+          "EXAMPLE-SIMPLE-14",
+          "EXAMPLE-SIMPLE-15",
+          "EXAMPLE-SIMPLE-16",
+          "EXAMPLE-SIMPLE-17",
+          "EXAMPLE-SIMPLE-18",
+          "EXAMPLE-SIMPLE-19",
+          "EXAMPLE-SIMPLE-20",
+          "EXAMPLE-SIMPLE-21",
+          "EXAMPLE-SIMPLE-22",
+          "EXAMPLE-SIMPLE-23",
+          "EXAMPLE-SIMPLE-24",
+          "EXAMPLE-SIMPLE-25",
+          "EXAMPLE-SIMPLE-26",
+          "EXAMPLE-SIMPLE-27",
+          "EXAMPLE-SIMPLE-28",
+          "EXAMPLE-SIMPLE-29",
+          "EXAMPLE-SIMPLE-30",
+          "EXAMPLE-SIMPLE-31",
+          "EXAMPLE-SIMPLE-32",
+          "EXAMPLE-SIMPLE-33",
+          "EXAMPLE-SIMPLE-34",
+          "EXAMPLE-SIMPLE-35",
+          "EXAMPLE-SIMPLE-36",
+          "EXAMPLE-SIMPLE-37",
+          "EXAMPLE-SIMPLE-38",
+          "EXAMPLE-SIMPLE-39",
+          "EXAMPLE-COMPLEX-00",
+          "EXAMPLE-COMPLEX-01",
+          "EXAMPLE-COMPLEX-02",
+          "EXAMPLE-COMPLEX-03",
+          "EXAMPLE-COMPLEX-04",
+          "EXAMPLE-COMPLEX-05",
+          "EXAMPLE-COMPLEX-06",
+          "EXAMPLE-COMPLEX-07",
+          "EXAMPLE-COMPLEX-08",
+          "EXAMPLE-COMPLEX-09"
+        ],
+        "assignments": [
+          {
+            "unitRef": "EXAMPLE-SIMPLE-00",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-01",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-02",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-03",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-04",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-05",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-06",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-07",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-08",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-09",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-10",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-11",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-12",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-13",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-14",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-15",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-16",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-17",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-18",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-19",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-20",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-21",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-22",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-23",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-24",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-25",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-26",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-27",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-28",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-29",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-30",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-31",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-32",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-33",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-34",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-35",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-36",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-37",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-38",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-SIMPLE-39",
+            "primaryStratumId": "EXAMPLE_SIMPLE",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-00",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-01",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-02",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-03",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-04",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-05",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-06",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-07",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-08",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          },
+          {
+            "unitRef": "EXAMPLE-COMPLEX-09",
+            "primaryStratumId": "EXAMPLE_COMPLEX",
+            "riskTags": [
+              "EXAMPLE_ONLY_NOT_ACTUAL"
+            ]
+          }
+        ],
+        "strata": [
+          {
+            "stratumId": "EXAMPLE_SIMPLE",
+            "observedSampleSize": 20,
+            "stageCosts": [
+              {
+                "stageId": "EXAMPLE_PRO",
+                "costAllocation": "NET_ACCEPTED_ALL_INCLUSIVE",
+                "netAcceptedServiceMinutes": 2,
+                "minutesPerAttempt": null,
+                "acceptanceRate": null,
+                "evidenceRefs": [
+                  "EXAMPLE_ONLY_NOT_ACTUAL"
+                ]
+              },
+              {
+                "stageId": "EXAMPLE_PS",
+                "costAllocation": "NET_ACCEPTED_ALL_INCLUSIVE",
+                "netAcceptedServiceMinutes": 3,
+                "minutesPerAttempt": null,
+                "acceptanceRate": null,
+                "evidenceRefs": [
+                  "EXAMPLE_ONLY_NOT_ACTUAL"
+                ]
+              }
+            ]
+          },
+          {
+            "stratumId": "EXAMPLE_COMPLEX",
+            "observedSampleSize": 10,
+            "stageCosts": [
+              {
+                "stageId": "EXAMPLE_PRO",
+                "costAllocation": "NET_ACCEPTED_ALL_INCLUSIVE",
+                "netAcceptedServiceMinutes": 20,
+                "minutesPerAttempt": null,
+                "acceptanceRate": null,
+                "evidenceRefs": [
+                  "EXAMPLE_ONLY_NOT_ACTUAL"
+                ]
+              },
+              {
+                "stageId": "EXAMPLE_PS",
+                "costAllocation": "NET_ACCEPTED_ALL_INCLUSIVE",
+                "netAcceptedServiceMinutes": 10,
+                "minutesPerAttempt": null,
+                "acceptanceRate": null,
+                "evidenceRefs": [
+                  "EXAMPLE_ONLY_NOT_ACTUAL"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "explanation": "Shared pool budget 500min; Pro 280 + PS 220 + separate nonunit backlog20 = 520min; each stage alone fits but joint load exceeds by20min. Easy-only average would conceal the tail."
+    }
+  },
+  "lifecycleCostLedger": {
+    "status": "UNMEASURED_ORIGINAL_WI_DETAIL",
+    "wholeProjectWitness": false,
+    "notAddedTwiceToOriginalWiTotals": true,
+    "notContingencyWork": true,
+    "entries": [
+      {
+        "costKey": "WI04:clock-context",
+        "workItemId": "WI04",
+        "owner": "E1",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI10:current-time-admission",
+        "workItemId": "WI10",
+        "owner": "E1",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI13:licence-validity-adapter",
+        "workItemId": "WI13",
+        "owner": "E2",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI15:gp-validity-test",
+        "workItemId": "WI15",
+        "owner": "E2",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI02:retention-index",
+        "workItemId": "WI02",
+        "owner": "E1",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI03:reclaim-reconcile",
+        "workItemId": "WI03",
+        "owner": "E1",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI22:delivery-pin-publish",
+        "workItemId": "WI22",
+        "owner": "E4",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI23:validity-and-read-pin",
+        "workItemId": "WI23",
+        "owner": "E3",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI28:lifecycle-workbench",
+        "workItemId": "WI28",
+        "owner": "E5",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI11:source-verification-watermark",
+        "workItemId": "WI11",
+        "owner": "E2",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI12:bundle-member-closure",
+        "workItemId": "WI12",
+        "owner": "E2",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI15:update-canary-recovery-cases",
+        "workItemId": "WI15",
+        "owner": "E2",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI06:content-origin-and-intent-binding",
+        "workItemId": "WI06",
+        "owner": "E3",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI17:style-candidate-consumption",
+        "workItemId": "WI17",
+        "owner": "E4",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      },
+      {
+        "costKey": "WI27:learning-feedback-provenance",
+        "workItemId": "WI27",
+        "owner": "E3",
+        "engineeringHours": null,
+        "professionalHours": null,
+        "hostServiceMinutes": null,
+        "independentQaMinutes": null,
+        "integrationMinutes": null,
+        "unallocatedWaitMinutes": null,
+        "peakOwnedDiskBytes": null,
+        "evidenceRefs": null
+      }
+    ],
+    "refinementScope": [
+      "R13-TIME",
+      "R13-RETENTION",
+      "R14-UPDATE-TRUST",
+      "R14-CONTENT-FLOW"
+    ]
+  }
+}

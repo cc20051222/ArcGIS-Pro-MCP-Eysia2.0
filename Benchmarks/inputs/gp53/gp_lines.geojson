@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","name":"lines","featureClass":"LineString","crs":{"type":"name","properties":{"name":"EPSG:32651"}},"idField":"id","features":[{"type":"Feature","id":"S1","properties":{"id":"S1","value":10,"grp":"A"},"geometry":{"type":"LineString","coordinates":[[500009.0,3999991.0],[500041.0,3999971.0],[500089.0,3999919.0],[500009.0,3999991.0]]}}]}

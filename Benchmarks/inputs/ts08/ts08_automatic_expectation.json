@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "ts08",
+  "artefact": "GDOM-03 complete automatic result",
+  "expected": [
+    "one composite page per band subset from the case manifest, produced without any manual step",
+    "class legend identical to the reference classmap code set {1,2,3,4}",
+    "no-data pixels reported as holes with their count, never drawn as a class",
+    "every printed figure recomputable from ts08_reference_classmap.asc",
+    "the class legend re-derives from ts08_reference_classmap.asc as four populated classes [1, 2, 3, 4] with cells {'1': 510, '2': 996, '3': 998, '4': 550} (revision-2)"
+  ],
+  "manualInterventionAllowed": false,
+  "howItIsScored": "any manual step in the action log, or a legend that differs from the reference code set, books the row incomplete",
+  "synthetic": true,
+  "revision": "revision-2 (GATE-G231 R-3 rectification of D103-DEF-01)"
+}

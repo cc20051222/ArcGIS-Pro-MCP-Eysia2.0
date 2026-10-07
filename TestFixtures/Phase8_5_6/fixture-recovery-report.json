@@ -1,0 +1,71 @@
+{
+  "fixture": "Phase8_5_6",
+  "action": "recover-L_Sub_A",
+  "started": "2026-09-13T15:21:49",
+  "steps": [
+    {
+      "step": "open aprx",
+      "ok": true,
+      "detail": "<arcpy._mp.ArcGISProject object at 0x000001F33B9B7190>"
+    },
+    {
+      "step": "find WB_Map",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "step": "find L_Group",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "step": "list layers before",
+      "ok": true,
+      "detail": "L_Group,L_Points,L_Lines,L_Polygons"
+    },
+    {
+      "step": "addDataFromPath FC_Points",
+      "ok": true,
+      "detail": "FC_Points"
+    },
+    {
+      "step": "rename to L_Sub_A",
+      "ok": true,
+      "detail": "L_Sub_A"
+    },
+    {
+      "step": "addLayerToGroup L_Group",
+      "ok": true,
+      "detail": "[<arcpy._mp.Layer object at 0x000001F348BC6E50>]"
+    },
+    {
+      "step": "remove stray top-level",
+      "ok": true,
+      "detail": "removed top-level original"
+    },
+    {
+      "step": "save aprx",
+      "ok": true,
+      "detail": "saved"
+    },
+    {
+      "step": "verify after recovery",
+      "ok": true,
+      "detail": "[{'name': 'WB_Map', 'mapType': 'MAP', 'layers': ['L_Group', 'L_Points', 'L_Lines', 'L_Polygons'], 'layers_flat': ['L_Group', 'L_Sub_A', 'L_Points', 'L_Lines', 'L_Polygons'], 'group_children': {'L_Group': ['L_Sub_A']}, 'visible': {'L_Group': True, 'L_Sub_A': True, 'L_Points': True, 'L_Lines': True, 'L_Polygons': True}}, {'name': 'WB_Map_Empty', 'mapType': 'MAP', 'layers': [], 'layers_flat': [], 'group_children': {}, 'visible': {}}]"
+    }
+  ],
+  "checks": {
+    "top_level_set_ok": true,
+    "group_children_ok": true,
+    "empty_ok": true,
+    "unique_ok": true
+  },
+  "test_gdb_counts": {
+    "FC_Points": 5,
+    "FC_Lines": 3,
+    "FC_Polygons": 4,
+    "TBL_Attr": 4
+  },
+  "aprx_sha256_after": "FE572C1D4EDBF89CF720AA2FA7FBF376B832A241AC89A2CB89437FB6DAE1F46E",
+  "finished": "2026-09-13T15:21:51"
+}

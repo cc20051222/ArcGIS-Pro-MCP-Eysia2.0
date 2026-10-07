@@ -1,0 +1,108 @@
+{
+  "schema": "geoaichat-public-comparison-evidence-v1",
+  "researchDateClient": "2026-10-01",
+  "scope": "Public read-only metadata; no competitor execution, plugin download or user-data upload",
+  "latest": {
+    "url": "https://www.geoaichat.cn/api/packages/latest",
+    "httpStatus": 200,
+    "responseTextSha256": "705FAC2C8E58ADE91437513F08518A8DFC15036AF7EB3474F2381A9AC2444FBB",
+    "version": "0.25.1",
+    "releaseDate": "2026-09-30",
+    "platform": "windows",
+    "arcgisVersionDeclared": "ArcGIS Pro 3.4",
+    "packageBytesDeclared": 6960937
+  },
+  "skills": {
+    "url": "https://www.geoaichat.cn/api/skills",
+    "httpStatus": 200,
+    "responseTextSha256": "86E586CA80441D7E596B692363B6FCF941C8A3731003B104D22B7E2C8AE6E6C2",
+    "pagination": {
+      "page": 1,
+      "pageSize": 50,
+      "total": 21,
+      "totalPages": 1
+    },
+    "count": 21,
+    "ids": [
+      "map-poster-theme",
+      "village-planning-map",
+      "heatmap-pro-generator",
+      "cartography-workflow",
+      "online-basemap-loader",
+      "geometry-check-fix",
+      "fast-vertex-label-export",
+      "sandiao-land-classify",
+      "sanxiansanxian-occupancy",
+      "yongdiyonghai-classify",
+      "huitui",
+      "village-planning-layout",
+      "geojson-3dmap",
+      "village-planning-build",
+      "jiezhidian-jiezhixian",
+      "gdb-schema-audit",
+      "cad-export-by-symbols",
+      "admin-code-lookup",
+      "baopi-txt-conversion",
+      "location-map",
+      "archify-diagram"
+    ]
+  },
+  "history": {
+    "url": "https://www.geoaichat.cn/api/packages/history",
+    "httpStatus": 200,
+    "responseTextSha256": "C902C79751C6D16BECA4685B837EB3066A652D7D97727216278436B97F5C1066",
+    "checkedVersionDates": [
+      {
+        "version": "0.25.1",
+        "releaseDate": "2026-09-30"
+      },
+      {
+        "version": "0.24.0",
+        "releaseDate": "2026-09-24"
+      },
+      {
+        "version": "0.23.2",
+        "releaseDate": "2026-09-22"
+      },
+      {
+        "version": "0.23.0",
+        "releaseDate": "2026-09-22"
+      },
+      {
+        "version": "0.17.2",
+        "releaseDate": "2026-08-30"
+      },
+      {
+        "version": "0.17.1",
+        "releaseDate": "2026-08-29"
+      }
+    ]
+  },
+  "project": {
+    "governanceReadThrough": "G-238",
+    "sourceRegistryCount": 224,
+    "errorCodeCount": 33,
+    "gpWhitelistCount": 53,
+    "gpWhitelistSha256": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46",
+    "acceptedCandidateCatalogCount": 285,
+    "publicCountStatus": "Registry and classification counts are distinct from functional/runtime acceptance"
+  },
+  "priorPlanningInputHashes": [
+    {
+      "file": "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md",
+      "sha256": "6E4B3E7BED1E873CC637AF4CD5DCECCDAE7F7C55918A0A2913A6C7BE2F0FD9EC"
+    },
+    {
+      "file": "GIS_AUTOMATION_FINAL_BLUEPRINT_20260927.md",
+      "sha256": "431C6A1ADA6A478F941628AD0346E4E95CA84958AFA6BADE097F8510528D8417"
+    },
+    {
+      "file": "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md",
+      "sha256": "1F29BD5A80AD44B6154000C2D38EC820809CE52A894F345522C1806F33E532CA"
+    },
+    {
+      "file": "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md",
+      "sha256": "EC7B8512D93155DAEE9C94EAE82FBEDEFDC5AB271B6181C7E9905C69FAF39F11"
+    }
+  ]
+}

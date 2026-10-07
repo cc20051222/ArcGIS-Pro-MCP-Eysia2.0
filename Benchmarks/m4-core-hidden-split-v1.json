@@ -1,0 +1,551 @@
+{
+  "schemaVersion": "m4-core-hidden-v1",
+  "splitVersion": "1.0.0",
+  "status": "PASS CANDIDATE",
+  "scope": "M4 extension slice. It closes the 60-scenario and 36-template catalogue at definition level and attaches two hidden candidates to each of the 14 new templates. The M1, M2 and M3 faces are byte-unchanged and referenced by id.",
+  "corePublicIds": [
+    "CORE-M4-S31",
+    "CORE-M4-S32",
+    "CORE-M4-S33",
+    "CORE-M4-S34",
+    "CORE-M4-S35",
+    "CORE-M4-S36",
+    "CORE-M4-S37",
+    "CORE-M4-S38",
+    "CORE-M4-S39",
+    "CORE-M4-S40",
+    "CORE-M4-S41",
+    "CORE-M4-S42",
+    "CORE-M4-S43",
+    "CORE-M4-S44",
+    "CORE-M4-S45",
+    "CORE-M4-S47",
+    "CORE-M4-S48",
+    "CORE-M4-S49",
+    "CORE-M4-S50",
+    "CORE-M4-S51",
+    "CORE-M4-S53",
+    "CORE-M4-S54",
+    "CORE-M4-S55",
+    "CORE-M4-S56",
+    "CORE-M4-S57",
+    "CORE-M4-S58",
+    "CORE-M4-S59"
+  ],
+  "scenarioIds": [
+    "S31",
+    "S32",
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38",
+    "S39",
+    "S40",
+    "S41",
+    "S42",
+    "S43",
+    "S44",
+    "S45",
+    "S47",
+    "S48",
+    "S49",
+    "S50",
+    "S51",
+    "S53",
+    "S54",
+    "S55",
+    "S56",
+    "S57",
+    "S58",
+    "S59"
+  ],
+  "roundsPerCoreTask": 3,
+  "inputProfilesPerTemplate": [
+    "normal",
+    "boundary",
+    "invalid"
+  ],
+  "hiddenIds": [
+    "H-M4-TP11-01",
+    "H-M4-TP11-02",
+    "H-M4-TP12-01",
+    "H-M4-TP12-02",
+    "H-M4-TP13-01",
+    "H-M4-TP13-02",
+    "H-M4-TP14-01",
+    "H-M4-TP14-02",
+    "H-M4-TP15-01",
+    "H-M4-TP15-02",
+    "H-M4-TP16-01",
+    "H-M4-TP16-02",
+    "H-M4-TP18-01",
+    "H-M4-TP18-02",
+    "H-M4-TS11-01",
+    "H-M4-TS11-02",
+    "H-M4-TS12-01",
+    "H-M4-TS12-02",
+    "H-M4-TS13-01",
+    "H-M4-TS13-02",
+    "H-M4-TS14-01",
+    "H-M4-TS14-02",
+    "H-M4-TS16-01",
+    "H-M4-TS16-02",
+    "H-M4-TS17-01",
+    "H-M4-TS17-02",
+    "H-M4-TS18-01",
+    "H-M4-TS18-02"
+  ],
+  "criterionRefs": [
+    "ALN-001",
+    "BAT-001",
+    "DEP-001",
+    "GEO-001",
+    "KDA-001",
+    "LAY-001",
+    "LIX-001",
+    "MRC-001",
+    "NFD-001",
+    "NUM-001",
+    "OSV-001",
+    "OUT-001",
+    "PCL-001",
+    "PCL-002",
+    "PCL-003",
+    "PKG-001",
+    "PNA-001",
+    "PRM-001",
+    "PRT-001",
+    "QLT-001",
+    "RFL-001",
+    "RMO-001",
+    "RMO-002",
+    "RMO-003",
+    "RMO-004",
+    "SCI-001",
+    "SCN-001",
+    "SCN-002",
+    "SCN-003",
+    "SCN-004",
+    "SDU-001",
+    "SDU-002",
+    "SDU-003",
+    "SRC-001",
+    "STM-001",
+    "STM-002",
+    "STM-003",
+    "STM-004",
+    "STM-005",
+    "STY-001",
+    "TS08-INPUT-QUAL-001",
+    "TXT-001",
+    "WF-001"
+  ],
+  "hiddenCriteriaByTemplate": {
+    "TP11": [
+      "H-M4-TP11-01",
+      "H-M4-TP11-02"
+    ],
+    "TP12": [
+      "H-M4-TP12-01",
+      "H-M4-TP12-02"
+    ],
+    "TP13": [
+      "H-M4-TP13-01",
+      "H-M4-TP13-02"
+    ],
+    "TP14": [
+      "H-M4-TP14-01",
+      "H-M4-TP14-02"
+    ],
+    "TP15": [
+      "H-M4-TP15-01",
+      "H-M4-TP15-02"
+    ],
+    "TP16": [
+      "H-M4-TP16-01",
+      "H-M4-TP16-02"
+    ],
+    "TP18": [
+      "H-M4-TP18-01",
+      "H-M4-TP18-02"
+    ],
+    "TS11": [
+      "H-M4-TS11-01",
+      "H-M4-TS11-02"
+    ],
+    "TS12": [
+      "H-M4-TS12-01",
+      "H-M4-TS12-02"
+    ],
+    "TS13": [
+      "H-M4-TS13-01",
+      "H-M4-TS13-02"
+    ],
+    "TS14": [
+      "H-M4-TS14-01",
+      "H-M4-TS14-02"
+    ],
+    "TS16": [
+      "H-M4-TS16-01",
+      "H-M4-TS16-02"
+    ],
+    "TS17": [
+      "H-M4-TS17-01",
+      "H-M4-TS17-02"
+    ],
+    "TS18": [
+      "H-M4-TS18-01",
+      "H-M4-TS18-02"
+    ]
+  },
+  "carriedFromM1": {
+    "corePublicIds": [
+      "CORE-M1-S19",
+      "CORE-M1-S20",
+      "CORE-M1-S07",
+      "CORE-M1-S23",
+      "CORE-M1-S22",
+      "CORE-M1-S18"
+    ],
+    "hiddenIdsCount": 12,
+    "file": "Benchmarks/core-hidden-split-v1.json",
+    "bytesUnchanged": true
+  },
+  "carriedFromM2": {
+    "corePublicIds": [
+      "CORE-M2-S01",
+      "CORE-M2-S02",
+      "CORE-M2-S03",
+      "CORE-M2-S04",
+      "CORE-M2-S05",
+      "CORE-M2-S06",
+      "CORE-M2-S08",
+      "CORE-M2-S10",
+      "CORE-M2-S11",
+      "CORE-M2-S12",
+      "CORE-M2-S13",
+      "CORE-M2-S15",
+      "CORE-M2-S16",
+      "CORE-M2-S21",
+      "CORE-M2-S26",
+      "CORE-M2-S27",
+      "CORE-M2-S28",
+      "CORE-M2-S29",
+      "CORE-M2-S30",
+      "CORE-M2-S46",
+      "CORE-M2-S52",
+      "CORE-M2-S60"
+    ],
+    "hiddenIdsCount": 32,
+    "file": "Benchmarks/m2-core-hidden-split-v1.json",
+    "bytesUnchanged": true
+  },
+  "carriedFromM3": {
+    "corePublicIds": [
+      "CORE-M3-S09",
+      "CORE-M3-S14",
+      "CORE-M3-S17",
+      "CORE-M3-S24",
+      "CORE-M3-S25"
+    ],
+    "hiddenIdsCount": 5,
+    "file": "Benchmarks/m3-core-hidden-split-v1.json",
+    "bytesUnchanged": true
+  },
+  "successThreshold": {
+    "minimumHiddenCount": 12,
+    "firstVersionCompletionRate": 0.9,
+    "automaticRepairRoundsMax": 2,
+    "seriousScientificErrorsAllowed": 0,
+    "note": "inherited from the frozen v1 file and FINAL §4 by reference; the M4 slice adds 28 candidate hidden ids, which is a definition count and not a claim that the set is adequate or that any of it ran"
+  },
+  "goldManagement": {
+    "publicDefinitionStoresOnly": [
+      "hiddenId",
+      "criterionRefs"
+    ],
+    "goldContentOrPathIncluded": false,
+    "custodian": "separate restricted benchmark custodian",
+    "failureHandling": "no hidden example detail in tool context; previously seen fixes count as regression only"
+  },
+  "scenarioTemplateMap": {
+    "S31": "TS09",
+    "S32": "TS12",
+    "S33": "TS11",
+    "S34": "TS06",
+    "S35": "TS09",
+    "S36": "TP14",
+    "S37": "TP15",
+    "S38": "TP14",
+    "S39": "TP16",
+    "S40": "TS13",
+    "S41": "TS07",
+    "S42": "TS14",
+    "S43": "TS03",
+    "S44": "TS08",
+    "S45": "TS15",
+    "S47": "TS08",
+    "S48": "TS08",
+    "S49": "TS09",
+    "S50": "TS18",
+    "S51": "TS16",
+    "S53": "TP18",
+    "S54": "TS17",
+    "S55": "TP04",
+    "S56": "TP12",
+    "S57": "TP13",
+    "S58": "TP11",
+    "S59": "TP14"
+  },
+  "secondaryScenarioTemplateMap": {
+    "S31": [
+      "TS12"
+    ],
+    "S36": [
+      "TS13"
+    ],
+    "S49": [
+      "TS12"
+    ],
+    "S56": [
+      "TP17"
+    ]
+  },
+  "carriedScenarioTemplateMap": {
+    "M1": [
+      "S07",
+      "S18",
+      "S19",
+      "S20",
+      "S22",
+      "S23"
+    ],
+    "M2": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S08",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S21",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S46",
+      "S52",
+      "S60"
+    ],
+    "M3": [
+      "S09",
+      "S14",
+      "S17",
+      "S24",
+      "S25"
+    ]
+  },
+  "stressIds": [
+    "ST-M4-01",
+    "ST-M4-02",
+    "ST-M4-03",
+    "ST-M4-04",
+    "ST-M4-05",
+    "ST-M4-06",
+    "ST-M4-07",
+    "ST-M4-08",
+    "ST-M4-09",
+    "ST-M4-10",
+    "ST-M4-11",
+    "ST-M4-12",
+    "ST-M4-13",
+    "ST-M4-14",
+    "ST-M4-15",
+    "ST-M4-16",
+    "ST-M4-17",
+    "ST-M4-18"
+  ],
+  "stressRefsByScenario": {
+    "S31": [
+      "ST-M4-01"
+    ],
+    "S32": [
+      "ST-M4-02"
+    ],
+    "S33": [
+      "ST-M4-03"
+    ],
+    "S34": [
+      "ST-M4-04"
+    ],
+    "S35": [
+      "ST-M4-05"
+    ],
+    "S36": [
+      "ST-M4-06"
+    ],
+    "S37": [
+      "ST-M4-07"
+    ],
+    "S38": [],
+    "S39": [
+      "ST-M4-08"
+    ],
+    "S40": [
+      "ST-M4-09"
+    ],
+    "S41": [
+      "ST-M4-10"
+    ],
+    "S42": [],
+    "S43": [
+      "ST-M4-11"
+    ],
+    "S44": [
+      "ST-M4-12"
+    ],
+    "S45": [
+      "ST-M4-13"
+    ],
+    "S47": [
+      "ST-M4-14"
+    ],
+    "S48": [],
+    "S49": [],
+    "S50": [],
+    "S51": [
+      "ST-M4-15"
+    ],
+    "S53": [],
+    "S54": [
+      "ST-M4-16"
+    ],
+    "S55": [],
+    "S56": [],
+    "S57": [
+      "ST-M4-17"
+    ],
+    "S58": [],
+    "S59": [
+      "ST-M4-18"
+    ]
+  },
+  "capabilitySurface": {
+    "rows": 48,
+    "groups": {
+      "X1": 6,
+      "X2": 8,
+      "X3": 6,
+      "X4": 8,
+      "X5": 8,
+      "X6": 6,
+      "X7": 4,
+      "X8": 2
+    },
+    "classes": {
+      "R": 4,
+      "S": 3,
+      "W": 41
+    },
+    "channels": {
+      "Geoprocessing": 22,
+      "Native": 21,
+      "Python": 5
+    },
+    "preregCovered": 47,
+    "mergedBranch": [
+      "build_offline_map_package"
+    ]
+  },
+  "faceClosure": {
+    "scenarios": {
+      "M1": 6,
+      "M2": 22,
+      "M3": 5,
+      "M4": 27,
+      "defined": 60,
+      "deferred": 0
+    },
+    "templates": {
+      "M1": 6,
+      "M2": 16,
+      "M3": 0,
+      "M4": 14,
+      "defined": 36,
+      "deferred": 0
+    },
+    "baseThirty": "6+19+5+0=30 (closed at M3, restated by reference only)",
+    "breadthThirty": "0+3+0+27=30",
+    "baseTwentyTemplates": "6+14+0+0=20 (closed at M3)",
+    "breadthSixteenTemplates": "0+2+0+14=16",
+    "stressRows": 60,
+    "coreRoundsPlanned": 81,
+    "hiddenCandidatesDefined": 77,
+    "ruleIds": "8+17+22+26"
+  },
+  "deferredRegister": {
+    "onlinePublishTrio": {
+      "ids": [
+        "discover_remote_datasets",
+        "import_remote_dataset",
+        "publish_map_service"
+      ],
+      "status": "DEFERRED-G190-NOT-CALIBRATED",
+      "note": "unchanged by this batch; S59 does not borrow their behaviour"
+    },
+    "ts08GoldInput": {
+      "status": "NOT-AVAILABLE-PENDING-USER",
+      "ruling": "G-205",
+      "note": "S44 and S48 inherit the predicate; multi.tif appears nowhere as input or gold"
+    },
+    "whitelistExpansion": {
+      "status": "GP-WHITELIST-PENDING-USER-RULING",
+      "affects": "the 22 Geoprocessing-channel M4 candidates"
+    },
+    "licenceProbe": {
+      "status": "HOST-EXTENSION-NOT-PROBED",
+      "affects": [
+        "3D Analyst",
+        "Spatial Analyst",
+        "Image Analyst",
+        "Geostatistical Analyst",
+        "Network Analyst",
+        "spatio-temporal pattern mining"
+      ]
+    },
+    "pythonBridgeReview": {
+      "status": "TYPED-OPERATION-REVIEW-UNASSIGNED",
+      "affects": [
+        "forecast_spatiotemporal_series",
+        "infer_approved_raster_model"
+      ]
+    },
+    "x07x08Merge": {
+      "status": "F03A-ADJUDICATION-OPEN",
+      "note": "configure_scene_environment and configure_layer_elevation may become parameter extensions of an accepted tool; the face stays blocked on that ruling"
+    }
+  },
+  "baselineContext": {
+    "acceptedToolCount": 197,
+    "acceptedSourceAggregate": "A3DB2C29 (G-216) / 265",
+    "roster": "94/33/158=285",
+    "errorCodes": 33,
+    "whitelist": 53
+  },
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §6-§7, §10",
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:153",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4-§5",
+    "D-097 board ticket scope 1-6 and completion gates 1-9"
+  ],
+  "ts08CarriedStatus": "GOLD_ARTIFACT_PATH_NOT-AVAILABLE-PENDING-USER (G-205); unchanged in this batch"
+}

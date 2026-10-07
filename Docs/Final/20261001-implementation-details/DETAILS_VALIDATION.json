@@ -1,0 +1,218 @@
+{
+  "kind": "planning-details-validation-only",
+  "date": "2026-10-01",
+  "status": "PASS_CANDIDATE",
+  "scope": "Documentation/specification consistency and synthetic expected-value arithmetic; no product build/runtime/GP/PS evidence",
+  "checks": [
+    {
+      "name": "explicit-planning-only",
+      "passed": true,
+      "detail": "Not MCP schema or runtime evidence"
+    },
+    {
+      "name": "contract-service-work-counts",
+      "passed": true,
+      "detail": "DC=12; SV=12; WI=30"
+    },
+    {
+      "name": "state-and-experiment-counts",
+      "passed": true,
+      "detail": "task=14; step=15; effect=7; experiment=6"
+    },
+    {
+      "name": "taskMachine-transitions-resolve",
+      "passed": true,
+      "detail": {
+        "unknown": [],
+        "missingRows": []
+      }
+    },
+    {
+      "name": "stepMachine-transitions-resolve",
+      "passed": true,
+      "detail": {
+        "unknown": [],
+        "missingRows": []
+      }
+    },
+    {
+      "name": "no-success-redispatch-edge",
+      "passed": true,
+      "detail": "Recorded and pending receipt never redispatch; unknown must reconcile"
+    },
+    {
+      "name": "dispatch-guard-and-failure-receipts",
+      "passed": true,
+      "detail": "Required proposal guards explicitly present; not an implementation proof"
+    },
+    {
+      "name": "work-references-and-acyclic",
+      "passed": true,
+      "detail": {
+        "failures": [],
+        "topologicalOrder": [
+          "WI01",
+          "WI05",
+          "WI11",
+          "WI02",
+          "WI06",
+          "WI12",
+          "WI03",
+          "WI07",
+          "WI13",
+          "WI30",
+          "WI04",
+          "WI08",
+          "WI09",
+          "WI16",
+          "WI10",
+          "WI14",
+          "WI17",
+          "WI15",
+          "WI18",
+          "WI21",
+          "WI19",
+          "WI20",
+          "WI22",
+          "WI23",
+          "WI24",
+          "WI25",
+          "WI26",
+          "WI27",
+          "WI28",
+          "WI29"
+        ],
+        "cyclicRemaining": []
+      }
+    },
+    {
+      "name": "actual-write-work-reliability-prerequisites",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "experiment-references",
+      "passed": true,
+      "detail": "All six refer to proposed work items"
+    },
+    {
+      "name": "markdown-work-items-match-json",
+      "passed": true,
+      "detail": "30 matching work item rows"
+    },
+    {
+      "name": "PL-GOLD-01-independent-arithmetic",
+      "passed": true,
+      "detail": {
+        "total": 140.0,
+        "perFacility": [
+          80,
+          50
+        ],
+        "overlap": 30.0,
+        "union": 100,
+        "coveragePercent": 71.42857142857143,
+        "scope": "fixture-specification-arithmetic-only"
+      }
+    },
+    {
+      "name": "PL-NEG-01-null-and-denominator",
+      "passed": true,
+      "detail": "D missing: overall unknown; known-records-only ratio must be relabelled"
+    },
+    {
+      "name": "SCI-GOLD-01-independent-arithmetic",
+      "passed": true,
+      "detail": {
+        "transition": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "validCells": 5,
+        "changedCells": 2,
+        "validSquareMeters": 500,
+        "changedSquareMeters": 200,
+        "netArea": [
+          0,
+          0
+        ],
+        "scope": "fixture-specification-arithmetic-only"
+      }
+    },
+    {
+      "name": "NORM-GOLD-01-independent-logic",
+      "passed": true,
+      "detail": {
+        "counts": {
+          "PASS": 2,
+          "FAIL": 1,
+          "UNKNOWN": 2,
+          "NOT_APPLICABLE": 2
+        },
+        "determinedApplicable": 4,
+        "evaluatedApplicable": 3,
+        "scope": "synthetic-practice-rule-only-not-regulation-validation"
+      }
+    },
+    {
+      "name": "original-plans-preserved",
+      "passed": true,
+      "detail": {
+        "observedFiles": 15,
+        "changed": []
+      }
+    },
+    {
+      "name": "observed-source-tree-preserved",
+      "passed": true,
+      "detail": {
+        "observedFiles": 899,
+        "changed": [],
+        "setChanges": [],
+        "note": "rg-visible tree includes build payloads; distinct from commander 272-file aggregation"
+      }
+    },
+    {
+      "name": "relative-local-links",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "documents": [
+    {
+      "path": "DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "bytes": 11642,
+      "sha256": "7AD192E3C745BF58689B5DF1832AD497E39C3A945D10379585E870C0DE7F00D7"
+    },
+    {
+      "path": "GP_PS_AND_INNOVATION_RECIPES.md",
+      "bytes": 11596,
+      "sha256": "275849DC983731DEB1DD1E4EB61C547777C9DFAE451D945A497A547592AD70D2"
+    },
+    {
+      "path": "MODULE_INTERFACES_AND_BACKLOG.md",
+      "bytes": 12128,
+      "sha256": "B6001607946C0F8D6BF37716F5AF911CDEBF180AA7D6CDAE8E5A5CC8435DA4EE"
+    },
+    {
+      "path": "README_IMPLEMENTATION_DETAILS.md",
+      "bytes": 7163,
+      "sha256": "FE1CABA3D40102E11704F6F66561CDA03E6A9775C7023B7A8E5F6D6140F1D460"
+    },
+    {
+      "path": "THREE_CHAIN_IMPLEMENTATION.md",
+      "bytes": 9426,
+      "sha256": "55215F83ED3B619B5BA5A01D7BD03731C48B891970CD22047BBB9581506F5366"
+    }
+  ],
+  "designSha256": "A6696520EBD13CDAB95EB63BCF008D92791940630DF4FEE1EADE7114D87CB8CA",
+  "validatorSha256": "B1D3CC45361053A45D3F2A68CF80DC093CB8D27B0ADC05AB7FF12380E7341F8A",
+  "runtimeEvidence": [],
+  "failedChecks": []
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x2",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "cellArea": 1.0,
+  "validCellCount": 1262,
+  "fillVolume": 6310.0,
+  "cutVolume": 0.0,
+  "balance": 6310.0,
+  "recomputeRule": "volume = sum(cell area x (z_after - z_before)) over the published valid mask",
+  "acceptanceEnvelope": {
+    "relativeErrorMax": 0.01,
+    "basis": "comparison-rules-v4 SCN-003 d097CalibrationChoice, inherited unchanged"
+  },
+  "noDataMask": {
+    "cells": 9,
+    "excludedFromVolume": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x6",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "request": "give a driving cost from N1 to N9",
+  "expectedDisposition": "REFUSE with the disconnect named",
+  "reason": "N1..N6 and N7..N9 are separate components, so any finite answer is fabricated"
+}

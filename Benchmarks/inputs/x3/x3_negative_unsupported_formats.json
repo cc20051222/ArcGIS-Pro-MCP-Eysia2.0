@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "d101-negative-v1",
+  "group": "x3",
+  "artefact": "GDOM-02 negative example",
+  "synthetic": true,
+  "request": "infer LAZ and COPC support from the successful LAS read of x3_cloud_epoch1.las",
+  "expectedDisposition": "REFUSE",
+  "reason": "the frozen PCL-001 rule forbids cross-format presumption, and this corpus ships no LAZ and no COPC file on purpose",
+  "unfilledAxes": [
+    "LAZ",
+    "COPC"
+  ],
+  "note": "no compressed or random-access cloud was fabricated to make the count look complete"
+}

@@ -1,0 +1,45 @@
+<Project>
+  <PropertyGroup>
+    <!-- 集中管理 ArcGIS Pro 安装路径，禁止把 SDK 绝对路径散落到多个 .csproj -->
+    <ArcGISProFolder>C:\Program Files\ArcGIS\Pro\</ArcGISProFolder>
+    <ArcGISProBin>$(ArcGISProFolder)bin\</ArcGISProBin>
+
+    <!--
+      D-060 · Pro 版本兼容（单包 net6，覆盖 Pro 3.0–3.5）：引用集改为「项目内 vendored refs 优先」。
+      与方案书 §3.1 的差异及原因：方案书原写「按 $(TargetFramework) 条件切换」，但 MSBuild 求值顺序为
+      Directory.Build.props → csproj 正文 → Directory.Build.targets，而 csproj 正文中 <Reference><HintPath>
+      在求值时即展开属性 ⇒ 彼时 $(TargetFramework) 尚不可见。故改为「显式覆盖 > vendored refs 存在性 > 本机 Pro bin」
+      三级解析（产品已单目标 net6 ⇒ 语义等价）；实际使用的引用集由 Directory.Build.targets 的
+      VerifyArcGISProSdkRefs 目标做前置校验。
+      覆盖方式：dotnet build -p:ArcGISProSdkRefs="C:\Program Files\ArcGIS\Pro\bin\"
+    -->
+    <ArcGISProSdkRefsRoot>$(MSBuildThisFileDirectory)sdk-refs</ArcGISProSdkRefsRoot>
+    <ArcGISProSdkRefsNet6>$(ArcGISProSdkRefsRoot)\pro-13.0-net6\</ArcGISProSdkRefsNet6>
+    <ArcGISProSdkRefs Condition="'$(ArcGISProSdkRefs)' == '' And Exists('$(ArcGISProSdkRefsNet6)ArcGIS.Desktop.Framework.dll')">$(ArcGISProSdkRefsNet6)</ArcGISProSdkRefs>
+    <ArcGISProSdkRefs Condition="'$(ArcGISProSdkRefs)' == ''">$(ArcGISProBin)</ArcGISProSdkRefs>
+
+    <!-- 期望值（供构建前置校验比对；实际值随 refset 记账，见 sdk-refs/SOURCE.md） -->
+    <ArcGISProSdkExpectedVersionPrefix Condition="'$(ArcGISProSdkExpectedVersionPrefix)' == ''">13.0.</ArcGISProSdkExpectedVersionPrefix>
+    <ArcGISProSdkExpectedPublicKeyToken Condition="'$(ArcGISProSdkExpectedPublicKeyToken)' == ''">8fc3cc631e44ad86</ArcGISProSdkExpectedPublicKeyToken>
+
+    <!-- D-060：语言版本显式化（net6 默认 C# 10，而代码使用 C# 11 的 required 成员 ⇒ CS8936×14）。
+         固定 12.0 而非 latest，保证跨 SDK 版本的可复现性（G-128 确定性）。 -->
+    <LangVersion>12.0</LangVersion>
+
+    <!-- Release identity policy: one product version for all first-party outputs. -->
+    <Version>1.0.2</Version>
+    <VersionPrefix>1.0.2</VersionPrefix>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <InformationalVersion>1.0.2</InformationalVersion>
+    <Product>ArcGIS Pro MCP</Product>
+    <PackageVersion>1.0.2</PackageVersion>
+  </PropertyGroup>
+
+  <!-- D-060：net6 目标框架下的 `required` 运行时特性 polyfill（net8 编译时该文件内容为空，见文件内 #if） -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)build\net6\RequiredMembersPolyfill.cs"
+             Link="Properties\RequiredMembersPolyfill.cs"
+             Visible="false" />
+  </ItemGroup>
+</Project>

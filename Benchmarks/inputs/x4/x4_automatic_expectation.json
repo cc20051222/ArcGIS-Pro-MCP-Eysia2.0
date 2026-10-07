@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x4",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a TS08 or TS15 page whose legend equals the published class set",
+    "a model card for any inference row, per MRC-001 (weights, licence, bands, normalisation, applicability domain, accelerator probe)",
+    "no in-place edit of the source scene"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "an approved model register entry with a recomputable weight hash - MRC-001 stays blocked until one exists",
+    "a real multi-band product with sensor metadata"
+  ]
+}

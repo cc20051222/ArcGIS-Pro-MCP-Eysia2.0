@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x7",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "dimensions": {
+    "t": {
+      "count": 6,
+      "units": "month labels",
+      "calendar": "proleptic Gregorian"
+    },
+    "s": {
+      "count": 4,
+      "units": "stratum id"
+    },
+    "var": {
+      "count": 2,
+      "units": "temperature degC, precipitation mm (synthetic values)"
+    }
+  },
+  "missingEncoding": "an empty value field, never a zero",
+  "cellCount": 48,
+  "missingCount": 1,
+  "roundTrip": "pivot to a 6x4x2 array and back must reproduce every row and the same single missing cell",
+  "unfilledAxes": [
+    "NetCDF",
+    "Zarr",
+    "a multidimensional raster carrier"
+  ]
+}

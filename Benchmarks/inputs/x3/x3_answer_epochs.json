@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x3",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "epochCounts": {
+    "epoch1": 2400,
+    "epoch2": 2260
+  },
+  "registrationPrecheck": {
+    "shiftInjectedForColumnsAtOrAbove": 10,
+    "shiftMetres": 0.5,
+    "expectedVerdict": "the shifted half must be reported as unqualified for difference, not as change",
+    "cellsFlagged": 200
+  },
+  "densityLoss": {
+    "declaredRegion": "rows 3-6, columns 12-16",
+    "cellsSkipped": 20,
+    "cellsEmptyUnderNearestAttribution": 18,
+    "cells": [
+      "3:12",
+      "3:13",
+      "3:14",
+      "3:15",
+      "3:16",
+      "4:12",
+      "4:13",
+      "4:14",
+      "4:15",
+      "4:16",
+      "5:12",
+      "5:13",
+      "5:14",
+      "5:15",
+      "5:16",
+      "6:12",
+      "6:13",
+      "6:16"
+    ],
+    "smearingNote": "because epoch 2 also carries an injected 0.5 m x shift, points from the column beside a skipped cell are attributed into it under a nearest-cell read; the two counts differ by design, and that difference is exactly why the registration pre-check must run before any epoch difference is drawn"
+  },
+  "validDifferenceArea": "epoch-1 cells that are present in epoch 2 and outside the shifted half",
+  "rule": "a difference may only be published where the pre-check passed; elsewhere the answer is no-result, not no-change"
+}

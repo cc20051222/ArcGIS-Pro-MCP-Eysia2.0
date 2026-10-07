@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="ArcGISProMCP.Compatibility.dll"
+        defaultNamespace="ArcGISProMCP.Compatibility"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{BAA5628C-3C08-4AD5-A6C0-915ADA475709}" version="1.0.2" desktopVersion="3.0">
+    <Name>ArcGIS Pro MCP</Name>
+    <Description>将 ArcGIS Pro 转换为标准 MCP Server 的 Add-in（Phase 3：MCP Server 通信层）。</Description>
+    <Image>Images\AddInIcon.png</Image>
+    <Author>ArcGISProMCP</Author>
+    <Company>ArcGISProMCP</Company>
+    <Date>2026/08/31</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="ArcGISProMCP_Module" className="Module1" autoLoad="true" caption="ArcGIS Pro MCP">
+      <tabs>
+        <tab id="ArcGISProMCP_Tab" caption="MCP">
+          <group refID="ArcGISProMCP_Group" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="ArcGISProMCP_Group" caption="MCP" appearsOnAddInTab="false">
+          <button refID="ArcGISProMCP_Start" size="large" />
+          <button refID="ArcGISProMCP_Stop" size="large" />
+          <button refID="ArcGISProMCP_Status" size="large" />
+          <button refID="ArcGISProMCP_RunTests" size="large" />
+          <button refID="ArcGISProMCP_Diagnostics" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="ArcGISProMCP_Start" caption="Start" className="StartButton" loadOnClick="true"
+                smallImage="Images\AddInIcon.png" largeImage="Images\AddInIcon.png">
+          <tooltip heading="Start">启动 MCP Server（127.0.0.1:6520/mcp）。<disabledText /></tooltip>
+        </button>
+        <button id="ArcGISProMCP_Stop" caption="Stop" className="StopButton" loadOnClick="true"
+                smallImage="Images\AddInIcon.png" largeImage="Images\AddInIcon.png">
+          <tooltip heading="Stop">停止 MCP Server。<disabledText /></tooltip>
+        </button>
+        <button id="ArcGISProMCP_Status" caption="Status" className="StatusButton" loadOnClick="true"
+                smallImage="Images\AddInIcon.png" largeImage="Images\AddInIcon.png">
+          <tooltip heading="Status">显示 MCP Server 与 ArcGIS Pro Host 状态。<disabledText /></tooltip>
+        </button>
+        <button id="ArcGISProMCP_RunTests" caption="Run Tests" className="RunTestsButton" loadOnClick="true"
+                smallImage="Images\AddInIcon.png" largeImage="Images\AddInIcon.png">
+          <tooltip heading="Run Tests">通过 Tool Router 执行内置工具自测。<disabledText /></tooltip>
+        </button>
+        <button id="ArcGISProMCP_Diagnostics" caption="Diagnostics" className="DiagnosticsButton" loadOnClick="true"
+                smallImage="Images\AddInIcon.png" largeImage="Images\AddInIcon.png">
+          <tooltip heading="Diagnostics">导出隐私安全的诊断快照与 managed 日志。<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>

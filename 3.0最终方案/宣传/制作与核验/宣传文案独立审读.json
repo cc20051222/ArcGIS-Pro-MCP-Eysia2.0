@@ -1,0 +1,75 @@
+{
+  "reviewDate": "2026-10-02",
+  "reviewer": "promotion_claims independent reader",
+  "reviewKind": "DOCUMENT_COPY_FACT_AND_CLAIM_REVIEW_ONLY",
+  "reviewedFile": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\制作与核验\\宣传文案.json",
+  "reviewedCopySha256": "1D1656A73CDA5CA91165D0FE8EDADCC49D5E027165480E856E5DA65DA261CC39",
+  "boundariesFileSha256": "8162AB79138C3F54DEB9D4B5896A8FD71F3023B159032456165EBEF3C8BC80CC",
+  "reviewedPages": [1, 2, 3, 4, 5, 6, 7, 8],
+  "reviewedPosters": ["portrait_main", "landscape_highlights"],
+  "reviewResult": "NO_SUBSTANTIVE_FACT_OR_CLAIM_CORRECTION_REQUIRED_IN_REVIEWED_COPY",
+  "substantiveFindings": [],
+  "checks": [
+    {
+      "topic": "未来与当前状态",
+      "result": "一致",
+      "evidence": "八页和两张海报均带 3.0 方案预告，全局页脚与各海报页脚均说明规划功能、目标体验及实际验收；正文多次使用计划、目标、将和须检查。没有把最终方案当成已发布运行产品。"
+    },
+    {
+      "topic": "核心价值与用户体验",
+      "result": "一致",
+      "evidence": "GIS→真实PS→Office、整套同版交付、业务任务卡、语言改稿、可编辑与可复算区别、参考学习和成果更新均有最终方案依据。既讲便利也保留必要口径确认，没有声称所有业务无人参与。"
+    },
+    {
+      "topic": "数量与工期",
+      "result": "无未证量化宣传",
+      "evidence": "正文与海报未把 2100 GP、3000语义、36模板、108标准图、60天或历史注册数作为当前成绩，也没有虚构速度、准确率或成本百分比。"
+    },
+    {
+      "topic": "科学事实与设计分离",
+      "result": "一致",
+      "evidence": "明确风格学习不迁移参考人口、面积、比例尺或科学结论；结构学习不以别人的结果代替当前计算；栅格美化不冒称矢量；网络时间不静默换成直线距离；净变化和实际转移、无参考不造分类精度均正确。"
+    },
+    {
+      "topic": "GP更新与可信适配",
+      "result": "一致",
+      "evidence": "采用可信目录、参数候选、许可、副作用、真实正例关键负例与结果核验；发现工具名称不等于全域支持。海报可信GP自主适配处于明确预告语境，不声称任意新能力零测试直接上线。"
+    },
+    {
+      "topic": "学习用途与偏好",
+      "result": "一致",
+      "evidence": "授权参考、用途角色、读取与复制或外发分开，偏好范围可解释可撤销，科学规范优先，单次满意不变成所有项目默认。未承诺从单张图片恢复完整原工程。"
+    },
+    {
+      "topic": "社区比较",
+      "result": "一致",
+      "evidence": "尊重社区的接入、模型和工作流经验；未知能力标未确认；领先需同条件实测。没有声称Office、知识、技能为本项目独有，没有把工具入口数与科学方法数做差值。"
+    },
+    {
+      "topic": "安装与第三方授权",
+      "result": "一致",
+      "evidence": "插件形态与统一一键安装均写为规划且放在完整功能验收后；版本、许可、字体和资源条件明确；未虚构商业软件打包许可或全版本兼容。"
+    },
+    {
+      "topic": "海报真实性与联系渠道",
+      "result": "一致",
+      "evidence": "两张海报页脚均为概念宣传视觉，无虚构官网、二维码、下载地址、预约日期、发布时间、背书或认证；没有伪称真实软件截图。"
+    }
+  ],
+  "knownPlannedFormattingAdjustments": {
+    "documentTitle": "ArcGIS Pro MCP 3 0 产品宣传册",
+    "titleStyle": "Plain black Word Title, no slogan used as document title",
+    "pullQuote": "Do not use as a boxed callout or repeated slogan; root may omit from brochure",
+    "source": "Root followup message, not independently observed in generated Word yet"
+  },
+  "remainingRenderConditions": [
+    "检查实际Word每页的预告标识与必要状态说明没有因排版被省略、截断或缩小至难读。",
+    "每张独立海报必须保留可读的顶部预告标识和概念/规划页脚；导出PNG与PDF时不能丢失。",
+    "概念地图或流程视觉不得加入未经来源核实的真实统计、发布日期、二维码、Logo背书或运行截图身份。",
+    "完成后的Word文本还需与本次文案核对；本记录只审当前JSON，不能代替文件内容及原生分页核验。"
+  ],
+  "nativeWordOrPosterVisualReviewPerformed": false,
+  "productAcceptanceConferred": false,
+  "realCompetitorRuntimeComparisonPerformed": false,
+  "copyModifiedByReviewer": false
+}

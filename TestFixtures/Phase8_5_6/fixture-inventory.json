@@ -1,0 +1,237 @@
+{
+  "fixture": "Phase8_5_6",
+  "built": "2026-09-12T18:45:18",
+  "spatial_reference": "EPSG:4326",
+  "project": {
+    "aprx": "WorkBuddyControlled.aprx",
+    "aprx_sha256_evidence_only": "C3C83CF73E2493F732C6C1295BB799096F0E7FFEE7BF8790B51E3A1FED53C851",
+    "maps": [
+      {
+        "name": "WB_Map",
+        "mapType": "MAP",
+        "layers": [
+          "L_Group",
+          "L_Points",
+          "L_Lines",
+          "L_Polygons"
+        ],
+        "layers_flat": [
+          "L_Group",
+          "L_Sub_A",
+          "L_Points",
+          "L_Lines",
+          "L_Polygons"
+        ],
+        "group_children": {
+          "L_Group": [
+            "L_Sub_A"
+          ]
+        },
+        "visible": {
+          "L_Group": true,
+          "L_Sub_A": true,
+          "L_Points": true,
+          "L_Lines": true,
+          "L_Polygons": true
+        }
+      },
+      {
+        "name": "WB_Map_Empty",
+        "mapType": "MAP",
+        "layers": [],
+        "layers_flat": [],
+        "group_children": {},
+        "visible": {}
+      }
+    ],
+    "aprx_repaired_note": "D-041 W2 (2026-09-14): DSN repaired in place (absolute form); stale 1CB8291F replaced; pre-repair hash B9207C74"
+  },
+  "gdb_test": {
+    "name": "WorkBuddyTest.gdb",
+    "read_only_during_acceptance": true,
+    "datasets": [
+      {
+        "name": "FC_Points",
+        "type": "FEATURE_CLASS",
+        "rowCount": 5,
+        "fields": [
+          {
+            "name": "NAME",
+            "type": "String",
+            "length": 64
+          },
+          {
+            "name": "CATEGORY",
+            "type": "String",
+            "length": 32
+          },
+          {
+            "name": "VALUE",
+            "type": "Integer",
+            "length": 4
+          }
+        ]
+      },
+      {
+        "name": "FC_Lines",
+        "type": "FEATURE_CLASS",
+        "rowCount": 3,
+        "fields": [
+          {
+            "name": "Shape_Length",
+            "type": "Double",
+            "length": 8
+          },
+          {
+            "name": "NAME",
+            "type": "String",
+            "length": 64
+          },
+          {
+            "name": "CATEGORY",
+            "type": "String",
+            "length": 32
+          },
+          {
+            "name": "VALUE",
+            "type": "Integer",
+            "length": 4
+          }
+        ]
+      },
+      {
+        "name": "FC_Polygons",
+        "type": "FEATURE_CLASS",
+        "rowCount": 4,
+        "fields": [
+          {
+            "name": "Shape_Length",
+            "type": "Double",
+            "length": 8
+          },
+          {
+            "name": "Shape_Area",
+            "type": "Double",
+            "length": 8
+          },
+          {
+            "name": "NAME",
+            "type": "String",
+            "length": 64
+          },
+          {
+            "name": "CATEGORY",
+            "type": "String",
+            "length": 32
+          },
+          {
+            "name": "VALUE",
+            "type": "Integer",
+            "length": 4
+          }
+        ]
+      },
+      {
+        "name": "TBL_Attr",
+        "type": "TABLE",
+        "rowCount": 4,
+        "fields": [
+          {
+            "name": "NAME",
+            "type": "String",
+            "length": 64
+          },
+          {
+            "name": "CATEGORY",
+            "type": "String",
+            "length": 32
+          },
+          {
+            "name": "VALUE",
+            "type": "Integer",
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "file_sha256": {
+      "WorkBuddyTest.gdb\\a00000001.gdbindexes": "80BA95B873E151074244F7655F9E29CE8967AAB1BD57FF4C06A329B723A3D46C",
+      "WorkBuddyTest.gdb\\a00000001.gdbtable": "8C3C776653A89560BF6EE75A8B96758EB68E8AEFF7CA189CDB93C627A1B96F4D",
+      "WorkBuddyTest.gdb\\a00000001.gdbtablx": "3E21AB2DA1A062451FD9C4556C481A8512BAA23BEC2DB731D3F137CD93381EE5",
+      "WorkBuddyTest.gdb\\a00000001.TablesByName.atx": "D4192F2957FBA27DAF0B14ECB751D8A13A279E4B2CE0E115D1DFF18DC96234F8",
+      "WorkBuddyTest.gdb\\a00000002.gdbtable": "9EFA50DC62A40E109A546054943AE5AD4B3D41AA81ECE0DFA026B7B23CB09DA8",
+      "WorkBuddyTest.gdb\\a00000002.gdbtablx": "F3AC9865DEC6AB40E73D91DD1F5C2EEF0248E66E359D4ABB1D97EDBA92B5DF88",
+      "WorkBuddyTest.gdb\\a00000003.gdbindexes": "DE0911D18E2F304380C04AE123EA18057D262D788301F7CC3148298231C7C618",
+      "WorkBuddyTest.gdb\\a00000003.gdbtable": "F0B433E6B7BB0DDC5430F22B113DBC83BDC4B62E32911368CFCDD9BB309FBFE9",
+      "WorkBuddyTest.gdb\\a00000003.gdbtablx": "D63FD5F8A490AA6AEFFDE1336E80CE35B5399AF5752A72B316570A670B09D167",
+      "WorkBuddyTest.gdb\\a00000004.CatItemsByPhysicalName.atx": "22D24D0D287991AF2DAD7F4F808DB7058F44D1A5351DF178F59DACC513FC4099",
+      "WorkBuddyTest.gdb\\a00000004.CatItemsByType.atx": "0A2A0B76066C2F7AE0C7BF5CA48D74F5D22F1E4883FDBD62C047FDCCDF85B0DB",
+      "WorkBuddyTest.gdb\\a00000004.FDO_UUID.atx": "0DA01C0046B86E9835EE7CE21088D9EBBF6B5FAD17A97C5ADBFE687D687780AC",
+      "WorkBuddyTest.gdb\\a00000004.freelist": "61ED0A7BFAECEEDB3E9ECCCE998E2C90A325AF051E2D969CB0A51C23A7D0D262",
+      "WorkBuddyTest.gdb\\a00000004.gdbindexes": "F29887C93B126A3FEB0E20958CD73CC774F76AB79284B9C7286DC12EB05DB858",
+      "WorkBuddyTest.gdb\\a00000004.gdbtable": "E4377C604811B30D5B83E01B9F4D20809FE37D1EC19E0C356E3706908FA11E0E",
+      "WorkBuddyTest.gdb\\a00000004.gdbtablx": "AC07BBB3ACAE00D2251EC420D2E78D4A53699BCC85B6EA7BC7CF115FA6D9C93E",
+      "WorkBuddyTest.gdb\\a00000004.horizon": "9FAB34115B351A30FB6ADB5818D8F08E4DD3A024B7247DBBC61C56929AB6E223",
+      "WorkBuddyTest.gdb\\a00000004.spx": "027866F78134DE031571290FAB2599AB7879BD7DF84030EE324B233B891058AA",
+      "WorkBuddyTest.gdb\\a00000005.CatItemTypesByName.atx": "BD4D87826F4CEB333EEA541B47BCC6F3AB7482EBD1F9D9E22EAA24440DAC9A9D",
+      "WorkBuddyTest.gdb\\a00000005.CatItemTypesByParentTypeID.atx": "3B0CBA13354BA2DABFCDEF76D3DC9635B2156F9D6532782389BC8163AAA6D735",
+      "WorkBuddyTest.gdb\\a00000005.CatItemTypesByUUID.atx": "ED60CE77B7E4BBB21F4FF2502BAA785CA9069335D8C622B765EF69D88408E0EE",
+      "WorkBuddyTest.gdb\\a00000005.gdbindexes": "C21E650994B48CC72D174B3CAF2AC1BD19E2D7305C8087AAAE97E24CAECF98A5",
+      "WorkBuddyTest.gdb\\a00000005.gdbtable": "9DE6643CC403905CC0A3BE8EBBFB7E73E4C29838330AD9D661C258138B625AF0",
+      "WorkBuddyTest.gdb\\a00000005.gdbtablx": "814C7F1509FAB80670CC35035B1BEB9C387D4CFE9E9BF6AA72206AB129DFAAA7",
+      "WorkBuddyTest.gdb\\a00000006.CatRelsByDestinationID.atx": "EFBB3455020B8E16C2F24C7F243BDD2FC97B884FEEE18F716F24A1580534EF03",
+      "WorkBuddyTest.gdb\\a00000006.CatRelsByOriginID.atx": "D2A57B3341CEBD2C0151E80EE5D496236783DC0E041B4FE3CDFC6264667FD5E8",
+      "WorkBuddyTest.gdb\\a00000006.CatRelsByType.atx": "874CD3CF8E18824289860DE8913274134F375C97A6168AAB71B4CCAB7C8731EA",
+      "WorkBuddyTest.gdb\\a00000006.FDO_UUID.atx": "FA5E75D2BC329009DABA8EB3A34B124272C1C3DDDBDA041ACA60924FFEFA8582",
+      "WorkBuddyTest.gdb\\a00000006.gdbindexes": "1919A00326F198A90DC97545EC448C10B2B90D367020222212F7B00433FE09B5",
+      "WorkBuddyTest.gdb\\a00000006.gdbtable": "685F6C36D3C53DE9FDFA98204D7E14C9F35BBBE825C1316DC8C8194B0756DA2D",
+      "WorkBuddyTest.gdb\\a00000006.gdbtablx": "E21AF011F0B23126E76C497FD011EB2E52E1F814D974A3C86757BC95DE794723",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByBackwardLabel.atx": "CDAD55C536BD5A3FCCF13384276D3AD71B336838AF83C4C6EBEC9D00D0BB343C",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByDestItemTypeID.atx": "1B6DD887F93D242568FD44BF207EC4927A716D7A547EE92E3F9132CF65AB7F57",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByForwardLabel.atx": "6D3996EE670B41FAB277407B03343BFEFB36D1003549933DF8FBC1C2E70B6540",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByName.atx": "1956FBB73BED5C8DB3BDA819F235F0FDA3E68F2A1A4A02BB78900DB08CFB2792",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByOriginItemTypeID.atx": "515BB2B01D6A70366A77912208B27BD9653E6D64B7AFCE753BF91F232F4D5CAD",
+      "WorkBuddyTest.gdb\\a00000007.CatRelTypesByUUID.atx": "7D09C1DF65343217794377D55BA1E9F1E7BDFBF991DCF71F7423B3B5275F9A26",
+      "WorkBuddyTest.gdb\\a00000007.gdbindexes": "DC98E24D04EDDD7F38905D176C1EA43C547A3A2DAA0C80091A20D3443C726621",
+      "WorkBuddyTest.gdb\\a00000007.gdbtable": "6DF6541C4921721FFAD9A68412D1EF813E79B4D7FF9363815B8AAA8AC51A9BA1",
+      "WorkBuddyTest.gdb\\a00000007.gdbtablx": "DCA874A84875D0A7A7489681FE02DB46F8DF847B490871FEA0762C62818E5BDC",
+      "WorkBuddyTest.gdb\\a00000009.EditingTemplatesByDatasetGUID.atx": "E896573B876AE008AD28CE94C677335B6DA02A3EC99F86FE7F1602D4F79DEE77",
+      "WorkBuddyTest.gdb\\a00000009.EditingTemplatesByName.atx": "6052DFFE7DE6BB2E1701B454B7C318B3874DCD8E49B129039FF583BCE5369D08",
+      "WorkBuddyTest.gdb\\a00000009.EditingTemplatesByType.atx": "F4088D2FF452CF2365F07B589FAEDA6A57B9A2EDE4CE041F0C9A7A877BD7E4BC",
+      "WorkBuddyTest.gdb\\a00000009.FDO_GlobalID.atx": "E896573B876AE008AD28CE94C677335B6DA02A3EC99F86FE7F1602D4F79DEE77",
+      "WorkBuddyTest.gdb\\a00000009.gdbindexes": "AA8AFD7A18A975F96815B60FCB33A4F29327568AE2F8098D20717352D698C762",
+      "WorkBuddyTest.gdb\\a00000009.gdbtable": "D74B9B7303FAE4B4AE9C1058925E83E22867CFEB3C9E544AE2A4DB2FC12F7A5D",
+      "WorkBuddyTest.gdb\\a00000009.gdbtablx": "4E0A9F371D483E96FF8D083ADA7AA0D5A23C1DA5472B6509A44B9514BA1ED2CA",
+      "WorkBuddyTest.gdb\\a0000000a.EditingTemplateRelsByDestinationID.atx": "E896573B876AE008AD28CE94C677335B6DA02A3EC99F86FE7F1602D4F79DEE77",
+      "WorkBuddyTest.gdb\\a0000000a.EditingTemplateRelsByOriginID.atx": "E896573B876AE008AD28CE94C677335B6DA02A3EC99F86FE7F1602D4F79DEE77",
+      "WorkBuddyTest.gdb\\a0000000a.EditingTemplateRelsByType.atx": "F4088D2FF452CF2365F07B589FAEDA6A57B9A2EDE4CE041F0C9A7A877BD7E4BC",
+      "WorkBuddyTest.gdb\\a0000000a.gdbindexes": "7BCB1D3151048BB8E54F8E5165CB430A344008829248C679267B690672F8B369",
+      "WorkBuddyTest.gdb\\a0000000a.gdbtable": "062D5C99361883F7EF9D3DEEB0E59F2E190D627ACC34F54F71594D1E9E6BF4AC",
+      "WorkBuddyTest.gdb\\a0000000a.gdbtablx": "4E0A9F371D483E96FF8D083ADA7AA0D5A23C1DA5472B6509A44B9514BA1ED2CA",
+      "WorkBuddyTest.gdb\\a0000000b.gdbindexes": "760BD4864717C60D5E7C0C6461A622062680E6F79F51250F49456AA609B43774",
+      "WorkBuddyTest.gdb\\a0000000b.gdbtable": "92C35EBE7816274BA1EDDC3743F21BFB5CC41EF0768990DC5028CABAB7D5480F",
+      "WorkBuddyTest.gdb\\a0000000b.gdbtablx": "E9667315A755157727FCBCD8EC2A800B7956CEDBE734E137605653CE2DE5567C",
+      "WorkBuddyTest.gdb\\a0000000b.horizon": "9FAB34115B351A30FB6ADB5818D8F08E4DD3A024B7247DBBC61C56929AB6E223",
+      "WorkBuddyTest.gdb\\a0000000b.spx": "027866F78134DE031571290FAB2599AB7879BD7DF84030EE324B233B891058AA",
+      "WorkBuddyTest.gdb\\a0000000c.gdbindexes": "760BD4864717C60D5E7C0C6461A622062680E6F79F51250F49456AA609B43774",
+      "WorkBuddyTest.gdb\\a0000000c.gdbtable": "668DED6C1141EBE4363DEFBAECDC49DE66BA6D8AA3382205B117BBDF1245E403",
+      "WorkBuddyTest.gdb\\a0000000c.gdbtablx": "65A76CCCC2690C8B2288AD5EF774B160A0785016CF93DDF20E1783400FBE3D56",
+      "WorkBuddyTest.gdb\\a0000000c.horizon": "9FAB34115B351A30FB6ADB5818D8F08E4DD3A024B7247DBBC61C56929AB6E223",
+      "WorkBuddyTest.gdb\\a0000000c.spx": "5864204225306F866AEE251DE1997FC5F74906472662C3AD1D86BE15502B46B1",
+      "WorkBuddyTest.gdb\\a0000000d.gdbindexes": "760BD4864717C60D5E7C0C6461A622062680E6F79F51250F49456AA609B43774",
+      "WorkBuddyTest.gdb\\a0000000d.gdbtable": "2128CA88BC665E647E9C8EF4CC0F525D470EE588DBBA5EF061B6A916AC8286F5",
+      "WorkBuddyTest.gdb\\a0000000d.gdbtablx": "03450E9309588A6AAE028C01114B575F18A50AF8838E189D06E83993C66B5428",
+      "WorkBuddyTest.gdb\\a0000000d.horizon": "9FAB34115B351A30FB6ADB5818D8F08E4DD3A024B7247DBBC61C56929AB6E223",
+      "WorkBuddyTest.gdb\\a0000000d.spx": "79435665477247B39B1AC92B5760E35BBCA0A59D116926DF26F06327C3AD7D7C",
+      "WorkBuddyTest.gdb\\a0000000e.gdbindexes": "F783C7CDCA04F92BE11D622F5ED3E7BE6DC871316A6D7932B7EA4ADD7540845B",
+      "WorkBuddyTest.gdb\\a0000000e.gdbtable": "B1EF4A3EED2A138A481FE3C28EC94C88E6EEF79B7C9297D12945E0C21D6EBBF7",
+      "WorkBuddyTest.gdb\\a0000000e.gdbtablx": "A3752160A1771BB98CE03364F93D4CFA9F0E1DAD79D8BD5A8F2B5B6C2B770B02",
+      "WorkBuddyTest.gdb\\gdb": "2594B6A92EBFB1C3312DEB7D01C015FB95E9FBE9BD7BC6B527AF07813EC7B910",
+      "WorkBuddyTest.gdb\\timestamps": "B3C6ACCFEB203AE17A40EFE5D7FFE5865F57D7CE7FF6D99F791B5D6EDF5657FE"
+    }
+  },
+  "gdb_scratch": {
+    "name": "WorkBuddyScratch.gdb",
+    "purpose": "GP outputs only, cleaned after acceptance"
+  }
+}

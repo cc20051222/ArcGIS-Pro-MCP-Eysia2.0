@@ -1,0 +1,2401 @@
+{
+  "schemaVersion": "d101-synthetic-corpus-v1",
+  "status": "PASS_CANDIDATE",
+  "batch": "D-101",
+  "authorisation": "G-222 R-1 (TS08 generated fixture) and G-222 R-2 (M4 synthetic known-answer sets)",
+  "synthetic": true,
+  "honestyDiscipline": "every artefact here is constructed, not observed. Any benchmark conclusion that cites one must say 合成输入基准. No real-data gap is closed by this corpus, and no frozen byte was edited to make room for it.",
+  "determinism": {
+    "seed": 20260930,
+    "generator": "synthesize_inputs.py",
+    "prng": "LCG state = (state * 1103515245 + 12345) mod 2**31",
+    "arithmetic": "integer or exactly representable decimal wherever possible",
+    "rebuild": "delete Benchmarks/inputs and rerun the script; bytes are reproducible"
+  },
+  "frozenSurfacesUntouched": {
+    "M1": {
+      "anchor": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+      "members": 9,
+      "byteEdited": false
+    },
+    "M4": {
+      "anchor": "F71BF6CD8AB9E8FD64907AA5EC7B3F126D101E00C99ECC42E20704E9AE636FA2",
+      "members": 14,
+      "byteEdited": false
+    },
+    "note": "the corpus is additive: new files under Benchmarks/inputs plus two new face files"
+  },
+  "predicateUnchanged": "comparison-rules-v1 TS08-INPUT-QUAL-001 keeps goldArtifactPath = NOT-AVAILABLE-PENDING-USER; this corpus satisfies the predicate, it does not rewrite it",
+  "groups": {
+    "ts08": {
+      "artefactCount": 6,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x1": {
+      "artefactCount": 7,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x2": {
+      "artefactCount": 9,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x3": {
+      "artefactCount": 7,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x4": {
+      "artefactCount": 10,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x5": {
+      "artefactCount": 10,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x6": {
+      "artefactCount": 11,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x7": {
+      "artefactCount": 13,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    },
+    "x8": {
+      "artefactCount": 5,
+      "kinds": [
+        "answer",
+        "automatic-expectation",
+        "input",
+        "negative",
+        "updated-instance"
+      ],
+      "gdomArtefactsComplete": true
+    }
+  },
+  "totals": {
+    "artefacts": 78,
+    "groups": 9,
+    "bytes": 450414,
+    "rulesCited": [
+      "ALN-001",
+      "DEP-001",
+      "GEO-001",
+      "KDA-001",
+      "LIX-001",
+      "MRC-001",
+      "NFD-001",
+      "NUM-001",
+      "OSV-001",
+      "PCL-001",
+      "PCL-002",
+      "PCL-003",
+      "PKG-001",
+      "PRM-001",
+      "QLT-001",
+      "RMO-001",
+      "RMO-002",
+      "RMO-003",
+      "RMO-004",
+      "SCI-001",
+      "SCN-001",
+      "SCN-002",
+      "SCN-003",
+      "SDU-001",
+      "SDU-002",
+      "SDU-003",
+      "SRC-001",
+      "SRP-001",
+      "STM-001",
+      "STM-002",
+      "STM-003",
+      "STM-005",
+      "TRF-001",
+      "TS08-INPUT-QUAL-001",
+      "TXT-001"
+    ],
+    "scenariosCited": [
+      "S02",
+      "S06",
+      "S09",
+      "S11",
+      "S12",
+      "S18",
+      "S26",
+      "S27",
+      "S29",
+      "S31",
+      "S32",
+      "S33",
+      "S35",
+      "S36",
+      "S37",
+      "S38",
+      "S39",
+      "S40",
+      "S41",
+      "S43",
+      "S44",
+      "S45",
+      "S46",
+      "S47",
+      "S48",
+      "S49",
+      "S50",
+      "S51",
+      "S53",
+      "S54",
+      "S55",
+      "S56",
+      "S57",
+      "S58",
+      "S59",
+      "S60"
+    ],
+    "unfilledAxes": [
+      "COPC",
+      "LAZ",
+      "NetCDF",
+      "Network Analyst solver admission (no entry in the frozen 53-name whitelist)",
+      "Zarr",
+      "a GPU-free inference path actually executed",
+      "a multidimensional raster carrier",
+      "a published geoid or vertical-grid model with a named version",
+      "a real multi-band product with sensor metadata",
+      "a real network dataset with impedance, direction and time attributes",
+      "a real point cloud with a published classification coding",
+      "a real sensor product with acquisition metadata and published QA semantics",
+      "a real time-enabled series with a declared calendar and provenance",
+      "a verified DOCX channel for the report path",
+      "a vertical datum attached to a real elevation product",
+      "an accepted real gold example for TS08",
+      "an approved Open XML generator with a recorded licence for the deck path",
+      "an approved model register entry with a recomputable weight hash",
+      "an expert statement that an error surface is supportable for a chosen method",
+      "editability proved by reopening a real generated file",
+      "independent analyst acceptance of the synthetic gold",
+      "licence and algorithm admission for any real 3D analysis path",
+      "real field observations with a published sampling protocol",
+      "real multi-band product with sensor metadata",
+      "the wider modern-format list beyond RFC 7946 (GeoPackage, COG, GeoParquet, FlatGeobuf, STAC), which has no adapter in the accepted source"
+    ]
+  },
+  "artefacts": [
+    {
+      "artefactId": "D101-TS08-01",
+      "path": "Benchmarks/inputs/ts08/ts08_gold_input_b4.tif",
+      "bytes": 24896,
+      "sha256": "02D200960FB8B9C613612BDDBC9265A6363834621815C007CF0CE559A2B250B7",
+      "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+      "kind": "input",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "per-band closed formula ts08_formula(band,col,row); NoData injected at the 4x3 hole and at a 6-cell right-edge run",
+        "derivedFrom": "none (synthetic; no real sensor, no product metadata)",
+        "reference": "comparison-rules-v1.json TS08-INPUT-QUAL-001 (G-205 ruling, unchanged)"
+      },
+      "satisfiesRules": [
+        "GEO-001",
+        "NUM-001",
+        "SCI-001",
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18",
+        "S44",
+        "S47",
+        "S48"
+      ],
+      "scenarioFace": "M1/M4",
+      "claimLimit": "a synthetic multi-band input that satisfies each clause of the frozen TS08 predicate; it is not a real product and does not retire the real-data gap",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-TS08-02",
+      "path": "Benchmarks/inputs/ts08/ts08_reference_classmap.asc",
+      "bytes": 12505,
+      "sha256": "B60716115341BC5824637DBEEA3FBEC6CCBFE99DE286E189D666F165377D6BBB",
+      "format": "ESRI ASCII grid (int class codes 1-4, NoData -9999)",
+      "kind": "answer",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "threshold rule on the same closed-form bands: nir-red>1200 -> 1; green>700 -> 2; red>900 -> 3; else 4; revision-2 (GATE-G231 R-3 rectification of D103-DEF-01); revision-3 (D-107 extension GATE-G237 R-5: class map yllcorner direction inversion corrected from the gold raster's own ModelTiepoint/ModelPixelScale/height; GeoTIFF is the truth for both artefacts)",
+        "derivedFrom": "ts08_gold_input_b4.tif"
+      },
+      "satisfiesRules": [
+        "SCI-001",
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18",
+        "S44",
+        "S47",
+        "S48"
+      ],
+      "scenarioFace": "M1/M4",
+      "claimLimit": "the independent-path class answer for the synthetic scene; it is a construction, not an observed land cover",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-TS08-03",
+      "path": "Benchmarks/inputs/ts08/ts08_negative_repeated_lineage_b3.tif",
+      "bytes": 18748,
+      "sha256": "21E943789A305C984A76255DB5AA5194ABC8C1B9F0D3E66C70C9F5C5C27F8120",
+      "format": "GeoTIFF (3 bands, byte-identical copies of one band)",
+      "kind": "negative",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "the same band written three times",
+        "derivedFrom": "ts08_gold_input_b4.tif"
+      },
+      "satisfiesRules": [
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18"
+      ],
+      "scenarioFace": "M1",
+      "claimLimit": "must be refused by the frozen rejectRepeatedSingleBandLineage clause; a product that accepts it has not met the predicate",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-TS08-04",
+      "path": "Benchmarks/inputs/ts08/ts08_gold_input_updated_b4.tif",
+      "bytes": 24896,
+      "sha256": "9FFDCA0483FEB26FBCD81EFB5F0BCFA90BFC67F78AD31570785DB88FB2180104",
+      "format": "GeoTIFF (4 bands, one band raised by 100 in a 8x10 block)",
+      "kind": "updated-instance",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "band B02 += 100 over rows 20-27 and columns 30-39 where valid",
+        "derivedFrom": "ts08_gold_input_b4.tif"
+      },
+      "satisfiesRules": [
+        "SRC-001",
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18",
+        "S29"
+      ],
+      "scenarioFace": "M1",
+      "claimLimit": "the updated instance: exactly 80 pixels change in one band and no other band moves",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-TS08-05",
+      "path": "Benchmarks/inputs/ts08/ts08_qualification.json",
+      "bytes": 4729,
+      "sha256": "04C3E026B2C46B881AB07E9924A453199C9A0286EDB945B0ECBAC1C085F2DCD1",
+      "format": "JSON (clause-by-clause qualification walk)",
+      "kind": "answer",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "each clause of the frozen predicate is answered with a recomputable field; revision-2 (GATE-G231 R-3 rectification of D103-DEF-01); revision-3 (D-107 extension GATE-G237 R-5: class map yllcorner direction inversion corrected from the gold raster's own ModelTiepoint/ModelPixelScale/height; GeoTIFF is the truth for both artefacts)",
+        "derivedFrom": "ts08_gold_input_b4.tif, ts08_reference_classmap.asc"
+      },
+      "satisfiesRules": [
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18",
+        "S44",
+        "S47",
+        "S48"
+      ],
+      "scenarioFace": "M1/M4",
+      "claimLimit": "a qualification record for a synthetic fixture; it satisfies the predicate without claiming that the real-data gap is closed",
+      "unfilledAxes": [
+        "independent analyst acceptance of the synthetic gold",
+        "real multi-band product with sensor metadata"
+      ]
+    },
+    {
+      "artefactId": "D101-TS08-06",
+      "path": "Benchmarks/inputs/ts08/ts08_automatic_expectation.json",
+      "bytes": 930,
+      "sha256": "ED7477F236A3211842E928F23E72F1846DFB326CDDAC8B85D41A2597B1D0C996",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "ts08",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_ts08",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group; revision-2 (GATE-G231 R-3 rectification of D103-DEF-01)",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S18"
+      ],
+      "scenarioFace": "M1",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": [
+        "an accepted real gold example for TS08"
+      ]
+    },
+    {
+      "artefactId": "D101-X1-01",
+      "path": "Benchmarks/inputs/x1/x1_events_space_time.csv",
+      "bytes": 46893,
+      "sha256": "0917D74CC6E3399747FF5CF1ED0C542D908883DE6E29E9229BD5CEA70BE34BA4",
+      "format": "CSV (event_id, unit, value, t, tz)",
+      "kind": "input",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260930,
+        "algorithm": "days 0-89 minus the declared gap, slots 00 and 12 (+08:00), per-unit count (day*7 + unit*3 + slotflag) % 3; six rows re-expressed in +09:00; three rows with no time at all",
+        "derivedFrom": "none (synthetic event log)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "STM-001"
+      ],
+      "scenarioRefs": [
+        "S31"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a synthetic time-enabled event table with a declared calendar, a declared coverage gap and declared mixed offsets; not observed events",
+      "unfilledAxes": [
+        "a real time-enabled series with a declared calendar and provenance"
+      ]
+    },
+    {
+      "artefactId": "D101-X1-02",
+      "path": "Benchmarks/inputs/x1/x1_answer_bins.json",
+      "bytes": 3598,
+      "sha256": "EC3AC1A0998F9826513B5D71FE5A57310349ED50D9ED5F65F5BFB5BFE9745C89",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260930,
+        "algorithm": "exact integer bin counts under the published rule",
+        "derivedFrom": "x1_events_space_time.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "STM-001"
+      ],
+      "scenarioRefs": [
+        "S31"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a construction answer; a tool must reproduce it, not the reverse",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X1-03",
+      "path": "Benchmarks/inputs/x1/x1_negative_no_time_field.csv",
+      "bytes": 278,
+      "sha256": "8712D2446F2C8809368409B226FCCC2BC3C0194D7DBD535F28E9BD1C97A28C8A",
+      "format": "CSV without any time column",
+      "kind": "negative",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260930,
+        "algorithm": "the first twenty rows with t and tz removed",
+        "derivedFrom": "x1_events_space_time.csv"
+      },
+      "satisfiesRules": [
+        "PRM-001",
+        "STM-001"
+      ],
+      "scenarioRefs": [
+        "S31"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "must be refused before output with the missing time field named; a refusal is the pass",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X1-04",
+      "path": "Benchmarks/inputs/x1/x1_events_space_time_updated.csv",
+      "bytes": 49643,
+      "sha256": "E01FD79880861775CBD298FF8A684D64EBCE59FEBF32BD8180B9E9500A42D9BC",
+      "format": "CSV (input plus 60 declared new rows in bin B07)",
+      "kind": "updated-instance",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260930,
+        "algorithm": "30 rows added to U2 and 30 to U3 inside week bin B07",
+        "derivedFrom": "x1_events_space_time.csv"
+      },
+      "satisfiesRules": [
+        "SRC-001",
+        "STM-001"
+      ],
+      "scenarioRefs": [
+        "S31"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance: the published delta is exactly +30 to U2/B07 and +30 to U3/B07 and no other cell moves",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X1-05",
+      "path": "Benchmarks/inputs/x1/x1_answer_change_point.json",
+      "bytes": 2799,
+      "sha256": "EDC6B3127763476F93B4EFAC48D607F1EF3421CB9AC845142FD016B829D47F09",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260941,
+        "algorithm": "three exact levels plus a bounded LCG offset in [-4,4]",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "STM-002"
+      ],
+      "scenarioRefs": [
+        "S32"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for change-point detection on a synthetic series",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X1-06",
+      "path": "Benchmarks/inputs/x1/x1_answer_forecast.json",
+      "bytes": 3915,
+      "sha256": "F156452F1A48E5D0C2F024F6EEA7E16F7870E36097F7506094524B6E9EDC4605",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260952,
+        "algorithm": "exact linear trend plus a bounded LCG noise; the published half-width is the smallest integer whose held-out coverage lands inside the frozen band",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "OSV-001",
+        "STM-003"
+      ],
+      "scenarioRefs": [
+        "S33"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for a held-out forecast interval on a synthetic series",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X1-07",
+      "path": "Benchmarks/inputs/x1/x1_animation_expectation.json",
+      "bytes": 1114,
+      "sha256": "8B244DD4C058A017745A40BA30819D0F9A98C5362A42CC4A87992CBBD6302F96",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x1",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x1",
+        "seed": 20260930,
+        "algorithm": "frames derived from the published bin totals",
+        "derivedFrom": "x1_answer_bins.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "STM-005"
+      ],
+      "scenarioRefs": [
+        "S35"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record; no frame was rendered",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-01",
+      "path": "Benchmarks/inputs/x2/x2_surface.asc",
+      "bytes": 6991,
+      "sha256": "BD3C3A6D42830137607B0A44B1BB8FB17D04EC2EAAF5474F36967C71FE8D7FD8",
+      "format": "ESRI ASCII grid (float, cell 1.0, NoData -9999)",
+      "kind": "input",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "z = 2*col + 3*row, plus a raised wall block rows 12-14 cols 5-35 (+40) and a 3x3 NoData hole rows 5-7 cols 8-10",
+        "derivedFrom": "none (synthetic surface; not observed terrain)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SCN-002",
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S36",
+        "S37",
+        "S38",
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a surface whose every value is recomputable from a closed formula; it is not terrain with a vertical datum, and no datum claim is made",
+      "unfilledAxes": [
+        "a vertical datum attached to a real elevation product",
+        "licence and algorithm admission for any real 3D analysis path"
+      ]
+    },
+    {
+      "artefactId": "D101-X2-02",
+      "path": "Benchmarks/inputs/x2/x2_observers.csv",
+      "bytes": 50,
+      "sha256": "A828B692D0EBE7B2422591E338D8753715F44C6F66EBF6B5A1E1043C67930FCE",
+      "format": "CSV",
+      "kind": "input",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "three observers with published heights above the surface",
+        "derivedFrom": "x2_surface.asc"
+      },
+      "satisfiesRules": [
+        "SCN-002"
+      ],
+      "scenarioRefs": [
+        "S37",
+        "S38"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "observer set for the occlusion answer",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-03",
+      "path": "Benchmarks/inputs/x2/x2_answer_viewshed.json",
+      "bytes": 1387,
+      "sha256": "6D9EBE28FD88A5812F2A7BB84A50A9237FFF8D4290317AF2B8D3B8B2D7265716",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "line-of-sight sampling under the published predicate",
+        "derivedFrom": "x2_surface.asc, x2_observers.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SCN-002"
+      ],
+      "scenarioRefs": [
+        "S37",
+        "S38"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the independent-path visibility answer for the synthetic surface; it is not a licence or product proof for any real viewshed tool",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-04",
+      "path": "Benchmarks/inputs/x2/x2_answer_profile.json",
+      "bytes": 2289,
+      "sha256": "4235F47363ED888DB8EE9D4EB5EC9D2FAC81409AA12BF99F87BCF192B0385AAD",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "exact profile of the published surface at interval 2.0",
+        "derivedFrom": "x2_surface.asc"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S36"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known profile answer including the published break list",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-05",
+      "path": "Benchmarks/inputs/x2/x2_surface_after.asc",
+      "bytes": 7062,
+      "sha256": "A9862B77E4BDF65D00B97B2FAEEC0CA718F06DFC6100B0B0BB31460D72AFC4C8",
+      "format": "ESRI ASCII grid (the after state)",
+      "kind": "input",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "the before surface plus a constant 5.0 over every valid cell",
+        "derivedFrom": "x2_surface.asc"
+      },
+      "satisfiesRules": [
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the second surface for the earthworks answer",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-06",
+      "path": "Benchmarks/inputs/x2/x2_answer_cutfill.json",
+      "bytes": 562,
+      "sha256": "A4453D6DAEA795EEB23140B4A7F2189989FD44D3D3A6FD9E764CF98FB61C46CC",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "closed-form prism volume over the common grid",
+        "derivedFrom": "x2_surface.asc, x2_surface_after.asc"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NUM-001",
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known earthworks answer for the synthetic pair",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-07",
+      "path": "Benchmarks/inputs/x2/x2_negative_grid_mismatch.asc",
+      "bytes": 1616,
+      "sha256": "EAFB52258D3DD4A7A07994D2F45825B7812A5EB8CED71999F7E43EB3ADA0F465",
+      "format": "ESRI ASCII grid (cell 2.0, different extent)",
+      "kind": "negative",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "a smaller grid with a doubled cell size",
+        "derivedFrom": "x2_surface.asc"
+      },
+      "satisfiesRules": [
+        "ALN-001",
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "must be refused before output with the grid disagreement named; silently resampling to force agreement fails the row",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-08",
+      "path": "Benchmarks/inputs/x2/x2_surface_updated.asc",
+      "bytes": 6991,
+      "sha256": "9D2D4CED7B9C701BD7C064A2E766DB9D4FAF83FC28AC8C8FC2B8C9AA1B52DDE2",
+      "format": "ESRI ASCII grid (+1.0 over a 5x5 block)",
+      "kind": "updated-instance",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "rows 2-6 and columns 15-19 raised by 1.0 where valid",
+        "derivedFrom": "x2_surface.asc"
+      },
+      "satisfiesRules": [
+        "SCN-003",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S36",
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance: exactly 25 cells change and the published volume delta is 25.0",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X2-09",
+      "path": "Benchmarks/inputs/x2/x2_automatic_expectation.json",
+      "bytes": 570,
+      "sha256": "454E6866A7E0471F16CAF19874548B8548949C48D0BA306CDEC30796949C77F9",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x2",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x2",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SCN-001",
+        "SCN-002",
+        "SCN-003"
+      ],
+      "scenarioRefs": [
+        "S36",
+        "S37",
+        "S39"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-01",
+      "path": "Benchmarks/inputs/x3/x3_cloud_epoch1.las",
+      "bytes": 48227,
+      "sha256": "C3E55EC0C7CB149B34ED8EAAE73AD294EEC4B365A0B3ED3D27561C55EBE56DA5",
+      "format": "ASPRS LAS 1.2, public header 227 bytes, point data record format 0 (20 bytes), scale 0.01",
+      "kind": "input",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260963,
+        "algorithm": "a 20x20 cell lattice, five points per cell; class 2 ground on the plane z=50+0.1c+0.2r, class 6 buildings (+8.0) in rows 2-6 cols 2-6, class 5 vegetation (+3.0+0.1*(r%4)) from column 10 with two returns",
+        "derivedFrom": "none (synthetic point cloud)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "PCL-001",
+        "PCL-002"
+      ],
+      "scenarioRefs": [
+        "S40",
+        "S41"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a synthetic LAS file; format support of a real reader in the product remains NOT VERIFIED",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-02",
+      "path": "Benchmarks/inputs/x3/x3_answer_counts.json",
+      "bytes": 1012,
+      "sha256": "DC12F8CD2494E7B59FC7BE8A33FCB8E267A111315EA57D0EE31B73ADD604C775",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260963,
+        "algorithm": "counts and centimetre sums over the written records, read back from the file",
+        "derivedFrom": "x3_cloud_epoch1.las"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NUM-001",
+        "PCL-001",
+        "PCL-002"
+      ],
+      "scenarioRefs": [
+        "S40",
+        "S41"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for counts and conservation on the synthetic cloud",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-03",
+      "path": "Benchmarks/inputs/x3/x3_cloud_epoch2.las",
+      "bytes": 45427,
+      "sha256": "2A5A1C0167515866BF8251D22587CC1FDD52F4F8632CA2244090A624AC0D2F8F",
+      "format": "ASPRS LAS 1.2 (second epoch)",
+      "kind": "input",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260970,
+        "algorithm": "epoch 1 geometry with vegetation lifted by 0.4, an injected +0.5 x shift for columns 10-19 and a declared density loss in rows 3-6 columns 12-16",
+        "derivedFrom": "x3_cloud_epoch1.las"
+      },
+      "satisfiesRules": [
+        "PCL-003"
+      ],
+      "scenarioRefs": [
+        "S43"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the second synthetic epoch, including a deliberate misregistration to be caught",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-04",
+      "path": "Benchmarks/inputs/x3/x3_answer_epochs.json",
+      "bytes": 1406,
+      "sha256": "85D413C07E49378A1DCE959D4644C03772ADE1ECA34628788BCF8FF41AD529C1",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260970,
+        "algorithm": "per-cell density and the injected shift zone",
+        "derivedFrom": "x3_cloud_epoch1.las, x3_cloud_epoch2.las"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "PCL-003",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S43"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for the epoch pre-check",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-05",
+      "path": "Benchmarks/inputs/x3/x3_negative_unsupported_formats.json",
+      "bytes": 540,
+      "sha256": "0C6A67B953D7C4030F5A9A29D8FD1A6620E9CC8B110B91B4938A91FF7D437FC3",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260930,
+        "algorithm": "a refusal case, not a data case",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "PCL-001"
+      ],
+      "scenarioRefs": [
+        "S40"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "keeps the format axis honest",
+      "unfilledAxes": [
+        "COPC",
+        "LAZ"
+      ]
+    },
+    {
+      "artefactId": "D101-X3-06",
+      "path": "Benchmarks/inputs/x3/x3_cloud_epoch1_updated.las",
+      "bytes": 52227,
+      "sha256": "EA6631188BB9BF4E4F223FC38FF924F6D6A378D429295A2773516C8E57A0C5E5",
+      "format": "ASPRS LAS 1.2 (one extra point in the first 200 cells)",
+      "kind": "updated-instance",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260963,
+        "algorithm": "epoch 1 plus 200 extra points",
+        "derivedFrom": "x3_cloud_epoch1.las"
+      },
+      "satisfiesRules": [
+        "PCL-001",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S40"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance: 200 extra points, no other record moves",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X3-07",
+      "path": "Benchmarks/inputs/x3/x3_automatic_expectation.json",
+      "bytes": 520,
+      "sha256": "98D164641965B77560BF6042F7FAE3C3D69B30F43CAA3058E47FB481845A253D",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x3",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x3",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "PCL-001",
+        "PCL-002"
+      ],
+      "scenarioRefs": [
+        "S40",
+        "S41"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": [
+        "COPC",
+        "LAZ",
+        "a real point cloud with a published classification coding"
+      ]
+    },
+    {
+      "artefactId": "D101-X4-01",
+      "path": "Benchmarks/inputs/x4/x4_image_qa_b5.tif",
+      "bytes": 8964,
+      "sha256": "F2940D7F1372BEA8126C4F4E9976AB29642A8B111D8801D09CE6F7F72C81D44B",
+      "format": "GeoTIFF (4 reflectance bands plus one QA bit band, int16, cell 10.0, EPSG:32651)",
+      "kind": "input",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "closed-form reflectance per band; a QA bit band with bit0 cloud, bit1 shadow, six cells carrying an unknown code 4 and one NoData corner",
+        "derivedFrom": "none (synthetic scene, no sensor, no product metadata)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "RMO-001",
+        "RMO-002",
+        "TS08-INPUT-QUAL-001"
+      ],
+      "scenarioRefs": [
+        "S44",
+        "S45",
+        "S47"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a synthetic multi-band scene with a synthetic QA band; it is not imagery and does not retire the real-product gap",
+      "unfilledAxes": [
+        "a real sensor product with acquisition metadata and published QA semantics"
+      ]
+    },
+    {
+      "artefactId": "D101-X4-02",
+      "path": "Benchmarks/inputs/x4/x4_answer_mask.json",
+      "bytes": 689,
+      "sha256": "8BA316B57694C0248E58B7284B1B1117066CD9101D46CE2DBE294B53E63AB7B7",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "counts and position checksums under the published adapter table",
+        "derivedFrom": "x4_image_qa_b5.tif"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "RMO-001",
+        "RMO-002"
+      ],
+      "scenarioRefs": [
+        "S44"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for the mask and for honest unknown-code handling",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-03",
+      "path": "Benchmarks/inputs/x4/x4_train_points.csv",
+      "bytes": 53,
+      "sha256": "09BF996F2249DBCB80CBB5AB62331B784CA394A25E8321AE0D659A65DDA27EAC",
+      "format": "CSV (x,y,class)",
+      "kind": "input",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "six labelled training points",
+        "derivedFrom": "x4_class_legend.json"
+      },
+      "satisfiesRules": [
+        "RMO-003"
+      ],
+      "scenarioRefs": [
+        "S45"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "training samples for the synthetic scene",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-04",
+      "path": "Benchmarks/inputs/x4/x4_val_points.csv",
+      "bytes": 110,
+      "sha256": "8BD1F23C5877F7FF965BDFBCEDC33435B70A552B73C1107BD38248E897AF1556",
+      "format": "CSV (x,y,referenceClass)",
+      "kind": "input",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "twelve independent reference points, all with x >= 60",
+        "derivedFrom": "none (independent reference by construction)"
+      },
+      "satisfiesRules": [
+        "RMO-003"
+      ],
+      "scenarioRefs": [
+        "S45",
+        "S46"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the independent reference for accuracy; it is not drawn from the training points",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-05",
+      "path": "Benchmarks/inputs/x4/x4_class_legend.json",
+      "bytes": 2388,
+      "sha256": "174B557EEFC1D25BD1C3EB236E88BBDB1ACCD479F1664A489167180F5773742D",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "confusion matrix and accuracy fractions computed from the published reference and the planted error list",
+        "derivedFrom": "x4_train_points.csv, x4_val_points.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NUM-001",
+        "RMO-003",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S45",
+        "S46"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for classification accuracy on a synthetic reference",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-06",
+      "path": "Benchmarks/inputs/x4/x4_trend_stack_b12.tif",
+      "bytes": 5536,
+      "sha256": "2EFA9D827E36076F922CA613DF863BDC39D6F08CCDA955A88F33BC2F2C1F9C25",
+      "format": "GeoTIFF (12 date bands on one grid, int16)",
+      "kind": "input",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "per-cell exact linear trend base + slope*date with declared missing dates",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "RMO-004"
+      ],
+      "scenarioRefs": [
+        "S49"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a synthetic multi-date stack that shares one grid by construction",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-07",
+      "path": "Benchmarks/inputs/x4/x4_answer_trend.json",
+      "bytes": 4589,
+      "sha256": "C1382151730962B407746CA6FCFCC1BA9B1FE74B48982BB57B10115455CE1729",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "exact slopes from the generating formula",
+        "derivedFrom": "x4_trend_stack_b12.tif"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "RMO-004"
+      ],
+      "scenarioRefs": [
+        "S49"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for trend and effective-sample handling",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-08",
+      "path": "Benchmarks/inputs/x4/x4_negative_stack_grid_mismatch.tif",
+      "bytes": 1168,
+      "sha256": "2F3C55773A54865546DE321E2E64046B0291ED3D13BC7DC848C13F2CA74BEDFF",
+      "format": "GeoTIFF (two bands at cell 20.0)",
+      "kind": "negative",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "the first two date bands rewritten on a doubled cell",
+        "derivedFrom": "x4_trend_stack_b12.tif"
+      },
+      "satisfiesRules": [
+        "ALN-001",
+        "RMO-004"
+      ],
+      "scenarioRefs": [
+        "S49"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "must be refused before output with the grid disagreement named",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-09",
+      "path": "Benchmarks/inputs/x4/x4_image_qa_updated_b5.tif",
+      "bytes": 8964,
+      "sha256": "FA022D4749D5A786AA92D4DA555AD149AB6131C62E67B642F60FA395207B55E5",
+      "format": "GeoTIFF (a 3x4 cloud blob added to the QA band)",
+      "kind": "updated-instance",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "QA band only: 12 cells set to cloud",
+        "derivedFrom": "x4_image_qa_b5.tif"
+      },
+      "satisfiesRules": [
+        "RMO-002",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S44"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance: cloud cells go from 28 to 40, shadow cells unchanged, one band only moves",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X4-10",
+      "path": "Benchmarks/inputs/x4/x4_automatic_expectation.json",
+      "bytes": 661,
+      "sha256": "8A5708920FB01096AD272E3939BE0339EE7857843BB43019BFC5EE75D33C9D07",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x4",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x4",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "MRC-001",
+        "RMO-001",
+        "RMO-002",
+        "RMO-003",
+        "RMO-004"
+      ],
+      "scenarioRefs": [
+        "S44",
+        "S45",
+        "S47",
+        "S48"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record only; the registered-model artefact axis stays open",
+      "unfilledAxes": [
+        "a GPU-free inference path actually executed",
+        "a real multi-band product with sensor metadata",
+        "an approved model register entry with a recomputable weight hash"
+      ]
+    },
+    {
+      "artefactId": "D101-X5-01",
+      "path": "Benchmarks/inputs/x5/x5_design_brief.json",
+      "bytes": 994,
+      "sha256": "EB055EA3DD121EBFEDDC41619948A9F8AAD3F4BD2988BDD64E86AD95728382BA",
+      "format": "JSON",
+      "kind": "input",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260985,
+        "algorithm": "the published design rules",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SDU-001"
+      ],
+      "scenarioRefs": [
+        "S50",
+        "S53"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the brief a run must echo; nothing is inferred beyond it",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-02",
+      "path": "Benchmarks/inputs/x5/x5_strata.geojson",
+      "bytes": 2423,
+      "sha256": "DD519FE3713702EDE829107127D74C4A5A5C6AAA746AFE01F79C99D616669B38",
+      "format": "GeoJSON (RFC 7946, closed rings, lon/lat order)",
+      "kind": "input",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "four closed rectangles",
+        "derivedFrom": "x5_design_brief.json"
+      },
+      "satisfiesRules": [
+        "LIX-001",
+        "SDU-001"
+      ],
+      "scenarioRefs": [
+        "S50"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "synthetic strata geometry",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-03",
+      "path": "Benchmarks/inputs/x5/x5_answer_sample.json",
+      "bytes": 3116,
+      "sha256": "826ADD073C34BE2A74E7081252FECDCC3276924441CE2E1E5DCB4AB371C055AC",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260985,
+        "algorithm": "the published greedy design",
+        "derivedFrom": "x5_design_brief.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SDU-001"
+      ],
+      "scenarioRefs": [
+        "S50"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for a reproducible sample design",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-04",
+      "path": "Benchmarks/inputs/x5/x5_negative_no_seed.json",
+      "bytes": 389,
+      "sha256": "DB1FBB056A85CADA38BF1EAAF81CE146F931774A6A94424A6C2CD0D2EB4F27C5",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "a refusal case",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "PRM-001",
+        "SDU-001"
+      ],
+      "scenarioRefs": [
+        "S50"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "reproducibility is a gate, not a nicety",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-05",
+      "path": "Benchmarks/inputs/x5/x5_observations.csv",
+      "bytes": 863,
+      "sha256": "001AA6424B50DDFD8DD7101EDB9C3D06F32E211C31A72014A139D2BC86185183",
+      "format": "CSV (x,y,z integers on an exact plane)",
+      "kind": "input",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "z = 2x + 3y over an 11x11 unit lattice",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "SDU-002"
+      ],
+      "scenarioRefs": [
+        "S51"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "synthetic observations",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-06",
+      "path": "Benchmarks/inputs/x5/x5_answer_interpolation.json",
+      "bytes": 1188,
+      "sha256": "5A5B4B739ADAF6274F6141739F5FA6375BF3509A784608EDEA02EFEEC0581893",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "closed-form plane values doubled to stay integral",
+        "derivedFrom": "x5_observations.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "OSV-001",
+        "SDU-002"
+      ],
+      "scenarioRefs": [
+        "S51"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for interpolation exactness and fold hygiene",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-07",
+      "path": "Benchmarks/inputs/x5/x5_negative_leaky_folds.json",
+      "bytes": 652,
+      "sha256": "B86207F42C9B2D65D0C8308FC07D20C12B0A9D1234F19C4741F84F07E7D2328F",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "a deliberately leaky split",
+        "derivedFrom": "x5_observations.csv"
+      },
+      "satisfiesRules": [
+        "SDU-002"
+      ],
+      "scenarioRefs": [
+        "S51"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "keeps leakage a failure, not a rounding note",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-08",
+      "path": "Benchmarks/inputs/x5/x5_answer_decision.json",
+      "bytes": 2495,
+      "sha256": "F02D4190457BA65249E687E57A200C3FDB0B1B8C134400E7379BE23E58252281",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "integer weighted sums with the direction rule published",
+        "derivedFrom": "x5_design_brief.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "OSV-001",
+        "SDU-003"
+      ],
+      "scenarioRefs": [
+        "S12",
+        "S51",
+        "S53",
+        "S54"
+      ],
+      "scenarioFace": "M4/M2",
+      "claimLimit": "the known answer for ranking, ensemble wording and the assumption catalogue",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-09",
+      "path": "Benchmarks/inputs/x5/x5_automatic_expectation.json",
+      "bytes": 482,
+      "sha256": "F4534379A371377CD63D8170A6E0C90A4321E1F53AD98FF92FB1B6BEDD844472",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SDU-001",
+        "SDU-002",
+        "SDU-003"
+      ],
+      "scenarioRefs": [
+        "S50",
+        "S51",
+        "S53",
+        "S54"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": [
+        "an expert statement that an error surface is supportable for a chosen method",
+        "real field observations with a published sampling protocol"
+      ]
+    },
+    {
+      "artefactId": "D101-X6-01",
+      "path": "Benchmarks/inputs/x6/x6_network.json",
+      "bytes": 1754,
+      "sha256": "8FD132863465DFFAE417800EEDD78A918739C0DAA561EB26ACB2DEC2CEEDC350",
+      "format": "JSON (nodes, directed edges, integer impedance)",
+      "kind": "input",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "a fixed graph definition",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S09",
+        "S55",
+        "S56",
+        "S57",
+        "S58"
+      ],
+      "scenarioFace": "M4/M3",
+      "claimLimit": "the synthetic network for every X6 answer",
+      "unfilledAxes": [
+        "Network Analyst solver admission (no entry in the frozen 53-name whitelist)",
+        "a real network dataset with impedance, direction and time attributes"
+      ]
+    },
+    {
+      "artefactId": "D101-X6-02",
+      "path": "Benchmarks/inputs/x6/x6_answer_od.json",
+      "bytes": 1337,
+      "sha256": "B0B7404117F2451A7117751308B42543A9B2DB693F8F4983E8ACA96B751A73D4",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "shortest paths over the published graph",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001",
+        "NUM-001"
+      ],
+      "scenarioRefs": [
+        "S09",
+        "S55"
+      ],
+      "scenarioFace": "M4/M3",
+      "claimLimit": "the known answer for OD cost and for honest unreachability",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-03",
+      "path": "Benchmarks/inputs/x6/x6_answer_facilities.json",
+      "bytes": 1368,
+      "sha256": "C45E21727A410475CF253CFB461F01F32F3E4E5730971E0B10DEE3957638AB6E",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "directed cost comparison per demand",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S09",
+        "S55"
+      ],
+      "scenarioFace": "M3/M4",
+      "claimLimit": "the known answer for nearest-facility assignment",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-04",
+      "path": "Benchmarks/inputs/x6/x6_answer_allocation.json",
+      "bytes": 1019,
+      "sha256": "D77EE6541AD72ED8D6E182F4B69F358C67B32A1593ABAE439AF1993CC4B24C11",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "exhaustive enumeration over C(4,2)",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S56"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the hand-verifiable optimum for a tiny location-allocation instance",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-05",
+      "path": "Benchmarks/inputs/x6/x6_answer_vrp.json",
+      "bytes": 1669,
+      "sha256": "6F7C7229A709DCB5862829CFA7C959162E634F7997A5ED105D3703309E5E1C5F",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "a feasible published solution with its constraint ledger",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S57"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for a small fleet instance including an infeasible order",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-06",
+      "path": "Benchmarks/inputs/x6/x6_answer_disruption.json",
+      "bytes": 478,
+      "sha256": "CE4DE6D5C32554232E31DD748459F58E40B43860B045D3FE0B29E12088912DAD",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "graph reachability before and after the removal",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "DEP-001",
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S58"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for the disruption scenario",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-07",
+      "path": "Benchmarks/inputs/x6/x6_cost_surface.asc",
+      "bytes": 582,
+      "sha256": "E329F557E5DEE0D1447ED67D8B6215AFA89E4049B2269950B862DA6491E42B5E",
+      "format": "ESRI ASCII grid (integer traversal costs, 255 = impassable)",
+      "kind": "input",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "cost 5 + (col % 4) with a four-cell barrier at 4:3, 4:4, 4:5 and 5:4",
+        "derivedFrom": "none (synthetic cost surface)"
+      },
+      "satisfiesRules": [
+        "ALN-001",
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S11"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "a synthetic accumulation surface; it is not a road impedance and carries no time unit",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-08",
+      "path": "Benchmarks/inputs/x6/x6_answer_costdistance.json",
+      "bytes": 2449,
+      "sha256": "6788A7189AAFE5E67004FFCE188B3A62F28C2481268E2048DF932D365B351398",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "uniform-cost search over the published grid",
+        "derivedFrom": "x6_cost_surface.asc"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S11"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "the known answer for cumulative cost including barrier unreachability",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-09",
+      "path": "Benchmarks/inputs/x6/x6_negative_disconnected.json",
+      "bytes": 335,
+      "sha256": "4F64BD31D3B93099B619C62DC87CE37D22BDB46C1F843D5ABA2D3A843C28036E",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "a refusal case",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S55",
+        "S58"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "keeps a disconnect unfabricable",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-10",
+      "path": "Benchmarks/inputs/x6/x6_updated_network.json",
+      "bytes": 1798,
+      "sha256": "29CAB86012FC28FD09681481A51BA1F4464CBA4DF34C735C28EDA3CB6EF0C2AF",
+      "format": "JSON",
+      "kind": "updated-instance",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "one edge changed, everything else identical",
+        "derivedFrom": "x6_network.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S55",
+        "S58"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance with its published path-cost deltas",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X6-11",
+      "path": "Benchmarks/inputs/x6/x6_automatic_expectation.json",
+      "bytes": 608,
+      "sha256": "4ED9FE08656FDD021B2ACB4B55CFD49B89DB1B9072080AA178C7863F0D42428A",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x6",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x6",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "NFD-001"
+      ],
+      "scenarioRefs": [
+        "S55",
+        "S56",
+        "S57",
+        "S58"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-01",
+      "path": "Benchmarks/inputs/x7/x7_conformant.geojson",
+      "bytes": 922,
+      "sha256": "FEE2D6296F0807D39F93E40804C37F1ED6D4A6B9F575756700DA19CCD37498DB",
+      "format": "GeoJSON (RFC 7946 (GeoJSON))",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "a closed counter-clockwise ring and one point feature",
+        "derivedFrom": "none (synthetic geometry)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M2/M4",
+      "claimLimit": "a conformant interchange sample, not a real exchange product",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-02",
+      "path": "Benchmarks/inputs/x7/x7_nonconformant.geojson",
+      "bytes": 886,
+      "sha256": "028951AFC7F96C146EB9E8630F25AC343E6C4AD57ECCF9B7CD647BBD800D6AA0",
+      "format": "GeoJSON with three deliberate violations (RFC 7946 (GeoJSON))",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "an unclosed ring, a member whose type is not Feature, and coordinates outside the valid ranges",
+        "derivedFrom": "x7_conformant.geojson"
+      },
+      "satisfiesRules": [
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M2/M4",
+      "claimLimit": "the negative interchange sample",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-03",
+      "path": "Benchmarks/inputs/x7/x7_answer_conformance.json",
+      "bytes": 851,
+      "sha256": "2582451954D49A6B8FB9ACD9A32B11FFF7BC205B4470020EDE701F6C00653F23",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "the named standard checks over the published files",
+        "derivedFrom": "x7_conformant.geojson, x7_nonconformant.geojson"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001",
+        "QLT-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M2/M4",
+      "claimLimit": "the known answer for conformance reporting",
+      "unfilledAxes": [
+        "the wider modern-format list beyond RFC 7946 (GeoPackage, COG, GeoParquet, FlatGeobuf, STAC), which has no adapter in the accepted source"
+      ]
+    },
+    {
+      "artefactId": "D101-X7-04",
+      "path": "Benchmarks/inputs/x7/x7_vertical_grid.asc",
+      "bytes": 496,
+      "sha256": "8874C4B1CFDAF6F6F5F6A869AAC71717D427FAFADC91142244F953A621C04AEB",
+      "format": "ESRI ASCII grid (geoid offsets, metres)",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "a checkerboard of 5.0 and 6.0 m offsets",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S02",
+        "S36"
+      ],
+      "scenarioFace": "M2/M4",
+      "claimLimit": "a synthetic offset surface; it is not a published geoid model",
+      "unfilledAxes": [
+        "a published geoid or vertical-grid model with a named version"
+      ]
+    },
+    {
+      "artefactId": "D101-X7-05",
+      "path": "Benchmarks/inputs/x7/x7_z_points.csv",
+      "bytes": 73,
+      "sha256": "921B1D609A34BFF90225E22340FA1A9E62BCA1ADDF8169AF17A07B1FCD53712F",
+      "format": "CSV (id,x,y,zEll)",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "four Z-bearing points",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S02"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "Z points to transform",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-06",
+      "path": "Benchmarks/inputs/x7/x7_answer_vertical.json",
+      "bytes": 863,
+      "sha256": "8CFCAB8F3E721B73FCFE1FAFCE421531C332748E5230B554A9DD57F87133D0EC",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "exact subtraction on published values, doubled centimetres to stay integral",
+        "derivedFrom": "x7_vertical_grid.asc, x7_z_points.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001",
+        "TRF-001"
+      ],
+      "scenarioRefs": [
+        "S02",
+        "S36"
+      ],
+      "scenarioFace": "M2/M4",
+      "claimLimit": "the known answer for vertical transformation and for the no-grid block",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-07",
+      "path": "Benchmarks/inputs/x7/x7_offline_package.zip",
+      "bytes": 1789,
+      "sha256": "91CCA014CA1C41AD7B9452492AC9236CF9027A56D9681602EC3E596BA13CFE68",
+      "format": "ZIP (stored, sorted members, fixed timestamps)",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "four members, no external reference",
+        "derivedFrom": "x7_conformant.geojson"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001",
+        "PKG-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M4/M2",
+      "claimLimit": "a self-contained synthetic package for the reopen test",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-08",
+      "path": "Benchmarks/inputs/x7/x7_answer_package.json",
+      "bytes": 1227,
+      "sha256": "80A6FC02C34C1D22BC53F4EEC1AB387B3AFACF5B9DB374C2B4416FB1B885DA3D",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "member list and per-member hashes read back from the archive",
+        "derivedFrom": "x7_offline_package.zip"
+      },
+      "satisfiesRules": [
+        "DEP-001",
+        "KDA-001",
+        "LIX-001",
+        "PKG-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M4/M2",
+      "claimLimit": "the known answer for package closure and reopen",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-09",
+      "path": "Benchmarks/inputs/x7/x7_package_external_ref.json",
+      "bytes": 511,
+      "sha256": "4FCC5B4DB715746385D7F0A4C200837832A7A5A783E673ADCB61209267C399FA",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "a refusal case described, not built",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "LIX-001",
+        "PKG-001"
+      ],
+      "scenarioRefs": [
+        "S59"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "keeps the offline claim honest",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-10",
+      "path": "Benchmarks/inputs/x7/x7_cube.csv",
+      "bytes": 1302,
+      "sha256": "42F0A104BBCBB6FBDE304FA9CC34CB03347BD2B1F496B8E74F37571B501047FB",
+      "format": "CSV long form (t,s,var,value)",
+      "kind": "input",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "6 times 4 times 2 cells with one declared missing value",
+        "derivedFrom": "none"
+      },
+      "satisfiesRules": [
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S31",
+        "S49"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "a scientific cube in long form; the NetCDF and Zarr carriers remain unfilled",
+      "unfilledAxes": [
+        "NetCDF",
+        "Zarr",
+        "a multidimensional raster carrier"
+      ]
+    },
+    {
+      "artefactId": "D101-X7-11",
+      "path": "Benchmarks/inputs/x7/x7_answer_cube.json",
+      "bytes": 746,
+      "sha256": "EC61EB49D77975868375B0E16B2DFDF796A4CCAD31D4387B42734426120E5F0F",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7",
+        "seed": 20260930,
+        "algorithm": "dimension counts and the published missing encoding",
+        "derivedFrom": "x7_cube.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001"
+      ],
+      "scenarioRefs": [
+        "S31",
+        "S49"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the known answer for cube round-trip, with the carrier gap declared",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X8-01",
+      "path": "Benchmarks/inputs/x8/x8_fact_table.csv",
+      "bytes": 571,
+      "sha256": "B80179094EEDF8812D18CF38CDEDC209058F1D9FF700924C179B13C311CABAF3",
+      "format": "CSV (category, indicator, value, source, period)",
+      "kind": "input",
+      "group": "x8",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x8",
+        "seed": 20260930,
+        "algorithm": "ten published fact rows",
+        "derivedFrom": "none (synthetic facts)"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SRC-001",
+        "SRP-001"
+      ],
+      "scenarioRefs": [
+        "S26",
+        "S27",
+        "S60"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "a single fact table to bind report and deck content to",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X8-02",
+      "path": "Benchmarks/inputs/x8/x8_answer_report.json",
+      "bytes": 3234,
+      "sha256": "2010AC94204E780F195F61C16BDFA7A534D24BEFE73BBB896D510A49BBB2930B",
+      "format": "JSON",
+      "kind": "answer",
+      "group": "x8",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x8",
+        "seed": 20260930,
+        "algorithm": "integer and scaled-decimal aggregation over the published fact rows",
+        "derivedFrom": "x8_fact_table.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SRC-001",
+        "SRP-001",
+        "TXT-001"
+      ],
+      "scenarioRefs": [
+        "S60"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "the known answer for same-source figures; the file-format and editability axes stay open",
+      "unfilledAxes": [
+        "a verified DOCX channel for the report path",
+        "an approved Open XML generator with a recorded licence for the deck path",
+        "editability proved by reopening a real generated file"
+      ]
+    },
+    {
+      "artefactId": "D101-X8-03",
+      "path": "Benchmarks/inputs/x8/x8_negative_number_mismatch.json",
+      "bytes": 541,
+      "sha256": "687612E97CD2A3CAF565EFDA85E7B32B57E28DB1D7AA96A7F55FCD26816D4886",
+      "format": "JSON",
+      "kind": "negative",
+      "group": "x8",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x8",
+        "seed": 20260930,
+        "algorithm": "a refusal case",
+        "derivedFrom": "x8_fact_table.csv"
+      },
+      "satisfiesRules": [
+        "NUM-001",
+        "SRP-001"
+      ],
+      "scenarioRefs": [
+        "S60"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "keeps same-source binding a pass/fail condition",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X5-10",
+      "path": "Benchmarks/inputs/x5/x5_updated_design.json",
+      "bytes": 1529,
+      "sha256": "F23FC2D5B5F71F1A24DEBF6BB3BA6EF766B04F97A52C9C56CB77110ED92FA438",
+      "format": "JSON",
+      "kind": "updated-instance",
+      "group": "x5",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x5_extra",
+        "seed": 20260985,
+        "algorithm": "the published greedy design with ST-A raised by one",
+        "derivedFrom": "x5_design_brief.json"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SDU-001",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S50"
+      ],
+      "scenarioFace": "M4",
+      "claimLimit": "the updated instance for sample-design reproducibility",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-12",
+      "path": "Benchmarks/inputs/x7/x7_offline_package_updated.zip",
+      "bytes": 1943,
+      "sha256": "2FFC3B93410BB8C29E5187E68388C5A12F758B1F7CFE442030BCBA7AFF9C1B1A",
+      "format": "ZIP (stored, sorted, fixed timestamps, one extra member)",
+      "kind": "updated-instance",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7_extra",
+        "seed": 20260930,
+        "algorithm": "the original package plus layers/notes.txt",
+        "derivedFrom": "x7_offline_package.zip"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001",
+        "PKG-001",
+        "SRC-001"
+      ],
+      "scenarioRefs": [
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M4/M2",
+      "claimLimit": "the updated instance: member count goes from 4 to 5 and no existing member changes",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X7-13",
+      "path": "Benchmarks/inputs/x7/x7_automatic_expectation.json",
+      "bytes": 629,
+      "sha256": "72A62B39CC14A1441A998B8BE4491A220C6C9DD3E0F0E6FBAAFE23905C4961B7",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x7",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x7_extra",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "LIX-001",
+        "PKG-001"
+      ],
+      "scenarioRefs": [
+        "S02",
+        "S06",
+        "S59"
+      ],
+      "scenarioFace": "M4/M2",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X8-04",
+      "path": "Benchmarks/inputs/x8/x8_fact_table_updated.csv",
+      "bytes": 667,
+      "sha256": "C7E4A78D9D72F0DB2F22614A9811942072007743E2FD1B4BE4758FD1C5AFE401",
+      "format": "CSV (the fact table plus two declared rows)",
+      "kind": "updated-instance",
+      "group": "x8",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x8_extra",
+        "seed": 20260930,
+        "algorithm": "two extra rows, nothing else changed",
+        "derivedFrom": "x8_fact_table.csv"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SRC-001",
+        "SRP-001"
+      ],
+      "scenarioRefs": [
+        "S29",
+        "S60"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "the updated instance whose recomputed figures are published in x8_answer_report.json",
+      "unfilledAxes": []
+    },
+    {
+      "artefactId": "D101-X8-05",
+      "path": "Benchmarks/inputs/x8/x8_automatic_expectation.json",
+      "bytes": 692,
+      "sha256": "2C07D1173DE523A83406A8263063C4D1D1FD3A1AC3F3ABB3E512D8F427A58505",
+      "format": "JSON",
+      "kind": "automatic-expectation",
+      "group": "x8",
+      "synthetic": true,
+      "lineage": {
+        "generator": "synthesize_inputs.build_x8_extra",
+        "seed": 20260930,
+        "algorithm": "declares the GDOM-03 expectation for this group",
+        "derivedFrom": "n/a"
+      },
+      "satisfiesRules": [
+        "KDA-001",
+        "SRP-001"
+      ],
+      "scenarioRefs": [
+        "S26",
+        "S27",
+        "S60"
+      ],
+      "scenarioFace": "M2",
+      "claimLimit": "an expectation record only; nothing was executed",
+      "unfilledAxes": []
+    }
+  ]
+}

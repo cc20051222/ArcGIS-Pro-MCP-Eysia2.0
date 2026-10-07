@@ -1,0 +1,160 @@
+{
+    "schema":  "arcgis-pro-mcp-one-click-bundle-v1",
+    "deploymentVersion":  "one-click-1.0.2-r27",
+    "product":  "ArcGIS Pro MCP",
+    "version":  "1.0.2",
+    "platform":  "Windows x64",
+    "arcGISPro":  "3.5",
+    "endpoint":  "http://127.0.0.1:6520/mcp",
+    "canonicalProductionToolCount":  239,
+    "cleanMachineAcceptance":  "NOT VERIFIED",
+    "manifestSelfExcluded":  true,
+    "sourceArtifactSha256":  "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+    "payloads":  [
+                     {
+                         "tf":  "net6",
+                         "targetFramework":  "net6.0-windows",
+                         "arcgisProDesktopVersion":  "3.0",
+                         "path":  "payload/net6/ArcGISProMCP.Compatibility.esriAddInX",
+                         "manifestPath":  "payload/net6/ArcGISProMCP.Compatibility.release-manifest.json",
+                         "sizeBytes":  1107215,
+                         "sha256":  "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701"
+                     },
+                     {
+                         "tf":  "net8",
+                         "targetFramework":  "net8.0-windows",
+                         "arcgisProDesktopVersion":  "3.5.0",
+                         "path":  "payload/net8/ArcGISProMCP.Compatibility.esriAddInX",
+                         "manifestPath":  "payload/net8/ArcGISProMCP.Compatibility.release-manifest.json",
+                         "sizeBytes":  1103697,
+                         "sha256":  "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+                     }
+                 ],
+    "files":  [
+                  {
+                      "path":  "Config/client-catalog.json",
+                      "sizeBytes":  2246,
+                      "sha256":  "068772E356E3027EEC79CCD6BB9A76BA41FB3E9002CC5F0B3EF7A32DEEB367A9"
+                  },
+                  {
+                      "path":  "Config/client-templates/claude-desktop.mcp.json",
+                      "sizeBytes":  97,
+                      "sha256":  "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+                  },
+                  {
+                      "path":  "Config/client-templates/codex.toml.fragment",
+                      "sizeBytes":  163,
+                      "sha256":  "96E1C0D0554FF86AECFA373AE5E341F61B6B2B210437F052956E0736153F93AC"
+                  },
+                  {
+                      "path":  "Config/client-templates/cursor.mcp.json",
+                      "sizeBytes":  97,
+                      "sha256":  "C5CF47ED4759FDBF391838C112971BAB5C6A3F6BD135F846675AD708C5AD135B"
+                  },
+                  {
+                      "path":  "Config/client-templates/deepseek.cordis.patch.yml",
+                      "sizeBytes":  300,
+                      "sha256":  "2A25E6125822EDEF9ACB6FAB63076F04D628678BF07C9D7B8059A802C69E7157"
+                  },
+                  {
+                      "path":  "Config/compatibility-policy.json",
+                      "sizeBytes":  4159,
+                      "sha256":  "1C1AC09CF825374D14994DC7C2E06B14D815E56C8BADBC50B919050C92ACD9F0"
+                  },
+                  {
+                      "path":  "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+                      "sizeBytes":  11886,
+                      "sha256":  "9C3A292702BCB53D3D96349F45AB06F438F1082EBED1F213C36CB93CDC140BD1"
+                  },
+                  {
+                      "path":  "NOTICE.md",
+                      "sizeBytes":  6457,
+                      "sha256":  "7092CCF33FE88F55090A1B3AAD88178EB223E85A67FEAEEE5C3693C803D0C3A2"
+                  },
+                  {
+                      "path":  "ONE-CLICK-SETUP.cmd",
+                      "sizeBytes":  1105,
+                      "sha256":  "6D475DEDC6CC478B018D3BB1F099DF4FB3F79C8E108307D58B0964F4584B9DE8"
+                  },
+                  {
+                      "path":  "payload/net6/ArcGISProMCP.Compatibility.esriAddInX",
+                      "sizeBytes":  1107215,
+                      "sha256":  "ADBF848C4ABC1BCB10B06034EAEE9CA1849718BB3289D0459C5425F68564B701"
+                  },
+                  {
+                      "path":  "payload/net6/ArcGISProMCP.Compatibility.release-manifest.json",
+                      "sizeBytes":  3650,
+                      "sha256":  "83FDCB23BDD0E9D17EBE40C743E0CDB49AA38DA42F3B722F1F849A6F1FA45C25"
+                  },
+                  {
+                      "path":  "payload/net8/ArcGISProMCP.Compatibility.esriAddInX",
+                      "sizeBytes":  1103697,
+                      "sha256":  "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+                  },
+                  {
+                      "path":  "payload/net8/ArcGISProMCP.Compatibility.release-manifest.json",
+                      "sizeBytes":  7380,
+                      "sha256":  "9CE98952C1C5C2A427172B993FA7D1EC116F86B6B96708694E6AF24B67F209DC"
+                  },
+                  {
+                      "path":  "README-START-HERE.md",
+                      "sizeBytes":  3146,
+                      "sha256":  "F22D3776BF604CB843300FEBE7162BBE1476D675704007D6BC72BA5C38EE0116"
+                  },
+                  {
+                      "path":  "RECOVERY-MENU.cmd",
+                      "sizeBytes":  1109,
+                      "sha256":  "415003BE36BC8798B34838C16513140A8AA4F64B5DC717D566F30D267791790C"
+                  },
+                  {
+                      "path":  "RESTORE-CLIENT.cmd",
+                      "sizeBytes":  1143,
+                      "sha256":  "A058E858D208866D5EBF16366F73DE27EA5F0FE309DA2B95C3E6B926C3CC4F31"
+                  },
+                  {
+                      "path":  "ROLLBACK-PLUGIN.cmd",
+                      "sizeBytes":  1130,
+                      "sha256":  "C6D0994F058375BC57DAA0BC7035796E3C0B814F6D6C092227F4CEBFE9A26766"
+                  },
+                  {
+                      "path":  "scripts/check-compatibility.ps1",
+                      "sizeBytes":  19532,
+                      "sha256":  "C617EE611BA1A57870011A10D38A1EC3015FF47841E275EAB0C153B722149963"
+                  },
+                  {
+                      "path":  "scripts/client-config.ps1",
+                      "sizeBytes":  14926,
+                      "sha256":  "2F2ED7A53FB9AED55BF7AB5A82377294E924A7AE22546C54BB2F19D64E918D55"
+                  },
+                  {
+                      "path":  "scripts/one-click-setup.ps1",
+                      "sizeBytes":  121312,
+                      "sha256":  "1312CF39C452E954DD3A34B3BD1139E4583D800032E6736B7AC112142B96F6F7"
+                  },
+                  {
+                      "path":  "scripts/release-transaction.ps1",
+                      "sizeBytes":  31112,
+                      "sha256":  "F822255FA2C12C5EBDA8CFAF4DFAFB1D74AB53A61B80AD53B7524009EA0E7F95"
+                  },
+                  {
+                      "path":  "scripts/user-workflow.ps1",
+                      "sizeBytes":  26241,
+                      "sha256":  "6D052A99EFF8B87640CA8DCDA7C82B1507CC7707B6EC4C4B6C036DF124942AA1"
+                  },
+                  {
+                      "path":  "scripts/verify-one-click-package.ps1",
+                      "sizeBytes":  12909,
+                      "sha256":  "6EA0EB8027607D9458941D1429E279AFD5B5C1281D4E457B62A9DABEF8620092"
+                  },
+                  {
+                      "path":  "Source/ArcGISProMCP.Compatibility/Config.daml",
+                      "sizeBytes":  3184,
+                      "sha256":  "51EFAC7E57DAD11547004826AB92C1184C6378842F8ECEE0944A886DD1ABF6EA"
+                  },
+                  {
+                      "path":  "UNINSTALL-PLUGIN.cmd",
+                      "sizeBytes":  1127,
+                      "sha256":  "16FDCAAFE009894BE442413A670DD9E8986CF95282DCA579CF127CC01A5EA48F"
+                  }
+              ]
+}

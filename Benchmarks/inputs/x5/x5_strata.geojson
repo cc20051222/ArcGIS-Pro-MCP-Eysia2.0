@@ -1,0 +1,142 @@
+{
+  "type": "FeatureCollection",
+  "name": "x5_strata",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "stratum": "ST-A",
+        "targetCount": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              0,
+              19
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stratum": "ST-B",
+        "targetCount": 4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20,
+              0
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              40,
+              19
+            ],
+            [
+              20,
+              19
+            ],
+            [
+              20,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stratum": "ST-C",
+        "targetCount": 5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              20
+            ],
+            [
+              19,
+              20
+            ],
+            [
+              19,
+              40
+            ],
+            [
+              0,
+              40
+            ],
+            [
+              0,
+              20
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stratum": "ST-D",
+        "targetCount": 6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20,
+              20
+            ],
+            [
+              40,
+              20
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              20,
+              40
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

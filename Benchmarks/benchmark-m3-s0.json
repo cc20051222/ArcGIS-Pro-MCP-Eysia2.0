@@ -1,0 +1,216 @@
+{
+  "schema": "f05-m3-benchmark-s0-v1",
+  "status": "PASS_CANDIDATE",
+  "batch": "D-093",
+  "extensionOf": "f05-m2-benchmark-s0-v1 (D-089) over f05-m1-benchmark-s0-v1 (D-085)",
+  "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every M3 member file, sorted by relpath))",
+  "logicalItemCount": 8,
+  "memberFileCount": 12,
+  "aggregateSha256": "94577E76D1602F61A8A5B292E07EC5B0C93668597A2D002A706F7A1055E44D12",
+  "carriedAnchors": [
+    {
+      "face": "M1",
+      "recordFile": "Benchmarks/benchmark-s0.json",
+      "frozenBy": "GATE-G206",
+      "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every A-group member file, sorted by relpath))",
+      "recordedAggregate": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+      "recomputedAggregate": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+      "memberFileCount": 9,
+      "logicalItemCount": 6,
+      "memberMismatchCount": 0,
+      "memberMismatches": []
+    },
+    {
+      "face": "M2",
+      "recordFile": "Benchmarks/benchmark-m2-s0.json",
+      "frozenBy": "GATE-G214",
+      "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every M2 member file, sorted by relpath))",
+      "recordedAggregate": "501A7E15600850E64FA078972F41DF4F22D1E10A2E62EBFC5063358FF13E10A7",
+      "recomputedAggregate": "501A7E15600850E64FA078972F41DF4F22D1E10A2E62EBFC5063358FF13E10A7",
+      "memberFileCount": 13,
+      "logicalItemCount": 8,
+      "memberMismatchCount": 0,
+      "memberMismatches": []
+    }
+  ],
+  "logicalItems": [
+    {
+      "itemId": "m3Overview",
+      "title": "F05 M3 overview and freeze policy",
+      "sha256": "8D5EC08D15A1B80A6F48319EB824006FF591EDDFF70639BCDF5A905A150E873E",
+      "members": [
+        {
+          "path": "Benchmarks/m3-overview-v1.md",
+          "sizeBytes": 7476,
+          "sha256": "7DA3AB445EF6D478FEAF9330C9F1AA85978864F818AC91D531645FC58292FBF7"
+        }
+      ]
+    },
+    {
+      "itemId": "m3Scenarios",
+      "title": "M3 five base scenarios closing the base thirty",
+      "sha256": "DEBFEDB54A04EBF9F7627D9C528F116C07CE1565555A4762E81014F4D2A25A4C",
+      "members": [
+        {
+          "path": "Benchmarks/m3-scenarios-5.jsonl",
+          "sizeBytes": 21903,
+          "sha256": "12349DAFC2315CE60C8D8B780E632A8339958E230ADFA96F708CD3C0331C09AE"
+        },
+        {
+          "path": "Benchmarks/m3-scenarios-5.md",
+          "sizeBytes": 2933,
+          "sha256": "A754ECD6FDB74E46AC50852291E0F3E5786947EEDB8BC30B8E46C98C724393B3"
+        }
+      ]
+    },
+    {
+      "itemId": "m3ScenarioTemplateMap",
+      "title": "M3 scenario-template-criterion mapping",
+      "sha256": "CD9869C011CC1413D102F45959F72E8D85D73F757AAD35892D7033D3613606C5",
+      "members": [
+        {
+          "path": "Benchmarks/m3-scenario-template-map-v1.jsonl",
+          "sizeBytes": 12342,
+          "sha256": "8FC411673AC569B2D92EDA9868EF6595077F589EF13FA9CC453A3E2C9D16A779"
+        },
+        {
+          "path": "Benchmarks/m3-scenario-template-map-v1.md",
+          "sizeBytes": 10719,
+          "sha256": "9A3EF65D4835E51FD821535EEEF6BF73C245E57A0927F791D54F9E4AE3A5F07B"
+        }
+      ]
+    },
+    {
+      "itemId": "m3CapabilityUnlock",
+      "title": "M3 unlock surface over the M2 qualified-input references",
+      "sha256": "DAEDFE7EA8FAB61137E397F0F21E92C70AFE42FF1A9BB48E253245E028A5A225",
+      "members": [
+        {
+          "path": "Benchmarks/m3-capability-unlock-v1.jsonl",
+          "sizeBytes": 11033,
+          "sha256": "9777A80209C530E071FAB0DB72FA153AD4A23BF7EEE880119DC9125A74D8EF3F"
+        }
+      ]
+    },
+    {
+      "itemId": "comparisonRulesV3",
+      "title": "Comparison rules v3 (additive over v2 and v1)",
+      "sha256": "66993067C915905B2F1EB2F3B69ADFF9EF1A5BCAEF08DB5D2290ED6225E3BCD0",
+      "members": [
+        {
+          "path": "Benchmarks/comparison-rules-v3.json",
+          "sizeBytes": 40282,
+          "sha256": "B7D1AE0AAEEB31024C4E70413ABEFA3984FB80296486BECB22D074554A84F968"
+        },
+        {
+          "path": "Benchmarks/comparison-rules-v3.md",
+          "sizeBytes": 19500,
+          "sha256": "9F8C14FA758B6DA34BACF994DE3EE03304FC57E63A48651A11FB849B21ACD679"
+        }
+      ]
+    },
+    {
+      "itemId": "m3CoreHiddenSplit",
+      "title": "M3 core and hidden split",
+      "sha256": "022F4859B81449223337DFD327D101B9A379A2EC8C36DF69CC07137FFD415AB8",
+      "members": [
+        {
+          "path": "Benchmarks/m3-core-hidden-split-v1.json",
+          "sizeBytes": 9110,
+          "sha256": "B079DBD47DADC2580B96E3BA67B71F2B099B4FFC35EC7F0F2E52F41D2BC41DC1"
+        }
+      ]
+    },
+    {
+      "itemId": "stressM3Subset",
+      "title": "M3 subset of the nominal 40 stress cases",
+      "sha256": "35B787447BCE9C48F6A0D782A1887E01733384E1AC2A2CA7C6A2C72B3B931128",
+      "members": [
+        {
+          "path": "Benchmarks/stress-40-m3-subset.jsonl",
+          "sizeBytes": 8115,
+          "sha256": "112E9373AA95935B97894C87387FB3F024A942B7CFE3381E91A4A46639DD6796"
+        }
+      ]
+    },
+    {
+      "itemId": "z12Precalibration",
+      "title": "Z12 continuous design acceptance criteria",
+      "sha256": "84C216680229CF1E0EE6311E389F1306471B7793A57D83BD81BC08CF498B9D1B",
+      "members": [
+        {
+          "path": "Benchmarks/z12-precalibration-v1.json",
+          "sizeBytes": 4857,
+          "sha256": "1344B64B2B09FC0702516EB4203FC9CFC652308E788F517CAD80C3571E0513A1"
+        },
+        {
+          "path": "Benchmarks/z12-precalibration-v1.md",
+          "sizeBytes": 3661,
+          "sha256": "4C5202906BB4BA27F42771DFA6B8BADF2413344F8A7007FA5419DCC88AD032B1"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Benchmarks/m3-overview-v1.md",
+      "sizeBytes": 7476,
+      "sha256": "7DA3AB445EF6D478FEAF9330C9F1AA85978864F818AC91D531645FC58292FBF7"
+    },
+    {
+      "path": "Benchmarks/m3-scenarios-5.jsonl",
+      "sizeBytes": 21903,
+      "sha256": "12349DAFC2315CE60C8D8B780E632A8339958E230ADFA96F708CD3C0331C09AE"
+    },
+    {
+      "path": "Benchmarks/m3-scenarios-5.md",
+      "sizeBytes": 2933,
+      "sha256": "A754ECD6FDB74E46AC50852291E0F3E5786947EEDB8BC30B8E46C98C724393B3"
+    },
+    {
+      "path": "Benchmarks/m3-scenario-template-map-v1.jsonl",
+      "sizeBytes": 12342,
+      "sha256": "8FC411673AC569B2D92EDA9868EF6595077F589EF13FA9CC453A3E2C9D16A779"
+    },
+    {
+      "path": "Benchmarks/m3-scenario-template-map-v1.md",
+      "sizeBytes": 10719,
+      "sha256": "9A3EF65D4835E51FD821535EEEF6BF73C245E57A0927F791D54F9E4AE3A5F07B"
+    },
+    {
+      "path": "Benchmarks/m3-capability-unlock-v1.jsonl",
+      "sizeBytes": 11033,
+      "sha256": "9777A80209C530E071FAB0DB72FA153AD4A23BF7EEE880119DC9125A74D8EF3F"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v3.json",
+      "sizeBytes": 40282,
+      "sha256": "B7D1AE0AAEEB31024C4E70413ABEFA3984FB80296486BECB22D074554A84F968"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v3.md",
+      "sizeBytes": 19500,
+      "sha256": "9F8C14FA758B6DA34BACF994DE3EE03304FC57E63A48651A11FB849B21ACD679"
+    },
+    {
+      "path": "Benchmarks/m3-core-hidden-split-v1.json",
+      "sizeBytes": 9110,
+      "sha256": "B079DBD47DADC2580B96E3BA67B71F2B099B4FFC35EC7F0F2E52F41D2BC41DC1"
+    },
+    {
+      "path": "Benchmarks/stress-40-m3-subset.jsonl",
+      "sizeBytes": 8115,
+      "sha256": "112E9373AA95935B97894C87387FB3F024A942B7CFE3381E91A4A46639DD6796"
+    },
+    {
+      "path": "Benchmarks/z12-precalibration-v1.json",
+      "sizeBytes": 4857,
+      "sha256": "1344B64B2B09FC0702516EB4203FC9CFC652308E788F517CAD80C3571E0513A1"
+    },
+    {
+      "path": "Benchmarks/z12-precalibration-v1.md",
+      "sizeBytes": 3661,
+      "sha256": "4C5202906BB4BA27F42771DFA6B8BADF2413344F8A7007FA5419DCC88AD032B1"
+    }
+  ]
+}

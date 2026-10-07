@@ -1,0 +1,694 @@
+{
+  "status": "DOCUMENT_QA_COMPLETE_PASS_CANDIDATE",
+  "method": "Original parameterized isometric/cartographic vector illustration; ReportLab PDF and SVG; PDFium rasterization",
+  "imagegenCalled": false,
+  "reason": "User explicitly selected D-drive-only native vector campaign",
+  "productAcceptance": "NOT_RUN",
+  "pdfPages": 8,
+  "pngDimensions": [
+    2400,
+    3000
+  ],
+  "designs": [
+    {
+      "name": "01_全链路主视觉",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "从分析走向",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "完整交付",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "GIS、PS、Office，同版交付",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 758.82
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "01 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 1575,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n从分析走向\r\n完整交付\r\nGIS、PS、Office，同版交付\r\n原创地理概念插画 01 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "02_自然语言任务",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "用一句话",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "开启任务",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "围绕目的组织资料与方法",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 660.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "02 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 1013,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n用一句话\r\n开启任务\r\n围绕目的组织资料与方法\r\n原创地理概念插画 02 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "03_PS自动成图",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "让专业成图",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "自动完成",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "无需手工操作PS的成图目标",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 731.34
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "03 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 242,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n让专业成图\r\n自动完成\r\n无需手工操作PS的成图目标\r\n原创地理概念插画 03 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "04_参考风格学习",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "让参考风格",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "成为灵感",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "学习合法参考的版式与色彩",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 720.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "04 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 596,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n让参考风格\r\n成为灵感\r\n学习合法参考的版式与色彩\r\n原创地理概念插画 04 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "05_GP持续适配",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "让新能力",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "持续加入",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "可信发现、核验后采用新工具",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 780.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "05 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 941,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n让新能力\r\n持续加入\r\n可信发现、核验后采用新工具\r\n原创地理概念插画 05 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "06_成果同步更新",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "让整套成果",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "同步更新",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "资料变化，联动图表和报告",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 720.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "06 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 390,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n让整套成果\r\n同步更新\r\n资料变化，联动图表和报告\r\n原创地理概念插画 06 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "07_多业务场景",
+      "textElements": [
+        {
+          "text": "规划汇报   科研专题   规范建库",
+          "x": 190,
+          "baseline": 2550,
+          "size": 48,
+          "width": 661.22
+        },
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "让更多业务",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "形成成果",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "规划汇报、科研专题、规范建库",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 840.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "07 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 488,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "规划汇报 科研专题 规范建库\r\nArcGIS Pro MCP 3.0 3.0 方案预告\r\n让更多业务\r\n形成成果\r\n规划汇报、科研专题、规范建库\r\n原创地理概念插画 07 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    },
+    {
+      "name": "08_完整成果交付",
+      "textElements": [
+        {
+          "text": "ArcGIS Pro MCP 3.0",
+          "x": 160,
+          "baseline": 215,
+          "size": 64,
+          "width": 633.88
+        },
+        {
+          "text": "3.0 方案预告",
+          "x": 1730,
+          "baseline": 207,
+          "size": 50,
+          "width": 285.47
+        },
+        {
+          "text": "领取一套",
+          "x": 160,
+          "baseline": 506,
+          "size": 174,
+          "width": 696.0
+        },
+        {
+          "text": "完整的成果",
+          "x": 160,
+          "baseline": 718,
+          "size": 174,
+          "width": 870.0
+        },
+        {
+          "text": "地图、母版、数据与办公文件",
+          "x": 169,
+          "baseline": 849,
+          "size": 60,
+          "width": 780.0
+        },
+        {
+          "text": "原创地理概念插画",
+          "x": 160,
+          "baseline": 2830,
+          "size": 39,
+          "width": 312.0
+        },
+        {
+          "text": "08 / 08",
+          "x": 1890,
+          "baseline": 2830,
+          "size": 39,
+          "width": 131.23
+        },
+        {
+          "text": "概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+          "x": 160,
+          "baseline": 2920,
+          "size": 50,
+          "width": 1112.3
+        }
+      ],
+      "vectorElements": 1128,
+      "textBoundsChecked": true,
+      "visualReview": "ROOT_AND_INDEPENDENT_FINAL_PNG_REVIEW_COMPLETE",
+      "pdfText": "ArcGIS Pro MCP 3.0 3.0 方案预告\r\n领取一套\r\n完整的成果\r\n地图、母版、数据与办公文件\r\n原创地理概念插画 08 / 08\r\n概念视觉 · 3.0规划功能及支持条件以实际验收为准",
+      "renderedPixels": [
+        2400,
+        3000
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "01_PNG分享图\\01_全链路主视觉.png",
+      "bytes": 1101421,
+      "sha256": "7F41B265BF5B568A2D7143E9D63654382F7AC9FBD25C35514E800679104E9FD8"
+    },
+    {
+      "path": "01_PNG分享图\\02_自然语言任务.png",
+      "bytes": 757865,
+      "sha256": "92BF97A6A6385A0B05B95DFC65D0F8301558AB3889F2010BEE8D3A325B4F2613"
+    },
+    {
+      "path": "01_PNG分享图\\03_PS自动成图.png",
+      "bytes": 682054,
+      "sha256": "ADCC80771B11EAD3D308769037D8197BF7725BCBE6839B9448A053CF02EB43A8"
+    },
+    {
+      "path": "01_PNG分享图\\04_参考风格学习.png",
+      "bytes": 886867,
+      "sha256": "C77CB11A77CC66C14265AF5114D60B8F2E6B963E32742D52ADBA2ABED2118948"
+    },
+    {
+      "path": "01_PNG分享图\\05_GP持续适配.png",
+      "bytes": 1137252,
+      "sha256": "2687A1317B5DF9D66453AAE8E0B7400D17AAAB4A47FB3E9E841D9184B27238C5"
+    },
+    {
+      "path": "01_PNG分享图\\06_成果同步更新.png",
+      "bytes": 779356,
+      "sha256": "01A052FE4DAD6A50984F57F55DAF87E7FF0106770988DE36334A83BF7C121ABA"
+    },
+    {
+      "path": "01_PNG分享图\\07_多业务场景.png",
+      "bytes": 1057184,
+      "sha256": "B3E8865AE4C97CEACC5F4F9D8EFAB5C5614FC41B1D4AA238D943B5455BDFC27E"
+    },
+    {
+      "path": "01_PNG分享图\\08_完整成果交付.png",
+      "bytes": 1055339,
+      "sha256": "AE48B06964FD2D9349F56715B6169E9CBC9DAF35EDE30A39A9D41BB7EF07C984"
+    },
+    {
+      "path": "02_SVG可编辑图\\01_全链路主视觉.svg",
+      "bytes": 370367,
+      "sha256": "7C98432D596368773D8884E055FC5C5FC0041C3598C47F9BD04715D81FEA5F05"
+    },
+    {
+      "path": "02_SVG可编辑图\\02_自然语言任务.svg",
+      "bytes": 238042,
+      "sha256": "6CD41A8F80E8864C2CCD053F7C37E642D2F1B6FD619D70E1233C065C081B7E94"
+    },
+    {
+      "path": "02_SVG可编辑图\\03_PS自动成图.svg",
+      "bytes": 82049,
+      "sha256": "53D2F12225E8F67104AC63423A19B12525B0D987882035255493B927A129180D"
+    },
+    {
+      "path": "02_SVG可编辑图\\04_参考风格学习.svg",
+      "bytes": 216728,
+      "sha256": "A11567C44800757C354A3C6DAA3476A4AC0D6B49DBE693CFDE1A26B1C1072CD1"
+    },
+    {
+      "path": "02_SVG可编辑图\\05_GP持续适配.svg",
+      "bytes": 214411,
+      "sha256": "5FB37ACC91CAEC9AB5AF2AEF9148DFEEE5133B31D292A5FB1CD2869FF12D037F"
+    },
+    {
+      "path": "02_SVG可编辑图\\06_成果同步更新.svg",
+      "bytes": 130838,
+      "sha256": "FEC0B150B4B846A5759CC1CAB9D974093E8A282951914C6BD6A411E0D5E9AB27"
+    },
+    {
+      "path": "02_SVG可编辑图\\07_多业务场景.svg",
+      "bytes": 188743,
+      "sha256": "E5ADB1D0947D0603517317D787746A5F6D5837BE6A5E9C6A812DD5381C791E10"
+    },
+    {
+      "path": "02_SVG可编辑图\\08_完整成果交付.svg",
+      "bytes": 340900,
+      "sha256": "FFDAAD3E9C9A2217023E4461C0A86BA0C08486E1CD5FAF04CD782DB3D222B90A"
+    },
+    {
+      "path": "03_整套图集\\ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf",
+      "bytes": 791197,
+      "sha256": "6E3883108074271ABF2407784838819D16AF4E54C7267BD638A64366DEDF2E56"
+    }
+  ],
+  "completedUtc": "2026-10-02T17:19:42.556584+00:00",
+  "finalReview": {
+    "rootPagesViewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "independentPagesViewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "unresolvedVisualDefects": [],
+    "subjectiveAestheticApproval": "USER_REVIEW_OF_ARTWORK",
+    "browserReport": "制作与核验/画廊浏览核验/画廊浏览核验.json",
+    "productAcceptance": "NOT_RUN"
+  },
+  "revisions": [
+    "Four distinct original cartographic geographies",
+    "Three-panel geographical foldout for business scene",
+    "Full chart and report composition for synchronized outputs",
+    "Lighter geographic layers with warm new top layer",
+    "Shorter paper shadows and increased footer clearance"
+  ]
+}

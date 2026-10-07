@@ -1,0 +1,372 @@
+{
+  "schemaVersion": "m2-core-hidden-v1",
+  "splitVersion": "1.0.0",
+  "status": "PASS_CANDIDATE",
+  "scope": "M2 extension slice only. It does not claim completion of FINAL's 24-task core set, of the full hidden set, or of any run. The M1 face (core-hidden-split-v1.json, stress-40-m1-subset.jsonl) is byte-unchanged and referenced by ID.",
+  "carriedFromM1": {
+    "corePublicIds": [
+      "CORE-M1-S19",
+      "CORE-M1-S20",
+      "CORE-M1-S07",
+      "CORE-M1-S23",
+      "CORE-M1-S22",
+      "CORE-M1-S18"
+    ],
+    "hiddenIdsCount": 12,
+    "stressIds": [
+      "ST-M1-01",
+      "ST-M1-02",
+      "ST-M1-03",
+      "ST-M1-04",
+      "ST-M1-05",
+      "ST-M1-06",
+      "ST-M1-07",
+      "ST-M1-08",
+      "ST-M1-09",
+      "ST-M1-10",
+      "ST-M1-11",
+      "ST-M1-12"
+    ],
+    "file": "Benchmarks/core-hidden-split-v1.json",
+    "bytesUnchanged": true
+  },
+  "corePublicIds": [
+    "CORE-M2-S01",
+    "CORE-M2-S02",
+    "CORE-M2-S03",
+    "CORE-M2-S04",
+    "CORE-M2-S05",
+    "CORE-M2-S06",
+    "CORE-M2-S08",
+    "CORE-M2-S10",
+    "CORE-M2-S11",
+    "CORE-M2-S12",
+    "CORE-M2-S13",
+    "CORE-M2-S15",
+    "CORE-M2-S16",
+    "CORE-M2-S21",
+    "CORE-M2-S26",
+    "CORE-M2-S27",
+    "CORE-M2-S28",
+    "CORE-M2-S29",
+    "CORE-M2-S30",
+    "CORE-M2-S46",
+    "CORE-M2-S52",
+    "CORE-M2-S60"
+  ],
+  "scenarioIds": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S08",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S15",
+    "S16",
+    "S21",
+    "S26",
+    "S27",
+    "S28",
+    "S29",
+    "S30",
+    "S46",
+    "S52",
+    "S60"
+  ],
+  "roundsPerCoreTask": 3,
+  "inputProfilesPerTemplate": [
+    "normal",
+    "boundary",
+    "invalid"
+  ],
+  "hiddenIds": [
+    "H-M2-TP04-01",
+    "H-M2-TP04-02",
+    "H-M2-TP05-01",
+    "H-M2-TP05-02",
+    "H-M2-TP06-01",
+    "H-M2-TP06-02",
+    "H-M2-TP07-01",
+    "H-M2-TP07-02",
+    "H-M2-TP08-01",
+    "H-M2-TP08-02",
+    "H-M2-TP09-01",
+    "H-M2-TP09-02",
+    "H-M2-TP10-01",
+    "H-M2-TP10-02",
+    "H-M2-TP17-01",
+    "H-M2-TP17-02",
+    "H-M2-TS03-01",
+    "H-M2-TS03-02",
+    "H-M2-TS04-01",
+    "H-M2-TS04-02",
+    "H-M2-TS05-01",
+    "H-M2-TS05-02",
+    "H-M2-TS06-01",
+    "H-M2-TS06-02",
+    "H-M2-TS07-01",
+    "H-M2-TS07-02",
+    "H-M2-TS09-01",
+    "H-M2-TS09-02",
+    "H-M2-TS10-01",
+    "H-M2-TS10-02",
+    "H-M2-TS15-01",
+    "H-M2-TS15-02"
+  ],
+  "criterionRefs": [
+    "ALN-001",
+    "BAT-001",
+    "CMP-001",
+    "CMP-002",
+    "DEP-001",
+    "DUP-001",
+    "FLD-001",
+    "GEO-001",
+    "LAY-001",
+    "LNG-001",
+    "NUM-001",
+    "OUT-001",
+    "PRM-001",
+    "PRT-001",
+    "QLT-001",
+    "RFL-001",
+    "RPT-001",
+    "SCI-001",
+    "SRC-001",
+    "STY-001",
+    "TRF-001",
+    "TXT-001",
+    "WF-001"
+  ],
+  "hiddenCriteriaByTemplate": {
+    "TP04": [
+      "GEO-001",
+      "BAT-001",
+      "LNG-001"
+    ],
+    "TP05": [
+      "TRF-001",
+      "ALN-001",
+      "QLT-001"
+    ],
+    "TP06": [
+      "DUP-001",
+      "CMP-001",
+      "QLT-001"
+    ],
+    "TP07": [
+      "CMP-001",
+      "CMP-002",
+      "RFL-001"
+    ],
+    "TP08": [
+      "STY-001",
+      "NUM-001",
+      "FLD-001"
+    ],
+    "TP09": [
+      "BAT-001",
+      "STY-001",
+      "RFL-001"
+    ],
+    "TP10": [
+      "SRC-001",
+      "PRT-001",
+      "TXT-001"
+    ],
+    "TP17": [
+      "FLD-001",
+      "NUM-001",
+      "SCI-001"
+    ],
+    "TS03": [
+      "PRT-001",
+      "CMP-001",
+      "ALN-001"
+    ],
+    "TS04": [
+      "ALN-001",
+      "SRC-001",
+      "SCI-001"
+    ],
+    "TS05": [
+      "LNG-001",
+      "SCI-001",
+      "SRC-001"
+    ],
+    "TS06": [
+      "SCI-001",
+      "NUM-001",
+      "LNG-001"
+    ],
+    "TS07": [
+      "RFL-001",
+      "ALN-001",
+      "GEO-001"
+    ],
+    "TS09": [
+      "BAT-001",
+      "SCI-001",
+      "RFL-001"
+    ],
+    "TS10": [
+      "SCI-001",
+      "LNG-001",
+      "RFL-001"
+    ],
+    "TS15": [
+      "SRC-001",
+      "NUM-001",
+      "TXT-001"
+    ]
+  },
+  "successThreshold": {
+    "minimumHiddenCount": 12,
+    "firstVersionCompletionRate": 0.9,
+    "automaticRepairRoundsMax": 2,
+    "seriousScientificErrorsAllowed": 0,
+    "note": "inherited from the frozen v1 file and FINAL §4 by reference; the M2 slice defines 32 candidate hidden IDs, which is a definition count and not a claim that the set is adequate or that any of it ran"
+  },
+  "goldManagement": {
+    "publicDefinitionStoresOnly": [
+      "hiddenId",
+      "criterionRefs"
+    ],
+    "goldContentOrPathIncluded": false,
+    "custodian": "separate restricted benchmark custodian",
+    "failureHandling": "no hidden example detail in tool context; previously seen fixes count as regression only"
+  },
+  "scenarioTemplateMap": {
+    "S01": "TP08",
+    "S02": "TP05",
+    "S03": "TP06",
+    "S04": "TP17",
+    "S05": "TS03",
+    "S06": "TP10",
+    "S08": "TP04",
+    "S10": "TP06",
+    "S11": "TS05",
+    "S12": "TS06",
+    "S13": "TS07",
+    "S15": "TP09",
+    "S16": "TS04",
+    "S21": "TP07",
+    "S26": "TP10",
+    "S27": "TS09",
+    "S28": "TP09",
+    "S29": "TS03",
+    "S30": "TP10",
+    "S46": "TS15",
+    "S52": "TS10",
+    "S60": "TP10"
+  },
+  "carriedScenarioTemplateMap": {
+    "S19": "TP01",
+    "S20": "TP02",
+    "S07": "TP03",
+    "S23": "TS01",
+    "S22": "TS02",
+    "S18": "TS08"
+  },
+  "stressIds": [
+    "ST-M2-01",
+    "ST-M2-02",
+    "ST-M2-03",
+    "ST-M2-04",
+    "ST-M2-05",
+    "ST-M2-06",
+    "ST-M2-07",
+    "ST-M2-08",
+    "ST-M2-09",
+    "ST-M2-10",
+    "ST-M2-11",
+    "ST-M2-12",
+    "ST-M2-13",
+    "ST-M2-14",
+    "ST-M2-15",
+    "ST-M2-16"
+  ],
+  "stressRefsByScenario": {
+    "S01": [
+      "ST-M2-13"
+    ],
+    "S02": [
+      "ST-M2-09",
+      "ST-M2-10"
+    ],
+    "S03": [
+      "ST-M2-03",
+      "ST-M2-12"
+    ],
+    "S04": [
+      "ST-M2-11"
+    ],
+    "S05": [
+      "ST-M2-16"
+    ],
+    "S06": [
+      "ST-M2-08"
+    ],
+    "S08": [],
+    "S10": [
+      "ST-M2-03",
+      "ST-M2-13"
+    ],
+    "S11": [],
+    "S12": [],
+    "S13": [],
+    "S15": [
+      "ST-M2-01",
+      "ST-M2-05"
+    ],
+    "S16": [
+      "ST-M2-09"
+    ],
+    "S21": [],
+    "S26": [
+      "ST-M2-02",
+      "ST-M2-04",
+      "ST-M2-07"
+    ],
+    "S27": [
+      "ST-M2-04"
+    ],
+    "S28": [
+      "ST-M2-01",
+      "ST-M2-02"
+    ],
+    "S29": [
+      "ST-M2-06"
+    ],
+    "S30": [
+      "ST-M2-06"
+    ],
+    "S46": [
+      "ST-M2-14"
+    ],
+    "S52": [
+      "ST-M2-15"
+    ],
+    "S60": [
+      "ST-M2-07"
+    ]
+  },
+  "baselineContext": {
+    "acceptedBaselineSourceAggregate": "D4FC24B6 (G-209) / 256 files, recomputed by this line at intake 17:1x",
+    "acceptedBaselineToolCount": 170,
+    "nineToolStatus": "PENDING-D088-NOT-ACCEPTED",
+    "workingTreeObservation": "D-088 (L1) is concurrently implementing the nine tools; at build time the working tree contract snapshot listed 179 unique names = accepted 170 + the nine, and the Source aggregate had moved off the G-209 baseline. Nothing in the M2 face relies on that drift: the nine are bound as not accepted, and this line wrote no byte into Source."
+  },
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §4, §7",
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §9:M2, §10:Z09-Z11",
+    "D-089_l2-f05-m2-calibration.md scope 1 and 3",
+    "GATE-G206-D085-PASS_VERDICT.md ruling 2 (frozen M1 face; append-only)"
+  ],
+  "ts08CarriedStatus": "GOLD_ARTIFACT_PATH_NOT-AVAILABLE-PENDING-USER (G-205); this batch neither redefines the frozen TS08 template nor substitutes any non-qualifying raster as its input or gold result"
+}

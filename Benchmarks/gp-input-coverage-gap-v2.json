@@ -1,0 +1,648 @@
+{
+ "head": {
+  "face": "gp-input-coverage-gap-v2",
+  "batch": "D-117 fixture segment",
+  "dispatch": "G-273 R-1（2026-10-04 15:0x，用户裁定「授权合成 fixture」）",
+  "supersedes": "gp-input-coverage-gap-v1.json",
+  "v1RetainedUnchanged": true,
+  "canonicalToken": "合成输入基准",
+  "tokenPresentInEveryFace": true,
+  "fieldShapeNote": "W1 整改：本件 perEntryCoverage 每条**确实含有**下列字段，交付文字只声称本件真实存在的字段",
+  "authoredAt": "2026-10-04T16:38:51",
+  "coverage": {
+   "total": 53,
+   "executableInputAvailableTrue": 52,
+   "stillFalse": 1,
+   "stillFalseTools": [
+    "management.Project"
+   ]
+  },
+  "poolArtefacts": [
+   "attrs",
+   "classes",
+   "classesAsc",
+   "dem",
+   "events",
+   "featuresJson",
+   "flowacc",
+   "flowdir",
+   "lines",
+   "negative3band",
+   "points",
+   "polys_a",
+   "polys_b",
+   "remap",
+   "slope"
+  ],
+  "admissionStatus": "NOT VERIFIED（准入判定属 Phase B 真机窗，本段零执行）"
+ },
+ "perEntryCoverage": [
+  {
+   "rowId": "GP53-01",
+   "dotName": "analysis.Buffer",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-02",
+   "dotName": "analysis.Clip",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-03",
+   "dotName": "analysis.Erase",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-04",
+   "dotName": "analysis.Union",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-05",
+   "dotName": "analysis.Intersect",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-06",
+   "dotName": "analysis.Identity",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-07",
+   "dotName": "analysis.SpatialJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-08",
+   "dotName": "analysis.Near",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "points",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-09",
+   "dotName": "analysis.Statistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-10",
+   "dotName": "analysis.Frequency",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-11",
+   "dotName": "analysis.TabulateArea",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-12",
+   "dotName": "analysis.TabulateIntersection",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-13",
+   "dotName": "management.Dissolve",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-14",
+   "dotName": "management.Merge",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-15",
+   "dotName": "management.Project",
+   "executableInputAvailable": false,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [
+    {
+     "param": "transform_method",
+     "type": "multivalue",
+     "why": "option-list argument whose member set is not enumerated by any accepted evidence — not guessed"
+    }
+   ],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-16",
+   "dotName": "management.RepairGeometry",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-17",
+   "dotName": "management.CalculateField",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-18",
+   "dotName": "management.CopyFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-19",
+   "dotName": "management.MultipartToSinglepart",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-20",
+   "dotName": "conversion.ExportFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-21",
+   "dotName": "conversion.TableToTable",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-22",
+   "dotName": "conversion.RasterToPolygon",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-23",
+   "dotName": "conversion.RasterToPoint",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-24",
+   "dotName": "conversion.PolygonToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-25",
+   "dotName": "conversion.PointToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-26",
+   "dotName": "conversion.PolylineToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-27",
+   "dotName": "conversion.FeatureToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-28",
+   "dotName": "conversion.ASCIIToRaster",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classesAsc"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-29",
+   "dotName": "conversion.RasterToASCII",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-30",
+   "dotName": "conversion.FeaturesToJSON",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-31",
+   "dotName": "conversion.JSONToFeatures",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "featuresJson"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-32",
+   "dotName": "sa.Slope",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-33",
+   "dotName": "sa.Aspect",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-34",
+   "dotName": "sa.Hillshade",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-35",
+   "dotName": "sa.Contour",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-36",
+   "dotName": "sa.Curvature",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-37",
+   "dotName": "sa.Fill",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-38",
+   "dotName": "sa.FlowDirection",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-39",
+   "dotName": "sa.FlowAccumulation",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-40",
+   "dotName": "sa.Watershed",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-41",
+   "dotName": "sa.SnapPourPoint",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-42",
+   "dotName": "sa.ZonalStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-43",
+   "dotName": "sa.ZonalStatisticsAsTable",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a",
+    "polys_b"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-44",
+   "dotName": "sa.Reclassify",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "remap"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-45",
+   "dotName": "sa.ExtractByMask",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-46",
+   "dotName": "sa.ExtractValuesToPoints",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem",
+    "points"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-47",
+   "dotName": "sa.Resample",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-48",
+   "dotName": "sa.Con",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-49",
+   "dotName": "sa.CellStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "classes",
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-50",
+   "dotName": "sa.FocalStatistics",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "dem"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-51",
+   "dotName": "sa.RasterCalculator",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-52",
+   "dotName": "management.AddJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "attrs",
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  },
+  {
+   "rowId": "GP53-53",
+   "dotName": "management.RemoveJoin",
+   "executableInputAvailable": true,
+   "carrierQualifier": "declared-carrier-complete over the synthesised pool; admission remains NOT VERIFIED until a Phase B real-device window",
+   "fixtureRefs": [
+    "polys_a"
+   ],
+   "unresolvedInputs": [],
+   "typeCompatibleCarriers": null
+  }
+ ]
+}

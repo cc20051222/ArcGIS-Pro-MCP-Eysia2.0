@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x7",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a conformance report naming the standard version and each failure",
+    "an offline reopen that succeeds with the original source path unavailable",
+    "a cube round-trip that reproduces every row and the single declared missing cell",
+    "a vertical copy whose Z equals the published expectation"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "NetCDF and Zarr carriers",
+    "a published geoid or vertical-grid model"
+  ]
+}

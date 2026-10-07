@@ -1,0 +1,104 @@
+{
+  "status": "AUTHORING_COMPLETE_PENDING_NATIVE_RENDER",
+  "sourceCopy": {
+    "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\制作与核验\\宣传文案.json",
+    "sha256": "1D1656A73CDA5CA91165D0FE8EDADCC49D5E027165480E856E5DA65DA261CC39"
+  },
+  "sourcePosters": [
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\01_主宣传海报_竖版.png",
+      "sha256": "CF82A9C9C71B11F3B1AA7FC9D71380A9D4A933BF246332D1EF884F8BF54A5E1B"
+    },
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\02_产品亮点海报_横版.png",
+      "sha256": "9E2279C383B25005616D2721AFFE0548F3DBDCC0FEAAE29D08677872B0A60422"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\Word\\ArcGIS_Pro_MCP_3.0_产品宣传册_预告版.docx",
+      "sha256": "E95A17F331E8E961F0EEDFCB441132C26AB75ED57F200A980C54BC7F7C407D0A",
+      "bytes": 975962,
+      "plannedPages": 10,
+      "structuralChecks": {
+        "manualPageBreaks": 9,
+        "embeddedImages": 2,
+        "tables": 0
+      },
+      "posterPlacement": [
+        {
+          "source": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\01_主宣传海报_竖版.png",
+          "sourcePixels": [
+            3000,
+            4243
+          ],
+          "wordInches": [
+            5.444261135988688,
+            7.700000000000001
+          ]
+        },
+        {
+          "source": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\02_产品亮点海报_横版.png",
+          "sourcePixels": [
+            3840,
+            2160
+          ],
+          "wordInches": [
+            6.7,
+            3.76875
+          ]
+        }
+      ]
+    },
+    {
+      "path": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\Word\\ArcGIS_Pro_MCP_3.0_宣传海报_展示版.docx",
+      "sha256": "3852C126956511EDF9F9BC0235C687C2AE3F7BFEF9C34163D502068EC80A854C",
+      "bytes": 969775,
+      "plannedPages": 2,
+      "structuralChecks": {
+        "manualPageBreaks": 1,
+        "embeddedImages": 2,
+        "tables": 0
+      },
+      "posterPlacement": [
+        {
+          "source": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\01_主宣传海报_竖版.png",
+          "sourcePixels": [
+            3000,
+            4243
+          ],
+          "wordInches": [
+            5.444261135988688,
+            7.700000000000001
+          ]
+        },
+        {
+          "source": "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\海报\\02_产品亮点海报_横版.png",
+          "sourcePixels": [
+            3840,
+            2160
+          ],
+          "wordInches": [
+            6.7,
+            3.76875
+          ]
+        }
+      ]
+    }
+  ],
+  "renderStatus": "NOT_RUN_BY_AUTHORING_AGENT",
+  "notes": [
+    "根代理负责原生渲染和实际页面复核。",
+    "手工分页与OOXML检查不能替代真实Word分页和视觉核验。"
+  ],
+  "finalRootReview": {
+    "completedUtc": "2026-10-02T15:27:58.640364+00:00",
+    "nativePages": [
+      10,
+      2
+    ],
+    "all12PagesViewed": true,
+    "status": "DOCUMENT_QA_COMPLETE_PASS_CANDIDATE",
+    "productAcceptance": "NOT_RUN"
+  }
+}

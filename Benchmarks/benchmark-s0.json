@@ -1,0 +1,144 @@
+{
+  "schema": "f05-m1-benchmark-s0-v1",
+  "status": "PASS_CANDIDATE",
+  "aggregateMethod": "sha256(concat('relpath:sha256\\n' for every A-group member file, sorted by relpath))",
+  "logicalItemCount": 6,
+  "memberFileCount": 9,
+  "aggregateSha256": "92ECD265B1DCE88AF3C55913F3B05AC6CFF6BAFF78B29D003B5E0D3EFB52B9FD",
+  "logicalItems": [
+    {
+      "itemId": "overview",
+      "title": "F05 M1 overview",
+      "sha256": "1DCE50124DB1F7814FAA6C14B079252ACA1A82A06CA757E9AB3234DA8F225215",
+      "members": [
+        {
+          "path": "Benchmarks/README.md",
+          "sizeBytes": 5090,
+          "sha256": "3363061231537ED0760432BFB90E86BE64AF4FF4FA413C1338FDD7F5EDB3C181"
+        }
+      ]
+    },
+    {
+      "itemId": "m1Scenarios",
+      "title": "M1 six scenarios",
+      "sha256": "61E00718FBF030BB8EF24B445E78B3DCDA92ED0B91F1333CDE3FE19DE08DCFA9",
+      "members": [
+        {
+          "path": "Benchmarks/m1-scenarios-6.jsonl",
+          "sizeBytes": 12870,
+          "sha256": "BB2BA9E102FD48315B20A241A92A68A043D5C45A61D22419337BEBB3CEDAD3E6"
+        },
+        {
+          "path": "Benchmarks/m1-scenarios-6.md",
+          "sizeBytes": 2264,
+          "sha256": "F205EF746F6C27B81C722F549363261C5EEBF24EEC356259E5FFC0CACBC9189E"
+        }
+      ]
+    },
+    {
+      "itemId": "m1Templates",
+      "title": "M1 six templates",
+      "sha256": "03EE85BC470BB0C5D2498DC6C36BC258A490B2144D7178447209060014030E11",
+      "members": [
+        {
+          "path": "Benchmarks/m1-templates-6.jsonl",
+          "sizeBytes": 12160,
+          "sha256": "C02E4F3E195995B984AD34713D8B6A414EE22385B2B798C88FCD19EC54544CAE"
+        },
+        {
+          "path": "Benchmarks/m1-templates-6.md",
+          "sizeBytes": 2221,
+          "sha256": "94BE799F90820FD339AE2F5FCCA3F8C56A32838D8721561CB5CA96637F3005B8"
+        }
+      ]
+    },
+    {
+      "itemId": "comparisonRules",
+      "title": "Comparison rules v1",
+      "sha256": "F44011967981F6D5678D8A5AD6A354BDA1D2F5C8F14D24B7DB2CC6548678D0B0",
+      "members": [
+        {
+          "path": "Benchmarks/comparison-rules-v1.json",
+          "sizeBytes": 7842,
+          "sha256": "780DCC3C6CC9A111E4C2AC1EA4E38CDC004E9DE76BD5F0C95BA139B9958A7CB0"
+        },
+        {
+          "path": "Benchmarks/comparison-rules-v1.md",
+          "sizeBytes": 3733,
+          "sha256": "5E82C73FE24FA450992A97EA616D6964889ECE7AF7DC9058EC7A8C0B61B5042A"
+        }
+      ]
+    },
+    {
+      "itemId": "coreHiddenSplit",
+      "title": "Core and hidden split v1",
+      "sha256": "BB861AB6C8C2B7C57F4A7601D6BD175FE78287E50C2BF740ABB819AA2C71839C",
+      "members": [
+        {
+          "path": "Benchmarks/core-hidden-split-v1.json",
+          "sizeBytes": 3527,
+          "sha256": "4300199420C3120CF5B981B60E20010A35721147E7143CB5A5D68EB7D882AB46"
+        }
+      ]
+    },
+    {
+      "itemId": "stressM1Subset",
+      "title": "M1 subset of the nominal 40 stress cases",
+      "sha256": "113ED334AFF157B61C42528EB9D9EE0914DB9DB6722CEDB6B50E31569567D712",
+      "members": [
+        {
+          "path": "Benchmarks/stress-40-m1-subset.jsonl",
+          "sizeBytes": 7005,
+          "sha256": "0D145D41CE526592E1C1C669478E7D54055A550B5488AC49FD3125936E352555"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Benchmarks/README.md",
+      "sizeBytes": 5090,
+      "sha256": "3363061231537ED0760432BFB90E86BE64AF4FF4FA413C1338FDD7F5EDB3C181"
+    },
+    {
+      "path": "Benchmarks/m1-scenarios-6.jsonl",
+      "sizeBytes": 12870,
+      "sha256": "BB2BA9E102FD48315B20A241A92A68A043D5C45A61D22419337BEBB3CEDAD3E6"
+    },
+    {
+      "path": "Benchmarks/m1-scenarios-6.md",
+      "sizeBytes": 2264,
+      "sha256": "F205EF746F6C27B81C722F549363261C5EEBF24EEC356259E5FFC0CACBC9189E"
+    },
+    {
+      "path": "Benchmarks/m1-templates-6.jsonl",
+      "sizeBytes": 12160,
+      "sha256": "C02E4F3E195995B984AD34713D8B6A414EE22385B2B798C88FCD19EC54544CAE"
+    },
+    {
+      "path": "Benchmarks/m1-templates-6.md",
+      "sizeBytes": 2221,
+      "sha256": "94BE799F90820FD339AE2F5FCCA3F8C56A32838D8721561CB5CA96637F3005B8"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v1.json",
+      "sizeBytes": 7842,
+      "sha256": "780DCC3C6CC9A111E4C2AC1EA4E38CDC004E9DE76BD5F0C95BA139B9958A7CB0"
+    },
+    {
+      "path": "Benchmarks/comparison-rules-v1.md",
+      "sizeBytes": 3733,
+      "sha256": "5E82C73FE24FA450992A97EA616D6964889ECE7AF7DC9058EC7A8C0B61B5042A"
+    },
+    {
+      "path": "Benchmarks/core-hidden-split-v1.json",
+      "sizeBytes": 3527,
+      "sha256": "4300199420C3120CF5B981B60E20010A35721147E7143CB5A5D68EB7D882AB46"
+    },
+    {
+      "path": "Benchmarks/stress-40-m1-subset.jsonl",
+      "sizeBytes": 7005,
+      "sha256": "0D145D41CE526592E1C1C669478E7D54055A550B5488AC49FD3125936E352555"
+    }
+  ]
+}

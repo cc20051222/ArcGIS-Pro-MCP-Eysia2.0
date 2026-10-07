@@ -1,0 +1,269 @@
+{
+  "scope": "Offline gallery browser checks only; not product acceptance",
+  "startedAt": "2026-10-02T16:55:53.74Z",
+  "browser": "Microsoft Edge via bundled Playwright",
+  "allProjectOutputRoot": "D:/ArcGIS-Pro-MCP 2.0/3.0最终方案/宣传/宣传图集",
+  "checks": {
+    "desktop": {
+      "images": [
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        },
+        {
+          "width": 2400,
+          "height": 3000
+        }
+      ],
+      "horizontalOverflow": false
+    },
+    "lightbox": {
+      "open": true,
+      "rightKey": true,
+      "leftKey": true,
+      "nextButton": true,
+      "previousButton": true,
+      "endKey": true,
+      "homeKey": true,
+      "escapeClose": true
+    },
+    "mobile": {
+      "viewportWidth": 390,
+      "pageWidth": 390,
+      "horizontalOverflow": false
+    },
+    "localLinks": [
+      {
+        "link": "03_整套图集/ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/01_全链路主视觉.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/01_全链路主视觉.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/02_自然语言任务.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/02_自然语言任务.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/03_PS自动成图.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/03_PS自动成图.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/04_参考风格学习.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/04_参考风格学习.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/05_GP持续适配.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/05_GP持续适配.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/06_成果同步更新.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/06_成果同步更新.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/07_多业务场景.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/07_多业务场景.svg",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/08_完整成果交付.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/08_完整成果交付.svg",
+        "exists": true
+      },
+      {
+        "link": "README_图集导航.md",
+        "exists": true
+      },
+      {
+        "link": "01_PNG分享图/01_全链路主视觉.png",
+        "exists": true
+      },
+      {
+        "link": "02_SVG可编辑图/01_全链路主视觉.svg",
+        "exists": true
+      },
+      {
+        "link": "03_整套图集/ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf",
+        "exists": true
+      }
+    ],
+    "pageErrors": []
+  },
+  "screenshots": [
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\宣传图集\\制作与核验\\画廊浏览核验\\01_桌面完整画廊.png",
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\宣传图集\\制作与核验\\画廊浏览核验\\02_大图浏览.png",
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\宣传\\宣传图集\\制作与核验\\画廊浏览核验\\03_手机完整画廊.png"
+  ],
+  "status": "PASS",
+  "finishedAt": "2026-10-02T16:55:55.761Z",
+  "revision": "Final redraw after independent visual review",
+  "artifactManifest": [
+    {
+      "path": "01_PNG分享图/01_全链路主视觉.png",
+      "bytes": 1101421,
+      "sha256": "7F41B265BF5B568A2D7143E9D63654382F7AC9FBD25C35514E800679104E9FD8"
+    },
+    {
+      "path": "01_PNG分享图/02_自然语言任务.png",
+      "bytes": 757865,
+      "sha256": "92BF97A6A6385A0B05B95DFC65D0F8301558AB3889F2010BEE8D3A325B4F2613"
+    },
+    {
+      "path": "01_PNG分享图/03_PS自动成图.png",
+      "bytes": 682054,
+      "sha256": "ADCC80771B11EAD3D308769037D8197BF7725BCBE6839B9448A053CF02EB43A8"
+    },
+    {
+      "path": "01_PNG分享图/04_参考风格学习.png",
+      "bytes": 886867,
+      "sha256": "C77CB11A77CC66C14265AF5114D60B8F2E6B963E32742D52ADBA2ABED2118948"
+    },
+    {
+      "path": "01_PNG分享图/05_GP持续适配.png",
+      "bytes": 1137252,
+      "sha256": "2687A1317B5DF9D66453AAE8E0B7400D17AAAB4A47FB3E9E841D9184B27238C5"
+    },
+    {
+      "path": "01_PNG分享图/06_成果同步更新.png",
+      "bytes": 779356,
+      "sha256": "01A052FE4DAD6A50984F57F55DAF87E7FF0106770988DE36334A83BF7C121ABA"
+    },
+    {
+      "path": "01_PNG分享图/07_多业务场景.png",
+      "bytes": 1057184,
+      "sha256": "B3E8865AE4C97CEACC5F4F9D8EFAB5C5614FC41B1D4AA238D943B5455BDFC27E"
+    },
+    {
+      "path": "01_PNG分享图/08_完整成果交付.png",
+      "bytes": 1055339,
+      "sha256": "AE48B06964FD2D9349F56715B6169E9CBC9DAF35EDE30A39A9D41BB7EF07C984"
+    },
+    {
+      "path": "02_SVG可编辑图/01_全链路主视觉.svg",
+      "bytes": 370367,
+      "sha256": "7C98432D596368773D8884E055FC5C5FC0041C3598C47F9BD04715D81FEA5F05"
+    },
+    {
+      "path": "02_SVG可编辑图/02_自然语言任务.svg",
+      "bytes": 238042,
+      "sha256": "6CD41A8F80E8864C2CCD053F7C37E642D2F1B6FD619D70E1233C065C081B7E94"
+    },
+    {
+      "path": "02_SVG可编辑图/03_PS自动成图.svg",
+      "bytes": 82049,
+      "sha256": "53D2F12225E8F67104AC63423A19B12525B0D987882035255493B927A129180D"
+    },
+    {
+      "path": "02_SVG可编辑图/04_参考风格学习.svg",
+      "bytes": 216728,
+      "sha256": "A11567C44800757C354A3C6DAA3476A4AC0D6B49DBE693CFDE1A26B1C1072CD1"
+    },
+    {
+      "path": "02_SVG可编辑图/05_GP持续适配.svg",
+      "bytes": 214411,
+      "sha256": "5FB37ACC91CAEC9AB5AF2AEF9148DFEEE5133B31D292A5FB1CD2869FF12D037F"
+    },
+    {
+      "path": "02_SVG可编辑图/06_成果同步更新.svg",
+      "bytes": 130838,
+      "sha256": "FEC0B150B4B846A5759CC1CAB9D974093E8A282951914C6BD6A411E0D5E9AB27"
+    },
+    {
+      "path": "02_SVG可编辑图/07_多业务场景.svg",
+      "bytes": 188743,
+      "sha256": "E5ADB1D0947D0603517317D787746A5F6D5837BE6A5E9C6A812DD5381C791E10"
+    },
+    {
+      "path": "02_SVG可编辑图/08_完整成果交付.svg",
+      "bytes": 340900,
+      "sha256": "FFDAAD3E9C9A2217023E4461C0A86BA0C08486E1CD5FAF04CD782DB3D222B90A"
+    },
+    {
+      "path": "03_整套图集/ArcGIS_Pro_MCP_3.0_宣传图集_矢量版.pdf",
+      "bytes": 791197,
+      "sha256": "6E3883108074271ABF2407784838819D16AF4E54C7267BD638A64366DEDF2E56"
+    }
+  ],
+  "artifactSetSha256": "7AB09CF94946113BACC1C69232B942D9DE8FF2D7B951649582CF70B968320E6A",
+  "galleryHtmlSha256": "2955B75C1BAC8B27A498DF740D9429091708BD32BB4BBC11AA539BD6F4163029",
+  "screenshotManifest": [
+    {
+      "path": "制作与核验/画廊浏览核验/01_桌面完整画廊.png",
+      "sha256": "790A127286B093F1CEF4ECF6A42B350477C877B1B8C6BAAFF4016461A4941510"
+    },
+    {
+      "path": "制作与核验/画廊浏览核验/02_大图浏览.png",
+      "sha256": "D5302496AABEC43F5169DD6BE794C975BE1A0AE000E49F8042458654158973DB"
+    },
+    {
+      "path": "制作与核验/画廊浏览核验/03_手机完整画廊.png",
+      "sha256": "B0194B2FE72698CCACD43D8F0B9A148EBFD084E73D72EDBF4BFF3429EEA6A23F"
+    }
+  ],
+  "visualReview": {
+    "desktopGallery": "PASS - all eight final-redraw images visible",
+    "mobileGallery": "PASS - all eight final-redraw images visible with no horizontal clipping",
+    "lightbox": "PASS - complete final-redraw artwork and controls visible",
+    "reviewMethod": "The three newly refreshed actual Edge screenshots were reopened and visually inspected"
+  },
+  "cleanupRecheck": {
+    "method": "Win32_Process with exact gallery QA path in CommandLine",
+    "remaining": 0,
+    "scope": "Only gallery-owned Edge processes"
+  }
+}

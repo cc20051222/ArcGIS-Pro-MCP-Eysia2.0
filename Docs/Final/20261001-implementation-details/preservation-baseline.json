@@ -1,0 +1,3681 @@
+{
+  "kind": "planning-preservation-baseline",
+  "createdUtc": "2026-10-01T00:30:16.3320463+00:00",
+  "projectRoot": "D:\\ArcGIS-Pro-MCP 2.0",
+  "probePassed": true,
+  "plans": [
+    {
+      "path": "Docs\\GIS_AUTOMATION_FINAL_BLUEPRINT_20260927.md",
+      "bytes": 14895,
+      "sha256": "431C6A1ADA6A478F941628AD0346E4E95CA84958AFA6BADE097F8510528D8417"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md",
+      "bytes": 26386,
+      "sha256": "1F29BD5A80AD44B6154000C2D38EC820809CE52A894F345522C1806F33E532CA"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md",
+      "bytes": 25469,
+      "sha256": "EC7B8512D93155DAEE9C94EAE82FBEDEFDC5AB271B6181C7E9905C69FAF39F11"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md",
+      "bytes": 16495,
+      "sha256": "6E4B3E7BED1E873CC637AF4CD5DCECCDAE7F7C55918A0A2913A6C7BE2F0FD9EC"
+    },
+    {
+      "path": "Docs\\GEOAICHAT_COMPARISON_20261001.md",
+      "bytes": 10169,
+      "sha256": "1B452B17277F7BCAEAADAD44BCB45148EF8E9DA36CD085EB36B2904D789D2F17"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_FINAL_PLAN_20261001.md",
+      "bytes": 16493,
+      "sha256": "325ADB4C8BC4485A83D8413FC0BE374266FF6B8136B7A1EB47DCB95B90A53934"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_PRODUCT_IMPLEMENTATION_20261001.md",
+      "bytes": 19791,
+      "sha256": "698860AB3482A60A708548224BFD68BE368D85F152CF37720A84E925F14A198D"
+    },
+    {
+      "path": "Docs\\GP_AUTO_ADAPTER_AND_SCALE_20261001.md",
+      "bytes": 14215,
+      "sha256": "F7C1D3B4A180A02D170A80E235D3DC16EAB3F24817924EDE6303B72D1B547556"
+    },
+    {
+      "path": "Docs\\GIS_AUTOMATION_DEVELOPMENT_AND_ACCEPTANCE_20261001.md",
+      "bytes": 24901,
+      "sha256": "F4C5F34F00E2FF18876CEEBF6DD0EFCB957E810FDDE0C79F05096B2836498183"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "bytes": 16673,
+      "sha256": "C1D37FE0AEE78DDC17748951E69622E4D5751F7EB8056B4EC48ACB2362AF1CDD"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "bytes": 10838,
+      "sha256": "F6DD8C5E69017A3C0C9AFDB2EF45D90B87CF2A89024EA140E99114780D8F71F1"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "bytes": 14821,
+      "sha256": "6FFE689932B62232BAC93FE45021A3A16B1A3B95F82B2CCC9AA4222FDA6B6296"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\INTELLIGENCE_AND_ORCHESTRATION.md",
+      "bytes": 13374,
+      "sha256": "C4DDB91CDC96475650179565FBE5599260860286BB26EFF640D99A64844164C6"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\README_FINAL.md",
+      "bytes": 12393,
+      "sha256": "621C087365DF4D1C7D93F26173591B4A183D9356BEC5090B14594E428B02A1EB"
+    },
+    {
+      "path": "Docs\\Final\\20261001-v2\\VERIFICATION_AND_TRACEABILITY.md",
+      "bytes": 14422,
+      "sha256": "4B64092735B377D5D177BC2B9DB55F97877C68D3E3E932842A637CE6DC76CD24"
+    }
+  ],
+  "source": [
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\ArcGISProMCP.Compatibility.csproj",
+      "sha256": "E6D2D77DFA688A70867FFEED5474DA097F0412E6E92CF573E4041FE291476DF7"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.deps.json",
+      "sha256": "D20A66106CF31BEEB635D9779069309A9D53A772D502E7590732B8D05F1AE8F3"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "7EABFABFE2099D58C929BF2AFB8E7DDBF68CD958E692DB3E8697D039AE42B6DD"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "35FDBB7D7FAD29473730A621C3BD3FFF65C3F5D482264DDC18A8E38B44309E3E"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Core.dll",
+      "sha256": "E52ED6A9854FD9A24B3459B6C0F5E9B9B223E7FC195D2DF3F11368884A8C9A2C"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Core.pdb",
+      "sha256": "690598DEA5C357961EE434717933358C8CD810648B3E8F9A66F0EF6495308F62"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Logging.dll",
+      "sha256": "211304A25057749729DD0D9A5ACCED38E5A30B209CEE7E14EBF4E487DA7D18EC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Logging.pdb",
+      "sha256": "C3EF13D58E1FF2F0988D8A54849C2D6EDFE5916D7C7FC6C7249D7A40CB0F2E05"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Security.dll",
+      "sha256": "2DC997E0CB135D953D4F264768BEE3F4DF11C60121752874E5281B4CD187AEA2"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Security.pdb",
+      "sha256": "31D10F835EBC8FB436973DB3638B9B57C46049394C84F048987A9418747C71EB"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Server.dll",
+      "sha256": "C07DF320B2C0F8D070BC590830E4CA40131E6DD4257C6D9974FC7E83F23A2B8D"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Server.pdb",
+      "sha256": "8FE985C68BBA7BB9F2502BE640F5D2E6AB42D96945DA6BCC58367190EC07F4B6"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Tools.dll",
+      "sha256": "319B0A16795BDF8CBACECBE6DC3CF5CD00272C71E69D96719F602FBEB3B180EF"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\Debug\\net8.0-windows\\ArcGISProMCP.Tools.pdb",
+      "sha256": "3DC9BD4AA8E2EEF6518D64ADAB3BE9BCFB922ACF4227D5F48A0F2EDD8AD322B2"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\arcgispro-mcp-pkg-305d272612cd40cc928cc6f8450df4d6\\Config.daml",
+      "sha256": "51EFAC7E57DAD11547004826AB92C1184C6378842F8ECEE0944A886DD1ABF6EA"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\arcgispro-mcp-pkg-305d272612cd40cc928cc6f8450df4d6\\Images\\AddInIcon.png",
+      "sha256": "DDE9F5DD359F02FCD7ADC9FEAAF8E8E7B7F7D0E627F82B4C79E28994F4D10874"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.deps.json",
+      "sha256": "BA9CD277D53ED8C5390C5B0B84C54604F34A572B1458E5464F3C911E3C0741BB"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "903C6246155A07F2599225AEDF526F9E0587090D48961FA7D47FB19FC4F9846B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.esriAddInX",
+      "sha256": "D3133E0F17C12E98829457A997D8F069D7E18E05362759B9217E71D0C22B239A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "47BE6725095B1676CD3A20F4871158C59FA9CD7DA26FA85DDA8C2C4D59E7F669"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.release-manifest.json",
+      "sha256": "BEA24317F03A1EE298F6AAEAEF8D3B4F28472732EA488E87BCAD6E7B07D3C659"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Core.dll",
+      "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Core.pdb",
+      "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Security.dll",
+      "sha256": "2DC997E0CB135D953D4F264768BEE3F4DF11C60121752874E5281B4CD187AEA2"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Security.pdb",
+      "sha256": "31D10F835EBC8FB436973DB3638B9B57C46049394C84F048987A9418747C71EB"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Server.dll",
+      "sha256": "F623660D5C2F7C6C1319E0F9096411E78DF1E2B9A7BBED1CE0DDA2687246286B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Server.pdb",
+      "sha256": "93AB025CE73DBA4201A27670EE2C1496F5544F54199EC456C172BD2A9ECB3B68"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Tools.dll",
+      "sha256": "6679DE096846C840FCF3F4E1CD33BB86F89116B43BB50EFA362055A67A04E546"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Tools.pdb",
+      "sha256": "A873945A5AFFF9FB4F51B2E16FB4EB916CBDDC23F300465BA5EF6BB78B9AF0AE"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.deps.json",
+      "sha256": "D20A66106CF31BEEB635D9779069309A9D53A772D502E7590732B8D05F1AE8F3"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "6258FE3DF78D5235EF350FAADB46145A9CE764A7B7C1B1416F5F64DF28BF6703"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.esriAddInX",
+      "sha256": "A2D6A0D0807BA16FECE23ADC19EFA6F04DA424E22788714EBD94E4D2EF9AFE09"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "083EE6B0CF56FFD480C2DB3DC947857E243DF0249ED9BDBB51B20C683FC38837"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.release-manifest.json",
+      "sha256": "CDACAB9AB5CC2B4539AC0196487BB8058F1E4E80EA6D1F437EECCAE0F0F9DCB6"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Core.dll",
+      "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Core.pdb",
+      "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6FEA3C8F82D1A2918C68005916AAE8FBF624715F77C22D48BA8D0E7411754CF5"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "C0C3D6A5A641A4B56D9C98FC97BA4B36892853D50670679104435EACB041C7F2"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Security.dll",
+      "sha256": "1864E1C87D2C70CBE3BC7E1F0BD6C02625077CB113DD391F9385152A4C414E8A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Security.pdb",
+      "sha256": "1D249B4503304C94F965266C22D17518AF20509CF95EA4525BB4929541F72761"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Server.dll",
+      "sha256": "F223C6691DCBE622D0C60CB9414CFF2B5BB9A1002C86538F33ECFCAF0F14211C"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Server.pdb",
+      "sha256": "8161DD5B532AD9CD8AFD8634D4938ADA2DAB223C6CF41DCA09C7DD90ABA147B0"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Tools.dll",
+      "sha256": "DA7FA0DDEBDDC715D04627D56CCD8261405A283E6B1BC9C2ABAD63F746582181"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\bin\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Tools.pdb",
+      "sha256": "47F9C39E6B90F4CFA079293476AA473CBE53A68B6CA9378967BC16ECFEEE0FE3"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Composition.cs",
+      "sha256": "9594015E8C6EACB3937ECA2384D0DB8AB90A845892B0D117BA8223C5880D8693"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Config.daml",
+      "sha256": "51EFAC7E57DAD11547004826AB92C1184C6378842F8ECEE0944A886DD1ABF6EA"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Controls\\DiagnosticsButton.cs",
+      "sha256": "372C52D8DF73D8E051B2A11C569F6B29F94DE56F64A1ED1630CB640AA004BD5E"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Controls\\RunTestsButton.cs",
+      "sha256": "748D281F319584168EE2163A4C6D4F54F0DF1BC24385F0D0BFF4E5F313900E0F"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Controls\\StartButton.cs",
+      "sha256": "D095877857ECF92523CA49A12AD6DC491E50F74518092ABF25AC59FAE35FC527"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Controls\\StatusButton.cs",
+      "sha256": "A58D0C1F4E845DC70F1D12E7609E8C84E8A363F6A19DB7FEF9FB25641BDA4E4D"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Controls\\StopButton.cs",
+      "sha256": "CF458E3235EDC5744E48032CBC88B421C7B30E316622B303426AAA666CA8BCCD"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Health\\RuntimeHealthFactsProvider.cs",
+      "sha256": "F5DCEACA901A635D28849EB25DA170B8EE1CC6AB94D2B5B9D190723F3C8687A9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Hosting\\ArcGISHost.cs",
+      "sha256": "196502743C1C66B4D4C280C213CB747B86BA28FD1949AA93ABFFC9E01C1F5601"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Images\\AddInIcon.png",
+      "sha256": "DDE9F5DD359F02FCD7ADC9FEAAF8E8E7B7F7D0E627F82B4C79E28994F4D10874"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Logging\\FileLogger.cs",
+      "sha256": "16D21AC05360019127BB1B2F7A10F5DFE9A5BF3B7DD8F3E9A6905AFA8C5294BE"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Logging\\ManagedFileLogger.cs",
+      "sha256": "FF61250CC627E108499339CB06E362CEB11B785C2F541F1840E40CA99DBFE022"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Module1.cs",
+      "sha256": "D6EDD89466C6B1985BCB76D8DE670B3881934D6098DB13C9E4E89C85642E8F8F"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\ArcGISProMCP.Compatibility.csproj.nuget.dgspec.json",
+      "sha256": "0A4EC208DABD844CE94E4A1B544A121094149D43F76000D27E6AD9EA4710329B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\ArcGISProMCP.Compatibility.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\ArcGISProMCP.Compatibility.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.assets.cache",
+      "sha256": "C7CE353B8A8C8B4907D7CACE89827E9BC32DC903D197A88A78BAD624DC1F0C05"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.csproj.FileListAbsolute.txt",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.GlobalUsings.g.cs",
+      "sha256": "0B9452988A57D775BC0A9E81588E9DA2F45FC1F93D524BF07B09E86F98212816"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISPr.BF0A6579.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfo.cs",
+      "sha256": "35191BC83292AF2A941ABB61EB5CF8F742957F410FFD9CC25D995DDC9558D334"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfoInputs.cache",
+      "sha256": "30D71870C978FA3E7C0DCBB0410A5B02E0133147CDE4F87ED6CAFC5AE3CA59EC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.assets.cache",
+      "sha256": "DBAD9980FA567C401E81F26BA3FDAF448F3E96CBAEA2A9AD3A14C7302F500D12"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.AssemblyReference.cache",
+      "sha256": "1A87368B41DEDB96F7D25D1E022D28C3FFD9EDC2DEEA28F3BDB544992D5DCE40"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.CoreCompileInputs.cache",
+      "sha256": "FB92129812669F72E3968C7BE370039F53CABF4A48786EF8972F04F23B95D205"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.FileListAbsolute.txt",
+      "sha256": "AB4E5A90FC2236CE4FFCEBE128E76D20EB9B09E8D3810450F21C52271C35C756"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "7EABFABFE2099D58C929BF2AFB8E7DDBF68CD958E692DB3E8697D039AE42B6DD"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "E8F55CA2DB75644CB02EAE0DEEE6C5AC3DCA8403CECA557F46C993BDBB9F0430"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.GlobalUsings.g.cs",
+      "sha256": "0B9452988A57D775BC0A9E81588E9DA2F45FC1F93D524BF07B09E86F98212816"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "35FDBB7D7FAD29473730A621C3BD3FFF65C3F5D482264DDC18A8E38B44309E3E"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\ref\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "C7861DCF8968643840718871457B6390936125B02D38D8AE4536A6B820ACFE34"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\Debug\\net8.0-windows\\refint\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "C7861DCF8968643840718871457B6390936125B02D38D8AE4536A6B820ACFE34"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\project.assets.json",
+      "sha256": "2B41C59584A4BE547250ECD247C6D5D5C3129F7499C3F371A6EE1F6252AF59E5"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\project.nuget.cache",
+      "sha256": "27755AEC5E352CEDBE46381B16FE59E0425D658283F782796A050E96C6C1886F"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISPr.BF0A6579.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfo.cs",
+      "sha256": "35191BC83292AF2A941ABB61EB5CF8F742957F410FFD9CC25D995DDC9558D334"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfoInputs.cache",
+      "sha256": "30D71870C978FA3E7C0DCBB0410A5B02E0133147CDE4F87ED6CAFC5AE3CA59EC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.assets.cache",
+      "sha256": "F35998216131DB365A388C090D48AD2DDFFF54F5B2CB3759EC566EB551E2EB3D"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.csproj.AssemblyReference.cache",
+      "sha256": "AF7A4E9B8DDAE1F92DA647745E5C02EACB71742B4B6163FEA623CE7D6F476382"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.csproj.CoreCompileInputs.cache",
+      "sha256": "33F37D3F11CB3E6F3D367F2BD72EC87571615EB461D2783376CDF8EFBDAFB9BB"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.csproj.FileListAbsolute.txt",
+      "sha256": "19DD9CCA3A8D2C4E612D5832B56C607AD7AC2B619D62457934F835947F5C16FB"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "903C6246155A07F2599225AEDF526F9E0587090D48961FA7D47FB19FC4F9846B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "549B231A71567D06951B7C3A95B8F9896743B1E9B35F7955BD033F5CE27E77A5"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.GlobalUsings.g.cs",
+      "sha256": "0B9452988A57D775BC0A9E81588E9DA2F45FC1F93D524BF07B09E86F98212816"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "47BE6725095B1676CD3A20F4871158C59FA9CD7DA26FA85DDA8C2C4D59E7F669"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\ref\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "AC36E24EEC3742F0BE868A3E1427986345E35EA443F2B6367C8C1EE4B687EC2C"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net6.0-windows\\refint\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "AC36E24EEC3742F0BE868A3E1427986345E35EA443F2B6367C8C1EE4B687EC2C"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISPr.BF0A6579.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfo.cs",
+      "sha256": "35191BC83292AF2A941ABB61EB5CF8F742957F410FFD9CC25D995DDC9558D334"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.AssemblyInfoInputs.cache",
+      "sha256": "30D71870C978FA3E7C0DCBB0410A5B02E0133147CDE4F87ED6CAFC5AE3CA59EC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.assets.cache",
+      "sha256": "F19D3D0C8E54A412458A5E91E74A06FB035B9A42EA4BE553B077C26AEADA4410"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.AssemblyReference.cache",
+      "sha256": "BB2347ED043EE42AA68CD2B032976785C686AF70FFE9BC2599D166112F99DBBC"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.CoreCompileInputs.cache",
+      "sha256": "313643E2FF4EC4ADE74BD126C997EE671CD18DEE20B8D0BED1F2F674349BC399"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.csproj.FileListAbsolute.txt",
+      "sha256": "56072D1A8FBE7EC25067CBDD07288D371E4F9593ED605AEF04F46B6CF561A379"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "6258FE3DF78D5235EF350FAADB46145A9CE764A7B7C1B1416F5F64DF28BF6703"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "E8F55CA2DB75644CB02EAE0DEEE6C5AC3DCA8403CECA557F46C993BDBB9F0430"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.GlobalUsings.g.cs",
+      "sha256": "0B9452988A57D775BC0A9E81588E9DA2F45FC1F93D524BF07B09E86F98212816"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ArcGISProMCP.Compatibility.pdb",
+      "sha256": "083EE6B0CF56FFD480C2DB3DC947857E243DF0249ED9BDBB51B20C683FC38837"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\ref\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "9296A7027529D0E605E0C2BAC0435685B12AEB54E09891A1563D9053D4F4576A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\obj\\x64\\Debug\\net8.0-windows\\refint\\ArcGISProMCP.Compatibility.dll",
+      "sha256": "9296A7027529D0E605E0C2BAC0435685B12AEB54E09891A1563D9053D4F4576A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\SelfTestRunner.cs",
+      "sha256": "4F602B92245D5B2E34137EEEF31B4CF86A81E0BB3FE56455D222C4A391862627"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\AttributeService.cs",
+      "sha256": "AD9B1D36946055B8A74F3712064D7FBE323AE688096381B4CEA3B0FDD5160192"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D064DiagnosticsService.cs",
+      "sha256": "264B25209A7A6207AA82A8C6CBC004926BEA2E100AFF0BACC7792A1248A2A6E2"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D064GpEnvironment.cs",
+      "sha256": "8AB00E86205B10FFFABB10D580022A8DA0DB9E0DF95DB3E89D9E735386A2FF5B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D084AnalysisService.cs",
+      "sha256": "644D8A2B2DCE78FA3B0716ADBA91B7D95169CDA2730F5BA7C031E3658D04A941"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D088QualityService.cs",
+      "sha256": "8F8ABECB7F9FD4122CB5B538199088775228881CCF2C4C09401FD081CEFCD8DA"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D092DomainService.cs",
+      "sha256": "B5454D652B9D67EFB7E89602E27A7455FFF7A5862AB538A91EF486B6120B232B"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D094AnalysisService.cs",
+      "sha256": "E54A9DC56C949E20A15B2AABF7858312F1F4AF912887915363BD9290FFF2A074"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\D096RasterService.cs",
+      "sha256": "E3116C58937E455EA4B7E59BE569E1193C5BDD60B0BE307F1D562D30D6BB82B9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\DataManagementService.cs",
+      "sha256": "BFFD0DF931F5273E35262F632A52E6B93F03DD4DC69ED1F3E34B8CBFA60A4984"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\EditService.cs",
+      "sha256": "895A1989609A64D26197FBF016953C01A1D387D42EEB9A8D17A1E90BEF1DBB29"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\GeometryWkt.cs",
+      "sha256": "BFE5FA50DE928913F7A4D5DAFAB61C24ED7CAAA9B614413121F0F8BB5C8129A9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\GeoprocessingExecutor.cs",
+      "sha256": "B9FC104C491EC2BE87DA7B7FB6FFF599FF17EA9F973B8EBD3BF2F91A3CA48CA3"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\GeoprocessingService.cs",
+      "sha256": "E52DBF741AC035CC584463A8B185EB1468C6ADB6F4C21D78D5756306E6C19BA5"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\GeoprocessingService.D064.cs",
+      "sha256": "70AC36DCA1DC6CCE0A478C206784296F4627B278AE1434BA0356D9A9BA4FDE06"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayerResolver.cs",
+      "sha256": "69098D30FA9C0461B46876DFD9A684252AE27CFC85568A1D75519D0FAC795CEA"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayerService.cs",
+      "sha256": "9A33FB9D0407D7A9B1B4C2986B7C26131574B42D1328EDDBDAFA47C949B5445E"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayerService.D063.cs",
+      "sha256": "91991CB0E4C2EBD2DF36A7CB60553B0B2C0DA642F89525C18F871A1B57714152"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayerService.D066.cs",
+      "sha256": "677E7EC8DC9793833DF2F47FE8223FA60687D4508D2ACED3B1340DD53CC48685"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayerService.D084.cs",
+      "sha256": "7CF33EDB916B0751A0B795362976FB0E9C09800F0A09C126291A1FFEB973C120"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayoutService.cs",
+      "sha256": "B572B59F634149AD9B59A7C73D0D42CFA3FFCD0941536804B36BC648E4B77F67"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayoutService.D064.cs",
+      "sha256": "36BCB76079B21F82CF793223FA54B42FB4DDFAC78DC4F8BFB00EEB6DA6D7EB45"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LayoutService.D084.cs",
+      "sha256": "28895FA69561D6592B2E82593DFD8D7F9A4BAF70BBEBA4BF7973A4F04F5E589A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\LicenseService.cs",
+      "sha256": "CA353F8638874F2FF2B2DF85398361179696612419B74DAFCE8384DC45C2C5A9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\MapResolver.cs",
+      "sha256": "4790B720169FFBF2ECE59C252C2AB18DD4A0D7C5BB2D46A2CBCE26DA0A8F23F0"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\MapService.cs",
+      "sha256": "18ACF02EBFC2B8405A6DF0E14CAA7A62D3A1C5FB8FF449D7B330940527441281"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\MapService.D063.cs",
+      "sha256": "3DDD4186052918A1ABB16F75225E83C7F0944EAA19A3B6ED288F518B47E07689"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\MapService.D064.cs",
+      "sha256": "69AB7B133BBD62415617E8E316D36EF4B63D296F48135B4AD8AFE2873A760F8A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\ProjectService.cs",
+      "sha256": "D41A2C90920F318793123F9BF9FD2E2C7DFEDE424E6CC50A2AC06B950265C8DD"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\ProjectService.D064.cs",
+      "sha256": "0EBFFF0BDA25F3E23EF80D9A9A5A50DAC99BEA56A155574F37F48795D9EA36B4"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\RasterService.cs",
+      "sha256": "1B2E79D36D09B31D108701E321DAC49B0F803A5BA45D5E4BD22AB4B189E7D422"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\SchemaService.cs",
+      "sha256": "D1CAD4E194A21D58287C71C5076983231912E2B72494051E70FA85EEEFADD47A"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\SchemaService.D064.cs",
+      "sha256": "F7252DE0993B17015FC8B3F5EF31D63372DA970E39B358A7DAFCECFF804FF187"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\SelectionReadService.cs",
+      "sha256": "B70532F42441BEA44512FD2B55DD7E660F18BB7CEBD870EAEB5000B7A68EA129"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\SelectionService.cs",
+      "sha256": "74D68B4EF3166B4C07E6113F3E56654DDF2853D2342F1581291A47A043890C31"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\SpatialReferenceService.cs",
+      "sha256": "82E0EDA03C79D66AA55F2BCD659B57C274E3B7A487F022A2BBC39807844528ED"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Compatibility\\Services\\VersionService.cs",
+      "sha256": "90F4C865A7B7F380583DDDDF2DBCEC39D1B6A38641A4F6B5690764652DB11AA9"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.Current\\README.md",
+      "sha256": "D2DA704272704EC9300D68951D018864A32AC59FFE78BAE9E39D42BF02508208"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.PythonBridge\\__pycache__\\bridge_runner.cpython-311.pyc",
+      "sha256": "C1CAE4855FA4D85D95A073DAFB080D31F938749518790BD810F40A1A247D1E99"
+    },
+    {
+      "path": "Source\\ArcGISProMCP.PythonBridge\\bridge_runner.py",
+      "sha256": "C8D64A7AD872B9D691C74C5D36BD6C45F68A932AE945188993858C4943312397"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\ArcGISProMCP.Configuration.csproj",
+      "sha256": "3B663EDE1B666A43DB7F12E86131717FD72D0DB8282719EA20FF34681C377331"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.deps.json",
+      "sha256": "DA76743E1E1F214DB4E1C9020F595CFCF58162C355D3CB10014E036A20E9595C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.deps.json",
+      "sha256": "1A82ECD59E653CEEE098165ADF4D4CE0A70CA924F80417ED21CD295689DC5479"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.deps.json",
+      "sha256": "DA76743E1E1F214DB4E1C9020F595CFCF58162C355D3CB10014E036A20E9595C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1F3ED429181916788188E1FA0FEFC96936E9AA85EB5AE56ABE941498D36C1702"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "4BEBA9A46623DA810D80D4D9E5D7893C8EB7B6A6114879DE0F78F09550B7197C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.deps.json",
+      "sha256": "1A82ECD59E653CEEE098165ADF4D4CE0A70CA924F80417ED21CD295689DC5479"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "BB7E296983EA208B2ED71FAFD67A1CC3B8C4276E11EAB39B4C7AEA7D381DBE0E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "22D283FC36EDD3029CE24C7B6F13F68BB5C5AE6271FE2D59E30E3F20335E2A18"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\McpServerOptions.cs",
+      "sha256": "D86EED2F9BAB2D928580C1B4F4657D62AB2A3B3F1E6E6E3A0E22721C4A6D099F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\MCPSettings.cs",
+      "sha256": "2680DA1B4F428B1777DB0538C0B349AFEA69C28E8604FB9A91BE304B1D91EF4C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\ArcGISProMCP.Configuration.csproj.nuget.dgspec.json",
+      "sha256": "156089A3F1FAE9083F886A239256EC79DB1A29331C7A9879909979545FEAABC6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\ArcGISProMCP.Configuration.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\ArcGISProMCP.Configuration.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.AssemblyInfo.cs",
+      "sha256": "01FBB502FF991E5BD32C8B6067D56C8C8ABECA55BFCDE678073F161811590AD6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.AssemblyInfoInputs.cache",
+      "sha256": "710D2517276710CBE525F5E129CC84E6B69EB2DA2AF7AA8C3829A2DF5E8547AA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.assets.cache",
+      "sha256": "E9613850880DC1D8CA67B8529B41A827D73126B9740FE54639F934DCA7459750"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.csproj.CoreCompileInputs.cache",
+      "sha256": "C77D2D60FC0E310CB8CB7E5AF9AFC6CC1BEA46287EFADFB70478B5079F8F2995"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.csproj.FileListAbsolute.txt",
+      "sha256": "3184E2832850602197166DB2219F07BFE2312000097AB5F914D13BADF361715F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "3258E9DCE1FF05AE5E688A5842E8A2F209F645084C23CD95898F1A7E63914122"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Configuration.dll",
+      "sha256": "AD5A9A430466B7199ABC6ADAA158A1A05F6903ED1B2E9728055B3F77ECC9B325"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Configuration.dll",
+      "sha256": "AD5A9A430466B7199ABC6ADAA158A1A05F6903ED1B2E9728055B3F77ECC9B325"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.AssemblyInfo.cs",
+      "sha256": "01FBB502FF991E5BD32C8B6067D56C8C8ABECA55BFCDE678073F161811590AD6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.AssemblyInfoInputs.cache",
+      "sha256": "710D2517276710CBE525F5E129CC84E6B69EB2DA2AF7AA8C3829A2DF5E8547AA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.assets.cache",
+      "sha256": "A22D9810A172A0AC3FAE2BD5CDA06CE50F44AA2E722CA12877B0AE7076CD1860"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.csproj.CoreCompileInputs.cache",
+      "sha256": "D27B256D9D16E12E12C33A2FBC96879DC364451341DA34246EFE7F147B0A3F0F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.csproj.FileListAbsolute.txt",
+      "sha256": "991F636FACD54F3E763A93A7B1C718303991FBB2B0B683318FE6E40FBB8E15A9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "7DE124EFD9E72912EBD579F683A24D0511B03FD43BEF61097EF8EF630A2577AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1B5577236BB6A9CA4474FC715F8EF68F93027DE638FFC2CC0844B20F0C08013D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1B5577236BB6A9CA4474FC715F8EF68F93027DE638FFC2CC0844B20F0C08013D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\project.assets.json",
+      "sha256": "3E594824590998B1122D1CAEF67DE0E06DD7B946665598E87CA3DB971A79B2E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\project.nuget.cache",
+      "sha256": "D4023E1D66A1553BD896C7A14EEE994860C68D4D70E04367BF8F1F8C5CAA77BB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.AssemblyInfo.cs",
+      "sha256": "01FBB502FF991E5BD32C8B6067D56C8C8ABECA55BFCDE678073F161811590AD6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.AssemblyInfoInputs.cache",
+      "sha256": "710D2517276710CBE525F5E129CC84E6B69EB2DA2AF7AA8C3829A2DF5E8547AA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.assets.cache",
+      "sha256": "ACF7550CB18FD5D705F54866BF7FBEDB644396D284B4728E7A4697642BE43A65"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.csproj.CoreCompileInputs.cache",
+      "sha256": "2CF84E7849FE16B266E03CBA614507B9B992E1EE1D3737AA97F529EEE5D7CB85"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.csproj.FileListAbsolute.txt",
+      "sha256": "31B257045E1F5507FCF22959B70A09BC407E4F8AD81A2E483F6B61D4CAE5FA8E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1F3ED429181916788188E1FA0FEFC96936E9AA85EB5AE56ABE941498D36C1702"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "3258E9DCE1FF05AE5E688A5842E8A2F209F645084C23CD95898F1A7E63914122"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "4BEBA9A46623DA810D80D4D9E5D7893C8EB7B6A6114879DE0F78F09550B7197C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Configuration.dll",
+      "sha256": "68C33742A6F17F4751930D096F0D778BAB467EB0E248D56884879155654BFC36"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Configuration.dll",
+      "sha256": "68C33742A6F17F4751930D096F0D778BAB467EB0E248D56884879155654BFC36"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.AssemblyInfo.cs",
+      "sha256": "01FBB502FF991E5BD32C8B6067D56C8C8ABECA55BFCDE678073F161811590AD6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.AssemblyInfoInputs.cache",
+      "sha256": "710D2517276710CBE525F5E129CC84E6B69EB2DA2AF7AA8C3829A2DF5E8547AA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.assets.cache",
+      "sha256": "3A48251F49DFE50321765B89E6173386311E9BC2CC481587A2D06C84E7AECCA9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.csproj.CoreCompileInputs.cache",
+      "sha256": "CEF095ADC822BD29FEA77BAC060F382DACF934C9E7CE93E34AD73955C7569D48"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.csproj.FileListAbsolute.txt",
+      "sha256": "586535BED653CA13E15BA74FFF91ABBDB0E4F0D15877948F4B7B250AD66D2B78"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "BB7E296983EA208B2ED71FAFD67A1CC3B8C4276E11EAB39B4C7AEA7D381DBE0E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "7DE124EFD9E72912EBD579F683A24D0511B03FD43BEF61097EF8EF630A2577AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "22D283FC36EDD3029CE24C7B6F13F68BB5C5AE6271FE2D59E30E3F20335E2A18"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CB0D3761F12B75FB5F094432264286264E27876B90A773116CDC9870502E942D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Configuration\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CB0D3761F12B75FB5F094432264286264E27876B90A773116CDC9870502E942D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\ArcGISProMCP.Core.csproj",
+      "sha256": "C88141A94118D7FFFF291C13ABA0ED0BE75CD16EEA5B6A70AEC3B6570B499306"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.deps.json",
+      "sha256": "E13D022649BF238E405AC01B139C7A8E230EE973C6BB1D264D605C4343D8128A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.deps.json",
+      "sha256": "9B020F8D2F1963911BD099477A61CD3C1D0584A2371A2C69104FC427D56329C6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1F3ED429181916788188E1FA0FEFC96936E9AA85EB5AE56ABE941498D36C1702"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "4BEBA9A46623DA810D80D4D9E5D7893C8EB7B6A6114879DE0F78F09550B7197C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.deps.json",
+      "sha256": "E13D022649BF238E405AC01B139C7A8E230EE973C6BB1D264D605C4343D8128A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45177A474C8E59C8C2EFCB62722BE1BEE2C5981E096C36D45B7F29BE37F99F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "83614A0B726BD938154E5439F809CF975298A5705960C1CA1E3E4CADAD72C401"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "1C402402BC198F9CA52959200899E817BF7186A462667342F0BDD83BE166AD27"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "34C305DDB37C8AE2A3A81B9AB57717F64AC22032E557FBB239F3C430691C4E42"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "BB7E296983EA208B2ED71FAFD67A1CC3B8C4276E11EAB39B4C7AEA7D381DBE0E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "22D283FC36EDD3029CE24C7B6F13F68BB5C5AE6271FE2D59E30E3F20335E2A18"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.deps.json",
+      "sha256": "9B020F8D2F1963911BD099477A61CD3C1D0584A2371A2C69104FC427D56329C6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "58FF33B4C3D0D384834D62AC8570BE59F9DB6A3395CC85FBA20A556A806DCDA7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "937A30309F1E9F4350C691D0C2A4DCC997A1D90571482272B24B68B894581B82"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "ABD01C4BBFED7E41BAC40D3DDD0C01B85F1C180CAFDCB9D0B39654F8C4E129E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "89EB88A9391A3128040E2FE313CB9773D4349BFB2E9177D9DDBD645CC40381EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Container\\ServiceContainer.cs",
+      "sha256": "34E474BC84ED737918A649280D9484563F31FB8CA0EB59C8522A2602E3AB9F9C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Hosting\\IArcGISHost.cs",
+      "sha256": "1E2C69859F1DC192F857AB58C2E9BEB6963125A07798E949B21C36FF3F3AC76A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Jobs\\JobManifest.cs",
+      "sha256": "188B460661B0576C3BCD9ECF65CB7286C65BFC2467FB6AD389B13E7171CCB5FC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Jobs\\WorkflowJobStore.cs",
+      "sha256": "D0D02E5D343BD4E1298F9F8ABBAF0D8821954B8BD96E7F428039970940711EE0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ArcGISVersionInfo.cs",
+      "sha256": "DB5F382DC380F0246537F2F48F5BA06D70C6EBF35C1FC653D8EE6C1600E55C1D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ConnectedClientsHealth.cs",
+      "sha256": "838A0DA1F4D176B181248F6AF9BD55E7B6E283DBED005576B13D7570DD67BE54"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\D064Models.cs",
+      "sha256": "CF782068D0FEAE1D1CFCAF3C02A8E817F3A640AA74604A735BDAD0B7B50DDAD7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\DatasetInfo.cs",
+      "sha256": "8437ECFBBC33D6C56382C7766460D04A8910948606EF646F091B0E35A0E4A824"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ExecutionType.cs",
+      "sha256": "8DF0F2317A29C45FB4CF12C028EC029FFCD712BA33EC321F8B6396E139DA7D6E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ExportModels.cs",
+      "sha256": "9BF9979CF2468B2FE33B49AC03D94475AA671BE1B7EF0F2ECB32EBD1FF24BAF7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\FeatureInfo.cs",
+      "sha256": "AE058000781D5F7BF2C933B6DF016F542A4C791F53FAAA3081520C940527F31A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\FieldInfo.cs",
+      "sha256": "A161C5D947175DD7E02E22DB55622D121F6E6A46CD630DF50F18EF7BB14685B3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\FieldValuesInfo.cs",
+      "sha256": "9A1E0D57FD5A8C356159DFE8E4B93A9D25E85808B8703DCF2F7160195A0EAFED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\GeoprocessingResult.cs",
+      "sha256": "EF07AA1F0E203BE5CFBBFE23A528959CE50AB20F82BA5F867794624F744B4980"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\GpControlModels.cs",
+      "sha256": "240BA1A025BAE33A55389C9A00EC0C1AB44BAD5EEA018E92F217F8BCEAE600DB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthComponent.cs",
+      "sha256": "59F6B7EE8E66193673995C0639BFE2762A937BB552EF4923E3841860BC208134"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthFacts.cs",
+      "sha256": "B125F2E5D8661ECF7A99F788B7E3C3C674184AF04B75E6F8FB5B5992499602A1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthSnapshot.cs",
+      "sha256": "BBB3B6A490BAA1D6D596632B105F2114108DEECFC17E687F9FAB40FD2E5EBA13"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthStatus.cs",
+      "sha256": "1856B7880930658AB232293BB345727564D0FE1AAE1807B06027EF0AE1C4EBAC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LayerInfo.cs",
+      "sha256": "078F962BCF32AEA2B512FA776BDD24ACC144670A93BD022FD20E9A1EB7E6E2DA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LayerViewModels.cs",
+      "sha256": "96945587B0CD40004B888D01D759E5092528B53DEB87FE4C39EC5963E924AA60"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LayoutBuildModels.cs",
+      "sha256": "4B3E956BA1E2A8B495D766DFA9891E1705A4D16FC605EC78D515288F417EC644"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LayoutInfo.cs",
+      "sha256": "0DF40121F0BBA997172936214963412181112AA592116F1B79F7B3CEA0CFACFD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LayoutReadModels.cs",
+      "sha256": "20D24BA2BAEABE0A56E25C80420153F76BBCC9FA07B9C8D5BDC05F5DF8F14D11"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\LicensingInfo.cs",
+      "sha256": "6E6B0A952513256945B640A901BA1203839B044AA97862CCCB8301A38DF6E822"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ManagedCompatibilityFacts.cs",
+      "sha256": "9B6D1CDBA0FF88E0A1A4D8393C12F8887CD42C83D79DECE1948A1C0F55B4E0A5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\MapInfo.cs",
+      "sha256": "D7DE44ADBDC336D56CD8EAF4A1DFDB66DED70BB1B90FDC9527597C4E2C477755"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\MapRequests.cs",
+      "sha256": "0B6D1163805676D9448FAF897D1C23734FC63D9D0B6247CBEFE1E25A121D3F19"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\MapSettingsModels.cs",
+      "sha256": "F6A66B542ABE4090439B1F465F501B2642A4E6A4E82E1DDA83935C6AD1EABF25"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ProjectInfo.cs",
+      "sha256": "F8513F204B0A98548BDB7758936AE6CE0B1EA30E373D79A18517504DA9D2D8A5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ProjectSaveInfo.cs",
+      "sha256": "8C8E52FEE2D4D0A44E767F94D6EB5DC3E1A8F590A08DC576D068578258D23BDE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\RasterInfo.cs",
+      "sha256": "5F2CCC6C8004B7684ED8221402FDEB0813D1DB6AF4098D84D94E95E97F121ED1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\RuntimeHealthInputs.cs",
+      "sha256": "B51E2EFE490D7556BF00F8B0FA83E2D22B22295DDD424E572362DAD4429C8576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\SchemaModels.cs",
+      "sha256": "1BD358BF1DCD4E1E4D462AACDF2404831E85CF8054294FFD2C66081AD2E7841A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\SelectionContent.cs",
+      "sha256": "834F2658BE5E65A82F14C3E5D5AD428280B313E74B980C35002736D1403E6699"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\SelectionInfo.cs",
+      "sha256": "9D16C873564F37FD77DFD556AA2235534DF23181CD8019B065713B5A2FEDA9F5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\SpatialReferenceResolution.cs",
+      "sha256": "77F2D78C9FE640F6F175C28EB1D0BC2A2D45F5D7A0B5161FD5DF04E34E88AB2F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\SymbologyLabelModels.cs",
+      "sha256": "7252C7A4ED84A91FEEA56FA269F4DC60516834408243CA2A487FC6B46AE6AE1F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ToolCategories.cs",
+      "sha256": "C012E79E440742EDA833B1BD493CF8B333022B66AC41FBE7FE4B59E708C9A0F7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\ToolMetadata.cs",
+      "sha256": "8CFC18DEBB18C8263E81DF82DE6BFAD6BEB87A72170F5A5BAA3D0A972A262C37"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Models\\WorkspaceInfo.cs",
+      "sha256": "7E05507D1775C5CAF34D4FF044F2ED9D4AE69C36E39C13BD9243BE6A304A9F0C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\ArcGISProMCP.Core.csproj.nuget.dgspec.json",
+      "sha256": "FB53F9CF9C5716CF9FE4A9E587B004D34F37089A926EBD4E31281F8F7C47ED16"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\ArcGISProMCP.Core.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\ArcGISProMCP.Core.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISPr.DCAA9197.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.AssemblyInfo.cs",
+      "sha256": "6F2833CBDF3C4253181097EB0CBECFA64070B5186C6DB6DB8896B14A9E959291"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.AssemblyInfoInputs.cache",
+      "sha256": "81ACC8AAD51EFE72F8E9B77E59C107AAADF5C3B3255B6EC5FE1E1AE0791C1B0D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.assets.cache",
+      "sha256": "A696465DDC0C040492F7483C774702F2AEA297D0BE018B2F1E8A0B1C433F23FF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.AssemblyReference.cache",
+      "sha256": "F42B71373F41D4B271DD4BAC44E32807BC524483DF5877C75675563E1964BD65"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.CoreCompileInputs.cache",
+      "sha256": "E3F3F0C312139CFE63C1E62E19C3DF949B5979EEDA2EB6DF8AD79BD8A93EFE66"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.FileListAbsolute.txt",
+      "sha256": "9198239665F05E8B329B6F0213BCA747F636F612254506CD8DA705750F83A68F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "A04431A4E0C9F8CE83D5FF8747DE1D738FC68A335464720D7209AC651B89C958"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Core.dll",
+      "sha256": "85695C3DA22C81F7F047CE041F211510C03C12233B121AA7300C7BE2D87B913F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Core.dll",
+      "sha256": "85695C3DA22C81F7F047CE041F211510C03C12233B121AA7300C7BE2D87B913F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISPr.DCAA9197.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.AssemblyInfo.cs",
+      "sha256": "6F2833CBDF3C4253181097EB0CBECFA64070B5186C6DB6DB8896B14A9E959291"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.AssemblyInfoInputs.cache",
+      "sha256": "81ACC8AAD51EFE72F8E9B77E59C107AAADF5C3B3255B6EC5FE1E1AE0791C1B0D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.assets.cache",
+      "sha256": "DD2B3510791091FE6F6082B336C25006FB98A986B94DB101075692787FB86371"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.AssemblyReference.cache",
+      "sha256": "0C513DEE25589C77D23190084511C6CD193A8F09FE14E1FA8DFF7FF4C8482309"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.CoreCompileInputs.cache",
+      "sha256": "B776259201EF361061C8631AD8465E4203C5F8F290B348738D78E5DA20F47667"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.FileListAbsolute.txt",
+      "sha256": "2875F108C04787BB6A8FD8B15D2D9A432A539E29D13FB56337478D2EF911549D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "2E54688AC7F15F4AABE53FAFEBEC52209FD15AB8CDF71DDFB638F486FC1759D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Core.dll",
+      "sha256": "78BE80BA378A5580B7CF6AB73F3143C3DD337F9D5F9DE68784E67D8A5244FA4A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Core.dll",
+      "sha256": "78BE80BA378A5580B7CF6AB73F3143C3DD337F9D5F9DE68784E67D8A5244FA4A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\project.assets.json",
+      "sha256": "ED102D96876B9680D9AE7D43B5A1AE457D1AA757F89FAF13327E4546330E61F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\project.nuget.cache",
+      "sha256": "A7EDCFF83616C11483E698C0069C6FC041FF5C8B3ECEC3EC377CDABB4D6B869B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISPr.DCAA9197.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.AssemblyInfo.cs",
+      "sha256": "6F2833CBDF3C4253181097EB0CBECFA64070B5186C6DB6DB8896B14A9E959291"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.AssemblyInfoInputs.cache",
+      "sha256": "81ACC8AAD51EFE72F8E9B77E59C107AAADF5C3B3255B6EC5FE1E1AE0791C1B0D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.assets.cache",
+      "sha256": "F28F2DC485C1CED1C2BF8DCB89FACBEDEEDEFA15523CAEB2291E3EDA63251626"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.AssemblyReference.cache",
+      "sha256": "21CBB3DF26CC428556B438326C86DDDB19BC1F6549098B6F8B3E7D67363BA6C4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.CoreCompileInputs.cache",
+      "sha256": "CBB1C0A79D8EEDB20E2ABC6B0750CFE288F0B72264278FB247007FD44AB3EDC1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.csproj.FileListAbsolute.txt",
+      "sha256": "D9F8EE53BCBF97BBDA9F1A6C845FE9E36817AFB4119552B29A0B7710A1EA1586"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45177A474C8E59C8C2EFCB62722BE1BEE2C5981E096C36D45B7F29BE37F99F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "A04431A4E0C9F8CE83D5FF8747DE1D738FC68A335464720D7209AC651B89C958"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "83614A0B726BD938154E5439F809CF975298A5705960C1CA1E3E4CADAD72C401"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Core.dll",
+      "sha256": "3CCA6B611617A55D6BDE8BFFF28CB023E4F2E0D9E3DEAA58585F1EE7558DC496"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Core.dll",
+      "sha256": "3CCA6B611617A55D6BDE8BFFF28CB023E4F2E0D9E3DEAA58585F1EE7558DC496"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISPr.DCAA9197.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.AssemblyInfo.cs",
+      "sha256": "6F2833CBDF3C4253181097EB0CBECFA64070B5186C6DB6DB8896B14A9E959291"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.AssemblyInfoInputs.cache",
+      "sha256": "81ACC8AAD51EFE72F8E9B77E59C107AAADF5C3B3255B6EC5FE1E1AE0791C1B0D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.assets.cache",
+      "sha256": "76CA667651A107309C3ABC46B0B6069D49DBF89A0B7218B059D8DE557FF27DC3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.AssemblyReference.cache",
+      "sha256": "41E34215A1D61562F79D517019F428FD95830DFEDEB1CE37D4F0B5F76010B727"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.CoreCompileInputs.cache",
+      "sha256": "28BF3EC6E655E1041FB3EEAF7995DFAEC09CA358ED069C8C2B330F7BB628D85A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.csproj.FileListAbsolute.txt",
+      "sha256": "D9970BC154CE62A0CA09D8730BABA41AEE63C6810775E773CB10722D1B2525E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "58FF33B4C3D0D384834D62AC8570BE59F9DB6A3395CC85FBA20A556A806DCDA7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "2E54688AC7F15F4AABE53FAFEBEC52209FD15AB8CDF71DDFB638F486FC1759D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "937A30309F1E9F4350C691D0C2A4DCC997A1D90571482272B24B68B894581B82"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Core.dll",
+      "sha256": "0C0D58B6522E3AADE2AE98A5BDDDE1FB3BDD352432B7B0D22D02492588D3D3F5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Core.dll",
+      "sha256": "0C0D58B6522E3AADE2AE98A5BDDDE1FB3BDD352432B7B0D22D02492588D3D3F5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeCallResult.cs",
+      "sha256": "2F2F1A35814E2DC6222FD071371B2BEB105367F34676B875D872EC13157429F7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeProcessManager.cs",
+      "sha256": "409516B505519F7847026B807325588B3714F29BC3FF45145B5B2071684813F8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeRequest.cs",
+      "sha256": "E565431CD2A9218CE30203D9BBB0B19EC2669BAEDC3DAFD63C2CB912AE467EB1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeResponse.cs",
+      "sha256": "661BE57FDD17B76D1A99B7C3B788D2FCC78870D86B9D421C9FB34B1B89FDCDCA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeService.cs",
+      "sha256": "ECFCE03B9DAE11900AEA0BA8A9A39DBB319C5DBDF8815DB8FE35BF288B56ADD1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeState.cs",
+      "sha256": "24E1D36CF1E4809840376E53F9D204A86EE741948A49FA2F036AC28DB8654B1E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Result.cs",
+      "sha256": "3B77CA7A5E8A82CB0F0CAF53A585CB120F89BF714B077D380B6D68471AB1FD22"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\ErrorCodes.cs",
+      "sha256": "F6767C5E5FA8B433A37391138600D4E4DFA16725EC1241887198485D57ECEDDC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\GpMessageSemantics.cs",
+      "sha256": "84DC66227C2A64C0B813BBE6877C4338A63BF1B333FB9C34C8F7E24E067DE192"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\OperationError.cs",
+      "sha256": "C1DFAF46B732DBCB271AD12B2F6D6B221C89D93FB0FA0A41F40B93340739D9CE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\OperationResult.cs",
+      "sha256": "C6C78D31C38D13E940FA3D23AC63EB19E5D401528465037620426DF6F2BEF8B8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\OverwritePolicy.cs",
+      "sha256": "B0171DFACBEFB7DAE4BC0E786552D2B7A56EEA36043C5094EE1DA1DD3B759C43"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\SpatialReferenceName.cs",
+      "sha256": "9BEB0BF0475B3D6D8A069FCB06B78D7960D155B87EA2F485465F682AB0AED5F5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Results\\StateProof.cs",
+      "sha256": "C97661DE3F75841C01C1BD6457533604B66B887866A265C03D5D996FD8707466"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Runtime\\RuntimePathResolver.cs",
+      "sha256": "95D250CA6B8C79C9A3E362ECC8E82A5A4693A05EEDC05D63CCA5EF06848F7C44"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Selection\\ISelectionStateStore.cs",
+      "sha256": "1FAD72DFE4EEB08CDEB96D0C9469592D102C6CA6A9A18E583786C0E32D4D64BB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Selection\\SelectionStateStore.cs",
+      "sha256": "94C70C54529ED31C758C0255B73187E496763914D06C02FBA7A3AC78B22EC4CA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\AttributeProfilingPolicy.cs",
+      "sha256": "617D654D430B1A6DF0700C7803A6F1C9A703A9B73A6B4BAA82759A334F2BA889"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\BatchPolicy.cs",
+      "sha256": "7E3828D7E8BCF8972E3D737FEFB1F98C22B2DA99C4D337B6E2017552D2FBB7DE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\D064PathPolicy.cs",
+      "sha256": "39B391CC8CBFF0F8B93852D65281032404E110E80AF390AC28D696DD76FF2AB0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\DiagnosticExportService.cs",
+      "sha256": "575698F0A6CBE6EF1251C45E666939E4DCF6B8B83D8BC3E8E8AFF12DE1C25E2A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\DiagnosticsComposer.cs",
+      "sha256": "1DD979FE7CC4EAE33B9703C53ECAFAB3F35966801B397ABB319F33F08F29333D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\FieldMath.cs",
+      "sha256": "BD5E761BC270885767DA6DC3D480822123A2F2E4256C8F8A28E580985BFF8FEB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\GdbContainerOutputPolicy.cs",
+      "sha256": "50A2E2A2B3514867464ACE18AC768B1E338D0C538467F981015350DD980A839F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\GpAuditLog.cs",
+      "sha256": "A0D4E6AA1B7E9E7AEDC9543A80D023EBC9DE45A2B6B95A81144E18D57F7C87CB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\HealthService.cs",
+      "sha256": "6C4C9B1EA7E227BD3629F33DBCBA5623B937F2D16AE27330BB33C804A2508F07"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\HealthStatusPolicy.cs",
+      "sha256": "BD6162CA4AAC10BBF262746C0F2B2A12C11E4739F5F20F4631D29E489D26B104"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IArcGISVersionService.cs",
+      "sha256": "6043272FECC06EBE06312B268CE2E55B4E625D68B5705C72721A1476A611D67B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IAttributeService.cs",
+      "sha256": "ECC9F893614F2DCCF198CA65D4B868E7C094E840F6A97CD3DEBCF5E978A56043"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ID084AnalysisService.cs",
+      "sha256": "D520841004D91EB974A42816CF62C0268E1343E0C8A3F29223258633F5F114CD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ID088QualityService.cs",
+      "sha256": "002931B808C21FA0D4655D01D79AADCDAC86BFF5E09961F532DB92D16B51406B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ID092DomainService.cs",
+      "sha256": "B1F3B37B21D1B128B33BFE72A763A1F54F99AFE3D988F2E0D5A84824626B1276"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ID094AnalysisService.cs",
+      "sha256": "FF6DE75CA3571690ABBB86A749BAAACD2B8F950305911C394E4AE79B7B4BF144"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ID096RasterService.cs",
+      "sha256": "7B83A4000E254AF4DE580443D8BDCF9B1F7189894DBC3820361CB597206B41D2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IDataManagementService.cs",
+      "sha256": "C0C2E7503242A025BD5AB9226BE05A4D16A6EFA333B07EF1941D534362B41A71"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IEditService.cs",
+      "sha256": "63A62AC66DB36D8A2FC388B1DE4AA4217A16F37C891E2E84EFC873236EC44E61"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IGeoprocessingService.cs",
+      "sha256": "76F5CD55F90286E8712D92B179BDDB62B3E7C9CBB4E7A62C3B1C1B76B92D14D2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IHealthFactsProvider.cs",
+      "sha256": "E791F3C633A56050BB2A1989756E0999591AA433A85871DA6DAB1C2A837E8629"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IHealthService.cs",
+      "sha256": "32AB3585D7710A81797F3A184DEF84FDA26A19062A290668C05B77C6CD5ADE07"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ILayerService.cs",
+      "sha256": "EE234201310CE1AE28C0B538FF6303A34A153BB652CCD9B2C035DC309546C77E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ILayoutService.cs",
+      "sha256": "6C00559687C6F32CB89DC463228923F84864A5B667A6C82B102A74E7BA67FA24"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ILicenseService.cs",
+      "sha256": "E68BFC5904B78A5743618188908163097C89DEE21145CE2C9F0AAC99BAE230B4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IMapService.cs",
+      "sha256": "D6A7CFF39AA25A10E507D5783C332D7DC10C9A84EC327352A32DCC79D820FEDF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IProjectService.cs",
+      "sha256": "F4786AAFE58FC4DB33336D5A426C2DC6AA76053396981E10F85C3E62EE209FE7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IPythonBridgeService.cs",
+      "sha256": "40607C1D2CFEB10D84085FDAB12DE92397F08E4E2F224222DD4B4BC1250A2DD5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IRasterService.cs",
+      "sha256": "6D7C5147398983D247CE26E930E75BF37BE38B8A3FB4DD92D8DBC5F2670539C2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IReadOnlyModeService.cs",
+      "sha256": "DF4F1E77A317957E4977746E9798D02BBBC7429B1F3FFD5DFFD0EF8E1910E89D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ISchemaService.cs",
+      "sha256": "62D975598E9E17598B1B20F494F9CC02DE481CDAE15571DB529DC621B9AAAA75"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ISelectionReadService.cs",
+      "sha256": "F02D9384159F4B568E14429B83C56667D7F8AA9802BCD6C0670EDF12BAD257D5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ISelectionService.cs",
+      "sha256": "CC9CC8008158EFCAA38669CA3F5C0102362E1D7503206B51AEE88D39BD534C04"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\ISpatialReferenceService.cs",
+      "sha256": "3CE30C7887411458BA1090E0F93161B0FA58310F0594E20BAD1A111ED7806BF8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\IStatusPresenter.cs",
+      "sha256": "893DEA1144066B253B5EDBE63FE872814E3BCED9638FBCE3A3FF2E8481EDA9A6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\LayerNameMatcher.cs",
+      "sha256": "77FCA9238D5EC9EB8BC6F593CCE310AE4F96396C474C068A88A61678FB33B510"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\MapImagePolicy.cs",
+      "sha256": "ACB950B4EAA6C805E507B24967B29BF8DF563FE8524E804C87642E20B98AF229"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\MapNameMatcher.cs",
+      "sha256": "E92BDD0E1C0D2FB1AAAB9523DD9E0A68BC3BF4416E4A4F67856FF85357641E68"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\MoveTargetIndex.cs",
+      "sha256": "479C3CF3C86CE43F01234D74AC2056CAFD9EC281C1611EAF6C3110971D487F04"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\OidProjection.cs",
+      "sha256": "2DA6EFB462B80C66C63B07AA9547EFC9E047362136D5A7779E3F6A7323F278B8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\RuntimeConfigurationValidator.cs",
+      "sha256": "BD3B102D873AEC1CB18C062832897FD69DEB7851118C906C373DA43C1514389D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\RuntimeHealthFactsFactory.cs",
+      "sha256": "EE5869BBD7E0C8DC45E65C9592959A1DE3BF7AB920219B3003FA280B318C17F3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\SelectionRestoreResolver.cs",
+      "sha256": "FE2C51CEAA05661AB69EC1DDD3B59DCCF6A82B69C8A14B168597C829E2FD4DC6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\SelectWhereClause.cs",
+      "sha256": "C29F07E04E76D6004B3D907310EAF9E11654BE0F1FD729F1C2D1F88FEA67C416"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\SnapshotComposer.cs",
+      "sha256": "BC4EEB0917061A48A2ADD5FC58C2E7542419016B916EF9A11F4935DC0DBECEC2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\SnapshotService.cs",
+      "sha256": "1A710C80D40C7FB881655FF15E5ABE4B55AD7D3D9268B8FEDA8CD849365D6534"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\StatusPresentation.cs",
+      "sha256": "0C9497E8D02B32599CFFDA949B19BA21D7DAC3EC1A94F0E198648A85E179A240"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\StatusPresenter.cs",
+      "sha256": "79399E222A5F498A7C3FF28106D126A0F1D4E59BA4B417A4E93574C1540CBCCB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Services\\WorkspaceContext.cs",
+      "sha256": "6BA988D4AAB013422A0E63AF5D65D6871BE1B3AFB6E85F4ECF7E527CEB3D12E8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ActiveRequestRegistry.cs",
+      "sha256": "1006F5518ACC106D01A41140135930BA9EF8065AEC2996AE88F8148A789F973A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\IMCPTool.cs",
+      "sha256": "C94C731D87D5C0391A5EB76E78D1BE48E534F42A8D35455E1A80FE11AE297DED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\IToolInvoker.cs",
+      "sha256": "F7DA446BBB9C64FF1501E6E875CAB0E285BD792560097E41CB99A5B1322A8C45"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolCall.cs",
+      "sha256": "2D527B27E80B79C09CC8549C4E99C378BC09FDD1C1A9593F07CA95ED83DC868A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolRegistry.cs",
+      "sha256": "67D49013CAA9B0B2FF5DF91365C5C4566A88AEE62CFA6E251FFDEF2EE6D7E3AF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolRouter.cs",
+      "sha256": "DADDEDF4862424AE3A304B30B4738056C2EC5266669199627E6706F7A85A2D50"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolArgumentValidator.cs",
+      "sha256": "CA84D167B3AA69375343217A955487F3DF34FFB7A4B4D3AFF428F4A0E0E846BD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolExecutionContext.cs",
+      "sha256": "8228910AEA21EB671BC57C3F53E7C36700F7609207EDDCFFEF8B31CDFCC54FEB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolInvoker.cs",
+      "sha256": "ED78B01C806BF8105D6453EF966DC02187D351DDDF727FB2C01DB95AF3E34721"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolSchemas.cs",
+      "sha256": "C696C670D49520B37139B2476B25D38621CA85A3D87B21A6A2D10E5BC209A5FA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolValidatorPipeline.cs",
+      "sha256": "6B5A0351E75DBCFA98C5D413FF8B96F567EB57392348496A0A683DDA3A614CD4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Core\\Versioning\\VersionIdentity.cs",
+      "sha256": "C7523AA2EF00A7342EE4799513AEB89C4600B22585A17902120742F534EB2B72"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\ArcGISProMCP.Logging.csproj",
+      "sha256": "B6B0708C99EA9F2DC86488BB0FF0AB0103CB35C46601E980D483D5F784313C34"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.deps.json",
+      "sha256": "D64137027E835D2ADA497D7DFB2B26C5F7E4D0171AB4B97B84E787885B6EA210"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.deps.json",
+      "sha256": "7A4F17A27CC6339A96D7712505FE02CCA68441BFB75B78DD1B6E05508DFFD143"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.deps.json",
+      "sha256": "D64137027E835D2ADA497D7DFB2B26C5F7E4D0171AB4B97B84E787885B6EA210"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "1C402402BC198F9CA52959200899E817BF7186A462667342F0BDD83BE166AD27"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "34C305DDB37C8AE2A3A81B9AB57717F64AC22032E557FBB239F3C430691C4E42"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.deps.json",
+      "sha256": "7A4F17A27CC6339A96D7712505FE02CCA68441BFB75B78DD1B6E05508DFFD143"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "ABD01C4BBFED7E41BAC40D3DDD0C01B85F1C180CAFDCB9D0B39654F8C4E129E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "89EB88A9391A3128040E2FE313CB9773D4349BFB2E9177D9DDBD645CC40381EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\ILogger.cs",
+      "sha256": "754502BCDC05ED64BAD402BBC5BE4968DFAD6A342DDAD680A54904AC43F46234"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\LogContext.cs",
+      "sha256": "726FF210533C031582A7DEF6A79C6F0E218026933EABC4FF1A8848BCFB1284D0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\LogEntry.cs",
+      "sha256": "47EC985D1B4811174E9E56B16560D3101FFC575C852E34E1A073AECFBBCABEDD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\LogLevel.cs",
+      "sha256": "890BEB3A91464705C7CBB035CF2F46CC8043DE723BA302E07C60DA61C3A1F7C7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\LogRedactionPolicy.cs",
+      "sha256": "652D4E2C8C94E11D89D30328C598E778348E3B0A8E2C9F9A2A35B01C20E13FD7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\NullLogger.cs",
+      "sha256": "4CC099F2F8A6D8A3D54E4A10B738802A66179146487916165EDEC0E006F38DC5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\ArcGISProMCP.Logging.csproj.nuget.dgspec.json",
+      "sha256": "BA2109A4B1D7679A3B136C3B9E28551348FC81CFA18F17C6E22814CF840BD8BA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\ArcGISProMCP.Logging.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\ArcGISProMCP.Logging.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.AssemblyInfo.cs",
+      "sha256": "F8062621493A5BCBB0EB74CEC48A42430A703D17A7C43A2F75385F47D502A90D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.AssemblyInfoInputs.cache",
+      "sha256": "B26199DC732FBF2658FDE9CF5DB072F809D1535AF4EA0CE6790E4F9D25313334"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.assets.cache",
+      "sha256": "E22A870742F5A4FC8E51BDEF40F2032A4E72EB80150571ADB78A80D12AD0F3E8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.csproj.CoreCompileInputs.cache",
+      "sha256": "4ED694FF8632840BF03BA675B6A9C8C6AC2BD85385A98A9EAF761275AC37BC09"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.csproj.FileListAbsolute.txt",
+      "sha256": "9D7CC1D1F464537A27EC4A99DCBC91943F692F65E4B7ADE82CD99F7F109F936F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D1F723CEF2D1DAF44542502AAE2918637F948B54C639E3D99443B76612E2FAC2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Logging.dll",
+      "sha256": "4E07FE5923073C269F12AFB54792052902B33C067A73AD2EA416AD9A10A2F63F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Logging.dll",
+      "sha256": "4E07FE5923073C269F12AFB54792052902B33C067A73AD2EA416AD9A10A2F63F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.AssemblyInfo.cs",
+      "sha256": "F8062621493A5BCBB0EB74CEC48A42430A703D17A7C43A2F75385F47D502A90D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.AssemblyInfoInputs.cache",
+      "sha256": "B26199DC732FBF2658FDE9CF5DB072F809D1535AF4EA0CE6790E4F9D25313334"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.assets.cache",
+      "sha256": "5E9638EA729E0ED9B0D7986D0B76C72ABCB514FD21C0ABFD0B19CE7BAC0C7A46"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.csproj.CoreCompileInputs.cache",
+      "sha256": "C9B62117F039872344604951DEE93C76F14E97E3F42645CA8ECAD340F10C6821"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.csproj.FileListAbsolute.txt",
+      "sha256": "66251B3D4AA080D415782AAA2DE305E7D7BCBDAD2089436C188A2364823F7B32"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D06CA42A7744DD0B30922171E21270E2B1DFE01E57D067A23C839B3AFC52555F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Logging.dll",
+      "sha256": "18B37AF5E6DB216AB0088121794AD2AA0392F3E749B7634765861A3D4C057AD7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Logging.dll",
+      "sha256": "18B37AF5E6DB216AB0088121794AD2AA0392F3E749B7634765861A3D4C057AD7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\project.assets.json",
+      "sha256": "E1FCA3E83E22B55443CB2D6A66489E6197DED8F2E71E582FDF2EF37ABAFCC81A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\project.nuget.cache",
+      "sha256": "DA0629170E8E220D3C735930B7C0D15B781FC631BC0D40D2366C097BCD7AC9A5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.AssemblyInfo.cs",
+      "sha256": "F8062621493A5BCBB0EB74CEC48A42430A703D17A7C43A2F75385F47D502A90D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.AssemblyInfoInputs.cache",
+      "sha256": "B26199DC732FBF2658FDE9CF5DB072F809D1535AF4EA0CE6790E4F9D25313334"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.assets.cache",
+      "sha256": "0D61D1D76C52DFF167E90BE0B6358900A498C6436C7B2AA02F2171F3F5133CF9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.csproj.CoreCompileInputs.cache",
+      "sha256": "B21234B00739C3BC5D01BF2BF6A10DCA17705ACB30F7F765FF22D625FD83F7C5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.csproj.FileListAbsolute.txt",
+      "sha256": "C857B95B252AED6EEDB8720B33E926B2838D253660C4D5230ED5E90803002913"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "1C402402BC198F9CA52959200899E817BF7186A462667342F0BDD83BE166AD27"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D1F723CEF2D1DAF44542502AAE2918637F948B54C639E3D99443B76612E2FAC2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "34C305DDB37C8AE2A3A81B9AB57717F64AC22032E557FBB239F3C430691C4E42"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Logging.dll",
+      "sha256": "53859DC631DFC022CCC356CD55C0CD52BB19DE50D7A9756B53005C33839D5B90"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Logging.dll",
+      "sha256": "53859DC631DFC022CCC356CD55C0CD52BB19DE50D7A9756B53005C33839D5B90"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.AssemblyInfo.cs",
+      "sha256": "F8062621493A5BCBB0EB74CEC48A42430A703D17A7C43A2F75385F47D502A90D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.AssemblyInfoInputs.cache",
+      "sha256": "B26199DC732FBF2658FDE9CF5DB072F809D1535AF4EA0CE6790E4F9D25313334"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.assets.cache",
+      "sha256": "A052272B263ABE5307B2B95F1C85EAFB892DE181375160487FCC97E27FB545FC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.csproj.CoreCompileInputs.cache",
+      "sha256": "A961439023545961F0C95D10910B533CE65EF86A6A6022EAE92EA4EA1636A074"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.csproj.FileListAbsolute.txt",
+      "sha256": "AC48EEF29DD9025DA8B752F465A7F63BA14DA3DD32A19D887DC6498A4973B885"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "ABD01C4BBFED7E41BAC40D3DDD0C01B85F1C180CAFDCB9D0B39654F8C4E129E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D06CA42A7744DD0B30922171E21270E2B1DFE01E57D067A23C839B3AFC52555F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "89EB88A9391A3128040E2FE313CB9773D4349BFB2E9177D9DDBD645CC40381EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Logging.dll",
+      "sha256": "51D0681F39DCD9EAFEAED8548551D0878357CF477F5D5AD8DFF2CA18FAA3C685"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Logging.dll",
+      "sha256": "51D0681F39DCD9EAFEAED8548551D0878357CF477F5D5AD8DFF2CA18FAA3C685"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\OwnedJsonlCompactor.cs",
+      "sha256": "ED0FD8780B033FF7E004DC5A51E6DE2FCF14B2F9A6E277CA4F7AC35CDDDA6D96"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\ProductionLogEntryNormalizer.cs",
+      "sha256": "6ACA3D31D6041481FD57B84F31CDF1EBB4489B863943DD7585E0D0923D226720"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\StructuredFileLogger.cs",
+      "sha256": "B99D47550ECCEDDCF8BE7524608CB7966AA2C3884E68FC6ABA278A2CDF8FAB12"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\StructuredLogFilePolicy.cs",
+      "sha256": "41E8D85CB497951ED74A86BD40D5E83075F66AD155C6A2BE209037CDC3FDB3AD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Logging\\StructuredLogHealth.cs",
+      "sha256": "D51861049B675FE019E0CF244E62E12A3E05A945BCCACD8B55B689485D3BB7BA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\ArcGISProMCP.Protocol.csproj",
+      "sha256": "AA850A456330A435D0FE32613E0156E0E6332A3D6FD9CBA97F8F60307AE7B817"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net6.0\\ArcGISProMCP.Protocol.deps.json",
+      "sha256": "EC1BC8AFF58D084C5064A9E59092316C0DF5D6419769D1FCCDCB0A39F5563576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net8.0\\ArcGISProMCP.Protocol.deps.json",
+      "sha256": "3DEB0384E6E14092068132CB9C8E700F5263B1E3C2F5DEB377E32E2111A73576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6FEA3C8F82D1A2918C68005916AAE8FBF624715F77C22D48BA8D0E7411754CF5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "C0C3D6A5A641A4B56D9C98FC97BA4B36892853D50670679104435EACB041C7F2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.deps.json",
+      "sha256": "EC1BC8AFF58D084C5064A9E59092316C0DF5D6419769D1FCCDCB0A39F5563576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "D6693F3F2CED7998F2B3D0D715C79DD6FACFF60083A1E2079B79991059F127D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "6F006E8C91256BDF40F717D898A9469CC0D97DBF034DF96E71CDEBA8C11D619D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.deps.json",
+      "sha256": "3DEB0384E6E14092068132CB9C8E700F5263B1E3C2F5DEB377E32E2111A73576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "2DA4627B69005345E6939E521DBF0A9961EB7C2B951CB3DE215A959A9BA1F1BE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "FCB8AF5DBAA67C6EF9A7A70A85F5AB1DFC8FD3F93369A420438FA1C0859C1E47"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\JsonRpc.cs",
+      "sha256": "27D24F4C4E35D9A5EDB57831A72145A47CA9ED7AB82E4319FDD887B3DD39EF03"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\McpModels.cs",
+      "sha256": "26EFFE4563E0A2017758B2FDA0270318B3195E7261E3D233161A10FA267A81CF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\McpToolDefinition.cs",
+      "sha256": "88F87BEF63D0A56BCC339423F02C3CF17A0A93F7F20492F836DB292EE1B36419"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\ArcGISProMCP.Protocol.csproj.nuget.dgspec.json",
+      "sha256": "8611EB58C07D20AC229137600D795BA6C025744AB0EB2E6CFED0E715BF6BC2B2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\ArcGISProMCP.Protocol.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\ArcGISProMCP.Protocol.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.AssemblyInfo.cs",
+      "sha256": "21A852622361D87BEE3126F31C2A47A17963876DE1BC869ACEF2516436D5D233"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.AssemblyInfoInputs.cache",
+      "sha256": "89E350017D2A58857336DB2F78F4FFA6CAC487EDFFF02C496EA14D5D50B2B59D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.assets.cache",
+      "sha256": "DF6EFF16A6F96CB73941518E6870E74B923699E4F96A404FE20D3D21D18588A2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.csproj.CoreCompileInputs.cache",
+      "sha256": "0D99208D73BE60B578CFF8317FE364FB2303A72E5F11BD49153EE352F93CF6AA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.csproj.FileListAbsolute.txt",
+      "sha256": "77FA146060077FE450F6D98A40B890BF79D9C9158585A74C771CCBF9726DDC40"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D4D0FDDB8BCB4E2DBC9840A79363691DB0D17DE68C6F1227C260AC8B5E3C1436"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Protocol.dll",
+      "sha256": "DDA620A8CB05E5ABB7D4FCD724480DB1EB6811A5FD14FA8A09E51BB871274B6E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Protocol.dll",
+      "sha256": "DDA620A8CB05E5ABB7D4FCD724480DB1EB6811A5FD14FA8A09E51BB871274B6E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.AssemblyInfo.cs",
+      "sha256": "21A852622361D87BEE3126F31C2A47A17963876DE1BC869ACEF2516436D5D233"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.AssemblyInfoInputs.cache",
+      "sha256": "89E350017D2A58857336DB2F78F4FFA6CAC487EDFFF02C496EA14D5D50B2B59D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.assets.cache",
+      "sha256": "DEE4E0C0F69FCAF098398F0C925813CB2765CB73AA598A80A0995037A1FD3EC2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.csproj.CoreCompileInputs.cache",
+      "sha256": "CBE263A935E7D2E430AB2EA01ABADAC4708D07A4377CE54C48BDFD36160DB715"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.csproj.FileListAbsolute.txt",
+      "sha256": "42008B86B64B9595F1F0BC89C899788D4D1D6B4ACF74A9D607D346132EB067D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6FEA3C8F82D1A2918C68005916AAE8FBF624715F77C22D48BA8D0E7411754CF5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "766D214E94779B065FF02B5C44072DC64DAE0A649AFAC6EACA9594D210B0148F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "C0C3D6A5A641A4B56D9C98FC97BA4B36892853D50670679104435EACB041C7F2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Protocol.dll",
+      "sha256": "8246B4974E2B098E1457399C532C7E233D582A6E060C5A3EBD1D44D7CD845A32"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Protocol.dll",
+      "sha256": "8246B4974E2B098E1457399C532C7E233D582A6E060C5A3EBD1D44D7CD845A32"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\project.assets.json",
+      "sha256": "AC5F55FAE39EE51996D9BC1EEEE13E9639806D81B0C7132DBB6E273026C6E5A7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\project.nuget.cache",
+      "sha256": "75E3A2C3CCEB069BBCA77488309F61D4C697989CFC0E47D0B0A48E6DDE2A2F8C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.AssemblyInfo.cs",
+      "sha256": "21A852622361D87BEE3126F31C2A47A17963876DE1BC869ACEF2516436D5D233"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.AssemblyInfoInputs.cache",
+      "sha256": "89E350017D2A58857336DB2F78F4FFA6CAC487EDFFF02C496EA14D5D50B2B59D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.assets.cache",
+      "sha256": "48FAC9D34E7406564AAA7AD8745727252BBF898FDFC512DF7E6664DE316DD209"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.csproj.CoreCompileInputs.cache",
+      "sha256": "07C5E2ACD787EE5C22A7075974A810CB84018E6B9B775E8624E10AE21BC4E5B7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.csproj.FileListAbsolute.txt",
+      "sha256": "C21369B7C08FEF8DBCEC7A526CE9071A92C5A2201527A9855BA59329F20B6F41"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "D6693F3F2CED7998F2B3D0D715C79DD6FACFF60083A1E2079B79991059F127D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D4D0FDDB8BCB4E2DBC9840A79363691DB0D17DE68C6F1227C260AC8B5E3C1436"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "6F006E8C91256BDF40F717D898A9469CC0D97DBF034DF96E71CDEBA8C11D619D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Protocol.dll",
+      "sha256": "B39B837B9462876671BA6545320B9D08D0E97D19D62963F10BCEFBB56004CAF3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Protocol.dll",
+      "sha256": "B39B837B9462876671BA6545320B9D08D0E97D19D62963F10BCEFBB56004CAF3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.AssemblyInfo.cs",
+      "sha256": "21A852622361D87BEE3126F31C2A47A17963876DE1BC869ACEF2516436D5D233"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.AssemblyInfoInputs.cache",
+      "sha256": "89E350017D2A58857336DB2F78F4FFA6CAC487EDFFF02C496EA14D5D50B2B59D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.assets.cache",
+      "sha256": "FBD2A34814DA7FAFA519AB15E8C603BA4231E613BA295380E16440C11E97A369"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.csproj.CoreCompileInputs.cache",
+      "sha256": "C656B9780BDE8FAFB3DEFB4D0CD9DA64B4692E47EDA96E6473D5F3384425B598"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.csproj.FileListAbsolute.txt",
+      "sha256": "85F49CDD8C4F28DF0C11D7FE539C9CB6C3E1ABE36CD730A95086DCC0EE3EF712"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "2DA4627B69005345E6939E521DBF0A9961EB7C2B951CB3DE215A959A9BA1F1BE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "766D214E94779B065FF02B5C44072DC64DAE0A649AFAC6EACA9594D210B0148F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "FCB8AF5DBAA67C6EF9A7A70A85F5AB1DFC8FD3F93369A420438FA1C0859C1E47"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Protocol.dll",
+      "sha256": "5C8EC7AB2186EA3380E3BDEBDA18235E0AF9298F6967448B944E664196454877"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Protocol\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Protocol.dll",
+      "sha256": "5C8EC7AB2186EA3380E3BDEBDA18235E0AF9298F6967448B944E664196454877"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\ArcGISProMCP.Security.csproj",
+      "sha256": "7FA6A807EA04D8C578357170F21FAD501D5C9F739998953EEC709B29B6BE6B0A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net6.0\\ArcGISProMCP.Security.deps.json",
+      "sha256": "E0D95B3CBED99DC7A8253E1856E10A495DB4FD3C0DE9153C2ED871CEE94D1BE8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net6.0\\ArcGISProMCP.Security.dll",
+      "sha256": "2DC997E0CB135D953D4F264768BEE3F4DF11C60121752874E5281B4CD187AEA2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net6.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "31D10F835EBC8FB436973DB3638B9B57C46049394C84F048987A9418747C71EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net8.0\\ArcGISProMCP.Security.deps.json",
+      "sha256": "FF9602D5431BBB74FB610C9351ADE794FEC22109F8BCCD1F1CAF6BFAA14840BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net8.0\\ArcGISProMCP.Security.dll",
+      "sha256": "1864E1C87D2C70CBE3BC7E1F0BD6C02625077CB113DD391F9385152A4C414E8A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\Debug\\net8.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "1D249B4503304C94F965266C22D17518AF20509CF95EA4525BB4929541F72761"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.deps.json",
+      "sha256": "E0D95B3CBED99DC7A8253E1856E10A495DB4FD3C0DE9153C2ED871CEE94D1BE8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.dll",
+      "sha256": "E74EB95A885B84A7F8E403A4BDA037F7583A3EFCA017540F8A4AD137B7239576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "F396643D457B3ECA34A4FCC2BFB45F40D140C6D9AF7C4EA4E154DD676396E8ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.deps.json",
+      "sha256": "FF9602D5431BBB74FB610C9351ADE794FEC22109F8BCCD1F1CAF6BFAA14840BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.dll",
+      "sha256": "5EABA854DE19C6D622114B548373FEC1152F60F460155BB05272CFE4EB410123"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "16B28B11D4D4E5FF728C2B0E1D5CE10D10C2C7D5926627982833B0F774131679"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\ArcGISProMCP.Security.csproj.nuget.dgspec.json",
+      "sha256": "C6A1C8116252C9846EA73D95BA0540425921AA61CB1B8B65072C74E499500F07"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\ArcGISProMCP.Security.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\ArcGISProMCP.Security.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.AssemblyInfo.cs",
+      "sha256": "74D345389B09714BF00B6552908268CC9D959DECE2D673F636E67409ADA9B3DB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.AssemblyInfoInputs.cache",
+      "sha256": "4C4810F6639F4AFD182C7F1D1C946D26102899F96B5C6170524EDE96303F6991"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.assets.cache",
+      "sha256": "61B22908A8BD8EF81FC1118E811DBA731B07D869526B255540275688ED251EB1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.csproj.CoreCompileInputs.cache",
+      "sha256": "7E79F76544A4EC7B8CCFBD014042BEBA02A94B4ABCA457CCBAEC377C4DED0807"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.csproj.FileListAbsolute.txt",
+      "sha256": "D25CB39543B60D90CE100F8438EF17B957F239BDB4823EAD5B1BC72DBEC7814C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.dll",
+      "sha256": "2DC997E0CB135D953D4F264768BEE3F4DF11C60121752874E5281B4CD187AEA2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "89677CEE5E6A6DB1B1F84D816473DCEFA8BC1525BC449F9F5E55EA476B71CB69"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "31D10F835EBC8FB436973DB3638B9B57C46049394C84F048987A9418747C71EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Security.dll",
+      "sha256": "15C79C0038438B916F84CCABB74FDBD945105EFB5451D0C7D59E63BEE26003DC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Security.dll",
+      "sha256": "15C79C0038438B916F84CCABB74FDBD945105EFB5451D0C7D59E63BEE26003DC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.AssemblyInfo.cs",
+      "sha256": "74D345389B09714BF00B6552908268CC9D959DECE2D673F636E67409ADA9B3DB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.AssemblyInfoInputs.cache",
+      "sha256": "4C4810F6639F4AFD182C7F1D1C946D26102899F96B5C6170524EDE96303F6991"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.assets.cache",
+      "sha256": "42AA693231519F1600176FC88A02E295C6888124E973CF042CFD4092E9E99EA7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.csproj.CoreCompileInputs.cache",
+      "sha256": "7A5DE9B9E319998D826ABE8E268E100D68E8192804786B4C3675112751EC3AF6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.csproj.FileListAbsolute.txt",
+      "sha256": "548444516495B303B2D967808EE56D2F223C563B7033337F3B665473152C5AB1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.dll",
+      "sha256": "1864E1C87D2C70CBE3BC7E1F0BD6C02625077CB113DD391F9385152A4C414E8A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D7C6BADF3897B52A8FCE2C7EF9B38AABF431E992A34326AAD083DEAA5D08953A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "1D249B4503304C94F965266C22D17518AF20509CF95EA4525BB4929541F72761"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Security.dll",
+      "sha256": "A7A589A943D4239BEFC8E639333D418D3739081C02D86B04DF1A37990596A012"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Security.dll",
+      "sha256": "A7A589A943D4239BEFC8E639333D418D3739081C02D86B04DF1A37990596A012"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\project.assets.json",
+      "sha256": "C24D9C03AC0174F294C040006C20ED2EBCF3CEBB1236E5FEF7C20D1A8C4BAE4D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\project.nuget.cache",
+      "sha256": "844EC149E8FA8113C2390E3A8A7F7D76A26150661A67453B83FB93D169937836"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.AssemblyInfo.cs",
+      "sha256": "74D345389B09714BF00B6552908268CC9D959DECE2D673F636E67409ADA9B3DB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.AssemblyInfoInputs.cache",
+      "sha256": "4C4810F6639F4AFD182C7F1D1C946D26102899F96B5C6170524EDE96303F6991"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.assets.cache",
+      "sha256": "62E61FCAA9BDD0D305A3C02F98636DF9CBED461D789276CB85A1AE8390ECB00D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.csproj.CoreCompileInputs.cache",
+      "sha256": "91890C6AD5FC2FD2362494CD87B0711F7B020B7FEA8B2F7A82FF03067BCD7B76"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.csproj.FileListAbsolute.txt",
+      "sha256": "ED13939D7A5819AEE94CB772CB11382F04E43D3949CC0C833359B64E8D55D7F5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.dll",
+      "sha256": "E74EB95A885B84A7F8E403A4BDA037F7583A3EFCA017540F8A4AD137B7239576"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "89677CEE5E6A6DB1B1F84D816473DCEFA8BC1525BC449F9F5E55EA476B71CB69"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "F396643D457B3ECA34A4FCC2BFB45F40D140C6D9AF7C4EA4E154DD676396E8ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Security.dll",
+      "sha256": "C2F8115AC6D9199F1B9BA80E80C806D846F1E41E33039029BF5F6D2AB46B80AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Security.dll",
+      "sha256": "C2F8115AC6D9199F1B9BA80E80C806D846F1E41E33039029BF5F6D2AB46B80AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.AssemblyInfo.cs",
+      "sha256": "74D345389B09714BF00B6552908268CC9D959DECE2D673F636E67409ADA9B3DB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.AssemblyInfoInputs.cache",
+      "sha256": "4C4810F6639F4AFD182C7F1D1C946D26102899F96B5C6170524EDE96303F6991"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.assets.cache",
+      "sha256": "9F51F727A0DBDEAAC82D92B9660335D7AF1389DCFF47C6BBC491013B5DEC7985"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.csproj.CoreCompileInputs.cache",
+      "sha256": "876C8A4F472E44C83C22191881E72A8FE5E702C64FE5AE430A2300D470089219"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.csproj.FileListAbsolute.txt",
+      "sha256": "DC9520D5A72746528F2FD4740952BFC42FAABE3E934B6E4939AD41692D76E13D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.dll",
+      "sha256": "5EABA854DE19C6D622114B548373FEC1152F60F460155BB05272CFE4EB410123"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "D7C6BADF3897B52A8FCE2C7EF9B38AABF431E992A34326AAD083DEAA5D08953A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Security.pdb",
+      "sha256": "16B28B11D4D4E5FF728C2B0E1D5CE10D10C2C7D5926627982833B0F774131679"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Security.dll",
+      "sha256": "E492DAB024ED5D5629BC6C1710D4F63B18616B90194E72D7EECC29F5E4FB7E9F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Security.dll",
+      "sha256": "E492DAB024ED5D5629BC6C1710D4F63B18616B90194E72D7EECC29F5E4FB7E9F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Security\\SecurityModels.cs",
+      "sha256": "0D53896D31941581C6423B75014B12723F483C6287DF9E2BFC802492E7F82A62"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\ArcGISProMCP.Server.csproj",
+      "sha256": "56F6E98EDF0276513513C49C01522FD067C0961AD13A900EE3AED5F81DFF3C87"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6AE6D3A7E81AE81A7B389D1BD9FEE6CA552167DEF71EB41D77CE0DA4E9966A08"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "211EC7F555263214881BDD9290DB56FA73FB7524FEE73FB9AAB40755A8E37FE8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Server.deps.json",
+      "sha256": "4B08285498B11A999C8531E04BB5F2175A212CE7B0A6DA67DE3FC2C164C837D4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Server.dll",
+      "sha256": "F623660D5C2F7C6C1319E0F9096411E78DF1E2B9A7BBED1CE0DDA2687246286B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net6.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "93AB025CE73DBA4201A27670EE2C1496F5544F54199EC456C172BD2A9ECB3B68"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "6FEA3C8F82D1A2918C68005916AAE8FBF624715F77C22D48BA8D0E7411754CF5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "C0C3D6A5A641A4B56D9C98FC97BA4B36892853D50670679104435EACB041C7F2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Server.deps.json",
+      "sha256": "0B2DC090AEB5FF3C9F2FDAA18B1DE19E6AAAD6724F1B151A89D6451EDE333FAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Server.dll",
+      "sha256": "F223C6691DCBE622D0C60CB9414CFF2B5BB9A1002C86538F33ECFCAF0F14211C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\Debug\\net8.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "8161DD5B532AD9CD8AFD8634D4938ADA2DAB223C6CF41DCA09C7DD90ABA147B0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1F3ED429181916788188E1FA0FEFC96936E9AA85EB5AE56ABE941498D36C1702"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "4BEBA9A46623DA810D80D4D9E5D7893C8EB7B6A6114879DE0F78F09550B7197C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45177A474C8E59C8C2EFCB62722BE1BEE2C5981E096C36D45B7F29BE37F99F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "83614A0B726BD938154E5439F809CF975298A5705960C1CA1E3E4CADAD72C401"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "1C402402BC198F9CA52959200899E817BF7186A462667342F0BDD83BE166AD27"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "34C305DDB37C8AE2A3A81B9AB57717F64AC22032E557FBB239F3C430691C4E42"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "D6693F3F2CED7998F2B3D0D715C79DD6FACFF60083A1E2079B79991059F127D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "6F006E8C91256BDF40F717D898A9469CC0D97DBF034DF96E71CDEBA8C11D619D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.deps.json",
+      "sha256": "4B08285498B11A999C8531E04BB5F2175A212CE7B0A6DA67DE3FC2C164C837D4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.dll",
+      "sha256": "95D386515EA9383835626BAA135AFC289C1FEF146ECE639AC00C8D57809C7D89"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "C953D2403A7FCA53DCAEB88576A16B202B9CAB70F3B3F9F683E349A5275EDD85"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "BB7E296983EA208B2ED71FAFD67A1CC3B8C4276E11EAB39B4C7AEA7D381DBE0E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "22D283FC36EDD3029CE24C7B6F13F68BB5C5AE6271FE2D59E30E3F20335E2A18"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "58FF33B4C3D0D384834D62AC8570BE59F9DB6A3395CC85FBA20A556A806DCDA7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "937A30309F1E9F4350C691D0C2A4DCC997A1D90571482272B24B68B894581B82"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "ABD01C4BBFED7E41BAC40D3DDD0C01B85F1C180CAFDCB9D0B39654F8C4E129E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "89EB88A9391A3128040E2FE313CB9773D4349BFB2E9177D9DDBD645CC40381EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.dll",
+      "sha256": "2DA4627B69005345E6939E521DBF0A9961EB7C2B951CB3DE215A959A9BA1F1BE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Protocol.pdb",
+      "sha256": "FCB8AF5DBAA67C6EF9A7A70A85F5AB1DFC8FD3F93369A420438FA1C0859C1E47"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.deps.json",
+      "sha256": "0B2DC090AEB5FF3C9F2FDAA18B1DE19E6AAAD6724F1B151A89D6451EDE333FAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.dll",
+      "sha256": "837036AB2A6240DD06F022B3F7F64EB01B11A49E1F4D6B30669DEB2EC6159E88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "6132257D8FE9D9CDF4DDBA101FD9DB51EAA442E2A6A2CEA9DBB96A1B1586A203"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\InternalPsRoutes.cs",
+      "sha256": "E5BEC36AAAE97BAFC2A5AC30EF4CFA67EFE212905CDBB8680C7800FB49DD0475"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\PsChannelHandler.cs",
+      "sha256": "F503CEC89719CD972AA4D447CC3FD8F8BF813B426F8C821CCEA659B5A37325B3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\PsChannelPolicy.cs",
+      "sha256": "13C49FF667A8E425C7308454F7D955FFAFC43D1C61E64666FF89875EE196724C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\PsMessage.cs",
+      "sha256": "17300663F1403FB4D33D528BF5FA2D8B60284E59465F182EB4069124F9B89CA5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\PsReplayGuard.cs",
+      "sha256": "A694850195F219A882EDE66625E41CDA3F410047B70B02D56B957CF59B8087BB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Internal\\PsSessionStore.cs",
+      "sha256": "8072C82E2DD788ADF1DB9E202DEC1EC952A73A491B2A6EAB1FB429364D59B3D6"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcCodec.cs",
+      "sha256": "D7F93678B42250B84560CABBE998E7FC8A64A085EC56AECB77D71F69DE0476FB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcErrorCodes.cs",
+      "sha256": "D98569747786F5E249736A2A83D6DB3D5973B700F9DBD37A8EF3B10B2A8CD088"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcExceptions.cs",
+      "sha256": "094942585C5A1291C239DBF9EF6676AD920811017E91550B30D819D6DDE1AF55"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonValueConverter.cs",
+      "sha256": "768271B35EC1D5EEEEF4F1520383A2AB0FB243532B4FD0BC9628B79BBABC9181"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Mcp\\McpConstants.cs",
+      "sha256": "EE764C84982FDC9CFDFF349C4F1508CF5DCB768E23660FFEEC07C0353C605E9B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Mcp\\McpProtocolHandler.cs",
+      "sha256": "15553FE21A497951EB4B3C62FF4CD2EE16D34910FC1B7E67F24ADE1458A9557E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\McpServer.cs",
+      "sha256": "03EB85993CD7A0B4DFD9A27EFF345E0E35BA961371BFCCD8A1E146A0BEEAD8C4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\ArcGISProMCP.Server.csproj.nuget.dgspec.json",
+      "sha256": "3A14E53260DBC6EBF0DEF2A079A56D4A862ABA4C7DA08F06E397D9266B8992C1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\ArcGISProMCP.Server.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\ArcGISProMCP.Server.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISPr.4D7FACFE.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.AssemblyInfo.cs",
+      "sha256": "095B4806D72984AF078E24E5E0885A61DA9F4CBC6F73F5E1F2067BE5C28EDE88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.AssemblyInfoInputs.cache",
+      "sha256": "F894D45648C8277444F900B4E81C8F4D3673B5F2C97762408A5C0AB92ED559BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.assets.cache",
+      "sha256": "C425ED4333F83AF5E99774C220C254141D84947C4A64F1B475203AE51E46C196"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.AssemblyReference.cache",
+      "sha256": "E12F47819E93DF055E39C6FB46FEB641AE400B2848662AE0AB63A39D3C18060F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.CoreCompileInputs.cache",
+      "sha256": "3912431D5C2CDE9963FAD81E388642DBD1755AE575B2D688DF0383FB28573AA1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.FileListAbsolute.txt",
+      "sha256": "93D9E3945E94E80090BB4E4F745D3EF762A0E074CB57AFA9D0F4CE94C4E4C321"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.dll",
+      "sha256": "F623660D5C2F7C6C1319E0F9096411E78DF1E2B9A7BBED1CE0DDA2687246286B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "57F7D0C7C0A208232FF09E9C28358EE6039351B15FE716C859BF569A540BF04E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "93AB025CE73DBA4201A27670EE2C1496F5544F54199EC456C172BD2A9ECB3B68"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Server.dll",
+      "sha256": "AAB308A5D0B99C4B5E574594ED67FD368622F44374FC380852227F94DAABA3EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Server.dll",
+      "sha256": "AAB308A5D0B99C4B5E574594ED67FD368622F44374FC380852227F94DAABA3EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISPr.4D7FACFE.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.AssemblyInfo.cs",
+      "sha256": "095B4806D72984AF078E24E5E0885A61DA9F4CBC6F73F5E1F2067BE5C28EDE88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.AssemblyInfoInputs.cache",
+      "sha256": "F894D45648C8277444F900B4E81C8F4D3673B5F2C97762408A5C0AB92ED559BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.assets.cache",
+      "sha256": "98E40C9AAE9E4DF6B8719863F6FEC08D634EA15D2BC3DA12F63BBA55BE1AF753"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.AssemblyReference.cache",
+      "sha256": "843E97AA53B0E9633325932417834A0A78141778FDC4C6C675064A5A49962A0C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.CoreCompileInputs.cache",
+      "sha256": "E2B53286D6461C95BAED8BB8C8C1CBBA7AC6146D30DD253DD047DB042A2B8FEA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.FileListAbsolute.txt",
+      "sha256": "E069A15821D20EC71EB64894E4C350B61C2F0BDEA801773051254BB6CF707E40"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.dll",
+      "sha256": "F223C6691DCBE622D0C60CB9414CFF2B5BB9A1002C86538F33ECFCAF0F14211C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "C4ED108F3DF4DDB841B7F36071F10B67B938BF98E84400BD4A8F2E3B058C30A4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "8161DD5B532AD9CD8AFD8634D4938ADA2DAB223C6CF41DCA09C7DD90ABA147B0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Server.dll",
+      "sha256": "A5697F88E1FE67A65B537BA5CC66523EC2FBF0D0E79B0102B5C56A1A5D89DE50"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Server.dll",
+      "sha256": "A5697F88E1FE67A65B537BA5CC66523EC2FBF0D0E79B0102B5C56A1A5D89DE50"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\project.assets.json",
+      "sha256": "454C27C3301A14584E164C62E5702086E84B0B8415C6576235626C909FAD3384"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\project.nuget.cache",
+      "sha256": "A24E6001925AE48D66DC5F5D33C1447D0EB40B6C3E26F7DD4213FFFDAA67D44C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISPr.4D7FACFE.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.AssemblyInfo.cs",
+      "sha256": "095B4806D72984AF078E24E5E0885A61DA9F4CBC6F73F5E1F2067BE5C28EDE88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.AssemblyInfoInputs.cache",
+      "sha256": "F894D45648C8277444F900B4E81C8F4D3673B5F2C97762408A5C0AB92ED559BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.assets.cache",
+      "sha256": "617A3901B5B57DC1DDE2AEF5FB7CFD536D0845454C8694D3486E4612CACA34EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.AssemblyReference.cache",
+      "sha256": "ABD197EAEB2949E72089B2D44D5A44080A77613346AAD0FC22333CB86470D1C2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.CoreCompileInputs.cache",
+      "sha256": "067F1075AF20EFB29CE819EF4199D5D15666BEF66DFCA15AB1CA2F16DA90530C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.csproj.FileListAbsolute.txt",
+      "sha256": "B44E2FEBEBBFD803647A149391A258049DBB43B798F7111E0AA15ED94F2EFFF5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.dll",
+      "sha256": "95D386515EA9383835626BAA135AFC289C1FEF146ECE639AC00C8D57809C7D89"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "57F7D0C7C0A208232FF09E9C28358EE6039351B15FE716C859BF569A540BF04E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "C953D2403A7FCA53DCAEB88576A16B202B9CAB70F3B3F9F683E349A5275EDD85"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Server.dll",
+      "sha256": "6D86E980DD047EB4E2CDF16F6231ACBC859FA1AD5F113AEDFF84B3A038117EAC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Server.dll",
+      "sha256": "6D86E980DD047EB4E2CDF16F6231ACBC859FA1AD5F113AEDFF84B3A038117EAC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISPr.4D7FACFE.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.AssemblyInfo.cs",
+      "sha256": "095B4806D72984AF078E24E5E0885A61DA9F4CBC6F73F5E1F2067BE5C28EDE88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.AssemblyInfoInputs.cache",
+      "sha256": "F894D45648C8277444F900B4E81C8F4D3673B5F2C97762408A5C0AB92ED559BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.assets.cache",
+      "sha256": "D3260DA5A3B0081E56F6D1D89C4E4955AB899519B2F247FDE305FB2810D6FD50"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.AssemblyReference.cache",
+      "sha256": "BEC39350719E78A648F127171E11CDD7211222AF4441EDEB9041A6956513BEED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.CoreCompileInputs.cache",
+      "sha256": "DBBA844DF251846CBDBD1C5BE8AB384C8748ED719BBEFC96838CC744E92B8EB0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.csproj.FileListAbsolute.txt",
+      "sha256": "55F42D8BE2F3D4999D73F2761EF9D4C9C2E61222B720C1F74C7D92077882A518"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.dll",
+      "sha256": "837036AB2A6240DD06F022B3F7F64EB01B11A49E1F4D6B30669DEB2EC6159E88"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "C4ED108F3DF4DDB841B7F36071F10B67B938BF98E84400BD4A8F2E3B058C30A4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Server.pdb",
+      "sha256": "6132257D8FE9D9CDF4DDBA101FD9DB51EAA442E2A6A2CEA9DBB96A1B1586A203"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Server.dll",
+      "sha256": "FFCA3E70C3727A1C29363EB81EFF81F174A250C85A432B0BF67CF9515553C600"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Server.dll",
+      "sha256": "FFCA3E70C3727A1C29363EB81EFF81F174A250C85A432B0BF67CF9515553C600"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Transport\\HttpMcpTransport.cs",
+      "sha256": "814B01DD629151735CE02DFC44CA964385158AAE26BD026749076A5D2B487EF2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Transport\\HttpTransportConnection.cs",
+      "sha256": "15A2F510334653975645D2781FF67E949EC7482C789C69145036D85631476E83"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Transport\\IInternalRouteHandler.cs",
+      "sha256": "2BEBDBF4537863320BC26D69BAECBDC6A96265D3E3FBE31B1D269E43321FD868"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Transport\\IMcpTransport.cs",
+      "sha256": "113538DF3D1C8B97047D6E1F1E0BBF44CB660B87E807F3BF03E943035F1BB257"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Server\\Transport\\ITransportConnection.cs",
+      "sha256": "487729B08DC6B91D42A93F79F1262FDDC8788DCC9EE019D4A8A552D331496CAD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\AggregateStatisticsTools.cs",
+      "sha256": "FFF0FD7CB85D5D456F4257CF949C019DF90EA5C384130DD2780B51DD04949108"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\AnalysisRasterTools.cs",
+      "sha256": "3EDCD86881026FEEFBFE50912562F6174BABBD753AD1DBCFE3C228839F370170"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\ArcGISProMCP.Tools.csproj",
+      "sha256": "D896602244F763EDCE8E3754B89F6C254AC9EFB28A407388A8CE3F7EDE98140A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\AttributeSummaryTools.cs",
+      "sha256": "A5B6D37FBE7AA2EF64A4597A0FD2683E98A0763EA750E07A5D37D68AECC1BB43"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\AttributeTools.cs",
+      "sha256": "5862799622F14F58F10A26270E9EEFEFABC8BC0CBF5F52D0E65884B9E31597A5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "CCCA0E9FAB3EE46D81745DE73B5C8A39B182717FE9DAFBDF0FA11714EE46DF94"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "88B3277130933001C1E5B1B7E8BDB8292609A1D02327F2AE40FDF5FC0A7EE6ED"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "DC73B62E8EBC35614076043D4C0DEFCB63854EEB8DE58F5D757CB169F569CCB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "7DCA7432242AB098223D3A2C29D40A1C73A21B212FC349D33BDD19290C57BFF0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "78F8EE5C8B3C4F9BE0F4A74E8FA46809BFCD7C61EBB310898677FFF030508979"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "CE1598D431DDA13AA2554524BD195FC8256291F36B13EACEF93479C5BF4F951F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Tools.deps.json",
+      "sha256": "3EE30EBF23C053C029DFB931E855A85B1D91B75C566BE9EB3CBC0E5FB16970FB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "6679DE096846C840FCF3F4E1CD33BB86F89116B43BB50EFA362055A67A04E546"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net6.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "A873945A5AFFF9FB4F51B2E16FB4EB916CBDDC23F300465BA5EF6BB78B9AF0AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "4A5F04AB0A5787A674113B4D9A580524CF6CB456E5B998E81C5CD1F069C4E8E9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "A8B6D7D920B90A94425FECE92278D61B825A4E68B25AF0741AA640A3BFEB308E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45DDD617B917BB20827E93E3C67F242668FC665A348DAAE0307681ABEDFA5AD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "6E329ECC98EE171724E8D4087A37191640469C4789CC009E35814CC90D736B4B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "5ED4AF61C02BB26367F69FE0BF2E75BE0500090254C4F8DD37B800E0AA1E9EB8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "FD71B712D79F943CD793BC43A9435186D6515287EF2A24BA4E9E07AF9D99AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Tools.deps.json",
+      "sha256": "F2E554E2D90FEEE6B1F27A121E81FE2D23AE64CC86FEC972DA2E930A3C8FCAFF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "DA7FA0DDEBDDC715D04627D56CCD8261405A283E6B1BC9C2ABAD63F746582181"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\Debug\\net8.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "47F9C39E6B90F4CFA079293476AA473CBE53A68B6CA9378967BC16ECFEEE0FE3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "1F3ED429181916788188E1FA0FEFC96936E9AA85EB5AE56ABE941498D36C1702"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "4BEBA9A46623DA810D80D4D9E5D7893C8EB7B6A6114879DE0F78F09550B7197C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.dll",
+      "sha256": "C45177A474C8E59C8C2EFCB62722BE1BEE2C5981E096C36D45B7F29BE37F99F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "83614A0B726BD938154E5439F809CF975298A5705960C1CA1E3E4CADAD72C401"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "1C402402BC198F9CA52959200899E817BF7186A462667342F0BDD83BE166AD27"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "34C305DDB37C8AE2A3A81B9AB57717F64AC22032E557FBB239F3C430691C4E42"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.deps.json",
+      "sha256": "3EE30EBF23C053C029DFB931E855A85B1D91B75C566BE9EB3CBC0E5FB16970FB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "C1B65FB66D74A3F2C43933AA1D9EC7C3384FB44DAEFDC33067222B6580EE5C8E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "9737E6B220FF011A0B8BFDD54A13DFB1CD3CD36EF1FFC0077A10C37A32740BCA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.dll",
+      "sha256": "BB7E296983EA208B2ED71FAFD67A1CC3B8C4276E11EAB39B4C7AEA7D381DBE0E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Configuration.pdb",
+      "sha256": "22D283FC36EDD3029CE24C7B6F13F68BB5C5AE6271FE2D59E30E3F20335E2A18"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.dll",
+      "sha256": "58FF33B4C3D0D384834D62AC8570BE59F9DB6A3395CC85FBA20A556A806DCDA7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Core.pdb",
+      "sha256": "937A30309F1E9F4350C691D0C2A4DCC997A1D90571482272B24B68B894581B82"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.dll",
+      "sha256": "ABD01C4BBFED7E41BAC40D3DDD0C01B85F1C180CAFDCB9D0B39654F8C4E129E4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Logging.pdb",
+      "sha256": "89EB88A9391A3128040E2FE313CB9773D4349BFB2E9177D9DDBD645CC40381EB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.deps.json",
+      "sha256": "F2E554E2D90FEEE6B1F27A121E81FE2D23AE64CC86FEC972DA2E930A3C8FCAFF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "29AD690CBEC74D4590C57A4A5CB3A63DFD6C88FDF6E0A04FB11CC541ABF381E7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\bin\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "464E1476A38ECA56E4E791483510771FB0CAD8ABF5AC0E310980FB8AAF21BB65"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\CopyExportProjectTools.cs",
+      "sha256": "F35472C8F0D9D2ED305E4DAC7FBCF0CEAD0715DCB1A44F9839EEC8AD183810E7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\CreateMergeFieldTools.cs",
+      "sha256": "1EDB1BB5E81CA8D1728F2DDC4CC222A90C261986A899A82119B15D844FFAEFC1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D064BatchTools.cs",
+      "sha256": "144FCBBEEAF06DADD16BD91C21D46CB0C278B7BB73425E108B91F7111FAB1C1B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D064DiagnosticTools.cs",
+      "sha256": "D6056C757F9036AFDEB2DAB786C15C37AB5270BFB87238C6390DC3E69DC7E0CD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D064DiscoveryTools.cs",
+      "sha256": "68B40D82302DB4F46BEAC0B07C17C34194B971FCBB849000CA0F4BF48A62BD8D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D064ProjectTools.cs",
+      "sha256": "4424A501D0CCFD6ABBE6CBEEC07A706AC02FC34112EDE42223D17C6EEBA906F8"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D064SchemaTools.cs",
+      "sha256": "097CAE1E9F4EF8B6B479ADE5A0F395F3F8E8DF27565C8DDAF4E85D9928333DA1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D084Tools.cs",
+      "sha256": "7C737255F42CFDEEC7452A0DC8B8628474E880122389248DD005B6E68D99E6CE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D086DesignTools.cs",
+      "sha256": "D81915C649364DA1D27126FC6CB9F77BB6E6BB0E7AB16B87B07056BC74373C3F"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D088QualityTools.cs",
+      "sha256": "98530B14B62F327A798EA58CD27B8BFC0091B005CF2DC07241BE86BCC3DF5671"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D091PsTools.cs",
+      "sha256": "60B705C7C43FCD13BC5EF42CA2EA4CB4304C005E86E1CF85AC5031290D4B1BE1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D092DomainTools.cs",
+      "sha256": "10614743AF953C622648B99C7086F324420971CC072B1DE08C4CFA770CC5F109"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D094AnalysisTools.cs",
+      "sha256": "2B6CC3715E78FEFDC03F860B12B330FA3B4658F2BC35EBDCF37802E4C083658C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D096RasterTools.cs",
+      "sha256": "FBD6A19B8B3AC2170D02506BD62079282317C4C5B622072BFBDBBAFA73735424"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D102PsTools.cs",
+      "sha256": "AA93DB75D36505351A24C4E360983522064FDC9E0D96161EC82BBE40F49859CA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\D104PointCloudTools.cs",
+      "sha256": "CD305C80B6277C7B4FC2E0749475551662098009FEAF770FFCF8082D0EAD2693"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\DataRasterTools.cs",
+      "sha256": "A0F5A2A178BC70CB3825F3D6451CD198E1DEE49B022E613B4C191482BFFAFD30"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\EditStackTools.cs",
+      "sha256": "1F98A8788576DF34F5BAB99719FBDB9C6EB3969D17E56456EA6F577CBB041D40"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\EditTools.cs",
+      "sha256": "69F6B63FAAD64DAB96E0693B15A0B7DCA5E716650DACD2ED2045CDE835A34DB2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\FeatureExpansionBatch1Tools.cs",
+      "sha256": "5D03825E6C988B4837569AA75D9B668FA6F571234D85934E6AEEBAC0BF00B792"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\FieldTools.cs",
+      "sha256": "8FDE4266ADB7DE7C405939FB1C14C1B5998D78C3EF8DA154B09A3AC1E9E1F00D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\FolderWorkflowTools.cs",
+      "sha256": "BABD35ABE37365267781C62BA75898A68509830BED1F73E3A4F8E7D77F7E1D5E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GeoprocessingTools.cs",
+      "sha256": "8815ADB49E69F72A74B5E040C48D17C667E4A20D49CFCD506F46D9FD848606BC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GetArcGISVersionTool.cs",
+      "sha256": "AA8DA787DE726EF7E21AF69D64AD4D07DE78639AAE91112FB6454D97B2E2FD59"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GetCurrentMapTool.cs",
+      "sha256": "1A90631852600006C1F66FFEBD5482CF8E0AE3A646BD6157511507C9A7DC3F98"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GetLayersTool.cs",
+      "sha256": "91697923A768B4D49A899A43C2372B2A4A9BD9EDB34474CEC2E770C64AC0E9D1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GetLicenseInfoTool.cs",
+      "sha256": "25FC681121E29D53A743EAB6D31C15194D633F5F311DDB29A79AB214066AD094"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GetProjectInfoTool.cs",
+      "sha256": "936EB4C9CED119C4001E3DFE718C57BEBD14BA7D2352D790D68633A04FA30FE2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\GpControlTools.cs",
+      "sha256": "5F71AFB514D6D2FB8B6A792F23CC27DBF1EBC97CFFEF7389466D14DC5646C71A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\JsonHelpers.cs",
+      "sha256": "AF3E0C2C3D518C3835A76319B738498FA316CFCFAAC1202D59045C5648D53BB9"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\LayerManageTools.cs",
+      "sha256": "23A9DC31A5724E9E6DE5AF1D35C05F7049DACC1956F2EF4EE6798FD967D8284A"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\LayerTools.cs",
+      "sha256": "668C0B7DD8BD418784DA2EC7C4D9F4DB6D8A9251DD84E182FCD933ED6774ADB0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\LayoutBuildTools.cs",
+      "sha256": "017FBCF54D25525F5B5AA0F2BB322E641E2B093786961921A84AD9B994F01BD1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\LayoutExportTools.cs",
+      "sha256": "841CCAB3F077DBF24487C5A36D6A1EC9283200EA75EF415201741735A36B8E17"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\LayoutReadTools.cs",
+      "sha256": "E43BAB3DF68BA11CC3D2D6E62C1754C330DD1BD50F4EAED462BCA32B159BDD98"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\MapSettingsTools.cs",
+      "sha256": "308B4DC59AFA1589C493A6E9CA5D0D0F21393BD6911A98AE84A4C2CE5BF74471"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\MapTools.cs",
+      "sha256": "B11DB239C94D19E756353B3CFB946631B812DDBF6479FDD2E0446541C79683FB"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\McpToolBase.cs",
+      "sha256": "6542DBF277B4B0466ED34E23297AB84B3C5484A2E675F3EEA38BAD2C30EAA372"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\MosaicCalcTools.cs",
+      "sha256": "A20AE8B4323165A689BF2345C91276444380712DFC304B4AF3F8329536DD6BD1"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\ArcGISProMCP.Tools.csproj.nuget.dgspec.json",
+      "sha256": "E075A212C609AE297404EDFB4704B1C45E132E31D9F4D7BD52E90708E9719CDD"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\ArcGISProMCP.Tools.csproj.nuget.g.props",
+      "sha256": "59BB85585B443790BDC9B7B6AEC9CC0B62EB6E641EB9914B7568C434E8D12EFC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\ArcGISProMCP.Tools.csproj.nuget.g.targets",
+      "sha256": "971CC9B535384849B5C661D776CD7A80833A416265E32E8968E06C367368B8B5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISPr.0B5BCEFC.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.AssemblyInfo.cs",
+      "sha256": "BB098CCFA7596C99342ECEC43CB5B5403279731856B54639F6DA92083B54EF39"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.AssemblyInfoInputs.cache",
+      "sha256": "2D4202CB2142CB958F0E8B71E62ED352C56A98E464D975138E8EAD956376B53B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.assets.cache",
+      "sha256": "6CA35D3E5A14E0EF1C1EEFA1BC4DC0AFE4CE69B707F60C3BEE1C1E36EAECCBC2"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.AssemblyReference.cache",
+      "sha256": "0E4405EA4B39B790C3B451222FC1F55E8818E14A7CA68FBA64D14B28030B2D14"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.CoreCompileInputs.cache",
+      "sha256": "1B15753A24A4242C54D833CE8138AED0CC2EAA92AAF6DF496B8C21F77FC0227C"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.FileListAbsolute.txt",
+      "sha256": "38262B149968E3E981862011E1A22408279B111ACD8C53F119CC4670E6F1F5DE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "6679DE096846C840FCF3F4E1CD33BB86F89116B43BB50EFA362055A67A04E546"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "5D54EAE7348BF79CB7183D97C265766D1FEB2171370B6C16C7B1316B89C7D429"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "A873945A5AFFF9FB4F51B2E16FB4EB916CBDDC23F300465BA5EF6BB78B9AF0AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\ref\\ArcGISProMCP.Tools.dll",
+      "sha256": "2E5E874E988F9CD682BB2C62B8835C836F8C116EEC1267FA8E93C4091B5C600D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net6.0\\refint\\ArcGISProMCP.Tools.dll",
+      "sha256": "2E5E874E988F9CD682BB2C62B8835C836F8C116EEC1267FA8E93C4091B5C600D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISPr.0B5BCEFC.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.AssemblyInfo.cs",
+      "sha256": "BB098CCFA7596C99342ECEC43CB5B5403279731856B54639F6DA92083B54EF39"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.AssemblyInfoInputs.cache",
+      "sha256": "2D4202CB2142CB958F0E8B71E62ED352C56A98E464D975138E8EAD956376B53B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.assets.cache",
+      "sha256": "F96D1B6757CC64DBC1E5412DF4D4872DDD2F843C03569B25245DD21FBBD70DC4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.AssemblyReference.cache",
+      "sha256": "15A0560966A14E6E049F6FC6B5A31C31EBE3D7AAD5B9B717C58E22250A53A08B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.CoreCompileInputs.cache",
+      "sha256": "FE6EC10C1F8C3BA1E03E1C014956120E6D042D2FAB66BA4CCBDF93E776593740"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.FileListAbsolute.txt",
+      "sha256": "9945D780EA340BE3301F1777FAD0A9F2F024439F40F6AEB0E7AA5760AB398D73"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "DA7FA0DDEBDDC715D04627D56CCD8261405A283E6B1BC9C2ABAD63F746582181"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "DEBFC12FB62F38792ECDFCD241B476BF4004FD3706B8F4D554103634C94D714D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "47F9C39E6B90F4CFA079293476AA473CBE53A68B6CA9378967BC16ECFEEE0FE3"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\ref\\ArcGISProMCP.Tools.dll",
+      "sha256": "3C8F1AA87D0882271783AB924AFF50BF77D0E636762A3197C6DAEB9317BE7FC5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\Debug\\net8.0\\refint\\ArcGISProMCP.Tools.dll",
+      "sha256": "3C8F1AA87D0882271783AB924AFF50BF77D0E636762A3197C6DAEB9317BE7FC5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\project.assets.json",
+      "sha256": "D804AA86F0547444BBCC710ABF8FB1029FFFB307893088D8FB2C766A973816DF"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\project.nuget.cache",
+      "sha256": "7E6D9035B42FB5A730032123CE0DC63F8717ECDB4C2E0F93C2A6EDDCB5F6AAAE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISPr.0B5BCEFC.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.AssemblyInfo.cs",
+      "sha256": "BB098CCFA7596C99342ECEC43CB5B5403279731856B54639F6DA92083B54EF39"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.AssemblyInfoInputs.cache",
+      "sha256": "2D4202CB2142CB958F0E8B71E62ED352C56A98E464D975138E8EAD956376B53B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.assets.cache",
+      "sha256": "5D1212B232D2443FF0F383851A1ADEA518D38F3BF76EB59BE5C3521EFA1EC229"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.AssemblyReference.cache",
+      "sha256": "233F2A398F90F8674D5C5A5BCCC6D6349700E7A47C72B2F2750368AEB1EF51E5"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.CoreCompileInputs.cache",
+      "sha256": "BDC149D1D6F1599D0B8419D433115AF9BD843AAD611A315DC0280008222EFC34"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.csproj.FileListAbsolute.txt",
+      "sha256": "97CC60C8CC58B1E5AE3D9B06A4D49C53C9D9852DCAD2F7E4EB4A7CE960CA3D7E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "C1B65FB66D74A3F2C43933AA1D9EC7C3384FB44DAEFDC33067222B6580EE5C8E"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "5D54EAE7348BF79CB7183D97C265766D1FEB2171370B6C16C7B1316B89C7D429"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "9737E6B220FF011A0B8BFDD54A13DFB1CD3CD36EF1FFC0077A10C37A32740BCA"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\ref\\ArcGISProMCP.Tools.dll",
+      "sha256": "E8CEFAF5D09D9520429DEBB2FF6D5427D7C6691821948F5275E299344E71E24B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net6.0\\refint\\ArcGISProMCP.Tools.dll",
+      "sha256": "E8CEFAF5D09D9520429DEBB2FF6D5427D7C6691821948F5275E299344E71E24B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISPr.0B5BCEFC.Up2Date",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.AssemblyInfo.cs",
+      "sha256": "BB098CCFA7596C99342ECEC43CB5B5403279731856B54639F6DA92083B54EF39"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.AssemblyInfoInputs.cache",
+      "sha256": "2D4202CB2142CB958F0E8B71E62ED352C56A98E464D975138E8EAD956376B53B"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.assets.cache",
+      "sha256": "8FF5300BA4D46EA83798CB3C704E3001113886BCC3449A39551C1B2005B45214"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.AssemblyReference.cache",
+      "sha256": "B1855F59450FCFFA3D6CA6B51BD09BF9F0B1BCE814F6C956B5433E3D632BE1F4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.CoreCompileInputs.cache",
+      "sha256": "C6B1B37E8458DF93B60031A8D42F6640374BD3B309E4F63BA8D6213C87534A55"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.csproj.FileListAbsolute.txt",
+      "sha256": "89368EBC0EF8B562BC4D1E0F738CDBC46DCDE810FBFEEE1D67670927D64BE620"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.dll",
+      "sha256": "29AD690CBEC74D4590C57A4A5CB3A63DFD6C88FDF6E0A04FB11CC541ABF381E7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.GeneratedMSBuildEditorConfig.editorconfig",
+      "sha256": "DEBFC12FB62F38792ECDFCD241B476BF4004FD3706B8F4D554103634C94D714D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.GlobalUsings.g.cs",
+      "sha256": "F3F134E9E825E3E7268090F58B1AF2BDA2DE513F61A09C56F48B9B8D08612ABC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ArcGISProMCP.Tools.pdb",
+      "sha256": "464E1476A38ECA56E4E791483510771FB0CAD8ABF5AC0E310980FB8AAF21BB65"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\ref\\ArcGISProMCP.Tools.dll",
+      "sha256": "D762997EE759028BF533C2629AA13C42C449BA93C5F4CD555BDC92E131DF8E87"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\obj\\x64\\Debug\\net8.0\\refint\\ArcGISProMCP.Tools.dll",
+      "sha256": "D762997EE759028BF533C2629AA13C42C449BA93C5F4CD555BDC92E131DF8E87"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\PingTool.cs",
+      "sha256": "0164840A9FD414E62A1A7F0F44CF064DE6AEDF709E89F4F39A43A71B9A2E8B73"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\ProjectTools.cs",
+      "sha256": "E65D3E6599CC351D80F4FA7322D2AAC449D30F6BF7357B99029A3A7718D2D3AE"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\ProtectedOutputPathArgumentValidator.cs",
+      "sha256": "72138BF4E4F1AEDA1F4C40A99EC0F070618901D648FB19DCF4136CBDBD143D24"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\PythonBridgeTools.cs",
+      "sha256": "3C6584AEA636828362283423B9EEA8A0393BC426FA8352F7E4E9AB382D1679CC"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\PythonDiscoveryTools.cs",
+      "sha256": "B1E85CC5A55871DE4A197656EC161D9AB15ABDE5812126E5118B295683094282"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\RasterQualificationGate.cs",
+      "sha256": "31DA73A35DD55C33441BFC06F3E179622F55E91F10982862B9181DCB325BAB51"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SchemaTools.cs",
+      "sha256": "62CBEE396A8F848F9DF21772A158401FE4ECDAEA311EE14EAFF48550A8FBCBA4"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SelectionContractTools.cs",
+      "sha256": "685EA006400490A676958CB12046B8939AA872CACE5B552B78FA9F20AFF1765D"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SelectionTools.cs",
+      "sha256": "0AC5C961153A61690E334D3F7A680C2210B38D9E162B11A433238E72A01724C7"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SpatialAnalysisTools.cs",
+      "sha256": "B08179236D6B4E91C9D1ABF8480FA14AAEDBC0AC77521F94CC3205F2B27CA679"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SymbologyAdvanceTools.cs",
+      "sha256": "0A92B8E40CF46AE98F37B106FC37B0B0653EEBF55F4ED3800BEF38B48B5A3367"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\SymbologyLabelTools.cs",
+      "sha256": "78D35331E812651EE8038021E98DAE2B7E7682A0F48188468BA8CCA277459769"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\ToolArgs.cs",
+      "sha256": "D6A03456725AFF76FD12D28BD38E96BC474A819750E1601ACAD8E438015C77B0"
+    },
+    {
+      "path": "Source\\Shared\\ArcGISProMCP.Tools\\ViewBookmarkTools.cs",
+      "sha256": "A12B4668C4F86523DFAF24584CC5683C5107FA2116E8A4EA798D19BF6557EAA8"
+    }
+  ]
+}

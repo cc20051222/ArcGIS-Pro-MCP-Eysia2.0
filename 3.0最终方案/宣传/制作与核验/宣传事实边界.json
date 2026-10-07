@@ -1,0 +1,146 @@
+{
+  "reviewDate": "2026-10-02",
+  "reviewer": "promotion_claims independent documentation reader",
+  "scope": "Promotional Word brochure and posters only; documentation review is not product acceptance",
+  "sourceFiles": [
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\最终方案范围与状态.json",
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\01_项目最终总方案.md",
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\01_完整最终方案\\03_用户操作流程与三条业务链.md",
+    "D:\\ArcGIS-Pro-MCP 2.0\\3.0最终方案\\03_社区对比与领先验收\\主流项目对比与全面领先验收方案.md"
+  ],
+  "currentStatus": {
+    "revision": "FINAL-20261002",
+    "documentStatus": "CONSOLIDATED_DOCUMENTS",
+    "productAcceptance": "NOT_RUN",
+    "fullScope60DayFeasibility": "UNKNOWN_UNTIL_MEASURED",
+    "startDate": null,
+    "newFunctionImplementationConfirmedByThisReview": false,
+    "independentComparativeProductRunCompletedByThisReview": false
+  },
+  "recommendedPublicContext": {
+    "coverBadge": "3.0 产品预告",
+    "openingSentence": "面向 ArcGIS Pro 的全链路 GIS 成果平台，正在规划从资料到成图、报告与持续更新的一体化体验。",
+    "minimumPosterStatusLine": "3.0 产品预告｜功能为规划目标，实际支持以正式发布与验收结果为准。",
+    "brochureStatusSentence": "本资料介绍 3.0 最终方案与目标体验；新增能力尚未完成产品验收，支持范围与发布时间以正式发布为准。",
+    "readabilityRule": "每张独立海报都必须有可读的预告或规划标识，不能只在另一份说明文件中解释未来语境。重要数量主张附近直接写目标，避免页脚极小字承担全部限定。",
+    "audienceStyle": "面向 GIS 使用者和业务负责人，先讲能得到什么，再讲为何可信；不向普通用户堆叠内部状态机、WI、codec、fence、oracle 或验收门编号。"
+  },
+  "directlyPromotablePositioning": [
+    {
+      "claim": "从资料到成图与报告的全链路 GIS 成果平台",
+      "qualification": "定位或产品预告语境",
+      "source": "01_项目最终总方案.md §1 与 §5"
+    },
+    {
+      "claim": "GIS 分析、专业制图、Photoshop 与 Office 一体化设计",
+      "qualification": "产品设计方向，不能写已完成全链实际运行",
+      "source": "01_项目最终总方案.md §1"
+    },
+    {
+      "claim": "让用户围绕业务提需求、看预览、用语言改稿",
+      "qualification": "目标用户流程；示意界面或示意流程不标为真实截图",
+      "source": "03_用户操作流程与三条业务链.md §1、§2"
+    },
+    {
+      "claim": "面向规划汇报、科研专题与规范建库的完整业务链",
+      "qualification": "规划范围，先共用底座再模板，全部范围仍保留",
+      "source": "03_用户操作流程与三条业务链.md §5 至 §8"
+    },
+    {
+      "claim": "关注科学事实、可编辑成果与可追溯更新",
+      "qualification": "设计原则，不是已通过科学质量或恢复验收的结论",
+      "source": "01_项目最终总方案.md §5、§10、§11"
+    }
+  ],
+  "futureClaimsMustRemainGoals": [
+    {
+      "topic": "GP 核心数量",
+      "approvedPublicWording": "以不少于 2100 项合格 GP 操作为基础目标，并按同口径对照提升。",
+      "technicalRequirement": "K_GP=max(2100,ceil(1.10*N_GP))；N_GP 实测未知。",
+      "avoid": "已支持 2100+ GP、比任何对手多、1900 个算法精确对照"
+    },
+    {
+      "topic": "核心独立语义数量",
+      "approvedPublicWording": "3000 项核心 GIS 方法能力目标，按独立语义去重验证。",
+      "technicalRequirement": "K_sem=max(3000,ceil(1.50*N_sem))；N_sem 实测未知；同方法多后端、别名、参数变化与模板不重复计数。",
+      "avoid": "已拥有 3000 工具、2100 GP 加 3000 算法合计 5100 项全部可用"
+    },
+    {
+      "topic": "规模与模板",
+      "approvedPublicWording": "规划 20 个公共模块、12 个产品包、8 个领域扩展、36 套模板与 108 幅标准图验证。",
+      "technicalRequirement": "数字是冻结开发范围与未来验收门，不是已实现成绩；108 标准图不是 108 套模板。",
+      "avoid": "现已覆盖全部行业、108 套模板、全部格式无损转换"
+    },
+    {
+      "topic": "Photoshop 自动化",
+      "approvedPublicWording": "以普通用户无需 PS 手工设计为目标，确认任务后自动完成版式、美化与输出。",
+      "technicalRequirement": "目标为 0 次普通用户 PS 手工设计；必要业务判断、许可、输入与效果确认仍存在。",
+      "avoid": "100% 无人参与、任意任务一句话必成功、用户什么都不用确认"
+    },
+    {
+      "topic": "参考图与数据学习",
+      "approvedPublicWording": "从授权参考图学习风格与版式，用自己的数据生成自己的成果。",
+      "technicalRequirement": "许可与用途先核；风格、字段语义候选和当前科学事实分离。",
+      "avoid": "复制任意成图、位图一键恢复全部原工程、自动把参考图数字当真值、学习任何上传内容不受限制"
+    },
+    {
+      "topic": "用户习惯",
+      "approvedPublicWording": "可解释、可纠正、可撤销的偏好学习，让重复工作更顺手。",
+      "technicalRequirement": "科学与规范约束优先；项目、个人、组织范围分离。",
+      "avoid": "永久记住全部资料、自动改科学参数、按最后反馈覆盖组织规范"
+    },
+    {
+      "topic": "自主更新",
+      "approvedPublicWording": "持续发现新能力，验证后逐步适配与启用。",
+      "technicalRequirement": "可信来源、版本、参数、许可、真实资格、独立检查、分阶段采用与回退。未知能力不自动作为合格能力。",
+      "avoid": "所有新工具零适配立即可用、无需测试自动上线、永久免费领先、可运行任意脚本"
+    },
+    {
+      "topic": "科学质量",
+      "approvedPublicWording": "以事实一致、科学约束和成果检查为质量底线。",
+      "technicalRequirement": "零严重科学错误、100% 事实一致等为未来门限，本轮产品接受未运行。",
+      "avoid": "永远不会出错、准确率 100% 已证明、AI 可自行保证全部科学结论"
+    },
+    {
+      "topic": "一键安装",
+      "approvedPublicWording": "规划保持插件形态，完整功能验收后提供统一一键安装包。",
+      "technicalRequirement": "ArcGIS Pro、Photoshop、扩展、字体、模型与数据等仍受其授权和环境条件约束。",
+      "avoid": "现在可下载、内置全部商业软件、所有版本和电脑无需条件即可使用"
+    },
+    {
+      "topic": "开发周期",
+      "approvedPublicWording": "以 60 个日历日为有条件开发目标，依真实资源与前两周实测校准。",
+      "technicalRequirement": "startDate=null，fullScope60DayFeasibility=UNKNOWN_UNTIL_MEASURED。",
+      "avoid": "两个月保证上线、发布倒计时、伪造发布日期、目前开发进度百分比"
+    }
+  ],
+  "comparisonRules": [
+    "可强调本项目的设计差异与目标体验，不能把目标写成已全面碾压或已断档领先。",
+    "不因对方官网未列某能力就写对方没有或无法实现；未核实保持未核实。",
+    "GeoAIChat 已公开 Office、知识、技能和工作台等能力，不能说这些为本项目独有。",
+    "1900+ GP、约 2000 GP、112 或 167 MCP 入口等不同口径不能直接作算法数量差值。",
+    "面向用户宣传可减少技术型竞品表，将独立同条件对比的结论留到实测后。",
+    "不发布未经测量的快十倍、费用下降百分比、市场第一、全球首创或永久领先。"
+  ],
+  "posterAndContactRules": [
+    "示意地图、界面、流程和成果有示意或概念标注，不假装现役软件真实运行截图。",
+    "没有获得真实官网、联系人、电话、邮箱或二维码目标时，不虚构这些字段；可使用了解完整方案等无地址行动提示。",
+    "二维码必须指向真实已核验目标，用户没有提供宣传联系方式时可省略二维码。",
+    "不用 Esri、Adobe 或竞品官方 Logo 暗示合作、认证或背书；可在正文说明依赖软件。",
+    "合成示意的精美地图只能展示视觉方向，不作为实际 GIS、PS 或科学结果已验收的证据。",
+    "宣传册中的必要支持条件只用一段清楚说明，不把每一页变成技术状态报告。"
+  ],
+  "suggestedBrochureNarrative": [
+    "封面：从资料到专业成果，3.0 产品预告。",
+    "目标体验：提需求、选资料与参考、确认关键口径、自动形成整套成果。",
+    "六个用户价值：分析与成图贯通、普通用户零 PS 手工设计目标、同源图表报告、授权参考学习、可信持续适配、可追溯恢复与更新。",
+    "三类示例：规划汇报、科研专题、规范资料建库；均明确为目标场景。",
+    "创新：先讲用户受益，再简述参考风格、数据语义、习惯偏好、方法判断、持续更新的实现思路。",
+    "未来范围：数字用目标身份；不重复计数，不与竞品未知数量做虚假算术。",
+    "使用与交付：自然语言改稿、可编辑母版、图表报告同步、插件统一入口，支持条件简要清楚。",
+    "结尾：了解完整 3.0 方案或内部交流，无虚构网址、下载入口和发布日期。"
+  ],
+  "documentationReviewStatus": "BOUNDARIES_DEFINED; AWAITING_ACTUAL_COPY_AND_WORD_TEXT_REVIEW",
+  "nativeLayoutReviewPerformed": false,
+  "productAcceptanceConferred": false
+}

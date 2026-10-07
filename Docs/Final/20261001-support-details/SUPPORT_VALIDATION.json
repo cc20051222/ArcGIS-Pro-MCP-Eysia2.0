@@ -1,0 +1,214 @@
+{
+  "kind": "support-planning-consistency-validation-only",
+  "status": "PASS_CANDIDATE",
+  "validatedAtUtc": "2026-10-01T03:05:11.1424254Z",
+  "productRuntimeAccepted": false,
+  "modelRequestsExecuted": 0,
+  "gpOperationsExecuted": 0,
+  "psBusinessActionsExecuted": 0,
+  "businessCasesExecuted": 0,
+  "proposedCaseCounts": {
+    "model": 22,
+    "pack": 14,
+    "format": 9,
+    "environment": 10
+  },
+  "formatCandidateRows": 105,
+  "independentlyQualifiedFormatRows": 0,
+  "checkCount": 25,
+  "passedChecks": 25,
+  "failures": [],
+  "checks": [
+    {
+      "name": "explicit-planning-only",
+      "passed": true,
+      "detail": "Document consistency only; no runtime acceptance."
+    },
+    {
+      "name": "baseline-root-and-write-probe",
+      "passed": true,
+      "detail": "D:\\ArcGIS-Pro-MCP 2.0"
+    },
+    {
+      "name": "eight-internal-contracts-and-work-references",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "five-routes-without-extra-model-or-install-claim",
+      "passed": true,
+      "detail": "Four provider families plus one deterministic form route, all planned."
+    },
+    {
+      "name": "canonical-v2-ledger-enums",
+      "passed": true,
+      "detail": "Maturity and availability remain separate; reasons and source reviews are separate fields."
+    },
+    {
+      "name": "format-cross-product-is-candidate-pool-only",
+      "passed": true,
+      "detail": {
+        "families": 21,
+        "candidateRows": 105,
+        "qualifiedRows": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "format-version-adapter-domain-key",
+      "passed": true,
+      "detail": "Exact profiles and real evidence are required before a support claim."
+    },
+    {
+      "name": "55-proposed-case-specifications-not-executed",
+      "passed": true,
+      "detail": {
+        "groups": {
+          "model": 22,
+          "pack": 14,
+          "format": 9,
+          "environment": 10
+        },
+        "businessCasesExecuted": 0
+      }
+    },
+    {
+      "name": "proposed-host-and-import-boundaries",
+      "passed": true,
+      "detail": "These are written expectations, not observed effects."
+    },
+    {
+      "name": "active-slot-adoption-contract",
+      "passed": true,
+      "detail": "Written atomic adoption conditions include cancellation, generation, deadline and one slot adoption."
+    },
+    {
+      "name": "bounded-separated-stream-contract",
+      "passed": true,
+      "detail": "Interleaved calls and overflow are specified; no streaming implementation was run."
+    },
+    {
+      "name": "per-request-attempts-and-root-budget-separated",
+      "passed": true,
+      "detail": "Three attempts per logical language request is a proposal, not an API guarantee."
+    },
+    {
+      "name": "sent-unknown-usage-reservation-contract",
+      "passed": true,
+      "detail": "Missing usage preserves reservation; local identity prevents null provider IDs from merging concurrent attempts."
+    },
+    {
+      "name": "credential-reference-only-contract",
+      "passed": true,
+      "detail": "No credential storage or real-client writes performed."
+    },
+    {
+      "name": "closed-pack-content-and-preserved-history",
+      "passed": true,
+      "detail": "Declarative resources only; no import execution or history deletion."
+    },
+    {
+      "name": "qualification-separated-from-import",
+      "passed": true,
+      "detail": "Import cannot grant authority for the separate qualification job."
+    },
+    {
+      "name": "eight-refinements-resolve-without-dispatch",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "invariant-references-resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "four-task-readiness-states",
+      "passed": true,
+      "detail": "Mandatory gaps remain waiting; accepted equivalence is explicit."
+    },
+    {
+      "name": "four-markdown-documents-and-contract-ids",
+      "passed": true,
+      "detail": "Eight SP references align; canonical evidence terms are consistent."
+    },
+    {
+      "name": "local-navigation-links-resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "priorPlanningFiles-byte-preserved",
+      "passed": true,
+      "detail": {
+        "count": 26,
+        "changed": []
+      }
+    },
+    {
+      "name": "source-byte-preserved",
+      "passed": true,
+      "detail": {
+        "count": 899,
+        "changed": []
+      }
+    },
+    {
+      "name": "configAndScripts-byte-preserved",
+      "passed": true,
+      "detail": {
+        "count": 2,
+        "changed": []
+      }
+    },
+    {
+      "name": "source-inventory-preserved-independent-of-cwd",
+      "passed": true,
+      "detail": {
+        "baselineCount": 899,
+        "currentCount": 899,
+        "scope": "rg-visible Source files, including existing build artifacts"
+      }
+    }
+  ],
+  "preservation": {
+    "priorPlanningFiles": {
+      "count": 26,
+      "changed": []
+    },
+    "source": {
+      "count": 899,
+      "changed": []
+    },
+    "configAndScripts": {
+      "count": 2,
+      "changed": []
+    }
+  },
+  "artifactDigests": [
+    {
+      "path": "Docs\\Final\\20261001-support-details\\ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "sha256": "F9DEC4E20019A8BF013E68B372B4538D4FFAF781C3300137E64BF70F56F97239"
+    },
+    {
+      "path": "Docs\\Final\\20261001-support-details\\FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "sha256": "10038284D4413DD16F8392DD430F760897B02DD3A31079AB3B076E0C9EAFEFB8"
+    },
+    {
+      "path": "Docs\\Final\\20261001-support-details\\MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "sha256": "34C21FB9BAD6A8B5BFB5BA2B69550F2A8D8E51C9F620B2B0D6663B6680CC607C"
+    },
+    {
+      "path": "Docs\\Final\\20261001-support-details\\README_SUPPORT_DETAILS.md",
+      "sha256": "B9D41FE722E09A5B5583A4457B1255117DE5E048C8D6B0507C42CB2559008603"
+    },
+    {
+      "path": "Docs\\Final\\20261001-support-details\\SUPPORT_DESIGN_SPECIFICATION.json",
+      "sha256": "F20CF882516AD8E9C2AAACB37353300DA06FBFD0C1F903612D90D0440E4EF54B"
+    },
+    {
+      "path": "Docs\\Final\\20261001-support-details\\verify-support-planning.ps1",
+      "sha256": "51041D99D69167DCFABBA5F4371C3EA8E86CAF6637E946B741A5B1F66F345365"
+    }
+  ]
+}

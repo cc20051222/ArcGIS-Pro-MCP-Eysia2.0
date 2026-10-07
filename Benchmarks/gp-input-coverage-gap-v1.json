@@ -1,0 +1,1499 @@
+{
+ "head": {
+  "batch": "D-117 Phase A",
+  "ticket": "D-117 (G-268 2026-10-04 00:1x ACTIVE-D117)",
+  "line": "L2 评测定标线",
+  "phase": "A（零执行闭环）",
+  "phaseB": "STOP-WAIT（本批未开窗、未调用任何工具面）",
+  "rosterSource": {
+   "file": "Config/gp-whitelist.json",
+   "sha256": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46",
+   "bytes": 30634,
+   "entries": 53,
+   "destructive": 5
+  },
+  "corpusBaseline": {
+   "file": "Benchmarks/synthetic-corpus-v1.json",
+   "sha256": "D283D4CF98B89037F70B73F59422C54A1EC5D59BC7D9F3EF5AF28C4BD0140CF1",
+   "artefacts": 78,
+   "totalBytes": 450414,
+   "revision": "revision-3"
+  },
+  "statusDistribution": {
+   "NONE-IN-CASE": 47,
+   "NOT-VERIFIED-NO-DATA": 3,
+   "NOT-VERIFIED-EXEC-SUCCEEDED-ADMISSION-UNRULED": 3
+  },
+  "verifiedEvidenced": 0,
+  "whyNoVerified": "G-267 R-1 终裁 N=0；本批禁止自造实证 VERIFIED（X20 先例）",
+  "anomalySubsetOD11603": [
+   "analysis.TabulateArea",
+   "sa.Con",
+   "sa.Hillshade",
+   "sa.Resample"
+  ],
+  "gapCitations": {
+   "folder-workspace-unsupported": ".runtime/evolution/v5-f/run-20260930-d103/phase-r/defects-d103.md:58",
+   "in-memory-carrier-infeasible": "Docs/_gatekeeper/outbox/h-receipt-d116.md:312",
+   "space-in-output-path": "Docs/_gatekeeper/outbox/h-receipt-d116.md:317",
+   "n-zero-ruled": "Docs/_gatekeeper/GATE-G267-D116-FINAL_RULING.md:24"
+  },
+  "syntheticInputBasis": true,
+  "calibrationChoiceToken": "NOT-VERIFIED-EXEC-SUCCEEDED-ADMISSION-UNRULED",
+  "tokenNote": "工单四族无『执行成功而准入未裁』态；本批以 d117CalibrationChoice 登记该词元并挂请裁项 3",
+  "rowsWritten": 53,
+  "closureArithmetic": "0 VERIFIED-EVIDENCED + 3 EXEC-SUCCEEDED-ADMISSION-UNRULED + 3 NOT-VERIFIED-NO-DATA + 47 NONE-IN-CASE = 53"
+ },
+ "perEntryCoverage": [
+  {
+   "dotName": "analysis.Buffer",
+   "rowId": "GP53-01",
+   "gisTypes": [
+    "featurelayer",
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 27
+  },
+  {
+   "dotName": "analysis.Clip",
+   "rowId": "GP53-02",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "analysis.Erase",
+   "rowId": "GP53-03",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "analysis.Union",
+   "rowId": "GP53-04",
+   "gisTypes": [
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "analysis.Intersect",
+   "rowId": "GP53-05",
+   "gisTypes": [
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "analysis.Identity",
+   "rowId": "GP53-06",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "analysis.SpatialJoin",
+   "rowId": "GP53-07",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "analysis.Near",
+   "rowId": "GP53-08",
+   "gisTypes": [
+    "featurelayer",
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 27
+  },
+  {
+   "dotName": "analysis.Statistics",
+   "rowId": "GP53-09",
+   "gisTypes": [
+    "multivalue",
+    "tableview"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "analysis.Frequency",
+   "rowId": "GP53-10",
+   "gisTypes": [
+    "multivalue",
+    "tableview"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "analysis.TabulateArea",
+   "rowId": "GP53-11",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "analysis.TabulateIntersection",
+   "rowId": "GP53-12",
+   "gisTypes": [
+    "featurelayer",
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 27
+  },
+  {
+   "dotName": "management.Dissolve",
+   "rowId": "GP53-13",
+   "gisTypes": [
+    "featurelayer",
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 27
+  },
+  {
+   "dotName": "management.Merge",
+   "rowId": "GP53-14",
+   "gisTypes": [
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "management.Project",
+   "rowId": "GP53-15",
+   "gisTypes": [
+    "dataset",
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "management.RepairGeometry",
+   "rowId": "GP53-16",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "management.CalculateField",
+   "rowId": "GP53-17",
+   "gisTypes": [
+    "tableview"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 14
+  },
+  {
+   "dotName": "management.CopyFeatures",
+   "rowId": "GP53-18",
+   "gisTypes": [
+    "dataset"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "management.MultipartToSinglepart",
+   "rowId": "GP53-19",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.ExportFeatures",
+   "rowId": "GP53-20",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.TableToTable",
+   "rowId": "GP53-21",
+   "gisTypes": [
+    "tableview"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 14
+  },
+  {
+   "dotName": "conversion.RasterToPolygon",
+   "rowId": "GP53-22",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "conversion.RasterToPoint",
+   "rowId": "GP53-23",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "conversion.PolygonToRaster",
+   "rowId": "GP53-24",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.PointToRaster",
+   "rowId": "GP53-25",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.PolylineToRaster",
+   "rowId": "GP53-26",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.FeatureToRaster",
+   "rowId": "GP53-27",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.ASCIIToRaster",
+   "rowId": "GP53-28",
+   "gisTypes": [],
+   "typeCompatibleCarriers": [],
+   "count": 0
+  },
+  {
+   "dotName": "conversion.RasterToASCII",
+   "rowId": "GP53-29",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "conversion.FeaturesToJSON",
+   "rowId": "GP53-30",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "conversion.JSONToFeatures",
+   "rowId": "GP53-31",
+   "gisTypes": [],
+   "typeCompatibleCarriers": [],
+   "count": 0
+  },
+  {
+   "dotName": "sa.Slope",
+   "rowId": "GP53-32",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Aspect",
+   "rowId": "GP53-33",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Hillshade",
+   "rowId": "GP53-34",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Contour",
+   "rowId": "GP53-35",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Curvature",
+   "rowId": "GP53-36",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Fill",
+   "rowId": "GP53-37",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.FlowDirection",
+   "rowId": "GP53-38",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.FlowAccumulation",
+   "rowId": "GP53-39",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Watershed",
+   "rowId": "GP53-40",
+   "gisTypes": [
+    "dataset",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.SnapPourPoint",
+   "rowId": "GP53-41",
+   "gisTypes": [
+    "dataset",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.ZonalStatistics",
+   "rowId": "GP53-42",
+   "gisTypes": [
+    "dataset",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.ZonalStatisticsAsTable",
+   "rowId": "GP53-43",
+   "gisTypes": [
+    "dataset",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.Reclassify",
+   "rowId": "GP53-44",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.ExtractByMask",
+   "rowId": "GP53-45",
+   "gisTypes": [
+    "dataset",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.ExtractValuesToPoints",
+   "rowId": "GP53-46",
+   "gisTypes": [
+    "featurelayer",
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 27
+  },
+  {
+   "dotName": "sa.Resample",
+   "rowId": "GP53-47",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.Con",
+   "rowId": "GP53-48",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.CellStatistics",
+   "rowId": "GP53-49",
+   "gisTypes": [
+    "multivalue"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-01",
+    "D101-X2-02",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X6-07",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-04",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 24
+  },
+  {
+   "dotName": "sa.FocalStatistics",
+   "rowId": "GP53-50",
+   "gisTypes": [
+    "rasterlayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-TS08-01",
+    "D101-TS08-04",
+    "D101-X2-01",
+    "D101-X2-05",
+    "D101-X2-08",
+    "D101-X4-01",
+    "D101-X4-06",
+    "D101-X4-09",
+    "D101-X6-07",
+    "D101-X7-04"
+   ],
+   "count": 10
+  },
+  {
+   "dotName": "sa.RasterCalculator",
+   "rowId": "GP53-51",
+   "gisTypes": [],
+   "typeCompatibleCarriers": [],
+   "count": 0
+  },
+  {
+   "dotName": "management.AddJoin",
+   "rowId": "GP53-52",
+   "gisTypes": [
+    "featurelayer",
+    "tableview"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  },
+  {
+   "dotName": "management.RemoveJoin",
+   "rowId": "GP53-53",
+   "gisTypes": [
+    "featurelayer"
+   ],
+   "typeCompatibleCarriers": [
+    "D101-X1-01",
+    "D101-X1-04",
+    "D101-X2-02",
+    "D101-X3-01",
+    "D101-X3-03",
+    "D101-X3-06",
+    "D101-X4-03",
+    "D101-X4-04",
+    "D101-X5-02",
+    "D101-X5-05",
+    "D101-X6-01",
+    "D101-X7-01",
+    "D101-X7-02",
+    "D101-X7-05",
+    "D101-X7-10",
+    "D101-X8-01",
+    "D101-X8-04"
+   ],
+   "count": 17
+  }
+ ],
+ "carrierArtefacts": [
+  "D101-TS08-01",
+  "D101-TS08-04",
+  "D101-X1-01",
+  "D101-X1-04",
+  "D101-X2-01",
+  "D101-X2-02",
+  "D101-X2-05",
+  "D101-X2-08",
+  "D101-X3-01",
+  "D101-X3-03",
+  "D101-X3-06",
+  "D101-X4-01",
+  "D101-X4-03",
+  "D101-X4-04",
+  "D101-X4-06",
+  "D101-X4-09",
+  "D101-X5-01",
+  "D101-X5-02",
+  "D101-X5-05",
+  "D101-X5-10",
+  "D101-X6-01",
+  "D101-X6-07",
+  "D101-X6-10",
+  "D101-X7-01",
+  "D101-X7-02",
+  "D101-X7-04",
+  "D101-X7-05",
+  "D101-X7-07",
+  "D101-X7-10",
+  "D101-X7-12",
+  "D101-X8-01",
+  "D101-X8-04"
+ ],
+ "carrierCount": 32
+}

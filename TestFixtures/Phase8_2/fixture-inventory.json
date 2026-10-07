@@ -1,0 +1,639 @@
+{
+ "fixtures": [
+  {
+   "path": "folders\\hierarchy\\l1\\l2\\deep.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "folders\\jail\\inside.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "folders\\jail\\jlink\\escaped.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "folders\\outside\\escaped.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "folders\\ws\\in_ws.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000001.gdbindexes",
+   "size": 110,
+   "sha256": "80ba95b873e151074244f7655f9e29ce8967aab1bd57ff4c06a329b723a3d46c"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000001.gdbtable",
+   "size": 593,
+   "sha256": "3cdd44092b1b21e0943d5cf840cc6ea3e8dab43d442fb707dc550638652fd824"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000001.gdbtablx",
+   "size": 5152,
+   "sha256": "61def1636c0dab7e1ca939d8f0394434c267587f3442a05bd1b9ea35eeda351d"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000001.TablesByName.atx",
+   "size": 4118,
+   "sha256": "9a2d885d99943828764cbde89de2a13fa00ca298432317a2f18f436d2c213212"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000002.gdbtable",
+   "size": 2055,
+   "sha256": "9efa50dc62a40e109a546054943ae5ad4b3d41aa81ece0dfa026b7b23cb09da8"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000002.gdbtablx",
+   "size": 5152,
+   "sha256": "f3ac9865dec6ab40e73d91dd1f5c2eef0248e66e359d4abb1d97edba92b5df88"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000003.gdbindexes",
+   "size": 42,
+   "sha256": "de0911d18e2f304380c04ae123ea18057d262d788301f7cc3148298231c7c618"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000003.gdbtable",
+   "size": 991,
+   "sha256": "5efa9679e039bccad51632b5fc58fd7fe44265c5b92568225f7ab5ec13eb9cc9"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000003.gdbtablx",
+   "size": 5152,
+   "sha256": "17afdeb6d32c508e72e6cb3b20823252b7c925db90cc9356be338a314b093ed6"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.CatItemsByPhysicalName.atx",
+   "size": 4118,
+   "sha256": "991f5aa5ca426e86920175314e2700f298e317b7f362c6873e2a9173fca14328"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.CatItemsByType.atx",
+   "size": 4118,
+   "sha256": "176d316c31b1342784e9c3d060d9df9374e2f67ff32f35ea2b6c5cd90a178edf"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.FDO_UUID.atx",
+   "size": 4118,
+   "sha256": "40f83f4848e6e297fb8a228c2548e39ea34eaa0b8af5c754f6e40994d53c76e9"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.gdbindexes",
+   "size": 310,
+   "sha256": "f29887c93b126a3feb0e20958cd73cc774f76ab79284b9c7286dc12eb05db858"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.gdbtable",
+   "size": 37631,
+   "sha256": "4c993ecb445bb3f7816d2b5b112b06c9010d5552173580bd2d741a92ba5e75a4"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.gdbtablx",
+   "size": 5152,
+   "sha256": "78a597834b443d23fe97ce5507e01b877587d2e2fabc55f3aad760986dc0cd8e"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.horizon",
+   "size": 32,
+   "sha256": "9fab34115b351a30fb6adb5818d8f08e4dd3a024b7247dbbc61c56929ab6e223"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000004.spx",
+   "size": 12310,
+   "sha256": "f8cb136df93997f6537b0c5f3f637460594ce323255a775412ef82e57f321738"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.CatItemTypesByName.atx",
+   "size": 12310,
+   "sha256": "bd4d87826f4ceb333eea541b47bcc6f3ab7482ebd1f9d9e22eaa24440dac9a9d"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.CatItemTypesByParentTypeID.atx",
+   "size": 4118,
+   "sha256": "3b0cba13354ba2dabfcdef76d3dc9635b2156f9d6532782389bc8163aaa6d735"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.CatItemTypesByUUID.atx",
+   "size": 4118,
+   "sha256": "ed60ce77b7e4bbb21f4ff2502baa785ca9069335d8c622b765ef69d88408e0ee"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.gdbindexes",
+   "size": 296,
+   "sha256": "c21e650994b48cc72d174b3caf2ac1bd19e2d7305c8087aaae97e24caecf98a5"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.gdbtable",
+   "size": 2071,
+   "sha256": "9de6643cc403905cc0a3be8ebbfb7e73e4c29838330ad9d661c258138b625af0"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000005.gdbtablx",
+   "size": 5152,
+   "sha256": "814c7f1509fab80670cc35035b1beb9c387d4cfe9e9bf6aa72206ab129dfaaa7"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.CatRelsByDestinationID.atx",
+   "size": 4118,
+   "sha256": "873a9912a76c7f8d73807f3f8b819b343d507306d93ab9ffca230e8745a33468"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.CatRelsByOriginID.atx",
+   "size": 4118,
+   "sha256": "c56cbfb40b748b0eb8a20199abe02f79aacaaf57327839e35a428c4908261f81"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.CatRelsByType.atx",
+   "size": 4118,
+   "sha256": "88566e11eb59748c1853da40b8f367e2e162772922b9e3a69536017b7bd3cf58"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.FDO_UUID.atx",
+   "size": 4118,
+   "sha256": "fa9f1a1508b0d4987e9bddd4b97b39d9c0949aaee975c9d35af071413aadc7d0"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.gdbindexes",
+   "size": 318,
+   "sha256": "1919a00326f198a90dc97545ec448c10b2b90d367020222212f7b00433fe09b5"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.gdbtable",
+   "size": 628,
+   "sha256": "77953d36384aac0d3f5b841f125965d3b0d3e35dad8a415287590c86d8b13871"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000006.gdbtablx",
+   "size": 5152,
+   "sha256": "5606a8c65f541ef271bbb282e89f9f5cd0880b12b490c980e6119c26ba8f30f3"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByBackwardLabel.atx",
+   "size": 12310,
+   "sha256": "cdad55c536bd5a3fccf13384276d3ad71b336838af83c4c6ebec9d00d0bb343c"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByDestItemTypeID.atx",
+   "size": 4118,
+   "sha256": "1b6dd887f93d242568fd44bf207ec4927a716d7a547ee92e3f9132cf65ab7f57"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByForwardLabel.atx",
+   "size": 12310,
+   "sha256": "6d3996ee670b41fab277407b03343bfefb36d1003549933df8fbc1c2e70b6540"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByName.atx",
+   "size": 12310,
+   "sha256": "1956fbb73bed5c8db3bda819f235f0fda3e68f2a1a4a02bb78900db08cfb2792"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByOriginItemTypeID.atx",
+   "size": 4118,
+   "sha256": "515bb2b01d6a70366a77912208b27bd9653e6d64b7afce753bf91f232f4d5cad"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.CatRelTypesByUUID.atx",
+   "size": 4118,
+   "sha256": "7d09c1df65343217794377d55ba1e9f1e7bdfbf991dcf71f7423b3b5275f9a26"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.gdbindexes",
+   "size": 602,
+   "sha256": "dc98e24d04eddd7f38905d176c1ea43c547a3a2daa0c80091a20d3443c726621"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.gdbtable",
+   "size": 3626,
+   "sha256": "6df6541c4921721ffad9a68412d1ef813e79b4d7ff9363815b8aaa8ac51a9ba1"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000007.gdbtablx",
+   "size": 5152,
+   "sha256": "dca874a84875d0a7a7489681fe02db46f8df847b490871fea0762c62818e5bdc"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.EditingTemplatesByDatasetGUID.atx",
+   "size": 4118,
+   "sha256": "e896573b876ae008ad28ce94c677335b6da02a3ec99f86fe7f1602d4f79dee77"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.EditingTemplatesByName.atx",
+   "size": 4118,
+   "sha256": "6052dffe7de6bb2e1701b454b7c318b3874dcd8e49b129039ff583bce5369d08"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.EditingTemplatesByType.atx",
+   "size": 4118,
+   "sha256": "f4088d2ff452cf2365f07b589faeda6a57b9a2ede4ce041f0c9a7a877bd7e4bc"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.FDO_GlobalID.atx",
+   "size": 4118,
+   "sha256": "e896573b876ae008ad28ce94c677335b6da02a3ec99f86fe7f1602d4f79dee77"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.gdbindexes",
+   "size": 378,
+   "sha256": "aa8afd7a18a975f96815b60fcb33a4f29327568ae2f8098d20717352d698c762"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.gdbtable",
+   "size": 385,
+   "sha256": "d74b9b7303fae4b4ae9c1058925e83e22867cfeb3c9e544ae2a4db2fc12f7a5d"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000009.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.EditingTemplateRelsByDestinationID.atx",
+   "size": 4118,
+   "sha256": "e896573b876ae008ad28ce94c677335b6da02a3ec99f86fe7f1602d4f79dee77"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.EditingTemplateRelsByOriginID.atx",
+   "size": 4118,
+   "sha256": "e896573b876ae008ad28ce94c677335b6da02a3ec99f86fe7f1602d4f79dee77"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.EditingTemplateRelsByType.atx",
+   "size": 4118,
+   "sha256": "f4088d2ff452cf2365f07b589faeda6a57b9a2ede4ce041f0c9a7a877bd7e4bc"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.gdbindexes",
+   "size": 344,
+   "sha256": "7bcb1d3151048bb8e54f8e5165cb430a344008829248c679267b690672f8b369"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.gdbtable",
+   "size": 127,
+   "sha256": "062d5c99361883f7ef9d3deeb0e59f2e190d627acc34f54f71594d1e9e6bf4ac"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000a.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000b.gdbindexes",
+   "size": 116,
+   "sha256": "760bd4864717c60d5e7c0c6461a622062680e6f79f51250f49456aa609b43774"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000b.gdbtable",
+   "size": 508,
+   "sha256": "a4661c82910627ee88944e377ebccc92f071244add7fa381707c92f94e5d3222"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000b.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000b.horizon",
+   "size": 32,
+   "sha256": "9fab34115b351a30fb6adb5818d8f08e4dd3a024b7247dbbc61c56929ab6e223"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000b.spx",
+   "size": 4118,
+   "sha256": "027866f78134de031571290fab2599ab7879bd7df84030ee324b233b891058aa"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000c.gdbindexes",
+   "size": 116,
+   "sha256": "760bd4864717c60d5e7c0c6461a622062680e6f79f51250f49456aa609b43774"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000c.gdbtable",
+   "size": 538,
+   "sha256": "9762d505b96a8d464d3ac8c2ed99f4f575dea02308bdfe08312bb9d39b3fce54"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000c.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000c.horizon",
+   "size": 32,
+   "sha256": "9fab34115b351a30fb6adb5818d8f08e4dd3a024b7247dbbc61c56929ab6e223"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000c.spx",
+   "size": 4118,
+   "sha256": "027866f78134de031571290fab2599ab7879bd7df84030ee324b233b891058aa"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000d.gdbindexes",
+   "size": 66,
+   "sha256": "f783c7cdca04f92be11d622f5ed3e7be6dc871316a6d7932b7ea4add7540845b"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000d.gdbtable",
+   "size": 75,
+   "sha256": "ad19e175cc89f707fb6564afb96862850e0609d88c4f58d04e65b03b3ce14077"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000d.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000e.gdbindexes",
+   "size": 116,
+   "sha256": "760bd4864717c60d5e7c0c6461a622062680e6f79f51250f49456aa609b43774"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000e.gdbtable",
+   "size": 508,
+   "sha256": "a4661c82910627ee88944e377ebccc92f071244add7fa381707c92f94e5d3222"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000e.gdbtablx",
+   "size": 32,
+   "sha256": "4e0a9f371d483e96ff8d083ada7aa0d5a23c1da5472b6509a44b9514ba1ed2ca"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000e.horizon",
+   "size": 32,
+   "sha256": "9fab34115b351a30fb6adb5818d8f08e4dd3a024b7247dbbc61c56929ab6e223"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000e.spx",
+   "size": 4118,
+   "sha256": "027866f78134de031571290fab2599ab7879bd7df84030ee324b233b891058aa"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000f.gdbindexes",
+   "size": 112,
+   "sha256": "63dcbf8c98a6c7a534b860abf00427cd7f641f02b9a3d421a2c61b081cd0bada"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000f.gdbtable",
+   "size": 1109,
+   "sha256": "cb8deb4841cf9ea519359ce1551db6edd1f41d169b53755b7ae91e8c442238ac"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000f.gdbtablx",
+   "size": 5152,
+   "sha256": "cfc2d5e68669ff451727af564b8e53759a9bfe74994c366cfc33a165b39b1688"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000f.horizon",
+   "size": 32,
+   "sha256": "9fab34115b351a30fb6adb5818d8f08e4dd3a024b7247dbbc61c56929ab6e223"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a0000000f.spx",
+   "size": 4118,
+   "sha256": "027866f78134de031571290fab2599ab7879bd7df84030ee324b233b891058aa"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000010.gdbindexes",
+   "size": 70,
+   "sha256": "6551ba8afc2133af0cbbd520fadf445ea95954320f2ba024abb4e00d60ad20f2"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000010.gdbtable",
+   "size": 554,
+   "sha256": "94498d42d0a45fb19c6fa9e5911fa45b1fb2664df01528444ac835cda7041fd3"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000010.gdbtablx",
+   "size": 5152,
+   "sha256": "29fde037c163be53e55ab59eedd3f34e479323364ebd34ac096ff7596eb9f1fe"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000011.freelist",
+   "size": 4440,
+   "sha256": "96f644c073de2aa00f31954c8c251e8abdfe8c10989149882293132f747637cb"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000011.gdbindexes",
+   "size": 66,
+   "sha256": "f783c7cdca04f92be11d622f5ed3e7be6dc871316a6d7932b7ea4add7540845b"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000011.gdbtable",
+   "size": 2898,
+   "sha256": "c96631a8ff1259711df2f02ff337e8b15f22c14e90e2abe254d440d093aaeb20"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000011.gdbtablx",
+   "size": 5152,
+   "sha256": "98072b78e74f308d04dbba6986c0f2603c4023645a6acec30ee76621e2decd78"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.band_index.atx",
+   "size": 12310,
+   "sha256": "57a6723254f8f79b2f7d85a3b2bf4f836ac188c95dc095b1f39eaaf34eb59c7c"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.blk_key_index.atx",
+   "size": 57366,
+   "sha256": "a3fa43b7435427a99c9c2aac050ea6e0b94fc10b8534b13e79b7093224417a94"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.col_index.atx",
+   "size": 12310,
+   "sha256": "207888072c03a8fa278f9b55ed398af968da3e0946f89993c9123dbb1c2d830a"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.gdbindexes",
+   "size": 308,
+   "sha256": "8b945fc417aeab6bc2ebd7a5b0beea1cac1c76dd8f8dc4f3986bb7fac1e1d415"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.gdbtable",
+   "size": 1479090,
+   "sha256": "8ed3cbf130fd80e775cd4e744a3285f42c5df00c4013780edb9746bfc09c1967"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.gdbtablx",
+   "size": 5152,
+   "sha256": "32c1fc9cf282f359fe8b50398af2fd8e40258c63230dc4cdf830e55df2603293"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000012.row_index.atx",
+   "size": 12310,
+   "sha256": "1b194b460a90be0776b93d5f2e3d38d186eede40c943ca01a6c7427da4b900f7"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000013.gdbindexes",
+   "size": 86,
+   "sha256": "500aaf9ab86e36ee7813bf20a617202fb138742b6d60e821031572d5d8b1a60c"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000013.gdbtable",
+   "size": 598,
+   "sha256": "cb9ccb73da4cda7b56f13983dbd472a8fc3d1943e37e5966b68f5c0e1719252c"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000013.gdbtablx",
+   "size": 5152,
+   "sha256": "46936b52da33132a4011c7c2d9ae05d77e8ca53e32e0df10f5e9379d659bf084"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000014.gdbindexes",
+   "size": 66,
+   "sha256": "f783c7cdca04f92be11d622f5ed3e7be6dc871316a6d7932b7ea4add7540845b"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000014.gdbtable",
+   "size": 3195,
+   "sha256": "f613f8b855019c7a63705d967d3caa8719be37edea2a057e68c04552f0c0ae89"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\a00000014.gdbtablx",
+   "size": 5152,
+   "sha256": "efbd7f5ab36873289ff76755e2cae704350ce09a50f969474a95d88067b56f5b"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\gdb",
+   "size": 4,
+   "sha256": "2594b6a92ebfb1c3312deb7d01c015fb95e9fbe9bd7bc6b527af07813ec7b910"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\timestamps",
+   "size": 400,
+   "sha256": "8a8c255618dc1dcc6b6a9f16b8a42d3a2eaecda1c031711133999310c825b4a3"
+  },
+  {
+   "path": "gdb\\Phase8_2Test.gdb\\_gdb.PC.17252.17112.sr.lock",
+   "error": "[Errno 13] Permission denied: 'D:\\\\ArcGIS-Pro-MCP 2.0\\\\TestFixtures\\\\Phase8_2\\\\gdb\\\\Phase8_2Test.gdb\\\\_gdb.PC.17252.17112.sr.lock'"
+  },
+  {
+   "path": "rasters\\corrupt.tif",
+   "size": 208,
+   "sha256": "4b4ca81ac37523cc5745fb1b3bfed41eab988b6be9f0d6a23d2e985227e28ae6"
+  },
+  {
+   "path": "rasters\\float32.img",
+   "size": 5026666,
+   "sha256": "29691f74dbd66d5c4cbd0795192c1ca004c35ceb70c02cd0f43ce1fed1a9ddb0"
+  },
+  {
+   "path": "rasters\\float32.img.aux.xml",
+   "size": 1005,
+   "sha256": "b6117ecadda150dff2875faae5c962f5998fdd47264c5234d9edd20feafb69fe"
+  },
+  {
+   "path": "rasters\\float32.img.xml",
+   "size": 7071,
+   "sha256": "e8a79df67d192c4e4e873bf48b275dbeb0dcb9503fddc26c122bd2e4a36ae692"
+  },
+  {
+   "path": "rasters\\float32.rrd",
+   "size": 2252098,
+   "sha256": "3633d74de54a6e8aa677c803194064ccd3f58a801c39d64166875496a8db381a"
+  },
+  {
+   "path": "rasters\\multi.tfw",
+   "size": 83,
+   "sha256": "9b4cd57b1dd8c9b72ca12587d88cff70fe299d058921aa013de67cb164c83410"
+  },
+  {
+   "path": "rasters\\multi.tif",
+   "size": 3060450,
+   "sha256": "fdd96ad295c35f1076466c88b0544a1f6ea74700a94a2409e10f2b65c2fdff2a"
+  },
+  {
+   "path": "rasters\\multi.tif.aux.xml",
+   "size": 6507,
+   "sha256": "c3fda14c3b7e5347ec3421aaf40b181d767ebd730f9483269227df94eed0761d"
+  },
+  {
+   "path": "rasters\\multi.tif.ovr",
+   "size": 1089608,
+   "sha256": "d2447a53fc6c915e63af1cba9beb33c596b0a96caf5f6488ee420d54c00e2679"
+  },
+  {
+   "path": "rasters\\multi.tif.xml",
+   "size": 7631,
+   "sha256": "0fa3d173f310873859baad7bc066718be38c07607f147d024d46bb6126dcad64"
+  },
+  {
+   "path": "rasters\\nostats.tfw",
+   "size": 83,
+   "sha256": "9b4cd57b1dd8c9b72ca12587d88cff70fe299d058921aa013de67cb164c83410"
+  },
+  {
+   "path": "rasters\\nostats.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "rasters\\nostats.tif.aux.xml",
+   "size": 560,
+   "sha256": "d50aa1ea651017aa2a708fa34da19d4ee90bba7af983293ceda88eea147e4401"
+  },
+  {
+   "path": "rasters\\nostats.tif.ovr",
+   "size": 363324,
+   "sha256": "fb972cf8b3d851633f154e12e99cc74270924c74bfe203580c532d7b7590839d"
+  },
+  {
+   "path": "rasters\\nostats.tif.vat.cpg",
+   "size": 5,
+   "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  },
+  {
+   "path": "rasters\\nostats.tif.vat.dbf",
+   "size": 5888,
+   "sha256": "26447967d5ed89bcbbe56097c226795524ad3d3ce05a32d1839fba9a0a38d49e"
+  },
+  {
+   "path": "rasters\\nostats.tif.xml",
+   "size": 6670,
+   "sha256": "38b02f570f3f037dbf6f11f307e916dd4742cff1457733f9a98987aef1b0dadb"
+  },
+  {
+   "path": "rasters\\stat1band.tfw",
+   "size": 83,
+   "sha256": "9b4cd57b1dd8c9b72ca12587d88cff70fe299d058921aa013de67cb164c83410"
+  },
+  {
+   "path": "rasters\\stat1band.tif",
+   "size": 1838114,
+   "sha256": "13459d94ec8ca47045510eda803eba0db4339ce48474956d51d76d14471d0125"
+  },
+  {
+   "path": "rasters\\stat1band.tif.aux.xml",
+   "size": 2331,
+   "sha256": "98f81df723b8530adddde9c021a0da13fb02dac346f013dbb0ea6225a91bdbff"
+  },
+  {
+   "path": "rasters\\stat1band.tif.ovr",
+   "size": 363324,
+   "sha256": "fb972cf8b3d851633f154e12e99cc74270924c74bfe203580c532d7b7590839d"
+  },
+  {
+   "path": "rasters\\stat1band.tif.vat.cpg",
+   "size": 5,
+   "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  },
+  {
+   "path": "rasters\\stat1band.tif.vat.dbf",
+   "size": 5888,
+   "sha256": "26447967d5ed89bcbbe56097c226795524ad3d3ce05a32d1839fba9a0a38d49e"
+  },
+  {
+   "path": "rasters\\stat1band.tif.xml",
+   "size": 6966,
+   "sha256": "2c23f7c65cd1df58d7cb7abd4aa486875c44bf7098d312d010f95040cbbbed64"
+  }
+ ],
+ "generated": "build_phase8_2_fixture.py"
+}

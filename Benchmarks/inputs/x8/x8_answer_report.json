@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x8",
+  "artefact": "GDOM-01 known answer plus GDOM-03 and GDOM-04",
+  "synthetic": true,
+  "figures": {
+    "count:transport": 3,
+    "sumScaled:transport": 1900,
+    "meanScaled:transport": 850.0,
+    "count:green": 2,
+    "sumScaled:green": 14300,
+    "meanScaled:green": 2140.0,
+    "count:housing": 3,
+    "sumScaled:housing": 36200,
+    "meanScaled:housing": 1220.0,
+    "count:services": 2,
+    "sumScaled:services": 2200
+  },
+  "figureRule": "every printed number in a report or deck must equal a figure recomputed from x8_fact_table.csv",
+  "references": [
+    {
+      "indicator": "busRoutes",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "railStations",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "averageHeadwayMinutes",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "parkAreaHectares",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "treeCanopyPercent",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "permits",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "vacant",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "vacancyRatePercent",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "clinics",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    },
+    {
+      "indicator": "averageTravelMinutes",
+      "source": "synthetic register",
+      "period": "2024-Q1"
+    }
+  ],
+  "deckOutline": {
+    "audience": "council briefing",
+    "maxPages": 8,
+    "masterId": "MASTER-TP10-SYNTH",
+    "slideTitles": [
+      "Title",
+      "Method",
+      "Transport",
+      "Green space",
+      "Housing",
+      "Services",
+      "Caveats",
+      "Sources"
+    ],
+    "pageCountWithinBudget": true
+  },
+  "expectedAutomaticResult": "one TP10-bound report and one deck whose text is selectable and whose figures all resolve to the fact table",
+  "updatedInstance": {
+    "addedRows": [
+      [
+        "housing",
+        "renovations",
+        "26",
+        "synthetic register",
+        "2024-Q2"
+      ],
+      [
+        "green",
+        "newTrees",
+        "640",
+        "synthetic register",
+        "2024-Q2"
+      ]
+    ],
+    "expectedFiguresAfter": {
+      "count:transport": 3,
+      "sumScaled:transport": 1900,
+      "meanScaled:transport": 850.0,
+      "count:green": 3,
+      "sumScaled:green": 78300,
+      "meanScaled:green": 2140.0,
+      "count:housing": 4,
+      "sumScaled:housing": 38800,
+      "meanScaled:housing": 1220.0,
+      "count:services": 2,
+      "sumScaled:services": 2200
+    }
+  },
+  "unfilledAxes": [
+    "an approved Open XML generator with a recorded licence for the deck path",
+    "a verified DOCX channel for the report path",
+    "editability proof: a rendered image never proves editable text"
+  ]
+}

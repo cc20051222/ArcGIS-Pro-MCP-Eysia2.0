@@ -1,0 +1,438 @@
+{
+  "kind": "FINAL_PLAN_COMMUNITY_PRIMARY_SOURCE_REGISTER",
+  "recordDate": "2026-10-02",
+  "scope": "Documentation comparison and mechanism adoption; no competitor or product runtime execution",
+  "productAcceptance": "NOT_RUN",
+  "competitionAcceptance": "NOT_RUN",
+  "allRoundLeadership": "TARGET_NOT_PROVEN",
+  "targetCounts": {
+    "N_GP": null,
+    "N_sem": null,
+    "K_GP": "max(2100,ceil(1.10*N_GP))",
+    "K_sem": "max(3000,ceil(1.50*N_sem))",
+    "scopeOfSemanticCount": "Core GIS/spatial calculation/conversion/governance only; excludes PS/Office/UI/install/models/learning management",
+    "overlapRule": "Same selected per-operation qualification witness with proven one-to-one mapping, not abstract semantic resemblance"
+  },
+  "repositories": [
+    {
+      "id": "C01",
+      "repository": "Knight60/ArcGIS-Pro-MCP",
+      "url": "https://github.com/Knight60/ArcGIS-Pro-MCP",
+      "commit": "e63d4808522171e94f913f4330fb5ce8f9e25d3b",
+      "commitDateUtc": "2026-09-06T20:25:38Z",
+      "fixedReadmeUrl": "https://github.com/Knight60/ArcGIS-Pro-MCP/blob/e63d4808522171e94f913f4330fb5ce8f9e25d3b/README.md",
+      "readmeUtf8SHA256": "E8018137C30A1C086CAAD50D321D289C6FAE62C9340F87739742694658309A99",
+      "readmeCharacterLength": 25970,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_MAINTAINER_DECLARATION_NOT_LOCALLY_RUN",
+      "claims": {
+        "namedTools": 112,
+        "inProcessTools": 109,
+        "genericGpRange": "approximately 2000, not an exact frozen denominator",
+        "transport": "HTTP MCP inside C# Add-In; optional Python bridge",
+        "licenceDeclaration": "AGPL/commercial dual from v1.1; releases up to v1.0 remain MIT"
+      },
+      "unknowns": [
+        "Exact qualified GP and semantic counts",
+        "Whole catalog independent runtime acceptance",
+        "Local end-to-end latency",
+        "Code ancestry relation to this workspace"
+      ]
+    },
+    {
+      "id": "C02",
+      "repository": "marcovgonzalezv/arcgis-mcp",
+      "url": "https://github.com/marcovgonzalezv/arcgis-mcp",
+      "commit": "d90287cba8ef9e539f81832fe34bea0340dd822a",
+      "commitDateUtc": "2026-09-06T17:39:00Z",
+      "fixedReadmeUrl": "https://github.com/marcovgonzalezv/arcgis-mcp/blob/d90287cba8ef9e539f81832fe34bea0340dd822a/README.md",
+      "readmeUtf8SHA256": "D694E224CB188F61530607ECC1356A81F32CEFA4135A0FD96013829CCF196A2C",
+      "readmeCharacterLength": 8553,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_MAINTAINER_DECLARATION_NOT_LOCALLY_RUN",
+      "claims": {
+        "mcpTools": 167,
+        "addinCommands": 71,
+        "resources": 2,
+        "prompts": 2,
+        "requiredProReadmeVersion": "3.7",
+        "transport": "C# Add-In with Named Pipe and Python FastMCP",
+        "licenceDisplay": "MIT"
+      },
+      "unknowns": [
+        "Unique semantic GP count",
+        "All-version support",
+        "Whole catalog independent runtime acceptance",
+        "All dependency and distribution licence conditions"
+      ]
+    },
+    {
+      "id": "C03",
+      "repository": "muend/arcgis-mcp-bridge",
+      "url": "https://github.com/muend/arcgis-mcp-bridge",
+      "commit": "655d5fce302e152a327e6cf199ca892b24442cec",
+      "commitDateUtc": "2026-09-25T19:53:50Z",
+      "fixedReadmeUrl": "https://github.com/muend/arcgis-mcp-bridge/blob/655d5fce302e152a327e6cf199ca892b24442cec/README.md",
+      "readmeUtf8SHA256": "1758E5A8B4EA0C1D1F156C7F955A922F463A33FCA6DEE9F34F06A4F64ECF4ECB",
+      "readmeCharacterLength": 26095,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_MAINTAINER_DECLARATION_NOT_LOCALLY_RUN",
+      "claims": {
+        "declarativeCatalogTools": 100,
+        "verticals": 10,
+        "unitTests": 86,
+        "unitArcPyMode": "mocked",
+        "realRuntimeEvidence": "Separate smoke benchmark; README explicitly does not claim multi-scenario validation of all 100 tools",
+        "architecture": "Protocol process plus per-job ArcPy worker; ToolSpec factory and classified errors",
+        "licenceDisplay": "Apache-2.0"
+      },
+      "unknowns": [
+        "Unique semantic GP count",
+        "Whole catalog independent runtime acceptance",
+        "Local cold and warm latency"
+      ]
+    },
+    {
+      "id": "C04",
+      "repository": "thaparSAAB14/ARCclaude",
+      "url": "https://github.com/thaparSAAB14/ARCclaude",
+      "commit": "a749b06d929ef57099a6cdf31920ecbb984deea3",
+      "commitDateUtc": "2026-09-25T00:43:19Z",
+      "fixedReadmeUrl": "https://github.com/thaparSAAB14/ARCclaude/blob/a749b06d929ef57099a6cdf31920ecbb984deea3/README.md",
+      "readmeUtf8SHA256": "AF471762BC32180C5C9C337BD1DCDDDC3DB1D0809DE88D2DD70553A435710F51",
+      "readmeCharacterLength": 9731,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_MAINTAINER_DECLARATION_NOT_LOCALLY_RUN",
+      "claims": {
+        "gpSearchRange": "approximately 1800, not an exact denominator",
+        "discovery": "Dynamic arcpy.ListTools",
+        "execution": "Persistent ArcPy session plus describe/run endpoints",
+        "proLiveLink": "Experimental cowork mode; add-in panel on roadmap",
+        "environment": "Does not install packages into Esri Python environment",
+        "status": "Alpha v0.5.0 as declared in README",
+        "licenceDisplay": "Apache-2.0"
+      },
+      "unknowns": [
+        "Whole catalog independent runtime acceptance",
+        "Cross-host side-effect recovery",
+        "Local licensed runtime availability"
+      ]
+    },
+    {
+      "id": "C05",
+      "repository": "geo2004/MCP-ArcGISPro",
+      "url": "https://github.com/geo2004/MCP-ArcGISPro",
+      "commit": "98435d80382ba13d9a05eb58d73e54511de71e50",
+      "commitDateUtc": "2026-09-13T13:23:35Z",
+      "fixedReadmeUrl": "https://github.com/geo2004/MCP-ArcGISPro/blob/98435d80382ba13d9a05eb58d73e54511de71e50/README.md",
+      "readmeUtf8SHA256": "7B479B3FD5273767623ED32457E6DF5C21E9CA5B69404D516ADEE3D1E99ECE75",
+      "readmeCharacterLength": 9995,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_MAINTAINER_DECLARATION_NOT_LOCALLY_RUN",
+      "claims": {
+        "namedTools": 32,
+        "architecture": "Pure Python bridge, file IPC, optional local socket hardening layer",
+        "hardening": "execute_python off by default; allowed GP toolbox prefixes and destructive-tool blocklist",
+        "recipes": "QA/export/batch layouts/statistics"
+      },
+      "unknowns": [
+        "Exact qualified GP denominator",
+        "All operation thread suitability",
+        "Whole catalog independent runtime acceptance",
+        "Fixed licence text not separately reviewed in this round"
+      ]
+    },
+    {
+      "id": "C06",
+      "repository": "nicogis/MCP-Server-ArcGIS-Pro-AddIn",
+      "url": "https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn",
+      "commit": "e3383804d1682ed56b8e9dffda3e639064fb5230",
+      "commitDateUtc": "2026-07-30T14:17:45Z",
+      "fixedReadmeUrl": "https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn/blob/e3383804d1682ed56b8e9dffda3e639064fb5230/README.md",
+      "readmeUtf8SHA256": "7880E1509F2CF71B2EBEDA93C21CBF24B20707EAD4F46F9B19F63DDC7AC59E8F",
+      "readmeCharacterLength": 4898,
+      "retrieval": "Official GitHub page, official GitHub commits API, fixed raw README GET",
+      "evidenceStatus": "PRIMARY_IMPLEMENTATION_SAMPLE_NOT_LOCALLY_BUILT_OR_RUN",
+      "claims": {
+        "architecture": "C# Pro Add-In, Named Pipe, .NET 8 MCP stdio",
+        "examples": [
+          "Active map",
+          "Layer list",
+          "Feature count",
+          "Zoom"
+        ]
+      },
+      "unknowns": [
+        "README provides no comparable whole-GP catalog count",
+        "Real local connection and outputs",
+        "Fixed licence text not separately reviewed in this round"
+      ]
+    }
+  ],
+  "geoAIChat": {
+    "id": "C07",
+    "officialUrls": [
+      "https://www.geoaichat.cn/",
+      "https://www.geoaichat.cn/features",
+      "https://www.geoaichat.cn/pricing",
+      "https://www.geoaichat.cn/changelog"
+    ],
+    "frontendAssetUrl": "https://www.geoaichat.cn/assets/index-YLP_9t0O.js",
+    "frontendAssetCharacterLength": 311348,
+    "frontendAssetUtf8SHA256": "785D06739F453D61CFF4B8DCA91407BE60C01D0BAECF09F3C2E90653E84D9760",
+    "versionApiUrl": "https://www.geoaichat.cn/api/packages/history",
+    "versionApiUtf8SHA256": "C902C79751C6D16BECA4685B837EB3066A652D7D97727216278436B97F5C1066",
+    "retrieval": "Web browsing tool failed for page/asset/API; PowerShell read-only official HTTPS GET succeeded with HTTP 200",
+    "evidenceStatus": "CURRENT_OFFICIAL_PUBLIC_DECLARATION_NOT_INSTALLED_OR_RUN",
+    "latestEntry": {
+      "version": "0.25.1",
+      "releaseDate": "2026-09-30"
+    },
+    "officeEntry": {
+      "version": "0.24.0",
+      "releaseDate": "2026-09-24"
+    },
+    "claims": {
+      "featureAndHomeStructuredToolCount": "15",
+      "pricingStructuredToolCount": "20+",
+      "toolCountConflict": "Unresolved public page mismatch; do not treat either as verified active endpoint count",
+      "genericGpRange": "1900+ via arcpy/run_arcpy, not an exact qualified count",
+      "capabilities": [
+        "Chinese integrated chat",
+        "Map awareness",
+        "Recording and reusable Skill",
+        "Attachment-driven schema creation",
+        "Knowledge reference",
+        "Word/Excel/PPT generation",
+        "Document integrity checks",
+        "Optional OfficeCLI",
+        "Result open/folder/add-to-map interaction"
+      ]
+    },
+    "unknowns": [
+      "Own source repository and licence despite public open-source wording",
+      "External MCP endpoint count",
+      "Exact deduplicated GP and core semantic counts",
+      "Whole catalog independent runtime acceptance",
+      "Cross-software scientific and recovery acceptance"
+    ]
+  },
+  "implementationSources": [
+    {
+      "id": "I01",
+      "title": "Esri ListTools",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/listtools.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Directory discovery only; not licence or output correctness",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I02",
+      "title": "Esri GetParameterInfo",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/getparameterinfo.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Parameter metadata; not complete effects or oracle",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I03",
+      "title": "GDAL Algorithms API",
+      "url": "https://gdal.org/en/stable/api/python/utilities.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Registry, metadata and structured Run; Run added in 3.11",
+      "adoption": "MECHANISM_ONLY_NOT_INSTALLED",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I04",
+      "title": "QGIS Processing Executor 3.44 documentation",
+      "url": "https://docs.qgis.org/3.44/en/docs/user_manual/processing/standalone.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "list/help/run and JSON exchange; actual provider presence must be detected",
+      "adoption": "MECHANISM_ONLY_NOT_INSTALLED",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I05",
+      "title": "QGIS Processing Algorithms Testing",
+      "url": "https://docs.qgis.org/3.44/en/docs/developers_guide/processingtesting.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Structured fixtures, expected outputs and tolerances; generated expected is not independent truth",
+      "adoption": "DESIGN_PATTERN_ONLY",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I06",
+      "title": "DVC Run Cache",
+      "url": "https://doc.dvc.org/user-guide/pipelines/run-cache",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Execution and dependencies tied to reusable results",
+      "adoption": "MECHANISM_ONLY_NO_NEW_RUNTIME",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I07",
+      "title": "Snakemake Between workflow caching",
+      "url": "https://snakemake.readthedocs.io/en/stable/executing/caching.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "observedDocumentationVersion": "9.27.0",
+      "supports": "Merkle dependency/software/parameter fingerprints; does not capture undeclared facts automatically",
+      "adoption": "MECHANISM_ONLY_NO_NEW_RUNTIME",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I08",
+      "title": "Temporal Activity Definition",
+      "url": "https://docs.temporal.io/activity-definition",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Activities may run repeatedly or partially; idempotency and reported completion differ from external effects",
+      "adoption": "MECHANISM_ONLY_NO_NEW_SERVICE",
+      "verifiedAt": "2026-10-02",
+      "recheckedAt": "2026-10-03"
+    },
+    {
+      "id": "I09",
+      "title": "Prefect v3 Caching",
+      "url": "https://docs.prefect.io/v3/concepts/caching",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Cache/result persistence/locks distinct; external host mutations still need reconciliation",
+      "adoption": "MECHANISM_ONLY_NO_NEW_SERVICE",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I10",
+      "title": "Roslyn Incremental Generators Cookbook",
+      "url": "https://raw.githubusercontent.com/dotnet/roslyn/main/docs/features/incremental-generators.cookbook.md",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Value-equatable intermediate states allow incremental projections",
+      "adoption": "DESIGN_PATTERN_NO_NEW_GENERATOR_REQUIRED",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I11",
+      "title": "Adobe UXP executeAsModal",
+      "url": "https://developer.adobe.com/photoshop/uxp/2022/ps-reference/media/executeasmodal",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "supports": "Modal state for mutation, one modal plugin at a time, version-specific timeout support",
+      "adoption": "PLANNED_REAL_HOST_ADAPTER_NOT_RUN",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I12",
+      "title": "pygeoapi OGC API Processes",
+      "url": "https://docs.pygeoapi.io/en/stable/publishing/ogcapi-processes.html",
+      "status": "CURRENT_PRIMARY_TEXT_REVIEWED",
+      "observedDocumentationVersion": "0.24.0",
+      "supports": "Process/plugin and job manager separation; protocol is not new science algorithm",
+      "adoption": "REFERENCE_ONLY_NO_NEW_SERVICE",
+      "verifiedAt": "2026-10-02"
+    },
+    {
+      "id": "I13",
+      "title": "RFC 9110 If-Range and Combining Parts",
+      "url": "https://httpwg.org/specs/rfc9110.html#field.if-range",
+      "additionalUrl": "https://httpwg.org/specs/rfc9110.html#combining.parts",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Weak entity-tag not allowed in If-Range; same strong validator required to combine transferred ranges",
+      "adoption": "ENGINEERING_DESIGN_ONLY_NOT_RUNTIME_VERIFIED"
+    },
+    {
+      "id": "I14",
+      "title": "HttpClientHandler AllowAutoRedirect",
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler.allowautoredirect?view=net-8.0",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Auto redirect clears Authorization but not all other headers; our adapter must enforce every-hop policy",
+      "adoption": "REFERENCE_BEHAVIOR_ONLY_NO_RUNTIME_OR_TFM_CHANGE"
+    },
+    {
+      "id": "I15",
+      "title": "Microsoft QPC time interval semantics",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "QPC independent of UTC and includes Windows sleep; actual clock context and trusted UTC interval require separate qualification",
+      "adoption": "ENGINEERING_REFERENCE_ONLY_NO_DEPENDENCY_INSTALL_OR_DELETE_COMMAND"
+    },
+    {
+      "id": "I16",
+      "title": "Nix protected generations and GC dependencies",
+      "url": "https://nix.dev/manual/nix/2.24/package-management/garbage-collection",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Referenced generations/dependencies retained and dry-run inspection; reference mechanism only",
+      "adoption": "ENGINEERING_REFERENCE_ONLY_NO_DEPENDENCY_INSTALL_OR_DELETE_COMMAND"
+    },
+    {
+      "id": "I17",
+      "title": "DVC shared cache reclamation",
+      "url": "https://doc.dvc.org/command-reference/gc",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "All referenced project scopes must be included; single-project cleanup may break overlapping links",
+      "adoption": "ENGINEERING_REFERENCE_ONLY_NO_DEPENDENCY_INSTALL_OR_DELETE_COMMAND"
+    },
+    {
+      "id": "I18",
+      "title": "TUF 1.0.36 update metadata and member consistency",
+      "url": "https://theupdateframework.github.io/specification/latest/",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Trusted metadata version/time and snapshot/member binding; project derives scoped witnesses, not full TUF implementation",
+      "adoption": "REFERENCE_ONLY_TYPED_PROJECT_DESIGN_NO_NEW_SERVICE_OR_STANDARD_COMPLIANCE"
+    },
+    {
+      "id": "I19",
+      "title": "SLSA v1.2 artifact verification",
+      "url": "https://slsa.dev/spec/v1.2/verifying-artifacts",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Root-of-trust envelope verification, actual subject digest and expected source/build checks distinct from scientific qualification",
+      "adoption": "REFERENCE_ONLY_TYPED_PROJECT_DESIGN_NO_NEW_SERVICE_OR_STANDARD_COMPLIANCE"
+    },
+    {
+      "id": "I20",
+      "title": "MCP 2025-06-18 frozen tool specification",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "Untrusted annotations and structured result/schema validation; frozen reference, not claim about latest supported protocol",
+      "adoption": "REFERENCE_ONLY_TYPED_PROJECT_DESIGN_NO_NEW_SERVICE_OR_STANDARD_COMPLIANCE"
+    },
+    {
+      "id": "I21",
+      "title": "Microsoft indirect prompt injection defense",
+      "url": "https://learn.microsoft.com/en-us/security/zero-trust/sfi/defend-indirect-prompt-injection",
+      "verifiedAt": "2026-10-03",
+      "status": "PRIMARY_TEXT_REVIEWED",
+      "supports": "External data boundaries and layered information-flow controls; no complete prompt-injection detection guarantee",
+      "adoption": "REFERENCE_ONLY_TYPED_PROJECT_DESIGN_NO_NEW_SERVICE_OR_STANDARD_COMPLIANCE"
+    }
+  ],
+  "method": {
+    "notRun": [
+      "ArcGIS Pro",
+      "Photoshop",
+      "GP tools",
+      "Competitor packages",
+      "Product builds",
+      "Product install",
+      "Real client configuration changes"
+    ],
+    "futureBenchmarkRequirements": [
+      "Freeze common task/data/host/licence/model/hardware/output/budget conditions",
+      "Do not infer unsupported from undocumented",
+      "Keep failed and unknown cases visible",
+      "Per-operation oracle and support domain",
+      "Separate interface/catalog/semantic/product counts",
+      "Independent C0 final acceptance",
+      "No scope reduction or quality threshold reduction",
+      "Do not guarantee permanent leadership"
+    ],
+    "sourcePlan": "D:/ArcGIS-Pro-MCP 2.0/同步/3.0项目规划创新/创新执行规格.json",
+    "sourcePlanRevision": "V11-DATA-METHOD-AND-MEDIA-20261002"
+  },
+  "lastInPlaceDocumentationUpdate": "2026-10-03",
+  "competitorSnapshotUnchangedSince": "2026-10-02"
+}

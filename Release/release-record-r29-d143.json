@@ -1,0 +1,60 @@
+{
+ "schema": "arcgis-pro-mcp-one-click-release-record-v1",
+ "ticket": "D-143",
+ "deploymentVersion": "one-click-1.0.2-r29",
+ "deliveryForm": "PASS CANDIDATE — 本件不构成发布放行",
+ "writtenAt": "2026-10-07T08:37:28",
+ "gates": {
+  "G1": "r29 三件落地・逐字节 ≡ D-142 已验证种子（禁重新装配）・26 成员・名集合与顺序 ≡ r28・dv r29・tc 239・内层 manifest 25 条自述全等",
+  "G2": "对 `Release/` 根 zip 重跑三方一致自检门 ⇒ TRIFACE-OK rc=0（轴一 25 件 0 差・轴二 21/21・unexplained＝[]）",
+  "G3": "`Release/` 聚合变化恰等于新增件集合（逐件列举・禁整树重写）・既有八代 zip／八载体／七台账／六记录逐字节零改",
+  "G4": "八代 zip＋八载体＋七台账＋六记录逐字节零改（r29 新增单列）",
+  "G5": "文档代际归位逐行判读（README L10/L21/L57/L60/L63・NOTICE L3/L5/L13/L44・AGENTS L49/L50/L65）＋历史语境行禁刷值・行数变化显式",
+  "G6": "恒定面七值零漂移",
+  "G7": "反向门（Archive 139／GUIDE 11,885／构建器 17,729 不回退／校验器 14,053 不回退／AGENTS §3・§7 逐字／`.git` 不存在／6520・6511 CLOSED／Pro 0）",
+  "G8": "★包内文档代际位**未改**（r29 包内 NOTICE／GUIDE 仍标 r28）＝如实登记非升格",
+  "G9": "回执先行（08:31:24 早于首个产品面写入）",
+  "G10": "写域窗口法・他线在飞件单列"
+ },
+ "inPackageVerifierRuns": {
+  "r29zip": {
+   "schema": "arcgis-pro-mcp-one-click-verification-v1",
+   "status": "PASS",
+   "deploymentVersion": "one-click-1.0.2-r29",
+   "releaseVersion": "1.0.2",
+   "fileCount": 26,
+   "payloadSizeBytes": 1103697,
+   "payloadSha256": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+   "dualPayloadCount": 2,
+   "canonicalProductionToolCount": 239,
+   "cleanMachineAcceptance": "NOT VERIFIED",
+   "source": "ZIP"
+  },
+  "r29zip_rc": 0,
+  "r28zip": {
+   "status": "PASS",
+   "deploymentVersion": "one-click-1.0.2-r28",
+   "fileCount": 26,
+   "note": "同一现役校验器对 r28 原包不误伤（D-142 G3b 已实跑）"
+  },
+  "source": "ZIP"
+ },
+ "ringBRegistration": {
+  "referenceManifest": "run-20261007-d142/f2-seedr29/out/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip.manifest.json",
+  "denominator": 25,
+  "note": "三数由 f3-ringb 实跑填入（见 R-D143）"
+ },
+ "tamperNegativeControl": {
+  "note": "本单为搬运发布・未重打包 ⇒ 负例沿用 D-142 f3 实测（篡改声明代际 ⇒ `DUALFACE_ACCEPTANCE_LIST_MISMATCH` 报双侧值）、本单未重复制造篡改件",
+  "evidence": "run-20261007-d142/f3-triface/verify-report.json › runs"
+ },
+ "cleanMachineAcceptance": "NOT VERIFIED",
+ "installationPerformed": false,
+ "hostStarted": false,
+ "releaseFaceCutPoint": {
+  "previous": "one-click-1.0.2-r28",
+  "current": "one-click-1.0.2-r29",
+  "bytes": 2278077,
+  "sha256": "099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE"
+ }
+}

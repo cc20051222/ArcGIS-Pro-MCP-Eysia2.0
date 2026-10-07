@@ -1,0 +1,4 @@
+# MANAGED BY ARC GIS PRO MCP: BEGIN arcgis-pro-mcp
+[mcp_servers.arcgis-pro-mcp]
+url = "http://127.0.0.1:6520/mcp"
+# MANAGED BY ARC GIS PRO MCP: END arcgis-pro-mcp

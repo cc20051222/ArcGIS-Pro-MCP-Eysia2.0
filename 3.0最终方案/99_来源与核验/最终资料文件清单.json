@@ -1,0 +1,338 @@
+{
+  "kind": "FINAL_DOCUMENT_FILES",
+  "date": "2026-10-03",
+  "entries": [
+    {
+      "path": "01_完整最终方案/01_项目最终总方案.md",
+      "bytes": 30317,
+      "sha256": "8E96B305BA1F0E20C00D95031E570632EA4849AB8D6498E70593DB40A7536747",
+      "category": "01_完整最终方案"
+    },
+    {
+      "path": "01_完整最终方案/02_架构与模块实施蓝图.md",
+      "bytes": 36354,
+      "sha256": "6169DD273250F8CCBB9010C7AA9134A9E2590F918005BBCB10436FE5AE8B0B70",
+      "category": "01_完整最终方案"
+    },
+    {
+      "path": "01_完整最终方案/03_用户操作流程与三条业务链.md",
+      "bytes": 31761,
+      "sha256": "1B9B01128244B677C0EACB5B287F06C655C2A8456365F5CEF8328C69AF2B13B6",
+      "category": "01_完整最终方案"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/CAPABILITY_AND_SUPPORT_MATRIX.md",
+      "bytes": 42593,
+      "sha256": "9923F7297471B275F73394E2F35959B9AD2A695CD1B31C3D30E84A33FD5119B4",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/CONTRACTS_AND_EXECUTION_RECIPES.md",
+      "bytes": 53896,
+      "sha256": "D5186F19D5FC378352EC3D709CDBEC149BCCC6D8214B9C390243BC841283050A",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/IMPLEMENTATION_AND_RELEASE_PLAN.md",
+      "bytes": 56850,
+      "sha256": "701B8F4586420FABCB5AB1395980D04D446F651628AC53A58C74874BC2C4EA6B",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/INTELLIGENCE_AND_ORCHESTRATION.md",
+      "bytes": 55577,
+      "sha256": "0D1C40F4B19178E8FF6601FDE8F0017D0B12E1E5361828A1864F898CE149F36D",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/README_FINAL.md",
+      "bytes": 41943,
+      "sha256": "FDF4A06F867F7BA8B1F702C2C5E72322E94ECD74AA82747C4009BF986C511867",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/01_主方案（6份）/VERIFICATION_AND_TRACEABILITY.md",
+      "bytes": 48446,
+      "sha256": "A47AC2059A3ED998CD906200A1324403A24D2345AB230B9EB10BE4AC18B7D832",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/02_模块实现详稿（5份）/DOMAIN_CONTRACTS_AND_STATE_MACHINES.md",
+      "bytes": 84652,
+      "sha256": "DF20918FAAF87390FA2E9A497709537C4DA21A62E3972BC95A045B0DBFB60C6B",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/02_模块实现详稿（5份）/GP_PS_AND_INNOVATION_RECIPES.md",
+      "bytes": 62733,
+      "sha256": "08B42AA4FED3B4F5306F3CA7DEEC2C8551D186C0E05521DA9ADEEFF97611F74A",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/02_模块实现详稿（5份）/MODULE_INTERFACES_AND_BACKLOG.md",
+      "bytes": 50984,
+      "sha256": "3E9D36A3F5192A1B5827139D667E7B92B76A51F5382DF260AE6CAA775E1615D4",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/02_模块实现详稿（5份）/README_IMPLEMENTATION_DETAILS.md",
+      "bytes": 34548,
+      "sha256": "A0691CF34D800C0344F9012CB4FEAAC83F3FEE4DB5ACB3B59227A99DB0D5E201",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/02_模块实现详稿（5份）/THREE_CHAIN_IMPLEMENTATION.md",
+      "bytes": 47911,
+      "sha256": "110E494AB5F614C678C4A8FB774689E55994600D5F6E8ED4D1B2B220D8EA03D0",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/03_支持与用户体验详稿（4份）/ENVIRONMENT_AND_WORKBENCH_CONTRACTS.md",
+      "bytes": 48529,
+      "sha256": "754D7A69307E29FA86A1063F9151F774F5237E237690883C4FD26B3A1142651E",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/03_支持与用户体验详稿（4份）/FORMAT_AND_RESOURCE_PACK_CONTRACTS.md",
+      "bytes": 53574,
+      "sha256": "811BA0ABAE21A7AABD4622C616E412CC0118ABCBD1F82616C45F9A067211BA65",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/03_支持与用户体验详稿（4份）/MODEL_PROVIDER_AND_FALLBACK_CONTRACTS.md",
+      "bytes": 43113,
+      "sha256": "C2F22CD854CEFD9D8B79A3ECC0D9A942F303C44E8985B47251CF70B81038B0A6",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/03_支持与用户体验详稿（4份）/README_SUPPORT_DETAILS.md",
+      "bytes": 33180,
+      "sha256": "C49A70C5A8D0B26331158168F6791A0898B99B263236B47B81694F638EB0A163",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/README_技术详稿导航.md",
+      "bytes": 3209,
+      "sha256": "77A0FB5E39F8446083E61070583A0610D8048CE118C00F829EAE92CA0D38E8BA",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/原始创新执行规格.json",
+      "bytes": 131399,
+      "sha256": "905D29151062570617807A41E891B681AAA84BD571AFBAE207B53A9E9F99AD15",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "02_技术详稿/原始规划核验清单.json",
+      "bytes": 33640,
+      "sha256": "7646B0B4EDBDDD5C1D7146BD6093FCF5E3C9AEB7584F92C76877B531B09B1CBC",
+      "category": "02_技术详稿"
+    },
+    {
+      "path": "03_社区对比与领先验收/sources.json",
+      "bytes": 20571,
+      "sha256": "6B29CF6A714EF8390472BBE8162C53A331F0F258E8114D49A25656C103C01419",
+      "category": "03_社区对比与领先验收"
+    },
+    {
+      "path": "03_社区对比与领先验收/主流项目对比与全面领先验收方案.md",
+      "bytes": 23688,
+      "sha256": "9E34E3C704FF6ECA75557BD020D165E2786577701611966DDA2A256F6454ED1B",
+      "category": "03_社区对比与领先验收"
+    },
+    {
+      "path": "03_社区对比与领先验收/开源经验吸收与实现映射.md",
+      "bytes": 21141,
+      "sha256": "35F110373CF7B236FE18E7E19C19913E2FE1B6A105A8479D5C79586B0E621C32",
+      "category": "03_社区对比与领先验收"
+    },
+    {
+      "path": "03_社区对比与领先验收/补充章节竞品工期独立复核.json",
+      "bytes": 4737,
+      "sha256": "F2AAFC20B5C3E5E307D7129503B095B6DF1A939E9AD7810C6F6BC948C34BBD3B",
+      "category": "03_社区对比与领先验收"
+    },
+    {
+      "path": "04_工期与效率优化/60天工期与资源模型.md",
+      "bytes": 21918,
+      "sha256": "8E996F91C229A2E79553FED3B87244F66783AEE5786A091223C5796C367643C7",
+      "category": "04_工期与效率优化"
+    },
+    {
+      "path": "04_工期与效率优化/质量不变的效率优化方案.md",
+      "bytes": 17347,
+      "sha256": "FE700EC8C2241145C1B2B39F48AAAEA03585292513F10BEC4D46F44242CFB8C0",
+      "category": "04_工期与效率优化"
+    },
+    {
+      "path": "04_工期与效率优化/资料与计算/复算工期模型.py",
+      "bytes": 22715,
+      "sha256": "490DE51077CCB7250AAFAE6BF5945EADE5B521005B21F3226BF689350876B110",
+      "category": "04_工期与效率优化"
+    },
+    {
+      "path": "04_工期与效率优化/资料与计算/复算结果.json",
+      "bytes": 14448,
+      "sha256": "435E436287867E62DD8EF6D1A212B0818655425D3B990971967C57473C96CF72",
+      "category": "04_工期与效率优化"
+    },
+    {
+      "path": "04_工期与效率优化/资料与计算/工期计算模型.json",
+      "bytes": 48275,
+      "sha256": "6A12E4AE2BAE3B6B3ED5DC6B2C1078F00729A31C4FA72C247F024BA67E9FCDBC",
+      "category": "04_工期与效率优化"
+    },
+    {
+      "path": "05_一指挥五执行计划/30WI工作分解与依赖.md",
+      "bytes": 10035,
+      "sha256": "0BCE7EBE6B62037289ECABA45C64F675650E75549E862F672C27F9CD8734DA22",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/一指挥五执行总计划.md",
+      "bytes": 13494,
+      "sha256": "AC159DD7B8F833B84AC20B7CB72418F3EC8F0820E6E119D862290BE6918DE72D",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/模板/执行交付模板.md",
+      "bytes": 3784,
+      "sha256": "2BC83E29ACED56C7FE6293BD9CD60A99916263E5417B5C45E8AD36487DEAB235",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/模板/派单模板.md",
+      "bytes": 4068,
+      "sha256": "7BC63F8924BE0AC879B70ECC42B5D4FC0B1DD4854B6EC601024C2387E16321D6",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/模板/独立验收模板.md",
+      "bytes": 3357,
+      "sha256": "D87D54C6666D5B2D4C53B533D5322201F693532235F38039BC6432D6E3C8A551",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/C0_指挥派单与独立验收.md",
+      "bytes": 3624,
+      "sha256": "CADAA0AB4D4FF08C349482AD2EF19672A58DA8CA1F221CB05C792B87535615F1",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/E1_平台可靠性与唯一集成.md",
+      "bytes": 3694,
+      "sha256": "1CBE63EBFB6BBE3F6BF936427EEA06D13D6A189B06B7B085CBF9BB49B70DCDF0",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/E2_GP扩展与兼容迁移.md",
+      "bytes": 3504,
+      "sha256": "CBB830A22D0BDEEE73E3DCBDF9E1D87386581B8C634ECE1A91FA85D19704460D",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/E3_数据方法与智能更新.md",
+      "bytes": 3510,
+      "sha256": "EF535CBF896BAE8C8204E78BA1093AB66606BB0B9ED9799B0AE4B2C47E369BA7",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/E4_自动设计PS与Office.md",
+      "bytes": 3726,
+      "sha256": "B50A4B4ED4D80312CC049BD1584740E4FD1A611A1287CA413DC5F1EB9DD425B1",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "05_一指挥五执行计划/角色卡/E5_业务模板与工作台.md",
+      "bytes": 3758,
+      "sha256": "821129E098C7F6B3EFE1911A27CBB6F10A7D4B7B7911E50D41F6A07E9BB4AA33",
+      "category": "05_一指挥五执行计划"
+    },
+    {
+      "path": "06_Word项目介绍/ArcGIS_Pro_MCP_3.0_项目介绍与完整实现方案_最终版_20261002.docx",
+      "bytes": 208704,
+      "sha256": "6E71E38DAAAA69DF89893BF366DB4106A5DF8E23AA2ECDE076E4667BDA104259",
+      "category": "06_Word项目介绍"
+    },
+    {
+      "path": "06_Word项目介绍/项目介绍补充章节.md",
+      "bytes": 17743,
+      "sha256": "16426338DA3F6101A32320281B6EC2E16095637A8DD249B29CE1B2E954178029",
+      "category": "06_Word项目介绍"
+    },
+    {
+      "path": "99_来源与核验/Word原生排版核验.ps1",
+      "bytes": 2936,
+      "sha256": "02E33B6BF42D768C6C28675A9F4B1523334273F0BF6033DC4C88B758907AEE48",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/修订与交叉审读闭环.json",
+      "bytes": 17516,
+      "sha256": "E80DA7FA9A08A60A9DF45929901A39EA2B87C01480154C437BEEBEE02CCF08B1",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/完成资料核验记录.py",
+      "bytes": 6719,
+      "sha256": "FAEAEDF2160734E9CE6BB153F29870A455E2AE9DD477E59655C658E764718204",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/技术详稿来源与链接迁移.json",
+      "bytes": 54286,
+      "sha256": "28224E1B0E66CC840280A718F351104A3D6BCBBDD7B274C75ED36A56E265B7F9",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/整理技术详稿.py",
+      "bytes": 7607,
+      "sha256": "28A98B71812353402CD730106805A92A8628894422FFBF806313226FF301AD69",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/核验最终资料.py",
+      "bytes": 9508,
+      "sha256": "5AAA2E7F438EDBB73030CB6C56BD451FED4C99F1F8312138A97674C5268FC488",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/渲染Word分页.py",
+      "bytes": 1361,
+      "sha256": "40C3C1C477BFBEEFB3B2E2DA1CF4ED3635BCB6F09BB6F569021C2ADAC356D435",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/独立审读_工期职责.json",
+      "bytes": 57561,
+      "sha256": "CAD05428A0E41DFE673B95D238813237BA57E2D49D2B3D6465D92D8EB5C888B6",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/独立审读_方案与竞争.json",
+      "bytes": 57636,
+      "sha256": "6AF621AA52466902A7817652C68FB8BB838BCD2AB21F32E091775D83F6D15890",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "99_来源与核验/生成项目介绍Word.py",
+      "bytes": 14923,
+      "sha256": "7177F613703E358D416E65F38C3AE38BDA1631CF6A08B3BEC622AC08E2C4E054",
+      "category": "99_来源与核验"
+    },
+    {
+      "path": "README_最终方案导航.md",
+      "bytes": 7351,
+      "sha256": "909DA44D7571A857919F37B0F8813198DD4B4954D1455F8DA5C0E38756BABE2F",
+      "category": "README_最终方案导航.md"
+    },
+    {
+      "path": "最终方案范围与状态.json",
+      "bytes": 26839,
+      "sha256": "BBC9C9BBCE06094704545799FEC17FFA89C83C3835F7E728CF2E940B5142F6A1",
+      "category": "最终方案范围与状态.json"
+    }
+  ],
+  "excludes": "Advertising has separate manifests. Excludes self-reference, verification result, Word rendering/profile intermediates and temporary files.",
+  "productInstallerCreated": false
+}

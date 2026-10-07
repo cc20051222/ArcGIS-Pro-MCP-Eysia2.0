@@ -1,0 +1,192 @@
+{
+  "ruleSetId": "M1-COMPARISON-RULES",
+  "version": "1.0.0",
+  "status": "PASS_CANDIDATE",
+  "appliesTo": [
+    "S19",
+    "S20",
+    "S07",
+    "S23",
+    "S22",
+    "S18"
+  ],
+  "templateIds": [
+    "TP01",
+    "TP02",
+    "TP03",
+    "TS01",
+    "TS02",
+    "TS08"
+  ],
+  "sourceRefs": [
+    "GIS_AUTOMATION_FINAL_IMPLEMENTATION_ROADMAP_20260927.md §§6,8-10",
+    "GIS_AUTOMATION_FINAL_CAPABILITY_CATALOG_20260927.md §§6-7,10",
+    "GIS_AUTOMATION_FINAL_BENCHMARK_AND_DECISIONS_20260927.md §§3-8",
+    "GATE-G205-D085-RESUME_RULING.md R-G205-1 through R-G205-4",
+    "D-085_f05-m1-benchmark-calibration.md"
+  ],
+  "freezeBeforeResults": true,
+  "ruleSet": [
+    {
+      "ruleId": "GEO-001",
+      "category": "geographic",
+      "predicate": "CRS, axis order, units, extent, orientation, source geometry and map-frame binding match the frozen case manifest; topology and feature identity are preserved.",
+      "coordinateTolerance": "Use the input dataset's declared XYTolerance; missing CRS/XYTolerance or undeclared transformation yields UNKNOWN/BLOCKED, never PASS.",
+      "rasterGrid": "CRS, dimensions, cell size, origin, extent and band alignment must match the frozen common-grid manifest exactly.",
+      "failureSeverity": "major"
+    },
+    {
+      "ruleId": "NUM-001",
+      "category": "numeric",
+      "predicate": "Integer counts, categories, class breaks, source facts and canonical decimal answers equal the frozen known-answer values.",
+      "absoluteTolerance": 0,
+      "relativeTolerance": 0,
+      "decimalComparison": "Canonical decimal at the stored reference precision; do not round after observing a result.",
+      "failureSeverity": "major"
+    },
+    {
+      "ruleId": "SCI-001",
+      "category": "scientific-protection",
+      "predicate": "No class, category, NoData region, uncertainty, method or source fact is removed or visually altered to improve appearance; all quantitative color tokens stay bound to data and legend.",
+      "colorTokenDeltaE00MaxBeforeICC": 0,
+      "failureSeverity": "critical"
+    },
+    {
+      "ruleId": "LAY-001",
+      "category": "composition",
+      "predicate": "Required map frame and applicable legend, scale bar, north arrow, units and source stay within the page, have no essential-element overlap, and bind to the same map-frame revision.",
+      "essentialOverlapAreaPt2Max": 0,
+      "overlayRegistrationPixelMax": 0,
+      "paperProfiles": [
+        "A4",
+        "A3"
+      ],
+      "initialPrintDpi": 300,
+      "failureSeverity": "major"
+    },
+    {
+      "ruleId": "TXT-001",
+      "category": "text",
+      "predicate": "Title, labels, categories, units and sources match the frozen semantic strings; no missing glyph, clipping, truncation or unrecorded font substitution.",
+      "minimumFontPt": 8,
+      "fontFloorOrigin": "D-085 calibration choice, frozen here as a candidate because FINAL §4-5 requires a pre-result minimum-font threshold but supplies no numeric value.",
+      "failureSeverity": "major"
+    },
+    {
+      "ruleId": "OUT-001",
+      "category": "artifact",
+      "predicate": "Every required artifact opens/decodes, matches its manifest hash/size/type and keeps input-to-output provenance; overwrite is refused.",
+      "failureSeverity": "major"
+    },
+    {
+      "ruleId": "WF-001",
+      "category": "workflow",
+      "predicate": "The 6x3 input matrix is fully attempted; valid normal/boundary cases produce the defined deliverable, invalid cases are correctly refused before writes; edit, undo, data update and interruption recovery are evidenced.",
+      "psManualDesignMax": 0,
+      "structuralCandidatesMax": 12,
+      "initialPreviewsMax": 3,
+      "totalPreviewsMax": 5,
+      "automaticRepairRoundsMax": 2,
+      "finalRendersMax": 2,
+      "failureSeverity": "critical"
+    },
+    {
+      "ruleId": "TS08-INPUT-QUAL-001",
+      "category": "input-qualification",
+      "predicate": "Require at least three spectrally independent bands, a shared grid, an explicit NoData rule, band identity/spectral-role evidence, and source/provenance hash before TS08 normal/boundary input is eligible.",
+      "rejectRepeatedSingleBandLineage": true,
+      "goldArtifactPath": "NOT-AVAILABLE-PENDING-USER",
+      "qualificationState": "RULE_FROZEN_DATA_NOT_AVAILABLE",
+      "sourceRef": "GATE-G205-D085-RESUME_RULING.md R-G205-2",
+      "failureSeverity": "critical",
+      "minimumSpectrallyIndependentBands": 3,
+      "spectralIndependenceEvidence": "Each band has an identified spectral role and distinct original source-band lineage; multiple copies of the same single-band source do not qualify.",
+      "requiredGridEqualityFields": [
+        "CRS",
+        "width",
+        "height",
+        "cellSize",
+        "origin",
+        "extent",
+        "bandAlignment"
+      ],
+      "requiredNoDataPolicyFields": [
+        "valueOrMask",
+        "validityMaskSemantics",
+        "edgeHandling"
+      ],
+      "requiredProvenanceFields": [
+        "sourceIdentity",
+        "acquisitionOrProductIdentity",
+        "processingLineage",
+        "sourceHash",
+        "bandIdentityAndSpectralRole"
+      ]
+    }
+  ],
+  "globalTargets": {
+    "standardMaps": {
+      "target": 108,
+      "automaticCompletionRequired": 108,
+      "psManualDesign": 0
+    },
+    "firstRender": {
+      "targetRate": 0.9,
+      "targetCountAt108": 98,
+      "automaticRepairRoundsMax": 2
+    },
+    "stress": {
+      "minimumNominalCount": 40,
+      "applicableCompletionRate": 0.95,
+      "requiredCountFormula": "ceil(0.95 * applicable_count)",
+      "seriousScientificErrorsAllowed": 0
+    },
+    "hidden": {
+      "minimumCount": 12,
+      "firstVersionCompletionRate": 0.9,
+      "requiredCountAt12": 11,
+      "automaticRepairRoundsMax": 2,
+      "seriousScientificErrorsAllowed": 0
+    },
+    "visualReview": {
+      "independentReviewersMin": 2,
+      "scaleMin": 1,
+      "scaleMax": 5,
+      "meanMin": 4,
+      "individualScoreMin": 3,
+      "sourceStatus": "FINAL initial suggestion; fixed here as M1 candidate"
+    }
+  },
+  "knownAnswerPolicy": {
+    "publicNamePattern": "<scenarioId>--<templateId>--<profileId>--<specRevision>--<artifactKind>--<sha256>.<ext>",
+    "requiredManifestFields": [
+      "inputHash",
+      "source/tool/method version",
+      "CRS/units",
+      "permissions",
+      "font and ICC identity",
+      "outputHash",
+      "validationReport"
+    ],
+    "hiddenGoldPathsInPublicDefinition": false,
+    "missingGoldBehavior": "NOT-AVAILABLE-PENDING-USER; never fabricate a gold result"
+  },
+  "scoringExclusions": {
+    "allowedOnlyWhen": "Applicability and exclusion reason are registered before the run.",
+    "excludedAfterFailure": false,
+    "timeoutsCancellationsAndRefusals": "retain in the applicable attempt distribution; a correct invalid-input refusal is not a map success"
+  },
+  "hiddenSetPolicy": {
+    "publicDefinitionContains": [
+      "IDs",
+      "criterion references"
+    ],
+    "publicDefinitionContainsGoldPath": false,
+    "hiddenAccess": "separate restricted custodian; no hidden example details in tool context"
+  },
+  "candidateCalibrationNotes": [
+    "Numeric exactness, 8 pt font floor, zero semantic-color token delta and zero overlay shift are D-085 calibration choices. FINAL requires thresholds to be fixed before results but does not publish these numeric values.",
+    "The initial preview/repair budgets and reviewer thresholds are sourced from FINAL. This definition does not claim any runtime measurement, visual review or benchmark pass.",
+    "A4/A3 at 300 DPI is the FINAL initial print test profile. Large-canvas/PSB capability remains a separate unverified profile."
+  ]
+}

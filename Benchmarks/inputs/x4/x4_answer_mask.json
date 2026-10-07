@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "d101-answer-v1",
+  "group": "x4",
+  "artefact": "GDOM-01 known answer",
+  "synthetic": true,
+  "adapterTable": {
+    "1": "cloud",
+    "2": "cloud shadow"
+  },
+  "unknownCodes": {
+    "value": 4,
+    "cells": 6,
+    "expectedHandling": "reported as a named gap; not treated as clear, not guessed"
+  },
+  "referenceMask": {
+    "cloudCells": 28,
+    "shadowCells": 44,
+    "checksumCloud": 5796,
+    "checksumShadow": 27236
+  },
+  "expectation": {
+    "iouAgainstReferenceForAFaithfulRun": 1.0,
+    "failure": "a mask that folds the unknown code into clear, or that writes over the source band, fails the row"
+  },
+  "validPixelCount": 863
+}

@@ -1,0 +1,4068 @@
+{
+ "head": {
+  "batch": "D-117 fixture segment (rectified build r2)",
+  "line": "L2 评测定标线",
+  "dispatch": "G-273 R-1 (2026-10-04 15:0x, 用户裁定「授权合成 fixture」)",
+  "inputBasisLabel": "合成输入基准",
+  "inputBasisStatement": "本件全部产物均为合成件，一切结论标注「合成输入基准」，不冒称真实数据评测",
+  "seed": 20261004,
+  "determinism": "pure functions of (seed, grid, declared parameter types); no clock, no RNG; pool bytes identical to the r1 build pinned by evidence-index-2.md",
+  "synthetic": true,
+  "zeroExecution": "no Pro, no MCP, no tools/call, no GP invocation, no GIS write",
+  "measurementDomain": {
+   "width": 64,
+   "height": 48,
+   "cellSize": 2.0,
+   "crs": "EPSG:32651",
+   "upperLeft": [
+    500000.0,
+    4000000.0
+   ],
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "georefConvention": "GeoTIFF ModelTiepoint(33922)(0,0)->upper-left + RasterPixelIsArea; ESRI ASCII xll/yll = lower-left (both written and re-parsed here)"
+  },
+  "status": "PASS_CANDIDATE",
+  "honestyDiscipline": "全量 synthetic 标注（逐件 `synthetic: true`＋`lineage`）；executableInputAvailable 仅在逐件参数全可承载时为 true；准入态一律 NOT VERIFIED",
+  "calibrationChoice": {
+   "poolPlusPlanInsteadOfPerToolCopies": true,
+   "d117CalibrationChoice": true,
+   "choiceBasis": "G-273 R-1 授权逐件合成合格输入；类型化输入池＋逐件参数映射（同 EPSG/同格网/同范围），先例＝D-101 组复用；本轮把承载从「按声明类型」收紧为「按 (件, 参数) 语义钉位」"
+  },
+  "crsDeviationDisclosed": "vector pool carries planar metres inside a GeoJSON-shaped document (not RFC 7946 lon/lat) — labelled, not hidden",
+  "frozenSurfacesUntouched": {
+   "anchors": {
+    "M1": "92ECD265",
+    "M2": "501A7E15",
+    "M3": "94577E76",
+    "M4": "F71BF6CD"
+   },
+   "existingCorpusArtefacts": 78,
+   "byteChangesByThisSegment": 0,
+   "note": "additive only; the 78 artefacts, every frozen member and the r1 pool/faces are untouched"
+  },
+  "faceVersion": "v2",
+  "supersedes": "gp-fixture-inputs-v1.json",
+  "supersededBytesHash": [
+   126937,
+   "7D0F45477D5303330D6F34CF"
+  ],
+  "rectification": {
+   "defect": "r1 keyed carriers on the declared parameter type, so every raster slot received the DEM and six pool artefacts went unreferenced",
+   "foundBy": "L2 executor, pre-delivery re-read of perToolPlan (not reported by the commander)",
+   "correction": "37 (tool, parameter) carrier pins plus 3 name-driven literal rules; pool bytes unchanged, faces additive (v1 kept)",
+   "pinsFired": 37,
+   "semanticSlotCensus": {
+    "sa.Hillshade.in_raster": "Benchmarks/inputs/gp53/gp_slope.tif",
+    "sa.Reclassify.in_raster": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "sa.Con.in_conditional_raster": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "conversion.RasterToPolygon.in_raster": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "conversion.RasterToPoint.in_raster": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "sa.ZonalStatistics.in_zone_data": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "sa.ZonalStatisticsAsTable.in_zone_data": "Benchmarks/inputs/gp53/gp_classes.tif",
+    "sa.ZonalStatistics.zone_field": "VALUE",
+    "sa.ZonalStatisticsAsTable.zone_field": "VALUE",
+    "sa.Reclassify.reclass_field": "VALUE",
+    "conversion.RasterToPolygon.raster_field": "VALUE",
+    "conversion.RasterToPoint.raster_field": "VALUE",
+    "sa.FlowAccumulation.in_flow_direction_raster": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+    "sa.Watershed.in_flow_direction_raster": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+    "sa.FlowDirection.in_weight_raster": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+    "sa.FlowAccumulation.in_weight_raster": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+    "sa.SnapPourPoint.in_accumulation_raster": "Benchmarks/inputs/gp53/gp_flowacc.tif",
+    "sa.Watershed.in_pour_point_data": "Benchmarks/inputs/gp53/gp_points.geojson",
+    "sa.SnapPourPoint.in_pour_point_data": "Benchmarks/inputs/gp53/gp_points.geojson",
+    "sa.Watershed.pour_point_field": "id",
+    "sa.SnapPourPoint.pour_point_field": "id",
+    "conversion.PointToRaster.in_features": "Benchmarks/inputs/gp53/gp_points.geojson",
+    "conversion.PolylineToRaster.in_features": "Benchmarks/inputs/gp53/gp_lines.geojson",
+    "analysis.Clip.clip_features": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.Erase.erase_features": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.Identity.identity_features": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.SpatialJoin.join_features": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.TabulateArea.in_class_data": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.TabulateIntersection.in_class_features": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+    "analysis.Union.in_features": [
+     "polys_a",
+     "polys_b"
+    ],
+    "analysis.Intersect.in_features": [
+     "polys_a",
+     "polys_b"
+    ],
+    "management.AddJoin.join_table": "Benchmarks/inputs/gp53/gp_events.csv",
+    "analysis.Frequency.in_table": "Benchmarks/inputs/gp53/gp_events.csv",
+    "sa.RasterCalculator.expression": "\"gp_dem.tif\" * 1.0",
+    "analysis.TabulateArea.in_zone_data": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+    "analysis.TabulateIntersection.in_zone_features": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+    "analysis.Near.near_features": [
+     "polys_a",
+     "polys_b"
+    ]
+   }
+  },
+  "ruleCensus": {
+   "declared": 43,
+   "fired": 38,
+   "unfired": [
+    "R-BAND",
+    "R-LINE",
+    "R-OUTFILE",
+    "R-REMR",
+    "R-WS"
+   ],
+   "note": "declared-but-unfired rule ids are vocabulary, not evidence of coverage"
+  },
+  "parameterCensus": {
+   "total": 242,
+   "artefactCarriers": 80,
+   "literalCarriers": 112,
+   "markedCalibrationDefaults": 110,
+   "semanticPins": 37
+  },
+  "unreferencedPoolItems": [
+   {
+    "key": "negative3band",
+    "kind": "negative",
+    "reason": "multi-band control that reproduces the in-case ERROR 000864 face; declared NOT a qualifying input for single-band parameters"
+   }
+  ],
+  "authoredAt": "2026-10-04T20:07:28"
+ },
+ "artefacts": {
+  "attrs": {
+   "path": "Benchmarks/inputs/gp53/gp_attrs.csv",
+   "format": "CSV (id,value,grp)",
+   "kind": "input",
+   "whatItIs": "attribute table whose id values overlap both vector pools",
+   "fieldVocabulary": [
+    "id",
+    "value",
+    "grp"
+   ],
+   "sha256": "43B496E35FB3C0C373BD50EDF14DFB4263989D5C3AA8F92687028E6321C0F850",
+   "bytes": 86,
+   "carrierTypes": [
+    "table",
+    "tableview",
+    "dataset"
+   ],
+   "synthetic": true,
+   "lineage": "CSV id,value,grp with ids A1..A5/B1..B3 overlapping both vector pools (r1 lines 144-153)",
+   "referencedBy": [
+    "analysis.Buffer",
+    "analysis.Frequency",
+    "analysis.Statistics",
+    "analysis.TabulateIntersection",
+    "conversion.TableToTable",
+    "management.CalculateField",
+    "management.Dissolve"
+   ],
+   "referencedByCount": 7
+  },
+  "classes": {
+   "path": "Benchmarks/inputs/gp53/gp_classes.tif",
+   "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+   "kind": "input",
+   "whatItIs": "int16 class raster, values 1..4",
+   "rasterBands": 1,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338",
+   "bytes": 6448,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "dataset",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "1 + ((i*3 + j*5) %% 4) integer class grid, domain 1..4 (r1 line 67)",
+   "referencedBy": [
+    "conversion.RasterToPoint",
+    "conversion.RasterToPolygon",
+    "sa.CellStatistics",
+    "sa.Con",
+    "sa.Reclassify",
+    "sa.ZonalStatistics",
+    "sa.ZonalStatisticsAsTable"
+   ],
+   "referencedByCount": 7
+  },
+  "classesAsc": {
+   "path": "Benchmarks/inputs/gp53/gp_classes.asc",
+   "format": "ESRI ASCII grid (int class codes 1-4, NoData -9999)",
+   "kind": "input",
+   "whatItIs": "lower-left origin grid on the same measurement domain",
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "crs": "EPSG:32651",
+   "sha256": "E05C310471103B3D42D366BD8ABA4326F460AB3EBEE832A7EF904FD35659F168",
+   "bytes": 6289,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "file",
+    "dataset"
+   ],
+   "synthetic": true,
+   "lineage": "the same class grid written as an ESRI ASCII grid with lower-left origin (r1 lines 104-112)",
+   "referencedBy": [
+    "conversion.ASCIIToRaster"
+   ],
+   "referencedByCount": 1
+  },
+  "dem": {
+   "path": "Benchmarks/inputs/gp53/gp_dem.tif",
+   "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+   "kind": "input",
+   "whatItIs": "int16 DEM, 4x3 NoData hole at rows 20-23/cols 30-33",
+   "rasterBands": 1,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+   "bytes": 6448,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "dataset",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "int16 elevation grid, formula 2000 + 40*((i*7 + j*11) %% 31) - 2*j, with a 4x3 NoData hole at rows 20-23 / cols 30-33 (r1 build_pool lines 63 and 71-82)",
+   "referencedBy": [
+    "conversion.RasterToASCII",
+    "sa.Aspect",
+    "sa.CellStatistics",
+    "sa.Con",
+    "sa.Contour",
+    "sa.Curvature",
+    "sa.ExtractByMask",
+    "sa.ExtractValuesToPoints",
+    "sa.Fill",
+    "sa.FlowDirection",
+    "sa.FocalStatistics",
+    "sa.Resample",
+    "sa.Slope",
+    "sa.ZonalStatistics",
+    "sa.ZonalStatisticsAsTable"
+   ],
+   "referencedByCount": 15
+  },
+  "events": {
+   "path": "Benchmarks/inputs/gp53/gp_events.csv",
+   "format": "CSV (event_id,x,y,value,t)",
+   "kind": "input",
+   "whatItIs": "xy-event table with a time column (space-time / event-driven tools)",
+   "fieldVocabulary": [
+    "event_id",
+    "x",
+    "y",
+    "value",
+    "t"
+   ],
+   "sha256": "066DF965B16B67FF7AB3647D38F2D769CA19755D421434C2E78DCDA6EE3CC52C",
+   "bytes": 302,
+   "carrierTypes": [
+    "table",
+    "tableview"
+   ],
+   "synthetic": true,
+   "lineage": "CSV event_id,x,y,value,t, six events on grid points with ISO timestamps (r1 lines 154-159)",
+   "referencedBy": [
+    "analysis.Frequency",
+    "management.AddJoin"
+   ],
+   "referencedByCount": 2
+  },
+  "featuresJson": {
+   "path": "Benchmarks/inputs/gp53/gp_features.json",
+   "format": "JSON (featureSet array of 5 planar-metre points)",
+   "kind": "input",
+   "whatItIs": "document carrier for conversion.JSONToFeatures",
+   "crs": "EPSG:32651",
+   "claimLimit": "declared as a document carrier only; whether it satisfies the tool's expected JSON schema is NOT VERIFIED until Phase B",
+   "sha256": "FAF60A47DD69183EBB76C4283384E878EA05408293AD3D21121D260F25A98CA1",
+   "bytes": 342,
+   "carrierTypes": [
+    "file"
+   ],
+   "synthetic": true,
+   "lineage": "GeoJSON document carrier for the JSON-to-features face (r1 JSON writer)",
+   "referencedBy": [
+    "conversion.JSONToFeatures"
+   ],
+   "referencedByCount": 1
+  },
+  "flowacc": {
+   "path": "Benchmarks/inputs/gp53/gp_flowacc.tif",
+   "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+   "kind": "input",
+   "whatItIs": "int16 flow-accumulation counts",
+   "rasterBands": 1,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "B2438706BD1B13A18A51875F3C18E8D08F83AF499D111D1DA635B4F4950DEE29",
+   "bytes": 6448,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "dataset",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "(i*3 + j*5) %% 251 + 1 accumulation counts (r1 line 66)",
+   "referencedBy": [
+    "sa.SnapPourPoint"
+   ],
+   "referencedByCount": 1
+  },
+  "flowdir": {
+   "path": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+   "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+   "kind": "input",
+   "whatItIs": "int16 flow-direction codes 1/2/4/8/16/32/64/128",
+   "rasterBands": 1,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "9D8E6A877F5EAA309844C4D71D621675AEBF513C1C62EAB8EBDD5731559E1D97",
+   "bytes": 6448,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "dataset",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "1 << ((i + j) %% 6), with 128 wherever the DEM value is a multiple of 7 — codes stay inside the Esri set 1/2/4/8/16/32/64/128 (r1 line 65)",
+   "referencedBy": [
+    "sa.FlowAccumulation",
+    "sa.FlowDirection",
+    "sa.Watershed"
+   ],
+   "referencedByCount": 3
+  },
+  "lines": {
+   "path": "Benchmarks/inputs/gp53/gp_lines.geojson",
+   "format": "GeoJSON (planar metres, EPSG:32651, closed rings; declared deviation: coordinates are projected, so the document is not RFC 7946-compliant — labelled, not hidden)",
+   "kind": "input",
+   "whatItIs": "one polyline feature, id L1",
+   "crs": "EPSG:32651",
+   "fieldVocabulary": [
+    "id",
+    "value",
+    "grp"
+   ],
+   "sha256": "AC7F5A29FBB91C32F7F77BCA0585D38B0B48BC811744E63A0B2A03CCBB8B92F9",
+   "bytes": 366,
+   "carrierTypes": [
+    "featurelayer",
+    "featureclass",
+    "dataset",
+    "multivalue"
+   ],
+   "deviationDisclosed": true,
+   "synthetic": true,
+   "lineage": "one polyline feature L1 through px(4,4)/px(20,14)/px(44,40) (r1 line 118)",
+   "referencedBy": [
+    "conversion.PolylineToRaster"
+   ],
+   "referencedByCount": 1
+  },
+  "negative3band": {
+   "path": "Benchmarks/inputs/gp53/gp_negative_3band.tif",
+   "format": "GeoTIFF (3 bands, byte-identical copies of one band)",
+   "kind": "negative",
+   "whatItIs": "multi-band control that reproduces the in-case ERROR 000864 face; declared NOT a qualifying input for single-band parameters",
+   "rasterBands": 3,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "F95967EECBEE79A5DE0C7E8AA8ED0DCFD4FF287AEACE81F4828FF5F07C20B451",
+   "bytes": 18748,
+   "carrierTypes": [],
+   "synthetic": true,
+   "lineage": "three byte-identical copies of the DEM band (r1 lines 93-102); declared a negative control",
+   "referencedBy": [],
+   "referencedByCount": 0
+  },
+  "points": {
+   "path": "Benchmarks/inputs/gp53/gp_points.geojson",
+   "format": "GeoJSON (planar metres, EPSG:32651, closed rings; declared deviation: coordinates are projected, so the document is not RFC 7946-compliant — labelled, not hidden)",
+   "kind": "input",
+   "whatItIs": "six point features, ids P1..P6",
+   "crs": "EPSG:32651",
+   "fieldVocabulary": [
+    "id",
+    "value",
+    "grp"
+   ],
+   "sha256": "9E1399E08EB2EC9413EBC5DB51E8D2D38C1351AAA569689F6EC7F40FCAB5D7CB",
+   "bytes": 982,
+   "carrierTypes": [
+    "featurelayer",
+    "featureclass",
+    "dataset",
+    "multivalue"
+   ],
+   "deviationDisclosed": true,
+   "synthetic": true,
+   "lineage": "six point features P1..P6 on the shared grid (r1 lines 120-121)",
+   "referencedBy": [
+    "conversion.PointToRaster",
+    "sa.ExtractValuesToPoints",
+    "sa.SnapPourPoint",
+    "sa.Watershed"
+   ],
+   "referencedByCount": 4
+  },
+  "polys_a": {
+   "path": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+   "format": "GeoJSON (planar metres, EPSG:32651, closed rings; declared deviation: coordinates are projected, so the document is not RFC 7946-compliant — labelled, not hidden)",
+   "kind": "input",
+   "whatItIs": "three polygon features, ids A1..A3",
+   "crs": "EPSG:32651",
+   "fieldVocabulary": [
+    "id",
+    "value",
+    "grp"
+   ],
+   "sha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+   "bytes": 841,
+   "carrierTypes": [
+    "featurelayer",
+    "featureclass",
+    "dataset",
+    "multivalue"
+   ],
+   "deviationDisclosed": true,
+   "synthetic": true,
+   "lineage": "three polygon features A1..A3 built by poly() on the shared grid (r1 lines 116, 122-142)",
+   "referencedBy": [
+    "analysis.Buffer",
+    "analysis.Clip",
+    "analysis.Erase",
+    "analysis.Identity",
+    "analysis.Intersect",
+    "analysis.Near",
+    "analysis.SpatialJoin",
+    "analysis.TabulateArea",
+    "analysis.TabulateIntersection",
+    "analysis.Union",
+    "conversion.ExportFeatures",
+    "conversion.FeatureToRaster",
+    "conversion.FeaturesToJSON",
+    "conversion.PolygonToRaster",
+    "management.AddJoin",
+    "management.CopyFeatures",
+    "management.Dissolve",
+    "management.Merge",
+    "management.MultipartToSinglepart",
+    "management.Project",
+    "management.RemoveJoin",
+    "management.RepairGeometry",
+    "sa.ExtractByMask"
+   ],
+   "referencedByCount": 23
+  },
+  "polys_b": {
+   "path": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+   "format": "GeoJSON (planar metres, EPSG:32651, closed rings; declared deviation: coordinates are projected, so the document is not RFC 7946-compliant — labelled, not hidden)",
+   "kind": "input",
+   "whatItIs": "two polygon features, ids B1..B2 (overlay partner)",
+   "crs": "EPSG:32651",
+   "fieldVocabulary": [
+    "id",
+    "value",
+    "grp"
+   ],
+   "sha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60",
+   "bytes": 613,
+   "carrierTypes": [
+    "featurelayer",
+    "featureclass",
+    "dataset",
+    "multivalue"
+   ],
+   "deviationDisclosed": true,
+   "synthetic": true,
+   "lineage": "two polygon features B1..B2, the overlay partner (r1 lines 117, 122-142)",
+   "referencedBy": [
+    "analysis.Clip",
+    "analysis.Erase",
+    "analysis.Identity",
+    "analysis.Intersect",
+    "analysis.Near",
+    "analysis.SpatialJoin",
+    "analysis.TabulateArea",
+    "analysis.TabulateIntersection",
+    "analysis.Union",
+    "management.Merge"
+   ],
+   "referencedByCount": 10
+  },
+  "remap": {
+   "path": "Benchmarks/inputs/gp53/gp_remap.txt",
+   "format": "text remap value table (4 rows)",
+   "kind": "input",
+   "whatItIs": "VALUE remap table for Reclassify-family tools",
+   "sha256": "F2C5AA394C2E1D7CB73D46DA92C6140D071DA19951058DCB692F792C9E6064C4",
+   "bytes": 43,
+   "carrierTypes": [
+    "remap",
+    "file",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "value-remap table over the class domain 1..4 (r1 remap writer)",
+   "referencedBy": [
+    "sa.Reclassify"
+   ],
+   "referencedByCount": 1
+  },
+  "slope": {
+   "path": "Benchmarks/inputs/gp53/gp_slope.tif",
+   "format": "GeoTIFF (baseline, little-endian, single strip, band-interleaved-by-pixel, int16, uncompressed, EPSG:32651)",
+   "kind": "input",
+   "whatItIs": "int16 slope-like raster (derived from the same DEM formula)",
+   "rasterBands": 1,
+   "cell": 2.0,
+   "extent": [
+    500000.0,
+    3999904.0,
+    500128.0,
+    4000000.0
+   ],
+   "nodata": -9999,
+   "crs": "EPSG:32651",
+   "sha256": "A1145A5CB6FC8197C86CD9F3CBC5503F30CFAAB18511D05B193BD331BA1413D8",
+   "bytes": 6448,
+   "carrierTypes": [
+    "rasterlayer",
+    "rasterdataset",
+    "dataset",
+    "multivalue"
+   ],
+   "synthetic": true,
+   "lineage": "abs(dem[j][i] - dem[j][i+1]) // 4, i.e. derived from the same DEM formula (r1 line 64)",
+   "referencedBy": [
+    "sa.Hillshade"
+   ],
+   "referencedByCount": 1
+  }
+ },
+ "perToolPlan": {
+  "analysis.Buffer": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Buffer/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "buffer_distance_or_field",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "line_side",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "line_end_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "dissolve_option",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "dissolve_field",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "method",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs",
+    "polys_a"
+   ]
+  },
+  "analysis.Clip": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "clip_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "clip needs a second, partially overlapping feature set (clipping a layer by itself is a no-op)",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Clip/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cluster_tolerance",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Erase": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "erase_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "erase needs a distinct overlay partner",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Erase/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cluster_tolerance",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Union": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "rule": "R-MULTIFEATURE",
+     "basis": "a multivalue overlay argument needs at least two inputs",
+     "semanticPin": true,
+     "carrier": "artefacts",
+     "value": [
+      "polys_a",
+      "polys_b"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+      "Benchmarks/inputs/gp53/gp_polys_b.geojson"
+     ]
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Union/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "join_attributes",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cluster_tolerance",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "gaps",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Intersect": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "rule": "R-MULTIFEATURE",
+     "basis": "a multivalue overlay argument needs at least two inputs",
+     "semanticPin": true,
+     "carrier": "artefacts",
+     "value": [
+      "polys_a",
+      "polys_b"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+      "Benchmarks/inputs/gp53/gp_polys_b.geojson"
+     ]
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Intersect/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "join_attributes",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "output_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cluster_tolerance",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Identity": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "identity_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "identity needs a distinct overlay partner",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Identity/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "join_attributes",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cluster_tolerance",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.SpatialJoin": {
+   "parameters": [
+    {
+     "param": "target_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "join_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "the joined feature set must differ from the target",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_SpatialJoin/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "join_operation",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "join_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "field_mapping",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "match_option",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "search_radius",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Near": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "near_features",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "rule": "R-NEAR",
+     "basis": "declared `multivalue`: a candidate set of two layers so the nearest search is non-trivial",
+     "semanticPin": true,
+     "carrier": "artefacts",
+     "value": [
+      "polys_a",
+      "polys_b"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+      "Benchmarks/inputs/gp53/gp_polys_b.geojson"
+     ]
+    },
+    {
+     "param": "search_radius",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "location",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "angle",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "closest",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "closest_xy",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.Statistics": {
+   "parameters": [
+    {
+     "param": "in_table",
+     "type": "tableview",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "attrs",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_attrs.csv",
+     "artifactSha256": "43B496E35FB3C0C373BD50EDF14DFB4263989D5C3AA8F92687028E6321C0F850",
+     "rule": "R-TABLE",
+     "basis": "CSV attribute table"
+    },
+    {
+     "param": "out_table",
+     "type": "table",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Statistics/out_table",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "statistics_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "case_field",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs"
+   ]
+  },
+  "analysis.Frequency": {
+   "parameters": [
+    {
+     "param": "in_table",
+     "type": "tableview",
+     "direction": "input",
+     "required": true,
+     "rule": "R-EVENTS",
+     "basis": "an event table with a time column exercises the frequency path on a table that is not the attribute table",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "events",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_events.csv",
+     "artifactSha256": "066DF965B16B67FF7AB3647D38F2D769CA19755D421434C2E78DCDA6EE3CC52C"
+    },
+    {
+     "param": "out_table",
+     "type": "table",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_Frequency/out_table",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "frequency_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "summary_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs",
+    "events"
+   ]
+  },
+  "analysis.TabulateArea": {
+   "parameters": [
+    {
+     "param": "in_zone_data",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-ZONEFEAT",
+     "basis": "declared `featurelayer` (single-valued), so exactly one zone dataset — a list would not match the signature",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943"
+    },
+    {
+     "param": "zone_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "in_class_data",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "class data distinct from zone data so the contingency table is non-degenerate",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "class_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_table",
+     "type": "table",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_TabulateArea/out_table",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "analysis.TabulateIntersection": {
+   "parameters": [
+    {
+     "param": "in_zone_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-ZONEFEAT",
+     "basis": "declared `featurelayer` (single-valued), so exactly one zone dataset",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943"
+    },
+    {
+     "param": "zone_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "in_class_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-OVERLAYB",
+     "basis": "class features distinct from zone features",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "polys_b",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_b.geojson",
+     "artifactSha256": "B61E183675DAF1EEAF2DE677A49F3B528E2C45D426A51722CC1617831E4FDD60"
+    },
+    {
+     "param": "class_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_table",
+     "type": "table",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/analysis_TabulateIntersection/out_table",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "out_units",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs",
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "management.Dissolve": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/management_Dissolve/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "dissolve_field",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "statistics_fields",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefacts",
+     "value": [
+      "attrs"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_attrs.csv"
+     ],
+     "rule": "R-FIELDS",
+     "basis": "field-list arguments resolve against the CSV/vector field vocabulary declared in the pool",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "multi_part",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "unsplit_lines",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs",
+    "polys_a"
+   ]
+  },
+  "management.Merge": {
+   "parameters": [
+    {
+     "param": "inputs",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefacts",
+     "value": [
+      "polys_a",
+      "polys_b"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+      "Benchmarks/inputs/gp53/gp_polys_b.geojson"
+     ],
+     "rule": "R-POLYB",
+     "basis": "overlay partner pool (two overlapping feature sets)"
+    },
+    {
+     "param": "output",
+     "type": "dataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/management_Merge/output",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "field_mappings",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a",
+    "polys_b"
+   ]
+  },
+  "management.Project": {
+   "parameters": [
+    {
+     "param": "in_dataset",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_dataset",
+     "type": "dataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/management_Project/out_dataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "out_coor_system",
+     "type": "spatialreference",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "EPSG:32651",
+     "rule": "R-SR",
+     "basis": "same CRS as the whole pool"
+    },
+    {
+     "param": "transform_method",
+     "type": "multivalue",
+     "direction": "input",
+     "required": false,
+     "carrier": "PENDING-PHASE-B-SIGNATURE",
+     "value": null,
+     "rule": "R-MULTI-OPT",
+     "basis": "option-list argument whose member set is not enumerated by any accepted evidence — not guessed"
+    },
+    {
+     "param": "in_coor_system",
+     "type": "spatialreference",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "EPSG:32651",
+     "rule": "R-SR",
+     "basis": "same CRS as the whole pool"
+    },
+    {
+     "param": "preserve_shape",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [
+    {
+     "param": "transform_method",
+     "type": "multivalue",
+     "why": "option-list argument whose member set is not enumerated by any accepted evidence — not guessed"
+    }
+   ],
+   "fullyCovered": false,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "management.RepairGeometry": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "delete_null",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "esri_option",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "management.CalculateField": {
+   "parameters": [
+    {
+     "param": "in_table",
+     "type": "tableview",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "attrs",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_attrs.csv",
+     "artifactSha256": "43B496E35FB3C0C373BD50EDF14DFB4263989D5C3AA8F92687028E6321C0F850",
+     "rule": "R-TABLE",
+     "basis": "CSV attribute table"
+    },
+    {
+     "param": "field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "expression",
+     "type": "string",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "1",
+     "rule": "R-EXPR",
+     "basis": "constant expression, valid under both Python 3 and Arcade",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "expression_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "code_block",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs"
+   ]
+  },
+  "management.CopyFeatures": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "dataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/management_CopyFeatures/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "config_keyword",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "management.MultipartToSinglepart": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_feature_class",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/management_MultipartToSinglepart/out_feature_class",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "conversion.ExportFeatures": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_ExportFeatures/out_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "where_clause",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "grp = 'A'",
+     "rule": "R-WHERE",
+     "basis": "selection clause over a field that exists in the pool fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "conversion.TableToTable": {
+   "parameters": [
+    {
+     "param": "in_rows",
+     "type": "tableview",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "attrs",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_attrs.csv",
+     "artifactSha256": "43B496E35FB3C0C373BD50EDF14DFB4263989D5C3AA8F92687028E6321C0F850",
+     "rule": "R-TABLE",
+     "basis": "CSV attribute table"
+    },
+    {
+     "param": "out_path",
+     "type": "workspace",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_TableToTable/out_path",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "out_name",
+     "type": "string",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_TableToTable/out_name",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "where_clause",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "grp = 'A'",
+     "rule": "R-WHERE",
+     "basis": "selection clause over a field that exists in the pool fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "field_mapping",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "attrs"
+   ]
+  },
+  "conversion.RasterToPolygon": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-CLASSIN",
+     "basis": "polygon conversion is defined on integer grids",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "out_polygon_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_RasterToPolygon/out_polygon_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "simplify",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "raster_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "rule": "R-VALUEFIELD",
+     "basis": "the converted field of a raster is its cell value, `VALUE`",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "VALUE"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes"
+   ]
+  },
+  "conversion.RasterToPoint": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-CLASSIN",
+     "basis": "point conversion exercised on the integer class grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "out_point_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_RasterToPoint/out_point_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "raster_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "rule": "R-VALUEFIELD",
+     "basis": "the converted field of a raster is its cell value, `VALUE`",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "VALUE"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes"
+   ]
+  },
+  "conversion.PolygonToRaster": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "value_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_rasterdataset",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_PolygonToRaster/out_rasterdataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_assignment",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "priority_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "conversion.PointToRaster": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-GEOMPOINT",
+     "basis": "this tool rasterises point geometry",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "points",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_points.geojson",
+     "artifactSha256": "9E1399E08EB2EC9413EBC5DB51E8D2D38C1351AAA569689F6EC7F40FCAB5D7CB"
+    },
+    {
+     "param": "value_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_rasterdataset",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_PointToRaster/out_rasterdataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_assignment",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "priority_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "points"
+   ]
+  },
+  "conversion.PolylineToRaster": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-GEOMLINE",
+     "basis": "this tool rasterises polyline geometry",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "lines",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_lines.geojson",
+     "artifactSha256": "AC7F5A29FBB91C32F7F77BCA0585D38B0B48BC811744E63A0B2A03CCBB8B92F9"
+    },
+    {
+     "param": "value_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_rasterdataset",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_PolylineToRaster/out_rasterdataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_assignment",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "priority_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "lines"
+   ]
+  },
+  "conversion.FeatureToRaster": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "value_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_rasterdataset",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_FeatureToRaster/out_rasterdataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "conversion.ASCIIToRaster": {
+   "parameters": [
+    {
+     "param": "in_ascii_file",
+     "type": "file",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "classesAsc",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.asc",
+     "artifactSha256": "E05C310471103B3D42D366BD8ABA4326F460AB3EBEE832A7EF904FD35659F168",
+     "rule": "R-ASC",
+     "basis": "ASCII grid carrier on the shared grid (file-shaped raster input)"
+    },
+    {
+     "param": "out_rasterdataset",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_ASCIIToRaster/out_rasterdataset",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "data_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classesAsc"
+   ]
+  },
+  "conversion.RasterToASCII": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_ascii_file",
+     "type": "file",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_RasterToASCII/out_ascii_file",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "conversion.FeaturesToJSON": {
+   "parameters": [
+    {
+     "param": "in_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_json_file",
+     "type": "file",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_FeaturesToJSON/out_json_file",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "format_json",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "include_z",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "include_m",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  },
+  "conversion.JSONToFeatures": {
+   "parameters": [
+    {
+     "param": "in_json_file",
+     "type": "file",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "featuresJson",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_features.json",
+     "artifactSha256": "FAF60A47DD69183EBB76C4283384E878EA05408293AD3D21121D260F25A98CA1",
+     "rule": "R-JSON",
+     "basis": "JSON document carrier; whether it matches the tool's expected JSON schema is a Phase B signature question"
+    },
+    {
+     "param": "out_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/conversion_JSONToFeatures/out_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "geometry_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "featuresJson"
+   ]
+  },
+  "sa.Slope": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Slope/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "z_factor",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "method",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "z_unit",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.Aspect": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Aspect/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "method",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "z_unit",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.Hillshade": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-SLOPE",
+     "basis": "Hillshade's first input is a slope raster, not the elevation surface",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "slope",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_slope.tif",
+     "artifactSha256": "A1145A5CB6FC8197C86CD9F3CBC5503F30CFAAB18511D05B193BD331BA1413D8"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Hillshade/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "azimuth",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "altitude",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "model_shadows",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "z_factor",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "slope"
+   ]
+  },
+  "sa.Contour": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_polyline_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Contour/out_polyline_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "contour_interval",
+     "type": "double",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "base_contour",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "z_factor",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "contour_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.Curvature": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_curvature_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Curvature/out_curvature_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "z_factor",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.Fill": {
+   "parameters": [
+    {
+     "param": "in_surface_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_surface_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Fill/out_surface_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "z_limit",
+     "type": "double",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": 2.0,
+     "rule": "R-DBL",
+     "basis": "cell-size-scale numeric default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.FlowDirection": {
+   "parameters": [
+    {
+     "param": "in_surface_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_flow_direction_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_FlowDirection/out_flow_direction_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "force_flow",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "in_weight_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": false,
+     "rule": "R-FLOWDIR",
+     "basis": "the force-flow weight raster is a flow-direction grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "flowdir",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+     "artifactSha256": "9D8E6A877F5EAA309844C4D71D621675AEBF513C1C62EAB8EBDD5731559E1D97"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem",
+    "flowdir"
+   ]
+  },
+  "sa.FlowAccumulation": {
+   "parameters": [
+    {
+     "param": "in_flow_direction_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-FLOWDIR",
+     "basis": "flow accumulation consumes a flow-direction grid, not an elevation grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "flowdir",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+     "artifactSha256": "9D8E6A877F5EAA309844C4D71D621675AEBF513C1C62EAB8EBDD5731559E1D97"
+    },
+    {
+     "param": "out_accumulation_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_FlowAccumulation/out_accumulation_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "in_weight_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": false,
+     "rule": "R-FLOWDIR",
+     "basis": "the percentage-accumulation weight raster is a flow-direction grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "flowdir",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+     "artifactSha256": "9D8E6A877F5EAA309844C4D71D621675AEBF513C1C62EAB8EBDD5731559E1D97"
+    },
+    {
+     "param": "data_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "flowdir"
+   ]
+  },
+  "sa.Watershed": {
+   "parameters": [
+    {
+     "param": "in_flow_direction_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-FLOWDIR",
+     "basis": "watershed delineation consumes a flow-direction grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "flowdir",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_flowdir.tif",
+     "artifactSha256": "9D8E6A877F5EAA309844C4D71D621675AEBF513C1C62EAB8EBDD5731559E1D97"
+    },
+    {
+     "param": "in_pour_point_data",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "rule": "R-POUR",
+     "basis": "pour point data is a point feature set",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "points",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_points.geojson",
+     "artifactSha256": "9E1399E08EB2EC9413EBC5DB51E8D2D38C1351AAA569689F6EC7F40FCAB5D7CB"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Watershed/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "pour_point_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "rule": "R-IDFIELD",
+     "basis": "the point pool declares idField=id",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "id"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "flowdir",
+    "points"
+   ]
+  },
+  "sa.SnapPourPoint": {
+   "parameters": [
+    {
+     "param": "in_pour_point_data",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "rule": "R-POUR",
+     "basis": "pour point data is a point feature set",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "points",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_points.geojson",
+     "artifactSha256": "9E1399E08EB2EC9413EBC5DB51E8D2D38C1351AAA569689F6EC7F40FCAB5D7CB"
+    },
+    {
+     "param": "in_accumulation_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-FLOWACC",
+     "basis": "snapping pours along a flow-accumulation grid",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "flowacc",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_flowacc.tif",
+     "artifactSha256": "B2438706BD1B13A18A51875F3C18E8D08F83AF499D111D1DA635B4F4950DEE29"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_SnapPourPoint/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "snap_distance",
+     "type": "string",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "pour_point_field",
+     "type": "field",
+     "direction": "input",
+     "required": false,
+     "rule": "R-IDFIELD",
+     "basis": "the point pool declares idField=id",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "id"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "flowacc",
+    "points"
+   ]
+  },
+  "sa.ZonalStatistics": {
+   "parameters": [
+    {
+     "param": "in_zone_data",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "rule": "R-ZONEIN",
+     "basis": "zone dataset declared as `dataset`; the integer class grid is the zone source",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "zone_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "rule": "R-VALUEFIELD",
+     "basis": "a raster zone has exactly one cell-value field, `VALUE`",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "VALUE"
+    },
+    {
+     "param": "in_value_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_ZonalStatistics/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "statistics_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "ignore_nodata",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes",
+    "dem"
+   ]
+  },
+  "sa.ZonalStatisticsAsTable": {
+   "parameters": [
+    {
+     "param": "in_zone_data",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "rule": "R-ZONEIN",
+     "basis": "same zone raster as the paired tool so both rows are comparable",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "zone_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "rule": "R-VALUEFIELD",
+     "basis": "a raster zone has exactly one cell-value field, `VALUE`",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "VALUE"
+    },
+    {
+     "param": "in_value_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_table",
+     "type": "table",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_ZonalStatisticsAsTable/out_table",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "ignore_nodata",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "statistics_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes",
+    "dem"
+   ]
+  },
+  "sa.Reclassify": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-CLASSIN",
+     "basis": "reclassification needs an integer class grid whose domain matches the remap table (1..4)",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "reclass_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "rule": "R-VALUEFIELD",
+     "basis": "the reclassified field of a raster is its cell value, `VALUE`",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "VALUE"
+    },
+    {
+     "param": "remap",
+     "type": "remap",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "remap",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_remap.txt",
+     "artifactSha256": "F2C5AA394C2E1D7CB73D46DA92C6140D071DA19951058DCB692F792C9E6064C4",
+     "rule": "R-REMAP",
+     "basis": "remap value-table artefact"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Reclassify/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "missing_values",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes",
+    "remap"
+   ]
+  },
+  "sa.ExtractByMask": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "in_mask_data",
+     "type": "dataset",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_ExtractByMask/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "extraction_area",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "analysis_extent",
+     "type": "extent",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": [
+      500000.0,
+      3999904.0,
+      500128.0,
+      4000000.0
+     ],
+     "rule": "R-EXTENT",
+     "basis": "exact shared measurement extent"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem",
+    "polys_a"
+   ]
+  },
+  "sa.ExtractValuesToPoints": {
+   "parameters": [
+    {
+     "param": "in_point_features",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "points",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_points.geojson",
+     "artifactSha256": "9E1399E08EB2EC9413EBC5DB51E8D2D38C1351AAA569689F6EC7F40FCAB5D7CB",
+     "rule": "R-POINT",
+     "basis": "point feature pool"
+    },
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_point_features",
+     "type": "featureclass",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_ExtractValuesToPoints/out_point_features",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "interpolate_values",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "all_attributes",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem",
+    "points"
+   ]
+  },
+  "sa.Resample": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Resample/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "cell_size",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "2.0",
+     "rule": "R-DIST",
+     "basis": "one cell width on the shared grid (string-typed distance argument)",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "resampling_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.Con": {
+   "parameters": [
+    {
+     "param": "in_conditional_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "rule": "R-CLASSIN",
+     "basis": "a conditional raster must carry integer class values",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "classes",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_classes.tif",
+     "artifactSha256": "F9949F5D786F9846F993927AE6BF2DE53AD443E1F0A482400D65F505BD89D338"
+    },
+    {
+     "param": "in_true_raster_or_constant",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_Con/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "in_false_raster_or_constant",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": false,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "where_clause",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "grp = 'A'",
+     "rule": "R-WHERE",
+     "basis": "selection clause over a field that exists in the pool fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes",
+    "dem"
+   ]
+  },
+  "sa.CellStatistics": {
+   "parameters": [
+    {
+     "param": "in_rasters_or_constants",
+     "type": "multivalue",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefacts",
+     "value": [
+      "dem",
+      "classes"
+     ],
+     "artifactPaths": [
+      "Benchmarks/inputs/gp53/gp_dem.tif",
+      "Benchmarks/inputs/gp53/gp_classes.tif"
+     ],
+     "rule": "R-MULTI-RASTER",
+     "basis": "multi-raster argument fed by two single-band rasters from the same grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_CellStatistics/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "statistics_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "ignore_nodata",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "classes",
+    "dem"
+   ]
+  },
+  "sa.FocalStatistics": {
+   "parameters": [
+    {
+     "param": "in_raster",
+     "type": "rasterlayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "dem",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_dem.tif",
+     "artifactSha256": "85B918D5B0D8D0ADB8D67CABD87B2D9757257DD5D91D52FEBF1E0424690BEF1A",
+     "rule": "R-RASTER",
+     "basis": "single-band DEM raster on the shared grid"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_FocalStatistics/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    },
+    {
+     "param": "neighborhood",
+     "type": "neighborhood",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "NbrRectangle 3 3",
+     "rule": "R-NBR",
+     "basis": "kernel literal, 3x3"
+    },
+    {
+     "param": "statistics_type",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "ALL",
+     "rule": "R-TYPESTR",
+     "basis": "enumerated string argument; default member chosen and labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "ignore_nodata",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "dem"
+   ]
+  },
+  "sa.RasterCalculator": {
+   "parameters": [
+    {
+     "param": "expression",
+     "type": "string",
+     "direction": "input",
+     "required": true,
+     "rule": "R-CALCEXPR",
+     "basis": "calculator expression referencing the pool DEM by file name; the raster naming inside the window is a Phase B signature question, so the row is marked as a calibration default",
+     "semanticPin": true,
+     "carrier": "literal",
+     "value": "\"gp_dem.tif\" * 1.0",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "expression form confirmed against the tool's own signature inside the window"
+    },
+    {
+     "param": "out_raster",
+     "type": "rasterdataset",
+     "direction": "output",
+     "required": true,
+     "carrier": "pathTemplate",
+     "value": "run-20261004-d117/phase-fixture/out/sa_RasterCalculator/out_raster",
+     "rule": "R-OUTPUT",
+     "basis": "outputs are written by Phase B under a D-drive run-root output path; this batch only templates them (zero GIS write)"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": []
+  },
+  "management.AddJoin": {
+   "parameters": [
+    {
+     "param": "in_layer_or_view",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "in_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "join_table",
+     "type": "tableview",
+     "direction": "input",
+     "required": true,
+     "rule": "R-EVENTS",
+     "basis": "standalone table side of the join; `value` exists in both vocabularies so the join is meaningful",
+     "semanticPin": true,
+     "carrier": "artefact",
+     "value": "events",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_events.csv",
+     "artifactSha256": "066DF965B16B67FF7AB3647D38F2D769CA19755D421434C2E78DCDA6EE3CC52C"
+    },
+    {
+     "param": "join_field",
+     "type": "field",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "value",
+     "rule": "R-FIELD",
+     "basis": "declared field exists in the vector/table fieldVocabulary",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    },
+    {
+     "param": "join_type",
+     "type": "string",
+     "direction": "input",
+     "required": true,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "events",
+    "polys_a"
+   ]
+  },
+  "management.RemoveJoin": {
+   "parameters": [
+    {
+     "param": "in_layer_or_view",
+     "type": "featurelayer",
+     "direction": "input",
+     "required": true,
+     "carrier": "artefact",
+     "value": "polys_a",
+     "artifactPath": "Benchmarks/inputs/gp53/gp_polys_a.geojson",
+     "artifactSha256": "5277B92BDCB5E7EFC3CF03E8945B535B41E982B2D0151C7A23F06BF7C2D1D943",
+     "rule": "R-POLYA",
+     "basis": "primary polygon pool"
+    },
+    {
+     "param": "join_name",
+     "type": "string",
+     "direction": "input",
+     "required": false,
+     "carrier": "literal",
+     "value": "VALUE",
+     "rule": "R-STR",
+     "basis": "generic string argument, labelled as a calibration default",
+     "valueIsCalibrationDefault": true,
+     "phaseBAction": "the accepted evidence does not enumerate this option set; confirm against the tool's own signature inside the window"
+    }
+   ],
+   "unresolved": [],
+   "fullyCovered": true,
+   "usesArtefacts": [
+    "polys_a"
+   ]
+  }
+ },
+ "coverage": {
+  "total": 53,
+  "fullyCovered": 52,
+  "withOpenCarrierNeed": 1,
+  "fullyCoveredTools": [
+   "analysis.Buffer",
+   "analysis.Clip",
+   "analysis.Erase",
+   "analysis.Union",
+   "analysis.Intersect",
+   "analysis.Identity",
+   "analysis.SpatialJoin",
+   "analysis.Near",
+   "analysis.Statistics",
+   "analysis.Frequency",
+   "analysis.TabulateArea",
+   "analysis.TabulateIntersection",
+   "management.Dissolve",
+   "management.Merge",
+   "management.RepairGeometry",
+   "management.CalculateField",
+   "management.CopyFeatures",
+   "management.MultipartToSinglepart",
+   "conversion.ExportFeatures",
+   "conversion.TableToTable",
+   "conversion.RasterToPolygon",
+   "conversion.RasterToPoint",
+   "conversion.PolygonToRaster",
+   "conversion.PointToRaster",
+   "conversion.PolylineToRaster",
+   "conversion.FeatureToRaster",
+   "conversion.ASCIIToRaster",
+   "conversion.RasterToASCII",
+   "conversion.FeaturesToJSON",
+   "conversion.JSONToFeatures",
+   "sa.Slope",
+   "sa.Aspect",
+   "sa.Hillshade",
+   "sa.Contour",
+   "sa.Curvature",
+   "sa.Fill",
+   "sa.FlowDirection",
+   "sa.FlowAccumulation",
+   "sa.Watershed",
+   "sa.SnapPourPoint",
+   "sa.ZonalStatistics",
+   "sa.ZonalStatisticsAsTable",
+   "sa.Reclassify",
+   "sa.ExtractByMask",
+   "sa.ExtractValuesToPoints",
+   "sa.Resample",
+   "sa.Con",
+   "sa.CellStatistics",
+   "sa.FocalStatistics",
+   "sa.RasterCalculator",
+   "management.AddJoin",
+   "management.RemoveJoin"
+  ],
+  "openCarrierTools": {
+   "management.Project": [
+    {
+     "param": "transform_method",
+     "type": "multivalue",
+     "why": "option-list argument whose member set is not enumerated by any accepted evidence — not guessed"
+    }
+   ]
+  }
+ },
+ "arithmetic": "52 fullyCovered + 1 openCarrierNeed = 53"
+}

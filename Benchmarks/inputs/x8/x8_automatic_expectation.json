@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x8",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "one report artifact and one deck whose every figure equals x8_answer_report.json",
+    "references present and resolving to the fact table rows",
+    "page count inside the declared budget with no overflow",
+    "text selectable on reopen - which cannot be proven until an approved generator exists"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "approved Open XML generator for the deck",
+    "verified DOCX channel for the report",
+    "editability proof by reopening a real file"
+  ]
+}

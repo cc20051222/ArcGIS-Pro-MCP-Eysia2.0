@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "d101-automatic-expectation-v1",
+  "group": "x6",
+  "artefact": "GDOM-03 complete automatic result",
+  "synthetic": true,
+  "expected": [
+    "a TP04, TP12, TP13 or TP11 page whose every figure recomputes from the answer files",
+    "unlocated, unserved, undistributed and disconnected lists present and complete",
+    "the solver termination reason recorded"
+  ],
+  "manualInterventionAllowed": false,
+  "unfilledAxis": [
+    "a real road network with impedance and direction, and an admitted Network Analyst path (0 of the 53 whitelist names is a network solver)"
+  ]
+}

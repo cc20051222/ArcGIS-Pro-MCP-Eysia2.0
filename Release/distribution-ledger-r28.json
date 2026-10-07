@@ -1,0 +1,182 @@
+{
+ "schema": "arcgis-pro-mcp-one-click-distribution-ledger-v1",
+ "ticket": "D-134",
+ "deploymentVersion": "one-click-1.0.2-r28",
+ "releaseVersion": "1.0.2",
+ "canonicalProductionToolCount": 239,
+ "submittedAtLocal": "2026-10-06T23:17:02",
+ "submissionStatus": "PASS CANDIDATE",
+ "supersedes": {
+  "revision": "one-click-1.0.2-r27",
+  "ticket": "D-131",
+  "reason": "r28 换代（用户明文授权・G-323）：NOTICE.md 代际同步头段回流仓库面＋包内文档代际位归位，非缺陷返工"
+ },
+ "authorizedBy": {
+  "generationChange": "用户明文「仍做 r28…」（2026-10-06 22:2x・G-323）",
+  "dispatch": "DISPATCH_LOG §300＋§303",
+  "writeDomain": "`Release/` 新位＋`NOTICE.md`（README.md 转由 D-136・Distribution/ 转由 D-135）"
+ },
+ "seedProvenance": {
+  "seed": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r27-Windows-x64.zip",
+  "seedBytes": 2273452,
+  "seedSha256": "A83108120973EBB34B9349F82F72C523E4EC0BB3CD58E7D4EB45B37509F5F38D",
+  "historicalStagingReused": false,
+  "memberStreamsByteFaithful": 6
+ },
+ "zip": {
+  "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip",
+  "bytes": 2277454,
+  "sha256": "1D0F0F03CD87876DD99CEB0692847DBEBF92A5D370264C4D9A2CCB64772D57CD",
+  "entries": 26,
+  "entryOrderIdenticalToR27": true,
+  "deploymentVersion": "one-click-1.0.2-r28"
+ },
+ "changedMembersFromR27": [
+  {
+   "path": "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+   "r27": [
+    11886,
+    "9C3A292702BCB53D"
+   ],
+   "r28": [
+    11885,
+    "66F76BEE6349951E"
+   ]
+  },
+  {
+   "path": "NOTICE.md",
+   "r27": [
+    6457,
+    "7092CCF33FE88F55"
+   ],
+   "r28": [
+    6719,
+    "F5A7CF88FDFE8586"
+   ]
+  },
+  {
+   "path": "bundle-manifest.json",
+   "r27": [
+    8127,
+    "A6FA626EC45846B9"
+   ],
+   "r28": [
+    8127,
+    "F818484E2EF9AC8C"
+   ]
+  },
+  {
+   "path": "scripts/verify-one-click-package.ps1",
+   "r27": [
+    12909,
+    "6EA0EB8027607D94"
+   ],
+   "r28": [
+    12936,
+    "2898522E97F174D4"
+   ]
+  }
+ ],
+ "unchangedMemberCount": 22,
+ "payloadInvariant": {
+  "net8": [
+   1103697,
+   "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738"
+  ],
+  "equalsActiveInstallFace": true,
+  "installFaceBytes": 1103697,
+  "installFaceSha": "59F376555025052DE905DCA05D2902CEBF9915DD4DCD26F4198C9EE2B659E738",
+  "net6EqualsR27": true
+ },
+ "manifestFilesListed": 25,
+ "payloadMemberCountTotal": 86,
+ "files": [
+  {
+   "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip",
+   "bytes": 2277454,
+   "sha256": "1D0F0F03CD87876DD99CEB0692847DBEBF92A5D370264C4D9A2CCB64772D57CD"
+  },
+  {
+   "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip.sha256",
+   "bytes": 116,
+   "sha256": "50D51068324173CD56E8ADBEBC6B210B374F04B6AB3CC672461C1918D790238A"
+  },
+  {
+   "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip.manifest.json",
+   "bytes": 8127,
+   "sha256": "F818484E2EF9AC8C9CAFEDFAFC6F8F8E22509E8309B8822A5B2326D9E8BFFDE1"
+  }
+ ],
+ "carrier": {
+  "path": "Release/发送给同事-r28",
+  "fileCount": 8,
+  "files": [
+   {
+    "path": "Release/发送给同事-r28/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip",
+    "bytes": 2277454,
+    "sha256": "1D0F0F03CD87876DD99CEB0692847DBEBF92A5D370264C4D9A2CCB64772D57CD"
+   },
+   {
+    "path": "Release/发送给同事-r28/ArcGIS-Pro-MCP-OneClick-1.0.2-r28-Windows-x64.zip.sha256",
+    "bytes": 117,
+    "sha256": "7E67431A6A0A7FC417EBC6267B44F0711458B75522BBCEB2426CD5D4E610E11A"
+   },
+   {
+    "path": "Release/发送给同事-r28/NOTICE.md",
+    "bytes": 6719,
+    "sha256": "F5A7CF88FDFE8586970CDC01FA01F1159B12BDD111284CCE6CBA7700DD17E2FA"
+   },
+   {
+    "path": "Release/发送给同事-r28/README.md",
+    "bytes": 6346,
+    "sha256": "E5B3ADD6EB13F603A8719964BF03AA8AB62ACAFC4DEC6956213214D70BCC0391"
+   },
+   {
+    "path": "Release/发送给同事-r28/教程-net6-使用教程.md",
+    "bytes": 30631,
+    "sha256": "42C682258C23D52FA2B8E6123CCAAB24741F6BB12061DEBE495573640DC5203C"
+   },
+   {
+    "path": "Release/发送给同事-r28/教程-net6-安装教程.md",
+    "bytes": 2975,
+    "sha256": "F54E717EB6BCB2548EDAD25D307BDCBF4FBEB55CAAFCDA97F68C06CF741C03C7"
+   },
+   {
+    "path": "Release/发送给同事-r28/教程-net8-使用教程.md",
+    "bytes": 30655,
+    "sha256": "44E03E4D29082886C98F726E9915995BFCE511634F4135096EBB49441DC3A7C3"
+   },
+   {
+    "path": "Release/发送给同事-r28/教程-net8-安装教程.md",
+    "bytes": 3017,
+    "sha256": "56D6BB5E056BB89DD9174BB9D5A396874934DAD09E247A6F4B152A9B3978BA9C"
+   }
+  ],
+  "zipEqualsRootZip": true,
+  "sidecarFormCrlfBytes": 117
+ },
+ "authenticode": {
+  "r28ReSigned": false,
+  "status": "UnknownError",
+  "thumbprint": "4E4ED6CBD52F7D9F73CEFC1462E78BEB380590C0",
+  "note": "r28 **未重新签名**：包内 `one-click-setup.ps1` 字节与签名块自 r27 原样搬运（D-133 裁定＝签名块属发布环节产物）"
+ },
+ "reproGuardFace": {
+  "whitelistEntries": 3,
+  "noticeEntryStatus": "已因 D-134 回流而消解（对未来参照面而言）",
+  "stillNeededEntries": [
+   "scripts/one-click-setup.ps1（签名块）",
+   "README-START-HERE.md（发布环节头段）"
+  ],
+  "repoLagRegistered": [
+   "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md（包内 r28・仓库 r27＝T-134-2(甲)）",
+   "scripts/verify-one-click-package.ps1（包内 28 项・仓库 27 项＝同 tension）"
+  ]
+ },
+ "notVerified": [
+  "真机四场景 NOT EXECUTED",
+  "干净机验收 NOT VERIFIED",
+  "真实客户端连接 NOT VERIFIED",
+  "操作系统信任链未建立（G-299 R-3 维持）"
+ ]
+}

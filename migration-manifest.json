@@ -1,0 +1,2659 @@
+{
+  "schema": "arcgis-pro-mcp-migration-manifest-v1",
+  "dispatch_id": "D-001",
+  "generated_utc": "2026-09-10T13:29:03.228990+00:00",
+  "source_root": "D:\\ArcGIS-Pro-MCP",
+  "destination_root": "D:\\ArcGIS-Pro-MCP 2.0",
+  "source_git_commits": 0,
+  "source_git_tracked_files": 0,
+  "excluded_dir_names": [
+    ".codex",
+    ".codex-artifacts",
+    ".cursor",
+    ".git",
+    ".runtime",
+    ".vs",
+    ".workbuddy",
+    "TestDate",
+    "__pycache__",
+    "bin",
+    "obj",
+    "tmp"
+  ],
+  "excluded_extensions": [
+    ".lock",
+    ".pyc",
+    ".pyo"
+  ],
+  "summary": {
+    "total_collected": 327,
+    "copied": 327,
+    "conflict_not_overwritten": 0,
+    "reparse_skipped": 0,
+    "hash_mismatch": 0,
+    "error": 0,
+    "post_check_new_tree_bad_dirs": [
+      ".workbuddy"
+    ]
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "source": "D:\\ArcGIS-Pro-MCP\\.gitignore",
+      "size": 190,
+      "sha256_source": "1c27a099d21caeb2211b51add4c45cf7a9b863937aa7882614622362cd5cb35f",
+      "sha256_destination": "1c27a099d21caeb2211b51add4c45cf7a9b863937aa7882614622362cd5cb35f",
+      "status": "OK"
+    },
+    {
+      "path": "ArcGIS-Pro-MCP.sln",
+      "source": "D:\\ArcGIS-Pro-MCP\\ArcGIS-Pro-MCP.sln",
+      "size": 8365,
+      "sha256_source": "58e05bbcfe1099ef76e97530fa5aeb058f4f3769ac60f218f7343f6da673590f",
+      "sha256_destination": "58e05bbcfe1099ef76e97530fa5aeb058f4f3769ac60f218f7343f6da673590f",
+      "status": "OK"
+    },
+    {
+      "path": "Config/client-catalog.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\client-catalog.json",
+      "size": 1864,
+      "sha256_source": "b3e6315ec3c6bf625d4c38af21a7c7b2f457e6e95c1825fb8f882af73be53faf",
+      "sha256_destination": "b3e6315ec3c6bf625d4c38af21a7c7b2f457e6e95c1825fb8f882af73be53faf",
+      "status": "OK"
+    },
+    {
+      "path": "Config/client-templates/claude-desktop.mcp.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\client-templates\\claude-desktop.mcp.json",
+      "size": 97,
+      "sha256_source": "c5cf47ed4759fdbf391838c112971bab5c6a3f6bd135f846675ad708c5ad135b",
+      "sha256_destination": "c5cf47ed4759fdbf391838c112971bab5c6a3f6bd135f846675ad708c5ad135b",
+      "status": "OK"
+    },
+    {
+      "path": "Config/client-templates/codex.toml.fragment",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\client-templates\\codex.toml.fragment",
+      "size": 163,
+      "sha256_source": "96e1c0d0554ff86aecfa373ae5e341f61b6b2b210437f052956e0736153f93ac",
+      "sha256_destination": "96e1c0d0554ff86aecfa373ae5e341f61b6b2b210437f052956e0736153f93ac",
+      "status": "OK"
+    },
+    {
+      "path": "Config/client-templates/cursor.mcp.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\client-templates\\cursor.mcp.json",
+      "size": 97,
+      "sha256_source": "c5cf47ed4759fdbf391838c112971bab5c6a3f6bd135f846675ad708c5ad135b",
+      "sha256_destination": "c5cf47ed4759fdbf391838c112971bab5c6a3f6bd135f846675ad708c5ad135b",
+      "status": "OK"
+    },
+    {
+      "path": "Config/client-templates/deepseek.cordis.patch.yml",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\client-templates\\deepseek.cordis.patch.yml",
+      "size": 300,
+      "sha256_source": "2a25e6125822edef9acb6fab63076f04d628678bf07c9d7b8059a802c69e7157",
+      "sha256_destination": "2a25e6125822edef9acb6fab63076f04d628678bf07c9d7b8059a802c69e7157",
+      "status": "OK"
+    },
+    {
+      "path": "Config/compatibility-policy.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Config\\compatibility-policy.json",
+      "size": 1257,
+      "sha256_source": "610c14aea55e74444c0ec719fd2d5c8ce53a099407f017d4500687a52fd6a24e",
+      "sha256_destination": "610c14aea55e74444c0ec719fd2d5c8ce53a099407f017d4500687a52fd6a24e",
+      "status": "OK"
+    },
+    {
+      "path": "Directory.Build.props",
+      "source": "D:\\ArcGIS-Pro-MCP\\Directory.Build.props",
+      "size": 664,
+      "sha256_source": "bf452c6ec9e2bdc294dad31a7b2212797006fc21b22ee9fb00055c969ce98325",
+      "sha256_destination": "bf452c6ec9e2bdc294dad31a7b2212797006fc21b22ee9fb00055c969ce98325",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_r5_安装与使用指南_V1.0.docx",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_r5_安装与使用指南_V1.0.docx",
+      "size": 159267,
+      "sha256_source": "6bcf5a7775da5aa4289123d7079f6f85b28191f1c9d644eccbf14657a415897d",
+      "sha256_destination": "6bcf5a7775da5aa4289123d7079f6f85b28191f1c9d644eccbf14657a415897d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_r5_安装与使用指南_V1.0.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_r5_安装与使用指南_V1.0.md",
+      "size": 36285,
+      "sha256_source": "c683cd9917ed6681403709be778b8c65a516c28f6204f54dd4ae5799e1fc4374",
+      "sha256_destination": "c683cd9917ed6681403709be778b8c65a516c28f6204f54dd4ae5799e1fc4374",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_Server_多AI客户端项目整体规划_V1.1.docx",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_Server_多AI客户端项目整体规划_V1.1.docx",
+      "size": 66590,
+      "sha256_source": "9d7c09ed3d0fa3e7522393361909d557a51067c1b3baa1bbee5b848ec7cd93cf",
+      "sha256_destination": "9d7c09ed3d0fa3e7522393361909d557a51067c1b3baa1bbee5b848ec7cd93cf",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_Server_项目整体规划_V1.0.docx",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_Server_项目整体规划_V1.0.docx",
+      "size": 62171,
+      "sha256_source": "827f3191f063895dc2a0b53bc1f3f197b520b91f66cd8b8b292ccae04f019f83",
+      "sha256_destination": "827f3191f063895dc2a0b53bc1f3f197b520b91f66cd8b8b292ccae04f019f83",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_分享版详细安装与验证教程_V1.0.docx",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_分享版详细安装与验证教程_V1.0.docx",
+      "size": 49997,
+      "sha256_source": "7a55d69c3b8d4735a533f173ce0f9deb98f31a6e13eb810f7edd24f2fd456b0a",
+      "sha256_destination": "7a55d69c3b8d4735a533f173ce0f9deb98f31a6e13eb810f7edd24f2fd456b0a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ArcGIS_Pro_MCP_项目介绍_架构原理与使用手册_V1.0.docx",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ArcGIS_Pro_MCP_项目介绍_架构原理与使用手册_V1.0.docx",
+      "size": 278770,
+      "sha256_source": "1fae47cb39817b591366296e4db2b0612ecda9ac0fad6c2f58e021ef71943935",
+      "sha256_destination": "1fae47cb39817b591366296e4db2b0612ecda9ac0fad6c2f58e021ef71943935",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ARCHITECTURE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ARCHITECTURE.md",
+      "size": 5370,
+      "sha256_source": "a7da9ef9c2974568d2e76f17d9724a82f87e7b717558358ac6efe5f97fe67f08",
+      "sha256_destination": "a7da9ef9c2974568d2e76f17d9724a82f87e7b717558358ac6efe5f97fe67f08",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/CLIENT_CONFIGURATION_GUIDE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\CLIENT_CONFIGURATION_GUIDE.md",
+      "size": 3824,
+      "sha256_source": "e646e9419ca8d3fe6f3fbd5514bed21e24fb542c34b2ad91aafebb9eca77c0dc",
+      "sha256_destination": "e646e9419ca8d3fe6f3fbd5514bed21e24fb542c34b2ad91aafebb9eca77c0dc",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/COMMANDER_GATE_KEEPER_PROMPT_V2.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\COMMANDER_GATE_KEEPER_PROMPT_V2.md",
+      "size": 7148,
+      "sha256_source": "6bc5194cfb8c68c17c5050f1d33906f4f0dce7969afc8228a934bf519ed832f4",
+      "sha256_destination": "6bc5194cfb8c68c17c5050f1d33906f4f0dce7969afc8228a934bf519ed832f4",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/CONTEXT_HANDOFF.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\CONTEXT_HANDOFF.md",
+      "size": 76965,
+      "sha256_source": "065f55666bae24f8240b034ba64454254e8613bd768d55d724df7f0d04291594",
+      "sha256_destination": "065f55666bae24f8240b034ba64454254e8613bd768d55d724df7f0d04291594",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/CURRENT_TASK.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\CURRENT_TASK.md",
+      "size": 86887,
+      "sha256_source": "12d92573e20fefc542eeb53d5fd2079c45ea73aa8d997269813ebf126f774bb8",
+      "sha256_destination": "12d92573e20fefc542eeb53d5fd2079c45ea73aa8d997269813ebf126f774bb8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-001-permanent-memory-system.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-001-permanent-memory-system.md",
+      "size": 1205,
+      "sha256_source": "b6dfd47d9126aa021427fce260482b57d3048f3fed7e88d862bcfc9983ed1217",
+      "sha256_destination": "b6dfd47d9126aa021427fce260482b57d3048f3fed7e88d862bcfc9983ed1217",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-002-architecture-layering-and-packaging.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-002-architecture-layering-and-packaging.md",
+      "size": 1700,
+      "sha256_source": "916524488aaceb62a3aadbbb9ab7c11b9b24e7f9f7720e7e77eb5a72371e39ed",
+      "sha256_destination": "916524488aaceb62a3aadbbb9ab7c11b9b24e7f9f7720e7e77eb5a72371e39ed",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-003-python-bridge-architecture.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-003-python-bridge-architecture.md",
+      "size": 5532,
+      "sha256_source": "6377a96ace4cfa13b01c6f4447732cb35d42b3a0b40a405804fd3ae09553953a",
+      "sha256_destination": "6377a96ace4cfa13b01c6f4447732cb35d42b3a0b40a405804fd3ae09553953a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-004-python-bridge-process-lifecycle.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-004-python-bridge-process-lifecycle.md",
+      "size": 4694,
+      "sha256_source": "58484ac23d4bb959e8b9a2dba7b84d042ca0c5aabba970b72f8f3245407d5b8b",
+      "sha256_destination": "58484ac23d4bb959e8b9a2dba7b84d042ca0c5aabba970b72f8f3245407d5b8b",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-005-python-bridge-timeout-cancellation-recovery.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-005-python-bridge-timeout-cancellation-recovery.md",
+      "size": 10307,
+      "sha256_source": "51d47e8231d11cd9542d0615ed820a016fdfd07d8f949a656f8194d7eafeb0f6",
+      "sha256_destination": "51d47e8231d11cd9542d0615ed820a016fdfd07d8f949a656f8194d7eafeb0f6",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/decisions/DECISION-006-python-bridge-output-protocol-action-guardrails.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\decisions\\DECISION-006-python-bridge-output-protocol-action-guardrails.md",
+      "size": 5795,
+      "sha256_source": "98726f8c051d986b10319e26c774c13fa5b247035e1a143e4e41a0ff4a948680",
+      "sha256_destination": "98726f8c051d986b10319e26c774c13fa5b247035e1a143e4e41a0ff4a948680",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ENVIRONMENT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ENVIRONMENT.md",
+      "size": 11359,
+      "sha256_source": "a4d555ab085fd8fd39295715a29b0c2e9847d8addcd0cf890d0290696021b612",
+      "sha256_destination": "a4d555ab085fd8fd39295715a29b0c2e9847d8addcd0cf890d0290696021b612",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ENVIRONMENT_SETUP.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ENVIRONMENT_SETUP.md",
+      "size": 6310,
+      "sha256_source": "84f6a887b65980f826c9954cb05ace4df40d364a04c93517bbf3885aed61e60b",
+      "sha256_destination": "84f6a887b65980f826c9954cb05ace4df40d364a04c93517bbf3885aed61e60b",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ERROR_CODES.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ERROR_CODES.md",
+      "size": 1884,
+      "sha256_source": "7593cb35be3c5b14d9335884808fd9d14b7b72e6934944b04898f920bb852f1c",
+      "sha256_destination": "7593cb35be3c5b14d9335884808fd9d14b7b72e6934944b04898f920bb852f1c",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/EXECUTOR_PROMPT_V2.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\EXECUTOR_PROMPT_V2.md",
+      "size": 6643,
+      "sha256_source": "7766a7355094d6e9630e2f717400a20e25e59db70ed87d3598f331d5d6fcbbbc",
+      "sha256_destination": "7766a7355094d6e9630e2f717400a20e25e59db70ed87d3598f331d5d6fcbbbc",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/GEOPROCESSING.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\GEOPROCESSING.md",
+      "size": 9691,
+      "sha256_source": "7f787d365d78b06ba387e755aedc4cc8a670924b704673f6b2f8316d4e7150be",
+      "sha256_destination": "7f787d365d78b06ba387e755aedc4cc8a670924b704673f6b2f8316d4e7150be",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/HOST_SERVICES.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\HOST_SERVICES.md",
+      "size": 2332,
+      "sha256_source": "ec6b20fb12e2ad6619b6a6af54268e2a23b54fcb850d67e891d4b5947c0fb05c",
+      "sha256_destination": "ec6b20fb12e2ad6619b6a6af54268e2a23b54fcb850d67e891d4b5947c0fb05c",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/MCP_PROTOCOL.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\MCP_PROTOCOL.md",
+      "size": 2189,
+      "sha256_source": "7ca5d53438a3a402663d360c48592360272e158d61b197018b69fab2c20b5b64",
+      "sha256_destination": "7ca5d53438a3a402663d360c48592360272e158d61b197018b69fab2c20b5b64",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/MCP_SERVER.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\MCP_SERVER.md",
+      "size": 2447,
+      "sha256_source": "22261df46ad761d278067a30370ba9e0307db152859262c709da19c8baa63b42",
+      "sha256_destination": "22261df46ad761d278067a30370ba9e0307db152859262c709da19c8baa63b42",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/MCP_TESTING.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\MCP_TESTING.md",
+      "size": 2004,
+      "sha256_source": "fac6452943aa918f0f3b5960e76bd53d5a310c45621277982bfc11e4a68beed7",
+      "sha256_destination": "fac6452943aa918f0f3b5960e76bd53d5a310c45621277982bfc11e4a68beed7",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/MCP_TRANSPORT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\MCP_TRANSPORT.md",
+      "size": 1810,
+      "sha256_source": "b09e2432cce17f14e4af29717f8de6e771b2e82851606f7a22fd15b2339e1484",
+      "sha256_destination": "b09e2432cce17f14e4af29717f8de6e771b2e82851606f7a22fd15b2339e1484",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/NEW_AI_PHASE_8_14_START_PROMPT_V2.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\NEW_AI_PHASE_8_14_START_PROMPT_V2.md",
+      "size": 4000,
+      "sha256_source": "e0652285b981e4eeb18d74b07f31a92882baa753645198588ff6f3536d1a5364",
+      "sha256_destination": "e0652285b981e4eeb18d74b07f31a92882baa753645198588ff6f3536d1a5364",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/NEW_AI_START_PROMPT_V1.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\NEW_AI_START_PROMPT_V1.md",
+      "size": 4968,
+      "sha256_source": "92deef2cf2b56e817770cac20b52e5ba35dd4438864cf1a5f3ebe1dc4729ba49",
+      "sha256_destination": "92deef2cf2b56e817770cac20b52e5ba35dd4438864cf1a5f3ebe1dc4729ba49",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/NEXT_ROADMAP_AND_AI_HANDOFF_V1.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\NEXT_ROADMAP_AND_AI_HANDOFF_V1.md",
+      "size": 21266,
+      "sha256_source": "37cbadea38e650ec88900d4e73d75efcd9598df404f40cb8ff9d2d4605ada089",
+      "sha256_destination": "37cbadea38e650ec88900d4e73d75efcd9598df404f40cb8ff9d2d4605ada089",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ONE_CLICK_DEPLOYMENT_CANDIDATE_REPORT.md",
+      "size": 13252,
+      "sha256_source": "0196490d055f3e42a1d8466db1382a79838518d8b7f7f7142f89a2e8cfcd2e70",
+      "sha256_destination": "0196490d055f3e42a1d8466db1382a79838518d8b7f7f7142f89a2e8cfcd2e70",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_EVIDENCE_INDEX.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ONE_CLICK_DEPLOYMENT_EVIDENCE_INDEX.md",
+      "size": 9437,
+      "sha256_source": "67ed9159a92e33a7c25da3999f50a2950d992a9490102285420c351812e81261",
+      "sha256_destination": "67ed9159a92e33a7c25da3999f50a2950d992a9490102285420c351812e81261",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ONE_CLICK_DEPLOYMENT_INDEPENDENT_GATE_R5.md",
+      "size": 2379,
+      "sha256_source": "25d31283df2834379e12604f2e4e4014ed3540d54d3b0535d18bd690a0e46450",
+      "sha256_destination": "25d31283df2834379e12604f2e4e4014ed3540d54d3b0535d18bd690a0e46450",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_PLAN.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ONE_CLICK_DEPLOYMENT_PLAN.md",
+      "size": 6385,
+      "sha256_source": "69c99563774609909bdaf8ab6a59254c7a2b1de4d701020ccabb326ddadabb0c",
+      "sha256_destination": "69c99563774609909bdaf8ab6a59254c7a2b1de4d701020ccabb326ddadabb0c",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\ONE_CLICK_DEPLOYMENT_USER_GUIDE.md",
+      "size": 8832,
+      "sha256_source": "9239fe3f038c2b99d393e83d7f0b8f12c7e3e457ead96472337555fab1fc73f8",
+      "sha256_destination": "9239fe3f038c2b99d393e83d7f0b8f12c7e3e457ead96472337555fab1fc73f8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_00.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_00.md",
+      "size": 1043,
+      "sha256_source": "ec0632a02ffd3cd181fb922d0bc39d5e77c786314ed0751a90c01b9cf306b272",
+      "sha256_destination": "ec0632a02ffd3cd181fb922d0bc39d5e77c786314ed0751a90c01b9cf306b272",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_01.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_01.md",
+      "size": 1387,
+      "sha256_source": "f1989fb17cf7db2b703aace435cf149aafe336c09b358ddc90a1b10c224d86b4",
+      "sha256_destination": "f1989fb17cf7db2b703aace435cf149aafe336c09b358ddc90a1b10c224d86b4",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_02.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_02.md",
+      "size": 1871,
+      "sha256_source": "93e8e7a1529df651a95aaf2e314a991fabbb874ccddc2b669ae8709151cb8f6a",
+      "sha256_destination": "93e8e7a1529df651a95aaf2e314a991fabbb874ccddc2b669ae8709151cb8f6a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_03.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_03.md",
+      "size": 2863,
+      "sha256_source": "1fd0d5cadbf2fdf937be00d9d7ad2832bfef0d1eef5c81640e216b49da84812d",
+      "sha256_destination": "1fd0d5cadbf2fdf937be00d9d7ad2832bfef0d1eef5c81640e216b49da84812d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_04.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_04.md",
+      "size": 7531,
+      "sha256_source": "3937935f9bcec150b264cc9196875f83174a0dd4689f94d4fd4ee1f5bec61a1d",
+      "sha256_destination": "3937935f9bcec150b264cc9196875f83174a0dd4689f94d4fd4ee1f5bec61a1d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05.md",
+      "size": 57622,
+      "sha256_source": "2afd1ae768469dac96b83791f8f5162b07768fbb61bcb41b8ee87d2717274997",
+      "sha256_destination": "2afd1ae768469dac96b83791f8f5162b07768fbb61bcb41b8ee87d2717274997",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_10_REGRESSION_VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_10_REGRESSION_VERIFICATION.md",
+      "size": 12851,
+      "sha256_source": "1f98dba4b6bd3ebfeacafcde383284164280e4217f82d2fcc3eeb49988953692",
+      "sha256_destination": "1f98dba4b6bd3ebfeacafcde383284164280e4217f82d2fcc3eeb49988953692",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_11_FINAL_ACCEPTANCE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_11_FINAL_ACCEPTANCE.md",
+      "size": 25190,
+      "sha256_source": "04cb5c5faf68b429b6059a8c048610c9f011ae6e70a4e4d6c9100df9e4b2bbdc",
+      "sha256_destination": "04cb5c5faf68b429b6059a8c048610c9f011ae6e70a4e4d6c9100df9e4b2bbdc",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_6_4_FINAL_REPORT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_6_4_FINAL_REPORT.md",
+      "size": 13275,
+      "sha256_source": "4b94535744421194b588fa366a86b7f2b15aae635f8e90f71922f7db0224895e",
+      "sha256_destination": "4b94535744421194b588fa366a86b7f2b15aae635f8e90f71922f7db0224895e",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_1_TOOL_CONTRACT_TESTS.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_1_TOOL_CONTRACT_TESTS.md",
+      "size": 11904,
+      "sha256_source": "32a3d5bfef97cc48ad93dcdfdc3bbe36654bc29b123810cba6b40ada6f185d87",
+      "sha256_destination": "32a3d5bfef97cc48ad93dcdfdc3bbe36654bc29b123810cba6b40ada6f185d87",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_2_TOOL_BEHAVIOR_TESTS.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_2_TOOL_BEHAVIOR_TESTS.md",
+      "size": 10196,
+      "sha256_source": "1f97e3096dceadc19a590db64e6cb3e57f018a9f2ff3e3018304cefc0cc6d413",
+      "sha256_destination": "1f97e3096dceadc19a590db64e6cb3e57f018a9f2ff3e3018304cefc0cc6d413",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_3_SERVER_PROTOCOL_HARNESS.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_3_SERVER_PROTOCOL_HARNESS.md",
+      "size": 16638,
+      "sha256_source": "3a676bdc9c046b65e52a14b5eed52171c00db77f0ad803a588a29e33acb26680",
+      "sha256_destination": "3a676bdc9c046b65e52a14b5eed52171c00db77f0ad803a588a29e33acb26680",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_4_TEST_DATA_MUTATION_FIXTURES.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_4_TEST_DATA_MUTATION_FIXTURES.md",
+      "size": 20319,
+      "sha256_source": "0874b3a00a671ee87a84b421fc51c34e674099edff3b6f71338201c5fcba1da0",
+      "sha256_destination": "0874b3a00a671ee87a84b421fc51c34e674099edff3b6f71338201c5fcba1da0",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_5_TEST_ACCEPTANCE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_5_TEST_ACCEPTANCE.md",
+      "size": 32772,
+      "sha256_source": "5e00d27b9ce110d96fd112c23671dbc737fbab141b1f9bf06bbb7622cdb48d40",
+      "sha256_destination": "5e00d27b9ce110d96fd112c23671dbc737fbab141b1f9bf06bbb7622cdb48d40",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_7_TEST_ARCHITECTURE_COVERAGE_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_7_TEST_ARCHITECTURE_COVERAGE_PREFLIGHT.md",
+      "size": 30499,
+      "sha256_source": "1f55ec5fad4ee91773dca6ed165fa0716759424a218658aecae069928b2ce658",
+      "sha256_destination": "1f55ec5fad4ee91773dca6ed165fa0716759424a218658aecae069928b2ce658",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_1_ARCPY_EXECUTION_CONTEXT_RECOVERY.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_1_ARCPY_EXECUTION_CONTEXT_RECOVERY.md",
+      "size": 21494,
+      "sha256_source": "fad30a759531ccabe20363e2a9d8a9f710984890d10f4ce1b7644d399c79300b",
+      "sha256_destination": "fad30a759531ccabe20363e2a9d8a9f710984890d10f4ce1b7644d399c79300b",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_1_REAL_FIXTURE_PREPARATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_1_REAL_FIXTURE_PREPARATION.md",
+      "size": 25924,
+      "sha256_source": "37834bccde2096ccca408de933e69c9c30107eb44c8b58679ed66884088d96e3",
+      "sha256_destination": "37834bccde2096ccca408de933e69c9c30107eb44c8b58679ed66884088d96e3",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_1_UNIT_REGRESSION_RECOVERY.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_1_UNIT_REGRESSION_RECOVERY.md",
+      "size": 8523,
+      "sha256_source": "c3fd006f70d8013e28c8291e5bfb32f4fdb89f9a19b229fbf7f3fef6c73cbec2",
+      "sha256_destination": "c3fd006f70d8013e28c8291e5bfb32f4fdb89f9a19b229fbf7f3fef6c73cbec2",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_2_NATIVE_REAL_VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_2_NATIVE_REAL_VERIFICATION.md",
+      "size": 9508,
+      "sha256_source": "1d602b2031058cb732e8fab8852c934cafd9db0e2c003b0cf236d58d04b54682",
+      "sha256_destination": "1d602b2031058cb732e8fab8852c934cafd9db0e2c003b0cf236d58d04b54682",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_3_GP_ARCPY_REAL_VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_3_GP_ARCPY_REAL_VERIFICATION.md",
+      "size": 13297,
+      "sha256_source": "aa1b27da50d7cab7ce36c6841000886026dc43d2168864e7ed48d477acf25944",
+      "sha256_destination": "aa1b27da50d7cab7ce36c6841000886026dc43d2168864e7ed48d477acf25944",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_3_GP_OUTPUT_MANIFEST.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_3_GP_OUTPUT_MANIFEST.md",
+      "size": 1934,
+      "sha256_source": "8a1f1ee6d4a3cba4f4104dda9e40555e2c174e6e70bfee18e0e0b8977b9ac568",
+      "sha256_destination": "8a1f1ee6d4a3cba4f4104dda9e40555e2c174e6e70bfee18e0e0b8977b9ac568",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_4_MUTATION_CLEANUP_VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_4_MUTATION_CLEANUP_VERIFICATION.md",
+      "size": 20286,
+      "sha256_source": "914cde3c38ca2a1d052c2e19056c3e2715e8fee432035de0a46c9fa6a7a4773f",
+      "sha256_destination": "914cde3c38ca2a1d052c2e19056c3e2715e8fee432035de0a46c9fa6a7a4773f",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_5_EVIDENCE_CONSOLIDATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_5_EVIDENCE_CONSOLIDATION.md",
+      "size": 19380,
+      "sha256_source": "2585d3433e22912a4ad5acfc8e93b30f15501f6bddf8691a4d1b2f48fe86fc9a",
+      "sha256_destination": "2585d3433e22912a4ad5acfc8e93b30f15501f6bddf8691a4d1b2f48fe86fc9a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_8_REAL_VERIFICATION_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_8_REAL_VERIFICATION_PREFLIGHT.md",
+      "size": 34167,
+      "sha256_source": "f0df4ce103506ac2a9a8cf3346148e296ae6802059ba4d1701206cdc9a59d5d2",
+      "sha256_destination": "f0df4ce103506ac2a9a8cf3346148e296ae6802059ba4d1701206cdc9a59d5d2",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_05_9_FULL_MCP_E2E_VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_05_9_FULL_MCP_E2E_VERIFICATION.md",
+      "size": 19607,
+      "sha256_source": "448d78dfc8f093f25db6997821b663286f00f4cfd94f9f2cb1f043842888fd42",
+      "sha256_destination": "448d78dfc8f093f25db6997821b663286f00f4cfd94f9f2cb1f043842888fd42",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06.md",
+      "size": 19214,
+      "sha256_source": "b157f77fa37a45bb9a7e92cec8c882b7fc4bd84eb48afd7ab26d9d3d227caa95",
+      "sha256_destination": "b157f77fa37a45bb9a7e92cec8c882b7fc4bd84eb48afd7ab26d9d3d227caa95",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_1_CURSOR_AVAILABILITY.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_1_CURSOR_AVAILABILITY.md",
+      "size": 5089,
+      "sha256_source": "490ffb8143c99356dcde6ae59a033763b5053a51247e87c368297446ce1a166c",
+      "sha256_destination": "490ffb8143c99356dcde6ae59a033763b5053a51247e87c368297446ce1a166c",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_2_CURSOR_MCP_CONFIGURATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_2_CURSOR_MCP_CONFIGURATION.md",
+      "size": 4324,
+      "sha256_source": "ef5c0945210f7d5cd053f6d9163545ecc3768312dfa484bf02d44217089148c6",
+      "sha256_destination": "ef5c0945210f7d5cd053f6d9163545ecc3768312dfa484bf02d44217089148c6",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_3_CURSOR_CLIENT_LOAD.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_3_CURSOR_CLIENT_LOAD.md",
+      "size": 6377,
+      "sha256_source": "97938fa59bf69f4e96178913d29e1e6bafd3eb7cf5777ce3c5cf1e9346f1eda8",
+      "sha256_destination": "97938fa59bf69f4e96178913d29e1e6bafd3eb7cf5777ce3c5cf1e9346f1eda8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_4_CURSOR_MCP_CONNECTION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_4_CURSOR_MCP_CONNECTION.md",
+      "size": 9367,
+      "sha256_source": "eca835945c75cce564552bb7db7bdeeae95e9c6603b93161732463c23927d87b",
+      "sha256_destination": "eca835945c75cce564552bb7db7bdeeae95e9c6603b93161732463c23927d87b",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_CODEX_P0_MCP_CONNECTION_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_CODEX_P0_MCP_CONNECTION_GATE.md",
+      "size": 6313,
+      "sha256_source": "9689299d81e659a0d74977914224840debfa08d0f15d442cf8a8d6c2d0caa4fa",
+      "sha256_destination": "9689299d81e659a0d74977914224840debfa08d0f15d442cf8a8d6c2d0caa4fa",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_CURSOR_P1_MCP_CONNECTION_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_CURSOR_P1_MCP_CONNECTION_GATE.md",
+      "size": 8248,
+      "sha256_source": "cec4b3c8bfdfc470845d612771fd6b9496065ca1e4e2ff9198633dedffa0dc94",
+      "sha256_destination": "cec4b3c8bfdfc470845d612771fd6b9496065ca1e4e2ff9198633dedffa0dc94",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_DEEPSEEK_HARNESS_P1_MCP_CONNECTION_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_DEEPSEEK_HARNESS_P1_MCP_CONNECTION_GATE.md",
+      "size": 6419,
+      "sha256_source": "3d8557e0f1cd225e29515dd478460b202114d8417042b39a4e4ae1eda10cd739",
+      "sha256_destination": "3d8557e0f1cd225e29515dd478460b202114d8417042b39a4e4ae1eda10cd739",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_DEEPSEEK_HARNESS_P1_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_DEEPSEEK_HARNESS_P1_PREFLIGHT.md",
+      "size": 8323,
+      "sha256_source": "bee167ee1768a4a441cfbfe8b30171de6f2026c3316261664c1a499a4ed35f13",
+      "sha256_destination": "bee167ee1768a4a441cfbfe8b30171de6f2026c3316261664c1a499a4ed35f13",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_ENTRY_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_ENTRY_PREFLIGHT.md",
+      "size": 16672,
+      "sha256_source": "ee84e774eb5e96302497914d2f610dfb9bca0c26a769cdaf7132153630e47297",
+      "sha256_destination": "ee84e774eb5e96302497914d2f610dfb9bca0c26a769cdaf7132153630e47297",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_06_OVERALL_ACCEPTANCE_AUDIT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_06_OVERALL_ACCEPTANCE_AUDIT.md",
+      "size": 4976,
+      "sha256_source": "630b27b6d2649f74b3954e8dedd11e31d73c2eedea1c8287e14a70e7f9eb05b5",
+      "sha256_destination": "630b27b6d2649f74b3954e8dedd11e31d73c2eedea1c8287e14a70e7f9eb05b5",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07.md",
+      "size": 29940,
+      "sha256_source": "ecb871bb24f47d226b03239ac2a7ba39a67f9e31e542ae642706fd65003aee44",
+      "sha256_destination": "ecb871bb24f47d226b03239ac2a7ba39a67f9e31e542ae642706fd65003aee44",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_1_PACKAGE_RELEASE_IDENTITY.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_1_PACKAGE_RELEASE_IDENTITY.md",
+      "size": 7169,
+      "sha256_source": "016d7ed02de53f5bfbf4f0b9ec34597597cbbd3454115dd3e983e0747cc2b27a",
+      "sha256_destination": "016d7ed02de53f5bfbf4f0b9ec34597597cbbd3454115dd3e983e0747cc2b27a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_2_INSTALL_UNINSTALL_ROLLBACK.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_2_INSTALL_UNINSTALL_ROLLBACK.md",
+      "size": 7992,
+      "sha256_source": "c9b1f0450f0c3be5c54283ebf39c9e0a5500b776cc3ee59b48efae10128e5b75",
+      "sha256_destination": "c9b1f0450f0c3be5c54283ebf39c9e0a5500b776cc3ee59b48efae10128e5b75",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_3_VERSION_COMPATIBILITY.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_3_VERSION_COMPATIBILITY.md",
+      "size": 5188,
+      "sha256_source": "b7b8d5a605eff043b43de09afef493bb57e441c0f1e154752a36a1585230477d",
+      "sha256_destination": "b7b8d5a605eff043b43de09afef493bb57e441c0f1e154752a36a1585230477d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_4_MULTI_CLIENT_HANDOFF.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_4_MULTI_CLIENT_HANDOFF.md",
+      "size": 6270,
+      "sha256_source": "989e8528e74045b4ec7f846f7363743e123fe60201db4f644b44b159a693d48b",
+      "sha256_destination": "989e8528e74045b4ec7f846f7363743e123fe60201db4f644b44b159a693d48b",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_5_1_HEALTH_LOGGING_FOUNDATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_5_1_HEALTH_LOGGING_FOUNDATION.md",
+      "size": 12762,
+      "sha256_source": "8499d5f5e76f5d6fdad7272ff457e72f9329c4d83f1bda3113432722e0ba3e46",
+      "sha256_destination": "8499d5f5e76f5d6fdad7272ff457e72f9329c4d83f1bda3113432722e0ba3e46",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_5_2_RUNTIME_HEALTH_STATUS_UX.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_5_2_RUNTIME_HEALTH_STATUS_UX.md",
+      "size": 10601,
+      "sha256_source": "6c38f25e38ded984000263dc1d522b59885c508b67933b08edd67830c487fe5f",
+      "sha256_destination": "6c38f25e38ded984000263dc1d522b59885c508b67933b08edd67830c487fe5f",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_5_3_STRUCTURED_LOGGING_DIAGNOSTIC_EXPORT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_5_3_STRUCTURED_LOGGING_DIAGNOSTIC_EXPORT.md",
+      "size": 12071,
+      "sha256_source": "dda1212161ac576ba1f8fdecdbdbd58c32bbb6175ba46cdadeb27776aefcb90d",
+      "sha256_destination": "dda1212161ac576ba1f8fdecdbdbd58c32bbb6175ba46cdadeb27776aefcb90d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_5_STATUS_HEALTH_LOGGING_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_5_STATUS_HEALTH_LOGGING_PREFLIGHT.md",
+      "size": 24365,
+      "sha256_source": "ab965717b41efde1128cbda958660cafeae1c81eead2fbcdf0336bc13d448316",
+      "sha256_destination": "ab965717b41efde1128cbda958660cafeae1c81eead2fbcdf0336bc13d448316",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_6_1_RELEASE_PORTABILITY_FOUNDATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_6_1_RELEASE_PORTABILITY_FOUNDATION.md",
+      "size": 10420,
+      "sha256_source": "b8346bf86e9bfd2985bec0e798876f7cff26ebfe144df364cafa3df24da34a62",
+      "sha256_destination": "b8346bf86e9bfd2985bec0e798876f7cff26ebfe144df364cafa3df24da34a62",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_6_2_USER_DOCUMENTATION_ONE_COMMAND.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_6_2_USER_DOCUMENTATION_ONE_COMMAND.md",
+      "size": 13167,
+      "sha256_source": "fb2f6041cb30661027cdc1e815e8a0a5e96aaac0f8125aad79bb7f2f1dc30eb8",
+      "sha256_destination": "fb2f6041cb30661027cdc1e815e8a0a5e96aaac0f8125aad79bb7f2f1dc30eb8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_6_USER_DOCUMENTATION_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_6_USER_DOCUMENTATION_PREFLIGHT.md",
+      "size": 21416,
+      "sha256_source": "60d56ed73081d79f07a75b0a7930fbf6f6a05137184969598d24a76485cbae87",
+      "sha256_destination": "60d56ed73081d79f07a75b0a7930fbf6f6a05137184969598d24a76485cbae87",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_1_FRESH_BUILD_TEST_PACKAGE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_1_FRESH_BUILD_TEST_PACKAGE.md",
+      "size": 5313,
+      "sha256_source": "32120c0f885166613932b15f1086e78f5c6ce3a14a42215af1480cb228482d08",
+      "sha256_destination": "32120c0f885166613932b15f1086e78f5c6ce3a14a42215af1480cb228482d08",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_2_CONTROLLED_TRANSACTIONAL_INSTALL.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_2_CONTROLLED_TRANSACTIONAL_INSTALL.md",
+      "size": 5787,
+      "sha256_source": "22a5c645bf127ff02bbec0481f866b7a8fdf7b54578fa63728a62b8e27afc97d",
+      "sha256_destination": "22a5c645bf127ff02bbec0481f866b7a8fdf7b54578fa63728a62b8e27afc97d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_3_INSTALLED_RUNTIME_UI_MANAGED_LOG_DIAGNOSTICS.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_3_INSTALLED_RUNTIME_UI_MANAGED_LOG_DIAGNOSTICS.md",
+      "size": 6982,
+      "sha256_source": "96e7a45ad601b5657cf32de3788e68a9208ada586e207295cbc07d67e57702b1",
+      "sha256_destination": "96e7a45ad601b5657cf32de3788e68a9208ada586e207295cbc07d67e57702b1",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_4_1_CODEX_P0_FRESH_CLIENT_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_4_1_CODEX_P0_FRESH_CLIENT_GATE.md",
+      "size": 11881,
+      "sha256_source": "95e623fd42b2e26dc3cf42c7de643f82cec697010daf25d9e18b894dd12d9d4e",
+      "sha256_destination": "95e623fd42b2e26dc3cf42c7de643f82cec697010daf25d9e18b894dd12d9d4e",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_4_2_CURSOR_P1_FRESH_CLIENT_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_4_2_CURSOR_P1_FRESH_CLIENT_GATE.md",
+      "size": 11401,
+      "sha256_source": "71e2445108ee3c6dea3125e244ad996ccf8a4b61b39cc1696d9efcccab15b094",
+      "sha256_destination": "71e2445108ee3c6dea3125e244ad996ccf8a4b61b39cc1696d9efcccab15b094",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_4_3_DEEPSEEK_P1_FRESH_CLIENT_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_4_3_DEEPSEEK_P1_FRESH_CLIENT_GATE.md",
+      "size": 12458,
+      "sha256_source": "c6f88e60c7ca7f4507f3f03d7599f6b801d8712ebceb98b02e267593510db6b1",
+      "sha256_destination": "c6f88e60c7ca7f4507f3f03d7599f6b801d8712ebceb98b02e267593510db6b1",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_4_4_MULTI_CLIENT_CONSOLIDATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_4_4_MULTI_CLIENT_CONSOLIDATION.md",
+      "size": 16730,
+      "sha256_source": "04f22c4ee4bb54ea94690d3b53c3f487469e381214f68269a74f175d4d29a2e8",
+      "sha256_destination": "04f22c4ee4bb54ea94690d3b53c3f487469e381214f68269a74f175d4d29a2e8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_5_ROLLBACK_FINAL_STATE_PROTECTED_ASSET_RECONCILIATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_5_ROLLBACK_FINAL_STATE_PROTECTED_ASSET_RECONCILIATION.md",
+      "size": 12131,
+      "sha256_source": "879ea458e01f4292966e1deb9a0a4d2b448652d11c1293d143882054b20c584e",
+      "sha256_destination": "879ea458e01f4292966e1deb9a0a4d2b448652d11c1293d143882054b20c584e",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_ENTRY_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_ENTRY_PREFLIGHT.md",
+      "size": 10758,
+      "sha256_source": "adc0e851e3308b96a3e312b6301747887310a0d96bb4a40519732d288123278e",
+      "sha256_destination": "adc0e851e3308b96a3e312b6301747887310a0d96bb4a40519732d288123278e",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_7_OVERALL_RELEASE_ACCEPTANCE_CANDIDATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_7_OVERALL_RELEASE_ACCEPTANCE_CANDIDATE.md",
+      "size": 14253,
+      "sha256_source": "e26567c65e0282ed1333704d1a667137a6308744d445aa92f5d9d794a5b7890d",
+      "sha256_destination": "e26567c65e0282ed1333704d1a667137a6308744d445aa92f5d9d794a5b7890d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_8_FINAL_HANDOFF_CANDIDATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_8_FINAL_HANDOFF_CANDIDATE.md",
+      "size": 13214,
+      "sha256_source": "66e259134f35af1beede48e7b601974e6b75eb830e2b22b5bb9c28e181ce3de5",
+      "sha256_destination": "66e259134f35af1beede48e7b601974e6b75eb830e2b22b5bb9c28e181ce3de5",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_ENTRY_PREFLIGHT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_ENTRY_PREFLIGHT.md",
+      "size": 4921,
+      "sha256_source": "5ddf7d2206814744909e98bfb211ab8a2b2430fb2099a07504bf2c4220b3aa6f",
+      "sha256_destination": "5ddf7d2206814744909e98bfb211ab8a2b2430fb2099a07504bf2c4220b3aa6f",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_FINAL_PROJECT_ACCEPTANCE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_FINAL_PROJECT_ACCEPTANCE.md",
+      "size": 5917,
+      "sha256_source": "e7d217ad0788065f0bb30068ea04fe111e7c8e49ece38b3848933031445b6f62",
+      "sha256_destination": "e7d217ad0788065f0bb30068ea04fe111e7c8e49ece38b3848933031445b6f62",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_FINAL_PROJECT_ACCEPTANCE_CANDIDATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_FINAL_PROJECT_ACCEPTANCE_CANDIDATE.md",
+      "size": 10589,
+      "sha256_source": "7518f66919097ff2b2f6b1214500d67d2a7771bb705e71537580d6d0f400a1f3",
+      "sha256_destination": "7518f66919097ff2b2f6b1214500d67d2a7771bb705e71537580d6d0f400a1f3",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/PHASE_07_IMPLEMENTATION_PLAN.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\PHASE_07_IMPLEMENTATION_PLAN.md",
+      "size": 17280,
+      "sha256_source": "e32d0f7d26b8bb63a936aa41b99f527765be4193588ac74ccb4679dce4c1a9cc",
+      "sha256_destination": "e32d0f7d26b8bb63a936aa41b99f527765be4193588ac74ccb4679dce4c1a9cc",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/phases/POST_PHASE_05_6_TRANSITION_REPORT.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\phases\\POST_PHASE_05_6_TRANSITION_REPORT.md",
+      "size": 15022,
+      "sha256_source": "71bac42d167a83df0f0c07067926ee1a31fe757b11bbf74ac264a533a9560eb8",
+      "sha256_destination": "71bac42d167a83df0f0c07067926ee1a31fe757b11bbf74ac264a533a9560eb8",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/POST_1_0_2_PHASE_8_14_PLAN_V2.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\POST_1_0_2_PHASE_8_14_PLAN_V2.md",
+      "size": 18114,
+      "sha256_source": "b4c907c1c729b493a86f876056f3eb9fbd824b36da7b188332c00f7b817bd9ad",
+      "sha256_destination": "b4c907c1c729b493a86f876056f3eb9fbd824b36da7b188332c00f7b817bd9ad",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/PROJECT_RULES.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\PROJECT_RULES.md",
+      "size": 3856,
+      "sha256_source": "7c4acadb4e4b3cb21c12c3315cc0551d3ff01a24295c6df65bcf2486714c098a",
+      "sha256_destination": "7c4acadb4e4b3cb21c12c3315cc0551d3ff01a24295c6df65bcf2486714c098a",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/PROJECT_STATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\PROJECT_STATE.md",
+      "size": 110399,
+      "sha256_source": "d316d35d5979eea6a65beb2424ed56b5a2f9832c31f5b2becfbf0823ab6b15b0",
+      "sha256_destination": "d316d35d5979eea6a65beb2424ed56b5a2f9832c31f5b2becfbf0823ab6b15b0",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/PROJECT_STRUCTURE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\PROJECT_STRUCTURE.md",
+      "size": 5539,
+      "sha256_source": "407a345db0ad31c3280e4a16cf324882c516be05c3dcdea420c80491886922f0",
+      "sha256_destination": "407a345db0ad31c3280e4a16cf324882c516be05c3dcdea420c80491886922f0",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/RELEASE_NOTES_1.0.2.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\RELEASE_NOTES_1.0.2.md",
+      "size": 6847,
+      "sha256_source": "9be6c8c17c0ed6a2f7721099f678fd6e5adf57de5ff8bfd5711c43726ab93116",
+      "sha256_destination": "9be6c8c17c0ed6a2f7721099f678fd6e5adf57de5ff8bfd5711c43726ab93116",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/RELEASE_WORKFLOW.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\RELEASE_WORKFLOW.md",
+      "size": 7392,
+      "sha256_source": "bb9c2b7325b2ff2f905a1567b32bce0d1d10f949ecae882afa088ac21c7d6101",
+      "sha256_destination": "bb9c2b7325b2ff2f905a1567b32bce0d1d10f949ecae882afa088ac21c7d6101",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/SHARING_AND_SIMPLE_INSTALL.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\SHARING_AND_SIMPLE_INSTALL.md",
+      "size": 3826,
+      "sha256_source": "dd83cdd3e8bc294117993874703bf681b621ec41d2220bb89ed1b3d857a6d3e9",
+      "sha256_destination": "dd83cdd3e8bc294117993874703bf681b621ec41d2220bb89ed1b3d857a6d3e9",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/THREADING.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\THREADING.md",
+      "size": 1276,
+      "sha256_source": "949e3b4134979ff17d784807605d0c0b2e4c04193376ee15226f270f6d8e39ea",
+      "sha256_destination": "949e3b4134979ff17d784807605d0c0b2e4c04193376ee15226f270f6d8e39ea",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/TOOL_ARCHITECTURE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\TOOL_ARCHITECTURE.md",
+      "size": 2359,
+      "sha256_source": "7817208babe65f9806a11158386307f641f7a0bd2607183cbc597c89a6adc19e",
+      "sha256_destination": "7817208babe65f9806a11158386307f641f7a0bd2607183cbc597c89a6adc19e",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/TOOL_CATALOG.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\TOOL_CATALOG.md",
+      "size": 4658,
+      "sha256_source": "b683b6ffddc5c59a90ec9012c46e1d018a8cf64a3ca4329dd70bceb69f603fa3",
+      "sha256_destination": "b683b6ffddc5c59a90ec9012c46e1d018a8cf64a3ca4329dd70bceb69f603fa3",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/TOOL_TESTING.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\TOOL_TESTING.md",
+      "size": 18172,
+      "sha256_source": "08bf449affbfb090ea22b6cfa53a7dbd72e61572e5b4d7c80222aa7110fee78d",
+      "sha256_destination": "08bf449affbfb090ea22b6cfa53a7dbd72e61572e5b4d7c80222aa7110fee78d",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/USER_GUIDE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\USER_GUIDE.md",
+      "size": 11324,
+      "sha256_source": "15da4d0b734eae7a4fba18f23ae170494ab10c1196659c29ccd734119b525440",
+      "sha256_destination": "15da4d0b734eae7a4fba18f23ae170494ab10c1196659c29ccd734119b525440",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/USER_GUIDE_R5_INDEPENDENT_GATE.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\USER_GUIDE_R5_INDEPENDENT_GATE.md",
+      "size": 1862,
+      "sha256_source": "7be37c0985d8b355241a5d1d3b5ee3ac9162452021d2ebd86146ef4cfd723510",
+      "sha256_destination": "7be37c0985d8b355241a5d1d3b5ee3ac9162452021d2ebd86146ef4cfd723510",
+      "status": "OK"
+    },
+    {
+      "path": "Docs/VERIFICATION.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Docs\\VERIFICATION.md",
+      "size": 124391,
+      "sha256_source": "cbdce5996db30bf272c935676ff8e670c0325984ac6ad307aaa4e503fca776a7",
+      "sha256_destination": "cbdce5996db30bf272c935676ff8e670c0325984ac6ad307aaa4e503fca776a7",
+      "status": "OK"
+    },
+    {
+      "path": "README.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\README.md",
+      "size": 8826,
+      "sha256_source": "8d39a5f908f9729a638d64f9048944ea9179cc7b66868725adeb76ed6d790104",
+      "sha256_destination": "8d39a5f908f9729a638d64f9048944ea9179cc7b66868725adeb76ed6d790104",
+      "status": "OK"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip",
+      "source": "D:\\ArcGIS-Pro-MCP\\Release\\ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip",
+      "size": 331679,
+      "sha256_source": "3924f9b3fd122a171a3c15ccfd3a0b4aa8636e6f8dfa6dbf34169a33229ab652",
+      "sha256_destination": "3924f9b3fd122a171a3c15ccfd3a0b4aa8636e6f8dfa6dbf34169a33229ab652",
+      "status": "OK"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip.sha256",
+      "source": "D:\\ArcGIS-Pro-MCP\\Release\\ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip.sha256",
+      "size": 116,
+      "sha256_source": "13bbe5d904bd8511a8659b38638988f7fbc5a56bbbd7bd5048623dccd8b2fe3a",
+      "sha256_destination": "13bbe5d904bd8511a8659b38638988f7fbc5a56bbbd7bd5048623dccd8b2fe3a",
+      "status": "OK"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/bundle-manifest.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Release\\ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64\\bundle-manifest.json",
+      "size": 4358,
+      "sha256_source": "f45d808c77e0caaddc6960a344163eb35094fe87d5e5ce97c5be777489cf9e6c",
+      "sha256_destination": "f45d808c77e0caaddc6960a344163eb35094fe87d5e5ce97c5be777489cf9e6c",
+      "status": "OK"
+    },
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/payload/ArcGISProMCP.Compatibility.release-manifest.json",
+      "source": "D:\\ArcGIS-Pro-MCP\\Release\\ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64\\payload\\ArcGISProMCP.Compatibility.release-manifest.json",
+      "size": 7952,
+      "sha256_source": "335a652ae3cfb880e63f01afc03adf0d1e8c3c31e2041e2529ea68429e912393",
+      "sha256_destination": "335a652ae3cfb880e63f01afc03adf0d1e8c3c31e2041e2529ea68429e912393",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/build-one-click-package.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\build-one-click-package.ps1",
+      "size": 8538,
+      "sha256_source": "cc214402b4abc81d09141f4abb48c155c255c2b23ca9e3d44eb7c417ca33651b",
+      "sha256_destination": "cc214402b4abc81d09141f4abb48c155c255c2b23ca9e3d44eb7c417ca33651b",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/build-share-package.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\build-share-package.ps1",
+      "size": 6762,
+      "sha256_source": "dde5357c6c0dbd4c6a9a3c93d6e7bdd4533ddaf8258ad45dc99a798b51bf7944",
+      "sha256_destination": "dde5357c6c0dbd4c6a9a3c93d6e7bdd4533ddaf8258ad45dc99a798b51bf7944",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/check-compatibility.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\check-compatibility.ps1",
+      "size": 10552,
+      "sha256_source": "77f7de243f95df35b5303ecf60bba1ee23645d8567a94517736ca2dcfc1c238d",
+      "sha256_destination": "77f7de243f95df35b5303ecf60bba1ee23645d8567a94517736ca2dcfc1c238d",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/client-config.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\client-config.ps1",
+      "size": 14925,
+      "sha256_source": "dc39d9889d46ce476a7903b50a4f6ba6048ea98855483593448c268d2f14683d",
+      "sha256_destination": "dc39d9889d46ce476a7903b50a4f6ba6048ea98855483593448c268d2f14683d",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/dev-env.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\dev-env.ps1",
+      "size": 989,
+      "sha256_source": "c6ac3fe03d53c13aed3b9c2b99cf9bfc31ec2647cd96c842b44e1d7f1ad91502",
+      "sha256_destination": "c6ac3fe03d53c13aed3b9c2b99cf9bfc31ec2647cd96c842b44e1d7f1ad91502",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/one-click-setup.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\one-click-setup.ps1",
+      "size": 110240,
+      "sha256_source": "fe72ef4def97f370787371a4ddfe2e66c04f59073213b20f981d64a31e724f78",
+      "sha256_destination": "fe72ef4def97f370787371a4ddfe2e66c04f59073213b20f981d64a31e724f78",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/package-addin.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\package-addin.ps1",
+      "size": 17353,
+      "sha256_source": "7c00106914287bed7d4b2cc3cfdcbc064b74a5834aa32c6c98662cfcae2f8180",
+      "sha256_destination": "7c00106914287bed7d4b2cc3cfdcbc064b74a5834aa32c6c98662cfcae2f8180",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/release-transaction.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\release-transaction.ps1",
+      "size": 27992,
+      "sha256_source": "cf69c95705c7e9a6542724286a19e0539ab8acb2d70a1858a6bfb2c555d9978d",
+      "sha256_destination": "cf69c95705c7e9a6542724286a19e0539ab8acb2d70a1858a6bfb2c555d9978d",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/share-setup.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\share-setup.ps1",
+      "size": 15622,
+      "sha256_source": "254ea1a862673929d62b4d1a3a3107315e6c79241c7d22231f24f79a45c6fbeb",
+      "sha256_destination": "254ea1a862673929d62b4d1a3a3107315e6c79241c7d22231f24f79a45c6fbeb",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/user-workflow.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\user-workflow.ps1",
+      "size": 26240,
+      "sha256_source": "214e3e4b3a6c398f5df2fa10773fad7bb05691b4544420a3ccaad53e2c59103a",
+      "sha256_destination": "214e3e4b3a6c398f5df2fa10773fad7bb05691b4544420a3ccaad53e2c59103a",
+      "status": "OK"
+    },
+    {
+      "path": "scripts/verify-one-click-package.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\scripts\\verify-one-click-package.ps1",
+      "size": 10269,
+      "sha256_source": "2a063a0cef444dc4d0be26169062d70cdcc38c4fee7750c8b2f5cfcf004200cf",
+      "sha256_destination": "2a063a0cef444dc4d0be26169062d70cdcc38c4fee7750c8b2f5cfcf004200cf",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/ArcGISProMCP.Compatibility.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\ArcGISProMCP.Compatibility.csproj",
+      "size": 3137,
+      "sha256_source": "2b55f3e1a27172a823a4f405c57b76d8134e5a97d4d58e2e6f1d39c389f1d41e",
+      "sha256_destination": "2b55f3e1a27172a823a4f405c57b76d8134e5a97d4d58e2e6f1d39c389f1d41e",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Composition.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Composition.cs",
+      "size": 9974,
+      "sha256_source": "453e3619bfa5c4175be7dd8afde901aac37249174b3d0ae0c7bd53ee51c29797",
+      "sha256_destination": "453e3619bfa5c4175be7dd8afde901aac37249174b3d0ae0c7bd53ee51c29797",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Config.daml",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Config.daml",
+      "size": 3186,
+      "sha256_source": "0beac885bfb0a096bf1e6f6a315765aa012f7a67d80f34f70bb3bf28bacee713",
+      "sha256_destination": "0beac885bfb0a096bf1e6f6a315765aa012f7a67d80f34f70bb3bf28bacee713",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Controls/DiagnosticsButton.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Controls\\DiagnosticsButton.cs",
+      "size": 1857,
+      "sha256_source": "372c52d8df73d8e051b2a11c569f6b29f94de56f64a1ed1630cb640aa004bd5e",
+      "sha256_destination": "372c52d8df73d8e051b2a11c569f6b29f94de56f64a1ed1630cb640aa004bd5e",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Controls/RunTestsButton.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Controls\\RunTestsButton.cs",
+      "size": 755,
+      "sha256_source": "748d281f319584168ee2163a4c6d4f54f0df1bc24385f0d0bff4e5f313900e0f",
+      "sha256_destination": "748d281f319584168ee2163a4c6d4f54f0df1bc24385f0d0bff4e5f313900e0f",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Controls/StartButton.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Controls\\StartButton.cs",
+      "size": 958,
+      "sha256_source": "d095877857ecf92523ca49a12ad6dc491e50f74518092abf25ac59fae35fc527",
+      "sha256_destination": "d095877857ecf92523ca49a12ad6dc491e50f74518092abf25ac59fae35fc527",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Controls/StatusButton.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Controls\\StatusButton.cs",
+      "size": 1027,
+      "sha256_source": "a58d0c1f4e845dc70f1d12e7609e8c84e8a363f6a19db7fef9fb25641bda4e4d",
+      "sha256_destination": "a58d0c1f4e845dc70f1d12e7609e8c84e8a363f6a19db7fef9fb25641bda4e4d",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Controls/StopButton.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Controls\\StopButton.cs",
+      "size": 868,
+      "sha256_source": "cf458e3235edc5744e48032cbc88b421c7b30e316622b303426aaa666ca8bccd",
+      "sha256_destination": "cf458e3235edc5744e48032cbc88b421c7b30e316622b303426aaa666ca8bccd",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Health/RuntimeHealthFactsProvider.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Health\\RuntimeHealthFactsProvider.cs",
+      "size": 3616,
+      "sha256_source": "f5dceaca901a635d28849eb25da170b8ee1cc6ab94d2b5b9d190723f3c8687a9",
+      "sha256_destination": "f5dceaca901a635d28849eb25da170b8ee1cc6ab94d2b5b9d190723f3c8687a9",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Hosting/ArcGISHost.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Hosting\\ArcGISHost.cs",
+      "size": 1525,
+      "sha256_source": "0585b070e90888a22efaffca097bc347a91f5234937e3dad57e6913b2269b729",
+      "sha256_destination": "0585b070e90888a22efaffca097bc347a91f5234937e3dad57e6913b2269b729",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Images/AddInIcon.png",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Images\\AddInIcon.png",
+      "size": 357,
+      "sha256_source": "dde9f5dd359f02fcd7adc9feaaf8e8e7b7f7d0e627f82b4c79e28994f4d10874",
+      "sha256_destination": "dde9f5dd359f02fcd7adc9feaaf8e8e7b7f7d0e627f82b4c79e28994f4d10874",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Logging/FileLogger.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Logging\\FileLogger.cs",
+      "size": 1778,
+      "sha256_source": "16d21ac05360019127bb1b2f7a10f5dfe9a5bf3b7dd8f3e9a6905afa8c5294be",
+      "sha256_destination": "16d21ac05360019127bb1b2f7a10f5dfe9a5bf3b7dd8f3e9a6905afa8c5294be",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Logging/ManagedFileLogger.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Logging\\ManagedFileLogger.cs",
+      "size": 2260,
+      "sha256_source": "ff61250cc627e108499339cb06e362ceb11b785c2f541f1840e40ca99dbfe022",
+      "sha256_destination": "ff61250cc627e108499339cb06e362ceb11b785c2f541f1840e40ca99dbfe022",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Module1.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Module1.cs",
+      "size": 1854,
+      "sha256_source": "d6edd89466c6b1985bcb76d8de670b3881934d6098db13c9e4e89c85642e8f8f",
+      "sha256_destination": "d6edd89466c6b1985bcb76d8de670b3881934d6098db13c9e4e89c85642e8f8f",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/SelfTestRunner.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\SelfTestRunner.cs",
+      "size": 3458,
+      "sha256_source": "4f602b92245d5b2e34137eeef31b4cf86a81e0bb3fe56455d222c4a391862627",
+      "sha256_destination": "4f602b92245d5b2e34137eeef31b4cf86a81e0bb3fe56455d222c4a391862627",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/AttributeService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\AttributeService.cs",
+      "size": 7143,
+      "sha256_source": "4b967f571fac2004f32fee1229f4df8fbbc790a4adbfb0f3aac72ce41b4f77a2",
+      "sha256_destination": "4b967f571fac2004f32fee1229f4df8fbbc790a4adbfb0f3aac72ce41b4f77a2",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/DataManagementService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\DataManagementService.cs",
+      "size": 1427,
+      "sha256_source": "1f8ccc07ff2816a63b09131ae99ad53115b2c3a0db8f6fbe470e373104d13070",
+      "sha256_destination": "1f8ccc07ff2816a63b09131ae99ad53115b2c3a0db8f6fbe470e373104d13070",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/GeoprocessingExecutor.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\GeoprocessingExecutor.cs",
+      "size": 1751,
+      "sha256_source": "4d902bfa7871dbd073ce778950e656377d19949b08e16613285c14ec3f8cd220",
+      "sha256_destination": "4d902bfa7871dbd073ce778950e656377d19949b08e16613285c14ec3f8cd220",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/GeoprocessingService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\GeoprocessingService.cs",
+      "size": 2229,
+      "sha256_source": "1cf977fe7a1765a06da94936915cdbdf070ec2bc0917f7394a5bb4f16905a1fe",
+      "sha256_destination": "1cf977fe7a1765a06da94936915cdbdf070ec2bc0917f7394a5bb4f16905a1fe",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/LayerService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\LayerService.cs",
+      "size": 6241,
+      "sha256_source": "ec09dbd9b7c4848edad177179171c61a4d356a3da927c5c9349467acd10ff69d",
+      "sha256_destination": "ec09dbd9b7c4848edad177179171c61a4d356a3da927c5c9349467acd10ff69d",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/LayoutService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\LayoutService.cs",
+      "size": 1086,
+      "sha256_source": "31483c44c75606c4966b5ae5999bfbe4810d63da1855e3e58b9d1923d49a58fc",
+      "sha256_destination": "31483c44c75606c4966b5ae5999bfbe4810d63da1855e3e58b9d1923d49a58fc",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/LicenseService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\LicenseService.cs",
+      "size": 1948,
+      "sha256_source": "aa8f0a2d5ff3d36821ecda01200cd5dd1da7ba27ad5d7e63b247f815e4363ebc",
+      "sha256_destination": "aa8f0a2d5ff3d36821ecda01200cd5dd1da7ba27ad5d7e63b247f815e4363ebc",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/MapService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\MapService.cs",
+      "size": 2053,
+      "sha256_source": "91fae24e9b98dc740688c4fcaef275dfcde8dcf01c6a29bc815a7e29e1c46189",
+      "sha256_destination": "91fae24e9b98dc740688c4fcaef275dfcde8dcf01c6a29bc815a7e29e1c46189",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/ProjectService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\ProjectService.cs",
+      "size": 2679,
+      "sha256_source": "c7e06bf2e54f520f17af657c56d68560051b9a6b192650e787590c7181087bb3",
+      "sha256_destination": "c7e06bf2e54f520f17af657c56d68560051b9a6b192650e787590c7181087bb3",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/RasterService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\RasterService.cs",
+      "size": 1336,
+      "sha256_source": "cfdb75f289a135d3fc979e0aed2c816a3b1498339cc48e778149e5495c21cdd6",
+      "sha256_destination": "cfdb75f289a135d3fc979e0aed2c816a3b1498339cc48e778149e5495c21cdd6",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/SelectionService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\SelectionService.cs",
+      "size": 3895,
+      "sha256_source": "4e37f9249add6feb95fdc0d18a140f6d1b76e8b1bc6d417306adc2ecf7aad8e2",
+      "sha256_destination": "4e37f9249add6feb95fdc0d18a140f6d1b76e8b1bc6d417306adc2ecf7aad8e2",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/VersionService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Compatibility\\Services\\VersionService.cs",
+      "size": 1416,
+      "sha256_source": "f477bc75cd43467e9e7e10cfe54af02063fa71fafe1242d68e58806fc3dea69b",
+      "sha256_destination": "f477bc75cd43467e9e7e10cfe54af02063fa71fafe1242d68e58806fc3dea69b",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Current/README.md",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.Current\\README.md",
+      "size": 355,
+      "sha256_source": "d2da704272704ec9300d68951d018864a32ac59ffe78bae9e39d42bf02508208",
+      "sha256_destination": "d2da704272704ec9300d68951d018864a32ac59ffe78bae9e39d42bf02508208",
+      "status": "OK"
+    },
+    {
+      "path": "Source/ArcGISProMCP.PythonBridge/bridge_runner.py",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\ArcGISProMCP.PythonBridge\\bridge_runner.py",
+      "size": 15494,
+      "sha256_source": "40b2a00061eb35ea83a7729e9e56fc020b020c2476e2d60123ca2356b33a6ca7",
+      "sha256_destination": "40b2a00061eb35ea83a7729e9e56fc020b020c2476e2d60123ca2356b33a6ca7",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Configuration/ArcGISProMCP.Configuration.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Configuration\\ArcGISProMCP.Configuration.csproj",
+      "size": 326,
+      "sha256_source": "0956ddb1a670de595ba3146609d6e28015b9a31bea25bf7ebbeca221a53da231",
+      "sha256_destination": "0956ddb1a670de595ba3146609d6e28015b9a31bea25bf7ebbeca221a53da231",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Configuration/McpServerOptions.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Configuration\\McpServerOptions.cs",
+      "size": 492,
+      "sha256_source": "d86eed2f9bab2d928580c1b4f4657d62ab2a3b3f1e6e6e3a0e22721c4a6d099f",
+      "sha256_destination": "d86eed2f9bab2d928580c1b4f4657d62ab2a3b3f1e6e6e3a0e22721c4a6d099f",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Configuration/MCPSettings.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Configuration\\MCPSettings.cs",
+      "size": 3999,
+      "sha256_source": "9220399a156eddf0e6b90395bc9b86a105ad62229e194b5436787bc27e2a4d8d",
+      "sha256_destination": "9220399a156eddf0e6b90395bc9b86a105ad62229e194b5436787bc27e2a4d8d",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/ArcGISProMCP.Core.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\ArcGISProMCP.Core.csproj",
+      "size": 523,
+      "sha256_source": "15bd756f48ea579fe6308a619a0dcb9d681af2d158c02e473e931270fb8609d7",
+      "sha256_destination": "15bd756f48ea579fe6308a619a0dcb9d681af2d158c02e473e931270fb8609d7",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Container/ServiceContainer.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Container\\ServiceContainer.cs",
+      "size": 2293,
+      "sha256_source": "34e474bc84ed737918a649280d9484563f31fb8ca0eb59c8522a2602e3ab9f9c",
+      "sha256_destination": "34e474bc84ed737918a649280d9484563f31fb8ca0eb59c8522a2602e3ab9f9c",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Hosting/IArcGISHost.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Hosting\\IArcGISHost.cs",
+      "size": 678,
+      "sha256_source": "01d4c9a5cef8c9c397c321d4188ad2bc71c171152f013e903b74fd0b8606efe5",
+      "sha256_destination": "01d4c9a5cef8c9c397c321d4188ad2bc71c171152f013e903b74fd0b8606efe5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ArcGISVersionInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ArcGISVersionInfo.cs",
+      "size": 376,
+      "sha256_source": "db5f382dc380f0246537f2f48f5ba06d70c6ebf35c1fc653d8ee6c1600e55c1d",
+      "sha256_destination": "db5f382dc380f0246537f2f48f5ba06d70c6ebf35c1fc653d8ee6c1600e55c1d",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ConnectedClientsHealth.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ConnectedClientsHealth.cs",
+      "size": 629,
+      "sha256_source": "838a0da1f4d176b181248f6af9bd55e7b6e283dbed005576b13d7570dd67be54",
+      "sha256_destination": "838a0da1f4d176b181248f6af9bd55e7b6e283dbed005576b13d7570dd67be54",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/DatasetInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\DatasetInfo.cs",
+      "size": 289,
+      "sha256_source": "2d3121532363a44ed506f489ef620080156e74ca4be7e11a0db8fc14d8308cd5",
+      "sha256_destination": "2d3121532363a44ed506f489ef620080156e74ca4be7e11a0db8fc14d8308cd5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ExecutionType.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ExecutionType.cs",
+      "size": 513,
+      "sha256_source": "42c9f1544172ec6f90eb7ddf9f75dd493a96b1d8780a54db4df938cf921ed076",
+      "sha256_destination": "42c9f1544172ec6f90eb7ddf9f75dd493a96b1d8780a54db4df938cf921ed076",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/FeatureInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\FeatureInfo.cs",
+      "size": 272,
+      "sha256_source": "ae058000781d5f7bf2c933b6df016f542a4c791f53faaa3081520c940527f31a",
+      "sha256_destination": "ae058000781d5f7bf2c933b6df016f542a4c791f53faaa3081520c940527f31a",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/FieldInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\FieldInfo.cs",
+      "size": 319,
+      "sha256_source": "a161c5d947175dd7e02e22db55622d121f6e6a46cd630df50f18ef7bb14685b3",
+      "sha256_destination": "a161c5d947175dd7e02e22db55622d121f6e6a46cd630df50f18ef7bb14685b3",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/GeoprocessingResult.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\GeoprocessingResult.cs",
+      "size": 334,
+      "sha256_source": "13fa77a9bbecc1eb43e92b5c9a82d27d6d2cf5395f5172e30e8f36d00897c6e0",
+      "sha256_destination": "13fa77a9bbecc1eb43e92b5c9a82d27d6d2cf5395f5172e30e8f36d00897c6e0",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/HealthComponent.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthComponent.cs",
+      "size": 1489,
+      "sha256_source": "59f6b7ee8e66193673995c0639bfe2762a937bb552ef4923e3841860bc208134",
+      "sha256_destination": "59f6b7ee8e66193673995c0639bfe2762a937bb552ef4923e3841860bc208134",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/HealthFacts.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthFacts.cs",
+      "size": 3571,
+      "sha256_source": "b125f2e5d8661ecf7a99f788b7e3c3c674184af04b75e6f8fb5b5992499602a1",
+      "sha256_destination": "b125f2e5d8661ecf7a99f788b7e3c3c674184af04b75e6f8fb5b5992499602a1",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/HealthSnapshot.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthSnapshot.cs",
+      "size": 1427,
+      "sha256_source": "bbb3b6a490baa1d6d596632b105f2114108deecfc17e687f9fab40fd2e5eba13",
+      "sha256_destination": "bbb3b6a490baa1d6d596632b105f2114108deecfc17e687f9fab40fd2e5eba13",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/HealthStatus.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\HealthStatus.cs",
+      "size": 992,
+      "sha256_source": "1856b7880930658ab232293bb345727564d0fe1aae1807b06027ef0ae1c4ebac",
+      "sha256_destination": "1856b7880930658ab232293bb345727564d0fe1aae1807b06027ef0ae1c4ebac",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/LayerInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\LayerInfo.cs",
+      "size": 378,
+      "sha256_source": "078f962bcf32aea2b512fa776bdd24acc144670a93bd022fd20e9a1eb7e6e2da",
+      "sha256_destination": "078f962bcf32aea2b512fa776bdd24acc144670a93bd022fd20e9a1eb7e6e2da",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/LayoutInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\LayoutInfo.cs",
+      "size": 271,
+      "sha256_source": "0df40121f0bba997172936214963412181112aa592116f1b79f7b3cea0cfacfd",
+      "sha256_destination": "0df40121f0bba997172936214963412181112aa592116f1b79f7b3cea0cfacfd",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/LicensingInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\LicensingInfo.cs",
+      "size": 282,
+      "sha256_source": "6e6b0a952513256945b640a901ba1203839b044aa97862cccb8301a38df6e822",
+      "sha256_destination": "6e6b0a952513256945b640a901ba1203839b044aa97862cccb8301a38df6e822",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ManagedCompatibilityFacts.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ManagedCompatibilityFacts.cs",
+      "size": 2092,
+      "sha256_source": "e599d65e1a46744a2d3f68203926050972d1e573554f84f25e1e7b9e33ba558c",
+      "sha256_destination": "e599d65e1a46744a2d3f68203926050972d1e573554f84f25e1e7b9e33ba558c",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/MapInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\MapInfo.cs",
+      "size": 354,
+      "sha256_source": "e1ce697255ac5ba17585688cd7c68200df33295129d6e110b77e0b20fabc8a1c",
+      "sha256_destination": "e1ce697255ac5ba17585688cd7c68200df33295129d6e110b77e0b20fabc8a1c",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/MapRequests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\MapRequests.cs",
+      "size": 696,
+      "sha256_source": "0b6d1163805676d9448faf897d1c23734fc63d9d0b6247cbefe1e25a121d3f19",
+      "sha256_destination": "0b6d1163805676d9448faf897d1c23734fc63d9d0b6247cbefe1e25a121d3f19",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ProjectInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ProjectInfo.cs",
+      "size": 367,
+      "sha256_source": "f8513f204b0a98548bdb7758936ae6ce0b1ea30e373d79a18517504da9d2d8a5",
+      "sha256_destination": "f8513f204b0a98548bdb7758936ae6ce0b1ea30e373d79a18517504da9d2d8a5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/RasterInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\RasterInfo.cs",
+      "size": 396,
+      "sha256_source": "5f2ccc6c8004b7684ed8221402fdeb0813d1db6af4098d84d94e95e97f121ed1",
+      "sha256_destination": "5f2ccc6c8004b7684ed8221402fdeb0813d1db6af4098d84d94e95e97f121ed1",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/RuntimeHealthInputs.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\RuntimeHealthInputs.cs",
+      "size": 890,
+      "sha256_source": "b51e2efe490d7556bf00f8b0fa83e2d22b22295ddd424e572362dad4429c8576",
+      "sha256_destination": "b51e2efe490d7556bf00f8b0fa83e2d22b22295ddd424e572362dad4429c8576",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/SelectionInfo.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\SelectionInfo.cs",
+      "size": 288,
+      "sha256_source": "9d16c873564f37fd77dfd556aa2235534df23181cd8019b065713b5a2feda9f5",
+      "sha256_destination": "9d16c873564f37fd77dfd556aa2235534df23181cd8019b065713b5a2feda9f5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ToolCategories.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ToolCategories.cs",
+      "size": 824,
+      "sha256_source": "43621f9fe4c2dc7f5bfdad0ab7c7078435e01085dbd6766bdd2fcda3e08d9c4a",
+      "sha256_destination": "43621f9fe4c2dc7f5bfdad0ab7c7078435e01085dbd6766bdd2fcda3e08d9c4a",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Models/ToolMetadata.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Models\\ToolMetadata.cs",
+      "size": 1454,
+      "sha256_source": "9f3da7e1a90e0268b0479af83c6b70f62ef50bb503d9805a39c4437a59f16935",
+      "sha256_destination": "9f3da7e1a90e0268b0479af83c6b70f62ef50bb503d9805a39c4437a59f16935",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeCallResult.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeCallResult.cs",
+      "size": 541,
+      "sha256_source": "2f2f1a35814e2dc6222fd071371b2beb105367f34676b875d872ec13157429f7",
+      "sha256_destination": "2f2f1a35814e2dc6222fd071371b2beb105367f34676b875d872ec13157429f7",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeProcessManager.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeProcessManager.cs",
+      "size": 56432,
+      "sha256_source": "823a51bf2f0e44db035c20c8bd2a35cadbc06484b441dc516adc00325f396ea0",
+      "sha256_destination": "823a51bf2f0e44db035c20c8bd2a35cadbc06484b441dc516adc00325f396ea0",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeRequest.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeRequest.cs",
+      "size": 2561,
+      "sha256_source": "c4f918a9c67878b2a203772e7e5b2c02136f95b344089f58a99c5279bdd9bf88",
+      "sha256_destination": "c4f918a9c67878b2a203772e7e5b2c02136f95b344089f58a99c5279bdd9bf88",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeResponse.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeResponse.cs",
+      "size": 1904,
+      "sha256_source": "661be57fdd17b76d1a99b7c3b788d2fcc78870d86b9d421c9fb34b1b89fdcdca",
+      "sha256_destination": "661be57fdd17b76d1a99b7c3b788d2fcc78870d86b9d421c9fb34b1b89fdcdca",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeService.cs",
+      "size": 5831,
+      "sha256_source": "ae6309efd0a2b107523d0fc77a599d085a66e594f862a415bafa9206f5afddb6",
+      "sha256_destination": "ae6309efd0a2b107523d0fc77a599d085a66e594f862a415bafa9206f5afddb6",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/PythonBridge/PythonBridgeState.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\PythonBridge\\PythonBridgeState.cs",
+      "size": 656,
+      "sha256_source": "24e1d36cf1e4809840376e53f9d204a86ee741948a49fa2f036ac28db8654b1e",
+      "sha256_destination": "24e1d36cf1e4809840376e53f9d204a86ee741948a49fa2f036ac28db8654b1e",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Result.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Result.cs",
+      "size": 1167,
+      "sha256_source": "3b77ca7a5e8a82cb0f0caf53a585cb120f89bf714b077d380b6d68471ab1fd22",
+      "sha256_destination": "3b77ca7a5e8a82cb0f0caf53a585cb120f89bf714b077d380b6d68471ab1fd22",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Results/ErrorCodes.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Results\\ErrorCodes.cs",
+      "size": 1555,
+      "sha256_source": "417f6050e37fd4941d1b0a48bf68cddd8825b55e41872edb9076ee77362cf886",
+      "sha256_destination": "417f6050e37fd4941d1b0a48bf68cddd8825b55e41872edb9076ee77362cf886",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Results/OperationError.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Results\\OperationError.cs",
+      "size": 525,
+      "sha256_source": "c1dfaf46b732dbcb271ad12b2f6d6b221c89d93fb0fa0a41f40b93340739d9ce",
+      "sha256_destination": "c1dfaf46b732dbcb271ad12b2f6d6b221c89d93fb0fa0a41f40b93340739d9ce",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Results/OperationResult.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Results\\OperationResult.cs",
+      "size": 1350,
+      "sha256_source": "c6c78d31c38d13e940fa3d23ac63eb19e5d401528465037620426df6f2bef8b8",
+      "sha256_destination": "c6c78d31c38d13e940fa3d23ac63eb19e5d401528465037620426df6f2bef8b8",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Runtime/RuntimePathResolver.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Runtime\\RuntimePathResolver.cs",
+      "size": 14516,
+      "sha256_source": "95d250ca6b8c79c9a3e362ecc8e82a5a4693a05eedc05d63cca5ef06848f7c44",
+      "sha256_destination": "95d250ca6b8c79c9a3e362ecc8e82a5a4693a05eedc05d63cca5ef06848f7c44",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/DiagnosticExportService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\DiagnosticExportService.cs",
+      "size": 29615,
+      "sha256_source": "575698f0a6cbe6ef1251c45e666939e4dcf6b8b83d8bc3e8e8aff12de1c25e2a",
+      "sha256_destination": "575698f0a6cbe6ef1251c45e666939e4dcf6b8b83d8bc3e8e8aff12de1c25e2a",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/HealthService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\HealthService.cs",
+      "size": 1196,
+      "sha256_source": "6c4c9b1ea7e227bd3629f33dbcba5623b937f2d16ae27330bb33c804a2508f07",
+      "sha256_destination": "6c4c9b1ea7e227bd3629f33dbcba5623b937f2d16ae27330bb33c804a2508f07",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/HealthStatusPolicy.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\HealthStatusPolicy.cs",
+      "size": 3762,
+      "sha256_source": "bd6162ca4aac10bbf262746c0f2b2a12c11e4739f5f20f4631d29e489d26b104",
+      "sha256_destination": "bd6162ca4aac10bbf262746c0f2b2a12c11e4739f5f20f4631d29e489d26b104",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IArcGISVersionService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IArcGISVersionService.cs",
+      "size": 292,
+      "sha256_source": "6043272fecc06ebe06312b268ce2e55b4e625d68b5705c72721a1476a611d67b",
+      "sha256_destination": "6043272fecc06ebe06312b268ce2e55b4e625d68b5705c72721a1476a611d67b",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IAttributeService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IAttributeService.cs",
+      "size": 607,
+      "sha256_source": "4b1665d237972792c28d661762370e52e4b992ac1a26701a1631d039c3df36dc",
+      "sha256_destination": "4b1665d237972792c28d661762370e52e4b992ac1a26701a1631d039c3df36dc",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IDataManagementService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IDataManagementService.cs",
+      "size": 299,
+      "sha256_source": "019120f00f6978d20fe0e3d462fb14203f2d26e12d9f91dd55cb32d30d23051f",
+      "sha256_destination": "019120f00f6978d20fe0e3d462fb14203f2d26e12d9f91dd55cb32d30d23051f",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IGeoprocessingService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IGeoprocessingService.cs",
+      "size": 316,
+      "sha256_source": "d420f2aa2c10f1dbf8447035980b2e341ba3c342f1b3dff6c707c446883fe415",
+      "sha256_destination": "d420f2aa2c10f1dbf8447035980b2e341ba3c342f1b3dff6c707c446883fe415",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IHealthFactsProvider.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IHealthFactsProvider.cs",
+      "size": 324,
+      "sha256_source": "e791f3c633a56050bb2a1989756e0999591aa433a85871da6dab1c2a837e8629",
+      "sha256_destination": "e791f3c633a56050bb2a1989756e0999591aa433a85871da6dab1c2a837e8629",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IHealthService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IHealthService.cs",
+      "size": 342,
+      "sha256_source": "32ab3585d7710a81797f3a184def84fda26a19062a290668c05b77c6cd5ade07",
+      "sha256_destination": "32ab3585d7710a81797f3a184def84fda26a19062a290668c05b77c6cd5ade07",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/ILayerService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\ILayerService.cs",
+      "size": 928,
+      "sha256_source": "58c9be5d3a8d4cba7acceb48b9046b444db22fab74a6a46685c4fd73c5c27504",
+      "sha256_destination": "58c9be5d3a8d4cba7acceb48b9046b444db22fab74a6a46685c4fd73c5c27504",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/ILayoutService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\ILayoutService.cs",
+      "size": 282,
+      "sha256_source": "8304fd4f18b17dcf56fc042817620d57010f34ed6a72d8fb17e289fb184f6270",
+      "sha256_destination": "8304fd4f18b17dcf56fc042817620d57010f34ed6a72d8fb17e289fb184f6270",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/ILicenseService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\ILicenseService.cs",
+      "size": 493,
+      "sha256_source": "cf87ea51426b61c28c908a0a945e802c9aef364a83e6a772ed9bfbacb2e0cf9e",
+      "sha256_destination": "cf87ea51426b61c28c908a0a945e802c9aef364a83e6a772ed9bfbacb2e0cf9e",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IMapService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IMapService.cs",
+      "size": 362,
+      "sha256_source": "756abf2ed60d0e1d6c51c49c5c4044b0bc614c1fafdfcc52530d81069ad48843",
+      "sha256_destination": "756abf2ed60d0e1d6c51c49c5c4044b0bc614c1fafdfcc52530d81069ad48843",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IProjectService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IProjectService.cs",
+      "size": 484,
+      "sha256_source": "f752ac84211c04be3253dc3c00097f88ee5994ac15b450ad345ec452840d9903",
+      "sha256_destination": "f752ac84211c04be3253dc3c00097f88ee5994ac15b450ad345ec452840d9903",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IPythonBridgeService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IPythonBridgeService.cs",
+      "size": 1896,
+      "sha256_source": "14e25d4abc329b217f3d3c845fdf7544563ef5adb4c68243c1ce9c1b8d4a2c29",
+      "sha256_destination": "14e25d4abc329b217f3d3c845fdf7544563ef5adb4c68243c1ce9c1b8d4a2c29",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IRasterService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IRasterService.cs",
+      "size": 290,
+      "sha256_source": "6d7c5147398983d247ce26e930e75bf37be38b8a3fb4dd92d8dbc5f2670539c2",
+      "sha256_destination": "6d7c5147398983d247ce26e930e75bf37be38b8a3fb4dd92d8dbc5f2670539c2",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/ISelectionService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\ISelectionService.cs",
+      "size": 538,
+      "sha256_source": "cc9cc8008158efcaa38669ca3f5c0102362e1d7503206b51aee88d39bd534c04",
+      "sha256_destination": "cc9cc8008158efcaa38669ca3f5c0102362e1d7503206b51aee88d39bd534c04",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IStatusPresenter.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\IStatusPresenter.cs",
+      "size": 236,
+      "sha256_source": "893dea1144066b253b5edbe63fe872814e3bced9638fbce3a3ff2e8481eda9a6",
+      "sha256_destination": "893dea1144066b253b5edbe63fe872814e3bced9638fbce3a3ff2e8481eda9a6",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/RuntimeConfigurationValidator.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\RuntimeConfigurationValidator.cs",
+      "size": 1589,
+      "sha256_source": "bd3b102d873aec1cb18c062832897fd69deb7851118c906c373da43c1514389d",
+      "sha256_destination": "bd3b102d873aec1cb18c062832897fd69deb7851118c906c373da43c1514389d",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/RuntimeHealthFactsFactory.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\RuntimeHealthFactsFactory.cs",
+      "size": 10527,
+      "sha256_source": "ee5869bbd7e0c8dc45e65c9592959a1de3bf7ab920219b3003fa280b318c17f3",
+      "sha256_destination": "ee5869bbd7e0c8dc45e65c9592959a1de3bf7ab920219b3003fa280b318c17f3",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/StatusPresentation.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\StatusPresentation.cs",
+      "size": 530,
+      "sha256_source": "0c9497e8d02b32599cffda949b19ba21d7dac3ec1a94f0e198648a85e179a240",
+      "sha256_destination": "0c9497e8d02b32599cffda949b19ba21d7dac3ec1a94f0e198648a85e179a240",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/StatusPresenter.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Services\\StatusPresenter.cs",
+      "size": 7396,
+      "sha256_source": "79399e222a5f498a7c3ff28106d126a0f1d4e59ba4b417a4e93574c1540cbccb",
+      "sha256_destination": "79399e222a5f498a7c3ff28106d126a0f1d4e59ba4b417a4e93574c1540cbccb",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/IMCPTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\IMCPTool.cs",
+      "size": 1186,
+      "sha256_source": "c94c731d87d5c0391a5eb76e78d1be48e534f42a8d35455e1a80fe11ae297ded",
+      "sha256_destination": "c94c731d87d5c0391a5eb76e78d1be48e534f42a8d35455e1a80fe11ae297ded",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/MCPToolCall.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolCall.cs",
+      "size": 420,
+      "sha256_source": "2d527b27e80b79c09cc8549c4e99c378bc09fdd1c1a9593f07ca95ed83dc868a",
+      "sha256_destination": "2d527b27e80b79c09cc8549c4e99c378bc09fdd1c1a9593f07ca95ed83dc868a",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/MCPToolRegistry.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolRegistry.cs",
+      "size": 1747,
+      "sha256_source": "67d49013caa9b0b2ff5df91365c5c4566a88aee62cfa6e251ffdef2ee6d7e3af",
+      "sha256_destination": "67d49013caa9b0b2ff5df91365c5c4566a88aee62cfa6e251ffdef2ee6d7e3af",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/MCPToolRouter.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\MCPToolRouter.cs",
+      "size": 5064,
+      "sha256_source": "636cf5f35b171d7b3ef41fd3b6625752c2f3b13962bf1eb21fc8a9f8832392e4",
+      "sha256_destination": "636cf5f35b171d7b3ef41fd3b6625752c2f3b13962bf1eb21fc8a9f8832392e4",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/ToolExecutionContext.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolExecutionContext.cs",
+      "size": 777,
+      "sha256_source": "b0e45851e22610ab4566e162a129b16fb4c9df2f9e4b8a71dc40e74722931c97",
+      "sha256_destination": "b0e45851e22610ab4566e162a129b16fb4c9df2f9e4b8a71dc40e74722931c97",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Tools/ToolSchemas.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Core\\Tools\\ToolSchemas.cs",
+      "size": 503,
+      "sha256_source": "c696c670d49520b37139b2476b25d38621ca85a3d87b21a6a2d10e5bc209a5fa",
+      "sha256_destination": "c696c670d49520b37139b2476b25d38621ca85a3d87b21a6a2d10e5bc209a5fa",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/ArcGISProMCP.Logging.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\ArcGISProMCP.Logging.csproj",
+      "size": 314,
+      "sha256_source": "63744f8da21263dcbc5300aab88de18a9dfeb467558199b4b59cfd876b2fd845",
+      "sha256_destination": "63744f8da21263dcbc5300aab88de18a9dfeb467558199b4b59cfd876b2fd845",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/ILogger.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\ILogger.cs",
+      "size": 1656,
+      "sha256_source": "754502bcdc05ed64bad402bbc5be4968dfad6a342ddad680a54904ac43f46234",
+      "sha256_destination": "754502bcdc05ed64bad402bbc5be4968dfad6a342ddad680a54904ac43f46234",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/LogContext.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\LogContext.cs",
+      "size": 578,
+      "sha256_source": "726ff210533c031582a7def6a79c6f0e218026933eabc4ff1a8848bcfb1284d0",
+      "sha256_destination": "726ff210533c031582a7def6a79c6f0e218026933eabc4ff1a8848bcfb1284d0",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/LogEntry.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\LogEntry.cs",
+      "size": 1168,
+      "sha256_source": "47ec985d1b4811174e9e56b16560d3101ffc575c852e34e1a073aecfbbcabedd",
+      "sha256_destination": "47ec985d1b4811174e9e56b16560d3101ffc575c852e34e1a073aecfbbcabedd",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/LogLevel.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\LogLevel.cs",
+      "size": 134,
+      "sha256_source": "890beb3a91464705c7cbb035cf2f46cc8043de723ba302e07c60da61c3a1f7c7",
+      "sha256_destination": "890beb3a91464705c7cbb035cf2f46cc8043de723ba302e07c60da61c3a1f7c7",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/LogRedactionPolicy.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\LogRedactionPolicy.cs",
+      "size": 9501,
+      "sha256_source": "ca8e4a0d9273df3e1c1582bcd01b1a349dc349ce84dd74dd42b3c7e12ee1e910",
+      "sha256_destination": "ca8e4a0d9273df3e1c1582bcd01b1a349dc349ce84dd74dd42b3c7e12ee1e910",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/NullLogger.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\NullLogger.cs",
+      "size": 870,
+      "sha256_source": "4cc099f2f8a6d8a3d54e4a10b738802a66179146487916165edec0e006f38dc5",
+      "sha256_destination": "4cc099f2f8a6d8a3d54e4a10b738802a66179146487916165edec0e006f38dc5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/ProductionLogEntryNormalizer.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\ProductionLogEntryNormalizer.cs",
+      "size": 9776,
+      "sha256_source": "6aca3d31d6041481fd57b84f31cdf1ebb4489b863943dd7585e0d0923d226720",
+      "sha256_destination": "6aca3d31d6041481fd57b84f31cdf1ebb4489b863943dd7585e0d0923d226720",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/StructuredFileLogger.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\StructuredFileLogger.cs",
+      "size": 13804,
+      "sha256_source": "b99d47550ecceddcf8be7524608cb7966aa2c3884e68fc6aba278a2cdf8fab12",
+      "sha256_destination": "b99d47550ecceddcf8be7524608cb7966aa2c3884e68fc6aba278a2cdf8fab12",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/StructuredLogFilePolicy.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\StructuredLogFilePolicy.cs",
+      "size": 3193,
+      "sha256_source": "41e8d85cb497951ed74a86bd40d5e83075f66ad155c6a2be209037cdc3fdb3ad",
+      "sha256_destination": "41e8d85cb497951ed74a86bd40d5e83075f66ad155c6a2be209037cdc3fdb3ad",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Logging/StructuredLogHealth.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Logging\\StructuredLogHealth.cs",
+      "size": 738,
+      "sha256_source": "d51861049b675fe019e0cf244e62e12a3e05a945bccacd8b55b689485d3bb7ba",
+      "sha256_destination": "d51861049b675fe019e0cf244e62e12a3e05a945bccacd8b55b689485d3bb7ba",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Protocol/ArcGISProMCP.Protocol.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Protocol\\ArcGISProMCP.Protocol.csproj",
+      "size": 316,
+      "sha256_source": "a7b1b9c58901c2ff74fb620c6400170178cc4d8ec90e92dfd2349301ef920afa",
+      "sha256_destination": "a7b1b9c58901c2ff74fb620c6400170178cc4d8ec90e92dfd2349301ef920afa",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Protocol/JsonRpc.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Protocol\\JsonRpc.cs",
+      "size": 1199,
+      "sha256_source": "27d24f4c4e35d9a5edb57831a72145a47ca9ed7ab82e4319fdd887b3dd39ef03",
+      "sha256_destination": "27d24f4c4e35d9a5edb57831a72145a47ca9ed7ab82e4319fdd887b3dd39ef03",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Protocol/McpModels.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Protocol\\McpModels.cs",
+      "size": 2064,
+      "sha256_source": "ee3777ac419f48ba954002136b9747630be32a695df5395acbfef1eb2168b8ed",
+      "sha256_destination": "ee3777ac419f48ba954002136b9747630be32a695df5395acbfef1eb2168b8ed",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Protocol/McpToolDefinition.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Protocol\\McpToolDefinition.cs",
+      "size": 679,
+      "sha256_source": "88f87bef63d0a56bcc339423f02c3cf17a0a93f7f20492f836db292ee1b36419",
+      "sha256_destination": "88f87bef63d0a56bcc339423f02c3cf17a0a93f7f20492f836db292ee1b36419",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Security/ArcGISProMCP.Security.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Security\\ArcGISProMCP.Security.csproj",
+      "size": 316,
+      "sha256_source": "d0b313b15a2144b7a0033f033f79a3672b15f6bd081aa9d9a12f453f89546097",
+      "sha256_destination": "d0b313b15a2144b7a0033f033f79a3672b15f6bd081aa9d9a12f453f89546097",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Security/SecurityModels.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Security\\SecurityModels.cs",
+      "size": 281,
+      "sha256_source": "0d53896d31941581c6423b75014b12723f483c6287df9e2bfc802492e7f82a62",
+      "sha256_destination": "0d53896d31941581c6423b75014b12723f483c6287df9e2bfc802492e7f82a62",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/ArcGISProMCP.Server.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\ArcGISProMCP.Server.csproj",
+      "size": 697,
+      "sha256_source": "646581c34caebe072ddcc8b9282f136a3874f861e0d389b90bfd859f506392ee",
+      "sha256_destination": "646581c34caebe072ddcc8b9282f136a3874f861e0d389b90bfd859f506392ee",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/JsonRpc/JsonRpcCodec.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcCodec.cs",
+      "size": 4319,
+      "sha256_source": "d7f93678b42250b84560cabbe998e7fc8a64a085ec56aecb77d71f69de0476fb",
+      "sha256_destination": "d7f93678b42250b84560cabbe998e7fc8a64a085ec56aecb77d71f69de0476fb",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/JsonRpc/JsonRpcErrorCodes.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcErrorCodes.cs",
+      "size": 362,
+      "sha256_source": "d98569747786f5e249736a2a83d6db3d5973b700f9dbd37a8ef3b10b2a8cd088",
+      "sha256_destination": "d98569747786f5e249736a2a83d6db3d5973b700f9dbd37a8ef3b10b2a8cd088",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/JsonRpc/JsonRpcExceptions.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonRpcExceptions.cs",
+      "size": 527,
+      "sha256_source": "094942585c5a1291c239dbf9ef6676ad920811017e91550b30d819d6dde1af55",
+      "sha256_destination": "094942585c5a1291c239dbf9ef6676ad920811017e91550b30d819d6dde1af55",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/JsonRpc/JsonValueConverter.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\JsonRpc\\JsonValueConverter.cs",
+      "size": 864,
+      "sha256_source": "768271b35ec1d5eeeef4f1520383a2ab0fb243532b4fd0bc9628b79bbabc9181",
+      "sha256_destination": "768271b35ec1d5eeeef4f1520383a2ab0fb243532b4fd0bc9628b79bbabc9181",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Mcp/McpConstants.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Mcp\\McpConstants.cs",
+      "size": 362,
+      "sha256_source": "ee764c84982fdc9cfdff349c4f1508cf5dcb768e23660ffeec07c0353c605e9b",
+      "sha256_destination": "ee764c84982fdc9cfdff349c4f1508cf5dcb768e23660ffeec07c0353c605e9b",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Mcp/McpProtocolHandler.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Mcp\\McpProtocolHandler.cs",
+      "size": 4773,
+      "sha256_source": "b0b20af290ae0cd1fb823c7d5aee686c86c58fe60fa9c78afd2eb5a7479769e0",
+      "sha256_destination": "b0b20af290ae0cd1fb823c7d5aee686c86c58fe60fa9c78afd2eb5a7479769e0",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/McpServer.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\McpServer.cs",
+      "size": 6738,
+      "sha256_source": "ac45202da17ce93fbbc58aee7cd27339fb624d87f48b7e8cf5f85f9a246e445a",
+      "sha256_destination": "ac45202da17ce93fbbc58aee7cd27339fb624d87f48b7e8cf5f85f9a246e445a",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Transport/HttpMcpTransport.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Transport\\HttpMcpTransport.cs",
+      "size": 6530,
+      "sha256_source": "4d6d997a5a3df21c4af700768c16968151a2535afe2acdf328d766c9ebced132",
+      "sha256_destination": "4d6d997a5a3df21c4af700768c16968151a2535afe2acdf328d766c9ebced132",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Transport/HttpTransportConnection.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Transport\\HttpTransportConnection.cs",
+      "size": 2064,
+      "sha256_source": "15a2f510334653975645d2781ff67e949ec7482c789c69145036d85631476e83",
+      "sha256_destination": "15a2f510334653975645d2781ff67e949ec7482c789c69145036d85631476e83",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Transport/IMcpTransport.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Transport\\IMcpTransport.cs",
+      "size": 699,
+      "sha256_source": "113538df3d1c8b97047d6e1f1e0bbf44cb660b87e807f3bf03e943035f1bb257",
+      "sha256_destination": "113538df3d1c8b97047d6e1f1e0bbf44cb660b87e807f3bf03e943035f1bb257",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Transport/ITransportConnection.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Server\\Transport\\ITransportConnection.cs",
+      "size": 301,
+      "sha256_source": "487729b08dc6b91d42a93f79f1262fddc8788dcc9ee019d4a8a552d331496cad",
+      "sha256_destination": "487729b08dc6b91d42a93f79f1262fddc8788dcc9ee019d4a8a552d331496cad",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ArcGISProMCP.Tools.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\ArcGISProMCP.Tools.csproj",
+      "size": 420,
+      "sha256_source": "dcf8d7f56048dbe351b7fcbb8e2e8c88be5ac6c47903843c54da6b390c96fc04",
+      "sha256_destination": "dcf8d7f56048dbe351b7fcbb8e2e8c88be5ac6c47903843c54da6b390c96fc04",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/AttributeTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\AttributeTools.cs",
+      "size": 6219,
+      "sha256_source": "291912f4c19652e6977466c5b513ce68ee71b109c75b8942f38f03335882b414",
+      "sha256_destination": "291912f4c19652e6977466c5b513ce68ee71b109c75b8942f38f03335882b414",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/DataRasterTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\DataRasterTools.cs",
+      "size": 2956,
+      "sha256_source": "e84e07da3b52427b3d4731e883626bb27c26f40aa121586de764b493366a7be9",
+      "sha256_destination": "e84e07da3b52427b3d4731e883626bb27c26f40aa121586de764b493366a7be9",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GeoprocessingTools.cs",
+      "size": 8677,
+      "sha256_source": "bcda27c8ef60a31765c744e38f0a81082b0c38de6996c813b7c1ed8e045ae380",
+      "sha256_destination": "bcda27c8ef60a31765c744e38f0a81082b0c38de6996c813b7c1ed8e045ae380",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetArcGISVersionTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GetArcGISVersionTool.cs",
+      "size": 967,
+      "sha256_source": "aa8da787de726ef7e21af69d64ad4d07de78639aae91112fb6454d97b2e2fd59",
+      "sha256_destination": "aa8da787de726ef7e21af69d64ad4d07de78639aae91112fb6454d97b2e2fd59",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetCurrentMapTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GetCurrentMapTool.cs",
+      "size": 955,
+      "sha256_source": "1a90631852600006c1f66ffebd5482cf8e0ae3a646bd6157511507c9a7dc3f98",
+      "sha256_destination": "1a90631852600006c1f66ffebd5482cf8e0ae3a646bd6157511507c9a7dc3f98",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetLayersTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GetLayersTool.cs",
+      "size": 1539,
+      "sha256_source": "16d3b52e6ae1f95fd20ae92b49f339a7b2273e30cd08299d31e8b9fcc3b5ffe8",
+      "sha256_destination": "16d3b52e6ae1f95fd20ae92b49f339a7b2273e30cd08299d31e8b9fcc3b5ffe8",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetLicenseInfoTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GetLicenseInfoTool.cs",
+      "size": 961,
+      "sha256_source": "25fc681121e29d53a743eab6d31c15194d633f5f311ddb29a79ab214066ad094",
+      "sha256_destination": "25fc681121e29d53a743eab6d31c15194d633f5f311ddb29a79ab214066ad094",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetProjectInfoTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\GetProjectInfoTool.cs",
+      "size": 965,
+      "sha256_source": "936eb4c9ced119c4001e3dfe718c57bebd14ba7d2352d790d68633a04fa30fe2",
+      "sha256_destination": "936eb4c9ced119c4001e3dfe718c57bebd14ba7d2352d790d68633a04fa30fe2",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\LayerTools.cs",
+      "size": 6541,
+      "sha256_source": "edb33a3d2c09239e2181a0d36e6967204934885fc5310b3d40d5cb20b393e4f8",
+      "sha256_destination": "edb33a3d2c09239e2181a0d36e6967204934885fc5310b3d40d5cb20b393e4f8",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/MapTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\MapTools.cs",
+      "size": 2777,
+      "sha256_source": "5328ebe49694f1c0b72d62de3b5ad9dfca1d84d2739dbf8a6aa2f51850b856b5",
+      "sha256_destination": "5328ebe49694f1c0b72d62de3b5ad9dfca1d84d2739dbf8a6aa2f51850b856b5",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/McpToolBase.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\McpToolBase.cs",
+      "size": 1564,
+      "sha256_source": "6542dbf277b4b0466ed34e23297ab84b3c5484a2e675f3eea38bad2c30eaa372",
+      "sha256_destination": "6542dbf277b4b0466ed34e23297ab84b3c5484a2e675f3eea38bad2c30eaa372",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PingTool.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\PingTool.cs",
+      "size": 593,
+      "sha256_source": "0164840a9fd414e62a1a7f0f44cf064de6aedf709e89f4f39a43a71b9a2e8b73",
+      "sha256_destination": "0164840a9fd414e62a1a7f0f44cf064de6aedf709e89f4f39a43a71b9a2e8b73",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ProjectTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\ProjectTools.cs",
+      "size": 1917,
+      "sha256_source": "e65d3e6599cc351d80f4fa7322d2aac449d30f6bf7357b99029a3a7718d2d3ae",
+      "sha256_destination": "e65d3e6599cc351d80f4fa7322d2aac449d30f6bf7357b99029a3a7718d2d3ae",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PythonBridgeTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\PythonBridgeTools.cs",
+      "size": 2722,
+      "sha256_source": "3c6584aea636828362283423b9eea8a0393bc426fa8352f7e4e9ab382d1679cc",
+      "sha256_destination": "3c6584aea636828362283423b9eea8a0393bc426fa8352f7e4e9ab382d1679cc",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PythonDiscoveryTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\PythonDiscoveryTools.cs",
+      "size": 6748,
+      "sha256_source": "f93d347e5cc07aa0fa5fdb6cc245199fa43d5f02dffca99203973def4befb4fc",
+      "sha256_destination": "f93d347e5cc07aa0fa5fdb6cc245199fa43d5f02dffca99203973def4befb4fc",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SelectionTools.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\SelectionTools.cs",
+      "size": 2787,
+      "sha256_source": "b0b4540531c98b0ee9d7d1cac975dd593b5f5561c6a54f3ecfc4424af083b559",
+      "sha256_destination": "b0b4540531c98b0ee9d7d1cac975dd593b5f5561c6a54f3ecfc4424af083b559",
+      "status": "OK"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ToolArgs.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Source\\Shared\\ArcGISProMCP.Tools\\ToolArgs.cs",
+      "size": 1968,
+      "sha256_source": "97c7335cbc2cf62ce886a555ce9ec4e7d421a7c389337091248ebe28bc1c87be",
+      "sha256_destination": "97c7335cbc2cf62ce886a555ce9ec4e7d421a7c389337091248ebe28bc1c87be",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/ArcGISProMCP.ServerTests/ArcGISProMCP.ServerTests.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\ArcGISProMCP.ServerTests\\ArcGISProMCP.ServerTests.csproj",
+      "size": 1389,
+      "sha256_source": "5e8c2a7d76f065a9e36fe8e00fcd1c9f81168fb350d78dbd80d8472d6056a665",
+      "sha256_destination": "5e8c2a7d76f065a9e36fe8e00fcd1c9f81168fb350d78dbd80d8472d6056a665",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/ArcGISProMCP.ServerTests/MCPProtocolTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\ArcGISProMCP.ServerTests\\MCPProtocolTests.cs",
+      "size": 4157,
+      "sha256_source": "6c0180d5476639d83a86ed40dc702782a034a5adb4d0a00775506e8c6cfe3527",
+      "sha256_destination": "6c0180d5476639d83a86ed40dc702782a034a5adb4d0a00775506e8c6cfe3527",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/ArcGISProMCP.ServerTests/MCPServerTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\ArcGISProMCP.ServerTests\\MCPServerTests.cs",
+      "size": 17661,
+      "sha256_source": "93d8b92a3f920438f6ff2a12e9ef8d6e657c14729a8bf773809df31336df82b3",
+      "sha256_destination": "93d8b92a3f920438f6ff2a12e9ef8d6e657c14729a8bf773809df31336df82b3",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/ArcGISProMCP.ServerTests/MCPTransportTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\ArcGISProMCP.ServerTests\\MCPTransportTests.cs",
+      "size": 3953,
+      "sha256_source": "52ba4cec5531660e0e86901b6788dc3df3ef8f714642c40b49a1a898a966f3bd",
+      "sha256_destination": "52ba4cec5531660e0e86901b6788dc3df3ef8f714642c40b49a1a898a966f3bd",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/ArcGISProMCP.ServerTests/TestServerFactory.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\ArcGISProMCP.ServerTests\\TestServerFactory.cs",
+      "size": 2754,
+      "sha256_source": "483177ff28ac2dd44b4fd7dfde46c297b2e63f1ed92a2b86ce02adc9ff32ec83",
+      "sha256_destination": "483177ff28ac2dd44b4fd7dfde46c297b2e63f1ed92a2b86ce02adc9ff32ec83",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/IntegrationTests/ArcGISProMCP.IntegrationTests.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\IntegrationTests\\ArcGISProMCP.IntegrationTests.csproj",
+      "size": 990,
+      "sha256_source": "e15d1c34c8e1cdee76323fe29a6800cf4722476e01aa5ca2e8e12411a8a6c0be",
+      "sha256_destination": "e15d1c34c8e1cdee76323fe29a6800cf4722476e01aa5ca2e8e12411a8a6c0be",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/IntegrationTests/HealthServiceIntegrationTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\IntegrationTests\\HealthServiceIntegrationTests.cs",
+      "size": 3689,
+      "sha256_source": "8e7de5b0f72596a14e66482db2eec68d875adee6673a7c21897bb1bf9fbdd2dc",
+      "sha256_destination": "8e7de5b0f72596a14e66482db2eec68d875adee6673a7c21897bb1bf9fbdd2dc",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/IntegrationTests/HostChainTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\IntegrationTests\\HostChainTests.cs",
+      "size": 4058,
+      "sha256_source": "ea545097b059c760bb6d109d6e584006224eb9d699fe22b1466000a745022856",
+      "sha256_destination": "ea545097b059c760bb6d109d6e584006224eb9d699fe22b1466000a745022856",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/IntegrationTests/Phase4ToolTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\IntegrationTests\\Phase4ToolTests.cs",
+      "size": 6918,
+      "sha256_source": "df83bd858fea198bfe54d416a718946c881bf097a47e745f6230ca285874df57",
+      "sha256_destination": "df83bd858fea198bfe54d416a718946c881bf097a47e745f6230ca285874df57",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/OneClickDeployment/one-click-deployment.tests.ps1",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\OneClickDeployment\\one-click-deployment.tests.ps1",
+      "size": 65179,
+      "sha256_source": "de68a1cdc23d9c482dbd5307fdaec5f6e8feb300ebf53eee7749800da1d6fab6",
+      "sha256_destination": "de68a1cdc23d9c482dbd5307fdaec5f6e8feb300ebf53eee7749800da1d6fab6",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/Phase58FixturePreparation/ArcGISProMCP.Phase58FixturePreparation.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\Phase58FixturePreparation\\ArcGISProMCP.Phase58FixturePreparation.csproj",
+      "size": 439,
+      "sha256_source": "a5c8bb9c25c86abaf96f4d52322b4257231a6aba086237ae2093315bea2cf241",
+      "sha256_destination": "a5c8bb9c25c86abaf96f4d52322b4257231a6aba086237ae2093315bea2cf241",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/Phase58FixturePreparation/NuGet.Config",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\Phase58FixturePreparation\\NuGet.Config",
+      "size": 125,
+      "sha256_source": "5256a7e3e07d2c5c94f7a1e6c45f39aab011c659c5e2d53e452dea525ce04575",
+      "sha256_destination": "5256a7e3e07d2c5c94f7a1e6c45f39aab011c659c5e2d53e452dea525ce04575",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/Phase58FixturePreparation/phase581_arcpy_probe.py",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\Phase58FixturePreparation\\phase581_arcpy_probe.py",
+      "size": 3354,
+      "sha256_source": "82a0cf173ee87ed32f96af5a6a5103f3fbf2f31a9781cbccc5036a1e18cd3442",
+      "sha256_destination": "82a0cf173ee87ed32f96af5a6a5103f3fbf2f31a9781cbccc5036a1e18cd3442",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/Phase58FixturePreparation/prepare_arcgis_fixture.py",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\Phase58FixturePreparation\\prepare_arcgis_fixture.py",
+      "size": 25798,
+      "sha256_source": "40eda480c2b2371374018732da71e620ed3fa033625d23e50077ac9ddc097081",
+      "sha256_destination": "40eda480c2b2371374018732da71e620ed3fa033625d23e50077ac9ddc097081",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/Phase58FixturePreparation/Program.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\Phase58FixturePreparation\\Program.cs",
+      "size": 16096,
+      "sha256_source": "93ccf26e1c6ca4108bd4906f2a86088ae8cf3cd7def884fc9c071e020664db45",
+      "sha256_destination": "93ccf26e1c6ca4108bd4906f2a86088ae8cf3cd7def884fc9c071e020664db45",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/TestSupport/ArcGISProMCP.TestSupport.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\TestSupport\\ArcGISProMCP.TestSupport.csproj",
+      "size": 350,
+      "sha256_source": "94f7a7a84022dd20144f1ef81f4133eaee720484b50f202132fe963c015c9091",
+      "sha256_destination": "94f7a7a84022dd20144f1ef81f4133eaee720484b50f202132fe963c015c9091",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/TestSupport/FakeArcGISHost.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\TestSupport\\FakeArcGISHost.cs",
+      "size": 10202,
+      "sha256_source": "23a38ab8a90d30ec8c44706341f6f928fbcc457084d2236051ae99a5c7adbf45",
+      "sha256_destination": "23a38ab8a90d30ec8c44706341f6f928fbcc457084d2236051ae99a5c7adbf45",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/TestSupport/FakePythonBridgeService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\TestSupport\\FakePythonBridgeService.cs",
+      "size": 4624,
+      "sha256_source": "78ed060efff45a92cd082de31b4ce9c64a0023da6a733a9d21069aa2d7ec2b2f",
+      "sha256_destination": "78ed060efff45a92cd082de31b4ce9c64a0023da6a733a9d21069aa2d7ec2b2f",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/TestSupport/RecordingGeoprocessingService.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\TestSupport\\RecordingGeoprocessingService.cs",
+      "size": 1143,
+      "sha256_source": "5077d5905bc65948e512f4c8e2955f57866e0fee0cd1f76b6e36c173e42ed5b8",
+      "sha256_destination": "5077d5905bc65948e512f4c8e2955f57866e0fee0cd1f76b6e36c173e42ed5b8",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/TestSupport/TestWorkspace.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\TestSupport\\TestWorkspace.cs",
+      "size": 20626,
+      "sha256_source": "c37d85124d1d7b83893aebb6127b475e93ada4c75fa75d5432488866ff781c84",
+      "sha256_destination": "c37d85124d1d7b83893aebb6127b475e93ada4c75fa75d5432488866ff781c84",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ArcGISProMCP.UnitTests.csproj",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ArcGISProMCP.UnitTests.csproj",
+      "size": 986,
+      "sha256_source": "ab0a3992ad6b9015aa07d666045e0c57d3178534425ad57f93e4b11de672781e",
+      "sha256_destination": "ab0a3992ad6b9015aa07d666045e0c57d3178534425ad57f93e4b11de672781e",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ClientConfigurationPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ClientConfigurationPolicyTests.cs",
+      "size": 18993,
+      "sha256_source": "a5055efd2982d6459e44372060120cbe84bccdb9d0b81749d4d53d37c4a8ae0d",
+      "sha256_destination": "a5055efd2982d6459e44372060120cbe84bccdb9d0b81749d4d53d37c4a8ae0d",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/CompatibilityPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\CompatibilityPolicyTests.cs",
+      "size": 8906,
+      "sha256_source": "e4c0ced56c6b978159b9daabc13f2a34ad881cb2e327d429cc3e37355c868c21",
+      "sha256_destination": "e4c0ced56c6b978159b9daabc13f2a34ad881cb2e327d429cc3e37355c868c21",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/DiagnosticRedactionTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\DiagnosticRedactionTests.cs",
+      "size": 5251,
+      "sha256_source": "b8308f489f3fa39b8dbf17e65430a55f80c2896143e7ab834d223a7de9b1330e",
+      "sha256_destination": "b8308f489f3fa39b8dbf17e65430a55f80c2896143e7ab834d223a7de9b1330e",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/DocumentationPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\DocumentationPolicyTests.cs",
+      "size": 10821,
+      "sha256_source": "769933b07a9d2febebc274a3c58f1e8f13e8d5670f5c7da401791a0c7b138753",
+      "sha256_destination": "769933b07a9d2febebc274a3c58f1e8f13e8d5670f5c7da401791a0c7b138753",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/GeoprocessingToolBehaviorTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\GeoprocessingToolBehaviorTests.cs",
+      "size": 8642,
+      "sha256_source": "c5bd23413300769ebe62c6ad60f18cc55c6cb3b2ef83560b4cd35daeb121687d",
+      "sha256_destination": "c5bd23413300769ebe62c6ad60f18cc55c6cb3b2ef83560b4cd35daeb121687d",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/HealthSnapshotTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\HealthSnapshotTests.cs",
+      "size": 2672,
+      "sha256_source": "82de0e028d7873f62bf867bc82254161f71d05f2452627345485cf4ee39e4cc4",
+      "sha256_destination": "82de0e028d7873f62bf867bc82254161f71d05f2452627345485cf4ee39e4cc4",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/HealthStatusPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\HealthStatusPolicyTests.cs",
+      "size": 7081,
+      "sha256_source": "534778c33d4e6b91327f509358428ce340c328c456ca7aa46586bda884aef2aa",
+      "sha256_destination": "534778c33d4e6b91327f509358428ce340c328c456ca7aa46586bda884aef2aa",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/LoggingPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\LoggingPolicyTests.cs",
+      "size": 14920,
+      "sha256_source": "6a7dacf5fffb00b8d3ff14ec95bf264d075486778c9f5caea9238c0c113376ad",
+      "sha256_destination": "6a7dacf5fffb00b8d3ff14ec95bf264d075486778c9f5caea9238c0c113376ad",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/MCPToolRegistryTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\MCPToolRegistryTests.cs",
+      "size": 1936,
+      "sha256_source": "814645ff2bee61bd9d1ac5a3cf5b71b890a6deaaed1d80af946984986b25fc4f",
+      "sha256_destination": "814645ff2bee61bd9d1ac5a3cf5b71b890a6deaaed1d80af946984986b25fc4f",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/MCPToolRouterTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\MCPToolRouterTests.cs",
+      "size": 3630,
+      "sha256_source": "e736f991d4ca16edbddb4731c895d689afa65edc9e6fe28f41166ba34ff05a55",
+      "sha256_destination": "e736f991d4ca16edbddb4731c895d689afa65edc9e6fe28f41166ba34ff05a55",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/PlaceholderToolBehaviorTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\PlaceholderToolBehaviorTests.cs",
+      "size": 5248,
+      "sha256_source": "5f260bd64107749533e89dcbda6fd276b5eac06b7541798a683a2df4cddb0659",
+      "sha256_destination": "5f260bd64107749533e89dcbda6fd276b5eac06b7541798a683a2df4cddb0659",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ProductionToolContractSnapshot.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ProductionToolContractSnapshot.cs",
+      "size": 3315,
+      "sha256_source": "b830b42dd3a789373d0cde30f31ad023bf41218d633228f80d44e0cc056eea39",
+      "sha256_destination": "b830b42dd3a789373d0cde30f31ad023bf41218d633228f80d44e0cc056eea39",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ProductionToolContractTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ProductionToolContractTests.cs",
+      "size": 18310,
+      "sha256_source": "f86d0abe95c01ddd583819f3c771628a4af767b08b96b95960fb169c3bb66171",
+      "sha256_destination": "f86d0abe95c01ddd583819f3c771628a4af767b08b96b95960fb169c3bb66171",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/PythonBridgeLifecycleTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\PythonBridgeLifecycleTests.cs",
+      "size": 27218,
+      "sha256_source": "eb84fce5b34146ae258ce28c231f52be7d04bcab7979ae0e7ec111485701fc61",
+      "sha256_destination": "eb84fce5b34146ae258ce28c231f52be7d04bcab7979ae0e7ec111485701fc61",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/PythonToolBehaviorTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\PythonToolBehaviorTests.cs",
+      "size": 11127,
+      "sha256_source": "2477687d56c286630d6b5871c1a481fe25955f9bb8653932bc59c32c152f7e7f",
+      "sha256_destination": "2477687d56c286630d6b5871c1a481fe25955f9bb8653932bc59c32c152f7e7f",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ReleaseIdentityPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ReleaseIdentityPolicyTests.cs",
+      "size": 10102,
+      "sha256_source": "d771bb556445cc13cab2724be1430674badd7bf67d84c952e3f476efbcaa63de",
+      "sha256_destination": "d771bb556445cc13cab2724be1430674badd7bf67d84c952e3f476efbcaa63de",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/ReleaseTransactionPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\ReleaseTransactionPolicyTests.cs",
+      "size": 12027,
+      "sha256_source": "9901a29b9da7a6b5760941bc2ad71f2d5387d70b7d317c1353cbee67b504f5ff",
+      "sha256_destination": "9901a29b9da7a6b5760941bc2ad71f2d5387d70b7d317c1353cbee67b504f5ff",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/RuntimeHealthFactsFactoryTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\RuntimeHealthFactsFactoryTests.cs",
+      "size": 9730,
+      "sha256_source": "6c3473b6367ff47e9f7c13a9c63703a94bbc20c6624054e551c4b6e2fffa2f8a",
+      "sha256_destination": "6c3473b6367ff47e9f7c13a9c63703a94bbc20c6624054e551c4b6e2fffa2f8a",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/RuntimeHealthFactsProviderTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\RuntimeHealthFactsProviderTests.cs",
+      "size": 4604,
+      "sha256_source": "0fd3072893b4306b0a5088c0cb348c7d94549d3dbd5c6f3b5fdc4f83401a67d0",
+      "sha256_destination": "0fd3072893b4306b0a5088c0cb348c7d94549d3dbd5c6f3b5fdc4f83401a67d0",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/RuntimePathResolverTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\RuntimePathResolverTests.cs",
+      "size": 11623,
+      "sha256_source": "d75a65337bb85cb6b3989295b5b33e2d120f2ea762242beff22f09cceddb80de",
+      "sha256_destination": "d75a65337bb85cb6b3989295b5b33e2d120f2ea762242beff22f09cceddb80de",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/StatusPresenterTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\StatusPresenterTests.cs",
+      "size": 6601,
+      "sha256_source": "4cbf12da749af3a88adda8bbf02e9716d9afe0ef450e360c39e1b405b8e234d3",
+      "sha256_destination": "4cbf12da749af3a88adda8bbf02e9716d9afe0ef450e360c39e1b405b8e234d3",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/StructuredLoggingDiagnosticExportTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\StructuredLoggingDiagnosticExportTests.cs",
+      "size": 30618,
+      "sha256_source": "cc8f3dcf66c1e814b17d01dcc3e70d687f036e83b8a1a499fc2ec880e4f31d2c",
+      "sha256_destination": "cc8f3dcf66c1e814b17d01dcc3e70d687f036e83b8a1a499fc2ec880e4f31d2c",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/TestWorkspaceTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\TestWorkspaceTests.cs",
+      "size": 4283,
+      "sha256_source": "d89cd9aaf389b26e579ef14df2f3d576cb7abe48ddddd2145ebdc70149bcb50c",
+      "sha256_destination": "d89cd9aaf389b26e579ef14df2f3d576cb7abe48ddddd2145ebdc70149bcb50c",
+      "status": "OK"
+    },
+    {
+      "path": "Tests/UnitTests/UserWorkflowPolicyTests.cs",
+      "source": "D:\\ArcGIS-Pro-MCP\\Tests\\UnitTests\\UserWorkflowPolicyTests.cs",
+      "size": 27650,
+      "sha256_source": "3e56877af0b10776215d32d64ae16a500d874b4618281b9af82cc3083c80364d",
+      "sha256_destination": "3e56877af0b10776215d32d64ae16a500d874b4618281b9af82cc3083c80364d",
+      "status": "OK"
+    }
+  ],
+  "skipped_reparse_points": [],
+  "conflicts": []
+}

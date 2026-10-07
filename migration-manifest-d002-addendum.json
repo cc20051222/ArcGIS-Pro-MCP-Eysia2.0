@@ -1,0 +1,44 @@
+{
+  "schema": "arcgis-pro-mcp-migration-manifest-v1-addendum",
+  "purpose": "D-002 任务 ③（G-03 批准）：C-11 基线二进制补复制。独立成册，不改动 D-001 的 327 条基线清单。",
+  "dispatch_id": "D-002",
+  "decision_ref": "Docs/_gatekeeper/DECISIONS_LOG.md G-03",
+  "generated_utc": "2026-09-10T14:05:00+00:00",
+  "baseline_manifest": "migration-manifest.json (D-001, 327 entries, unchanged)",
+  "source_root": "D:\\ArcGIS-Pro-MCP",
+  "destination_root": "D:\\ArcGIS-Pro-MCP 2.0",
+  "constraints": [
+    "只复制，不安装、不注册（未执行 RegisterAddIn）",
+    "未启动 ArcGIS Pro / Python Bridge / MCP Server",
+    "未复制 r5 解压目录其余内容",
+    "未复制 'ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64 - 副本.zip'"
+  ],
+  "files": [
+    {
+      "path": "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/payload/ArcGISProMCP.Compatibility.esriAddInX",
+      "source": "D:\\ArcGIS-Pro-MCP\\Release\\ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64\\payload\\ArcGISProMCP.Compatibility.esriAddInX",
+      "size": 269548,
+      "sha256_source": "361FC84FB43973831D3BDE03BF468257C03BD022C6C64D1200E24B129E436A2A",
+      "sha256_destination": "361FC84FB43973831D3BDE03BF468257C03BD022C6C64D1200E24B129E436A2A",
+      "sha256_source_recheck_after_copy": "361FC84FB43973831D3BDE03BF468257C03BD022C6C64D1200E24B129E436A2A",
+      "status": "OK",
+      "note": "1.0.2 基线身份链证据；与 GATE-D001 及派工单声明一致"
+    }
+  ],
+  "summary": {
+    "total_collected": 1,
+    "copied": 1,
+    "conflict_not_overwritten": 0,
+    "reparse_skipped": 0,
+    "hash_mismatch": 0,
+    "error": 0,
+    "release_dir_file_count_after": 5
+  },
+  "release_dir_after": [
+    "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip",
+    "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64.zip.sha256",
+    "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/bundle-manifest.json",
+    "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/payload/ArcGISProMCP.Compatibility.esriAddInX",
+    "Release/ArcGIS-Pro-MCP-OneClick-1.0.2-r5-Windows-x64/payload/ArcGISProMCP.Compatibility.release-manifest.json"
+  ]
+}
