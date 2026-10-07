@@ -45,17 +45,25 @@ Every value below was measured by the execution seat on **2026-10-08**, on this 
 
 ## Get the installer (read this first)
 
-The one-click package is **not** in this repository. Ask the publisher for
-`ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip` (**r29**, 2,278,077 bytes, SHA256
-`099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE`), then verify before unpacking:
+**The installer is distributed through GitHub Releases and is not inside the git tree.** The repository itself holds source, scripts and docs only: `Release/*.zip`, `Release/发送给同事-*/` and `Archive/` are all excluded by `.gitignore`, so a `git clone` gives you no double-clickable package - it lives in this repository's **Releases** (exactly two assets: the package and its `.sha256` sidecar).
 
-```powershell
-certutil -hashfile .\ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip SHA256
-```
+1. **Preferred - download from Releases** the current generation (tag `v1.0.2`, distribution generation `one-click-1.0.2-r29`):
 
-The value must match the shipped `.sha256` sidecar character for character. If it does not, stop and
-report it to whoever gave you the file. Building the package yourself from source is described in
-[`Docs/RELEASE_WORKFLOW.md`](RELEASE_WORKFLOW.md); the output stays local and is never committed.
+   - package direct link: <https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip>
+   - sidecar direct link: <https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip.sha256> (116 bytes, carries the same digest)
+   - release page: <https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v1.0.2> (its notes carry the compatibility summary, the one-line install, the verify command, the AGPL-3.0 statement and the `NOT VERIFIED` boundaries)
+
+   Current **r29**: **2,278,077 bytes** / SHA256 `099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE` (short `099A4F3A…`). Generations r21-r28 are sealed - never repackage or overwrite them; per-generation points are in [`CHANGELOG.md`](../CHANGELOG.md).
+2. **Verify before extracting** (built into Windows, nothing to install):
+
+   ```powershell
+   certutil -hashfile .\ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip SHA256
+   ```
+
+   The output must match the `.sha256` sidecar (or the digest in the release notes) character for character; if it differs, stop and report back to whoever gave you the file.
+3. **Pick the payload that matches your ArcGIS Pro version**: the two payloads inside the package declare different minimum hosts, row by row - `net6.0-windows -> Pro 3.0` / `net8.0-windows -> Pro 3.5.0` (see the compatibility table above).
+4. **Build it yourself** (developer path, needs the .NET 8 SDK plus compile-time SDK references): see *For developers* below. Output lands in the local `Release/` and must **not** be committed.
+5. `NOT VERIFIED` unchanged: real installation, real client connection and clean-machine acceptance stay unverified (the release page says the same).
 
 ## Install
 

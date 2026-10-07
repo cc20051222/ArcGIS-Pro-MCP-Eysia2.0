@@ -49,23 +49,25 @@ English index of what to read first: [`Docs/README_EN.md`](Docs/README_EN.md).
 
 ## 安装包获取（★先读这一节）
 
-**一键安装包不在本仓库内。** 仓库只含源码、脚本与文档；`Release/*.zip`、`Release/发送给同事-*/`、`Archive/`
-均已被 `.gitignore` 排除，因此**克隆本仓库不能直接得到可双击的安装包**。获取方式：
+**安装包经 GitHub Releases 分发，不在 git 树内。** 仓库本体只含源码、脚本与文档：`Release/*.zip`、`Release/发送给同事-*/`、`Archive/` 均已被 `.gitignore` 排除，所以 `git clone` 得到的工作副本里没有安装包文件——安装包在本仓库的 **Releases**（恰好两件资产：安装包 ＋ 同名 `.sha256` 侧车）。
 
-1. **由发布者线下提供**当前代际分享包 `ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip`
-   （现役 **r29**：**2,278,077 字节**／SHA256 `099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE`，
-   简写 `099A4F3A…`）；历史代际 r21–r28 已封存，禁止重打包或覆盖。
+1. **首选・从 Releases 下载**当前代际分享包（tag `v1.0.2`・分发代际 `one-click-1.0.2-r29`）：
+
+   - 安装包直链：<https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip>
+   - 侧车文件直链：<https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip.sha256>（116 字节・内含同一摘要）
+   - Releases 页：<https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v1.0.2>（notes 含适配摘要・安装一句话・校验方法・AGPL-3.0 声明・`NOT VERIFIED` 边界）
+
+   现役 **r29**：**2,278,077 字节**／SHA256 `099A4F3A575A65A1A8F9A7F424414465E676E605B12D8C1B9A7BA36E6F36B3CE`（简写 `099A4F3A…`）。历史代际 r21–r28 已封存，禁止重打包或覆盖，逐代要点见 [`CHANGELOG.md`](CHANGELOG.md)。
 2. **拿到后先校验，再解压**（Windows 内置工具，无需额外安装）：
 
    ```powershell
    certutil -hashfile .\ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip SHA256
    ```
 
-   结果须与同名 `.sha256` 侧车文件内记录的摘要逐字符一致；不一致即停止使用并向索取方回报。
-3. **自行从源码产出**（开发者路径，需要 .NET 8 SDK 与编译期 SDK 引用）：见下文[开发者工作流](#开发者工作流)。
-   产物落在本地 `Release/`，**不会**也不应被提交进仓库。
-
-★真实安装、真实客户端连接、clean-machine 验收与公开发布均为 **NOT VERIFIED**：包内自动化与只读复验通过，不等于在用户机器上安装成功过。
+   输出须与 `.sha256` 侧车文件（或 Releases notes 中所列摘要）逐字符一致；不一致即停止使用并向发布方回报。
+3. **按你的 ArcGIS Pro 版本选对 payload**：包内双 payload 的最小宿主**逐行不同**——`net6.0-windows → Pro 3.0`／`net8.0-windows → Pro 3.5.0`（详见上文「软件适配」节）。
+4. **自行从源码产出**（开发者路径，需要 .NET 8 SDK 与编译期 SDK 引用）：见下文[开发者工作流](#开发者工作流)。产物落在本地 `Release/`，**不会**也不应被提交进仓库。
+5. ★真实安装／真实客户端连接／clean-machine **仍为 `NOT VERIFIED`**（Releases 页逐字同注）。
 
 ## 安装教程（6 步・首屏指路）
 
