@@ -23,6 +23,30 @@ English index of what to read first: [`Docs/README_EN.md`](Docs/README_EN.md).
 
 > 未宣称的能力与 `NOT VERIFIED` 全清单见文末[当前未宣称的能力](#当前未宣称的能力)一节，本仓库不以任何历史放行替代真机验收。
 
+## 软件适配（先判断「我这台机器能不能用」）
+
+**首屏指路**：安装包见下一节「**安装包获取**」（★不在本仓库内）｜安装教程 [`Docs/教程-1-安装教程.md`](Docs/教程-1-安装教程.md)｜使用教程 [`Docs/教程-2-使用教程.md`](Docs/教程-2-使用教程.md)。
+
+下表全部数值为 **2026-10-08** 由执行席在本机与 Esri 官方页面现测；版本类事实随时间漂移，故逐行标注 As-of 与来源。
+
+| 维度 | 实测结论 | 取证依据 |
+|---|---|---|
+| **操作系统** | **Windows 11 x64 ＝ 已实测**（本机内部版本 **build 26300**）｜★**Windows 10 ＝ NOT VERIFIED**（未取证，不做支持宣称） | `sys.getwindowsversion()` ＋ 注册表 `CurrentBuildNumber=26300`（注：`ProductName` 因兼容仍为旧字面值，故以 build 号为准） |
+| **ArcGIS Pro 版本** | ★**本项目在 ArcGIS Pro 3.5 上实测（`FileVersion=3.5.0.57366`）**；一键包**双 payload 的最小宿主逐行不同**：**net6 payload → `3.0`**／**net8 payload → `3.5.0`**（★装错 payload 会失败）；**3.6／3.7 依官方兼容性承诺支持・未在本项目实机验证**；**3.x 以外（2.x 及更早、未来 4.x）不支持** | PE 版本资源（`\StringFileInfo\000004b0\FileVersion`）＋ 包内 `bundle-manifest.json` 的 `payloads[].arcgisProDesktopVersion` |
+| **.NET Runtime** | 运行端＝**.NET 8 runtime**；★**源码编译目标＝`net6.0`**——`Source/` **8 个 csproj 全为 net6**（`Compatibility`＝`net6.0-windows`，Shared 下 7 个＝`net6.0`），`Tests/` **5 个＝`net8.0`** | 逐 `.csproj` 读取 `<TargetFramework>`（排除 `bin`/`obj`） |
+| **PowerShell** | **Windows PowerShell 5.1**（系统自带，无需另装；PowerShell 7 可选） | 安装器与校验脚本入口口径 |
+| **Python 环境** | ArcGIS Pro 内置 **`arcgispro-py3`**（本机实测存在） | 本机宿主检查 |
+| **MCP 客户端** | `codex` **P0**／`cursor` **P1**／`deepseek-harness` **P1**／`claude-desktop` **P2＝optional・仅模板校验** | `Config/client-catalog.json` 的 `priority`／`required`／`applyMode` 逐字段实测 |
+| **磁盘／内存** | **NOT VERIFIED**（最低磁盘与内存需求本批未取证，本行不做数值宣称） | 见上：不做未取证宣称 |
+| **「最新版本」对照（As-of 2026-10-08）** | 本项目锁定 **3.5**；同日在 Esri 官方修补程序页可读到的 3.7 线最新件＝**3.7.2**（公告页自述 *Published October 5, 2026*）⇒ **本项目落后官方最新次版本 2 档**；★官方 SDK 仓库另列 **3.7 SDK＝3.7.0.1901（要求 .NET 10 运行时）**／**3.6 SDK＝3.6.0.59527** | [Esri 修补程序索引](https://support.esri.com/en-us/patches-updates/2026)｜[3.7.2 公告](https://support.esri.com/en-us/patches-updates/2026/arcgis-pro-3-7-patch-2-3-7-2-announcement)｜[官方 SDK Releases](https://github.com/esri/arcgis-pro-sdk/releases) |
+| **Pro 补丁版本** | 3.5 线官方最新补丁＝**3.5.9**（公告页自述 *Published September 17, 2026*）；★**本机实测 3.5.0 ＝ 未打补丁**；3.6 线同日索引最高＝**3.6.5** | [3.5.9 公告](https://support.esri.com/en-us/patches-updates/2026/arcgis-pro-3-5-patch-9-3-5-9-announcement) |
+| **生命周期时间窗** | **NOT VERIFIED**——★本席本轮无法以可读文本取回官方生命周期矩阵中的具体日期，故本行**不写任何日期数值**；官方矩阵以文档形式发布，链接附右 | [ArcGIS Pro 生命周期页](https://support.esri.com/en-us/products/arcgis-pro/life-cycle)｜[Esri Product Life Cycle 文档](https://content.esri.com/support/techarticles/product-life-cycle.pdf) |
+| 装机位置佐证 | 本机 `%USERPROFILE%\Documents\ArcGIS\AddIns\ArcGISPro` **存在**＝2 个 GUID 子目录／3 个文件／合计 **2,148,771 B**，其中本项目 `ArcGISProMCP.Compatibility.esriAddInX` **1,103,697 B**（另有同目录 `.pre-5.5.4-185110.bak` 185,110 B 与一个与本无关的 `GeoSceneProAIAppModule.esriAddinX` 859,964 B）；`%APPDATA%\ESRI`／`%LOCALAPPDATA%\ESRI` 下**无 `AddIns` 目录** | 本机递归枚举（与包内 manifest 的安装位置记载一致） |
+
+★**四项诚实边界（不得省略）**：①`cleanMachineAcceptance = NOT VERIFIED`（包内 `bundle-manifest.json` 的自我声明，★干净机验收未做）｜②**Windows 10 未验证**｜③**非 3.x 的 ArcGIS Pro 不支持**｜④**3.6／3.7 未在本项目实机验证**。
+
+**关键句**：本项目在 ArcGIS Pro **3.5** 上实测（`3.5.0.57366`）。ArcGIS Pro **3.6**（官方要求 .NET 8，与 3.5 同内核）与 **3.7**（官方声明 3.x SDK 扩展免重编；本项目 `Source/` 264 件 `.cs` 内 `Clipboard`／`BinaryFormatter`／`DragAndDrop` 命中文件数**全 0**，故不属官方列出的需重编情形）**按官方兼容性承诺支持，但未在本项目实机验证。3.x 以外的版本未支持。**
+
 ## 安装包获取（★先读这一节）
 
 **一键安装包不在本仓库内。** 仓库只含源码、脚本与文档；`Release/*.zip`、`Release/发送给同事-*/`、`Archive/`

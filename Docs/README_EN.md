@@ -19,6 +19,30 @@ full-source obligation.
 **Not redistributed:** the Esri SDK (`sdk-refs/` is excluded — redistributing it would breach the Esri
 EULA) and every release binary (`Release/*.zip`, the per-colleague folders, `Archive/`).
 
+## Software compatibility (can this machine run it?)
+
+**Shortcuts**: the installer is described in the next section **"Get the installer"** (★ it is *not* inside this repository)｜install guide [`Docs/教程-1-安装教程.md`](教程-1-安装教程.md)｜usage guide [`Docs/教程-2-使用教程.md`](教程-2-使用教程.md).
+
+Every value below was measured by the execution seat on **2026-10-08**, on this host and on Esri's official pages; version facts drift, so each row carries its own As-of date and source.
+
+| Dimension | Measured conclusion | Evidence |
+|---|---|---|
+| **Operating system** | **Windows 11 x64 = tested** (this host is **build 26300**)｜★**Windows 10 = NOT VERIFIED** (no evidence taken, so no support claim) | `sys.getwindowsversion()` + registry `CurrentBuildNumber=26300` (the compat `ProductName` literal is stale, so the build number governs) |
+| **ArcGIS Pro version** | ★**This project was tested on ArcGIS Pro 3.5 (`FileVersion=3.5.0.57366`)**; the one-click package ships **two payloads whose minimum host differs row by row**: **net6 payload → `3.0`** / **net8 payload → `3.5.0`** (★ installing the wrong payload fails); **3.6 / 3.7 supported per Esri's own compatibility promise, not verified on a machine in this project**; **anything outside 3.x (2.x and older, future 4.x) is not supported** | PE version resource (`\StringFileInfo\000004b0\FileVersion`) + `payloads[].arcgisProDesktopVersion` in `bundle-manifest.json` |
+| **.NET runtime** | Runtime side = **.NET 8 runtime**; ★**source compile target = `net6.0`** - the **8 csproj under `Source/` are all net6** (`Compatibility` = `net6.0-windows`, the 7 shared ones = `net6.0`), while the **5 under `Tests/` = `net8.0`** | `<TargetFramework>` read from every `.csproj` (`bin`/`obj` excluded) |
+| **PowerShell** | **Windows PowerShell 5.1** (ships with Windows; no extra install. PowerShell 7 optional) | Installer and verifier entry scripts |
+| **Python environment** | ArcGIS Pro's built-in **`arcgispro-py3`** (present on this host, measured) | host probe |
+| **MCP clients** | `codex` **P0** / `cursor` **P1** / `deepseek-harness` **P1** / `claude-desktop` **P2 = optional, template validation only** | `priority` / `required` / `applyMode` fields of `Config/client-catalog.json` |
+| **Disk / memory** | **NOT VERIFIED** (minimum disk and memory requirement was not evidenced in this batch; this row claims no figures) | see above: no unevidenced claim |
+| **Latest-version comparison (As-of 2026-10-08)** | this project is pinned to **3.5**; the newest 3.7-line item readable on Esri's patch index the same day = **3.7.2** (announcement page states *Published October 5, 2026*) ⇒ **this project trails the official latest minor by 2**; ★ the official SDK repository additionally lists **3.7 SDK = 3.7.0.1901 (requires the .NET 10 runtime)** / **3.6 SDK = 3.6.0.59527** | [Esri patch index](https://support.esri.com/en-us/patches-updates/2026) | [3.7.2 announcement](https://support.esri.com/en-us/patches-updates/2026/arcgis-pro-3-7-patch-2-3-7-2-announcement) | [official SDK releases](https://github.com/esri/arcgis-pro-sdk/releases) |
+| **Pro patch level** | newest official 3.5-line patch = **3.5.9** (announcement page states *Published September 17, 2026*); ★**this host is 3.5.0 = unpatched**; highest 3.6-line item on the same index = **3.6.5** | [3.5.9 announcement](https://support.esri.com/en-us/patches-updates/2026/arcgis-pro-3-5-patch-9-3-5-9-announcement) |
+| **Life-cycle window** | **NOT VERIFIED** - ★ this seat could not retrieve the official life-cycle matrix as readable text in this round, so **no date values are written here**; the matrix is published as a document, linked to the right | [ArcGIS Pro life-cycle page](https://support.esri.com/en-us/products/arcgis-pro/life-cycle) | [Esri Product Life Cycle document](https://content.esri.com/support/techarticles/product-life-cycle.pdf) |
+| Install-location corroboration | on this host `%USERPROFILE%\Documents\ArcGIS\AddIns\ArcGISPro` **exists** = 2 GUID subdirectories / 3 files / **2,148,771 B** in total, of which this project's `ArcGISProMCP.Compatibility.esriAddInX` = **1,103,697 B** (plus a `.pre-5.5.4-185110.bak` of 185,110 B and an unrelated `GeoSceneProAIAppModule.esriAddinX` of 859,964 B); **no `AddIns` directory** under `%APPDATA%\ESRI` or `%LOCALAPPDATA%\ESRI` | recursive host enumeration (matches the install location recorded in the package manifest) |
+
+★**Four honest boundaries (never omitted)**: (1) `cleanMachineAcceptance = NOT VERIFIED` (the package's own `bundle-manifest.json` declaration - a clean machine was never accepted); (2) **Windows 10 not verified**; (3) **ArcGIS Pro outside 3.x is not supported**; (4) **3.6 / 3.7 never verified on a real machine in this project**.
+
+**Key sentence**: this project was measured on ArcGIS Pro **3.5** (`3.5.0.57366`). ArcGIS Pro **3.6** (officially .NET 8, same core as 3.5) and **3.7** (Esri states 3.x SDK extensions need no recompilation; this project's 264 `.cs` files under `Source/` contain zero `Clipboard` / `BinaryFormatter` / `DragAndDrop` hits, so they are not in the category Esri lists as requiring a rebuild) are **supported on the strength of Esri's compatibility promise but were not verified on a real machine here. Versions outside 3.x are not supported.**
+
 ## Get the installer (read this first)
 
 The one-click package is **not** in this repository. Ask the publisher for
