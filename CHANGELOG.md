@@ -1,6 +1,19 @@
 # Changelog
 
-本文件记录 **ArcGIS Pro MCP** 一键分发代际（r21 → r29）的变更要点。
+本文件记录 **ArcGIS Pro MCP** 一键分发代际（r21 → r29）及独立配套候选的变更要点。
+
+## Skill 与实时任务面板 0.7.1 配套候选（2026-10-19）
+
+本节依据本轮构建、测试与真实实验记录，独立于下方历史r21—r29台账摘录。
+
+- 实现提交 `f945df2`：按真实需求和资料规划完整业务链，当前步骤高亮，对话/面板同步；明确数据缺口、工具替代与开发授权，逐件交付真实路径。
+- GP实际回调与请求ID绑定；首检、问题修复、新证据复检、最终技术检查及独立验收分开。补齐明确范围的几何/拓扑检查与原生三维方法核验参考。
+- 新增D盘配套安装和启动脚本、独立面板、两份Word及完整使用教程；保留原版r29，新增配套插件仅Pro3.5/net8本机验证。
+- 验证：8项Skill包检查、97项辅助测试、16项进度检查、68项Server测试、84项目录工作流针对测试、8项安装恢复检查；真实综合实验及搬迁重开、图件/报告视觉核验完成。不将90个设计用例当成真实客户端验收。
+- 两站源码及Release已更新；配套ZIP 4,252,804 B，SHA256 `0E1E889CA85C3276F164814A93AD872EFFBA3454EE2280E0C0330625FEA9B6EB`，两站公开下载复验一致。候选状态不升格独立PASS，比赛数据及个人资料不上传。
+- [完整更新与边界](Docs/SKILL_071_RELEASE_NOTES.md) · [安装教程](Docs/SKILL_INSTALL_GUIDE.md) · [功能使用](Docs/SKILL_WORKFLOW_GUIDE.md)。
+
+以下为历史一键分发代际的原始摘录规则及记录：
 
 - 格式参考 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)，版本对应包内 `bundle-manifest.json` 的 `version`（当前 `1.0.2`），代际后缀 `rN` 为分发序号。
 - ★**每条内容逐字取自仓库内既有台账与发布记录**（`Release/distribution-ledger-rN.json`・`Release/release-record-rN-dXXX.json`・`Release/release-acceptance-record-r23-d112.json`），不含回忆性叙述；缺项一律写「未见于台账」，不做推测补齐。

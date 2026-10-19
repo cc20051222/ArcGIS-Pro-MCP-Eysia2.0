@@ -53,11 +53,13 @@ English index of what to read first: [`Docs/README_EN.md`](Docs/README_EN.md).
 
 ## 安装包获取（★先读这一节）
 
-**安装包经 Releases 分发，不在 git 树内。** 仓库本体只含源码、脚本与文档：`Release/*.zip`、`Release/发送给同事-*/`、`Archive/` 均已被 `.gitignore` 排除，所以 `git clone` 得到的工作副本里没有安装包文件——安装包在本仓库的 **Releases**（恰好两件资产：安装包 ＋ 同名 `.sha256` 侧车）。同一发行版在两个平台同步发布，任选其一（★国内访问推荐 GitCode）：
+**安装包经 Releases 分发，不在 git 树内。** 原版 r29 与同名 `.sha256` 保留；2026-10-19 新增 Skill/面板 0.7.1 配套候选及对应源码 ZIP、各自校验文件。配套包含原版副本、新插件、Skill、独立面板、安装/启动脚本和两份 Word。新版插件只在 Pro 3.5/net8 实测，技术自检结论为 PASS CANDIDATE，独立验收另列。
+
+**需要本次新功能请下载 `ArcGIS-Pro-MCP-2.0-Companion-0.7.1-candidate-Windows-x64.zip`**：[GitCode 发布页](https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/v1.0.2) · [GitHub 直接下载](https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-2.0-Companion-0.7.1-candidate-Windows-x64.zip)。4,252,804 字节，SHA256 `0E1E889CA85C3276F164814A93AD872EFFBA3454EE2280E0C0330625FEA9B6EB`；两站公开下载复验一致。按[新版安装教程](Docs/SKILL_INSTALL_GUIDE.md)先 Plan 再安装；不要在安装新配套后重跑原版部署，以免降回旧插件。以下表格保留原版 r29 获取方式：
 
 | 平台 | Releases 页 | 安装包直链 |
 |---|---|---|
-| **GitCode（镜像・国内快）** | <https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v1.0.2> | <https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip> |
+| **GitCode（国内镜像）** | <https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/v1.0.2> | <https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip> |
 | **GitHub（主源）** | <https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v1.0.2> | <https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/download/v1.0.2/ArcGIS-Pro-MCP-OneClick-1.0.2-r29-Windows-x64.zip> |
 
 1. **首选・从 Releases 下载**当前代际分享包（tag `v1.0.2`・分发代际 `one-click-1.0.2-r29`）。侧车文件同名加 `.sha256` 后缀（116 字节・内含同一摘要），与安装包并列于同一 Releases 页；页面 notes 含适配摘要・安装一句话・校验方法・AGPL-3.0 声明・`NOT VERIFIED` 边界。

@@ -73,3 +73,6 @@ Release/release-acceptance-record-r23-d112.json
 Release/.staging-oneclick-r16-python/
 /ArcGISProMCP.Core.dll
 **/__pycache__/
+
+# 独立配套二进制、构建时点冻结包及发布暂存不入源码仓库
+/配套交付/
