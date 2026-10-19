@@ -1,0 +1,27 @@
+{
+  "recordKind": "OPTIONAL_USER_TASK_RECORD_NOT_SERVER_JOB_OR_AUTHORIZATION",
+  "schemaVersion": "1.3",
+  "intake": {
+    "requirements": {"status": "MISSING", "value": null, "evidenceRefs": []},
+    "inputs": {"status": "MISSING", "value": [], "evidenceRefs": []},
+    "outputRoot": {"status": "MISSING", "value": null, "evidenceRefs": []},
+    "dataNeeds": [],
+    "toolChoices": []
+  },
+  "recordOrigin": "AUTHOR_ENTERED_NOT_RUNTIME_PROOF",
+  "taskId": null,
+  "goal": null,
+  "mode": "inspect",
+  "inputs": [],
+  "scope": {"map": null, "selectionBasis": null, "timeRange": null},
+  "method": {"tools": [], "parameters": {}, "environment": {}, "knownLimits": []},
+  "authorization": {"userMessageReference": null, "allowedEffects": [], "overwriteTargets": []},
+  "plannedOutputs": [],
+  "plan": {"revision": 1, "scenario": null, "selectionReason": null, "alternatives": [], "constraints": [], "steps": [], "changes": []},
+  "observations": [],
+  "presentation": {"mode": "standard", "lastObservedAt": null, "displayChannel": "chat", "runtimeCounts": null, "artifacts": []},
+  "execution": {"jobId": null, "status": "NOT_STARTED", "steps": []},
+  "verification": {"dataChecks": [], "visualChecks": [], "unverified": []},
+  "quality": {"profile": "UNSPECIFIED", "profileRevision": 1, "boundPlanRevision": 1, "producerId": null, "standardMappings": [], "subjectVersions": {}, "requirements": [], "checks": [], "issues": [], "history": [], "acceptance": {"status": "NOT_REQUESTED", "reviewerRole": "UNASSIGNED", "reviewerId": null, "evidenceRefs": []}},
+  "delivery": {"verifiedMembers": [], "partialOrBlockedMembers": []}
+}

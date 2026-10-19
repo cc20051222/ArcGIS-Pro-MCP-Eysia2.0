@@ -22,6 +22,17 @@ public sealed class MCPSettings
     /// 解析器自身不读环境变量。
     /// </summary>
     public const string LogDirectoryEnvironmentVariable = "ARCGIS_PRO_MCP_LOG_DIRECTORY";
+    public const string ProgressDirectoryEnvironmentVariable = "ARCGIS_PRO_MCP_PROGRESS_DIRECTORY";
+    public const string ProgressTaskRecordEnvironmentVariable = "ARCGIS_PRO_MCP_PROGRESS_TASK_RECORD";
+    public string ProgressDirectory { get; set; } = string.Empty;
+    public string ProgressTaskRecord { get; set; } = string.Empty;
+    public const int ProgressPanelRefreshMilliseconds = 500;
+    public const int WorkflowRecordMaxBytes = 2 * 1024 * 1024;
+    public const int ProgressHeartbeatMilliseconds = 10000;
+    public const int ProgressStaleSeconds = 15;
+    public const int ProgressNotificationBufferCapacity = 128;
+    public const int ProgressEventCapacity = 2000;
+    public const long ProgressJournalMaxBytes = 16 * 1024 * 1024;
 
     /// <summary>监听地址（默认仅环回）。</summary>
     public string Host { get; set; } = DefaultHost;

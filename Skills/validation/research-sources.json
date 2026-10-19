@@ -1,0 +1,292 @@
+{
+  "reviewDate": "2026-10-18",
+  "purpose": "2.0 companion Skill design; selected practices, not a standards certification or competitor benchmark",
+  "readingBoundary": "Sources reviewed through public documentation and repository pages. Summaries are paraphrased; no community implementation code copied. Vendor and protocol versions are reference contexts, not a claim about the installed product.",
+  "sources": [
+    {
+      "id": "R01",
+      "kind": "specification",
+      "title": "Agent Skills specification",
+      "url": "https://agentskills.io/specification",
+      "adopt": "Portable SKILL.md metadata, relative resources and progressive disclosure.",
+      "local": "arcgis-pro-2-workflows/SKILL.md",
+      "limit": "Format validation does not prove client discovery or successful tool use; experimental allowed-tools is not used to grant permissions."
+    },
+    {
+      "id": "R02",
+      "kind": "official",
+      "title": "OpenAI Build skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "adopt": "Separate selection metadata, loaded instructions and on-demand resources; document project-local discovery.",
+      "local": "arcgis-pro-2-workflows/agents/openai.yaml",
+      "limit": "Candidate is not installed; current client discovery and MCP connection still require verification. Original developers.openai.com/codex/skills documentation redirects here."
+    },
+    {
+      "id": "R03",
+      "kind": "official",
+      "title": "OpenAI plugin concepts: skills",
+      "url": "https://developers.openai.com/plugins/concepts/skills",
+      "adopt": "Use Skill for repeatable procedures around existing tools.",
+      "local": "2.0配套Skill设计与使用说明.md",
+      "limit": "No plugin installation, backend extension or new application integration performed."
+    },
+    {
+      "id": "R04",
+      "kind": "official",
+      "title": "Testing Agent Skills Systematically with Evals",
+      "url": "https://developers.openai.com/blog/eval-skills",
+      "adopt": "Realistic trigger, non-trigger and boundary cases; distinguish observable behavior from format checks.",
+      "local": "validation/behavior-cases.json",
+      "limit": "Defined cases are not executed model evaluations; actual evidence levels recorded separately."
+    },
+    {
+      "id": "R05",
+      "kind": "official",
+      "title": "Anthropic Skill authoring best practices",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices",
+      "adopt": "Concise instructions, focused references, deterministic helpers where useful.",
+      "local": "arcgis-pro-2-workflows/scripts/inspect_tools.py",
+      "limit": "No claim of cross-client runtime acceptance or applicability of every vendor-specific recommendation."
+    },
+    {
+      "id": "R06",
+      "kind": "official",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "adopt": "Compose reusable domain procedures and disclose resources only as needed.",
+      "local": "arcgis-pro-2-workflows/references",
+      "limit": "One focused product workflow Skill, not a collection of overlapping per-tool Skills."
+    },
+    {
+      "id": "R07",
+      "kind": "specification",
+      "title": "MCP tools, 2025-06-18 reference version",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "adopt": "Discover actual inputSchema, follow nextCursor and inspect business errors in tool results.",
+      "local": "arcgis-pro-2-workflows/references/runtime-and-scope.md",
+      "limit": "Reference protocol version is not asserted to be this project's negotiated runtime version."
+    },
+    {
+      "id": "R08",
+      "kind": "official",
+      "title": "Tool Annotations as Risk Vocabulary: What Hints Can and Can't Do",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-03-16-tool-annotations/",
+      "adopt": "Annotations inform routing but do not enforce authorization or prove effects.",
+      "local": "arcgis-pro-2-workflows/SKILL.md",
+      "limit": "Do not infer permission from readOnlyHint or source Read tier."
+    },
+    {
+      "id": "R09",
+      "kind": "official",
+      "title": "Esri Geoprocessing environment settings",
+      "url": "https://pro.arcgis.com/en/pro-app/3.5/help/analysis/geoprocessing/basics/geoprocessing-environment-settings.htm",
+      "adopt": "Check relevant extent, CRS, cell size, snap and mask; distinguish inherited and task-local settings.",
+      "local": "arcgis-pro-2-workflows/references/vector-and-gp.md",
+      "limit": "Only environments honored by the actual tool affect its execution; no global-setting rewrite by default."
+    },
+    {
+      "id": "R10",
+      "kind": "official",
+      "title": "Esri Geoprocessing history",
+      "url": "https://pro.arcgis.com/en/pro-app/3.5/help/analysis/geoprocessing/basics/geoprocessing-history.htm",
+      "adopt": "Capture actual parameters, environment, messages and outcome for reproducibility.",
+      "local": "arcgis-pro-2-workflows/assets/task-record.json",
+      "limit": "Lightweight optional record is not a new backend audit store or full project backup."
+    },
+    {
+      "id": "R11",
+      "kind": "official",
+      "title": "Esri Define Projection",
+      "url": "https://pro.arcgis.com/en/pro-app/3.5/tool-reference/data-management/define-projection.htm",
+      "adopt": "Distinguish changing CRS declaration from transforming coordinates; do not guess unknown CRS.",
+      "local": "arcgis-pro-2-workflows/references/data-quality.md",
+      "limit": "Transformation choice must match actual input data and available methods."
+    },
+    {
+      "id": "R12",
+      "kind": "official",
+      "title": "Esri Snap Raster environment",
+      "url": "https://pro.arcgis.com/en/pro-app/3.4/tool-reference/environment-settings/snap-raster.htm",
+      "adopt": "Check cell alignment, extent, resolution and NoData effects for raster combinations.",
+      "local": "arcgis-pro-2-workflows/references/raster-network-statistics.md",
+      "limit": "Resampling does not create new measurement detail; reference version is not a runtime claim."
+    },
+    {
+      "id": "R13",
+      "kind": "standard-overview",
+      "title": "OGC API Processes overview",
+      "url": "https://ogcapi.ogc.org/processes/overview.html",
+      "adopt": "Separate discovery, process description, execution, job state and result retrieval.",
+      "local": "arcgis-pro-2-workflows/references/folder-jobs.md",
+      "limit": "Workflow analogy only; no new OGC endpoint or conformance claim."
+    },
+    {
+      "id": "R14",
+      "kind": "standard-overview",
+      "title": "W3C PROV overview",
+      "url": "https://www.w3.org/TR/prov-overview/",
+      "adopt": "Relate source entities, processing activity, responsibility and derived artifacts.",
+      "local": "arcgis-pro-2-workflows/assets/task-record.json",
+      "limit": "Not PROV-O/PROV-JSON implementation or certified provenance compliance."
+    },
+    {
+      "id": "R15",
+      "kind": "official",
+      "title": "Adobe Photoshop UXP executeAsModal",
+      "url": "https://developer.adobe.com/photoshop/uxp/2022/ps-reference/media/executeasmodal",
+      "adopt": "Treat document mutation, modal state, cancellation and save verification as backend capability requirements.",
+      "local": "arcgis-pro-2-workflows/references/photoshop-boundaries.md",
+      "limit": "Current PS implementation remains restricted; Skill does not inject UXP scripts or claim automation success."
+    },
+    {
+      "id": "R16",
+      "kind": "community-primary",
+      "title": "muend geoai-skills: arcgis-pro-automation",
+      "url": "https://github.com/muend/geoai-skills/blob/main/skills/arcgis-pro-automation/SKILL.md",
+      "adopt": "Organize preflight, inspection, exact planning, incremental execution and result verification.",
+      "local": "arcgis-pro-2-workflows/SKILL.md",
+      "limit": "Mutable main-branch reference, not a frozen performance benchmark. Its GUI exclusions and arbitrary execution options are not copied into this product."
+    },
+    {
+      "id": "R17",
+      "kind": "community-primary",
+      "title": "Jasper0122 CLI-Anything-Arcgis-Pro Skill",
+      "url": "https://github.com/Jasper0122/CLI-Anything-Arcgis-Pro/blob/main/SKILL.md",
+      "adopt": "Make batch, cartography and live/headless distinctions explicit in workflow guidance.",
+      "local": "arcgis-pro-2-workflows/references/cartography-delivery.md",
+      "limit": "Mutable main-branch reference. No copied CLI, arbitrary GP bridge, installer, fixed tool namespace or permission policy."
+    },
+    {
+      "id": "R18",
+      "kind": "specification",
+      "title": "MCP Progress, 2025-06-18 reference version",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/utilities/progress",
+      "adopt": "Progress messages are optional, scoped to active request tokens and rate limited; unknown total stays unknown.",
+      "local": "arcgis-pro-2-workflows/references/adaptive-flow-and-progress.md",
+      "limit": "No verified progress notification implementation found in the inspected project source. Do not invent GIS arguments or promise push from Skill files."
+    },
+    {
+      "id": "R19",
+      "kind": "official",
+      "title": "W3C Understanding WCAG 2.2 SC 4.1.3 Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "adopt": "Meaningful textual state changes, accessible non-color labels and low-interruption updates.",
+      "local": "arcgis-pro-2-workflows/references/adaptive-flow-and-progress.md",
+      "limit": "Design guidance only; actual chat accessibility is controlled by the client and has not been certified or tested here."
+    },
+    {
+      "id": "R20",
+      "kind": "official-standard-catalog",
+      "title": "GB/T 24356-2023 测绘成果质量检查与验收",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=2874EFAC7523FB293E6AF2E4068CEB02",
+      "adopt": "Identify a relevant Chinese surveying-product inspection and acceptance reference for project-specific applicability review.",
+      "local": "arcgis-pro-2-workflows/references/quality-and-acceptance.md",
+      "limit": "Official catalog currently lists it as active. Full text and clauses were not inspected; no claim of full clause implementation, tolerance values or standards conformance."
+    },
+    {
+      "id": "R21",
+      "kind": "official-standard-abstract",
+      "title": "ISO 19157-1:2023 Geographic information Data quality Part 1",
+      "url": "https://www.iso.org/standard/78900.html",
+      "adopt": "Use product-specific criteria, explicit quality scope, evaluation and reporting; do not invent universal acceptable thresholds.",
+      "local": "arcgis-pro-2-workflows/references/quality-and-acceptance.md",
+      "limit": "Only public abstract and metadata reviewed; not a full standard implementation or certification."
+    },
+    {
+      "id": "R22",
+      "kind": "official-standard-abstract",
+      "title": "ISO 19115-1:2014 Geographic information Metadata Part 1",
+      "url": "https://www.iso.org/standard/53798.html",
+      "adopt": "Keep source identity, spatial/temporal reference and delivery/provenance information discoverable.",
+      "local": "arcgis-pro-2-workflows/references/quality-and-acceptance.md",
+      "limit": "Only public abstract and metadata reviewed; amendments and project-adopted editions must be considered for real clause mapping. No full metadata schema compliance claim."
+    }
+  ],
+  "deliberatelyDeferred": [
+    "Experimental served-skill MCP extensions",
+    "automatic client configuration",
+    "arbitrary GP/Python/UXP execution",
+    "competitor superiority claims without fixed comparable tests"
+  ],
+  "projectSourceAuthority": [
+    "Source/ArcGISProMCP.Compatibility/Composition.cs",
+    "Tests/UnitTests/ProductionToolContractSnapshot.cs",
+    "Source/Shared/ArcGISProMCP.Core/Services/IReadOnlyModeService.cs",
+    "Source/Shared/ArcGISProMCP.Core/Results/ErrorCodes.cs",
+    "Config/gp-whitelist.json"
+  ],
+  "sourceFileHashes": "../arcgis-pro-2-workflows/references/tool-catalog.snapshot.json",
+  "localInterfaceObservations": [
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sha256": "D81915C649364DA1D27126FC6CB9F77BB6E6BB0E7AB16B87B07056BC74373C3F",
+      "observation": "suggest_workflow is keyword matching over six frozen scenarios; count-based cost is not runtime.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sha256": "BABD35ABE37365267781C62BA75898A68509830BED1F73E3A4F8E7D77F7E1D5E",
+      "observation": "Status/report snapshots; sharded plan calls inject target without universal input/output binding.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sha256": "A12B4668C4F86523DFAF24584CC5683C5107FA2116E8A4EA798D19BF6557EAA8",
+      "observation": "export_map_view schema and preview limits; map-view rendering needs active view.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/MapService.D063.cs",
+      "sha256": "3DDD4186052918A1ABB16F75225E83C7F0944EAA19A3B6ED288F518B47E07689",
+      "observation": "D-only transient staging, copy-overwrite persistence and actual active-map checks.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Server/Mcp/McpProtocolHandler.cs",
+      "sha256": "0EF1F483E5BFEE6C21374E4680576C21C65783A50B7BC0D77D3565BBF8C802F4",
+      "observation": "Image forwarding preserved; initialize advertises experimental progress for the new backend. GP callback runtime still requires updated Add-in acceptance.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sha256": "7C737255F42CFDEEC7452A0DC8B8628474E880122389248DD005B6E68D99E6CE",
+      "observation": "Quality report supports explicit rules, maxFeatures and optional reportPath; report generation is not acceptance.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sha256": "98530B14B62F327A798EA58CD27B8BFC0091B005CF2DC07241BE86BCC3DF5671",
+      "observation": "Quality checks depend on service and configured coverage; no reportPath defaults to in-memory return.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/D088QualityService.cs",
+      "sha256": "594D4DC0ECCDFA316059CAD930789CBC5C54C0506F7DAE8D6C60FA1488F2A240",
+      "observation": "Geometry/topology methods now dispatch to D088GeometryQuality partial implementation; seven other quality/lineage methods retain explicit NOT_IMPLEMENTED. Runtime evidence separately retained for the two implemented methods.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sha256": "748DF91FCCD567D2D2FE24FE88FD92AD9C4F94827D396FC427374F274060CBB3",
+      "observation": "Interchange conformance tool explicitly lacks a full rule library for declared standardVersion.",
+      "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Services/D088GeometryQuality.cs",
+      "sha256": "240C9551065B484D294155E93B6E99BEAF73887CDD0832D71771B40E5F4D4E12",
+      "observation": "Read-only MCT geometry checks and six selected topology rules; applicability, sample/limits and unassessed cases disclosed. Explicit real scenarios independently retested, not all rules certified.",
+      "evidenceStatus": "SOURCE_INSPECTED_RUNTIME_EVIDENCE_SEPARATE"
+    }
+  ],
+  "progressSourceSearch": {
+    "terms": [
+      "progressToken",
+      "notifications/progress"
+    ],
+    "scope": [
+      "Source/Shared",
+      "Source/ArcGISProMCP.Compatibility"
+    ],
+    "result": "No implementation evidence found by targeted source search; not a protocol compliance proof or a live negotiation test."
+  }
+}

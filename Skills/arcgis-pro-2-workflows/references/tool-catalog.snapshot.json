@@ -1,0 +1,3260 @@
+{
+  "kind": "OFFLINE_SOURCE_TOOL_REFERENCE",
+  "generatedOn": "2026-10-19",
+  "product": "ArcGIS-Pro-MCP 2.0",
+  "skillVersion": "0.7.1",
+  "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE",
+  "registeredToolCount": 239,
+  "registrationClassCount": 239,
+  "sourceContractNameDifference": [],
+  "supportObservationReviewDate": "2026-10-18",
+  "supportObservationBoundary": "Reviewed limitations apply only to the exact reviewed source hashes. Changed PS/host files require a new review, not automatic promotion.",
+  "executionTypeCounts": {
+    "Bridge": 20,
+    "Geoprocessing": 56,
+    "Native": 156,
+    "Python": 7
+  },
+  "rosterCountsIncludingUnregisteredCandidates": {
+    "Read": 94,
+    "Session": 33,
+    "Write": 158
+  },
+  "tierBoundary": "Source set membership only; not a new behavioral read/write acceptance. Read tier includes control operations such as set_readonly_mode.",
+  "tools": [
+    {
+      "name": "activate_map",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ActivateMapTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CreateMergeFieldTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_fields",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddFieldsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_folder_connection",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddFolderConnectionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiscoveryTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_join",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddJoinTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_layout_text",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddLayoutTextTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_legend",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddLegendTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_north_arrow",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddNorthArrowTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "add_scale_bar",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AddScaleBarTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "alter_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AlterFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FieldTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "analyze_scenario_sensitivity",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AnalyzeScenarioSensitivityTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "append_features",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AppendFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "apply_bookmark",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ApplyBookmarkTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "apply_processing_plan",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ApplyProcessingPlanTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "apply_symbology_from_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ApplySymbologyFromLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyAdvanceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "assess_classification_accuracy",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AssessClassificationAccuracyTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "assess_remote_sensing_quality",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AssessRemoteSensingQualityTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "assign_domain_to_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "AssignDomainToFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "buffer",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "BufferTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "build_raster_pyramids",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "BuildRasterPyramidsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "calculate_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CalculateFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FieldTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "calculate_geometry_attributes",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CalculateGeometryAttributesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "calculate_service_areas",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CalculateServiceAreasTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "cancel_job",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CancelJobTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "cell_statistics",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CellStatisticsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AggregateStatisticsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "check_extension",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CheckExtensionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "check_topology_rules",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CheckTopologyRulesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "clear_selection",
+      "category": "Selection",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ClearSelectionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "clip",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ClipTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "compare_datasets",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CompareDatasetsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "compare_multi_criteria_scenarios",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CompareMultiCriteriaScenariosTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "compare_schemas",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CompareSchemasTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "compare_temporal_trajectories",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CompareTemporalTrajectoriesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "compose_raster_bands",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ComposeRasterBandsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "configure_map_series",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ConfigureMapSeriesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "configure_subtypes",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ConfigureSubtypesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "copy_dataset",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CopyDatasetTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CopyExportProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_bookmark",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateBookmarkTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_domain",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateDomainTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_elevation_profile",
+      "category": "Raster",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateElevationProfileTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118HostFaceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_HOST_FACE_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "create_feature_class",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateFeatureClassTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_file_gdb",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateFileGdbTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CreateMergeFieldTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_group_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateGroupLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_layout",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateLayoutTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_map",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateMapTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_relationship_class",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateRelationshipClassTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_selection_snapshot",
+      "category": "Selection",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateSelectionSnapshotTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "create_table",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CreateTableTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "cross_validate_spatial_model",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "CrossValidateSpatialModelTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "dataset_summary",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "DatasetSummaryTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PythonDiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "define_projection",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DefineProjectionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "delete_bookmark",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DeleteBookmarkTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "delete_dataset",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DeleteDatasetTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "delete_domain",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DeleteDomainTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "delete_features",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DeleteFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "delete_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DeleteFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "describe_geoprocessing_tool",
+      "category": "Geoprocessing",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DescribeGeoprocessingToolTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "describe_tool_catalog",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "DescribeToolCatalogTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "design_spatial_sample",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DesignSpatialSampleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "detect_temporal_change_points",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DetectTemporalChangePointsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "diagnose",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "DiagnoseTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiagnosticTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "discard_edits",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DiscardEditsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "dissolve",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DissolveTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "duplicate_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "DuplicateLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "erase",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "EraseTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AnalysisRasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "evaluate_scenario_ensemble",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "EvaluateScenarioEnsembleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_design_bundle",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportDesignBundleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_features",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_eps",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutEpsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_jpg",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutJpgTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_pdf",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutPdfTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_png",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutPngTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_svg",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutSvgTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_layout_tif",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportLayoutTifTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_map_series",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportMapSeriesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064BatchTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_map_view",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportMapViewTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_scene_package",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportScenePackageTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118HostFaceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_HOST_FACE_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "export_table",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportTableTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CopyExportProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "export_time_animation",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExportTimeAnimationTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118HostFaceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_HOST_FACE_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "extrude_scene_features",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ExtrudeSceneFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118HostFaceTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_HOST_FACE_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "find_identical",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "FindIdenticalTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "focal_statistics",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "FocalStatisticsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AggregateStatisticsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "generate_quality_report",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GenerateQualityReportTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "generate_tessellation",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GenerateTessellationTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_arcgis_version",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetArcGISVersionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GetArcGISVersionTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_audit_log",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetAuditLogTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_broken_layers",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetBrokenLayersTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_current_map",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetCurrentMapTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GetCurrentMapTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_dataset_info",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetDatasetInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/DataRasterTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_dataset_lineage",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetDatasetLineageTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_definition_query",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetDefinitionQueryTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_domains",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetDomainsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SchemaTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_edit_session",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetEditSessionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_environment",
+      "category": "Geoprocessing",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetEnvironmentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_feature_count",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetFeatureCountTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AttributeTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_field_info",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetFieldInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AttributeTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_field_statistics",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetFieldStatisticsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AttributeSummaryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_field_values",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetFieldValuesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FieldTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_geometry_info",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetGeometryInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_indexes",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetIndexesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SchemaTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_job_report",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetJobReportTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_job_status",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetJobStatusTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_label_info",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetLabelInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_layer_features",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetLayerFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_layer_info",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetLayerInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_layer_symbology",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetLayerSymbologyTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_layers",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetLayersTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GetLayersTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_layout_info",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetLayoutInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_license_info",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetLicenseInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GetLicenseInfoTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_map_extent",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetMapExtentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_map_info",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetMapInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MapTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_map_view",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetMapViewTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_messages",
+      "category": "Geoprocessing",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetMessagesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_performance_stats",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetPerformanceStatsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_project_info",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetProjectInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GetProjectInfoTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_project_items",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetProjectItemsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_raster_info",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetRasterInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/DataRasterTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_schema_info",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetSchemaInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SchemaTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_selected_features",
+      "category": "Selection",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetSelectedFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_subtypes",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetSubtypesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SchemaTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_unique_values",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "GetUniqueValuesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "get_workspace",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "GetWorkspaceTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "hotspot_analysis",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "HotspotAnalysisTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "insert_features",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "InsertFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "inspect_point_cloud",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "InspectPointCloudTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D104PointCloudTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "inspect_raster_alignment",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "InspectRasterAlignmentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "intersect",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "IntersectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_bookmarks",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListBookmarksTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_color_ramps",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListColorRampsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyAdvanceTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_databases",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListDatabasesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ProjectTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_fields",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "ListFieldsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PythonDiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_folder",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListFolderTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_geographic_transformations",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListGeographicTransformationsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_geoprocessing_tools",
+      "category": "Geoprocessing",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListGeoprocessingToolsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_jobs",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "ListJobsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_layout_elements",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListLayoutElementsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_layouts",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListLayoutsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ProjectTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_maps",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListMapsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MapTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_rasters",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListRastersTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_tables",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ListTablesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "list_workspace_datasets",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "ListWorkspaceDatasetsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PythonDiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "load_folder_data",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "LoadFolderDataTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "merge",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "MergeTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CreateMergeFieldTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "move_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "MoveLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MapSettingsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "near",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "NearTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SpatialAnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "ping",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PingTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PingTool.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "polygon_neighbors",
+      "category": "Analysis",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "PolygonNeighborsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "project",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ProjectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/CopyExportProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "ps_apply_design_recipe",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsApplyDesignRecipeTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_compare_document_versions",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsCompareDocumentVersionsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_create_adjustment_layer",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsCreateAdjustmentLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_create_document_snapshot",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsCreateDocumentSnapshotTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_export_deliverables",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsExportDeliverablesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_get_capabilities",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsGetCapabilitiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "DIAGNOSTIC_ONLY_PEER_NOT_VERIFIED"
+    },
+    {
+      "name": "ps_get_document_info",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsGetDocumentInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_get_layer_info",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsGetLayerInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_import_design_bundle",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsImportDesignBundleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_list_documents",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsListDocumentsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_list_layers",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsListLayersTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_manage_artboards",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsManageArtboardsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_place_design_asset",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsPlaceDesignAssetTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_preview_document",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsPreviewDocumentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_refresh_design_bundle",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsRefreshDesignBundleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_restore_document_snapshot",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsRestoreDocumentSnapshotTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_set_layer_mask",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsSetLayerMaskTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_set_layer_properties",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsSetLayerPropertiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_set_text_properties",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsSetTextPropertiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "ps_validate_document",
+      "category": "Photoshop",
+      "executionType": "Bridge",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PsValidateDocumentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "SOURCE_FAIL_CLOSED_PS_UXP_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "python_bridge_ping",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PythonBridgePingTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PythonBridgeTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "python_runtime_info",
+      "category": "Python",
+      "executionType": "Python",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "PythonRuntimeInfoTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/PythonBridgeTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "query_attributes",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "QueryAttributesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AttributeTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_calc",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterCalcTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MosaicCalcTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_change_detection",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterChangeDetectionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_clip",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterClipTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SpatialAnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_mosaic",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterMosaicTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MosaicCalcTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_pixel_inspect",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterPixelInspectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_reproject",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterReprojectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_resample",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterResampleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AnalysisRasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "raster_statistics",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RasterStatisticsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AnalysisRasterTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "refresh_design_bundle",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RefreshDesignBundleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "remove_domain_from_field",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RemoveDomainFromFieldTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "remove_join",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RemoveJoinTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "remove_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RemoveLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "remove_map",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RemoveMapTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "rename_dataset",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RenameDatasetTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "rename_layer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RenameLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "repair_geometry",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RepairGeometryTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "repair_layer_source",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RepairLayerSourceTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "restore_selection_snapshot",
+      "category": "Selection",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RestoreSelectionSnapshotTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "restore_snapshot",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RestoreSnapshotTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiagnosticTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "run_batch",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RunBatchTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064BatchTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "run_geoprocessing",
+      "category": "Geoprocessing",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "RunGeoprocessingTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "save_edits",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SaveEditsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "save_layer_file",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SaveLayerFileTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyAdvanceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "save_project",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SaveProjectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "scan_data_folder",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ScanDataFolderTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "search_data",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SearchDataTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiscoveryTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "select_by_attribute",
+      "category": "Selection",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SelectByAttributeTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "select_by_location",
+      "category": "Selection",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SelectByLocationTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "select_layer",
+      "category": "Selection",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SelectLayerTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SelectionTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_basemap",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetBasemapTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_definition_query",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetDefinitionQueryTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MapSettingsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_environment",
+      "category": "Geoprocessing",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetEnvironmentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_label_properties",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLabelPropertiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_label_visibility",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLabelVisibilityTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_layer_renderer",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLayerRendererTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyAdvanceTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_layer_scale_range",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLayerScaleRangeTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_layer_transparency",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLayerTransparencyTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_layer_visibility",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLayerVisibilityTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_layout_element_properties",
+      "category": "Layout",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetLayoutElementPropertiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_map_extent",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetMapExtentTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/MapSettingsTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_map_properties",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetMapPropertiesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_map_view",
+      "category": "Map",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetMapViewTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sourceTier": "Session",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_readonly_mode",
+      "category": "System",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "SetReadOnlyModeTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiagnosticTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_simple_symbology",
+      "category": "Layer",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SetSimpleSymbologyTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "set_workspace",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "SetWorkspaceTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "simplify_features",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SimplifyFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "smooth_features",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SmoothFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "snapshot_project",
+      "category": "Project",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SnapshotProjectTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064DiagnosticTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "solve_routes",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SolveRoutesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "spatial_autocorrelation",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SpatialAutocorrelationTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "spatial_join",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SpatialJoinTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/SpatialAnalysisTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "suggest_workflow",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": false,
+      "sourceClass": "SuggestWorkflowTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "summarize_features",
+      "category": "Attribute",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "SummarizeFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AttributeSummaryTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "trace_dataset_dependencies",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "TraceDatasetDependenciesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "truncate_table",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "TruncateTableTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "union",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "UnionTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/AnalysisRasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "update_domain",
+      "category": "DataManagement",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "UpdateDomainTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "update_features",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "UpdateFeaturesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_delivery_package",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateDeliveryPackageTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_design_bundle",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateDesignBundleTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_field_constraints",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateFieldConstraintsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_geometries",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateGeometriesTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_interchange_conformance",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateInterchangeConformanceTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_plan",
+      "category": "General",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidatePlanTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_relationship_class",
+      "category": "DataManagement",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateRelationshipClassTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "validate_statistical_assumptions",
+      "category": "Quality",
+      "executionType": "Native",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ValidateStatisticalAssumptionsTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sourceTier": "Read",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    },
+    {
+      "name": "zonal_histogram",
+      "category": "Analysis",
+      "executionType": "Geoprocessing",
+      "requiresArcGISMetadata": true,
+      "sourceClass": "ZonalHistogramTool",
+      "sourcePath": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sourceTier": "Write",
+      "sourceSupportObservation": "REGISTERED_SOURCE_ONLY_RUNTIME_NOT_TESTED"
+    }
+  ],
+  "errorCodes": [
+    "INVALID_ARGUMENT",
+    "NOT_FOUND",
+    "LICENSE_REQUIRED",
+    "PERMISSION_DENIED",
+    "EXECUTION_FAILED",
+    "TIMEOUT",
+    "CANCELLED",
+    "THREADING_ERROR",
+    "INTERNAL_ERROR",
+    "TOOL_NOT_FOUND",
+    "NOT_IMPLEMENTED",
+    "LAYER_NOT_FOUND",
+    "LAYER_DATA_SOURCE_UNAVAILABLE",
+    "MAP_NOT_FOUND",
+    "DATASET_NOT_FOUND",
+    "INVALID_STATE",
+    "ARCGIS_ERROR",
+    "GEOPROCESSING_ERROR",
+    "OUTPUT_EXISTS",
+    "PYTHON_BRIDGE_UNAVAILABLE",
+    "PYTHON_TIMEOUT",
+    "PYTHON_OUTPUT_LIMIT_EXCEEDED",
+    "PYTHON_PROTOCOL_ERROR",
+    "NO_ACTIVE_VIEW",
+    "AMBIGUOUS_MAP_NAME",
+    "AMBIGUOUS_LAYER_NAME",
+    "PATH_ESCAPE_REJECTED",
+    "SELECTION_LIMIT_EXCEEDED",
+    "SELECTION_BASELINE_MISMATCH",
+    "SELECTION_SNAPSHOT_NOT_FOUND",
+    "SELECTION_SNAPSHOT_EXPIRED",
+    "LAYER_NOT_SELECTABLE",
+    "REQUEST_TIMEOUT"
+  ],
+  "gpWhitelist": {
+    "count": 53,
+    "sourceSha256": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46",
+    "entries": [
+      {
+        "tool": "analysis.Buffer",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class",
+          "buffer_distance_or_field",
+          "line_side",
+          "line_end_type",
+          "dissolve_option",
+          "dissolve_field",
+          "method"
+        ]
+      },
+      {
+        "tool": "analysis.Clip",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "clip_features",
+          "out_feature_class",
+          "cluster_tolerance"
+        ]
+      },
+      {
+        "tool": "analysis.Erase",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "erase_features",
+          "out_feature_class",
+          "cluster_tolerance"
+        ]
+      },
+      {
+        "tool": "analysis.Union",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class",
+          "join_attributes",
+          "cluster_tolerance",
+          "gaps"
+        ]
+      },
+      {
+        "tool": "analysis.Intersect",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class",
+          "join_attributes",
+          "output_type",
+          "cluster_tolerance"
+        ]
+      },
+      {
+        "tool": "analysis.Identity",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "identity_features",
+          "out_feature_class",
+          "join_attributes",
+          "cluster_tolerance"
+        ]
+      },
+      {
+        "tool": "analysis.SpatialJoin",
+        "destructive": false,
+        "parameterNames": [
+          "target_features",
+          "join_features",
+          "out_feature_class",
+          "join_operation",
+          "join_type",
+          "field_mapping",
+          "match_option",
+          "search_radius"
+        ]
+      },
+      {
+        "tool": "analysis.Near",
+        "destructive": true,
+        "parameterNames": [
+          "in_features",
+          "near_features",
+          "search_radius",
+          "location",
+          "angle",
+          "closest",
+          "closest_xy"
+        ]
+      },
+      {
+        "tool": "analysis.Statistics",
+        "destructive": false,
+        "parameterNames": [
+          "in_table",
+          "out_table",
+          "statistics_fields",
+          "case_field"
+        ]
+      },
+      {
+        "tool": "analysis.Frequency",
+        "destructive": false,
+        "parameterNames": [
+          "in_table",
+          "out_table",
+          "frequency_fields",
+          "summary_fields"
+        ]
+      },
+      {
+        "tool": "analysis.TabulateArea",
+        "destructive": false,
+        "parameterNames": [
+          "in_zone_data",
+          "zone_field",
+          "in_class_data",
+          "class_field",
+          "out_table",
+          "cell_size"
+        ]
+      },
+      {
+        "tool": "analysis.TabulateIntersection",
+        "destructive": false,
+        "parameterNames": [
+          "in_zone_features",
+          "zone_fields",
+          "in_class_features",
+          "class_fields",
+          "out_table",
+          "out_units"
+        ]
+      },
+      {
+        "tool": "management.Dissolve",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class",
+          "dissolve_field",
+          "statistics_fields",
+          "multi_part",
+          "unsplit_lines"
+        ]
+      },
+      {
+        "tool": "management.Merge",
+        "destructive": false,
+        "parameterNames": [
+          "inputs",
+          "output",
+          "field_mappings"
+        ]
+      },
+      {
+        "tool": "management.Project",
+        "destructive": false,
+        "parameterNames": [
+          "in_dataset",
+          "out_dataset",
+          "out_coor_system",
+          "transform_method",
+          "in_coor_system",
+          "preserve_shape"
+        ]
+      },
+      {
+        "tool": "management.RepairGeometry",
+        "destructive": true,
+        "parameterNames": [
+          "in_features",
+          "delete_null",
+          "esri_option"
+        ]
+      },
+      {
+        "tool": "management.CalculateField",
+        "destructive": true,
+        "parameterNames": [
+          "in_table",
+          "field",
+          "expression",
+          "expression_type",
+          "code_block"
+        ]
+      },
+      {
+        "tool": "management.CopyFeatures",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class",
+          "config_keyword"
+        ]
+      },
+      {
+        "tool": "management.MultipartToSinglepart",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_feature_class"
+        ]
+      },
+      {
+        "tool": "conversion.ExportFeatures",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_features",
+          "where_clause"
+        ]
+      },
+      {
+        "tool": "conversion.TableToTable",
+        "destructive": false,
+        "parameterNames": [
+          "in_rows",
+          "out_path",
+          "out_name",
+          "where_clause",
+          "field_mapping"
+        ]
+      },
+      {
+        "tool": "conversion.RasterToPolygon",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_polygon_features",
+          "simplify",
+          "raster_field"
+        ]
+      },
+      {
+        "tool": "conversion.RasterToPoint",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_point_features",
+          "raster_field"
+        ]
+      },
+      {
+        "tool": "conversion.PolygonToRaster",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "value_field",
+          "out_rasterdataset",
+          "cell_assignment",
+          "priority_field",
+          "cell_size"
+        ]
+      },
+      {
+        "tool": "conversion.PointToRaster",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "value_field",
+          "out_rasterdataset",
+          "cell_assignment",
+          "priority_field",
+          "cell_size"
+        ]
+      },
+      {
+        "tool": "conversion.PolylineToRaster",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "value_field",
+          "out_rasterdataset",
+          "cell_assignment",
+          "priority_field",
+          "cell_size"
+        ]
+      },
+      {
+        "tool": "conversion.FeatureToRaster",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "value_field",
+          "out_rasterdataset",
+          "cell_size"
+        ]
+      },
+      {
+        "tool": "conversion.ASCIIToRaster",
+        "destructive": false,
+        "parameterNames": [
+          "in_ascii_file",
+          "out_rasterdataset",
+          "data_type"
+        ]
+      },
+      {
+        "tool": "conversion.RasterToASCII",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_ascii_file"
+        ]
+      },
+      {
+        "tool": "conversion.FeaturesToJSON",
+        "destructive": false,
+        "parameterNames": [
+          "in_features",
+          "out_json_file",
+          "format_json",
+          "include_z",
+          "include_m"
+        ]
+      },
+      {
+        "tool": "conversion.JSONToFeatures",
+        "destructive": false,
+        "parameterNames": [
+          "in_json_file",
+          "out_features",
+          "geometry_type"
+        ]
+      },
+      {
+        "tool": "sa.Slope",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_raster",
+          "z_factor",
+          "method",
+          "z_unit"
+        ]
+      },
+      {
+        "tool": "sa.Aspect",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_raster",
+          "method",
+          "z_unit"
+        ]
+      },
+      {
+        "tool": "sa.Hillshade",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_raster",
+          "azimuth",
+          "altitude",
+          "model_shadows",
+          "z_factor"
+        ]
+      },
+      {
+        "tool": "sa.Contour",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_polyline_features",
+          "contour_interval",
+          "base_contour",
+          "z_factor",
+          "contour_type"
+        ]
+      },
+      {
+        "tool": "sa.Curvature",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_curvature_raster",
+          "z_factor"
+        ]
+      },
+      {
+        "tool": "sa.Fill",
+        "destructive": false,
+        "parameterNames": [
+          "in_surface_raster",
+          "out_surface_raster",
+          "z_limit"
+        ]
+      },
+      {
+        "tool": "sa.FlowDirection",
+        "destructive": false,
+        "parameterNames": [
+          "in_surface_raster",
+          "out_flow_direction_raster",
+          "force_flow",
+          "in_weight_raster"
+        ]
+      },
+      {
+        "tool": "sa.FlowAccumulation",
+        "destructive": false,
+        "parameterNames": [
+          "in_flow_direction_raster",
+          "out_accumulation_raster",
+          "in_weight_raster",
+          "data_type"
+        ]
+      },
+      {
+        "tool": "sa.Watershed",
+        "destructive": false,
+        "parameterNames": [
+          "in_flow_direction_raster",
+          "in_pour_point_data",
+          "out_raster",
+          "pour_point_field"
+        ]
+      },
+      {
+        "tool": "sa.SnapPourPoint",
+        "destructive": false,
+        "parameterNames": [
+          "in_pour_point_data",
+          "in_accumulation_raster",
+          "out_raster",
+          "snap_distance",
+          "pour_point_field"
+        ]
+      },
+      {
+        "tool": "sa.ZonalStatistics",
+        "destructive": false,
+        "parameterNames": [
+          "in_zone_data",
+          "zone_field",
+          "in_value_raster",
+          "out_raster",
+          "statistics_type",
+          "ignore_nodata"
+        ]
+      },
+      {
+        "tool": "sa.ZonalStatisticsAsTable",
+        "destructive": false,
+        "parameterNames": [
+          "in_zone_data",
+          "zone_field",
+          "in_value_raster",
+          "out_table",
+          "ignore_nodata",
+          "statistics_type"
+        ]
+      },
+      {
+        "tool": "sa.Reclassify",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "reclass_field",
+          "remap",
+          "out_raster",
+          "missing_values"
+        ]
+      },
+      {
+        "tool": "sa.ExtractByMask",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "in_mask_data",
+          "out_raster",
+          "extraction_area",
+          "analysis_extent"
+        ]
+      },
+      {
+        "tool": "sa.ExtractValuesToPoints",
+        "destructive": false,
+        "parameterNames": [
+          "in_point_features",
+          "in_raster",
+          "out_point_features",
+          "interpolate_values",
+          "all_attributes"
+        ]
+      },
+      {
+        "tool": "sa.Resample",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_raster",
+          "cell_size",
+          "resampling_type"
+        ]
+      },
+      {
+        "tool": "sa.Con",
+        "destructive": false,
+        "parameterNames": [
+          "in_conditional_raster",
+          "in_true_raster_or_constant",
+          "out_raster",
+          "in_false_raster_or_constant",
+          "where_clause"
+        ]
+      },
+      {
+        "tool": "sa.CellStatistics",
+        "destructive": false,
+        "parameterNames": [
+          "in_rasters_or_constants",
+          "out_raster",
+          "statistics_type",
+          "ignore_nodata"
+        ]
+      },
+      {
+        "tool": "sa.FocalStatistics",
+        "destructive": false,
+        "parameterNames": [
+          "in_raster",
+          "out_raster",
+          "neighborhood",
+          "statistics_type",
+          "ignore_nodata"
+        ]
+      },
+      {
+        "tool": "sa.RasterCalculator",
+        "destructive": false,
+        "parameterNames": [
+          "expression",
+          "out_raster"
+        ]
+      },
+      {
+        "tool": "management.AddJoin",
+        "destructive": true,
+        "parameterNames": [
+          "in_layer_or_view",
+          "in_field",
+          "join_table",
+          "join_field",
+          "join_type"
+        ]
+      },
+      {
+        "tool": "management.RemoveJoin",
+        "destructive": true,
+        "parameterNames": [
+          "in_layer_or_view",
+          "join_name"
+        ]
+      }
+    ],
+    "boundary": "Allowlisted does not prove a successful licensed call; no expansion authority."
+  },
+  "sources": [
+    {
+      "path": "Config/gp-whitelist.json",
+      "sha256": "F355705BF2C44459FF6FF0E4FC6B65D70D885FB98B391CB1F22F4C523036BB46"
+    },
+    {
+      "path": "Source/ArcGISProMCP.Compatibility/Composition.cs",
+      "sha256": "68C8BE27165E9A2E2A2C8F522AD2ECA7D371E04434AC1421D0EC0B5474F1AE2A"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Results/ErrorCodes.cs",
+      "sha256": "F6767C5E5FA8B433A37391138600D4E4DFA16725EC1241887198485D57ECEDDC"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Core/Services/IReadOnlyModeService.cs",
+      "sha256": "DF4F1E77A317957E4977746E9798D02BBBC7429B1F3FFD5DFFD0EF8E1910E89D"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/AggregateStatisticsTools.cs",
+      "sha256": "FFF0FD7CB85D5D456F4257CF949C019DF90EA5C384130DD2780B51DD04949108"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/AnalysisRasterTools.cs",
+      "sha256": "3EDCD86881026FEEFBFE50912562F6174BABBD753AD1DBCFE3C228839F370170"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/AttributeSummaryTools.cs",
+      "sha256": "A5B6D37FBE7AA2EF64A4597A0FD2683E98A0763EA750E07A5D37D68AECC1BB43"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/AttributeTools.cs",
+      "sha256": "5862799622F14F58F10A26270E9EEFEFABC8BC0CBF5F52D0E65884B9E31597A5"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/CopyExportProjectTools.cs",
+      "sha256": "F35472C8F0D9D2ED305E4DAC7FBCF0CEAD0715DCB1A44F9839EEC8AD183810E7"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/CreateMergeFieldTools.cs",
+      "sha256": "1EDB1BB5E81CA8D1728F2DDC4CC222A90C261986A899A82119B15D844FFAEFC1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D064BatchTools.cs",
+      "sha256": "144FCBBEEAF06DADD16BD91C21D46CB0C278B7BB73425E108B91F7111FAB1C1B"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D064DiagnosticTools.cs",
+      "sha256": "D6056C757F9036AFDEB2DAB786C15C37AB5270BFB87238C6390DC3E69DC7E0CD"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D064DiscoveryTools.cs",
+      "sha256": "68B40D82302DB4F46BEAC0B07C17C34194B971FCBB849000CA0F4BF48A62BD8D"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D064ProjectTools.cs",
+      "sha256": "4424A501D0CCFD6ABBE6CBEEC07A706AC02FC34112EDE42223D17C6EEBA906F8"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D064SchemaTools.cs",
+      "sha256": "097CAE1E9F4EF8B6B479ADE5A0F395F3F8E8DF27565C8DDAF4E85D9928333DA1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D084Tools.cs",
+      "sha256": "7C737255F42CFDEEC7452A0DC8B8628474E880122389248DD005B6E68D99E6CE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D086DesignTools.cs",
+      "sha256": "D81915C649364DA1D27126FC6CB9F77BB6E6BB0E7AB16B87B07056BC74373C3F"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D088QualityTools.cs",
+      "sha256": "98530B14B62F327A798EA58CD27B8BFC0091B005CF2DC07241BE86BCC3DF5671"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D091PsTools.cs",
+      "sha256": "60B705C7C43FCD13BC5EF42CA2EA4CB4304C005E86E1CF85AC5031290D4B1BE1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D092DomainTools.cs",
+      "sha256": "10614743AF953C622648B99C7086F324420971CC072B1DE08C4CFA770CC5F109"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D094AnalysisTools.cs",
+      "sha256": "2B6CC3715E78FEFDC03F860B12B330FA3B4658F2BC35EBDCF37802E4C083658C"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D096RasterTools.cs",
+      "sha256": "FBD6A19B8B3AC2170D02506BD62079282317C4C5B622072BFBDBBAFA73735424"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
+      "sha256": "AA93DB75D36505351A24C4E360983522064FDC9E0D96161EC82BBE40F49859CA"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D104PointCloudTools.cs",
+      "sha256": "CD305C80B6277C7B4FC2E0749475551662098009FEAF770FFCF8082D0EAD2693"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D118HostFaceTools.cs",
+      "sha256": "5C0601706A085DC992F77A02AF636A276AE1AAB8A97357096366090D10005320"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D118ScenarioSampleTools.cs",
+      "sha256": "0D59DF2F49570BE56B872372B1FF08120753C9BF0F8E063BE7EFEA1ECEAD22E5"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/D118TemporalAssessmentTools.cs",
+      "sha256": "748DF91FCCD567D2D2FE24FE88FD92AD9C4F94827D396FC427374F274060CBB3"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/DataRasterTools.cs",
+      "sha256": "A0F5A2A178BC70CB3825F3D6451CD198E1DEE49B022E613B4C191482BFFAFD30"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/EditStackTools.cs",
+      "sha256": "1F98A8788576DF34F5BAB99719FBDB9C6EB3969D17E56456EA6F577CBB041D40"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/EditTools.cs",
+      "sha256": "69F6B63FAAD64DAB96E0693B15A0B7DCA5E716650DACD2ED2045CDE835A34DB2"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/FeatureExpansionBatch1Tools.cs",
+      "sha256": "5D03825E6C988B4837569AA75D9B668FA6F571234D85934E6AEEBAC0BF00B792"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/FieldTools.cs",
+      "sha256": "8FDE4266ADB7DE7C405939FB1C14C1B5998D78C3EF8DA154B09A3AC1E9E1F00D"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
+      "sha256": "BABD35ABE37365267781C62BA75898A68509830BED1F73E3A4F8E7D77F7E1D5E"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
+      "sha256": "8815ADB49E69F72A74B5E040C48D17C667E4A20D49CFCD506F46D9FD848606BC"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetArcGISVersionTool.cs",
+      "sha256": "AA8DA787DE726EF7E21AF69D64AD4D07DE78639AAE91112FB6454D97B2E2FD59"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetCurrentMapTool.cs",
+      "sha256": "1A90631852600006C1F66FFEBD5482CF8E0AE3A646BD6157511507C9A7DC3F98"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetLayersTool.cs",
+      "sha256": "91697923A768B4D49A899A43C2372B2A4A9BD9EDB34474CEC2E770C64AC0E9D1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetLicenseInfoTool.cs",
+      "sha256": "25FC681121E29D53A743EAB6D31C15194D633F5F311DDB29A79AB214066AD094"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GetProjectInfoTool.cs",
+      "sha256": "936EB4C9CED119C4001E3DFE718C57BEBD14BA7D2352D790D68633A04FA30FE2"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/GpControlTools.cs",
+      "sha256": "0C184050CD58B08CCEECC03AD3601331BE8360F7B8AFF84D8BF304C12656E10F"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayerManageTools.cs",
+      "sha256": "23A9DC31A5724E9E6DE5AF1D35C05F7049DACC1956F2EF4EE6798FD967D8284A"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayerTools.cs",
+      "sha256": "668C0B7DD8BD418784DA2EC7C4D9F4DB6D8A9251DD84E182FCD933ED6774ADB0"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
+      "sha256": "017FBCF54D25525F5B5AA0F2BB322E641E2B093786961921A84AD9B994F01BD1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
+      "sha256": "841CCAB3F077DBF24487C5A36D6A1EC9283200EA75EF415201741735A36B8E17"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
+      "sha256": "E43BAB3DF68BA11CC3D2D6E62C1754C330DD1BD50F4EAED462BCA32B159BDD98"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/MapSettingsTools.cs",
+      "sha256": "308B4DC59AFA1589C493A6E9CA5D0D0F21393BD6911A98AE84A4C2CE5BF74471"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/MapTools.cs",
+      "sha256": "B11DB239C94D19E756353B3CFB946631B812DDBF6479FDD2E0446541C79683FB"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/MosaicCalcTools.cs",
+      "sha256": "A20AE8B4323165A689BF2345C91276444380712DFC304B4AF3F8329536DD6BD1"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PingTool.cs",
+      "sha256": "0164840A9FD414E62A1A7F0F44CF064DE6AEDF709E89F4F39A43A71B9A2E8B73"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ProjectTools.cs",
+      "sha256": "E65D3E6599CC351D80F4FA7322D2AAC449D30F6BF7357B99029A3A7718D2D3AE"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PythonBridgeTools.cs",
+      "sha256": "3C6584AEA636828362283423B9EEA8A0393BC426FA8352F7E4E9AB382D1679CC"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/PythonDiscoveryTools.cs",
+      "sha256": "B1E85CC5A55871DE4A197656EC161D9AB15ABDE5812126E5118B295683094282"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SchemaTools.cs",
+      "sha256": "62CBEE396A8F848F9DF21772A158401FE4ECDAEA311EE14EAFF48550A8FBCBA4"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SelectionContractTools.cs",
+      "sha256": "685EA006400490A676958CB12046B8939AA872CACE5B552B78FA9F20AFF1765D"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SelectionTools.cs",
+      "sha256": "0AC5C961153A61690E334D3F7A680C2210B38D9E162B11A433238E72A01724C7"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SpatialAnalysisTools.cs",
+      "sha256": "B08179236D6B4E91C9D1ABF8480FA14AAEDBC0AC77521F94CC3205F2B27CA679"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SymbologyAdvanceTools.cs",
+      "sha256": "0A92B8E40CF46AE98F37B106FC37B0B0653EEBF55F4ED3800BEF38B48B5A3367"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
+      "sha256": "78D35331E812651EE8038021E98DAE2B7E7682A0F48188468BA8CCA277459769"
+    },
+    {
+      "path": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",
+      "sha256": "A12B4668C4F86523DFAF24584CC5683C5107FA2116E8A4EA798D19BF6557EAA8"
+    },
+    {
+      "path": "Tests/UnitTests/ProductionToolContractSnapshot.cs",
+      "sha256": "8CF06530901531B9E5651A1C18D9E8B35B73CE2C292C275D70567EC989151D48"
+    }
+  ]
+}

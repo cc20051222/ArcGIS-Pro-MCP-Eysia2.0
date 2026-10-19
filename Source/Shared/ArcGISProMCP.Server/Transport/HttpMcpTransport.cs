@@ -1,6 +1,8 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Channels;
+using ArcGISProMCP.Configuration;
 using ArcGISProMCP.Logging;
 
 namespace ArcGISProMCP.Server.Transport;
@@ -9,7 +11,7 @@ namespace ArcGISProMCP.Server.Transport;
 /// 本地 HTTP MCP 传输：HttpListener 仅监听回环地址，POST {endpoint}。
 /// 不感知 GIS / JSON-RPC / 工具。
 /// </summary>
-public sealed class HttpMcpTransport : IMcpTransport
+public sealed class HttpMcpTransport : IMcpTransport, IStreamingMcpTransport
 {
     private readonly string _host;
     private readonly int _port;
@@ -43,6 +45,7 @@ public sealed class HttpMcpTransport : IMcpTransport
     }
 
     public Func<string, CancellationToken, Task<string?>>? RequestHandler { get; set; }
+    public Func<string, Action<string>, CancellationToken, Task<string?>>? StreamingRequestHandler { get; set; }
 
     public Task StartAsync(CancellationToken cancellationToken = default)
     {
@@ -233,7 +236,6 @@ public sealed class HttpMcpTransport : IMcpTransport
         {
             var request = context.Request;
             var path = request.Url?.AbsolutePath ?? string.Empty;
-
             // D-083 B 组（A-13）：内部路由＝**现役监听上的新路径**（同一 HttpListener、同一 host:port）。
             // B-04 恒定：不新增 listener/端口、不放通 0.0.0.0、现役 /mcp 契约零变化。
             if (_internalRoute is not null
@@ -246,6 +248,15 @@ public sealed class HttpMcpTransport : IMcpTransport
             if (!string.Equals(path, _endpointPath, StringComparison.OrdinalIgnoreCase))
             {
                 connection.SendStatus(HttpStatusCode.NotFound, "Not Found");
+                return;
+            }
+
+            // MCP browser-origin guard; internal PS/UXP routes retain their own existing policy.
+            var origin = request.Headers["Origin"];
+            if (origin is not null && (!Uri.TryCreate(origin, UriKind.Absolute, out var originUri)
+                || originUri.Scheme != "http" || !IsLoopback(originUri.Host) || originUri.Port != _port))
+            {
+                connection.SendStatus(HttpStatusCode.Forbidden, "Invalid Origin");
                 return;
             }
 
@@ -278,6 +289,12 @@ public sealed class HttpMcpTransport : IMcpTransport
             string? responseBody;
             try
             {
+                if (StreamingRequestHandler is { } streamHandler
+                    && (request.Headers["Accept"] ?? string.Empty).Contains("text/event-stream", StringComparison.OrdinalIgnoreCase))
+                {
+                    await HandleStreamingAsync(context, connection, body, streamHandler, cancellationToken).ConfigureAwait(false);
+                    return;
+                }
                 responseBody = await handler(body, cancellationToken).ConfigureAwait(false);
             }
             catch (OperationCanceledException)
@@ -311,4 +328,80 @@ public sealed class HttpMcpTransport : IMcpTransport
 
     private static bool IsLoopback(string host)
         => host == "127.0.0.1" || host.Equals("localhost", StringComparison.OrdinalIgnoreCase);
+
+    private static async Task HandleStreamingAsync(HttpListenerContext context, HttpTransportConnection connection,
+        string body, Func<string, Action<string>, CancellationToken, Task<string?>> handler, CancellationToken ct)
+    {
+        // Observers never block a GP callback on a slow/disconnected network client.
+        // Progress may coalesce under load; the final response is always the last enqueued item.
+        var channel = Channel.CreateBounded<string>(new BoundedChannelOptions(MCPSettings.ProgressNotificationBufferCapacity)
+        { FullMode = BoundedChannelFullMode.DropOldest, SingleReader = true, SingleWriter = false });
+        var started = false;
+        var response = context.Response;
+        var pump = Task.Run(async () =>
+        {
+            try
+            {
+                while (true)
+                {
+                    var available = channel.Reader.WaitToReadAsync(ct).AsTask();
+                    while (!available.IsCompleted)
+                    {
+                        await Task.WhenAny(available, Task.Delay(MCPSettings.ProgressHeartbeatMilliseconds, ct)).ConfigureAwait(false);
+                        if (!available.IsCompleted && started)
+                        {
+                            // Transport liveness only: never report heartbeat as GIS progress.
+                            await response.OutputStream.WriteAsync(Encoding.UTF8.GetBytes(": keep-alive\n\n"), ct).ConfigureAwait(false);
+                            await response.OutputStream.FlushAsync(ct).ConfigureAwait(false);
+                        }
+                    }
+                    if (!await available.ConfigureAwait(false)) break;
+                    while (channel.Reader.TryRead(out var message))
+                    {
+                    if (!started)
+                    {
+                        response.StatusCode = 200;
+                        response.ContentType = "text/event-stream; charset=utf-8";
+                        response.SendChunked = true;
+                        response.Headers["Cache-Control"] = "no-store";
+                        response.Headers["X-Accel-Buffering"] = "no";
+                        started = true;
+                    }
+                    var bytes = Encoding.UTF8.GetBytes("event: message\ndata: " + message + "\n\n");
+                    await response.OutputStream.WriteAsync(bytes, ct).ConfigureAwait(false);
+                    await response.OutputStream.FlushAsync(ct).ConfigureAwait(false);
+                    }
+                }
+            }
+            catch (Exception ex) when (ex is IOException or HttpListenerException or ObjectDisposedException or OperationCanceledException)
+            { /* No retries or new GIS effects when the observer disconnects. */ }
+        }, CancellationToken.None);
+        var emitted = 0;
+        try
+        {
+            var final = await handler(body, message =>
+            {
+                Interlocked.Exchange(ref emitted, 1);
+                channel.Writer.TryWrite(message);
+            }, ct).ConfigureAwait(false);
+            if (Volatile.Read(ref emitted) == 0)
+            {
+                channel.Writer.TryComplete();
+                await pump.ConfigureAwait(false);
+                if (final is null) connection.SendStatus(HttpStatusCode.Accepted, string.Empty);
+                else connection.SendJson(final);
+                return;
+            }
+            if (final is not null) channel.Writer.TryWrite(final);
+        }
+        finally
+        {
+            channel.Writer.TryComplete();
+            await pump.ConfigureAwait(false);
+            if (Volatile.Read(ref emitted) != 0)
+            {
+                try { response.OutputStream.Close(); response.Close(); } catch { /* disconnected */ }
+            }
+        }
+    }
 }

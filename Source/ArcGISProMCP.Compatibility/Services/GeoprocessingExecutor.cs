@@ -1,6 +1,7 @@
 using System.Text;
 using ArcGIS.Core.Data.Exceptions;
 using ArcGIS.Desktop.Core.Geoprocessing;
+using ArcGISProMCP.Core.Progress;
 
 namespace ArcGISProMCP.Compatibility.Services;
 
@@ -10,6 +11,33 @@ namespace ArcGISProMCP.Compatibility.Services;
 /// </summary>
 public sealed class GeoprocessingExecutor
 {
+    private static GPToolExecuteEventHandler ProgressHandler(string toolName)
+    {
+        var reporter = ToolProgress.Current;
+        var stage = "gp:" + toolName + ":" + Guid.NewGuid().ToString("N")[..8];
+        return (eventName, value) =>
+        {
+            switch (eventName)
+            {
+                case "OnBeginExecute":
+                    reporter?.Report(stage, "RUNNING", "GP 开始执行：" + toolName, source: "ArcGIS.GP.OnBeginExecute");
+                    break;
+                case "OnProgressPos" when value is int position && position >= 0 && position <= 100:
+                    reporter?.Report(stage, "RUNNING", toolName + " 当前 GP 阶段 " + position + "%（不是整单完成率）",
+                        position, 100, "ArcGIS.GP.OnProgressPos");
+                    break;
+                case "OnProgressMessage" when value is string message:
+                    reporter?.Report(stage, "RUNNING", message, source: "ArcGIS.GP.OnProgressMessage");
+                    break;
+                case "OnValidate":
+                    reporter?.Report(stage, "RUNNING", "GP 参数校验事件已返回", source: "ArcGIS.GP.OnValidate");
+                    break;
+                case "OnEndExecute":
+                    reporter?.Report(stage, "RUNNING", "GP 阶段已返回，等待工具结果判定", source: "ArcGIS.GP.OnEndExecute");
+                    break;
+            }
+        };
+    }
     public sealed class GpExecution
     {
         public bool Success { get; init; }
@@ -41,7 +69,7 @@ public sealed class GeoprocessingExecutor
             inputs,
             null,
             ct,
-            null,
+            ProgressHandler(toolName),
             GPExecuteToolFlags.Default).ConfigureAwait(false);
 
         var messagesObj = result.Messages?.Select(m => m?.ToString() ?? string.Empty).ToList() ?? new List<string>();
@@ -64,7 +92,7 @@ public sealed class GeoprocessingExecutor
             inputs,
             D064GpEnvironment.BuildEnvironment(),   // D-064：会话级 GP 环境下发（无设置 ⇒ null，保持既有行为不变）
             ct,                          // CancellationToken
-            null,                        // GPToolExecuteEventHandler
+            ProgressHandler(toolName),    // Captured request-scoped SDK progress reporter.
             GPExecuteToolFlags.Default).ConfigureAwait(false);
 
         var messages = result.Messages?.Select(m => m?.ToString() ?? string.Empty).ToList() ?? new List<string>();

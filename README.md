@@ -2,7 +2,11 @@
 
 运行在 ArcGIS Pro 内部的 MCP Add-in：通过本机回环 `http://127.0.0.1:6520/mcp` 向支持 MCP 的客户端提供 **239 个 GIS 工具**（注册表 239 ≡ 契约快照 239 ≡ 装机 239）。
 
+**新增 Skill 与任务面板 0.7.1 配套候选**：按需求和真实数据制定完整业务链，聊天与持续刷新的面板同步显示当前步骤、检查、问题修复和复检，交付时列出真实文件位置。包含插件、Skill、独立面板和两份Word说明，原版r29保留。[安装教程](Docs/SKILL_INSTALL_GUIDE.md) · [使用与功能介绍](Docs/SKILL_WORKFLOW_GUIDE.md) · [本次更新与实测边界](Docs/SKILL_071_RELEASE_NOTES.md)。这不是新增239种已验收算法，缺能力需按实际受控替代或经用户同意的原生界面补齐。
+
 ## English summary
+
+Word说明：[安装与使用教程](Docs/Skill与面板Word说明/01_插件Skill与面板_安装使用教程.docx) · [功能特色与实现原理](Docs/Skill与面板Word说明/02_Skill与面板_功能特色与实现原理.docx)。
 
 **ArcGIS Pro MCP Server** is an ArcGIS Pro add-in that exposes **239 GIS tools** to MCP-speaking
 clients over a **local loopback** endpoint (`http://127.0.0.1:6520/mcp`) — no public network listener.

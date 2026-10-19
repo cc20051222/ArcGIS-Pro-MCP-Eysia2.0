@@ -675,7 +675,7 @@ public sealed class D084AnalysisService : ID084AnalysisService
         return Ok(payload);
     }
 
-    private static OperationResult<IReadOnlyDictionary<string, object?>> WithFeatureClass(
+    internal static OperationResult<IReadOnlyDictionary<string, object?>> WithFeatureClass(
         string target, Func<FeatureClass, OperationResult<IReadOnlyDictionary<string, object?>>> action, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
@@ -706,6 +706,7 @@ public sealed class D084AnalysisService : ID084AnalysisService
                 using var fc = gdb.OpenDataset<FeatureClass>(matchName);
                 return action(fc);
             }
+            catch (OperationCanceledException) { throw; }
             catch (Exception ex) { return Fail(ErrorCodes.InternalError, "Opening feature class failed.", ex.Message); }
         }
 
@@ -719,6 +720,7 @@ public sealed class D084AnalysisService : ID084AnalysisService
                 using var fc = datastore.OpenDataset<FeatureClass>(Path.GetFileNameWithoutExtension(full));
                 return action(fc);
             }
+            catch (OperationCanceledException) { throw; }
             catch (Exception ex) { return Fail(ErrorCodes.InternalError, "Opening shapefile failed.", ex.Message); }
         }
 
@@ -746,6 +748,7 @@ public sealed class D084AnalysisService : ID084AnalysisService
             using var fc = matches[0].GetTable() as FeatureClass;
             return fc is null ? Fail(ErrorCodes.InvalidArgument, "The selected layer is not a feature class.") : action(fc);
         }
+        catch (OperationCanceledException) { throw; }
         catch (Exception ex) { return Fail(ErrorCodes.LayerDataSourceUnavailable, "Layer data source is unavailable.", ex.Message); }
     }
 

@@ -19,8 +19,8 @@ namespace ArcGISProMCP.ServerTests;
 public sealed class D084B1LiveHostTests : IAsyncLifetime
 {
     private const string Host = "127.0.0.1";
-    private const int Port = 6520;
-    private const string RunDir = @"D:\ArcGIS-Pro-MCP 2.0\.runtime\evolution\v5-f\run-20260928-d084";
+    private static int Port => TestServerFactory.IsolatedLivePort;
+    private static string RunDir => TestServerFactory.LiveRunDirectory("d084");
 
     private readonly List<string> _raw = new();
     private HttpClient? _client;

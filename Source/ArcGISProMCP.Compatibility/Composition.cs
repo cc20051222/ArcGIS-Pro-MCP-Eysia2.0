@@ -126,6 +126,8 @@ internal static class Composition
             ManagedLogDirectory = paths?.ManagedLogDirectory ?? string.Empty,
             ManagedLogDirectoryOverride = ManagedLogDirectoryOverrideValue ?? string.Empty,
             RuntimePathErrorCode = resolution.ErrorCode,
+            ProgressDirectory = Environment.GetEnvironmentVariable(MCPSettings.ProgressDirectoryEnvironmentVariable) ?? string.Empty,
+            ProgressTaskRecord = Environment.GetEnvironmentVariable(MCPSettings.ProgressTaskRecordEnvironmentVariable) ?? string.Empty,
             PythonProcessStartupTimeoutMs = 40000,
         };
         c.RegisterInstance(settings);
@@ -797,6 +799,11 @@ internal static class Composition
     {
         var settings = Settings;
         var logger = ServerLogger;
+        if (!string.IsNullOrWhiteSpace(settings.ProgressDirectory))
+        {
+            try { ArcGISProMCP.Core.Progress.ToolProgress.DefaultHub.ConfigureJournal(settings.ProgressDirectory); }
+            catch (Exception ex) { logger.Warning("Progress journal unavailable: " + ex.GetType().Name, category: "progress"); }
+        }
         // D-083 B 组（A-13）：注入 PS 内部路由处理器——挂在同一 transport 的**同一监听**上（不新增监听/端口）。
         // 构造失败 ⇒ 保持 null（既有 /mcp 行为零变化，内部路由不可用）。
         ArcGISProMCP.Server.Transport.IInternalRouteHandler? internalPsRoute = null;

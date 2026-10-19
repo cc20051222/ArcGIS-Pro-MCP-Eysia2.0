@@ -9,25 +9,15 @@ namespace ArcGISProMCP.Compatibility.Services;
 /// Rule 5：SDK 引用只在 Compatibility 层。
 /// 真机验证状态：NOT VERIFIED（禁安装；SDK 依赖件如实登记）。
 /// </summary>
-public sealed class D088QualityService : ID088QualityService
+public sealed partial class D088QualityService : ID088QualityService
 {
     public Task<OperationResult<IReadOnlyDictionary<string, object?>>> ValidateGeometriesAsync(
         string dataset, IReadOnlyList<string> checks, double minimumSegmentLength, int maxFeatures, CancellationToken ct = default)
-    {
-        // SDK 实现：经 QueuedTask.Run 打开要素类，逐要素检查几何质量。
-        // NOT VERIFIED：禁安装，无真机 Pro 环境。
-        return Task.FromResult(OperationResult<IReadOnlyDictionary<string, object?>>.Fail(
-            ErrorCodes.NotImplemented,
-            "validate_geometries requires a live ArcGIS Pro session (SDK dependency; NOT VERIFIED in build-only mode)."));
-    }
+        => RunGeometryValidation(dataset, checks, minimumSegmentLength, maxFeatures, ct);
 
     public Task<OperationResult<IReadOnlyDictionary<string, object?>>> CheckTopologyRulesAsync(
         string dataset, IReadOnlyList<string> rules, double clusterTolerance, CancellationToken ct = default)
-    {
-        return Task.FromResult(OperationResult<IReadOnlyDictionary<string, object?>>.Fail(
-            ErrorCodes.NotImplemented,
-            "check_topology_rules requires a live ArcGIS Pro session (SDK dependency; NOT VERIFIED in build-only mode)."));
-    }
+        => RunTopologyValidation(dataset, rules, clusterTolerance, ct);
 
     public Task<OperationResult<IReadOnlyDictionary<string, object?>>> CompareDatasetsAsync(
         string left, string right, IReadOnlyList<string> keyFields, bool compareGeometry, double tolerance, int maxFeatures, CancellationToken ct = default)

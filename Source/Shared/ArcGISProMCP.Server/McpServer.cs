@@ -5,6 +5,7 @@ using ArcGISProMCP.Configuration;
 using ArcGISProMCP.Core.Models;
 using ArcGISProMCP.Core.Results;
 using ArcGISProMCP.Core.Tools;
+using ArcGISProMCP.Core.Progress;
 using ArcGISProMCP.Logging;
 using ArcGISProMCP.Protocol;
 using ArcGISProMCP.Server.JsonRpc;
@@ -24,6 +25,7 @@ public sealed class McpServer
     private readonly MCPSettings _settings;
     private readonly MCPToolRegistry _registry;   // D-064：按工具执行类型选择请求预算
     private readonly ILogger _logger;
+    private readonly ToolProgressHub _progress;
     private readonly SemaphoreSlim _concurrency;
 
     /// <summary>D-056 C1：当前**等待准入**的请求数（已准入者即出队）。</summary>
@@ -44,12 +46,14 @@ public sealed class McpServer
         MCPToolRouter router,
         MCPSettings settings,
         ILogger logger,
-        McpServerInfo? serverInfo = null)
+        McpServerInfo? serverInfo = null,
+        ToolProgressHub? progress = null)
     {
         _transport = transport ?? throw new ArgumentNullException(nameof(transport));
         _registry = registry ?? throw new ArgumentNullException(nameof(registry));
         _settings = settings ?? throw new ArgumentNullException(nameof(settings));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _progress = progress ?? ToolProgress.DefaultHub;
         _protocol = new McpProtocolHandler(
             registry ?? throw new ArgumentNullException(nameof(registry)),
             router ?? throw new ArgumentNullException(nameof(router)),
@@ -72,6 +76,8 @@ public sealed class McpServer
     public async Task StartAsync(CancellationToken cancellationToken = default)
     {
         _transport.RequestHandler = HandleRequestAsync;
+        if (_transport is IStreamingMcpTransport streaming)
+            streaming.StreamingRequestHandler = HandleStreamingRequestAsync;
         await _transport.StartAsync(cancellationToken).ConfigureAwait(false);
         _logger.Info("MCP server started.");
     }
@@ -123,7 +129,66 @@ public sealed class McpServer
     /// <summary>
     /// 处理一条原始请求文本，返回 JSON-RPC 响应文本；通知返回 null。
     /// </summary>
-    public async Task<string?> HandleRequestAsync(string requestJson, CancellationToken cancellationToken = default)
+    public Task<string?> HandleRequestAsync(string requestJson, CancellationToken cancellationToken = default)
+        => ObserveRequestAsync(requestJson, null, cancellationToken);
+
+    public Task<string?> HandleStreamingRequestAsync(string requestJson, Action<string> emit,
+        CancellationToken cancellationToken = default)
+        => ObserveRequestAsync(requestJson, emit, cancellationToken);
+
+    private async Task<string?> ObserveRequestAsync(string json, Action<string>? emit, CancellationToken ct)
+    {
+        if (!JsonRpcCodec.TryParseRequest(json, out var request, out _)
+            || request!.Method != "tools/call" || request.IsNotification
+            || request.Params is not { ValueKind: JsonValueKind.Object } p
+            || !p.TryGetProperty("name", out var name) || name.ValueKind != JsonValueKind.String)
+            return await HandleRequestCoreAsync(json, ct).ConfigureAwait(false);
+
+        JsonElement? token = null;
+        if (p.TryGetProperty("_meta", out var meta) && meta.ValueKind == JsonValueKind.Object
+            && meta.TryGetProperty("progressToken", out var pt)
+            && pt.ValueKind is JsonValueKind.String or JsonValueKind.Number) token = pt.Clone();
+        long notifications = 0;
+        using var scope = ToolProgress.Begin(_progress, request.Id?.ToString(), name.GetString()!, ev =>
+        {
+            if (emit is null || token is null) return;
+            // This monotonic counter is explicitly an observed-event count, NOT work percent.
+            // Real SDK stage counters are separate metadata; no fictional total is supplied.
+            emit(JsonSerializer.Serialize(new
+            {
+                jsonrpc = "2.0", method = "notifications/progress",
+                @params = new { progressToken = token.Value, progress = ++notifications,
+                    message = ev.Message,
+                    _meta = new { unit = "observed-events", execution = ev } }
+            }));
+        });
+        scope.Report("request", "QUEUED", "请求已接收，等待执行准入", source: "mcp");
+        try
+        {
+            var response = await HandleRequestCoreAsync(json, ct).ConfigureAwait(false);
+            var state = "UNKNOWN";
+            if (response is not null)
+            {
+                using var doc = JsonDocument.Parse(response);
+                var root = doc.RootElement;
+                state = root.TryGetProperty("result", out var result)
+                    && (!result.TryGetProperty("isError", out var error) || error.ValueKind != JsonValueKind.True)
+                    ? "PRODUCED" : "FAILED";
+                if (state == "FAILED" && (response.Contains("REQUEST_TIMEOUT", StringComparison.Ordinal)
+                    || response.Contains("CANCELLED", StringComparison.Ordinal))) state = "UNKNOWN";
+            }
+            scope.Report("request", state, state == "PRODUCED"
+                ? "工具已返回；成果及最终验收仍需检查" : "请求未成功完成；先核对实际效果，不自动重试", source: "mcp");
+            return response;
+        }
+        catch
+        {
+            scope.Report("request", "UNKNOWN", "响应异常，实际效果待核查", source: "mcp");
+            throw;
+        }
+    }
+
+    private async Task<string?> HandleRequestCoreAsync(string requestJson, CancellationToken cancellationToken)
     {
         var sw = Stopwatch.StartNew();
 

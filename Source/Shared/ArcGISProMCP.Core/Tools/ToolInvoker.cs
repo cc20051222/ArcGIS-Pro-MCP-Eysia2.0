@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text.Json;
 using ArcGISProMCP.Core.Results;
+using ArcGISProMCP.Core.Progress;
 using ArcGISProMCP.Logging;
 
 namespace ArcGISProMCP.Core.Tools;
@@ -55,6 +56,7 @@ public sealed class ToolInvoker : IToolInvoker
 
         try
         {
+            ToolProgress.Report("tool:" + tool.Name, "RUNNING", "正在执行 " + tool.Name + "；内部进度以实际事件为准", source: "invoker");
             result = await tool.ExecuteAsync(context).ConfigureAwait(false);
             resultObserved = result is not null;
             if (result is null)

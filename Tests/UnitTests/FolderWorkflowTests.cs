@@ -539,7 +539,9 @@ public sealed class FolderWorkflowTests : IDisposable
         var jobId = "d084-cancel-" + Guid.NewGuid().ToString("N");
         var running = new ApplyProcessingPlanTool().ExecuteAsync(
             Ctx(PlanArgs(_out, tool: "stub_cancel_aware", dryRun: false, confirm: true, jobId: jobId), registry));
-        await started.Task.WaitAsync(TimeSpan.FromSeconds(10));
+        var first = await Task.WhenAny(started.Task, running).WaitAsync(TimeSpan.FromSeconds(10));
+        if (first != started.Task)
+            Assert.Fail("Plan finished before the cancellable tool started: " + JsonSerializer.Serialize(await running));
 
         var cancelled = await new CancelJobTool().ExecuteAsync(Ctx(new()
         {

@@ -592,6 +592,9 @@ public static class WorkflowJobStore
         s.Failed = s.Items.Count(i => i.State == "failed");
         s.Skipped = s.Items.Count(i => i.State == "skipped");
         s.Pending = s.Items.Count(i => i.State == "pending");
+        ArcGISProMCP.Core.Progress.ToolProgress.Report("workflow:" + s.JobId, "RUNNING",
+            $"已处理 {s.Done + s.Failed + s.Skipped}/{s.Total} 项：执行成功 {s.Done}，失败 {s.Failed}，跳过 {s.Skipped}；成果核验另计",
+            s.Done + s.Failed + s.Skipped, s.Total, "workflow.item-counts");
         if (s.Journal)
         {
             SaveJournal(s);

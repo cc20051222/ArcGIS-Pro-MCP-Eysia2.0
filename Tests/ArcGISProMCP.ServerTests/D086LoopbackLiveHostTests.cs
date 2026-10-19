@@ -23,7 +23,7 @@ namespace ArcGISProMCP.ServerTests;
 public sealed class D086LoopbackLiveHostTests : IAsyncLifetime
 {
     private const string Host = "127.0.0.1";
-    private const int Port = 6520;
+    private static int Port => TestServerFactory.IsolatedLivePort;
     private static readonly string RunRoot = ResolveRunRoot();
 
     private readonly string _caseRoot = Path.Combine(
@@ -37,13 +37,7 @@ public sealed class D086LoopbackLiveHostTests : IAsyncLifetime
     private string _revisionPath = string.Empty;
     private string _packagePath = string.Empty;
 
-    private static string ResolveRunRoot()
-    {
-        var configured = Environment.GetEnvironmentVariable("ARCGIS_PRO_MCP_LIVE_TEST_ROOT");
-        return string.IsNullOrWhiteSpace(configured)
-            ? @"D:\ArcGIS-Pro-MCP 2.0\.runtime\evolution\v5-f\run-20260929-d086\live-host"
-            : Path.GetFullPath(configured);
-    }
+    private static string ResolveRunRoot() => TestServerFactory.LiveRunDirectory("d086");
 
     public async Task InitializeAsync()
     {

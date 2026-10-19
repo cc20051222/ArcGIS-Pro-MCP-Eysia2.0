@@ -1,0 +1,12 @@
+{
+  "fixtureStatus": "SYNTHETIC_NOT_LIVE",
+  "purpose": "Offline parser exercise only; these schemas are examples, not the current server contract.",
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "tools": [
+      {"name":"buffer","description":"Synthetic parser fixture","inputSchema":{"type":"object","properties":{"input":{"type":"string"}},"required":["input"]}},
+      {"name":"ps_get_capabilities","description":"Synthetic parser fixture, not a peer check","inputSchema":{"type":"object","properties":{}}}
+    ]
+  }
+}

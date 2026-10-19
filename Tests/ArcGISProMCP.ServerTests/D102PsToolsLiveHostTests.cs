@@ -19,19 +19,13 @@ namespace ArcGISProMCP.ServerTests;
 public sealed class D102PsToolsLiveHostTests : IAsyncLifetime
 {
     private const string Host = "127.0.0.1";
-    private const int Port = 6520;
+    private static int Port => TestServerFactory.IsolatedLivePort;
     private readonly List<string> _raw = new();
     private readonly string _runRoot = ResolveRunRoot();
     private HttpClient? _client;
     private McpServer? _server;
 
-    private static string ResolveRunRoot()
-    {
-        var configured = Environment.GetEnvironmentVariable("ARCGIS_PRO_MCP_LIVE_TEST_ROOT");
-        return string.IsNullOrWhiteSpace(configured)
-            ? @"D:\ArcGIS-Pro-MCP 2.0\.runtime\evolution\v5-f\run-20260930-d102\phase-b\live-host"
-            : Path.GetFullPath(configured);
-    }
+    private static string ResolveRunRoot() => TestServerFactory.LiveRunDirectory("d102");
 
     public async Task InitializeAsync()
     {

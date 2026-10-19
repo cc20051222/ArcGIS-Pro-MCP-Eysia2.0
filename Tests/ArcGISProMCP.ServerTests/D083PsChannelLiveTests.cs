@@ -17,14 +17,13 @@ namespace ArcGISProMCP.ServerTests;
 [Collection("d083-live")]
 public sealed class D083PsChannelLiveTests : IAsyncLifetime
 {
-    private const int Port = 6520;
+    private static int Port => TestServerFactory.IsolatedLivePort;
     private const string Host = "127.0.0.1";
     private HttpMcpTransport? _transport;
     private PsChannelHandler? _handler;
     private readonly List<string> _raw = new();
 
-    private static string RunDir => Path.Combine(
-        @"D:\ArcGIS-Pro-MCP 2.0", ".runtime", "evolution", "v5-f", "run-20260928-d083");
+    private static string RunDir => TestServerFactory.LiveRunDirectory("d083");
 
     public async Task InitializeAsync()
     {

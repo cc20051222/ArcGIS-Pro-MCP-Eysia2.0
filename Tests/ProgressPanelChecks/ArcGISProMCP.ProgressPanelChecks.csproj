@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestSupport\ArcGISProMCP.TestSupport.csproj" />
+    <ProjectReference Include="..\..\Source\Shared\ArcGISProMCP.Server\ArcGISProMCP.Server.csproj" />
+  </ItemGroup>
+</Project>

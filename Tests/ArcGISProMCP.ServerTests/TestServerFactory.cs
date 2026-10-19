@@ -13,6 +13,18 @@ namespace ArcGISProMCP.ServerTests;
 /// <summary>Server 测试工厂：用 FakeArcGISHost 组装 McpServer。</summary>
 internal static class TestServerFactory
 {
+    // Test listeners must never compete with the user's running production 6520 endpoint.
+    public static int IsolatedLivePort => 16525;
+    private static readonly string LiveRunId = "run-" + Guid.NewGuid().ToString("N");
+    public static string LiveRunDirectory(string batch)
+    {
+        var configured = Environment.GetEnvironmentVariable("ARCGIS_PRO_MCP_LIVE_TEST_ROOT");
+        var root = Path.GetFullPath(string.IsNullOrWhiteSpace(configured)
+            ? Path.Combine(@"D:\ArcGIS-Pro-MCP 2.0", ".runtime", "server-tests", LiveRunId) : configured);
+        if (!string.Equals(Path.GetPathRoot(root), @"D:\", StringComparison.OrdinalIgnoreCase))
+            throw new InvalidOperationException("Live fixture outputs must stay on the owned D-drive test root.");
+        return Path.Combine(root, batch);
+    }
     public static McpServer Create(params IMCPTool[] extraTools)
         => CreateWithHostAndSettings(new FakeArcGISHost(), null, new MCPSettings(), extraTools);
 

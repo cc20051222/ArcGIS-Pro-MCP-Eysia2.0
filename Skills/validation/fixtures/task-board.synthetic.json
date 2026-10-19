@@ -1,0 +1,273 @@
+{
+  "recordKind": "OPTIONAL_USER_TASK_RECORD_NOT_SERVER_JOB_OR_AUTHORIZATION",
+  "schemaVersion": "1.2",
+  "recordOrigin": "SYNTHETIC_NOT_LIVE：流程展示测试；没有运行 GIS，没有生成下列计划成果",
+  "taskId": "demo-only",
+  "goal": "学校距离范围分析、人口统计与 A3 制图（模拟过程）",
+  "mode": "produce",
+  "inputs": [],
+  "scope": {
+    "map": "示例地图",
+    "selectionBasis": "待真实任务确认",
+    "timeRange": null
+  },
+  "method": {
+    "tools": [],
+    "parameters": {},
+    "environment": {},
+    "knownLimits": [
+      "This is a synthetic display fixture, not an execution trace."
+    ]
+  },
+  "authorization": {
+    "userMessageReference": null,
+    "allowedEffects": [],
+    "overwriteTargets": []
+  },
+  "plannedOutputs": [],
+  "plan": {
+    "revision": 1,
+    "scenario": "vector-analysis-to-cartography",
+    "selectionReason": "示例假设目标是几何距离范围；真实任务须先核方法、CRS、人口口径与授权，不能用此示例替代。",
+    "alternatives": [],
+    "constraints": [
+      "No real GIS execution or authorization in this fixture"
+    ],
+    "steps": [
+      {
+        "id": "S1",
+        "title": "识别数据并核方法",
+        "dependsOn": [],
+        "state": "VERIFIED",
+        "evidenceRefs": [
+          "DEMO-E1"
+        ],
+        "summary": "模拟核验状态，不代表真实数据已检查"
+      },
+      {
+        "id": "S2",
+        "title": "生成距离范围",
+        "dependsOn": [
+          "S1"
+        ],
+        "state": "PRODUCED",
+        "evidenceRefs": [
+          "DEMO-E2"
+        ],
+        "summary": "模拟工具成功；仍需空间、单位和数量检查"
+      },
+      {
+        "id": "S3",
+        "title": "统计覆盖人口",
+        "dependsOn": [
+          "S2"
+        ],
+        "state": "PLANNED",
+        "evidenceRefs": [],
+        "summary": "等待范围核验和人口统计口径"
+      },
+      {
+        "id": "S4",
+        "title": "A3 布局与真实试页",
+        "dependsOn": [
+          "S3"
+        ],
+        "state": "PLANNED",
+        "evidenceRefs": [],
+        "summary": "尚无真实地图预览"
+      },
+      {
+        "id": "S5",
+        "title": "正式导出并核验交付",
+        "dependsOn": [
+          "S4"
+        ],
+        "state": "PLANNED",
+        "evidenceRefs": [],
+        "summary": "尚未执行，不提供虚构成果链接"
+      },
+      {
+        "id": "S6",
+        "title": "实际成果复检与问题闭环",
+        "dependsOn": [
+          "S5"
+        ],
+        "state": "PLANNED",
+        "evidenceRefs": [],
+        "summary": "待产生新的复检证据，不复制首次报告"
+      },
+      {
+        "id": "S7",
+        "title": "最终交付检查并提交候选",
+        "dependsOn": [
+          "S6"
+        ],
+        "state": "PLANNED",
+        "evidenceRefs": [],
+        "summary": "对照需求、完整成员和最终版本逐项检查"
+      },
+      {
+        "id": "S8",
+        "title": "有权角色最终验收",
+        "dependsOn": [
+          "S7"
+        ],
+        "state": "PLANNED",
+        "required": false,
+        "evidenceRefs": [],
+        "summary": "制作 Agent 不自批；实际裁定单列在验收记录"
+      }
+    ],
+    "changes": []
+  },
+  "observations": [
+    {
+      "id": "DEMO-E1",
+      "source": "SYNTHETIC_TEST_NOT_SERVER",
+      "observedAt": "2026-10-18T10:00:00+08:00",
+      "summary": "模拟 S1 核验事件"
+    },
+    {
+      "id": "DEMO-E2",
+      "source": "SYNTHETIC_TEST_NOT_SERVER",
+      "observedAt": "2026-10-18T10:00:05+08:00",
+      "summary": "模拟一个工具成功返回，尚未质量核验"
+    }
+  ],
+  "presentation": {
+    "mode": "standard",
+    "lastObservedAt": "2026-10-18T10:00:05+08:00",
+    "displayChannel": "chat",
+    "runtimeCounts": null,
+    "artifacts": [
+      {
+        "label": "A3 正式地图（仅计划）",
+        "stepId": "S5",
+        "state": "PLANNED",
+        "path": "D:/GIS/example-owned-output/school_map_v1.pdf",
+        "isPreview": false
+      }
+    ]
+  },
+  "execution": {
+    "jobId": null,
+    "status": "RUNNING",
+    "steps": []
+  },
+  "quality": {
+    "profile": "SYNTHETIC_QUALITY_DISPLAY_NOT_A_STANDARD_PROFILE",
+    "profileRevision": 1,
+    "boundPlanRevision": 1,
+    "producerId": "demo-producer",
+    "standardMappings": [],
+    "subjectVersions": {
+      "source": "demo-source-v1",
+      "analysis": "demo-analysis-v1",
+      "delivery": "demo-delivery-v1"
+    },
+    "requirements": [
+      {
+        "id": "R1",
+        "title": "资料与方法前提（模拟）",
+        "criterion": "演示判据，真实任务另依技术设计书制定",
+        "source": "SYNTHETIC_ONLY",
+        "required": true,
+        "phases": [
+          "PREFLIGHT"
+        ],
+        "subjectIds": [
+          "source"
+        ],
+        "coverageRequired": "FULL"
+      },
+      {
+        "id": "R2",
+        "title": "分析成果首检和复检（模拟）",
+        "criterion": "演示判据，不是实际空间检查结论",
+        "source": "SYNTHETIC_ONLY",
+        "required": true,
+        "phases": [
+          "PROCESS",
+          "RECHECK"
+        ],
+        "subjectIds": [
+          "analysis"
+        ],
+        "coverageRequired": "FULL"
+      },
+      {
+        "id": "R3",
+        "title": "最终交付成员检查（模拟）",
+        "criterion": "演示判据，不是行业精度阈值",
+        "source": "SYNTHETIC_ONLY",
+        "required": true,
+        "phases": [
+          "FINAL"
+        ],
+        "subjectIds": [
+          "delivery"
+        ],
+        "coverageRequired": "FULL"
+      }
+    ],
+    "checks": [
+      {
+        "id": "DEMO-Q1",
+        "requirementId": "R1",
+        "phase": "PREFLIGHT",
+        "state": "PASS",
+        "method": "SYNTHETIC_DISPLAY_EVENT",
+        "profileRevision": 1,
+        "bindings": {
+          "source": "demo-source-v1"
+        },
+        "scope": {
+          "mode": "FULL",
+          "population": 1,
+          "checked": 1
+        },
+        "evidenceRefs": [
+          "DEMO-E1"
+        ]
+      },
+      {
+        "id": "DEMO-Q2",
+        "requirementId": "R2",
+        "phase": "PROCESS",
+        "state": "PASS",
+        "method": "SYNTHETIC_DISPLAY_EVENT",
+        "profileRevision": 1,
+        "bindings": {
+          "analysis": "demo-analysis-v1"
+        },
+        "scope": {
+          "mode": "FULL",
+          "population": 1,
+          "checked": 1
+        },
+        "evidenceRefs": [
+          "DEMO-E2"
+        ]
+      }
+    ],
+    "issues": [],
+    "history": [],
+    "acceptance": {
+      "status": "NOT_REQUESTED",
+      "reviewerRole": "UNASSIGNED",
+      "reviewerId": null,
+      "evidenceRefs": []
+    }
+  },
+  "verification": {
+    "dataChecks": [],
+    "visualChecks": [],
+    "unverified": [
+      "All runtime and artifacts are synthetic"
+    ]
+  },
+  "delivery": {
+    "verifiedMembers": [],
+    "partialOrBlockedMembers": []
+  }
+}

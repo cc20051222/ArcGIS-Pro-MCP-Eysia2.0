@@ -1,0 +1,7 @@
+interface:
+  display_name: "ArcGIS Pro 2.0 工作流"
+  short_description: "按场景制定GIS流程，展示全过程、成果与质量复检，提交可核验的验收候选"
+  default_prompt: "使用 $arcgis-pro-2-workflows 结合场景、实际数据和适用规格制定流程与质量要求，展示全过程和真实成果；完成已授权制作、首检、复检与最终交付检查，披露未验证项并提交验收候选，不代替有权角色批准。"
+
+policy:
+  allow_implicit_invocation: true

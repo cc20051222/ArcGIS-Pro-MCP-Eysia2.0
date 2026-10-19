@@ -26,6 +26,8 @@ public sealed class McpToolsCapability
 public sealed class McpServerCapabilities
 {
     public McpToolsCapability Tools { get; set; } = new();
+    [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]
+    public IReadOnlyDictionary<string, object?>? Experimental { get; set; }
 }
 
 /// <summary>initialize 请求参数。</summary>

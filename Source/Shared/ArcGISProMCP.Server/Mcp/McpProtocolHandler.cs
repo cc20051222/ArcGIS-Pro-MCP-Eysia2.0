@@ -70,7 +70,20 @@ public sealed class McpProtocolHandler
         return new McpInitializeResult
         {
             ProtocolVersion = McpConstants.ProtocolVersion,
-            Capabilities = new McpServerCapabilities { Tools = new McpToolsCapability { ListChanged = false } },
+            Capabilities = new McpServerCapabilities
+            {
+                Tools = new McpToolsCapability { ListChanged = false },
+                Experimental = new Dictionary<string, object?>
+                {
+                    ["arcgispro-mcp/progress"] = new
+                    {
+                        schemaVersion = 1, transport = "request-scoped-sse-opt-in",
+                        lifecycleEvents = true, globalCompletionPercentage = false,
+                        gpProgress = "SDK callbacks when the host emits them; verify at runtime",
+                        nativePanel = "requires the updated compatible Add-in"
+                    }
+                }
+            },
             ServerInfo = _serverInfo
         };
     }
