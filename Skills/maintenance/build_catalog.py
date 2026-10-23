@@ -11,13 +11,14 @@ from pathlib import Path
 # when names still match: regeneration must not silently reuse old conclusions.
 REVIEWED_SUPPORT_SOURCES = {
     'D091PsTools.cs': '60B705C7C43FCD13BC5EF42CA2EA4CB4304C005E86E1CF85AC5031290D4B1BE1',
-    'D102PsTools.cs': 'AA93DB75D36505351A24C4E360983522064FDC9E0D96161EC82BBE40F49859CA',
+    'D102PsTools.cs': 'F117D38F7A69F70C8825BE22967002D5189D2ADECF0851E97AD74B22FD2A2F13',
     'D118HostFaceTools.cs': '5C0601706A085DC992F77A02AF636A276AE1AAB8A97357096366090D10005320',
 }
 
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
+    # Source references describe text content, independent of Git checkout EOLs.
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest().upper()
 
 
 def build(repo, date):
@@ -112,7 +113,8 @@ def build(repo, date):
     observed_sources = {snapshot, composition, classification, errors, whitelist}
     observed_sources.update(class_index[c][0] for c in registered)
     return {'kind': 'OFFLINE_SOURCE_TOOL_REFERENCE', 'generatedOn': date,
-            'product': 'ArcGIS-Pro-MCP 2.0', 'skillVersion': version[1],
+            'product': 'ArcGIS-Pro-MCP 2.1', 'skillVersion': version[1],
+            'sourceHashNormalization': 'Text SHA256 with CRLF normalized to LF; binary artifact hashes remain raw bytes.',
             'evidenceStatus': 'SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE',
             'registeredToolCount': len(tools), 'registrationClassCount': len(registered),
             'sourceContractNameDifference': [],

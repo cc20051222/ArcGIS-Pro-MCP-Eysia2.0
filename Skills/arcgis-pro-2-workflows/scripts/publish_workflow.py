@@ -26,31 +26,14 @@ def project(record):
     quality = quality_summary(record, evidence)
     raw_quality = record.get('quality') or {}
     requirements = {r['id']: r for r in raw_quality.get('requirements', [])}
-    bound_requests = set()
     rows = []
     for key in order:
         step = steps[key]
         request_ids = step.get('requestIds', [])
-        if (not isinstance(request_ids, list) or any(not isinstance(r, str) or not r for r in request_ids)
-                or len(set(request_ids)) != len(request_ids) or bound_requests.intersection(request_ids)):
-            raise ValueError('Each exact request ID must bind to one step only.')
-        bound_requests.update(request_ids)
-        if step['state'] == 'RUNNING' and not step.get('evidenceRefs'):
-            raise ValueError('RUNNING requires an actual dispatch/start observation; a plan is not execution.')
+        # validate() is shared with chat rendering: execution assertions and
+        # bindings must not gain different meanings in the two displays.
         kind = step.get('kind', 'PROCESS')
-        if kind not in {'PREFLIGHT', 'PROCESS', 'CHECK', 'REPAIR', 'RECHECK', 'FINAL', 'ACCEPTANCE'}:
-            raise ValueError('Unknown business step kind.')
         req_ids = step.get('requirementIds', [])
-        if not isinstance(req_ids, list) or any(r not in requirements for r in req_ids):
-            raise ValueError('Step requirementIds must reference declared quality requirements.')
-        if step.get('outputs'):
-            for path in step['outputs']:
-                output_path(path)
-        if step['state'] in {'RUNNING', 'PRODUCED', 'VERIFIED'}:
-            for dep in step.get('dependsOn', []):
-                allowed={'VERIFIED','FAILED','STALE','BLOCKED'} if kind=='REPAIR' else {'VERIFIED'}
-                if steps[dep]['state'] not in allowed:
-                    raise ValueError('Started steps require verified dependencies; record a real replan instead of hiding blockers.')
         rows.append({**step, 'id': key, 'kind': kind, 'requestIds': request_ids,
                      'requirementIds': req_ids,
                      'observedAt': max((evidence[r]['observedAt'] for r in step.get('evidenceRefs', [])),
@@ -84,6 +67,38 @@ def plain_d(path):
     return target
 
 
+def _quality_contract(quality):
+    """Reviewed definitions, ignoring requirement titles/order and current data versions."""
+    return {
+        'profile': quality.get('profile', 'UNSPECIFIED'),
+        'standardMappings': quality.get('standardMappings', []),
+        'requirements': {
+            req['id']: {
+                'criterion': req['criterion'], 'source': req['source'],
+                'required': req.get('required', True), 'allowEmpty': req.get('allowEmpty', False),
+                'phases': sorted(req['phases']), 'subjectIds': sorted(req['subjectIds']),
+                'coverageRequired': req['coverageRequired'],
+            } for req in quality.get('requirements', [])
+        },
+    }
+
+
+def _protect_quality_contract(previous, current):
+    old = previous.get('quality') or {}
+    new = current.get('quality') or {}
+    old_revision, new_revision = old.get('profileRevision', 0), new.get('profileRevision', 0)
+    if new_revision < old_revision:
+        raise ValueError('Cannot roll back the quality profileRevision within the same task.')
+
+    def completed(row):
+        check = row.get('check', row) if isinstance(row, dict) else None
+        return isinstance(check, dict) and check.get('state') in {'PASS', 'FAIL', 'NOT_APPLICABLE'}
+
+    checked = any(completed(row) for row in [*old.get('checks', []), *old.get('history', [])])
+    if checked and _quality_contract(old) != _quality_contract(new) and new_revision <= old_revision:
+        raise ValueError('Quality contract changes require a higher profileRevision after completed checks.')
+
+
 def _publish(record, target, expected_task=None, activate=False):
     view = project(record)
     target = plain_d(target)
@@ -98,9 +113,13 @@ def _publish(record, target, expected_task=None, activate=False):
         elif previous.get('plan', {}).get('revision', 0) > record['plan']['revision']:
             raise ValueError('Cannot replace a newer plan with an older revision.')
         else:
-            old_refs={r['id'] for r in previous.get('observations', [])}
-            if not old_refs.issubset({r['id'] for r in record.get('observations', [])}):
+            _protect_quality_contract(previous, record)
+            old_observations={r['id']:r for r in previous.get('observations', [])}
+            observations={r['id']:r for r in record.get('observations', [])}
+            if not old_observations.keys() <= observations.keys():
                 raise ValueError('Updates must retain earlier observations, including failed attempts.')
+            if any(observations[key]!=value for key,value in old_observations.items()):
+                raise ValueError('Earlier observations are immutable; append corrections with a new observation ID.')
             old_at=previous.get('workflowView', {}).get('observedAt')
             if old_at and (not view['observedAt'] or timestamp(old_at)>timestamp(view['observedAt'])):
                 raise ValueError('An older observation cannot overwrite current task progress.')

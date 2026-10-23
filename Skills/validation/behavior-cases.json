@@ -1,6 +1,6 @@
 {
   "kind": "SKILL_BEHAVIOR_EVALUATION_DESIGN",
-  "version": "0.7.1",
+  "version": "0.7.7",
   "expectedCaseCount": 90,
   "date": "2026-10-19",
   "executionStatus": "DEFINED_NOT_EXECUTED_IN_A_REAL_CLIENT",

@@ -109,6 +109,31 @@ internal static class Program
             Require(ProgressJournalReader.Read(dir).Count==0,"partial line accepted");
             File.AppendAllText(p,json[10..]+"\n");Require(ProgressJournalReader.Read(dir).Single().Message=="中文","completed line lost");
         }));
+        await Check("journal reports locked files, retains readable events and recovers without retrying work",()=>Sync(()=>
+        {
+            var dir=Path.Combine(Run,"journal-lock");Directory.CreateDirectory(dir);
+            var e=new ToolProgressEvent(1,"lock-fixture","r","probe","inside","RUNNING",1,3,"fixture","fixture",DateTimeOffset.UtcNow);
+            var locked=Path.Combine(dir,"progress-locked.jsonl");File.WriteAllText(locked,JsonSerializer.Serialize(e)+"\n");
+            File.WriteAllText(Path.Combine(dir,"progress-readable.jsonl"),JsonSerializer.Serialize(e with { InvocationId="readable" })+"\n");
+            using(var stream=new FileStream(locked,FileMode.Open,FileAccess.ReadWrite,FileShare.None)) {
+                var result=ProgressJournalReader.ReadWithStatus(dir);
+                Require(result.UnreadableFiles==1&&result.Error is not null,"locked journal hidden");
+                Require(result.Events.Count==1&&result.Events[0].InvocationId=="readable","healthy event lost with locked file");
+            }
+            var recovered=ProgressJournalReader.ReadWithStatus(dir);
+            Require(recovered.Error is null&&recovered.Events.Count==2,"journal did not recover after unlock");
+        }));
+        await Check("journal differentiates incomplete live writes from corrupt completed records",()=>Sync(()=>
+        {
+            var dir=Path.Combine(Run,"journal-health");Directory.CreateDirectory(dir);
+            var path=Path.Combine(dir,"progress-health.jsonl");File.WriteAllText(path,"{");
+            var partial=ProgressJournalReader.ReadWithStatus(dir);
+            Require(partial.Events.Count==0&&partial.Error is null,"normal unfinished line treated as failure");
+            File.AppendAllText(path,"\n");
+            var corrupt=ProgressJournalReader.ReadWithStatus(dir);
+            Require(corrupt.InvalidRecords==1&&corrupt.Error is not null&&corrupt.Events.Count==0,"corrupt full line hidden");
+            File.WriteAllText(path,"");Require(ProgressJournalReader.ReadWithStatus(dir).Error is null,"old corruption health persisted");
+        }));
         await Check("observer failure cannot fail or repeat a tool",async () =>
         {
             var tool=new Probe();var server=Server(tool,new ToolProgressHub());

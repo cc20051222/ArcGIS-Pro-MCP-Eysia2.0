@@ -1,0 +1,89 @@
+{
+  "kind": "PUBLIC_RELEASE_VALIDATION_SUMMARY",
+  "releaseVersion": "2.1.0",
+  "tag": "v2.1",
+  "skillVersion": "0.7.7",
+  "date": "2026-10-23",
+  "status": "RELEASE_PAYLOAD_VALIDATED",
+  "acceptance": "PASS_LOCAL_USER_AUTHORIZED",
+  "thirdPartyIndependentReview": false,
+  "scope": "Local workflow Skill and panel acceptance plus actual final2.1 plugin installation, live GP and fresh result recheck. Tool discovery is not individual239-tool business coverage.",
+  "runtime": {
+    "platform": "Windows x64",
+    "arcgisPro": "3.5.0.57366",
+    "framework": "net8.0",
+    "initializeServerVersion": "2.1.0",
+    "registeredTools": 239,
+    "gpAllowlist": 53,
+    "loadedFirstPartyModulesHashMatched": 7,
+    "cachedFirstPartyDllsHashMatched": 8
+  },
+  "plugin": {
+    "sha256": "BEC2FEC655EEC6606B250BD0E1D86FCDCECC61E4FCDCB4FD3F01CFEA4607BC81",
+    "bytes": 858735,
+    "addInVersion": "2.1.0",
+    "fileVersion": "2.1.0.0",
+    "assemblyVersion": "1.0.0.0",
+    "minimumHostInSelectedPayload": "3.5",
+    "zipEntries": 12,
+    "esriSdkAssembliesRedistributed": 0,
+    "debugSymbolsRedistributed": 0,
+    "trustedPublisherSignature": false
+  },
+  "currentReleaseChecks": {
+    "builds": "Standalone panel, net6 source target and selected net8 plugin: zero warnings and errors",
+    "panelInteraction": {"passed":48,"total":48},
+    "automaticScenery": {"passed":8,"total":8},
+    "skillHelperTests": {"passed":120,"total":120},
+    "offlineSkillPackageChecks": {"passed":8,"total":8},
+    "freshIndexedCheckout": {"skillHelperTestsPassed":120,"offlinePackageChecksPassed":8,"sourceTextHashesPortableAcrossGitLineEndings":true},
+    "progressProtocol": {"passed":18,"total":18},
+    "serverTests": {"passed":68,"total":68},
+    "selectedIdentityHealthPathUnitTests": {"passed":42,"skipped":1,"failed":0,"total":43},
+    "dOnlyInstallerRestore": {"skillFiles":20,"panelFiles":7,"restoredTransactions":2},
+    "pendingCheckControls": {"passed":13,"total":13,"basis":"Prior0.7.7 actual WPF control checks on the same unchanged panel source"},
+    "modelBehaviorCases": {"defined":90,"evaluatorExecuted":0}
+  },
+  "currentReleaseLiveWorkflow": {
+    "sourceFeatures": 6,
+    "bufferDistanceMeters": 20,
+    "outputFeatures": 6,
+    "outputGeometry": "Polygon",
+    "emptyGeometryCount": 0,
+    "sseProgressNotifications": 16,
+    "sdkCallbacks": 13,
+    "requestedGeometryChecks": ["null_geometry","self_intersection","short_segment","duplicate_vertex"],
+    "firstCheckCoverage": "6/6",
+    "freshRecheckCoverage": "6/6",
+    "geometryIssues": 0,
+    "independentDbfCount": 6,
+    "bufferDistanceFieldVerified": true,
+    "sourceIdsUnique": true,
+    "extentExpansionNumericalToleranceMeters": 0.00001,
+    "shortSegmentThresholdMeters": 0.000001,
+    "shortSegmentThresholdIsIndustryStandard": false,
+    "userOriginalProjectAndTaskUnchanged": true
+  },
+  "earlierFeatureAcceptance": {
+    "version": "Skill0.7.7 with pre2.1 product identity",
+    "fixedPressureFixtureFeatures": 10000,
+    "outputNonemptyFeatures": 10000,
+    "sdkCallbacks": 14,
+    "actualRunningFramePrecedesTerminalResponse": true,
+    "boundary": "Earlier fixed-fixture progress evidence is not another2.1 business benchmark or additional algorithm coverage."
+  },
+  "releaseCorrections": [
+    "Preserved the source DAML namespace/root spelling after real host discovery rejected a prefixed serialization. Rebuilt the package and verified real host loading.",
+    "Aligned MCP initialize serverInfo version with product2.1.0 and asserted the exact handshake version in Server tests.",
+    "Refreshed source catalog identities; text reference hashes normalize CRLF to LF for Git checkouts. Binary and distribution hashes use exact original bytes."
+  ],
+  "notVerified": [
+    "All239 tools individually passing complete business scenarios",
+    "Clean machine, Windows10, all MCP clients or Pro versions other than3.5",
+    "Net6 real host execution",
+    "Complete DEM hydrology and all Photoshop/UXP operations",
+    "All90 designed model behavior evaluations",
+    "Third-party independent review or industry certification"
+  ],
+  "privacy": "No user datasets, exam PDF, project files, private paths, account credentials or SSH keys are included in this public summary."
+}

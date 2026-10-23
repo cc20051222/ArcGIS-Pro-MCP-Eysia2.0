@@ -812,7 +812,7 @@ internal static class Composition
             internalPsRoute = new ArcGISProMCP.Server.Internal.PsChannelHandler(
                 new ArcGISProMCP.Server.Internal.PsChannelPolicy(),
                 new ArcGISProMCP.Server.Internal.PsSessionStore(),
-                "1.0.2");
+                "2.1.0");
         }
         catch (Exception)
         {

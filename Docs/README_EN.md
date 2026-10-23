@@ -1,5 +1,7 @@
 # English index — ArcGIS Pro MCP Server
 
+**Current release: 2.1 (product 2.1.0, workflow Skill 0.7.7).** Download the complete Windows x64 bundle from [GitHub](https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v2.1) or [GitCode](https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/v2.1). The new installer targets ArcGIS Pro 3.5/net8, with D-drive workflow storage, transactional backups, an adaptive workflow Skill and the time-aware landscape panel. See the [current install guide](SKILL_INSTALL_GUIDE.md) and [release notes](RELEASE_2_1.md). Older package links below remain historical references. Tool discovery count is 239; this is not a claim that all239 tools passed individual business acceptance.
+
 > This page is an **index**, not a translation of the tutorials. The tutorials below stay the single
 > source of truth in Chinese; everything linked here is verified to exist in the published repository
 > (checked with `git ls-files`, case-sensitive).

@@ -8,5 +8,5 @@ public static class McpConstants
 
     public const string ServerName = "arcgis-pro-mcp";
 
-    public const string ServerVersion = "0.1.0";
+    public const string ServerVersion = "2.1.0";
 }

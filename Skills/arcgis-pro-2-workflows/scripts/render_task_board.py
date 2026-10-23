@@ -17,6 +17,7 @@ STATES = {
 }
 EVIDENCED_STATES = {'PRODUCED', 'VERIFIED', 'FAILED', 'CANCELLED'}
 ARTIFACT_STATES = {'PLANNED', 'PRODUCED', 'VERIFIED', 'STALE'}
+STEP_KINDS = {'PREFLIGHT', 'PROCESS', 'CHECK', 'REPAIR', 'RECHECK', 'FINAL', 'ACCEPTANCE'}
 PHASES = ('PREFLIGHT', 'PROCESS', 'RECHECK', 'FINAL')
 PHASE_LABELS = {'PREFLIGHT': '资料预检', 'PROCESS': '过程与首次检查', 'RECHECK': '复检/问题闭环', 'FINAL': '最终交付检查'}
 QUALITY_LABELS = {'PASS': '检查通过', 'FAIL': '检查未通过', 'NOT_RUN': '尚未检查', 'BLOCKED': '受阻',
@@ -78,6 +79,7 @@ def quality_summary(record, evidence):
         require(all(isinstance(req.get(k), str) and req[k] for k in ('title', 'criterion', 'source')),
                 'Each requirement needs title, criterion and its source.')
         require(type(req.get('required', True)) is bool, 'Requirement required must be boolean.')
+        require(type(req.get('allowEmpty', False)) is bool, 'Requirement allowEmpty must be boolean.')
         phases = req.get('phases')
         require(isinstance(phases, list) and phases and len(set(phases)) == len(phases) and all(p in PHASES for p in phases),
                 'Requirement phases must be unique known phases.')
@@ -124,6 +126,11 @@ def quality_summary(record, evidence):
             require(population is None or checked <= population, 'Checked count exceeds population.')
             if scope['mode'] == 'FULL' and (population is None or checked != population):
                 state = 'INSUFFICIENT_COVERAGE'
+            if scope['mode'] == 'FULL' and population == 0:
+                rationale = scope.get('emptyRationale')
+                if not (reqs[req_id].get('allowEmpty', False)
+                        and isinstance(rationale, str) and rationale.strip()):
+                    state = 'INSUFFICIENT_COVERAGE'
             if scope['mode'] == 'SAMPLE':
                 require(isinstance(scope.get('sampleDesign'), str) and scope['sampleDesign'], 'Sampling requires a design/basis.')
                 if reqs[req_id]['coverageRequired'] == 'FULL' or checked == 0:
@@ -220,7 +227,7 @@ def validate(record):
                 'Observation source and summary are required strings.')
         timestamp(row.get('observedAt'))
         evidence[key] = row
-    ids = {}
+    ids, bound_requests = {}, set()
     for step in steps:
         require(isinstance(step, dict), 'Step must be an object.')
         key = step.get('id')
@@ -233,6 +240,18 @@ def validate(record):
         require(isinstance(refs, list) and all(isinstance(r, str) and r in evidence for r in refs),
                 'Step evidenceRefs must reference recorded observations.')
         require(step['state'] not in EVIDENCED_STATES or bool(refs), 'This state requires observation evidence: ' + key)
+        require(step['state'] != 'RUNNING' or bool(refs),
+                'RUNNING requires an actual dispatch/start observation; a plan is not execution.')
+        require(step.get('kind', 'PROCESS') in STEP_KINDS, 'Unknown business step kind.')
+        requests = step.get('requestIds', [])
+        require(isinstance(requests, list) and all(isinstance(r, str) and r for r in requests)
+                and len(set(requests)) == len(requests) and not bound_requests.intersection(requests),
+                'Each exact request ID must bind to one step only.')
+        bound_requests.update(requests)
+        outputs = step.get('outputs', [])
+        require(isinstance(outputs, list), 'Step outputs must be an array of paths.')
+        for value in outputs:
+            output_path(value)
         deps = step.get('dependsOn', [])
         require(isinstance(deps, list) and all(isinstance(d, str) for d in deps) and len(set(deps)) == len(deps),
                 'dependsOn must contain unique step IDs.')
@@ -243,6 +262,10 @@ def validate(record):
     for key, step in ids.items():
         for dep in step.get('dependsOn', []):
             require(dep in ids and dep != key, 'Unknown/self dependency: ' + str(dep))
+            if step['state'] in {'RUNNING', 'PRODUCED', 'VERIFIED'}:
+                allowed = {'VERIFIED', 'FAILED', 'STALE', 'BLOCKED'} if step.get('kind') == 'REPAIR' else {'VERIFIED'}
+                require(ids[dep]['state'] in allowed,
+                        'Started steps require verified dependencies; record a real replan instead of hiding blockers.')
             adjacency[dep].append(key)
             indegree[key] += 1
     queue = [key for key in ids if indegree[key] == 0]
@@ -297,6 +320,11 @@ def validate(record):
         require(type(item.get('isPreview', False)) is bool, 'isPreview must be boolean.')
     intake_view(record, evidence, ids, output_path)
     quality = quality_summary(record, evidence)
+    requirements = {r['id'] for r in (record.get('quality') or {}).get('requirements', [])}
+    for step in steps:
+        refs = step.get('requirementIds', [])
+        require(isinstance(refs, list) and all(isinstance(r, str) and r in requirements for r in refs),
+                'Step requirementIds must reference declared quality requirements.')
     if execution.get('status') == 'COMPLETED' and record.get('mode') != 'inspect':
         require(quality['candidate'] == 'PASS_CANDIDATE', 'Production completion requires preflight, process, recheck and final checks; external acceptance remains separate.')
     return plan, ids, order, evidence, presentation
@@ -390,12 +418,16 @@ def render(record, include_images=False):
         lines.extend(['', '| 质量要求 | 判据 | 依据 | 检查覆盖要求 |', '|---|---|---|---|'])
         for req in raw_quality['requirements']:
             lines.append('| ' + text(req['id'] + ' ' + req['title']) + ' | ' + text(req['criterion']) + ' | '
-                         + text(req['source']) + ' | ' + ('全检' if req['coverageRequired'] == 'FULL' else '允许有据抽样') + ' |')
+                         + text(req['source']) + ' | ' + ('全检' if req['coverageRequired'] == 'FULL' else '允许有据抽样')
+                         + ('；允许空范围（须有适用说明）' if req.get('allowEmpty', False) else '') + ' |')
     if raw_quality.get('checks'):
         lines.extend(['', '| 检查 | 阶段 | 覆盖 | 有效结果 | 证据 |', '|---|---|---|---|---|'])
         for check in raw_quality['checks']:
             scope = check.get('scope', {})
             coverage = str(scope.get('mode', '未记录')) + ' ' + str(scope.get('checked', '?')) + '/' + str(scope.get('population', '?'))
+            if scope.get('mode') == 'FULL' and scope.get('population') == 0:
+                reason = scope.get('emptyRationale')
+                coverage += '；空范围说明：' + (reason.strip() if isinstance(reason, str) and reason.strip() else '尚未记录适用依据')
             lines.append('| ' + text(check['id'] + ' / ' + check['requirementId']) + ' | ' + PHASE_LABELS[check['phase']]
                          + ' | ' + text(coverage) + ' | ' + QUALITY_LABELS[quality['checkStates'][check['id']]] + ' | ' + text(', '.join(check.get('evidenceRefs', []))) + ' |')
     if quality['openIssues']:

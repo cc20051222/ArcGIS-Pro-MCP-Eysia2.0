@@ -389,6 +389,18 @@ class QualityRecordTests(unittest.TestCase):
         self.assertEqual(result['gates']['RECHECK']['state'], 'NOT_RUN')
         self.assertEqual(result['candidate'], 'NOT_READY')
 
+    def test_empty_scope_explanation_is_visible_in_chat_and_projection(self):
+        WorkflowPublisherTests.setUpClass()
+        record = self.record(complete=True)
+        record['quality']['requirements'][0]['allowEmpty'] = True
+        record['quality']['checks'][0]['scope'] = {
+            'mode':'FULL','population':0,'checked':0,'emptyRationale':'Explicit empty output condition'}
+        rendered = board.render(record)
+        self.assertIn('允许空范围（须有适用说明）', rendered)
+        self.assertIn('空范围说明：Explicit empty output condition', rendered)
+        view = WorkflowPublisherTests.publisher.project(record)
+        self.assertEqual(view['checks'][0]['scope']['emptyRationale'], 'Explicit empty output condition')
+
     def test_complete_checks_make_candidate_not_external_acceptance(self):
         result = self.summary(self.record(complete=True))
         self.assertEqual(result['candidate'], 'PASS_CANDIDATE')
@@ -436,6 +448,56 @@ class QualityRecordTests(unittest.TestCase):
         record = self.record(complete=True)
         record['quality']['checks'][2]['scope']['population'] = None
         self.assertEqual(self.summary(record)['candidate'], 'NOT_READY')
+
+    def test_empty_full_scope_cannot_implicitly_pass(self):
+        record = self.record(complete=True)
+        record['quality']['checks'][0]['scope'] = {'mode':'FULL','population':0,'checked':0}
+        result = self.summary(record)
+        self.assertEqual(result['checkStates']['DEMO-Q1'], 'INSUFFICIENT_COVERAGE')
+        self.assertEqual(result['gates']['PREFLIGHT']['state'], 'BLOCKED')
+        self.assertEqual(result['candidate'], 'NOT_READY')
+
+    def test_empty_scope_needs_requirement_policy_and_observed_rationale(self):
+        for allow_empty, rationale in ((False, 'No matches were expected'), (True, None),
+                                       (True, ''), (True, '   ')):
+            with self.subTest(allow_empty=allow_empty, rationale=rationale):
+                record = self.record(complete=True)
+                record['quality']['requirements'][0]['allowEmpty'] = allow_empty
+                record['quality']['checks'][0]['scope'] = {
+                    'mode':'FULL','population':0,'checked':0,'emptyRationale':rationale}
+                self.assertEqual(self.summary(record)['checkStates']['DEMO-Q1'], 'INSUFFICIENT_COVERAGE')
+
+    def test_explicitly_allowed_empty_scope_preserves_other_quality_gates(self):
+        record = self.record(complete=True)
+        record['quality']['requirements'][0].update(
+            allowEmpty=True, criterion='A full source scan may return no matches for this criterion',
+            source='SYNTHETIC_GOAL_NOT_AUTHORIZATION')
+        record['quality']['checks'][0]['scope'] = {
+            'mode':'FULL','population':0,'checked':0,
+            'emptyRationale':'Synthetic observation confirms no matches, allowed by this criterion.'}
+        result = self.summary(record)
+        self.assertEqual(result['checkStates']['DEMO-Q1'], 'PASS')
+        self.assertEqual(result['candidate'], 'PASS_CANDIDATE')
+        self.assertEqual(result['acceptance'], 'NOT_REQUESTED')
+        record['quality']['checks'][0]['evidenceRefs'] = []
+        with self.assertRaisesRegex(ValueError, 'recorded evidence'):
+            self.summary(record)
+
+    def test_empty_policy_requires_a_real_boolean(self):
+        for value in ('true', 1, None):
+            with self.subTest(value=value):
+                record = self.record(complete=True)
+                record['quality']['requirements'][0]['allowEmpty'] = value
+                with self.assertRaisesRegex(ValueError, 'allowEmpty must be boolean'):
+                    self.summary(record)
+
+    def test_empty_scope_never_bypasses_stale_bindings(self):
+        record = self.record(complete=True)
+        record['quality']['requirements'][0]['allowEmpty'] = True
+        record['quality']['checks'][0]['scope'] = {
+            'mode':'FULL','population':0,'checked':0,'emptyRationale':'Allowed empty result'}
+        record['quality']['subjectVersions']['source'] = 'updated-source-v2'
+        self.assertEqual(self.summary(record)['checkStates']['DEMO-Q1'], 'STALE')
 
     def test_new_artifact_version_invalidates_relevant_checks(self):
         record = self.record(complete=True)
@@ -529,14 +591,14 @@ class SourceReferenceTests(unittest.TestCase):
     def test_source_evidence_files_still_match(self):
         for evidence in self.catalog['sources']:
             with self.subTest(path=evidence['path']):
-                actual = hashlib.sha256((REPO / evidence['path']).read_bytes()).hexdigest().upper()
+                actual = builder.sha(REPO / evidence['path'])
                 self.assertEqual(actual, evidence['sha256'])
 
     def test_workflow_interface_observations_still_match_source(self):
         research = json.loads((HERE / 'research-sources.json').read_text(encoding='utf-8'))
         for evidence in research['localInterfaceObservations']:
             with self.subTest(path=evidence['path']):
-                actual = hashlib.sha256((REPO / evidence['path']).read_bytes()).hexdigest().upper()
+                actual = builder.sha(REPO / evidence['path'])
                 self.assertEqual(actual, evidence['sha256'])
 
     def test_registration_and_channel_invariants(self):
@@ -584,24 +646,72 @@ class WorkflowPublisherTests(unittest.TestCase):
 
     def test_running_requires_dispatch_evidence(self):
         r=self.record();r['plan']['steps'][0]['state']='RUNNING'
-        with self.assertRaises(ValueError):self.publisher.project(r)
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'RUNNING requires'):
+                surface(r)
 
     def test_duplicate_request_binding_rejected(self):
         r=self.record();r['plan']['steps'].append({**r['plan']['steps'][0],'id':'B'})
-        with self.assertRaises(ValueError):self.publisher.project(r)
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'request ID'):
+                surface(r)
 
     def test_started_step_with_unverified_dependency_rejected(self):
         r=self.record();r['observations']=[{'id':'dispatch','observedAt':'2026-10-18T10:00:00+08:00','source':'actual_dispatch','summary':'request sent'}]
-        r['plan']['steps'].append({'id':'B','title':'Run','state':'RUNNING','dependsOn':['A'],'evidenceRefs':['dispatch']})
-        with self.assertRaises(ValueError):self.publisher.project(r)
+        # PREFLIGHT isolates dependencies from the separate missing-intake guard.
+        r['plan']['steps'].append({'id':'B','kind':'PREFLIGHT','title':'Run','state':'RUNNING','dependsOn':['A'],'evidenceRefs':['dispatch']})
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'verified dependencies'):
+                surface(r)
 
     def test_unknown_requirement_rejected(self):
         r=self.record();r['plan']['steps'][0]['requirementIds']=['unknown']
-        with self.assertRaises(ValueError):self.publisher.project(r)
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'requirementIds'):
+                surface(r)
 
     def test_c_drive_outputs_rejected(self):
         r=self.record();r['plan']['steps'][0]['outputs']=['C:/forbidden/a.tif']
-        with self.assertRaises(ValueError):self.publisher.project(r)
+        # Legacy records also need the output-path guard, despite having no intake root.
+        r['schemaVersion']='1.2';r.pop('intake')
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'D-drive'):
+                surface(r)
+
+    def test_unknown_step_kind_rejected_on_both_surfaces(self):
+        r=self.record();r['plan']['steps'][0]['kind']='INVENTED'
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'step kind'):
+                surface(r)
+
+    def test_verified_dependency_allows_observed_preflight_on_both_surfaces(self):
+        r=self.record()
+        r['observations']=[{'id':'start','observedAt':'2026-10-23T07:00:00+08:00','source':'synthetic_start','summary':'No GIS executed'}]
+        r['plan']['steps'][0].update(state='VERIFIED',evidenceRefs=['start'])
+        r['plan']['steps'].append({'id':'B','kind':'PREFLIGHT','title':'Inspect next','state':'RUNNING',
+                                  'dependsOn':['A'],'evidenceRefs':['start'],'requestIds':['task-one-B']})
+        self.assertIn('Inspect next',board.render(r))
+        self.assertEqual(self.publisher.project(r)['steps'][1]['state'],'RUNNING')
+
+    def test_repair_problem_dependency_remains_allowed(self):
+        for state in ('FAILED','BLOCKED','STALE','VERIFIED'):
+            with self.subTest(state=state):
+                r=TaskIntakeTests().record()
+                r['plan']['steps'][0]['state']=state
+                r['plan']['steps'].append({'id':'B','kind':'REPAIR','title':'Repair affected output','state':'RUNNING',
+                                          'dependsOn':['A'],'evidenceRefs':['T'],'requestIds':['task-one-B']})
+                r['intake']['toolChoices'].append({**r['intake']['toolChoices'][0],'stepId':'B'})
+                self.assertIn('Repair affected output',board.render(r))
+                self.assertEqual(self.publisher.project(r)['steps'][1]['state'],'RUNNING')
+
+    def test_repair_cannot_overlap_running_dependency(self):
+        r=TaskIntakeTests().record()
+        r['plan']['steps'].append({'id':'B','kind':'REPAIR','title':'Repair','state':'RUNNING',
+                                  'dependsOn':['A'],'evidenceRefs':['T'],'requestIds':['task-one-B']})
+        r['intake']['toolChoices'].append({**r['intake']['toolChoices'][0],'stepId':'B'})
+        for surface in (board.render, self.publisher.project):
+            with self.subTest(surface=surface.__name__), self.assertRaisesRegex(ValueError, 'verified dependencies'):
+                surface(r)
 
     def test_quality_failure_is_not_hidden(self):
         r=QualityRecordTests().record()
@@ -624,6 +734,53 @@ class WorkflowPublisherTests(unittest.TestCase):
             self.assertEqual(len(list((Path(d)/'active-history').glob('*.json'))),1)
             self.assertFalse(target.with_name('active.json.publish-lock').exists())
 
+    def test_observation_ids_cannot_be_rewritten(self):
+        import tempfile
+        owned=REPO/'.runtime/progress-panel/workflow-panel/publisher-tests';owned.mkdir(parents=True,exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=owned) as d:
+            original=self.record()
+            original['observations']=[{'id':'failure-one','source':'SYNTHETIC_NOT_LIVE',
+                'observedAt':'2026-10-22T15:00:00+08:00','summary':'An observed failure'}]
+            for field,value in [('summary','Rewritten as success'),('source','rewritten source'),
+                                ('observedAt','2026-10-22T15:01:00+08:00')]:
+                with self.subTest(field=field):
+                    target=Path(d)/(field+'.json');self.publisher.publish(original,target);before=target.read_bytes()
+                    changed=copy.deepcopy(original);changed['observations'][0][field]=value
+                    with self.assertRaises(ValueError):self.publisher.publish(changed,target)
+                    self.assertEqual(target.read_bytes(),before)
+                    self.assertFalse(target.with_name(target.name+'.publish-lock').exists())
+
+    def test_correction_appends_new_observation_and_retains_original(self):
+        import tempfile
+        owned=REPO/'.runtime/progress-panel/workflow-panel/publisher-tests';owned.mkdir(parents=True,exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=owned) as d:
+            target=Path(d)/'active.json';original=self.record()
+            original['observations']=[{'id':'failure-one','source':'SYNTHETIC_NOT_LIVE',
+                'observedAt':'2026-10-22T15:00:00+08:00','summary':'An observed failure'}]
+            self.publisher.publish(original,target);before=target.read_bytes()
+            corrected=copy.deepcopy(original);corrected['observations'].append({'id':'correction-two',
+                'source':'SYNTHETIC_NOT_LIVE','observedAt':'2026-10-22T15:01:00+08:00',
+                'summary':'A later correction; does not erase earlier failure','supersedes':'failure-one'})
+            self.publisher.publish(corrected,target);saved=json.loads(target.read_text(encoding='utf-8'))
+            self.assertEqual(saved['observations'],corrected['observations'])
+            self.assertEqual(saved['workflowView']['steps'][0]['state'],'PLANNED')
+            history=list((Path(d)/'active-history').glob('*.json'))
+            self.assertEqual(len(history),1);self.assertEqual(history[0].read_bytes(),before)
+
+    def test_removing_observation_leaves_active_record_unchanged(self):
+        import tempfile
+        owned=REPO/'.runtime/progress-panel/workflow-panel/publisher-tests';owned.mkdir(parents=True,exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=owned) as d:
+            target=Path(d)/'active.json';original=self.record()
+            original['observations']=[{'id':'failure-one','source':'SYNTHETIC_NOT_LIVE',
+                'observedAt':'2026-10-22T15:00:00+08:00','summary':'An observed failure'}]
+            self.publisher.publish(original,target);before=target.read_bytes()
+            removed=copy.deepcopy(original);removed['observations']=[]
+            with self.assertRaises(ValueError):self.publisher.publish(removed,target)
+            self.assertEqual(target.read_bytes(),before)
+            self.assertFalse(target.with_name(target.name+'.publish-lock').exists())
+            self.assertFalse(list(Path(d).glob('.workflow-*.json')))
+
     def test_writer_lock_never_removed_by_another_writer(self):
         import tempfile
         owned=REPO/'.runtime/progress-panel/workflow-panel/publisher-tests';owned.mkdir(parents=True,exist_ok=True)
@@ -640,6 +797,122 @@ class WorkflowPublisherTests(unittest.TestCase):
             self.publisher.publish(r,target)
             r['plan']['revision']=1
             with self.assertRaises(ValueError):self.publisher.publish(r,target)
+
+
+class QualityContractUpdateTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        WorkflowPublisherTests.setUpClass()
+        cls.publisher = WorkflowPublisherTests.publisher
+
+    @contextlib.contextmanager
+    def target(self):
+        import tempfile
+        owned = (REPO / '.runtime/progress-panel/workflow-panel/quality-contract-tests').resolve()
+        owned.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=owned) as directory:
+            path = Path(directory).resolve()
+            self.assertTrue(path.is_relative_to(owned))
+            try:
+                yield path / 'active.json'
+            finally:
+                self.assertTrue(path.resolve().is_relative_to(owned))
+
+    def test_checked_contract_changes_require_new_profile_revision(self):
+        mutations = {
+            'criterion': lambda q: q['requirements'][0].update(criterion='Changed criterion'),
+            'source': lambda q: q['requirements'][0].update(source='Different source'),
+            'required': lambda q: q['requirements'][1].update(required=False),
+            'coverage': lambda q: q['requirements'][0].update(coverageRequired='SAMPLE_ALLOWED'),
+            'allowEmpty': lambda q: q['requirements'][0].update(allowEmpty=True),
+            'profile': lambda q: q.update(profile='Different quality profile'),
+            'standards': lambda q: q.update(standardMappings=[{'source':'Different standard','scope':'synthetic'}]),
+        }
+        for name, change in mutations.items():
+            with self.subTest(field=name), self.target() as target:
+                r = QualityRecordTests().record(complete=True)
+                self.publisher.publish(r, target)
+                original = target.read_bytes()
+                changed = copy.deepcopy(r); change(changed['quality'])
+                with self.assertRaisesRegex(ValueError, 'Quality contract changes require a higher profileRevision'):
+                    self.publisher.publish(changed, target)
+                self.assertEqual(target.read_bytes(), original)
+                self.assertFalse(target.with_name(target.name + '.publish-lock').exists())
+                self.assertEqual(list(target.parent.glob('.workflow-*')), [])
+
+    def test_profile_revision_cannot_roll_back(self):
+        with self.target() as target:
+            r = QualityRecordTests().record(complete=True)
+            r['quality']['profileRevision'] = 2
+            self.publisher.publish(r, target)
+            original = target.read_bytes()
+            changed = copy.deepcopy(r); changed['quality']['profileRevision'] = 1
+            with self.assertRaisesRegex(ValueError, 'Cannot roll back the quality profileRevision'):
+                self.publisher.publish(changed, target)
+            self.assertEqual(target.read_bytes(), original)
+
+    def test_new_profile_invalidates_old_checks_and_preserves_snapshot(self):
+        with self.target() as target:
+            r = QualityRecordTests().record(complete=True)
+            self.publisher.publish(r, target); original = target.read_bytes()
+            changed = copy.deepcopy(r)
+            changed['quality']['requirements'][0]['allowEmpty'] = True
+            changed['quality']['profileRevision'] += 1
+            result = self.publisher.publish(changed, target)
+            published = json.loads(target.read_text(encoding='utf-8'))
+            self.assertEqual(result['candidate'], 'NOT_READY')
+            self.assertTrue(all(c['effectiveState'] == 'STALE' for c in published['workflowView']['checks']))
+            self.assertEqual(published['quality']['checks'], r['quality']['checks'])
+            archive = target.parent / 'active-history' / (hashlib.sha256(original).hexdigest() + '.json')
+            self.assertEqual(archive.read_bytes(), original)
+
+    def test_unchecked_draft_contract_can_be_refined(self):
+        with self.target() as target:
+            r = WorkflowPublisherTests().record()
+            self.publisher.publish(r, target)
+            changed = copy.deepcopy(r)
+            changed['quality'].update(profile='Refined draft', standardMappings=['Draft standard'])
+            result = self.publisher.publish(changed, target)
+            self.assertEqual(result['candidate'], 'NOT_READY')
+            self.assertEqual(json.loads(target.read_text(encoding='utf-8'))['quality']['profileRevision'], 1)
+
+    def test_data_version_update_does_not_require_new_quality_definition(self):
+        with self.target() as target:
+            r = QualityRecordTests().record(complete=True)
+            self.publisher.publish(r, target)
+            changed = copy.deepcopy(r)
+            changed['quality']['subjectVersions']['source'] = 'source-data-v2'
+            result = self.publisher.publish(changed, target)
+            published = json.loads(target.read_text(encoding='utf-8'))
+            self.assertEqual(published['quality']['profileRevision'], 1)
+            self.assertEqual(published['workflowView']['checks'][0]['effectiveState'], 'STALE')
+            self.assertEqual(result['candidate'], 'NOT_READY')
+
+    def test_titles_order_and_explicit_defaults_do_not_invalidate_contract(self):
+        with self.target() as target:
+            r = QualityRecordTests().record(complete=True)
+            self.publisher.publish(r, target)
+            changed = copy.deepcopy(r)
+            changed['quality']['requirements'].reverse()
+            for req in changed['quality']['requirements']:
+                req['title'] += ' (display clarification)'
+                req['phases'].reverse()
+                req['allowEmpty'] = False
+            result = self.publisher.publish(changed, target)
+            self.assertEqual(result['candidate'], 'PASS_CANDIDATE')
+
+    def test_completed_history_also_protects_the_contract(self):
+        with self.target() as target:
+            r = QualityRecordTests().record(complete=True)
+            r['quality']['history'] = [{'check': copy.deepcopy(c)} for c in r['quality']['checks']]
+            for check in r['quality']['checks']:
+                check['state'] = 'NOT_RUN'
+            self.publisher.publish(r, target); original = target.read_bytes()
+            changed = copy.deepcopy(r)
+            changed['quality']['requirements'][0]['allowEmpty'] = True
+            with self.assertRaisesRegex(ValueError, 'Quality contract changes require a higher profileRevision'):
+                self.publisher.publish(changed, target)
+            self.assertEqual(target.read_bytes(), original)
 
 
 class TaskIntakeTests(unittest.TestCase):
@@ -693,6 +966,85 @@ class TaskIntakeTests(unittest.TestCase):
     def test_planned_and_actual_output_must_stay_under_user_root(self):
         r=self.record();r['plan']['steps'][0]['outputs']=['D:/outside/a.shp']
         with self.assertRaises(ValueError):board.validate(r)
+
+    @contextlib.contextmanager
+    def junction_fixture(self):
+        """Real Windows aliases, confined to an owned D root; unlink without recursion."""
+        import tempfile
+        owned = REPO / '.runtime/progress-panel/workflow-panel/junction-tests'
+        owned.mkdir(parents=True, exist_ok=True)
+        root = Path(tempfile.mkdtemp(dir=owned)).resolve()
+        allowed, outside = root / 'allowed', root / 'outside'
+        inside = allowed / 'inside'
+        for directory in (allowed, outside, inside):
+            directory.mkdir()
+        links = (allowed / 'escape', allowed / 'internal', root / 'root-alias')
+        try:
+            command = r"""
+$r=$env:SKILL_JUNCTION_TEST_ROOT
+New-Item -ItemType Junction -Path (Join-Path $r 'allowed\escape') -Target (Join-Path $r 'outside') -ErrorAction Stop | Out-Null
+New-Item -ItemType Junction -Path (Join-Path $r 'allowed\internal') -Target (Join-Path $r 'allowed\inside') -ErrorAction Stop | Out-Null
+New-Item -ItemType Junction -Path (Join-Path $r 'root-alias') -Target (Join-Path $r 'allowed') -ErrorAction Stop | Out-Null
+"""
+            result = subprocess.run(['powershell.exe', '-NoProfile', '-NonInteractive', '-Command', command],
+                                    env={**os.environ, 'SKILL_JUNCTION_TEST_ROOT': str(root)},
+                                    capture_output=True, text=True, timeout=30,
+                                    creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+            self.assertEqual(result.returncode, 0, result.stderr)
+            yield allowed, links
+        finally:
+            for link in links:
+                if link.is_junction():
+                    self.assertTrue(link.parent == root or link.parent == allowed)
+                    self.assertTrue(link.resolve().is_relative_to(root))
+                    os.rmdir(link)
+            # All remaining directories are known and empty; never recurse over aliases.
+            for directory in (inside, outside, allowed, root):
+                directory.rmdir()
+
+    @unittest.skipUnless(os.name == 'nt', 'Requires real Windows junctions.')
+    def test_same_drive_junction_escape_rejected_in_chat_and_panel(self):
+        with self.junction_fixture() as (allowed, links):
+            escaped = (links[0] / 'result.gdb/features').as_posix()
+            self.assertFalse(Path(escaped).resolve().is_relative_to(allowed.resolve()))
+            for output_kind in ('planned', 'artifact'):
+                for name, render in (('panel', WorkflowPublisherTests.publisher.project), ('chat', board.render)):
+                    with self.subTest(output_kind=output_kind, surface=name):
+                        r = self.record()
+                        r['intake']['outputRoot']['value'] = allowed.as_posix()
+                        r['plan']['steps'][0]['outputs'] = []
+                        if output_kind == 'planned':
+                            r['plan']['steps'][0]['outputs'] = [escaped]
+                        else:
+                            r['presentation']['artifacts'] = [
+                                {'label': 'planned result', 'stepId': 'A', 'state': 'PLANNED', 'path': escaped}]
+                        with self.assertRaisesRegex(ValueError, 'resolves outside the confirmed output root'):
+                            render(r)
+
+    @unittest.skipUnless(os.name == 'nt', 'Requires real Windows junctions.')
+    def test_internal_junction_preserves_displayed_output_path(self):
+        with self.junction_fixture() as (allowed, links):
+            value = (links[1] / 'result.gdb/features').as_posix()
+            r = self.record()
+            r['intake']['outputRoot']['value'] = allowed.as_posix()
+            r['plan']['steps'][0]['outputs'] = [value]
+            r['presentation']['artifacts'] = [
+                {'label': 'planned result', 'stepId': 'A', 'state': 'PLANNED', 'path': value}]
+            v = WorkflowPublisherTests.publisher.project(r)
+            self.assertEqual(v['steps'][0]['outputs'], [value])
+            self.assertIn(board.text(value), board.render(r))
+
+    @unittest.skipUnless(os.name == 'nt', 'Requires real Windows junctions.')
+    def test_explicit_root_alias_accepts_its_own_contained_output(self):
+        with self.junction_fixture() as (_, links):
+            value = (links[2] / 'result.gdb/features').as_posix()
+            r = self.record()
+            r['intake']['outputRoot']['value'] = links[2].as_posix()
+            r['plan']['steps'][0]['outputs'] = [value]
+            r['presentation']['artifacts'] = [
+                {'label': 'planned result', 'stepId': 'A', 'state': 'PLANNED', 'path': value}]
+            self.assertEqual(WorkflowPublisherTests.publisher.project(r)['intake']['status'], 'READY')
+            self.assertIn(board.text(value), board.render(r))
 
     def test_resolved_data_gap_requires_new_evidence(self):
         r=self.record();r['intake']['dataNeeds']=[{'id':'X','label':'boundary','required':True,'reason':'extent','recommendation':'provide polygon','state':'VERIFIED','stepIds':['A']}]

@@ -9,7 +9,10 @@ Add-Type -AssemblyName UIAutomationTypes
 $condition=[Windows.Automation.PropertyCondition]::new([Windows.Automation.AutomationElement]::ProcessIdProperty,$ProcessId)
 . (Join-Path $PSScriptRoot 'find-panel-window.ps1')
 $window=Get-WorkflowPanelWindow $ProcessId
-$window.GetCurrentPattern([Windows.Automation.WindowPattern]::Pattern).SetWindowVisualState([Windows.Automation.WindowVisualState]::Normal)
+$windowPattern=$window.GetCurrentPattern([Windows.Automation.WindowPattern]::Pattern)
+if($windowPattern.Current.WindowVisualState -ne [Windows.Automation.WindowVisualState]::Normal){
+ $windowPattern.SetWindowVisualState([Windows.Automation.WindowVisualState]::Normal)
+}
 $window.SetFocus()
 $tabs=$window.FindAll([Windows.Automation.TreeScope]::Descendants,[Windows.Automation.PropertyCondition]::new([Windows.Automation.AutomationElement]::ControlTypeProperty,[Windows.Automation.ControlType]::TabItem))
 if($tabs.Count -ne 4){throw 'Expected workflow/detail/diagnostic/intake tabs'}

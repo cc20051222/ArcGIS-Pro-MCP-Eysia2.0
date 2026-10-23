@@ -76,3 +76,9 @@ Release/.staging-oneclick-r16-python/
 
 # 独立配套二进制、构建时点冻结包及发布暂存不入源码仓库
 /配套交付/
+
+# Local installation state and account keys are never source or Release assets.
+/运行配套/
+/仓库公钥/
+/Skills/validation/environment.json
+/Skills/validation/skill-validation-report.json

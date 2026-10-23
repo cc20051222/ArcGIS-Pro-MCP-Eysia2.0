@@ -27,13 +27,14 @@
     <LangVersion>12.0</LangVersion>
 
     <!-- Release identity policy: one product version for all first-party outputs. -->
-    <Version>1.0.2</Version>
-    <VersionPrefix>1.0.2</VersionPrefix>
+    <Version>2.1.0</Version>
+    <VersionPrefix>2.1.0</VersionPrefix>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <InformationalVersion>1.0.2</InformationalVersion>
+    <FileVersion>2.1.0.0</FileVersion>
+    <InformationalVersion>2.1.0</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Product>ArcGIS Pro MCP</Product>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>2.1.0</PackageVersion>
   </PropertyGroup>
 
   <!-- D-060：net6 目标框架下的 `required` 运行时特性 polyfill（net8 编译时该文件内容为空，见文件内 #if） -->

@@ -1,8 +1,9 @@
 {
   "kind": "OFFLINE_SOURCE_TOOL_REFERENCE",
-  "generatedOn": "2026-10-19",
-  "product": "ArcGIS-Pro-MCP 2.0",
-  "skillVersion": "0.7.1",
+  "generatedOn": "2026-10-23",
+  "product": "ArcGIS-Pro-MCP 2.1",
+  "skillVersion": "0.7.7",
+  "sourceHashNormalization": "Text SHA256 with CRLF normalized to LF; binary artifact hashes remain raw bytes.",
   "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE",
   "registeredToolCount": 239,
   "registrationClassCount": 239,
@@ -3022,11 +3023,11 @@
     },
     {
       "path": "Source/ArcGISProMCP.Compatibility/Composition.cs",
-      "sha256": "68C8BE27165E9A2E2A2C8F522AD2ECA7D371E04434AC1421D0EC0B5474F1AE2A"
+      "sha256": "5EA18D4FBECF054E7624068E148BA54B254D580CDFC27F9D8A4ECF206DE60F0E"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Core/Results/ErrorCodes.cs",
-      "sha256": "F6767C5E5FA8B433A37391138600D4E4DFA16725EC1241887198485D57ECEDDC"
+      "sha256": "4FDE43934AB145DE405857F708701B1C17E46CD5C79496F489078440077AFBF7"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Core/Services/IReadOnlyModeService.cs",
@@ -3106,7 +3107,7 @@
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/D102PsTools.cs",
-      "sha256": "AA93DB75D36505351A24C4E360983522064FDC9E0D96161EC82BBE40F49859CA"
+      "sha256": "F117D38F7A69F70C8825BE22967002D5189D2ADECF0851E97AD74B22FD2A2F13"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/D104PointCloudTools.cs",
@@ -3146,7 +3147,7 @@
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
-      "sha256": "BABD35ABE37365267781C62BA75898A68509830BED1F73E3A4F8E7D77F7E1D5E"
+      "sha256": "83284053A2B2AD73C1643CCB37173C01B910B51B91D28A3F467079AF8A9922B2"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/GeoprocessingTools.cs",
@@ -3186,19 +3187,19 @@
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/LayoutBuildTools.cs",
-      "sha256": "017FBCF54D25525F5B5AA0F2BB322E641E2B093786961921A84AD9B994F01BD1"
+      "sha256": "06774BE585F32B68D956FBAE7E4F217417C1D2EACFD03C3D6E75FF5E40C91C6F"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/LayoutExportTools.cs",
-      "sha256": "841CCAB3F077DBF24487C5A36D6A1EC9283200EA75EF415201741735A36B8E17"
+      "sha256": "6FA2ACB53653FE0C34B84A4C0D264429A906F77BA415D58D463292A08FDA11BA"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/LayoutReadTools.cs",
-      "sha256": "E43BAB3DF68BA11CC3D2D6E62C1754C330DD1BD50F4EAED462BCA32B159BDD98"
+      "sha256": "8112FBA093DD998C06C31D0B2436E570BEAF807BBF8D62B81E862499D06BB846"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/MapSettingsTools.cs",
-      "sha256": "308B4DC59AFA1589C493A6E9CA5D0D0F21393BD6911A98AE84A4C2CE5BF74471"
+      "sha256": "BDF221373F35A058F2CF935B8AAC46F29EC43843D1DE90AF5B81E9B58680E113"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/MapTools.cs",
@@ -3246,7 +3247,7 @@
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/SymbologyLabelTools.cs",
-      "sha256": "78D35331E812651EE8038021E98DAE2B7E7682A0F48188468BA8CCA277459769"
+      "sha256": "AE89D89A24A9D2543DF9812F9635170C987DFFBBE132668C91B59790C48591E5"
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/ViewBookmarkTools.cs",

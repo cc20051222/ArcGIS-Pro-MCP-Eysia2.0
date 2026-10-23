@@ -3,7 +3,7 @@
   "schema": "arcgis-pro-mcp-compatibility-policy-v1",
   "policyVersion": "1.3",
   "product": {
-    "releaseVersion": "1.0.2",
+    "releaseVersion": "2.1.0",
     "addInId": "{BAA5628C-3C08-4AD5-A6C0-915ADA475709}",
     "targetFramework": "net6.0-windows",
     "supportedTargetFrameworks": [

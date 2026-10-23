@@ -44,7 +44,7 @@ public sealed record ManagedCompatibilityFacts
            && IsSafeVersion(TargetFramework);
 
     public static ManagedCompatibilityFacts Current { get; } =
-        new("1.0.2", "3.0", "net6.0");
+        new("2.1.0", "3.0", "net6.0");
 
     public static bool IsSafeVersionToken(string? value)
         => !string.IsNullOrWhiteSpace(value)

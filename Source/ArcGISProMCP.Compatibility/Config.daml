@@ -4,13 +4,13 @@
         xmlns="http://schemas.esri.com/DADF/Registry"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{BAA5628C-3C08-4AD5-A6C0-915ADA475709}" version="1.0.2" desktopVersion="3.0">
+  <AddInInfo id="{BAA5628C-3C08-4AD5-A6C0-915ADA475709}" version="2.1.0" desktopVersion="3.0">
     <Name>ArcGIS Pro MCP</Name>
-    <Description>将 ArcGIS Pro 转换为标准 MCP Server 的 Add-in（Phase 3：MCP Server 通信层）。</Description>
+    <Description>ArcGIS Pro MCP 2.1 工作流 Skill 任务面板与实时进度。</Description>
     <Image>Images\AddInIcon.png</Image>
     <Author>ArcGISProMCP</Author>
     <Company>ArcGISProMCP</Company>
-    <Date>2026/08/31</Date>
+    <Date>2026/10/23</Date>
     <Subject>Framework</Subject>
   </AddInInfo>
   <modules>

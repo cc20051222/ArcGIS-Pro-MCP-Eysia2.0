@@ -36,7 +36,7 @@ public class MCPServerTests
         Assert.Equal("2024-11-05", result.GetProperty("protocolVersion").GetString());
         Assert.True(result.GetProperty("capabilities").GetProperty("tools").ValueKind == JsonValueKind.Object);
         Assert.Equal("arcgis-pro-mcp", result.GetProperty("serverInfo").GetProperty("name").GetString());
-        Assert.False(string.IsNullOrEmpty(result.GetProperty("serverInfo").GetProperty("version").GetString()));
+        Assert.Equal("2.1.0", result.GetProperty("serverInfo").GetProperty("version").GetString());
     }
 
     [Fact]

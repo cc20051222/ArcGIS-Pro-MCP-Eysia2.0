@@ -9,5 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\ArcGISProMCP.Core\ArcGISProMCP.Core.csproj" />
     <Compile Include="..\ArcGISProMCP.Compatibility\Controls\ProgressPanelWindow.cs" Link="ProgressPanelWindow.cs" />
+    <Compile Include="..\ArcGISProMCP.Compatibility\Controls\WorkflowBackdrop.cs" Link="WorkflowBackdrop.cs" />
   </ItemGroup>
 </Project>

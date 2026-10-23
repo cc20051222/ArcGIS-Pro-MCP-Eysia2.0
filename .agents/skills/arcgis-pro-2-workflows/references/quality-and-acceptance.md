@@ -101,6 +101,16 @@
 
 每项 check 包含 id、requirementId、phase、state、method、profileRevision、bindings（被检对象版本）、scope（mode/population/checked，抽样另给 sampleDesign）、evidenceRefs；PROCESS+RECHECK 同时适用时，复检还记录 recheckOf 指向首次检查。一个 requirement/phase 只保留一条现役检查，替换前把旧记录写入 history，避免挑选通过项隐藏失败。
 
+空范围规则：FULL且population=checked=0时，默认有效结果为INSUFFICIENT_COVERAGE，不能自动形成候选。确实允许空结果的质量要求，可显式设置allowEmpty=true（必须是JSON布尔值），并在当前check.scope.emptyRationale记录非空的业务适用说明；criterion/source要说明何种需求允许空，原有method/evidenceRefs、覆盖、对象版本和复检规则仍适用。仅增加说明、仅开允许标记、空白说明或工具返回NO_FEATURES均不自动放行。它不等于必需检查“不适用”，也不授权降低用户标准。
+
+聊天展示空范围说明和允许条件；新版源码候选面板在检查详情“覆盖”内展示说明，缺少时明确“尚未记录适用依据”，四类检查不足状态以中文及警示色显示。旧已安装面板可能尚无该显示能力，Agent需在聊天解释。对于已发布任务，新增或改变允许空范围的判据属于质量合同变化，应更新profileRevision、归档被替换检查并按实际证据重新核验，不沿用原PASS。辅助脚本核对记录一致性，不能证明所写业务理由真实或用户已授权。
+
+发布器对同一任务进行跨版本核对：现役检查或quality.history曾含PASS/FAIL/NOT_APPLICABLE时，质量profile、standardMappings或要求定义发生变化，必须使用更高的profileRevision；同一任务不可回退质量版本。定义包括criterion/source、required、allowEmpty、phases、subjectIds和coverageRequired。要求标题、要求/阶段排列及显式补写原有缺省值不算定义变化；纯subjectVersions更新不强制全局质量合同升版，但仍使版本不匹配的相关检查失效。尚无完成检查及完成历史的草稿可继续细化定义。
+
+升版不自动重写check.profileRevision、补证据或授权执行；旧检查会按现有版本绑定规则显示STALE，实际重检后才更新，替换的完成检查须保留在history。发布被拒绝时原目标字节不变，保留诊断并对账；聊天须使用成功发布的同一记录，不能拿被拒绝的草稿沿用通过结论。render_task_board独立读取单份记录时没有前一版本上下文，不能替代发布器的历史比对，也不鉴定证据真实性。
+
 离线格式化工具从 required 检查派生四阶段状态，不信任输入里的“gates=PASS”。缺失/未检查/未知/版本过期、全检不足、重复复检证据等不能合成为通过；空要求列表也不算通过。它只检查记录内部一致性，不测量 GIS 真值、不鉴定身份、不授予权限、不提供标准认证。
+
+新版源码候选面板的“检查与修复”入口按全部现役检查的effectiveState统计待处理数量，只有PASS和有效的NOT_APPLICABLE不计入；NOT_RUN、BLOCKED、覆盖不足、必需项未完成、复检/终检依据不足、FAIL、STALE、UNKNOWN都计入。必需项的N/A会先派生为REQUIRED_CHECK_NOT_DONE，仍须处理。发现绑定的新执行后，旧PASS也计入待更新；步骤筛选不缩小检查总数。旧安装包可能仍漏计部分状态，应核对逐条检查及四阶段状态，不能只据按钮数字认定全部通过。此计数是现役检查记录数，不是缺陷数、步骤数或完成百分比；完全没有配置检查仍不能据0认定通过。
 
 subjectVersions 用真实的数据/方法/布局/产物身份与版本；哈希只有实际计算过才能填。对象改动时更新受影响 subject，计划变动先核质量合同 boundPlanRevision，再复用未受影响证据；否则旧检查显示 STALE。验收记录必须指向同一份当前候选，使用 USER 或 INDEPENDENT_REVIEWER 角色及有据的 reviewerId/evidenceRefs；制作角色不得自批。

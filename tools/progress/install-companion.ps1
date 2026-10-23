@@ -14,8 +14,10 @@ function Plain([string]$path,[switch]$AllowC) {
 $WorkRoot=Plain $WorkRoot
 $bundle=Plain $PSScriptRoot
 $manifest=Get-Content -LiteralPath (Join-Path $bundle 'companion-manifest.json') -Raw -Encoding utf8 | ConvertFrom-Json
-if($manifest.kind -notin @('COMPANION_070_CANDIDATE','COMPANION_071_CANDIDATE')){throw 'Unexpected companion manifest'}
-if(($manifest.kind -eq 'COMPANION_070_CANDIDATE' -and $manifest.skillVersion -ne '0.7.0') -or ($manifest.kind -eq 'COMPANION_071_CANDIDATE' -and $manifest.skillVersion -ne '0.7.1')){throw 'Companion kind/version mismatch'}
+$supported=@{'COMPANION_070_CANDIDATE'='0.7.0';'COMPANION_071_CANDIDATE'='0.7.1';'COMPANION_077_CANDIDATE'='0.7.7';'ARCGIS_PRO_MCP_2_1_RELEASE'='0.7.7'}
+if(-not $supported.ContainsKey($manifest.kind)){throw 'Unexpected companion manifest'}
+if($supported[$manifest.kind] -cne $manifest.skillVersion){throw 'Companion kind/version mismatch'}
+if($manifest.kind -eq 'ARCGIS_PRO_MCP_2_1_RELEASE' -and $manifest.releaseVersion -cne '2.1.0'){throw 'Release version mismatch'}
 $paths=@{}
 foreach($f in $manifest.files){
  $full=Plain (Join-Path $bundle $f.path)
@@ -43,6 +45,11 @@ if($Action -in @('InstallSkill','InstallAll')){
 $plan=[ordered]@{action=$Action;status='PLAN_ONLY';skillVersion=$manifest.skillVersion;workRoot=$WorkRoot;agentWorkspace=$AgentWorkspace;
  pluginTarget=(Join-Path $installRoot 'ArcGISProMCP.Compatibility.esriAddInX');cacheTarget=$cacheRoot;pluginSupport='Pro 3.5 / net8 only for this candidate';
  clientConfigChanged=$false;originalR29Changed=$false;acceptance='PASS CANDIDATE, independent acceptance pending'}
+if($manifest.kind -eq 'ARCGIS_PRO_MCP_2_1_RELEASE'){
+ $plan['releaseVersion']=$manifest.releaseVersion
+ $plan['pluginSupport']='ArcGIS Pro 3.5 / net8'
+ $plan['acceptance']='User-authorized local acceptance; see 05_说明/RELEASE_2_1_VALIDATION.json; not third-party independent review'
+}
 if($Action -eq 'Plan'){$plan|ConvertTo-Json -Depth 6;return}
 if($pluginActions){
  if(-not $AllowOnlyThisAddinOnC){throw 'Plugin update/restore needs -AllowOnlyThisAddinOnC for this GUID only'}

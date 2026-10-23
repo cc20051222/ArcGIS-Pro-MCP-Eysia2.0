@@ -225,7 +225,7 @@
     },
     {
       "path": "Source/Shared/ArcGISProMCP.Tools/FolderWorkflowTools.cs",
-      "sha256": "BABD35ABE37365267781C62BA75898A68509830BED1F73E3A4F8E7D77F7E1D5E",
+      "sha256": "83284053A2B2AD73C1643CCB37173C01B910B51B91D28A3F467079AF8A9922B2",
       "observation": "Status/report snapshots; sharded plan calls inject target without universal input/output binding.",
       "evidenceStatus": "SOURCE_INSPECTED_NOT_RUNTIME_ACCEPTANCE"
     },
@@ -288,5 +288,6 @@
       "Source/ArcGISProMCP.Compatibility"
     ],
     "result": "No implementation evidence found by targeted source search; not a protocol compliance proof or a live negotiation test."
-  }
+  },
+  "sourceHashNormalization": "Text source SHA256 uses CRLF normalized to LF, matching Git checkout semantics; binary artifacts always use raw-byte SHA256."
 }

@@ -1,12 +1,12 @@
-# ArcGIS Pro MCP Server
+# ArcGIS Pro MCP Server 2.1
 
 运行在 ArcGIS Pro 内部的 MCP Add-in：通过本机回环 `http://127.0.0.1:6520/mcp` 向支持 MCP 的客户端提供 **239 个 GIS 工具**（注册表 239 ≡ 契约快照 239 ≡ 装机 239）。
 
-**新增 Skill 与任务面板 0.7.1 配套候选**：按需求和真实数据制定完整业务链，聊天与持续刷新的面板同步显示当前步骤、检查、问题修复和复检，交付时列出真实文件位置。包含插件、Skill、独立面板和两份Word说明，原版r29保留。[安装教程](Docs/SKILL_INSTALL_GUIDE.md) · [使用与功能介绍](Docs/SKILL_WORKFLOW_GUIDE.md) · [本次更新与实测边界](Docs/SKILL_071_RELEASE_NOTES.md)。这不是新增239种已验收算法，缺能力需按实际受控替代或经用户同意的原生界面补齐。
+**最新版本 2.1（产品2.1.0，Skill0.7.7）**：完整流程规划、当前步骤高亮、真实GP内部进度、检查修复与复检，配合随时间自动切换的山海动态面板。提供包含插件、Skill、独立面板与教程的完整安装包，旧版r29保留。[GitHub下载](https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v2.1) · [GitCode下载](https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/v2.1) · [安装教程](Docs/SKILL_INSTALL_GUIDE.md) · [使用教程](Docs/SKILL_WORKFLOW_GUIDE.md) · [2.1更新与验证边界](Docs/RELEASE_2_1.md)。239是注册工具数，本次验收不代表239种业务全部逐一通过。
 
 ## English summary
 
-Word说明：[安装与使用教程](Docs/Skill与面板Word说明/01_插件Skill与面板_安装使用教程.docx) · [功能特色与实现原理](Docs/Skill与面板Word说明/02_Skill与面板_功能特色与实现原理.docx)。
+历史0.7.1 Word说明：[安装与使用教程](Docs/Skill与面板Word说明/01_插件Skill与面板_安装使用教程.docx) · [功能特色与实现原理](Docs/Skill与面板Word说明/02_Skill与面板_功能特色与实现原理.docx)。2.1请以[当前安装教程](Docs/SKILL_INSTALL_GUIDE.md)和[功能使用教程](Docs/SKILL_WORKFLOW_GUIDE.md)为准。
 
 **ArcGIS Pro MCP Server** is an ArcGIS Pro add-in that exposes **239 GIS tools** to MCP-speaking
 clients over a **local loopback** endpoint (`http://127.0.0.1:6520/mcp`) — no public network listener.
@@ -52,6 +52,14 @@ English index of what to read first: [`Docs/README_EN.md`](Docs/README_EN.md).
 **关键句**：本项目在 ArcGIS Pro **3.5** 上实测（`3.5.0.57366`）。ArcGIS Pro **3.6**（官方要求 .NET 8，与 3.5 同内核）与 **3.7**（官方声明 3.x SDK 扩展免重编；本项目 `Source/` 264 件 `.cs` 内 `Clipboard`／`BinaryFormatter`／`DragAndDrop` 命中文件数**全 0**，故不属官方列出的需重编情形）**按官方兼容性承诺支持，但未在本项目实机验证。3.x 以外的版本未支持。**
 
 ## 安装包获取（★先读这一节）
+
+### 当前版本 2.1
+
+下载 **`ArcGIS-Pro-MCP-2.1-Windows-x64.zip`** 和同名`.sha256`，完整解压到D盘新目录，保存并正常关闭Pro后双击 **`安装2.1.cmd`**。先查看安装计划，再确认安装；安装器备份旧文件，可凭事务回执回滚。首次用户可直接安装2.1，无需先安装旧r29。客户端连接与Skill加载按[当前教程](Docs/SKILL_INSTALL_GUIDE.md)操作。
+
+本版实际安装目标为 **ArcGIS Pro 3.5/net8、Windows x64**；只更新本插件GUID的安装/缓存目录，工程、运行记录、备份和临时文件放D盘，不自动安装依赖或改写客户端配置。[GitHub Releases](https://github.com/cc20051222/ArcGIS-Pro-MCP-Eysia2.0/releases/tag/v2.1) · [GitCode Releases](https://gitcode.com/hhhi6/ArcGIS-Pro-MCP-Eysia2.0/releases/v2.1)。[2.1验证摘要](Docs/RELEASE_2_1_VALIDATION.json)记录当前发布边界；下方软件适配表和旧r29段落是有日期的历史信息，不扩展本版安装器的宿主范围。
+
+### 历史版本 1.0.2 r29 与 Skill0.7.1
 
 **安装包经 Releases 分发，不在 git 树内。** 原版 r29 与同名 `.sha256` 保留；2026-10-19 新增 Skill/面板 0.7.1 配套候选及对应源码 ZIP、各自校验文件。配套包含原版副本、新插件、Skill、独立面板、安装/启动脚本和两份 Word。新版插件只在 Pro 3.5/net8 实测，技术自检结论为 PASS CANDIDATE，独立验收另列。
 

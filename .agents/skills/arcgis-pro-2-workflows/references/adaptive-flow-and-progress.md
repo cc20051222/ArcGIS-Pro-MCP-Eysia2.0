@@ -103,7 +103,7 @@
 
 ## 7. 可选记录与离线格式化
 
-`assets/task-record.json` 当前 schemaVersion 1.2 包含 `plan`（revision/steps/changes）、`observations`、`presentation` 和 `quality`，简单查询仍不用创建记录。一次 observation 至少有 id、source、observedAt、summary；引用它只表示记录提供了依据，Skill 仍需核实际响应和成果。外部验收在 quality.acceptance 单列；若图中也有外部验收节点，标 required=false，避免把尚待外部裁定混入制作端必须完成的步骤。
+`assets/task-record.json` 新模板采用 schemaVersion 1.3，包含 `intake`、`plan`（revision/steps/changes）、`observations`、`presentation` 和 `quality`；旧 1.2 仅兼容读取，简单查询仍不用创建记录。一次 observation 至少有 id、source、observedAt、summary；引用它只表示记录提供了依据，Skill 仍需核实际响应和成果。同一任务发布后保留旧观测的全部内容，纠错或补充一律追加新 ID 并说明与旧观测的关系；新增更正本身不自动通过检查。外部验收在 quality.acceptance 单列；若图中也有外部验收节点，标 required=false，避免把尚待外部裁定混入制作端必须完成的步骤。
 
 每步记录 id、title、dependsOn、state、evidenceRefs、summary；PRODUCED / VERIFIED / FAILED / CANCELLED 要有对应观测引用。产物记录 label、stepId、state（PLANNED/PRODUCED/VERIFIED/STALE）、path，可加 isPreview；PRODUCED / VERIFIED 还须有 observationRef 指向实际观测。未产生或失效者不作为有效下载项。持久预览按授权版本保留，不自动删历史。
 
@@ -127,11 +127,17 @@
 
 Agent先综合业务目标、真实数据、上下游依赖、当前工具/许可、输出规格与适用条款，再生成整份计划。不能把用户举例当固定算法顺序，不能把开发验收S1/S2当用户业务任务。完整处理、条件步骤及原因、首检、修复、复检、最终检查与外部验收全部先列出；方法、参数/阈值依据、输入/计划输出、检查着重点逐步可展开。水文计划见水文参考，矢量/栅格/制图等仍按对应专业参考适配，不硬编码成水文界面。
 
-继续使用schemaVersion1.2原始记录，新增可选展示字段：每步kind（PREFLIGHT/PROCESS/CHECK/REPAIR/RECHECK/FINAL/ACCEPTANCE）、method字符串、inputs/outputs/checkFocus字符串数组、requirementIds、requestIds。requestIds必须是实际JSON-RPC请求ID的精确字符串，任务间不复用；同一ID只能属于一步，不按工具名猜步骤。quality.requirements包含title/criterion/source/subjectIds/phases/coverageRequired；quality.checks记录实际检查结果和scope。只写“通过”而无方法、证据、覆盖和当前版本不能形成通过状态。
+0.6.0使用schemaVersion1.2原始记录；当前新任务使用1.3模板，旧1.2兼容读取。展示字段包括：每步kind（PREFLIGHT/PROCESS/CHECK/REPAIR/RECHECK/FINAL/ACCEPTANCE）、method字符串、inputs/outputs/checkFocus字符串数组、requirementIds、requestIds。requestIds必须是实际JSON-RPC请求ID的精确字符串，任务间不复用；同一ID只能属于一步，不按工具名猜步骤。quality.requirements包含title/criterion/source/subjectIds/phases/coverageRequired；quality.checks记录实际检查结果和scope。只写“通过”而无方法、证据、覆盖和当前版本不能形成通过状态。
 
 发布前运行 `scripts/publish_workflow.py <本次原始任务记录.json> --target <已配置的面板任务记录.json>`。输入、目标均在已授权D根；目标是Pro启动时ARCGIS_PRO_MCP_PROGRESS_TASK_RECORD配置的实际文件，或独立窗口--task-record所指文件，不靠猜路径。任务切换须 `--activate --expected-task <当前taskId>`；旧开发快照无taskId时用LEGACY。工具不会启GIS/服务或执行修复，仅复用现有校验器派生视图、D盘原子发布并保留内容寻址历史；锁存在时停下对账，不擅删未知锁。
 
+同一任务已有完成检查时，改变质量定义需更高profileRevision，不能降低质量版本。成功发布后从该记录生成聊天阶段卡；失败时展示拒绝原因及下一步，保留原现役记录，不用未发布草稿向用户宣称检查通过。单份记录的聊天格式化不具备跨版本历史核对能力。
+
+核对面板检查提示时，以全部现役检查的有效状态为准：未检查、受阻、覆盖或证据不足、失败、失效、未知都应计入待处理，不能只数失败项；可选且有依据的不适用单独理解。新版候选入口已按此计数，旧安装位先看逐条检查，不能把按钮0项当成质量完成。聊天仍明确列四阶段状态和未验证项，按钮计数不能代替验收。
+
 每次开始先记录真实派发观测、将对应步RUNNING并绑定requestId，再发正常MCP；返回时存真实响应/观察并发布PRODUCED或FAILED，业务检查后有新依据才VERIFIED。需要等待用户或能力缺失时标WAITING_USER/BLOCKED，不把估时动画当运行。步骤开始前依赖应已核验；确需改变流程时先记录重规划，不能悄悄越过依赖。新SDK事件可即时覆盖旧步骤执行态，但工具成功最多PRODUCED，不能自动通过质量或验收。
+
+聊天格式化与面板发布共用记录校验：RUNNING须有观测引用，请求ID不可重复绑定；已开始/产出/核验步骤的前置步骤须已核验，REPAIR允许关联失败、受阻或失效的前置步骤，但不能与仍在运行的前置步骤重叠。未知步骤类型、未声明的质量要求引用和不合法输出路径均拒绝；旧1.2记录仍检查每步输出的D盘约束。以上核对的是记录一致性，不证明观测内容真实，也不会执行或暂停后端任务。
 
 发现缺陷立即保留失败检查，并在quality.issues中记录description/severity/status=OPEN及repair对象：state（REPAIRING/RECHECKING等）、action、affectedStepIds、recheckResult。修复与复检各列步骤并关联当前请求；改数据/参数后更新subjectVersions/plan.revision，旧下游与旧检查标STALE。替换已经完成的检查时将旧check原件放quality.history（可用{"check":旧check}），保留原观测，发布器拒绝抹掉失败。修复动作仍走现有工具与原授权，不为显示自动扩大写入范围。
 
@@ -141,7 +147,7 @@ Agent先综合业务目标、真实数据、上下游依赖、当前工具/许�
 
 ## 10. 0.7.0：需求资料确认、工具替代和双显示合同
 
-新任务使用模板 intake 对象。requirements、inputs、outputRoot 都含 status（MISSING/PROVIDED/CONFIRMED）、value、evidenceRefs；输入 value 为路径数组，需求与成果根为字符串。CONFIRMED 要引用真实用户消息的观测；用户已经明确的内容不重复索取，先复述。输出根须绝对 D 路径、实际可写探针，成果和每步计划输出均须位于此根内。输入允许只读 C 路径，不能借此写 C。
+新任务使用模板 intake 对象。requirements、inputs、outputRoot 都含 status（MISSING/PROVIDED/CONFIRMED）、value、evidenceRefs；输入 value 为路径数组，需求与成果根为字符串。CONFIRMED 要引用真实用户消息的观测；用户已经明确的内容不重复索取，先复述。输出根须绝对 D 路径、实际可写探针，成果和每步计划输出均须位于此根内。Windows 上发布/聊天校验同时核对字面路径和解析现有目录联接后的实际位置；同在 D 盘但指向成果根外也拒绝，根内别名和用户指定的根目录别名仍可使用。展示保留用户路径，不自动改写目录联接；这是记录校验，执行前仍需核对实际目标，不能据此保证检查后目录未发生变化。输入允许只读 C 路径，不能借此写 C。
 
 dataNeeds 每项记录 id、label、required、reason、recommendation、stepIds、state、evidenceRefs。state 为 MISSING/PROVIDED/VERIFIED/NOT_REQUIRED；后两种必须有依据。recommendation 具体写所需范围、格式、精度/分辨率、字段/时相或可接受替代。必需缺项只阻断依赖步骤；没有 stepIds 视为影响全链。可继续独立只读预检，不能宣称完整任务已完成。
 

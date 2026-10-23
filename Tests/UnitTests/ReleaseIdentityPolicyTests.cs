@@ -17,11 +17,11 @@ public sealed class ReleaseIdentityPolicyTests
         var config = XDocument.Load(Path.Combine(root, "Source", "ArcGISProMCP.Compatibility", "Config.daml"));
         var addIn = config.Root!.Elements().Single(e => e.Name.LocalName == "AddInInfo");
 
-        Assert.Equal("1.0.2", propertyGroup.Element("Version")!.Value);
+        Assert.Equal("2.1.0", propertyGroup.Element("Version")!.Value);
         Assert.Equal("1.0.0.0", propertyGroup.Element("AssemblyVersion")!.Value);
-        Assert.Equal("1.0.2.0", propertyGroup.Element("FileVersion")!.Value);
-        Assert.Equal("1.0.2", propertyGroup.Element("InformationalVersion")!.Value);
-        Assert.Equal("1.0.2", (string?)addIn.Attribute("version"));
+        Assert.Equal("2.1.0.0", propertyGroup.Element("FileVersion")!.Value);
+        Assert.Equal("2.1.0", propertyGroup.Element("InformationalVersion")!.Value);
+        Assert.Equal("2.1.0", (string?)addIn.Attribute("version"));
         Assert.Equal("3.0", (string?)addIn.Attribute("desktopVersion"));
     }
 
@@ -65,7 +65,7 @@ public sealed class ReleaseIdentityPolicyTests
             Assert.True(File.Exists(manifestPath));
             using var json = JsonDocument.Parse(File.ReadAllText(manifestPath));
             Assert.Equal("arcgis-pro-mcp-release-manifest-v1", json.RootElement.GetProperty("schema").GetString());
-            Assert.Equal("1.0.2", json.RootElement.GetProperty("product").GetProperty("releaseVersion").GetString());
+            Assert.Equal("2.1.0", json.RootElement.GetProperty("product").GetProperty("releaseVersion").GetString());
             Assert.Equal("3.0", json.RootElement.GetProperty("target").GetProperty("arcgisProDesktopVersion").GetString());
             var assemblies = json.RootElement.GetProperty("firstPartyAssemblies");
             Assert.True(assemblies.GetArrayLength() > 0);
@@ -115,7 +115,7 @@ public sealed class ReleaseIdentityPolicyTests
             Directory.CreateDirectory(outputDir);
             CopyDirectory(Path.Combine(root, "Source", "ArcGISProMCP.Compatibility", "Images"), Path.Combine(projectDir, "Images"));
             var config = File.ReadAllText(Path.Combine(root, "Source", "ArcGISProMCP.Compatibility", "Config.daml"))
-                .Replace("version=\"1.0.2\"", "version=\"9.9.9\"", StringComparison.Ordinal);
+                .Replace("version=\"2.1.0\"", "version=\"9.9.9\"", StringComparison.Ordinal);
             File.WriteAllText(Path.Combine(projectDir, "Config.daml"), config);
             CopyBuildOutput(Path.Combine(root, "Source", "ArcGISProMCP.Compatibility", "bin", "x64", "Debug", "net6.0-windows"), outputDir);
 

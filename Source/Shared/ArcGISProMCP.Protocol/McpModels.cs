@@ -6,7 +6,7 @@ namespace ArcGISProMCP.Protocol;
 public sealed class McpServerInfo
 {
     public string Name { get; set; } = "arcgis-pro-mcp";
-    public string Version { get; set; } = "0.1.0";
+    public string Version { get; set; } = "2.1.0";
 }
 
 /// <summary>MCP 客户端信息。</summary>

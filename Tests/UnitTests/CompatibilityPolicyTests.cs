@@ -97,7 +97,7 @@ public sealed class CompatibilityPolicyTests
     public void PolicyManifestMismatchReturnsError()
     {
         // D-066：篡改锚点改为「值级」匹配（生成器为 json.dumps 单空格形态；旧两空格锚点会空转导致假阴性）。
-        var badManifest = WriteTemp(File.ReadAllText(Manifest).Replace("\"releaseVersion\": \"1.0.2\"", "\"releaseVersion\": \"9.9.9\"", StringComparison.Ordinal));
+        var badManifest = WriteTemp(File.ReadAllText(Manifest).Replace("\"releaseVersion\": \"2.1.0\"", "\"releaseVersion\": \"9.9.9\"", StringComparison.Ordinal));
         var facts = WriteTemp(Facts());
         try
         {

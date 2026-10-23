@@ -2,7 +2,7 @@
 name: arcgis-pro-2-workflows
 description: "Use ArcGIS-Pro-MCP 2.0 to inspect local ArcGIS Pro projects and datasets, perform controlled GIS analysis or editing, process data folders, and produce verified maps and exports. Adapt workflows to actual scenarios and show plans, observed progress and real previews. Use for this project's ArcGIS Pro MCP, .aprx/.gdb work, 缓冲/叠加/栅格分析/质量检查/制图/地图册/流程进度, or its Photoshop handoff. Distinguish registered tools from working capabilities. Not for ArcGIS Online administration, generic QGIS, or 3.0 product planning."
 metadata:
-  version: "0.7.1"
+  version: "0.7.7"
   product: "ArcGIS-Pro-MCP 2.0"
   delivery-status: "candidate"
 ---
@@ -44,6 +44,8 @@ metadata:
 
 数据、许可、用户目标或 schema 改变时，仅重规划受影响的未完成步骤，列出改动和影响。新增覆盖、GIS 写入范围、外传或科学方法变化需要相应授权；已完成成果先对账，不整链重跑。用户可要求简洁、详细、暂停、取消或调整目标，状态如实反映实际执行与停止结果。
 
+同一任务已发布的观测原件及 ID 保持不变；更正时追加新 ID、新时间和来源，保留旧原件并解释关联，再根据新证据更新检查。不能以同一 ID 改写失败、来源或时间；发布被拒绝时先对账，不删除目标或换任务身份绕过。日志读取异常、窗口暂停/重开与 GIS 执行结果分别处理，见 [恢复与结果核验](references/recovery.md)。
+
 ## 规范制作、复检与最终验收
 
 制作任务同时读 [质量、复检与最终验收](references/quality-and-acceptance.md)。按“业务场景＋数据类型＋成果用途＋采用标准/合同”组合质量要求；建立可检查的判据、单位/容差来源、检查范围、观测依据和最终交付清单。没有适用条款与阈值时采用明确的通用质量检查，不宣称已符合特定行业标准；只读咨询不强制套完整生产制度。
@@ -53,6 +55,10 @@ metadata:
 流程须保留：需求/资料预检→方法与质量计划→规范执行及过程检查→成果首次检查→复检及问题闭环→最终交付检查→提交验收候选/外部验收。复检读取实际成果并形成新的检查证据，不能复制首次报告；修复后重测问题及受影响下游，禁止仅改状态。最终检查核对原需求、必需成员、数量/单位/CRS、格式/实际可打开、版面视觉、版本/哈希及未验证项。
 
 可视化分别展示步骤、后端计数、质量四阶段（预检/过程检查/复检/最终检查）和外部验收状态，列出检查覆盖、缺陷级别、证据和当前可操作项。严重问题、必需检查缺失、样本冒充全检或版本失效时不得显示“全部通过”。质量自检通过只形成 `PASS CANDIDATE`；用户或有权独立验收方的明确记录才可称已验收，制作 Agent 不自签最终 PASS。
+
+总体与检查数均为0，不自动算全检通过。业务允许空结果时，质量要求须明确允许空范围，当前检查记录适用理由和观测；不能用“0个错误”代替需求已满足，详见质量参考。
+
+同一任务完成过检查后，改变判据、来源、必需项、覆盖规则、空范围规则或采用标准须递增quality.profileRevision；不得降低既有版本。保留旧检查，按新版本形成新证据。先成功发布，再用同一记录生成聊天卡；发布被拒绝时显示原因与待处理项，不继续用未发布草稿宣称通过。
 
 ## 按任务读取
 

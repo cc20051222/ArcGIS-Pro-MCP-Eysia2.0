@@ -1,5 +1,6 @@
 """Shared intake/capability contract for chat and panel; no GIS or file effects."""
-from pathlib import PureWindowsPath
+from pathlib import Path, PureWindowsPath
+import sys
 
 
 def intake_view(record, evidence, steps, output_path):
@@ -83,12 +84,27 @@ def intake_view(record, evidence, steps, output_path):
         need(choice is not None and choice['status'] in {'SUPPORTED', 'SUBSTITUTE'}, 'Production requires a supported, observed tool choice.')
     if root:
         base = PureWindowsPath(root)
+
+        def contained_output(value, label):
+            normalized = output_path(value)
+            need(PureWindowsPath(normalized).is_relative_to(base),
+                 label + ' is outside the confirmed output root.')
+            if sys.platform == 'win32':
+                # A D-to-D junction can pass the drive and lexical checks while
+                # redirecting a future dataset outside the user's chosen folder.
+                # resolve() also follows existing ancestors of not-yet-created outputs.
+                try:
+                    contained = Path(normalized).resolve().is_relative_to(Path(root).resolve())
+                except (OSError, RuntimeError) as exc:
+                    raise ValueError(label + ' containment could not be resolved.') from exc
+                need(contained, label + ' resolves outside the confirmed output root.')
+
         for step in steps.values():
             for value in step.get('outputs', []):
-                need(PureWindowsPath(output_path(value)).is_relative_to(base), 'Planned output is outside the confirmed output root.')
+                contained_output(value, 'Planned output')
         for artifact in record.get('presentation', {}).get('artifacts', []):
             if artifact.get('path'):
-                need(PureWindowsPath(output_path(artifact['path'])).is_relative_to(base), 'Artifact is outside the confirmed output root.')
+                contained_output(artifact['path'], 'Artifact')
     if record.get('execution', {}).get('status') == 'COMPLETED':
         need(ready, 'Completion cannot hide unresolved intake/data needs.')
     return {**intake, 'status': 'READY' if ready else 'WAITING_USER', 'questions': questions}
